@@ -2,8 +2,11 @@ name: Sync llms-full.txt from Bitwarden
 
 on:
   schedule:
-    - cron: '0 * * * *'   # Runs every hour — adjust as needed
+    - cron: '0 0 * * *'   # Runs once daily at midnight UTC
   workflow_dispatch:        # Allows manual triggering from the Actions tab
+
+permissions:
+  contents: write           # Allows the Actions bot to push commits
 
 jobs:
   sync:
@@ -15,13 +18,18 @@ jobs:
 
       - name: Fetch latest llms-full.txt
         run: |
-          curl -fsSL "https://bitwarden.com/help/llms-full.txt/" -o llms-full.txt
+          curl -fsSL "https://bitwarden.com/help/llms-full.txt" -o llms-full.txt
+
+      - name: Clear previous docs
+        run: rm -rf docs/
+
+      - name: Split into per-page markdown files
+        run: python3 scripts/split_llms.py
 
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add llms-full.txt
-          # Only commit if there's actually a change
-          git diff --cached --quiet || git commit -m "chore: sync llms-full.txt from bitwarden.com"
+          git add llms-full.txt docs/
+          git diff --cached --quiet || git commit -m "chore: sync and split llms-full.txt from bitwarden.com"
           git push
