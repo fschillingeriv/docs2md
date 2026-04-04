@@ -38,18 +38,18 @@ Use the following links to download Directory Connector:
 
 Download the latest version of the Directory Connector desktop app from our [GitHub releases page](https://github.com/bitwarden/directory-connector/releases) or by using one of the following official links:
 
-- 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows/)
-- 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable/)
-- 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos/)
-- 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux/)
+- 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows)
+- 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable)
+- 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos)
+- 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux)
 
 ### CLI
 
 Download the latest version of the Directory Connector CLI from one of the following links:
 
-- 🪟 [Windows CLI (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip/)
-- 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip/)
-- 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip/)
+- 🪟 [Windows CLI (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip)
+- 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip)
+- 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip)
 
 ## Source code
 

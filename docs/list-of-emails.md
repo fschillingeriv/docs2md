@@ -35,7 +35,7 @@ The following emails alert members of Bitwarden organizations, in all roles, to 
 | You have been revoked from {Organization} | {Organization} = Your organization's display name. | A user receives this email when their access is revoked due to violation of the [Require two-step login](https://bitwarden.com/help/policies/#require-two-step-login/) or [Single organization](https://bitwarden.com/help/policies/#single-organization/) policies. |
 | Your admin has initiated account recovery | n/a | A user receives this email when an administrator has [initiated account recovery on their account](https://bitwarden.com/help/account-recovery/#recover-an-account/). |
 | Login request approved | n/a | A user receives this email when a trusted device [login request is approved by an administrator](https://bitwarden.com/help/add-a-trusted-device/). |
-| Your Bitwarden account is claimed by {Organization} | {Organization} = Your organization's display name. | A user receives this email when their account is [claimed by an organization they are a member of](https://bitwarden.com/help/claimed-accounts/). |
+| Important update to your Bitwarden account | n/a | A user receives this email when their account is [claimed by an organization they are a member of](https://bitwarden.com/help/claimed-accounts/). |
 | {Organization} has identified 1 at-risk password {Organization} has identified {#) at-risk passwords | {Organization} = Your organization's display name. {#} = The number of at-risk passwords. | A user receives this email when an administrator initiates a [change password request](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/). |
 
 ### Critical Secrets Manager emails

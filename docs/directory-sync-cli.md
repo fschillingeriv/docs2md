@@ -15,9 +15,9 @@ To get started using the Bitwarden Directory Connector CLI:
 
 1. Download the CLI from one of the following links:
 
- - 🪟 [Windows CLI](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip/)
- - 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip/)
- - 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip/)
+ - 🪟 [Windows CLI](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip)
+ - 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip)
+ - 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip)
 2. Extract the `.zip` and move the contents (`bwdc` and `keytar.node`) to `/usr/local/bin` or another directory in your `$PATH`. Please note, `keytar.node` **must** be in the same directory as the primary `bwdc` executable.
 
 **Linux only:** If not already installed, install `libsecret` with your package manager of choice. Note that the package is titled `libsecret-1-0` for Ubuntu and Debian specifically, users should find the equivalent title for their particular distribution:

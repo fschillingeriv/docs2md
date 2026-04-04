@@ -35,9 +35,9 @@ The CLI can be used cross-platform on Windows, macOS, and Linux distributions. T
 
 Natively packaged versions of the CLI are available for each platform and have no dependencies. Download using one of these links:
 
-- [Windows x64](https://bitwarden.com/download/?app=cli&platform=windows/)
-- [macOS x64](https://bitwarden.com/download/?app=cli&platform=macos/)
-- [Linux x64](https://bitwarden.com/download/?app=cli&platform=linux/)
+- [Windows x64](https://bitwarden.com/download/?app=cli&platform=windows)
+- [macOS x64](https://bitwarden.com/download/?app=cli&platform=macos)
+- [Linux x64](https://bitwarden.com/download/?app=cli&platform=linux)
 
 Note that, when using the downloaded native executable, you'll need to add the executable to your PATH or else run commands from the directory the file is downloaded to.
 

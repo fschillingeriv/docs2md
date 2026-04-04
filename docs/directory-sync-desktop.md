@@ -16,10 +16,10 @@ To get started using the Directory Connector desktop app:
 
 1. Download the latest version of the app from our [GitHub releases page](https://github.com/bitwarden/directory-connector/releases) or by using one of the following official links:
 
- - 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows/)
- - 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable/)
- - 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos/)
- - 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux/)
+ - 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows)
+ - 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable)
+ - 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos)
+ - 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux)
 2. Set the server URL used by Directory Connector before logging in. This is required if you are self-hosting Bitwarden or using the [EU server](https://bitwarden.com/help/server-geographies/):
 
  1. On the Login screen, select **Settings**.
