@@ -34,7 +34,7 @@ URL: https://bitwarden.com/help/autofill-faqs/
 
 1. **If you have**[**PIN Code**](https://bitwarden.com/help/unlock-with-pin/)**verification active**, disable it.
 2. Log out of your Bitwarden mobile app.
-3. Check that your device settings are [setup to use Bitwarden for autofill](https://bitwarden.com/help/auto-fill-ios/#keyboard-auto-fill/).
+3. Check that your device settings are [setup to use Bitwarden for autofill](https://bitwarden.com/help/auto-fill-ios/).
 4. Log back in to your Bitwarden mobile app.
 5. Re-enable [PIN code](https://bitwarden.com/help/unlock-with-pin/) verification if you want to use it as a backup for [biometrics](https://bitwarden.com/help/biometrics/).
 

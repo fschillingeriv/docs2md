@@ -87,6 +87,12 @@ As the newly created user, create a Bitwarden folder under `C:\`:
 PS C:\> mkdir Bitwarden
 ```
 
+Next, add the user to a local group of aministrators:
+
+```plain text
+net localgroup Administrators Bitwarden /add
+```
+
 In Docker Desktop, navigate to **Settings** → **Resources** → **File Sharing** and add the created directory (`C:\Bitwarden`) to the Resources list. Select **Apply & Restart** to apply your changes.
 
 > [!NOTE] Docker user group
@@ -228,7 +234,7 @@ Docker Desktop will only automatically start on boot if you have a logged-in RDP
 3. Select the **Triggers** tab and create the following trigger:
 
  - From the **Begin the task** dropdown, select **At startup**.
- - In the Advanced settings section, check the **Delay task for:** checkbox and select **1 minute** from the dropdown.
+ - In the Advanced settings section, check the **Delay task for:** checkbox and select **5 minute**s from the dropdown.
 4. Select the **Actions** tab and create the following action:
 
  - In the Program/script input, specify `"C:\Program Files\Docker\Docker\frontend\Docker Desktop.exe"`.

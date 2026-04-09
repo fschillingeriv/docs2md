@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/transfer-ownership/
 
 When your organization activates the [Centralize organization ownership](https://bitwarden.com/help/policies/#centralize-organization-ownership/) policy, you may be asked within a Bitwarden browser extension to transfer your items to the organization. Your organization, through this policy, requires all items to be owned by the organization for security and compliance. 
 
-![Transfer items to an organization](https://bitwarden.com/assets/1rhoCL30l2gE2FAPxmfbU4/d6c6cb82e7f8b2a163ef90d7219095f3/2026-01-27_12-24-48.png)
+![Transfer items to an organization](https://bitwarden.com/assets/1rhoCL30l2gE2FAPxmfbU4/4edb33dbe95f231924d6b69571eb8df4/2026-04-08_16-42-27.png)
 *Transfer items to an organization*
 
 If you are prompted to transfer items, you have two options:

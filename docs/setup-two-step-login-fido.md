@@ -19,6 +19,11 @@ FIDO2 WebAuthn is compatible with most Bitwarden applications. If you wish to us
 - **Mobile apps** for Android and iOS 13.3+ with a [FIDO2-supported browser](https://fidoalliance.org/fido2/fido2-web-authentication-webauthn/).
 - **Desktop apps** on macOS, Windows 10+, and Linux.
 
+> [!NOTE] Webauthn + Desktop + Self-Host Vulnerability
+> Users of a self-hosted Bitwarden server may be susceptible to a phishing attack targeting passkey 2FA. An attacker who obtains a user's email address and master password could embed the Bitwarden passkey prompt on a malicious website and trick the victim into completing it, capturing the passkey authentication response and replaying it to gain account access.
+> 
+> To stay safe, always verify that you are on the correct Bitwarden domain before entering credentials or interacting with a passkey prompt. If something about a login or 2FA page seems unfamiliar, do not proceed.
+
 ## Set up FIDO2 WebAuthn
 
 To enable two-step login using FIDO2 WebAuthn:

@@ -189,12 +189,9 @@ Simplify the SSO process for your team by [claiming your domain](https://bitward
 *[Watch on Vimeo](https://vimeo.com/1142581672)*
 
 **Video Chapters:**
-Learn how to enable the Enterprise Policy 'Enforce Organization Data Ownership' for improved risk analysis and collection management. 
+Learn how to enable the Enterprise Policy 'Centralize organization ownership' for improved risk analysis and collection management. 
 
 Read more: [https://bitwarden.com/help/policies/#enforce-organization-data-ownership](https://bitwarden.com/help/policies/#enforce-organization-data-ownership/)
-
-> [!WARNING] Phases of My Items
-> At this time, Bitwarden recommends only organizations that have not started onboarding members to turn on the [Enforce organization data ownership policy](https://bitwarden.com/help/policies/#centralize-organization-ownership/). If your organization activated the policy before version [2025.11.0](https://bitwarden.com/help/releasenotes/), **My Items** will be created for members confirmed since that release. Preexisting members will not have **My Items** and can continue using their **My vault**.
 
 ### Free Families Plan (2 min)
 

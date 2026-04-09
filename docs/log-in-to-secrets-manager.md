@@ -17,7 +17,7 @@ Your master password is the primary method for accessing your Bitwarden account.
 - **Strong**: A longer, more complex, and less common master password is the best way to protect your account. Bitwarden provides a free password strength testing tool to test the strength of some memorable pass words you are considering.
 
 > [!TIP] Tips to mitigate forgetting master password.
-> Worried about forgetting your master password? Here is what to do:
+> Worried about forgetting your master password? Here's what to do:
 > 
 > - **Set up a hint**. In case you need a reminder, a master password hint email can be requested on the login screen. Make sure you use a hint that only you will understand.
 > - **Designate a**[**trusted emergency contact**](https://bitwarden.com/help/emergency-access/). Users with premium access can grant account access to a friend or family member in the case of emergency.

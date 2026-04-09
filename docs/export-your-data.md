@@ -61,9 +61,14 @@ To export vault data:
  - **Account restricted:** This file can only be imported to the current Bitwarden account that generated the encrypted export file. 
 
 > [!WARNING] Encryption Key Impact on Encrypted Exports
-> **Account restricted**exports can not be imported to a different account. Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> **Account restricted**exports can only be imported to the same account where it originated. Account restricted exports **cannot** be imported to a different account, including:
 > 
-> If you wish to import an encrypted `.json` file onto a different Bitwarden account, select the **Password protected**export type when creating an export.
+> - An account with the same email on a different [geographic](https://bitwarden.com/help/server-geographies/) or self-hosted server
+> - Another account with the same email address, even if the originating account was deleted
+> 
+> Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> 
+> If you wish to import an encrypted `.json` file into a different Bitwarden account, generate a **Password protected**export instead.
  - **Password protected:**This file can be imported to any Bitwarden account by utilizing the password set during the encrypted export process.
 
 > [!TIP] Password generator for export
@@ -90,9 +95,14 @@ To export vault data:
  - **Account restricted:** This file can only be imported to the current Bitwarden account that generated the encrypted export file. 
 
 > [!WARNING] Encryption Key Impact on Encrypted Exports
-> **Account restricted**exports can not be imported to a different account. Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> **Account restricted**exports can only be imported to the same account where it originated. Account restricted exports **cannot** be imported to a different account, including:
 > 
-> If you wish to import an encrypted `.json` file onto a different Bitwarden account, select the **Password protected**export type when creating an export.
+> - An account with the same email on a different [geographic](https://bitwarden.com/help/server-geographies/) or self-hosted server
+> - Another account with the same email address, even if the originating account was deleted
+> 
+> Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> 
+> If you wish to import an encrypted `.json` file into a different Bitwarden account, generate a **Password protected**export instead.
  - **Password protected:**This file can be imported to any Bitwarden account by utilizing the password set during the encrypted export process.
 
 > [!TIP] Password generator for export
@@ -118,9 +128,14 @@ To export vault data:
  - **Account restricted:** This file can only be imported to the current Bitwarden account that generated the encrypted export file. 
 
 > [!WARNING] Encryption Key Impact on Encrypted Exports
-> **Account restricted**exports can not be imported to a different account. Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> **Account restricted**exports can only be imported to the same account where it originated. Account restricted exports **cannot** be imported to a different account, including:
 > 
-> If you wish to import an encrypted `.json` file onto a different Bitwarden account, select the **Password protected**export type when creating an export.
+> - An account with the same email on a different [geographic](https://bitwarden.com/help/server-geographies/) or self-hosted server
+> - Another account with the same email address, even if the originating account was deleted
+> 
+> Additionally, [rotating your account's encryption key](https://bitwarden.com/help/account-encryption-key/) will render an account restricted export impossible to decrypt. **If you rotate your account encryption key, replace any old files with new ones that use the new encryption key.**
+> 
+> If you wish to import an encrypted `.json` file into a different Bitwarden account, generate a **Password protected**export instead.
  - **Password protected:**This file can be imported to any Bitwarden account by utilizing the password set during the encrypted export process.
 
 > [!TIP] Password generator for export

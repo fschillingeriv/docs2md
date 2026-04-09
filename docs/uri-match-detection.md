@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/uri-match-detection/
 
 # Form URIs for Autofill
 
-Include a Uniform Resource Identifier (URI) in login items to use [autofill](https://bitwarden.com/help/auto-fill-browser/) and select the [share-square]**Launch icon** to open a website or app directly from your vault. A URI is a string of characters that identifies a website address (URL), server IP address, [mobile app package ID](https://bitwarden.com/help/uri-match-detection/#uris-for-mobile-apps/), and more. 
+Include a Uniform Resource Identifier (URI) in login items to use [autofill](https://bitwarden.com/help/auto-fill-browser/) and select the [share-square]**Launch icon** to open a website or app directly from your vault. A URI is a string of characters that identifies a website address (URL), server IP address, [mobile app package ID](https://bitwarden.com/help/uri-match-detection/#find-uris-for-mobile-apps/), and more. 
 
 ## Save URIs in login items
 
@@ -132,7 +132,7 @@ For example, if the URI `https://sub.domain.com:4000` uses host match detection:
 | `https://sub.domain.com:5000` | [close] |
 
 > [!NOTE] OS standard keyboard fill
-> While using [keyboard based suggestions](https://bitwarden.com/help/auto-fill-ios/#keyboard-auto-fill/), iOS will always use base domain matching for autofill suggestions. Opening the Bitwarden app during login will allow you to manually select the appropriate app for autofill.
+> While using [keyboard based suggestions](https://bitwarden.com/help/auto-fill-ios/#keyboard-autofill/), iOS will always use base domain matching for autofill suggestions. Opening the Bitwarden app during login will allow you to manually select the appropriate app for autofill.
 
 ### Starts with
 

@@ -58,7 +58,7 @@ Set these policies for tighter control
 - Single organization
 - Remove export
 - Require Single Sign-on authentication
-- Enforce organization data ownership
+- Centralize organization ownership
 
 Then
 
@@ -102,7 +102,7 @@ Users receive proactive notifications about credential security issues directly 
 
 Learn more: [Change at-risk passwords](https://bitwarden.com/help/change-at-risk-passwords/)
 
-### Enforce organization data ownership policy
+### Centralize data ownership policy
 
 Ensure all items saved in Bitwarden are owned by the organization. Users receive a **My items** location inside the organization vault.
 

@@ -149,7 +149,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 
 ### Secrets Manager events
 
-Secrets Manager events are available both from the **Reporting** tab of your organization vault and from the [machine account Event logs page](https://bitwarden.com/help/service-accounts/#service-account-events/). The following Secrets Manager events are captured:
+Secrets Manager events are available both from the **Reporting** tab of your organization vault and from the [machine account Event logs page](https://bitwarden.com/help/service-accounts/#service-account-events/). Secrets Manager events can be reviewed by Admins, Owners, and individuals with the appropriate custom role to view, regardless of individual access to Secrets Manager. The following Secrets Manager events are captured:
 
 - Accessed a secret with identifier: `secret-identifier`. (`2100`)
 - Created a new secret with identifier: `secret-identifier` (`2101`)
