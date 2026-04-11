@@ -19752,7 +19752,7 @@ Exporting from Firefox can look a little different depending on which version yo
 
 To export logins from the latest version of Firefox:
 
-1. Using the address bar, navigate to `about:logins`.
+1. Using the browser's address bar, navigate to `about:logins`.
 2. Select the ⋯ menu button from the top right and select **Export Passwords...** from the dropdown menu.
 
 You will be prompted to specify a location to save your password export to.
