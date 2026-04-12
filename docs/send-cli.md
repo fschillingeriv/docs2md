@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/send-cli/
 
 # Send from CLI
 
-Bitwarden Send is available as a set of fully-featured CLI commands. This article documents the breadth of `bw send` commands, however Send is not a separate tool from the Bitwarden command-line Interface (CLI). Therefore, many of the commands, options, and concepts in the [CLI documentation](https://bitwarden.com/help/cli/) are relevant here.
+You can use Bitwarden Send with command-line interface (CLI) commands. Because Send is a feature within the Bitwarden Password Manager, many of the commands, options, and concepts in the [Password Manager CLI documentation](https://bitwarden.com/help/cli/) are relevant here.
 
 ![Send's --help text ](https://bitwarden.com/assets/6hWfoRgu1yoyrXEB6JqN6E/03d8c4b1f11582f8d9141c3f2e0f4bd2/2026-02-27_11-28-26.png)
 *Send's --help text *
