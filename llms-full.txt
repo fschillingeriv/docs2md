@@ -343,7 +343,7 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
-> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/) and be issued a new invitation to create an account and join your organization.
+> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
 > - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
 
 ### Member email address
@@ -33731,8 +33731,8 @@ Full-text search will search the following fields for every vault item:
 You can search for data in specific fields by starting a search query with the "greater than" (`>`) character and indicating a field as previously listed in the following format:
 
 - `>login.username:jsmith` will search for login items with `jsmith` specified as the **username**.
-- `>name:Turbo Tax` will search for any vault items with `Turbo Tax` specified as the **name**.
-- `>fields:Security Question` will search for any vault items with a custom text field with the **name** `Security Question`.
+- `>+name:Turbo +name:Tax` will search for any vault items with the words `Turbo` and `Tax` included in the **name**, however would also return an item with a name that includes additional words, like `Turbo Fast Tax Service`.
+- `>+name:Turbo +name:Tax -name:Fast` will filter the results of the above example to exclude any item that *also* includes the term `Fast` in its name, like `Turbo Fast Tax Service`.
 
 If no field indicator is present, all indexed fields will be searched.
 

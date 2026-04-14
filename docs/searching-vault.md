@@ -54,8 +54,8 @@ Full-text search will search the following fields for every vault item:
 You can search for data in specific fields by starting a search query with the "greater than" (`>`) character and indicating a field as previously listed in the following format:
 
 - `>login.username:jsmith` will search for login items with `jsmith` specified as the **username**.
-- `>name:Turbo Tax` will search for any vault items with `Turbo Tax` specified as the **name**.
-- `>fields:Security Question` will search for any vault items with a custom text field with the **name** `Security Question`.
+- `>+name:Turbo +name:Tax` will search for any vault items with the words `Turbo` and `Tax` included in the **name**, however would also return an item with a name that includes additional words, like `Turbo Fast Tax Service`.
+- `>+name:Turbo +name:Tax -name:Fast` will filter the results of the above example to exclude any item that *also* includes the term `Fast` in its name, like `Turbo Fast Tax Service`.
 
 If no field indicator is present, all indexed fields will be searched.
 
