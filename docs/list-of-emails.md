@@ -108,7 +108,7 @@ The following emails alert Bitwarden users, including members of organizations i
 | New Device Logged In From {Device} | {Device} = Device type, for example "Chrome Extension", "Windows", or "iOS". | A user receives this email when their account is logged into from a new device. |
 | Failed login attempts detected | n/a | A user receives this email when several attempts to log in to their Bitwarden account fail. |
 | Recover 2FA From {IP} | {IP} = An IP address. | A user receives this email when a two-step login [recovery code is used to deactivate 2FA](https://bitwarden.com/help/two-step-recovery-code/#use-your-recovery-code/). |
-| Delete Your Account | n/a | A user receives this email when [deletion of their account has been requested](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/). |
+| Delete Your Account | n/a | A user receives this email when [deletion of their account has been requested](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/). |
 | Payment Failed | n/a | A user receives this email when the payment method attached to their subscription has failed on renewal. |
 | Account Credit Payment Processed | n/a | A user receives this email when account credit is processed toward a subscription renewal. |
 | Welcome to Bitwarden! | n/a | A user receives this email when they create a new Bitwarden account. |

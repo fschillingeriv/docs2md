@@ -609,7 +609,7 @@ While SSO with trusted devices eliminates the need for a master password, it doe
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
-> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/) and be issued a new invitation to create an account and join your organization.
+> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
 > - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
 - If a user account is recovered using [account recovery](https://bitwarden.com/help/account-recovery/), their account will necessarily be assigned a master password. A master password cannot currently be removed from an account once it has one, so to avoid this outcome we recommend that you (i) instruct the user to export their data to a backup, (ii) completely delete the lost account, (iii) ask the user to [re-onboard to your organization using trusted devices](https://bitwarden.com/help/add-a-trusted-device/) and (iv) once they've done so instruct them to import their backup.
 
@@ -3233,7 +3233,7 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 You can add or remove cards from your autofill suggestions and from the inline autofill menu using four settings found in the **Settings** → **Autofill** menu:
 
 - **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
-- **Display cards and suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
 
@@ -13588,7 +13588,7 @@ You may be able delete a member's account using one of the following methods:
 - If you are self-hosting Bitwarden, an authorized administrator can delete the account from the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/).
 - If the account has an `@yourcompany.com` email address that your company controls, you can use [this procedure](https://bitwarden.com/help/delete-your-account/#tab-without-logging-in-4KcOdFa6zVp6H7xo9Ui9vc/) to initiate and confirm deletion within the `@yourcompany.com` inbox.
 
-If none of these methods fit your organization's Bitwarden configuration, [remove the member](https://bitwarden.com/help/remove-users/) from your organization. They can then [delete their personal account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/). 
+If none of these methods fit your organization's Bitwarden configuration, [remove the member](https://bitwarden.com/help/remove-users/) from your organization. They can then [delete their personal account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/). 
 
 ## Remove an account
 
@@ -13605,9 +13605,9 @@ Deleting a Bitwarden account or organization permanently deletes the account or 
 
 Deleting an account or organization does not automatically cancel a subscription. [Learn how to cancel a subscription](https://bitwarden.com/help/cancel-a-subscription/) before deleting an account.
 
-If you are locked out of your vault and deleting your account so that you can create a new one, [contact us](https://bitwarden.com/contact/) and we can help transfer your subscription to the new account.
+If you are locked out of your vault and deleting your account so that you can create a new one, [contact us](https://bitwarden.com/contact/) and we can help transfer your subscription to the new account. 
 
-## Delete a personal account
+## Delete an individual account
 
 To delete your individual account:
 
@@ -13623,6 +13623,9 @@ If you are deleting your account to start a new one, here are a few next steps:
 
 - If you delete a Bitwarden account that has a premium subscription associated with it, [contact us](https://bitwarden.com/contact/) and we will reapply your existing subscription to the new account.
 - If you were able to successfully export your vault data prior to deletion, you can easily [import it into the new account](https://bitwarden.com/help/import-data/).
+
+> [!NOTE] Deleting account as a sole owner
+> If you are the sole owner of an [organization](https://bitwarden.com/help/about-organizations/), you can't delete your account until you add a second owner to the organization or delete the organization itself. If you've forgotten your master password, [contact us](https://bitwarden.com/contact/) from the email address that owns the organization.
 
 The email address associated with your deleted account should be available to re-register with Bitwarden, should you wish to do so, immediately.
 
@@ -23651,7 +23654,7 @@ The following emails alert Bitwarden users, including members of organizations i
 | New Device Logged In From {Device} | {Device} = Device type, for example "Chrome Extension", "Windows", or "iOS". | A user receives this email when their account is logged into from a new device. |
 | Failed login attempts detected | n/a | A user receives this email when several attempts to log in to their Bitwarden account fail. |
 | Recover 2FA From {IP} | {IP} = An IP address. | A user receives this email when a two-step login [recovery code is used to deactivate 2FA](https://bitwarden.com/help/two-step-recovery-code/#use-your-recovery-code/). |
-| Delete Your Account | n/a | A user receives this email when [deletion of their account has been requested](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/). |
+| Delete Your Account | n/a | A user receives this email when [deletion of their account has been requested](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/). |
 | Payment Failed | n/a | A user receives this email when the payment method attached to their subscription has failed on renewal. |
 | Account Credit Payment Processed | n/a | A user receives this email when account credit is processed toward a subscription renewal. |
 | Welcome to Bitwarden! | n/a | A user receives this email when they create a new Bitwarden account. |
@@ -26758,7 +26761,7 @@ Once Alice is removed from your organization:
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
-> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/) and be issued a new invitation to create an account and join your organization.
+> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
 > - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
 
 #### Claimed member accounts
@@ -26787,7 +26790,7 @@ As mentioned previously, removing a user from your organization does not automat
 Organizations wanting to completely delete the account, including all individual vault items, may be able to use one of the following methods to do so during succession:
 
 1. If you're self-hosting Bitwarden, an authorized admin can delete the account from the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/).
-2. If the account has an @yourcompany.com email address that your company controls, you can use the [delete without logging in](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/) workflow and confirm deletion within the @yourcompany.com inbox.
+2. If the account has an @yourcompany.com email address that your company controls, you can use the [delete without logging in](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) workflow and confirm deletion within the @yourcompany.com inbox.
 
 ## Designing your organization for your business
 
@@ -31498,7 +31501,7 @@ Offline devices cache a read-only copy of data, including organization items. So
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
-> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/) and be issued a new invitation to create an account and join your organization.
+> These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
 > - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
 
 ## What happens to removed members' data

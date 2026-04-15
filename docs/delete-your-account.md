@@ -11,9 +11,9 @@ Deleting a Bitwarden account or organization permanently deletes the account or 
 
 Deleting an account or organization does not automatically cancel a subscription. [Learn how to cancel a subscription](https://bitwarden.com/help/cancel-a-subscription/) before deleting an account.
 
-If you are locked out of your vault and deleting your account so that you can create a new one, [contact us](https://bitwarden.com/contact/) and we can help transfer your subscription to the new account.
+If you are locked out of your vault and deleting your account so that you can create a new one, [contact us](https://bitwarden.com/contact/) and we can help transfer your subscription to the new account. 
 
-## Delete a personal account
+## Delete an individual account
 
 To delete your individual account:
 
@@ -29,6 +29,9 @@ If you are deleting your account to start a new one, here are a few next steps:
 
 - If you delete a Bitwarden account that has a premium subscription associated with it, [contact us](https://bitwarden.com/contact/) and we will reapply your existing subscription to the new account.
 - If you were able to successfully export your vault data prior to deletion, you can easily [import it into the new account](https://bitwarden.com/help/import-data/).
+
+> [!NOTE] Deleting account as a sole owner
+> If you are the sole owner of an [organization](https://bitwarden.com/help/about-organizations/), you can't delete your account until you add a second owner to the organization or delete the organization itself. If you've forgotten your master password, [contact us](https://bitwarden.com/contact/) from the email address that owns the organization.
 
 The email address associated with your deleted account should be available to re-register with Bitwarden, should you wish to do so, immediately.
 

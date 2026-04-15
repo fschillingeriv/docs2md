@@ -17,7 +17,7 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 You can add or remove cards from your autofill suggestions and from the inline autofill menu using four settings found in the **Settings** → **Autofill** menu:
 
 - **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
-- **Display cards and suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
 

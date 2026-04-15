@@ -19,7 +19,7 @@ You may be able delete a member's account using one of the following methods:
 - If you are self-hosting Bitwarden, an authorized administrator can delete the account from the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/).
 - If the account has an `@yourcompany.com` email address that your company controls, you can use [this procedure](https://bitwarden.com/help/delete-your-account/#tab-without-logging-in-4KcOdFa6zVp6H7xo9Ui9vc/) to initiate and confirm deletion within the `@yourcompany.com` inbox.
 
-If none of these methods fit your organization's Bitwarden configuration, [remove the member](https://bitwarden.com/help/remove-users/) from your organization. They can then [delete their personal account](https://bitwarden.com/help/delete-your-account/#delete-a-personal-account/). 
+If none of these methods fit your organization's Bitwarden configuration, [remove the member](https://bitwarden.com/help/remove-users/) from your organization. They can then [delete their personal account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/). 
 
 ## Remove an account
 
