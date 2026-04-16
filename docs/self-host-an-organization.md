@@ -46,7 +46,7 @@ Self-hosted Bitwarden organizations will be able to utilize all paid features pr
 
 Next, setup your self-hosted organization for billing and license sync from your cloud organization. Doing so is optional, but will have a few advantages:
 
-- Enabling easier license updating when you change your organization's seat count.
+- Enabling easier license updating when you change your [organization's seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#self-hosted-billing/).
 - Enabling easier license updating when your subscription comes to its renewal date.
 - Unlocking [sponsored Families organizations](https://bitwarden.com/help/families-for-enterprise/) for members of Enterprise organizations.
 

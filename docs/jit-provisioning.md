@@ -2,9 +2,17 @@
 URL: https://bitwarden.com/help/jit-provisioning/
 ---
 
-# JIT Provisioning
+# Add Members with JIT
 
-Enterprise organizations using [SSO](https://bitwarden.com/help/about-sso/) support Just-In-Time (JIT) provisioning of members. No extra configuration, beyond the SAML or OIDC setup processes documented in the **SSO Guides**, is required to support JIT.
+Enterprise organizations using [SSO](https://bitwarden.com/help/about-sso/) support just-in-time (JIT) provisioning of members. No extra configuration, beyond the SAML or OIDC setup processes documented in the **SSO Guides**, is required to support JIT.
+
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Recommended JIT strategy
 

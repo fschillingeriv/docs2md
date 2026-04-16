@@ -4,10 +4,10 @@ URL: https://bitwarden.com/help/receive-send/
 
 # Receive a Send
 
-Unlike regular vault items, Sends can be received and opened by anyone with the link (including those who do not have Bitwarden accounts). Send links are randomly generated, and will look something like this:
+Sends can be received and opened by anyone with the link, including those who do not have Bitwarden accounts—unlike regular vault items. Send links are randomly generated, and will look something like this:
 
 - `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden/com/#/send/...`
-- `https://your.selfhosted.domain.com/#/send/....` if you are self-hosting
+- `https://your.selfhosted.domain.com/#/send/....` if you're self-hosting
 
 ![A received Send](https://bitwarden.com/assets/LLnrgZwyr6IAJ0GImXLnj/da3e363db0474f4cd6a57a44a6f1bd8f/Receive_a_send.png)
 *A received Send*
@@ -15,7 +15,7 @@ Unlike regular vault items, Sends can be received and opened by anyone with the 
 Depending on the [options configured](https://bitwarden.com/help/create-send/) by the sender, the recipient of a Send may be required to:
 
 - Enter a password to access the contents of the send
-- Enter a verification code
+- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/)
 - Manually toggle visibility on a hidden-text send
 
 ## Email-verified Sends
@@ -56,7 +56,7 @@ If you receive a Send with this warning, here's what you should do:
 
 ## Deleted, expired, and disabled Sends
 
-When a Send [is deleted, expired, or disabled](https://bitwarden.com/help/send-lifespan/), recipients who attempt to use the link will be shown a screen that reports the Send does not exist or is no longer available:
+When a Send is [deleted, expired, or disabled](https://bitwarden.com/help/send-lifespan/) and you try using the Send link, the page will state that the Send does not exist or is no longer available:
 
 ![A deleted, expired, or disabled Send ](https://bitwarden.com/assets/6sveEP7CK57cGvSa9zpdwe/8da52464833e2dbfab7ef228f38f77e6/A_deleted__expired__or_disabled_Send.png)
 *A deleted, expired, or disabled Send *

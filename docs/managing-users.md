@@ -2,78 +2,28 @@
 URL: https://bitwarden.com/help/managing-users/
 ---
 
-# User Management
+# Invite & Manage Members
 
-## User seats
+Add and manage your organization members to ensure the right people have access to Bitwarden.
 
-A "user seat" refers to a license for a single user within an organization. A user seat, while occupied by a member of your organization, grants that member access to Bitwarden services under your specific plan. A user seat is not permanently attached to that member; when they leave the organization that user seat is made available for use by a new member.
-
-Bitwarden cloud [Teams and Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/) will **automatically scale up** user seats as you [invite](https://bitwarden.com/help/managing-users/#invite/) new users. You can set a [seat limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/) on scaling to prevent your seat count from exceeding a specified number, or [manually add seats](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) as desired. Regardless of how you choose to add seats, you will need to [manually remove](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) seats you're no longer using.
-
-Adding and removing user seats will adjust your future billing totals. Adding seats will immediately charge your payment method on file at an adjusted rate so that **you will only pay for the remainder of the billing cycle** (month/year). Removing seats will cause your next charge to be adjusted so that you are **credited for time not used** by the already-paid-for seat.
-
-> [!NOTE] Removing seats 
-> Only an an [organization owner](https://bitwarden.com/help/user-types-access-control/#default-roles/) or [provider service user](https://bitwarden.com/help/provider-users/#provider-user-types/) can add or remove seats, as this directly affects billing.
-
-### Set a seat limit
-
-> [!NOTE] Managing seats when you're self-hosted
-> The number of seats a self-hosted organization has will always mirror its [counterpart cloud-organization](https://bitwarden.com/help/self-host-an-organization/#step-3-start-your-organization/). You will be required to manage your seat count through the cloud Admin Console, however [billing sync](https://bitwarden.com/help/licensing-on-premise/#tab-automatic-sync-4cDnzGHwlfBQEFs6eqrkut/) can be setup to make these changes reflect for your self-hosted organization without requiring you to re-upload you license.
-
-To set a limit on the number of seats your organization can scale up to:
-
-1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. Navigate to **Billing** → **Subscription** and check the **Limit subscription**checkbox:
-
-![Set a seat limit ](https://bitwarden.com/assets/5DBnJW1y9welOF6hrDKrrh/a700ae21b6f3dd20b702aa9d172ed707/2024-12-03_14-48-25.png)
-*Set a seat limit *
-3. In the **Seat limit** input, specify a seat limit.
-4. Select **Save**.
-
-> [!NOTE] Can't invite more when limit reached
-> Once the specified limit is reached, you will not be able to invite new users unless you increase the limit.
-
-### Manually add or remove seats
-
-> [!NOTE] Managing seats when you're self-hosted
-> The number of seats a self-hosted organization has will always mirror its [counterpart cloud-organization](https://bitwarden.com/help/self-host-an-organization/#step-3-start-your-organization/). You will be required to manage your seat count through the cloud Admin Console, however [billing sync](https://bitwarden.com/help/licensing-on-premise/#tab-automatic-sync-4cDnzGHwlfBQEFs6eqrkut/) can be setup to make these changes reflect for your self-hosted organization without requiring you to re-upload you license.
-
-To manually add or remove seats to your organization:
-
-1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. Navigate to **Billing** → **Subscription.**
-3. In the **Subscription seats** input, add or remove seats using the hover-over arrows:
-
-![Add or remove seats ](https://bitwarden.com/assets/6vCLfjhJz8FOGEeAuQmYQN/f6d0bfe07c1f4db8633e735f42f121fe/2024-12-03_14-49-45.png)
-*Add or remove seats *
-4. Select **Save**.
-
-> [!NOTE] Increasing subscription seats 
-> If you increase your **Subscription seats** above a specified **Seat limit**, you must also increase the seat limit so that it's equal to or greater than the desired subscription seat count.
-
-## Onboard users
-
-To ensure the security of your organization, Bitwarden applies a three-step process for onboarding a new member: [invite](https://bitwarden.com/help/managing-users/#invite/) → [accept](https://bitwarden.com/help/managing-users/#accept/) → [confirm](https://bitwarden.com/help/managing-users/#confirm/). This is designed to facilitate secure sharing between organizations and users by maintaining end-to-end encryption.
-
-> [!NOTE] User Management Alternatives
-> This page covers the process for manually adding users to organizations. Other methods, however, are available for automatic user and group provisioning:
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
 > 
-> - Teams and Enterprise organizations can [use SCIM](https://bitwarden.com/help/about-scim/).
-> - Teams and Enterprise organizations can [use Directory Sync](https://bitwarden.com/help/directory-sync/).
-> - Enterprise organizations can [use JIT](https://bitwarden.com/help/jit-provisioning/).
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
+
+## Add new members
+
+To ensure the security of your organization, Bitwarden applies a three-step process for adding and onboarding a new member: [invite](https://bitwarden.com/help/managing-users/#invite/) → [accept](https://bitwarden.com/help/managing-users/#accept/) → [confirm](https://bitwarden.com/help/managing-users/#confirm/). This is designed to facilitate secure sharing between organizations and users by maintaining end-to-end encryption.
 
 ### Invite
 
 > [!TIP] Enterprise policy before inviting users
-> For Enterprise organizations, Bitwarden recommends configuring [enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
+> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
 
-To invite users to your organization:
+To invite someone to your organization:
 
 1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
 

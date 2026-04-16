@@ -41,6 +41,20 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.4.0
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.0 and Mobile 2026.4.0.)*
+
+#### Password Manager
+
+- **Preview image attachments on Android**: You can now [preview image attachments](https://bitwarden.com/help/attachments/#view-an-attachment/) from within the Password Manager Android app, without having to download the file to your device. Previewing image attachments will be available on iOS in a future release.
+
+#### Admin Console
+
+- **Send controls Enterprise policy**: Two Enterprise policies, Send Options and Remove Send, were merged into the newly titled [Send controls policy](https://bitwarden.com/help/policies/#send-controls/). If either policy was previously turned on, the chosen options will transfer and remain unchanged.
+- **Updated Enterprise Policies page**: On the Policies page, the [Enterprise Policies](https://bitwarden.com/help/policies/) are now organized into three categories: Data Controls, Authentication, and Vault Management. You can also review at a glance which policies are turned on or off.
+- **Access Intelligence dashboard update**: Visualize [how at-risk applications, passwords, and members have changed over time](https://bitwarden.com/help/access-intelligence/#activity/) relative to absolute changes in application, password, and member counts with new graphs on the Access Intelligence Activity view.
+
 ## 2026.3.2
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.3.1, Browser Extension 2026.3.0, Mobile 2026.3.1, Desktop 2026.3.1, and CLI 2026.3.0.)*
@@ -1419,7 +1433,7 @@ The Bitwarden team is happy to announce the rollout of Admin Password Reset, the
 
 The Bitwarden team is pleased to release a set of features and updates continuing our mission of making password management easy and accessible for individuals and businesses:
 
-- **Privacy & Security Options for Send**: Use a new Send Privacy option to hide your email from recipients (see [here](https://bitwarden.com/help/send-privacy/#hide-email/) for details). To prevent abuse, File Sends will now require a verified email address. Additionally, Enterprise Organizations can implement a new policy to set the availability of the Hide Email option (see [here](https://bitwarden.com/help/policies/#send-options/) for details).
+- **Privacy & Security Options for Send**: Use a new Send Privacy option to hide your email from recipients (see [here](https://bitwarden.com/help/send-privacy/#hide-email/) for details). To prevent abuse, File Sends will now require a verified email address. Additionally, Enterprise Organizations can implement a new policy to set the availability of the Hide Email option (see [here](https://bitwarden.com/help/policies/#send-controls/) for details).
 - **FIDO Updates & Expanded Support**: Our FIDO implementation has been upgraded from FIDO U2F to FIDO2 WebAuthn, but existing FIDO U2F keys will retain their integrity. FIDO support has been expanded to more Browser Extensions and the Windows Desktop App (see [here](https://bitwarden.com/help/setup-two-step-login-fido/) for details).
 - **Custom Fields for Keys**: Custom Field values have been upgraded to support up to 5000 characters, allowing storage of keys like RSA 4096-bit SSH keys (see [here](https://bitwarden.com/help/custom-fields/#custom-fields-for-keys/) for details).
 - **File Size Increases**: You can now create File Attachments or File Sends that are up to 500 MB each. Due to device restrictions, the old 100 MB limit is still in place for Mobile Apps.

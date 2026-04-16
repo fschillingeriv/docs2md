@@ -12,9 +12,9 @@ Files can be attached to any vault item, including [shared](https://bitwarden.co
 > [!NOTE] Sends and Attachments utilize storage space
 > Attachments on individual vault items and all Sends use the individual storage space granted by premium subscriptions or organizations. Attachments on organization owned items use shared organizational storage space. Learn how to [add storage space](https://bitwarden.com/help/attachments/#add-storage-space/).
 
-## Upload a file
+## Upload an attachment
 
-To attach a file to a vault item:
+To attach an attachment to a vault item:
 
 ### Web app
 
@@ -73,7 +73,14 @@ bw create attachment --file /path/to/myfile.ext --itemid <itemid>
 
 For more information, please refer to the Bitwarden [CLI documentation](https://bitwarden.com/help/cli/).
 
-## Download a file
+## View an attachment
+
+On **Android** devices, image files (`.jpeg`, `.png`, `.gif`, `.WebP`, `.heic`) can be previewed from directly within Bitwarden, without downloading them to your device, by tapping the attachment on the **View item** screen:
+
+![View an attachment](https://bitwarden.com/assets/8CANFNTEL2gsoDy0zvQPG/65b328d7d01be571b66596c51f78d07d/2026-04-10_09-10-55.png)
+*View an attachment*
+
+## Download an attachment
 
 To download an attachment from most Bitwarden apps, open the item. Within the **Attachments** section, select the ⬇️ **Download icon** next to the file.
 
@@ -131,9 +138,9 @@ To export your attachments from the CLI, use the command:
 bw export --format zip
 ```
 
-## Delete a file
+## Delete an attachment
 
-To delete a file attachment:
+To delete an attachment:
 
 ### Web app
 

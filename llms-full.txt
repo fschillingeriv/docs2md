@@ -220,7 +220,7 @@ Enter an **Organization name** and a **Billing email** we can reach you at. [Lea
 3. If you chose a **free organization**, you are all set! If you chose one of our paid organizations,
 
  - **Families/Teams/Enterprise:** Your plan comes with 5 GB of encrypted [storage for attachments](https://bitwarden.com/help/attachments/). Add **Additional storage (GB)** for $0.33 per GB per month.
- - **Teams/Enterprise:** Specify the number of **user seats** you need for your organization. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/).
+ - **Teams/Enterprise:** Specify the number of **user seats** you need for your organization. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/).
  - **Teams/Enterprise:** Choose whether you would like to be billed annually or monthly. Families organizations can only be billed annually.
 4. Once you are happy with your organization, enter your **Payment information** (not required if you're creating a Free organization) and select **Submit**.
 
@@ -268,9 +268,6 @@ URL: https://bitwarden.com/help/about-scim/
 
 System for cross-domain identity management (SCIM) can be used to automatically provision members and groups in your Bitwarden organization. Bitwarden servers provide a SCIM endpoint that, with a valid [SCIM API Key](https://bitwarden.com/help/about-scim/#set-up-scim/), will accept requests from your identity provider (IdP) for user and group provisioning and de-provisioning.
 
-> [!NOTE] SCIM vs. BWDC
-> SCIM integrations are available for **Teams and Enterprise organizations**. Customers not using a SCIM-compatible identity provider may consider using [Directory Connector](https://bitwarden.com/help/directory-sync/) as an alternative means of provisioning.
-
 Bitwarden supports SCIM v2 using standard attribute mappings and offers integration documentation for:
 
 - [JumpCloud](https://bitwarden.com/help/jumpcloud-scim-integration/)
@@ -278,6 +275,14 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 - [Okta](https://bitwarden.com/help/okta-scim-integration/)
 - [OneLogin](https://bitwarden.com/help/onelogin-scim-integration/)
 - [Ping Identity](https://bitwarden.com/help/ping-identity-scim-integration/)
+
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Set up SCIM
 
@@ -395,14 +400,17 @@ URL: https://bitwarden.com/help/about-send/
 ---
 # About Send
 
-Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
 
 ## Accessing Send
 
-Sends are created, edited, managed, and deleted from the Send view in any Bitwarden app. Access the send view from the primary navigation:
+Sends are created, edited, managed, and deleted from the **Send** view in any Bitwarden app. Access the Send view from the primary navigation:
 
 ![Send in the web app](https://bitwarden.com/assets/7umXxS0YG58NdB3vb4kwKo/c2a5f8ae8fa0bae6becb2e20e7f59390/2026-02-24_12-52-46.png)
 *Send in the web app*
+
+> [!NOTE] Remove Send policy
+> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-controls/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
 
 ## Using Send
 
@@ -418,7 +426,7 @@ Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden
 *Send options*
 3. Share the Send link using any communication channel you prefer.
 
-Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) that allows you to track the Send. Sends will display [a set of status icons](https://bitwarden.com/help/send-faqs/#q-what-do-the-icons-next-to-my-sends-indicate/) whenever a lifespan event (for example, expiration) has occurred. The icons are as follows:
+Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) which allows you to monitor the Send. Your created Sends will display status icons when a lifespan-related event occurs:
 
 | **Icon** | **Meaning** |
 |------|------|
@@ -722,13 +730,14 @@ As the application landscape evolves and changes within your organization, the c
 
 ## Activity
 
-The **Activity** tab of the Access Intelligence report provides a summary of crucial datapoints and tasks. While the Activity tab provides this information at-a-glance, you should familiarize yourself with the **All applications** and **Critical applications** tab to best understand what's surfaced here:
+The **Activity** tab of the Access Intelligence report provides a summary of crucial datapoints and tasks. While the Activity tab provides this information at-a-glance, you should also familiarize yourself with the **All applications** and **Critical applications** tab to best understand what's surfaced here:
 
-![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/fb9e9ce8a0c636ea114abe80e838d02d/2026-03-20_12-07-50.png)
+![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/70128699f9db718b6c99c5f0abcf241e/2026-04-08_09-29-26.png)
 *Access Intelligence, Activity tab*
 
-- **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
+- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts.
 - **At-risk members**: Number of members with access to [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/) items for [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications.
+- **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
 - **Critical applications**: Proportion of [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications that are currently [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/).
 - **Applications needing review**: Number of new applications added by members since the [report was last run](https://bitwarden.com/help/access-intelligence/#run-the-report/).
 
@@ -2472,9 +2481,9 @@ Files can be attached to any vault item, including [shared](https://bitwarden.co
 > [!NOTE] Sends and Attachments utilize storage space
 > Attachments on individual vault items and all Sends use the individual storage space granted by premium subscriptions or organizations. Attachments on organization owned items use shared organizational storage space. Learn how to [add storage space](https://bitwarden.com/help/attachments/#add-storage-space/).
 
-## Upload a file
+## Upload an attachment
 
-To attach a file to a vault item:
+To attach an attachment to a vault item:
 
 ### Web app
 
@@ -2533,7 +2542,14 @@ bw create attachment --file /path/to/myfile.ext --itemid <itemid>
 
 For more information, please refer to the Bitwarden [CLI documentation](https://bitwarden.com/help/cli/).
 
-## Download a file
+## View an attachment
+
+On **Android** devices, image files (`.jpeg`, `.png`, `.gif`, `.WebP`, `.heic`) can be previewed from directly within Bitwarden, without downloading them to your device, by tapping the attachment on the **View item** screen:
+
+![View an attachment](https://bitwarden.com/assets/8CANFNTEL2gsoDy0zvQPG/65b328d7d01be571b66596c51f78d07d/2026-04-10_09-10-55.png)
+*View an attachment*
+
+## Download an attachment
 
 To download an attachment from most Bitwarden apps, open the item. Within the **Attachments** section, select the ⬇️ **Download icon** next to the file.
 
@@ -2591,9 +2607,9 @@ To export your attachments from the CLI, use the command:
 bw export --format zip
 ```
 
-## Delete a file
+## Delete an attachment
 
-To delete a file attachment:
+To delete an attachment:
 
 ### Web app
 
@@ -4365,21 +4381,9 @@ For help selecting the right Bitwarden plan for you, refer to [what plan is righ
 
 **A:** Viewing billing information is different depending on whether you are viewing it for an individual or organization subscription. Use [Update your Billing Information](https://bitwarden.com/help/update-billing-info/) to guide you through both processes.
 
-### Q: How do I delete my account?
-
-**A:** We're sad to see you go! Use [Delete your Account](https://bitwarden.com/help/delete-your-account/) to guide you through this process.
-
 ### Q: How do I upgrade from an individual subscription to an organization?
 
 **A:** Use [Upgrade from Individual to Organization](https://bitwarden.com/help/upgrade-from-individual-to-org/) to guide you through this process.
-
-### Q: How do I add or remove a user seat from my organization?
-
-**A:** For Teams and enterprise organizations, user seats will be automatically added as you invite new users. You can [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/) to prevent your seat count from exceeding a specific number.
-
-To remove user seats, navigate to your organization's **Billing** → **Subscription** screen and use the **Subscription Seats** input to remove seats ([learn more](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/)).
-
-Adding and removing user seats will adjust your future billing totals. Adding seats will immediately charge your payment method on file at an adjusted rate so that **you will only pay for the remainder of the billing cycle** (month/year). Removing seats will cause your next charge to be adjusted so that you are **credited for time not used** by the already-paid-for seat.
 
 ### Q: How do subscriptions work for self-hosting?
 
@@ -12694,7 +12698,7 @@ URL: https://bitwarden.com/help/create-send/
 Anyone can create text Sends, but file Sends can only be created by [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (families, teams, or enterprise). 
 
 > [!NOTE] Remove Send policy
-> Members of organizations that have enabled the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/) will be unable to access Send from their Bitwarden client.
+> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-controls/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
 
 Choose the Bitwarden app you want to Send from to get started:
 
@@ -15933,7 +15937,7 @@ If you already have a Bitwarden account, complete the following steps to start y
  - Check the **This account is owned by a business** checkbox.
  - Provide your **Business name**.
 4. Select the **Enterprise** plan option. Doing so will trigger additional enterprise-oriented fields to be displayed.
-5. In the **Users** section, enter the number of **User seats** you need. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/).
+5. In the **Users** section, enter the number of **User seats** you need. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/).
 6. In the **Addons** section, enter the amount of **Additional storage (GB)** you need. Your plan comes with 5 GB of shared encrypted file attachments, and you can add additional storage later if required.
 7. In the **Summary** section, select whether you'd like to be billed **Annually** or **Monthly**.
 
@@ -22284,6 +22288,67 @@ You can use the Bitwarden integrated authenticator for your Steam account's 2FA.
 
 Generated codes for Steam are five digits and alphanumeric, unlike traditional six-digit numeric TOTPs.
 ---
+URL: https://bitwarden.com/help/invoices-and-receipts/
+---
+# Invoices & Receipts
+
+Bitwarden automatically generates invoices and receipts for paid subscriptions. Only subscription holders, like a user on the Premium plan or an organization [owner](https://bitwarden.com/help/user-types-access-control/#default-roles/), can view or download invoices as a PDF.
+
+> [!TIP] Invoices if you're self-hosting.
+> If you're self-hosting, invoices and receipts are available through the [cloud account that's connected to your self-hosted deployment](https://bitwarden.com/help/licensing-on-premise/).
+
+Two types of invoices are available:
+
+- **Unpaid Invoices**: If we are unable to process the payment or you pay for a business plan via invoice, like Enterprise, the invoice will be listed in this section.
+- **Paid Invoices**: This section contains receipts, which are generated as soon as payment is processed.
+
+To access your account or organization's invoices:
+
+### Individual
+
+As the account holder of a Premium individual subscription:
+
+1. Using the web app, go to **Settings** → **Subscription**:
+
+![Subscription page](https://bitwarden.com/assets/3Ru9TSLguhRNYtLe2TLwXk/bec6794eb58efa8780504720d4acb250/2026-03-03_10-24-17.png)
+*Subscription page*
+2. Select **Billing history**.
+3. Select a line item from **Unpaid Invoices** or **Paid Invoices** to view or download a specific invoice or paid receipt:
+
+![Individual subscription invoice](https://bitwarden.com/assets/4vSHZX44OMs8dPa1c9GNMk/b7b7a7a6c7564a802650afd762212907/2026-03-03_10-24-26.png)
+*Individual subscription invoice*
+
+### Organization
+
+As the [owner](https://bitwarden.com/help/user-types-access-control/) of a Families, Teams, or Enterprise organization:
+
+1. Using the web app, go to the **Admin Console**.
+2. Go to **Billing** → **Billing history**.
+3. Select a line item from **Unpaid Invoices** or **Paid Invoices** to view or download a specific invoice or paid receipt:
+
+![Organization invoices](https://bitwarden.com/assets/2GcEwWFCc1KsGOKjazcmeP/88846e28fa4e77c0b5b5cce32cd9caac/2026-03-03_10-38-21.png)
+*Organization invoices*
+
+### Provider
+
+As a [Provider admin](https://bitwarden.com/help/provider-users/#provider-user-types/):
+
+1. Using the web app, go to the **Provider Portal**.
+2. Go to **Billing** → **Billing history**.
+3. Select a line item from **Unpaid Invoices** or **Paid Invoices** to view or download a specific invoice or paid receipt:
+
+![Provider invoices](https://bitwarden.com/assets/6uYalZ51JW56lFgio37MBv/7df0f55f9b09aa827c1aa8897ebacba4/2026-03-03_14-51-10.png)
+*Provider invoices*
+
+From this view, you can also download a `.csv` file containing a client-by-client breakdown of assigned seats.
+
+Invoices include:
+
+- The [billing address](https://bitwarden.com/help/update-billing-info/) associated with Bitwarden and your subscription.
+- The amount due for that subscription period, including any applicable [tax](https://bitwarden.com/help/tax-calculation/) as a line item.
+- For organization subscriptions, the number of [paid seats](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+- The payment method used to process payment, if applicable.
+---
 URL: https://bitwarden.com/help/invoked-crypto-libraries/
 ---
 # Invoked Crypto Libraries
@@ -22553,9 +22618,17 @@ On the left, select **Build Now → Pipelines** and select **Run Pipeline** loca
 ---
 URL: https://bitwarden.com/help/jit-provisioning/
 ---
-# JIT Provisioning
+# Add Members with JIT
 
-Enterprise organizations using [SSO](https://bitwarden.com/help/about-sso/) support Just-In-Time (JIT) provisioning of members. No extra configuration, beyond the SAML or OIDC setup processes documented in the **SSO Guides**, is required to support JIT.
+Enterprise organizations using [SSO](https://bitwarden.com/help/about-sso/) support just-in-time (JIT) provisioning of members. No extra configuration, beyond the SAML or OIDC setup processes documented in the **SSO Guides**, is required to support JIT.
+
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Recommended JIT strategy
 
@@ -23563,8 +23636,8 @@ The following emails alert owners and admins of Bitwarden organizations to criti
 | Subject line | Variable | Description |
 |------|------|------|
 | Your Subscription Will Renew Soon | n/a | The billing email for an organization receives this email when their organization subscription is [approaching a renewal date](https://bitwarden.com/help/organization-renewal/). |
-| {Organization} Seat Count Has Increased | {Organization} = Your organization's display name. | All owners receive this email when their [organization seat count autoscales](https://bitwarden.com/help/managing-users/#user-seats/). |
-| {Organization} Seat Limit Reached | {Organization} = Your organization's display name. | All owners receive this email when the number of their organization's members matches their [seat limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/). |
+| {Organization} Seat Count Has Increased | {Organization} = Your organization's display name. | All owners receive this email when their [organization seat count autoscales](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/). |
+| {Organization} Seat Limit Reached | {Organization} = Your organization's display name. | All owners receive this email when the number of their organization's members matches their [seat limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/). |
 | Domain not claimed | n/a | All owners and admins receive this email when an [attempt to claim a domain for their organization was not successful](https://bitwarden.com/help/claimed-domains/). |
 | Action Required: {User} Needs to be Confirmed | {User} = A user's email address. | All owners and admins receive this email when a user is waiting to be [confirmed to join the organization.](https://bitwarden.com/help/managing-users/#confirm/) |
 | Review SSO login request for new device | n/a | All owners and admins receive this email when a user is waiting for a [trusted device to be approved](https://bitwarden.com/help/approve-a-trusted-device/). |
@@ -24288,6 +24361,90 @@ Additionally, **if your service users help to train customers' end-users to use 
 | Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/create-bitwarden-account/) |
 | Register for demos | Encourage power users to learn independently by attending a weekly demo. | [Bitwarden events](https://www.crowdcast.io/bitwarden) |
 ---
+URL: https://bitwarden.com/help/manage-subscription-seats-in-your-organization/
+---
+# Manage Subscription Seats in Your Organization
+
+A user seat is the billed license for one user within a Bitwarden organization. When a user is invited to your organization, they occupy one user seat and are granted access to Bitwarden features under your specific plan. The total number of user seats represents how many users can join your organization. As such, user seats are not permanently attached to a specific member.
+
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
+
+## User seat billing
+
+Only an [organization owner](https://bitwarden.com/help/user-types-access-control/#default-roles/) or [provider service user](https://bitwarden.com/help/provider-users/#provider-user-types/) can add or remove seats because it directly affects the organization’s billing subscription.
+
+To check how many user seats your team already includes, open the Admin Console and go to **Billing** → **Subscription**. Your organization’s seat total is listed within **Subscription seats**:
+
+![Set Subscription seats](https://bitwarden.com/assets/6IiAvwCX2KbCTUAbAnY4yV/81614bb5a44c64cdc387ba9cee5663eb/Set_Subscription_seats.png)
+*Set Subscription seats*
+
+If the number of user seats is higher than your organization’s total [active users](https://bitwarden.com/help/managing-users/#manage-existing-members/), then that means there are unassigned user seats. Unassigned user seats are still billed, so you may want to invite more people or [remove the extra user seats](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) from your subscription.
+
+> [!NOTE] Removing a user different from reducing seat count
+> [Removing a user](https://bitwarden.com/help/remove-users/) from your organization does not automatically reduce your organization’s billed subscription seats. You still need to reduce the seat count.
+
+### Billing for new user seats
+
+When new users are [invited](https://bitwarden.com/help/managing-users/#invite/), Bitwarden cloud [Teams and Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/) will **automatically increase** the number of billed user seats. You can set a [seat limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/) to prevent your seat count from exceeding a specified number or [manually add seats](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) as desired.
+
+When you add seats in the middle of your billing cycle, you are only charged for the remaining time. If you're on a **monthly plan**, that prorated amount is added to your next scheduled renewal.
+
+For **annual subscriptions**, new seats added mid-cycle are billed on a prorated basis. The prorated amount is charged to the payment method on file on the same day of the month as your renewal date. On your next annual renewal date, all of your seats are billed together for the full year.
+
+For example, if your plan renews on July 15th and you add a seat on May 1st, you'll be charged on May 15th for the prorated remainder of the current period (May 1–July 14). When your annual renewal occurs on July 15th, all seats are consolidated into a single yearly charge.
+
+### Credit for removed user seats
+
+Regardless of how you add seats, you must [manually remove](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) user seats you no longer want from your subscription. Removing seats will cause your next charge to be adjusted so that you are **credited for time not used** by the already-paid-for seat.
+
+### Self-hosted billing
+
+The number of seats a self-hosted organization has will always mirror its [counterpart cloud-organization](https://bitwarden.com/help/self-host-an-organization/#step-3-start-your-organization/). This means self-hosted organizations **do not** automatically scale users. Instead, you must use the cloud Admin Console to manage your seat count.
+
+To quickly reflect changes to your seat count made in the cloud Admin Console, you can set up [billing sync](https://bitwarden.com/help/licensing-on-premise/#tab-automatic-sync-4cDnzGHwlfBQEFs6eqrkut/). This will remove the need to [re-upload your license](https://bitwarden.com/help/licensing-on-premise/#tab-manual-update-4cDnzGHwlfBQEFs6eqrkut/).
+
+## Manually add or remove seats
+
+To manually add or remove seats to your organization:
+
+1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
+
+![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
+2. Go to **Billing** → **Subscription**.
+3. Enter the total number of user seats that you want in **Subscription seats**:
+
+![Set Subscription seats](https://bitwarden.com/assets/6IiAvwCX2KbCTUAbAnY4yV/81614bb5a44c64cdc387ba9cee5663eb/Set_Subscription_seats.png)
+*Set Subscription seats*
+4. Select **Save**.
+
+> [!NOTE] Can't invite more when limit reached
+> If **Limit subscription** is checked, then the number in **Subscription seats** must be equal to or lower than your seat limit. If you need to add more user seats, increase the **Seat Limit**.
+
+## Set a seat limit
+
+You have the option to control subscription costs by setting a cap on the number of user seats that can be added to your organization. Once the specified limit is reached, you will not be able to invite new users unless you increase that limit.
+
+To set a limit on the number of seats your organization can automatically scale up to:
+
+1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
+
+![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
+2. Go to **Billing** → **Subscription**.
+3. Check **Limit subscription (optional)**.
+4. Enter the maximum number of user seats you want to allow in **Seat limit (optional)**:
+
+![Set Seat limit ](https://bitwarden.com/assets/5DBnJW1y9welOF6hrDKrrh/06cade0656921a06d5bc43d3b9d26a62/Set_Seat_limit.png)
+*Set Seat limit *
+5. Select **Save**.
+---
 URL: https://bitwarden.com/help/manage-your-secrets-org/
 ---
 # Manage your Organization
@@ -24719,78 +24876,28 @@ Now that you understand the basics of working with vault items, we recommend:
 ---
 URL: https://bitwarden.com/help/managing-users/
 ---
-# User Management
+# Invite & Manage Members
 
-## User seats
+Add and manage your organization members to ensure the right people have access to Bitwarden.
 
-A "user seat" refers to a license for a single user within an organization. A user seat, while occupied by a member of your organization, grants that member access to Bitwarden services under your specific plan. A user seat is not permanently attached to that member; when they leave the organization that user seat is made available for use by a new member.
-
-Bitwarden cloud [Teams and Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/) will **automatically scale up** user seats as you [invite](https://bitwarden.com/help/managing-users/#invite/) new users. You can set a [seat limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/) on scaling to prevent your seat count from exceeding a specified number, or [manually add seats](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) as desired. Regardless of how you choose to add seats, you will need to [manually remove](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/) seats you're no longer using.
-
-Adding and removing user seats will adjust your future billing totals. Adding seats will immediately charge your payment method on file at an adjusted rate so that **you will only pay for the remainder of the billing cycle** (month/year). Removing seats will cause your next charge to be adjusted so that you are **credited for time not used** by the already-paid-for seat.
-
-> [!NOTE] Removing seats 
-> Only an an [organization owner](https://bitwarden.com/help/user-types-access-control/#default-roles/) or [provider service user](https://bitwarden.com/help/provider-users/#provider-user-types/) can add or remove seats, as this directly affects billing.
-
-### Set a seat limit
-
-> [!NOTE] Managing seats when you're self-hosted
-> The number of seats a self-hosted organization has will always mirror its [counterpart cloud-organization](https://bitwarden.com/help/self-host-an-organization/#step-3-start-your-organization/). You will be required to manage your seat count through the cloud Admin Console, however [billing sync](https://bitwarden.com/help/licensing-on-premise/#tab-automatic-sync-4cDnzGHwlfBQEFs6eqrkut/) can be setup to make these changes reflect for your self-hosted organization without requiring you to re-upload you license.
-
-To set a limit on the number of seats your organization can scale up to:
-
-1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. Navigate to **Billing** → **Subscription** and check the **Limit subscription**checkbox:
-
-![Set a seat limit ](https://bitwarden.com/assets/5DBnJW1y9welOF6hrDKrrh/a700ae21b6f3dd20b702aa9d172ed707/2024-12-03_14-48-25.png)
-*Set a seat limit *
-3. In the **Seat limit** input, specify a seat limit.
-4. Select **Save**.
-
-> [!NOTE] Can't invite more when limit reached
-> Once the specified limit is reached, you will not be able to invite new users unless you increase the limit.
-
-### Manually add or remove seats
-
-> [!NOTE] Managing seats when you're self-hosted
-> The number of seats a self-hosted organization has will always mirror its [counterpart cloud-organization](https://bitwarden.com/help/self-host-an-organization/#step-3-start-your-organization/). You will be required to manage your seat count through the cloud Admin Console, however [billing sync](https://bitwarden.com/help/licensing-on-premise/#tab-automatic-sync-4cDnzGHwlfBQEFs6eqrkut/) can be setup to make these changes reflect for your self-hosted organization without requiring you to re-upload you license.
-
-To manually add or remove seats to your organization:
-
-1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. Navigate to **Billing** → **Subscription.**
-3. In the **Subscription seats** input, add or remove seats using the hover-over arrows:
-
-![Add or remove seats ](https://bitwarden.com/assets/6vCLfjhJz8FOGEeAuQmYQN/f6d0bfe07c1f4db8633e735f42f121fe/2024-12-03_14-49-45.png)
-*Add or remove seats *
-4. Select **Save**.
-
-> [!NOTE] Increasing subscription seats 
-> If you increase your **Subscription seats** above a specified **Seat limit**, you must also increase the seat limit so that it's equal to or greater than the desired subscription seat count.
-
-## Onboard users
-
-To ensure the security of your organization, Bitwarden applies a three-step process for onboarding a new member: [invite](https://bitwarden.com/help/managing-users/#invite/) → [accept](https://bitwarden.com/help/managing-users/#accept/) → [confirm](https://bitwarden.com/help/managing-users/#confirm/). This is designed to facilitate secure sharing between organizations and users by maintaining end-to-end encryption.
-
-> [!NOTE] User Management Alternatives
-> This page covers the process for manually adding users to organizations. Other methods, however, are available for automatic user and group provisioning:
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
 > 
-> - Teams and Enterprise organizations can [use SCIM](https://bitwarden.com/help/about-scim/).
-> - Teams and Enterprise organizations can [use Directory Sync](https://bitwarden.com/help/directory-sync/).
-> - Enterprise organizations can [use JIT](https://bitwarden.com/help/jit-provisioning/).
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
+
+## Add new members
+
+To ensure the security of your organization, Bitwarden applies a three-step process for adding and onboarding a new member: [invite](https://bitwarden.com/help/managing-users/#invite/) → [accept](https://bitwarden.com/help/managing-users/#accept/) → [confirm](https://bitwarden.com/help/managing-users/#confirm/). This is designed to facilitate secure sharing between organizations and users by maintaining end-to-end encryption.
 
 ### Invite
 
 > [!TIP] Enterprise policy before inviting users
-> For Enterprise organizations, Bitwarden recommends configuring [enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
+> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
 
-To invite users to your organization:
+To invite someone to your organization:
 
 1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
 
@@ -28515,24 +28622,26 @@ URL: https://bitwarden.com/help/policies/
 Enterprise policies allow Enterprise organizations to enforce security rules and default settings for all members, like mandating the use of a two-step login.
 
 > [!WARNING] Enable policies before invite.
-> We recommend setting enterprise policies prior to inviting users to your organization. Some policies will revoke non-compliant users when turned on, and some are not retroactively enforceable.
+> We recommend setting enterprise policies before inviting users to your organization. Some policies will [revoke](https://bitwarden.com/help/revoke-users/) non-compliant users when turned on, and some are not retroactively enforceable.
 
-## Set enterprise policies
+## Set Enterprise policies
 
-Organization owners and admins can apply enterprise policies. To update a policy: 
+Organization owners and admins can apply Enterprise policies. To update a policy: 
 
 1. Within the Bitwarden web app, open the Admin Console.
 2. Select **Settings**.
 3. Select **Policies**.
 4. Select the name of the policy you want to change:
 
-![Set Enterprise policies](https://bitwarden.com/assets/2flohk6BsRKvazjztwvzsJ/4258307d845b33cd9f765388ca6bfea6/2024-12-03_14-24-58.png)
+![Set Enterprise policies](https://bitwarden.com/assets/2flohk6BsRKvazjztwvzsJ/66bdf4f937a1d37646207c79e6ec24be/Set_Enterprise_policies.png)
 *Set Enterprise policies*
 5. Check or uncheck **Turn on**.
 6. (Optional) If more options appear, configure them.
 7. Select **Save**.
 
-## Available policies
+## Data Controls
+
+Policies in the **Data Controls**section add guardrails to how data may be shared and dictate who owns vault data.
 
 ### Single organization
 
@@ -28567,6 +28676,29 @@ Turn on this sub-option of the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
+### Send controls
+
+Turn on the **Send controls** policy to specify options for creating and editing [Sends](https://bitwarden.com/help/about-send/). This policy is not enforced for owners and admins. When turning on this policy, you must check one of the listed options:
+
+- **Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/).
+- **Always show member's email address with recipients when creating or editing a Send** removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), providing transparency to those who receive a Send.
+
+> [!NOTE] Send controls, only check one setting
+> Make sure you select only one setting. If you check both, members will be subject to the **Remove Send** option.
+
+### Remove export
+
+Turn on the **Remove export**policy to prohibit non-owner and non-admin members of your organization from [exporting their individual vault data](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
+
+In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
+
+![Vault export removed](https://bitwarden.com/assets/5E2871D2vZBzveBmVyv9lO/b89f979980566dda40928db1ce450507/2024-10-14_08-50-45.png)
+*Vault export removed*
+
+## Authentication
+
+Policies in the **Authentication** section help you harden your organization's security by forcing members to have robust authentication standards to access their Bitwarden vault.
+
 ### Master password requirements
 
 Turn on the **Master password requirements** policy to enforce a configurable set of minimum requirements for users' master password strength. Organizations can enforce:
@@ -28598,20 +28730,6 @@ Members of organizations using this policy will not be able to [log in with pass
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
-
-### Automatic login with SSO
-
-Turn on the **Automatically login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
-
-1. To enable the **Automatic login with SSO** policy, check the **Turn on** box, and enter your**Identity provider host** URL(s). The URL should include `protocol://domain`.
-
-![Automatically log in users for allowed applications](https://bitwarden.com/assets/2qHW4T4CDwpQJmPK6oDDn8/e25f021aa609e6072ffa664ae757ea7f/2025-11-19_09-34-16.png)
-*Automatically log in users for allowed applications*
-2. As an Administrator on your IdP, add an application, or app shortcut to your end-user dashboard containing the destination URL with the added parameter `/#autosubmit=1`
-3. Once the application has been saved, users may select the application from the IdP dashboard and Bitwarden will autofill and login to the application.
-
-> [!NOTE] Automatically login users browser extension
-> Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
 
 ### Require two-step login
 
@@ -28660,6 +28778,10 @@ Turn on the **Remove Unlock with PIN** policy to prohibit members from configuri
 
 Members who are using unlock with PIN prior to the policy will have it enforced on their next log in, meaning if they have an already logged-in session they will still see the option in the UI and be able to unlock with PIN **until** they log out **or** turn off the unlock with PIN option in the client.
 
+## Vault Management
+
+Policies in the **Vault Management** section allow you to set default and minimum standards for your members' items.
+
 ### Password generator
 
 Turn on the **Password generator** policy to enforce a configurable set of minimum requirements for any user-generated passwords for all members, regardless of role. Organizations can enforce:
@@ -28703,23 +28825,23 @@ Once the policy is activated, members cannot view or change their account's **De
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
+### Automatic login with SSO
+
+Turn on the **Automatically login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
+
+1. To enable the **Automatic login with SSO** policy, check the **Turn on** box, and enter your**Identity provider host** URL(s). The URL should include `protocol://domain`.
+
+![Automatically log in users for allowed applications](https://bitwarden.com/assets/2qHW4T4CDwpQJmPK6oDDn8/e25f021aa609e6072ffa664ae757ea7f/2025-11-19_09-34-16.png)
+*Automatically log in users for allowed applications*
+2. As an Administrator on your IdP, add an application, or app shortcut to your end-user dashboard containing the destination URL with the added parameter `/#autosubmit=1`
+3. Once the application has been saved, users may select the application from the IdP dashboard and Bitwarden will autofill and login to the application.
+
+> [!NOTE] Automatically login users browser extension
+> Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
+
 ### Activate autofill
 
 Turn on the **Activate auto-fill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
-
-### Send options
-
-Turn on the **Send options** policy to allow owners and admins to specify options for creating and editing Sends. This policy is not enforced for owners and admins. Options include:
-
-| **Option** | **Description** |
-|------|------|
-| Do not allow users to hide their email address | Turning on this option removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), meaning that all [received Sends](https://bitwarden.com/help/receive-send/) will include whom they are sent from. |
-
-### Remove Send
-
-Turn on the **Remove Send** policy to prevent members who are not an owner or admin from creating or editing a Send using [Bitwarden Send](https://bitwarden.com/help/about-send/). Members subject to this policy will no longer have access to Send on their Bitwarden client. This policy is not enforced for owners and admins.
-
-A banner is displayed to users in the **Send** view and on opening any existing Send to indicate that a policy is restricting them to only deleting Sends. 
 
 ### Remove card item type
 
@@ -28735,21 +28857,17 @@ Turn on the **Remove Free Bitwarden Families sponsorship**policy to prevent memb
 
 Users who have redeemed a sponsored Families organization prior to the policy being activated will continue to have their organization sponsored until the end of the current billing cycle. Their stored payment method will be charged for the organization when the next billing cycle begins.
 
-### Remove export
-
-Turn on the **Remove export**policy to prohibit non-owner and non-admin members of your organization from [exporting their individual vault data](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
-
-In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
-
 ![Vault export removed](https://bitwarden.com/assets/5E2871D2vZBzveBmVyv9lO/b89f979980566dda40928db1ce450507/2024-10-14_08-50-45.png)
 *Vault export removed*
 
 ### Automatic user confirmation
 
-> [!TIP] This policy is controlled by Bitwarden.
-> In order to gain access to this policy, Bitwarden support will need to toggle it on for you. The first step is to [contact us](https://bitwarden.com/contact/).
+Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
-Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization. Before using automatic confirmation, check your organization's [eligibility and learn about the setup process](https://bitwarden.com/help/automatic-confirmation/).
+1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
+2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
+4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
 ---
 URL: https://bitwarden.com/help/premium-renewal/
 ---
@@ -29891,10 +30009,10 @@ URL: https://bitwarden.com/help/receive-send/
 ---
 # Receive a Send
 
-Unlike regular vault items, Sends can be received and opened by anyone with the link (including those who do not have Bitwarden accounts). Send links are randomly generated, and will look something like this:
+Sends can be received and opened by anyone with the link, including those who do not have Bitwarden accounts—unlike regular vault items. Send links are randomly generated, and will look something like this:
 
 - `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden/com/#/send/...`
-- `https://your.selfhosted.domain.com/#/send/....` if you are self-hosting
+- `https://your.selfhosted.domain.com/#/send/....` if you're self-hosting
 
 ![A received Send](https://bitwarden.com/assets/LLnrgZwyr6IAJ0GImXLnj/da3e363db0474f4cd6a57a44a6f1bd8f/Receive_a_send.png)
 *A received Send*
@@ -29902,7 +30020,7 @@ Unlike regular vault items, Sends can be received and opened by anyone with the 
 Depending on the [options configured](https://bitwarden.com/help/create-send/) by the sender, the recipient of a Send may be required to:
 
 - Enter a password to access the contents of the send
-- Enter a verification code
+- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/)
 - Manually toggle visibility on a hidden-text send
 
 ## Email-verified Sends
@@ -29943,7 +30061,7 @@ If you receive a Send with this warning, here's what you should do:
 
 ## Deleted, expired, and disabled Sends
 
-When a Send [is deleted, expired, or disabled](https://bitwarden.com/help/send-lifespan/), recipients who attempt to use the link will be shown a screen that reports the Send does not exist or is no longer available:
+When a Send is [deleted, expired, or disabled](https://bitwarden.com/help/send-lifespan/) and you try using the Send link, the page will state that the Send does not exist or is no longer available:
 
 ![A deleted, expired, or disabled Send ](https://bitwarden.com/assets/6sveEP7CK57cGvSa9zpdwe/8da52464833e2dbfab7ef228f38f77e6/A_deleted__expired__or_disabled_Send.png)
 *A deleted, expired, or disabled Send *
@@ -30013,6 +30131,20 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.4.0
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.0 and Mobile 2026.4.0.)*
+
+#### Password Manager
+
+- **Preview image attachments on Android**: You can now [preview image attachments](https://bitwarden.com/help/attachments/#view-an-attachment/) from within the Password Manager Android app, without having to download the file to your device. Previewing image attachments will be available on iOS in a future release.
+
+#### Admin Console
+
+- **Send controls Enterprise policy**: Two Enterprise policies, Send Options and Remove Send, were merged into the newly titled [Send controls policy](https://bitwarden.com/help/policies/#send-controls/). If either policy was previously turned on, the chosen options will transfer and remain unchanged.
+- **Updated Enterprise Policies page**: On the Policies page, the [Enterprise Policies](https://bitwarden.com/help/policies/) are now organized into three categories: Data Controls, Authentication, and Vault Management. You can also review at a glance which policies are turned on or off.
+- **Access Intelligence dashboard update**: Visualize [how at-risk applications, passwords, and members have changed over time](https://bitwarden.com/help/access-intelligence/#activity/) relative to absolute changes in application, password, and member counts with new graphs on the Access Intelligence Activity view.
 
 ## 2026.3.2
 
@@ -31392,7 +31524,7 @@ The Bitwarden team is happy to announce the rollout of Admin Password Reset, the
 
 The Bitwarden team is pleased to release a set of features and updates continuing our mission of making password management easy and accessible for individuals and businesses:
 
-- **Privacy & Security Options for Send**: Use a new Send Privacy option to hide your email from recipients (see [here](https://bitwarden.com/help/send-privacy/#hide-email/) for details). To prevent abuse, File Sends will now require a verified email address. Additionally, Enterprise Organizations can implement a new policy to set the availability of the Hide Email option (see [here](https://bitwarden.com/help/policies/#send-options/) for details).
+- **Privacy & Security Options for Send**: Use a new Send Privacy option to hide your email from recipients (see [here](https://bitwarden.com/help/send-privacy/#hide-email/) for details). To prevent abuse, File Sends will now require a verified email address. Additionally, Enterprise Organizations can implement a new policy to set the availability of the Hide Email option (see [here](https://bitwarden.com/help/policies/#send-controls/) for details).
 - **FIDO Updates & Expanded Support**: Our FIDO implementation has been upgraded from FIDO U2F to FIDO2 WebAuthn, but existing FIDO U2F keys will retain their integrity. FIDO support has been expanded to more Browser Extensions and the Windows Desktop App (see [here](https://bitwarden.com/help/setup-two-step-login-fido/) for details).
 - **Custom Fields for Keys**: Custom Field values have been upgraded to support up to 5000 characters, allowing storage of keys like RSA 4096-bit SSH keys (see [here](https://bitwarden.com/help/custom-fields/#custom-fields-for-keys/) for details).
 - **File Size Increases**: You can now create File Attachments or File Sends that are up to 500 MB each. Due to device restrictions, the old 100 MB limit is still in place for Mobile Apps.
@@ -35292,7 +35424,7 @@ Self-hosted Bitwarden organizations will be able to utilize all paid features pr
 
 Next, setup your self-hosted organization for billing and license sync from your cloud organization. Doing so is optional, but will have a few advantages:
 
-- Enabling easier license updating when you change your organization's seat count.
+- Enabling easier license updating when you change your [organization's seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#self-hosted-billing/).
 - Enabling easier license updating when your subscription comes to its renewal date.
 - Unlocking [sponsored Families organizations](https://bitwarden.com/help/families-for-enterprise/) for members of Enterprise organizations.
 
@@ -36183,7 +36315,7 @@ Additionally, creation of file Sends requires your email address to be verified.
 
 ### Q: Can I disable Send for my organization?
 
-**A:** Enterprise organizations can disable Send at any time using the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/). Admins and owners can implement this policy from the organization's **Settings** → **Policies** page. Enabling the policy will prevent organization members from creating or editing any Sends.
+**A:** Enterprise organizations can remove the ability to create new or edit exsting Sends with the [Send controls policy](https://bitwarden.com/help/policies/#send-controls/).
 ---
 URL: https://bitwarden.com/help/send-hosting/
 ---
@@ -36373,7 +36505,7 @@ Recipients can still validate the trustworthiness of Sends by cross-referencing 
 *Hidden-email text Send*
 
 > [!TIP] Send Options Policy
-> For enterprise organizations, the availability of this option can be set using an [enterprise policy](https://bitwarden.com/help/policies/#send-options/).
+> For enterprise organizations, the availability of this option can be set using an [enterprise policy](https://bitwarden.com/help/policies/#send-controls/).
 
 ## Hide text
 
@@ -38703,7 +38835,7 @@ URL: https://bitwarden.com/help/tax-calculation/
 ---
 # Taxes on Bitwarden Purchases
 
-This article describes how taxes are assessed, and how to provide the appropriate tax information, for paid Bitwarden subscriptions. Information about your Bitwarden subscription is available:
+This article describes how taxes are assessed, and how to provide the appropriate tax information, for paid Bitwarden subscriptions. Information about your Bitwarden subscription is available on your [invoices](https://bitwarden.com/help/invoices-and-receipts/) and:
 
 - For personal users, from the Password Manager **Settings** → **Subscription** menu.
 
@@ -38714,7 +38846,7 @@ This article describes how taxes are assessed, and how to provide the appropriat
 
 ## United States
 
-If your billing address is in the United States, sales tax for your subscription is assessed based on the ZIP / Postal code associated with your payment method. Tax liability and applicable rates are subject to change as required by your location. The sales tax on your subscription can be viewed in the invoices available on the **Billing history**tab.
+If your billing address is in the United States, sales tax for your subscription is assessed based on the ZIP / Postal code associated with your payment method. Tax liability and applicable rates are subject to change as required by your location. Your subscription's sales tax is detailed on the invoices available on the **Billing history**tab.
 
 ## Value added tax (VAT)
 
@@ -39501,7 +39633,7 @@ On this page, you can:
 
 Select the **Billing history** tab to:
 
-- View and download **Invoices**
+- View and download [**Invoices**](https://bitwarden.com/help/invoices-and-receipts/)
 - View **Transactions**
 
 ## Update billing information for organizations
@@ -39689,7 +39821,7 @@ Complete the following steps to start your organization:
 > Paid organizations (Families, Teams, or Enterprise) include premium features for all enrolled users. For more information about premium features, see [Password Manager Plans](https://bitwarden.com/help/password-manager-plans/).
 5. If you selected a paid organization, enter the following information:
 
- - For **Teams** or **Enterprise**, enter the number of **User Seats** you need. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/).
+ - For **Teams** or **Enterprise**, enter the number of **User Seats** you need. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/).
  - For **Families**, **Teams**, or **Enterprise**, enter the amount of **Additional Storage (GB)** you need. Your plan comes with 5 GB of shared encrypted file attachments, and you can add additional storage later if needed.
  - For **Teams** or **Enterprise**, select whether you'd like to be billed **annually** or **monthly**. Other organization types may only be billed annually.
  - For any paid organization, enter your **Payment Information**.

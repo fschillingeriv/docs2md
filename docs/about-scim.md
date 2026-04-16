@@ -6,9 +6,6 @@ URL: https://bitwarden.com/help/about-scim/
 
 System for cross-domain identity management (SCIM) can be used to automatically provision members and groups in your Bitwarden organization. Bitwarden servers provide a SCIM endpoint that, with a valid [SCIM API Key](https://bitwarden.com/help/about-scim/#set-up-scim/), will accept requests from your identity provider (IdP) for user and group provisioning and de-provisioning.
 
-> [!NOTE] SCIM vs. BWDC
-> SCIM integrations are available for **Teams and Enterprise organizations**. Customers not using a SCIM-compatible identity provider may consider using [Directory Connector](https://bitwarden.com/help/directory-sync/) as an alternative means of provisioning.
-
 Bitwarden supports SCIM v2 using standard attribute mappings and offers integration documentation for:
 
 - [JumpCloud](https://bitwarden.com/help/jumpcloud-scim-integration/)
@@ -16,6 +13,14 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 - [Okta](https://bitwarden.com/help/okta-scim-integration/)
 - [OneLogin](https://bitwarden.com/help/onelogin-scim-integration/)
 - [Ping Identity](https://bitwarden.com/help/ping-identity-scim-integration/)
+
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Set up SCIM
 

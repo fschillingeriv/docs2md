@@ -16,4 +16,4 @@ Additionally, creation of file Sends requires your email address to be verified.
 
 ### Q: Can I disable Send for my organization?
 
-**A:** Enterprise organizations can disable Send at any time using the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/). Admins and owners can implement this policy from the organization's **Settings** → **Policies** page. Enabling the policy will prevent organization members from creating or editing any Sends.
+**A:** Enterprise organizations can remove the ability to create new or edit exsting Sends with the [Send controls policy](https://bitwarden.com/help/policies/#send-controls/).

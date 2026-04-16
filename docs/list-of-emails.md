@@ -17,8 +17,8 @@ The following emails alert owners and admins of Bitwarden organizations to criti
 | Subject line | Variable | Description |
 |------|------|------|
 | Your Subscription Will Renew Soon | n/a | The billing email for an organization receives this email when their organization subscription is [approaching a renewal date](https://bitwarden.com/help/organization-renewal/). |
-| {Organization} Seat Count Has Increased | {Organization} = Your organization's display name. | All owners receive this email when their [organization seat count autoscales](https://bitwarden.com/help/managing-users/#user-seats/). |
-| {Organization} Seat Limit Reached | {Organization} = Your organization's display name. | All owners receive this email when the number of their organization's members matches their [seat limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/). |
+| {Organization} Seat Count Has Increased | {Organization} = Your organization's display name. | All owners receive this email when their [organization seat count autoscales](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/). |
+| {Organization} Seat Limit Reached | {Organization} = Your organization's display name. | All owners receive this email when the number of their organization's members matches their [seat limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/). |
 | Domain not claimed | n/a | All owners and admins receive this email when an [attempt to claim a domain for their organization was not successful](https://bitwarden.com/help/claimed-domains/). |
 | Action Required: {User} Needs to be Confirmed | {User} = A user's email address. | All owners and admins receive this email when a user is waiting to be [confirmed to join the organization.](https://bitwarden.com/help/managing-users/#confirm/) |
 | Review SSO login request for new device | n/a | All owners and admins receive this email when a user is waiting for a [trusted device to be approved](https://bitwarden.com/help/approve-a-trusted-device/). |

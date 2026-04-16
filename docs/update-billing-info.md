@@ -23,7 +23,7 @@ On this page, you can:
 
 Select the **Billing history** tab to:
 
-- View and download **Invoices**
+- View and download [**Invoices**](https://bitwarden.com/help/invoices-and-receipts/)
 - View **Transactions**
 
 ## Update billing information for organizations

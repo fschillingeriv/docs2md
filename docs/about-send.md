@@ -4,14 +4,17 @@ URL: https://bitwarden.com/help/about-send/
 
 # About Send
 
-Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
 
 ## Accessing Send
 
-Sends are created, edited, managed, and deleted from the Send view in any Bitwarden app. Access the send view from the primary navigation:
+Sends are created, edited, managed, and deleted from the **Send** view in any Bitwarden app. Access the Send view from the primary navigation:
 
 ![Send in the web app](https://bitwarden.com/assets/7umXxS0YG58NdB3vb4kwKo/c2a5f8ae8fa0bae6becb2e20e7f59390/2026-02-24_12-52-46.png)
 *Send in the web app*
+
+> [!NOTE] Remove Send policy
+> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-controls/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
 
 ## Using Send
 
@@ -27,7 +30,7 @@ Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden
 *Send options*
 3. Share the Send link using any communication channel you prefer.
 
-Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) that allows you to track the Send. Sends will display [a set of status icons](https://bitwarden.com/help/send-faqs/#q-what-do-the-icons-next-to-my-sends-indicate/) whenever a lifespan event (for example, expiration) has occurred. The icons are as follows:
+Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) which allows you to monitor the Send. Your created Sends will display status icons when a lifespan-related event occurs:
 
 | **Icon** | **Meaning** |
 |------|------|

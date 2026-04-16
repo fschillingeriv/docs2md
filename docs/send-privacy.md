@@ -54,7 +54,7 @@ Recipients can still validate the trustworthiness of Sends by cross-referencing 
 *Hidden-email text Send*
 
 > [!TIP] Send Options Policy
-> For enterprise organizations, the availability of this option can be set using an [enterprise policy](https://bitwarden.com/help/policies/#send-options/).
+> For enterprise organizations, the availability of this option can be set using an [enterprise policy](https://bitwarden.com/help/policies/#send-controls/).
 
 ## Hide text
 

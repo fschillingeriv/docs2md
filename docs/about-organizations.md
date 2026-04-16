@@ -51,7 +51,7 @@ Enter an **Organization name** and a **Billing email** we can reach you at. [Lea
 3. If you chose a **free organization**, you are all set! If you chose one of our paid organizations,
 
  - **Families/Teams/Enterprise:** Your plan comes with 5 GB of encrypted [storage for attachments](https://bitwarden.com/help/attachments/). Add **Additional storage (GB)** for $0.33 per GB per month.
- - **Teams/Enterprise:** Specify the number of **user seats** you need for your organization. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/).
+ - **Teams/Enterprise:** Specify the number of **user seats** you need for your organization. Seats will be added if you exceed this number, unless you [specify a limit](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/#set-a-seat-limit/).
  - **Teams/Enterprise:** Choose whether you would like to be billed annually or monthly. Families organizations can only be billed annually.
 4. Once you are happy with your organization, enter your **Payment information** (not required if you're creating a Free organization) and select **Submit**.
 

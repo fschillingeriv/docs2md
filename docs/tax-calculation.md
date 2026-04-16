@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/tax-calculation/
 
 # Taxes on Bitwarden Purchases
 
-This article describes how taxes are assessed, and how to provide the appropriate tax information, for paid Bitwarden subscriptions. Information about your Bitwarden subscription is available:
+This article describes how taxes are assessed, and how to provide the appropriate tax information, for paid Bitwarden subscriptions. Information about your Bitwarden subscription is available on your [invoices](https://bitwarden.com/help/invoices-and-receipts/) and:
 
 - For personal users, from the Password Manager **Settings** → **Subscription** menu.
 
@@ -15,7 +15,7 @@ This article describes how taxes are assessed, and how to provide the appropriat
 
 ## United States
 
-If your billing address is in the United States, sales tax for your subscription is assessed based on the ZIP / Postal code associated with your payment method. Tax liability and applicable rates are subject to change as required by your location. The sales tax on your subscription can be viewed in the invoices available on the **Billing history**tab.
+If your billing address is in the United States, sales tax for your subscription is assessed based on the ZIP / Postal code associated with your payment method. Tax liability and applicable rates are subject to change as required by your location. Your subscription's sales tax is detailed on the invoices available on the **Billing history**tab.
 
 ## Value added tax (VAT)
 

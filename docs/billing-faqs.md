@@ -21,21 +21,9 @@ For help selecting the right Bitwarden plan for you, refer to [what plan is righ
 
 **A:** Viewing billing information is different depending on whether you are viewing it for an individual or organization subscription. Use [Update your Billing Information](https://bitwarden.com/help/update-billing-info/) to guide you through both processes.
 
-### Q: How do I delete my account?
-
-**A:** We're sad to see you go! Use [Delete your Account](https://bitwarden.com/help/delete-your-account/) to guide you through this process.
-
 ### Q: How do I upgrade from an individual subscription to an organization?
 
 **A:** Use [Upgrade from Individual to Organization](https://bitwarden.com/help/upgrade-from-individual-to-org/) to guide you through this process.
-
-### Q: How do I add or remove a user seat from my organization?
-
-**A:** For Teams and enterprise organizations, user seats will be automatically added as you invite new users. You can [specify a limit](https://bitwarden.com/help/managing-users/#set-a-seat-limit/) to prevent your seat count from exceeding a specific number.
-
-To remove user seats, navigate to your organization's **Billing** → **Subscription** screen and use the **Subscription Seats** input to remove seats ([learn more](https://bitwarden.com/help/managing-users/#manually-add-or-remove-seats/)).
-
-Adding and removing user seats will adjust your future billing totals. Adding seats will immediately charge your payment method on file at an adjusted rate so that **you will only pay for the remainder of the billing cycle** (month/year). Removing seats will cause your next charge to be adjusted so that you are **credited for time not used** by the already-paid-for seat.
 
 ### Q: How do subscriptions work for self-hosting?
 

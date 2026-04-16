@@ -20,13 +20,14 @@ As the application landscape evolves and changes within your organization, the c
 
 ## Activity
 
-The **Activity** tab of the Access Intelligence report provides a summary of crucial datapoints and tasks. While the Activity tab provides this information at-a-glance, you should familiarize yourself with the **All applications** and **Critical applications** tab to best understand what's surfaced here:
+The **Activity** tab of the Access Intelligence report provides a summary of crucial datapoints and tasks. While the Activity tab provides this information at-a-glance, you should also familiarize yourself with the **All applications** and **Critical applications** tab to best understand what's surfaced here:
 
-![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/fb9e9ce8a0c636ea114abe80e838d02d/2026-03-20_12-07-50.png)
+![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/70128699f9db718b6c99c5f0abcf241e/2026-04-08_09-29-26.png)
 *Access Intelligence, Activity tab*
 
-- **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
+- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts.
 - **At-risk members**: Number of members with access to [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/) items for [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications.
+- **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
 - **Critical applications**: Proportion of [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications that are currently [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/).
 - **Applications needing review**: Number of new applications added by members since the [report was last run](https://bitwarden.com/help/access-intelligence/#run-the-report/).
 

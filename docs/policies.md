@@ -7,24 +7,26 @@ URL: https://bitwarden.com/help/policies/
 Enterprise policies allow Enterprise organizations to enforce security rules and default settings for all members, like mandating the use of a two-step login.
 
 > [!WARNING] Enable policies before invite.
-> We recommend setting enterprise policies prior to inviting users to your organization. Some policies will revoke non-compliant users when turned on, and some are not retroactively enforceable.
+> We recommend setting enterprise policies before inviting users to your organization. Some policies will [revoke](https://bitwarden.com/help/revoke-users/) non-compliant users when turned on, and some are not retroactively enforceable.
 
-## Set enterprise policies
+## Set Enterprise policies
 
-Organization owners and admins can apply enterprise policies. To update a policy: 
+Organization owners and admins can apply Enterprise policies. To update a policy: 
 
 1. Within the Bitwarden web app, open the Admin Console.
 2. Select **Settings**.
 3. Select **Policies**.
 4. Select the name of the policy you want to change:
 
-![Set Enterprise policies](https://bitwarden.com/assets/2flohk6BsRKvazjztwvzsJ/4258307d845b33cd9f765388ca6bfea6/2024-12-03_14-24-58.png)
+![Set Enterprise policies](https://bitwarden.com/assets/2flohk6BsRKvazjztwvzsJ/66bdf4f937a1d37646207c79e6ec24be/Set_Enterprise_policies.png)
 *Set Enterprise policies*
 5. Check or uncheck **Turn on**.
 6. (Optional) If more options appear, configure them.
 7. Select **Save**.
 
-## Available policies
+## Data Controls
+
+Policies in the **Data Controls**section add guardrails to how data may be shared and dictate who owns vault data.
 
 ### Single organization
 
@@ -59,6 +61,29 @@ Turn on this sub-option of the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
+### Send controls
+
+Turn on the **Send controls** policy to specify options for creating and editing [Sends](https://bitwarden.com/help/about-send/). This policy is not enforced for owners and admins. When turning on this policy, you must check one of the listed options:
+
+- **Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/).
+- **Always show member's email address with recipients when creating or editing a Send** removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), providing transparency to those who receive a Send.
+
+> [!NOTE] Send controls, only check one setting
+> Make sure you select only one setting. If you check both, members will be subject to the **Remove Send** option.
+
+### Remove export
+
+Turn on the **Remove export**policy to prohibit non-owner and non-admin members of your organization from [exporting their individual vault data](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
+
+In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
+
+![Vault export removed](https://bitwarden.com/assets/5E2871D2vZBzveBmVyv9lO/b89f979980566dda40928db1ce450507/2024-10-14_08-50-45.png)
+*Vault export removed*
+
+## Authentication
+
+Policies in the **Authentication** section help you harden your organization's security by forcing members to have robust authentication standards to access their Bitwarden vault.
+
 ### Master password requirements
 
 Turn on the **Master password requirements** policy to enforce a configurable set of minimum requirements for users' master password strength. Organizations can enforce:
@@ -90,20 +115,6 @@ Members of organizations using this policy will not be able to [log in with pass
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
-
-### Automatic login with SSO
-
-Turn on the **Automatically login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
-
-1. To enable the **Automatic login with SSO** policy, check the **Turn on** box, and enter your**Identity provider host** URL(s). The URL should include `protocol://domain`.
-
-![Automatically log in users for allowed applications](https://bitwarden.com/assets/2qHW4T4CDwpQJmPK6oDDn8/e25f021aa609e6072ffa664ae757ea7f/2025-11-19_09-34-16.png)
-*Automatically log in users for allowed applications*
-2. As an Administrator on your IdP, add an application, or app shortcut to your end-user dashboard containing the destination URL with the added parameter `/#autosubmit=1`
-3. Once the application has been saved, users may select the application from the IdP dashboard and Bitwarden will autofill and login to the application.
-
-> [!NOTE] Automatically login users browser extension
-> Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
 
 ### Require two-step login
 
@@ -152,6 +163,10 @@ Turn on the **Remove Unlock with PIN** policy to prohibit members from configuri
 
 Members who are using unlock with PIN prior to the policy will have it enforced on their next log in, meaning if they have an already logged-in session they will still see the option in the UI and be able to unlock with PIN **until** they log out **or** turn off the unlock with PIN option in the client.
 
+## Vault Management
+
+Policies in the **Vault Management** section allow you to set default and minimum standards for your members' items.
+
 ### Password generator
 
 Turn on the **Password generator** policy to enforce a configurable set of minimum requirements for any user-generated passwords for all members, regardless of role. Organizations can enforce:
@@ -195,23 +210,23 @@ Once the policy is activated, members cannot view or change their account's **De
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
+### Automatic login with SSO
+
+Turn on the **Automatically login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
+
+1. To enable the **Automatic login with SSO** policy, check the **Turn on** box, and enter your**Identity provider host** URL(s). The URL should include `protocol://domain`.
+
+![Automatically log in users for allowed applications](https://bitwarden.com/assets/2qHW4T4CDwpQJmPK6oDDn8/e25f021aa609e6072ffa664ae757ea7f/2025-11-19_09-34-16.png)
+*Automatically log in users for allowed applications*
+2. As an Administrator on your IdP, add an application, or app shortcut to your end-user dashboard containing the destination URL with the added parameter `/#autosubmit=1`
+3. Once the application has been saved, users may select the application from the IdP dashboard and Bitwarden will autofill and login to the application.
+
+> [!NOTE] Automatically login users browser extension
+> Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
+
 ### Activate autofill
 
 Turn on the **Activate auto-fill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
-
-### Send options
-
-Turn on the **Send options** policy to allow owners and admins to specify options for creating and editing Sends. This policy is not enforced for owners and admins. Options include:
-
-| **Option** | **Description** |
-|------|------|
-| Do not allow users to hide their email address | Turning on this option removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), meaning that all [received Sends](https://bitwarden.com/help/receive-send/) will include whom they are sent from. |
-
-### Remove Send
-
-Turn on the **Remove Send** policy to prevent members who are not an owner or admin from creating or editing a Send using [Bitwarden Send](https://bitwarden.com/help/about-send/). Members subject to this policy will no longer have access to Send on their Bitwarden client. This policy is not enforced for owners and admins.
-
-A banner is displayed to users in the **Send** view and on opening any existing Send to indicate that a policy is restricting them to only deleting Sends. 
 
 ### Remove card item type
 
@@ -227,18 +242,14 @@ Turn on the **Remove Free Bitwarden Families sponsorship**policy to prevent memb
 
 Users who have redeemed a sponsored Families organization prior to the policy being activated will continue to have their organization sponsored until the end of the current billing cycle. Their stored payment method will be charged for the organization when the next billing cycle begins.
 
-### Remove export
-
-Turn on the **Remove export**policy to prohibit non-owner and non-admin members of your organization from [exporting their individual vault data](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
-
-In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
-
 ![Vault export removed](https://bitwarden.com/assets/5E2871D2vZBzveBmVyv9lO/b89f979980566dda40928db1ce450507/2024-10-14_08-50-45.png)
 *Vault export removed*
 
 ### Automatic user confirmation
 
-> [!TIP] This policy is controlled by Bitwarden.
-> In order to gain access to this policy, Bitwarden support will need to toggle it on for you. The first step is to [contact us](https://bitwarden.com/contact/).
+Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
-Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization. Before using automatic confirmation, check your organization's [eligibility and learn about the setup process](https://bitwarden.com/help/automatic-confirmation/).
+1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
+2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
+4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).

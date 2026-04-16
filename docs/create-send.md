@@ -7,7 +7,7 @@ URL: https://bitwarden.com/help/create-send/
 Anyone can create text Sends, but file Sends can only be created by [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (families, teams, or enterprise). 
 
 > [!NOTE] Remove Send policy
-> Members of organizations that have enabled the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/) will be unable to access Send from their Bitwarden client.
+> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-controls/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
 
 Choose the Bitwarden app you want to Send from to get started:
 
