@@ -39,9 +39,15 @@ On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, se
 
 ### Mobile app
 
-Navigate to the ⚙️ **Settings**tab and select the **About** option: 
+## Password Manager
+
+Navigate to the ⚙️ **Settings**tab and select the **About** option to view the version you're on: 
 
 ![Mobile app version](https://bitwarden.com/assets/3zYXLGYrfsJZuGwlT7Vq3v/9db9b271b977e94468cdf04b8cab70f2/2025-01-22_10-19-54.png)
+
+## Bitwarden Authenticator
+
+Navigate to the ⚙️ **Settings**tab and scroll to the bottom of the Settings list to view the version you're on.
 
 ### CLI
 

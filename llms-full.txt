@@ -14741,12 +14741,20 @@ URL: https://bitwarden.com/help/directory-sync/
 ---
 # About Directory Connector
 
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
+
 The Bitwarden Directory Connector app automatically provisions users, groups, and group associations in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#onboard-users/).
 
 Directory Connector can be configured to remove users from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization. 
 
 > [!NOTE] Directory connector teams and enterprises
-> Directory Connector functionality is available to **Teams** and **Enterprise** organizations. To use Directory Connector, you must have access to your [organization API key](https://bitwarden.com/help/public-api/#authentication/) which can only be retrieved by an [organization owner](https://bitwarden.com/help/user-types-access-control/) and securely shared using [Bitwarden Send](https://bitwarden.com/help/about-send/).
+> To use Directory Connector, you must have access to your [organization API key](https://bitwarden.com/help/public-api/#authentication/) which can only be retrieved by an [organization owner](https://bitwarden.com/help/user-types-access-control/) and securely shared using [Bitwarden Send](https://bitwarden.com/help/about-send/).
 
 ![Directory Connector Diagram](https://bitwarden.com/assets/6RFsU5sJGDLMPawg64sBqM/85c9e9f6e7758944d76c8ecb79ca4af9/Marketing_Diagram_2024__1_.png)
 
@@ -18297,11 +18305,11 @@ With your newly-created client organization, start building the perfect solution
 Common collections patterns include **Collections by Department** (for example, users in the client's Marketing Team are assigned to a **Marketing** collection) or **Collections by Function** (for example, users from the client's Marketing Team are assigned to a **Social Media** collection):
 
 ![Collections](https://bitwarden.com/assets/6kJ7wMESirqmkfZ8KlfK09/9210ef5cf3cd2442b429760edb98001f/collections-graphic-1.png)
-2. **Import data**. Once the structure of how you will store vault items is in place, you can begin i[mporting data to the organization](https://bitwarden.com/help/import-to-org/).
+2. **Import data**. Once the structure of how you will store vault items is in place, you can begin [importing data to the organization](https://bitwarden.com/help/import-to-org/).
 
 > [!NOTE] Provider restricted access
 > Note that, as a provider user, you will not be able to directly view, create, or manage individual items.
-3. **Configure enterprise policies**. Before beginning the user management portion of setup, [configure enterprise policies](https://bitwarden.com/help/policies/) in order to set rules-of-use for things such as [master password complexity](https://bitwarden.com/help/policies/#master-password-requirements/), [use of two-step login](https://bitwarden.com/help/policies/#require-two-step-login/), and [admin password reset](https://bitwarden.com/help/account-recovery/#master-password-reset/).
+3. **Configure enterprise policies**. Before beginning the user management portion of setup, [configure enterprise policies](https://bitwarden.com/help/policies/) in order to set rules-of-use for things such as [master password complexity](https://bitwarden.com/help/policies/#master-password-requirements/), [use of two-step login](https://bitwarden.com/help/policies/#require-two-step-login/), and [admin password reset](https://bitwarden.com/help/policies/#account-recovery-administration/).
 
 > [!NOTE] Enterprise policy
 > Enterprise policies are **only available to Enterprise organizations**.
@@ -18954,7 +18962,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -18976,7 +18984,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19004,7 +19012,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19020,7 +19028,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -19081,7 +19089,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19103,7 +19111,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19131,7 +19139,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19147,7 +19155,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ## Import to a collection
 
@@ -19371,7 +19379,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19393,7 +19401,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19421,7 +19429,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19437,7 +19445,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -19511,7 +19519,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19533,7 +19541,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19561,7 +19569,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19577,7 +19585,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. Fix the import file issue and try again.
 
@@ -19675,7 +19683,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19697,7 +19705,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19725,7 +19733,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19741,7 +19749,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -19824,7 +19832,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19846,7 +19854,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19874,7 +19882,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -19890,7 +19898,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -19945,7 +19953,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -19967,7 +19975,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -19995,7 +20003,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -20011,7 +20019,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -20248,7 +20256,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -20270,7 +20278,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -20298,7 +20306,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -20314,7 +20322,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 If an “Import error” message appears, no data was added to your vault. [Fix the import file issue](https://bitwarden.com/help/import-data/#troubleshoot-import-errors/) and try again.
 ---
@@ -20401,7 +20409,7 @@ To import data to your Bitwarden vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 6. Select **Import**. If you're importing a password-protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+7. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Browser extension
 
@@ -20423,7 +20431,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 7. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised.
+8. After your data is imported, delete the exported data file from your device. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### Mobile
 
@@ -20451,7 +20459,7 @@ To import data to your vault:
 > [!WARNING] Duplicative Imports
 > Importing does not check for duplicates. If you import the same file more than once or import items already in your vault, duplicate items will be created.
 5. Select **Import data**. If you are importing a password protected `.json `file, enter the password into the **Confirm vault import** window that appears.
-6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+6. After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ### CLI
 
@@ -20467,7 +20475,7 @@ bw import <format> <path>
 bw import <format> /Users/myaccount/Documents/mydata.csv
 ```
 
-After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised.
+After your data is imported, delete the exported data file from your computer. This will protect you in the event your computer is compromised. If you're importing to Bitwarden from another password manager or browser, you may also want to delete data from that tool.
 
 ## Troubleshoot import errors
 
@@ -23214,9 +23222,9 @@ Permissions for Bitwarden collections can be assigned on the group or user-level
 - Can view, except passwords
 - Can edit
 - Can edit, except passwords
-- Can manage
+- Manage collections
 
-Learn more about permissions [here](https://bitwarden.com/help/user-types-access-control/#permissions/). Bitwarden uses a union of permissions to determine final access permissions for a user and a collection. For example:
+Learn more about permissions [here](https://bitwarden.com/help/collection-permissions/). Bitwarden uses a union of permissions to determine final access permissions for a user and a collection. For example:
 
 - User A is part of the Tier 1 Support group, which has access to the Support collection, with can view permission.
 - User A is also a member of the Support Management group, which has access to the Support collection, with can edit access.
@@ -23617,7 +23625,10 @@ When you are viewing an item in the web vault, the URL in your address bar will 
 
 ![Item link](https://bitwarden.com/assets/6v3WH6FljmTFOlSqOjjAqZ/a9c1ae50155e6692d52987fe4f0cc888/2024-12-04_09-55-51.png)
 
-Copy the full value in the address bar and use that link to direct organization members directly to this item. When a user uses the link, the item will be automatically opened once they login. Users **must already have access to the item**in order to successfully use a link.
+Copy the full value in the address bar and use that link to direct organization members directly to this item. Users **must already have access to the item**in order to successfully use a link.
+
+> [!NOTE] You'll need to log in
+> Unless the user opens that link in a browser tab that is already logged in to Bitwarden, **they'll need to log in**. Most browsers, for example, default to opening a clicked-link in a new tab and therefore would require the user to log in. Once they log in, the vault item will be automatically opened.
 ---
 URL: https://bitwarden.com/help/list-of-emails/
 ---
@@ -24343,10 +24354,10 @@ Once in the client's Admin Console you can fully administer the client organizat
 
 | **Task** | **Description** | **Resources** |
 |------|------|------|
-| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) [User offboarding](https://bitwarden.com/help/managing-users/#deprovision-users/) |
+| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
 | Change user permissions | When end-users change roles, change their permissions as appropriate. | [User types and access control](https://bitwarden.com/help/user-types-access-control/) |
 | Add and remove user seats | As the customers' business grows, manage the number of user seats for the client organization. | [Manage user seats](https://bitwarden.com/help/provider-billing/) |
-| Reset users' master passwords | If enabled, use admin password reset to recover end-user accounts if they forget their master password. | [Admin password reset](https://bitwarden.com/help/admin-reset/) |
+| Reset users' master passwords | If enabled, use Account Recovery reset to recover end-user accounts if they forget their master password. | [Account Recovery](https://bitwarden.com/help/account-recovery/) |
 | Secure one-time sharing | Use Bitwarden for secure one-time sharing of credentials, documents, and more. | [Create a Send](https://bitwarden.com/help/create-send/) |
 | Monitor vault health | Use organization vault health reports and event logs to keep an eye on the overall health of the client organization. | [Vault health reports](https://bitwarden.com/help/reports/) [Event logs](https://bitwarden.com/help/event-logs/) |
 
@@ -24358,7 +24369,7 @@ Additionally, **if your service users help to train customers' end-users to use 
 | Watch training videos | Pass along some of the trainings we have conducted in the past. | [Getting started with Bitwarden](https://bitwarden.com/getting-started/) |
 | Help users import their data | If permitted by your customer, give users instructions for importing their individual vault data to Bitwarden. | [Import data to your vault](https://bitwarden.com/help/import-data/) |
 | Help setup two-step login | Give users instructions to help facilitate setup of two-step login. | [Two-step login methods](https://bitwarden.com/help/setup-two-step-login/) |
-| Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/create-bitwarden-account/) |
+| Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/password-manager-overview/#clients/) |
 | Register for demos | Encourage power users to learn independently by attending a weekly demo. | [Bitwarden events](https://www.crowdcast.io/bitwarden) |
 ---
 URL: https://bitwarden.com/help/manage-subscription-seats-in-your-organization/
@@ -24556,7 +24567,7 @@ If you are already self-hosting an Enterprise Bitwarden organization and want to
 ---
 URL: https://bitwarden.com/help/managing-access-when-the-organization-owner-leaves/
 ---
-# Managing access when the organization owner leaves
+# Ownerless Organizations
 
 This article addresses frequently asked questions after an organization owner has left a company. If organization ownership was not transferred prior to the owner leaving, one of the following scenarios may apply to your organization.
 
@@ -24568,7 +24579,7 @@ This article addresses frequently asked questions after an organization owner ha
 If you have access to the owner's account credentials:
 
 1. **Access the Admin console to invite a new owner or transfer ownership**: If you have the credentials of the owner account, you may directly access the organization's [admin console](https://bitwarden.com/help/getting-started-organizations/). This will allow you to perform several tasks including inviting a new owner, transferring ownership, and making necessary changes.
-2. **Backup the organization data**: Ensure that all important organizational data is backed up to prevent data loss in the future. Learn more [here](https://bitwarden.com/help/export-your-data/#export-an-organization-vault/).
+2. **Backup the organization data**: Ensure that all important organizational data is backed up to prevent data loss in the future. Learn more [here](https://bitwarden.com/help/export-organization-items/).
 3. **Set up admins or backup owners for access redundancy**: Ensure that multiple admins or backup owners are in place for future access continuity and management of the account.
 
 ## The organization owner has left and I do not have access to their account credentials 
@@ -27745,7 +27756,7 @@ Alternatively, you can unshare items by moving them to a different collection wi
 
 ### Q: How do I hide a password from my organization's users?
 
-**A:** Assign the users you want to hide passwords from either **View items, hidden passwords**or **Edit items, hidden passwords**[permission](https://bitwarden.com/help/user-types-access-control/#permissions/) to relevant collections.
+**A:** Assign the users you want to hide passwords from either **View items, hidden passwords**or **Edit items, hidden passwords**[permission](https://bitwarden.com/help/collection-permissions/) to relevant collections.
 
 ### Q: Does an item I move to the organization stay after I leave?
 
@@ -40649,9 +40660,15 @@ On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, se
 
 ### Mobile app
 
-Navigate to the ⚙️ **Settings**tab and select the **About** option: 
+## Password Manager
+
+Navigate to the ⚙️ **Settings**tab and select the **About** option to view the version you're on: 
 
 ![Mobile app version](https://bitwarden.com/assets/3zYXLGYrfsJZuGwlT7Vq3v/9db9b271b977e94468cdf04b8cab70f2/2025-01-22_10-19-54.png)
+
+## Bitwarden Authenticator
+
+Navigate to the ⚙️ **Settings**tab and scroll to the bottom of the Settings list to view the version you're on.
 
 ### CLI
 

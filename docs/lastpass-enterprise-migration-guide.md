@@ -110,9 +110,9 @@ Permissions for Bitwarden collections can be assigned on the group or user-level
 - Can view, except passwords
 - Can edit
 - Can edit, except passwords
-- Can manage
+- Manage collections
 
-Learn more about permissions [here](https://bitwarden.com/help/user-types-access-control/#permissions/). Bitwarden uses a union of permissions to determine final access permissions for a user and a collection. For example:
+Learn more about permissions [here](https://bitwarden.com/help/collection-permissions/). Bitwarden uses a union of permissions to determine final access permissions for a user and a collection. For example:
 
 - User A is part of the Tier 1 Support group, which has access to the Support collection, with can view permission.
 - User A is also a member of the Support Management group, which has access to the Support collection, with can edit access.

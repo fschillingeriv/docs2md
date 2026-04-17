@@ -92,11 +92,11 @@ With your newly-created client organization, start building the perfect solution
 Common collections patterns include **Collections by Department** (for example, users in the client's Marketing Team are assigned to a **Marketing** collection) or **Collections by Function** (for example, users from the client's Marketing Team are assigned to a **Social Media** collection):
 
 ![Collections](https://bitwarden.com/assets/6kJ7wMESirqmkfZ8KlfK09/9210ef5cf3cd2442b429760edb98001f/collections-graphic-1.png)
-2. **Import data**. Once the structure of how you will store vault items is in place, you can begin i[mporting data to the organization](https://bitwarden.com/help/import-to-org/).
+2. **Import data**. Once the structure of how you will store vault items is in place, you can begin [importing data to the organization](https://bitwarden.com/help/import-to-org/).
 
 > [!NOTE] Provider restricted access
 > Note that, as a provider user, you will not be able to directly view, create, or manage individual items.
-3. **Configure enterprise policies**. Before beginning the user management portion of setup, [configure enterprise policies](https://bitwarden.com/help/policies/) in order to set rules-of-use for things such as [master password complexity](https://bitwarden.com/help/policies/#master-password-requirements/), [use of two-step login](https://bitwarden.com/help/policies/#require-two-step-login/), and [admin password reset](https://bitwarden.com/help/account-recovery/#master-password-reset/).
+3. **Configure enterprise policies**. Before beginning the user management portion of setup, [configure enterprise policies](https://bitwarden.com/help/policies/) in order to set rules-of-use for things such as [master password complexity](https://bitwarden.com/help/policies/#master-password-requirements/), [use of two-step login](https://bitwarden.com/help/policies/#require-two-step-login/), and [admin password reset](https://bitwarden.com/help/policies/#account-recovery-administration/).
 
 > [!NOTE] Enterprise policy
 > Enterprise policies are **only available to Enterprise organizations**.

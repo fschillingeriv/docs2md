@@ -20,10 +20,10 @@ Once in the client's Admin Console you can fully administer the client organizat
 
 | **Task** | **Description** | **Resources** |
 |------|------|------|
-| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) [User offboarding](https://bitwarden.com/help/managing-users/#deprovision-users/) |
+| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
 | Change user permissions | When end-users change roles, change their permissions as appropriate. | [User types and access control](https://bitwarden.com/help/user-types-access-control/) |
 | Add and remove user seats | As the customers' business grows, manage the number of user seats for the client organization. | [Manage user seats](https://bitwarden.com/help/provider-billing/) |
-| Reset users' master passwords | If enabled, use admin password reset to recover end-user accounts if they forget their master password. | [Admin password reset](https://bitwarden.com/help/admin-reset/) |
+| Reset users' master passwords | If enabled, use Account Recovery reset to recover end-user accounts if they forget their master password. | [Account Recovery](https://bitwarden.com/help/account-recovery/) |
 | Secure one-time sharing | Use Bitwarden for secure one-time sharing of credentials, documents, and more. | [Create a Send](https://bitwarden.com/help/create-send/) |
 | Monitor vault health | Use organization vault health reports and event logs to keep an eye on the overall health of the client organization. | [Vault health reports](https://bitwarden.com/help/reports/) [Event logs](https://bitwarden.com/help/event-logs/) |
 
@@ -35,5 +35,5 @@ Additionally, **if your service users help to train customers' end-users to use 
 | Watch training videos | Pass along some of the trainings we have conducted in the past. | [Getting started with Bitwarden](https://bitwarden.com/getting-started/) |
 | Help users import their data | If permitted by your customer, give users instructions for importing their individual vault data to Bitwarden. | [Import data to your vault](https://bitwarden.com/help/import-data/) |
 | Help setup two-step login | Give users instructions to help facilitate setup of two-step login. | [Two-step login methods](https://bitwarden.com/help/setup-two-step-login/) |
-| Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/create-bitwarden-account/) |
+| Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/password-manager-overview/#clients/) |
 | Register for demos | Encourage power users to learn independently by attending a weekly demo. | [Bitwarden events](https://www.crowdcast.io/bitwarden) |

@@ -4,12 +4,20 @@ URL: https://bitwarden.com/help/directory-sync/
 
 # About Directory Connector
 
+> [!NOTE] Different user provisioning methods
+> This article discusses only one of the available methods to invite users and manage your subscription’s seat count:
+> 
+> - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+> - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
+> - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
+
 The Bitwarden Directory Connector app automatically provisions users, groups, and group associations in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#onboard-users/).
 
 Directory Connector can be configured to remove users from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization. 
 
 > [!NOTE] Directory connector teams and enterprises
-> Directory Connector functionality is available to **Teams** and **Enterprise** organizations. To use Directory Connector, you must have access to your [organization API key](https://bitwarden.com/help/public-api/#authentication/) which can only be retrieved by an [organization owner](https://bitwarden.com/help/user-types-access-control/) and securely shared using [Bitwarden Send](https://bitwarden.com/help/about-send/).
+> To use Directory Connector, you must have access to your [organization API key](https://bitwarden.com/help/public-api/#authentication/) which can only be retrieved by an [organization owner](https://bitwarden.com/help/user-types-access-control/) and securely shared using [Bitwarden Send](https://bitwarden.com/help/about-send/).
 
 ![Directory Connector Diagram](https://bitwarden.com/assets/6RFsU5sJGDLMPawg64sBqM/85c9e9f6e7758944d76c8ecb79ca4af9/Marketing_Diagram_2024__1_.png)
 

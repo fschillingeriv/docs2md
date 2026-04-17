@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/managing-access-when-the-organization-owner-leaves/
 ---
 
-# Managing access when the organization owner leaves
+# Ownerless Organizations
 
 This article addresses frequently asked questions after an organization owner has left a company. If organization ownership was not transferred prior to the owner leaving, one of the following scenarios may apply to your organization.
 
@@ -14,7 +14,7 @@ This article addresses frequently asked questions after an organization owner ha
 If you have access to the owner's account credentials:
 
 1. **Access the Admin console to invite a new owner or transfer ownership**: If you have the credentials of the owner account, you may directly access the organization's [admin console](https://bitwarden.com/help/getting-started-organizations/). This will allow you to perform several tasks including inviting a new owner, transferring ownership, and making necessary changes.
-2. **Backup the organization data**: Ensure that all important organizational data is backed up to prevent data loss in the future. Learn more [here](https://bitwarden.com/help/export-your-data/#export-an-organization-vault/).
+2. **Backup the organization data**: Ensure that all important organizational data is backed up to prevent data loss in the future. Learn more [here](https://bitwarden.com/help/export-organization-items/).
 3. **Set up admins or backup owners for access redundancy**: Ensure that multiple admins or backup owners are in place for future access continuity and management of the account.
 
 ## The organization owner has left and I do not have access to their account credentials 

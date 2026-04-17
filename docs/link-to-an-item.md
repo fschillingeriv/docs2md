@@ -13,4 +13,7 @@ When you are viewing an item in the web vault, the URL in your address bar will 
 
 ![Item link](https://bitwarden.com/assets/6v3WH6FljmTFOlSqOjjAqZ/a9c1ae50155e6692d52987fe4f0cc888/2024-12-04_09-55-51.png)
 
-Copy the full value in the address bar and use that link to direct organization members directly to this item. When a user uses the link, the item will be automatically opened once they login. Users **must already have access to the item**in order to successfully use a link.
+Copy the full value in the address bar and use that link to direct organization members directly to this item. Users **must already have access to the item**in order to successfully use a link.
+
+> [!NOTE] You'll need to log in
+> Unless the user opens that link in a browser tab that is already logged in to Bitwarden, **they'll need to log in**. Most browsers, for example, default to opening a clicked-link in a new tab and therefore would require the user to log in. Once they log in, the vault item will be automatically opened.

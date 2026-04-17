@@ -83,7 +83,7 @@ Alternatively, you can unshare items by moving them to a different collection wi
 
 ### Q: How do I hide a password from my organization's users?
 
-**A:** Assign the users you want to hide passwords from either **View items, hidden passwords**or **Edit items, hidden passwords**[permission](https://bitwarden.com/help/user-types-access-control/#permissions/) to relevant collections.
+**A:** Assign the users you want to hide passwords from either **View items, hidden passwords**or **Edit items, hidden passwords**[permission](https://bitwarden.com/help/collection-permissions/) to relevant collections.
 
 ### Q: Does an item I move to the organization stay after I leave?
 
