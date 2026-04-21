@@ -31,7 +31,7 @@ The Secrets Manager CLI can also run with Docker. An example Dockerfile can be l
 You can run the Docker image with the following:
 
 ```plain text
-docker run --rm -it ghcr.io/bitwarden/bws--help
+docker run --rm -it ghcr.io/bitwarden/bws --help
 ```
 
 > [!NOTE] Docker image bws

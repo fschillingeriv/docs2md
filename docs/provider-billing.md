@@ -15,6 +15,9 @@ Seats can be added to client organizations above your designated seat count mini
 - Listed as **Additional seats purchased** when managing a client organization's seat count or creating a new client organization.
 - Automatically added to your invoice in the next billing cycle.
 
+> [!NOTE] Auto-scaling and Providers
+> As a provider, you must actively manage client organizations' seat counts as described in the following section. Client organizations that are managed by a provider will not automatically add user seats when they reach the assigned amount, so make sure you're periodically checking to ensure a client's assigned seat count meets their needs.
+
 ## Manage seats
 
 To add or remove seats from a client organization, use the ⋮ options menu and select **Manage subscription**:
