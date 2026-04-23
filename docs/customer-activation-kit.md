@@ -40,20 +40,20 @@ Step-by-step documentation, templates, and resources to help teams embrace crede
 
 ## Bitwarden merch
 
-Spread Bitwarden awareness with physical and digital merch:
+Spread awareness with Bitwarden merch
 
-- [Magic Background Maker](https://bitwarden.com/magic-background/): Enhance your team's virtual meetings with branded backgrounds when using the new Magic Background Maker
-- [Password Security Animations](https://bitwarden.com/blog/password-security-gifs/): Fun animated digital swag featuring boy bands and judgmental squirrels to make your security communications actually entertaining
-- [The Bitwarden Shop](https://bitwarden.com/shop/): Encourage adoption by delivering Bitwarden-exclusive swag directly to your team
+- [Magic Background Maker](https://bitwarden.com/magic-background/): Enhance your team's virtual meetings with branded backgrounds when using the Magic Background Maker
+- [Password Security Animations](https://bitwarden.com/blog/password-security-gifs/): Fun animations featuring boy bands and judgmental squirrels to make your security communications actually entertaining
+- [The Bitwarden Shop](https://bitwarden.com/shop/): Encourage adoption by delivering Bitwarden-exclusive merch directly to your team
 
 ![ ](https://bitwarden.com/assets/37t7bjm21Y8wVkbFvKtJ5p/5eba0df4d7f5eb9944dd093792fbc278/store.jpg)
 
 ## Brand and design resources
 
-Stay on-brand when creating your own assets:
+Stay on-brand and create your own assets
 
 - [Bitwarden brand guidelines and downloads](https://bitwarden.com/brand/)
-- Product mockups and imagery: 
+- Product mockups and imagery
 
  - [Bitwarden Password Manager](https://drive.google.com/drive/folders/10LNjuihl6PBWRef-CenXrJNNi1fu-N0P?usp=sharing)
  - [Bitwarden Secrets Manager](https://drive.google.com/drive/folders/1_NWWPeecq5FRZwXimAhOw2g6gazaT6Mn?usp=sharing)

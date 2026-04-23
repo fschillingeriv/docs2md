@@ -7,7 +7,7 @@ URL: https://bitwarden.com/help/account-recovery-enrollment/
 In order for members to be eligible for [account recovery](https://bitwarden.com/help/account-recovery/), they must be enrolled in the program. Enrollment triggers the key exchange that makes account recovery secure. There are two ways for members to be enrolled:
 
 - **Automatic enrollment**: When you turn on the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/), you can also turn on the option **Require new members to be enrolled automatically**. This option will enroll new members in account recovery automatically.
-- **Self-enrollment**: Organization members can follow a quick process to enroll themselves in account recovery. 
+- **Self-enrollment**: Organization members can follow a quick process in the web app to enroll themselves in account recovery. 
 
 > [!TIP] When self-enrollment is necessary
 > Bitwarden recommends turning on automatic enrollment, however members that are already part of your organization **prior to account recovery being turned on** will be required to self-enroll.
