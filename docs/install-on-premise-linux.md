@@ -44,7 +44,7 @@ For more information, see [What are my installation id and installation key used
 ## Installation procedure
 
 > [!NOTE] Protocol consistency required
-> Bitwarden requires consistent HTTP or HTTPS usage throughout your deployment. Mixing protocols (for example, HTTPS at proxy, HTTP internally) causes connection, authentication, and syncing errors. We reccomend using HTTPS for production; HTTP for testing only.
+> Bitwarden requires consistent HTTP or HTTPS usage throughout your deployment. Mixing protocols (for example, HTTPS at proxy, HTTP internally) causes connection, authentication, and syncing errors. We recommend using HTTPS for production; HTTP for testing only.
 
 ### Configure your domain
 
