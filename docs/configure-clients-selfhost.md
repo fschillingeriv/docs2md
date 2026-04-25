@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/configure-clients-selfhost/
 
 # Connect Managed Devices
 
-When operating a self-hosted Bitwarden server in a business setting, administrators may want to centrally configure client application settings (particularly, Server URL) before deploying to users with an endpoint management platform. Settings are applied upon installation of the client application. These processes may also be helpful if you're using a [Bitwarden Cloud EU server](https://bitwarden.com/help/server-geographies/).
+When operating a self-hosted Bitwarden server in a business setting, administrators may want to centrally configure client application settings (particularly, Server URL) before deploying to users with an endpoint management platform. Settings are applied upon installation of the client application. These processes may also be helpful if you're using the [Bitwarden EU cloud server](https://bitwarden.com/help/server-geographies/).
 
 > [!NOTE] Server connections require https
 > While configuring your self-host server URL, `https:// `must be included in the URL. Addresses that do **not** include `https://` such as `my.server.com` or `http://my.server.com` will result in an error message.

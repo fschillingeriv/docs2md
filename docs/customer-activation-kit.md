@@ -44,7 +44,7 @@ Spread awareness with Bitwarden merch
 
 - [Magic Background Maker](https://bitwarden.com/magic-background/): Enhance your team's virtual meetings with branded backgrounds when using the Magic Background Maker
 - [Password Security Animations](https://bitwarden.com/blog/password-security-gifs/): Fun animations featuring boy bands and judgmental squirrels to make your security communications actually entertaining
-- [The Bitwarden Shop](https://bitwarden.com/shop/): Encourage adoption by delivering Bitwarden-exclusive merch directly to your team
+- [The Bitwarden Shop](https://shop.bitwarden.com/): Encourage adoption by delivering Bitwarden-exclusive merch directly to your team
 
 ![ ](https://bitwarden.com/assets/37t7bjm21Y8wVkbFvKtJ5p/5eba0df4d7f5eb9944dd093792fbc278/store.jpg)
 
