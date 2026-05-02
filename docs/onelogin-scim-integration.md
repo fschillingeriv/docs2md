@@ -18,7 +18,7 @@ This article will help you configure a SCIM integration with OneLogin. Configur
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -50,8 +50,8 @@ Enter the following values in the **API Connection** section:
 
 | **Application setting** | **Description** |
 |------|------|
-| SCIM base URL | Set this field to the SCIM URL ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-SCIM/)). |
-| SCIM bearer token | Set this field to the SCIM API key ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-SCIM/)). |
+| SCIM base URL | Set this field to the SCIM URL ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-scim/)). |
+| SCIM bearer token | Set this field to the SCIM API key ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-scim/)). |
 
 Select **Save**once you have configured these fields.
 

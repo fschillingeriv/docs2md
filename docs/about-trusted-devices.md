@@ -117,12 +117,12 @@ While SSO with trusted devices eliminates the need for a master password, it doe
 - If a user is onboarded **after** SSO with trusted devices is activated and they select **Log in**→**Enterprise SSO**from the organization invite for [JIT provisioning](https://bitwarden.com/help/sso-faqs/#q-how-does-login-with-sso-work-for-new-users-just-in-time/), their account will not have a master password. Should you change to the master password [member decryption option](https://bitwarden.com/help/sso-decryption-options/), these users will be prompted to create a master password when they log in as long as they are still a member of the organization ([learn more](https://bitwarden.com/help/setup-sso-with-trusted-devices/)).
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 - If a user account is recovered using [account recovery](https://bitwarden.com/help/account-recovery/), their account will necessarily be assigned a master password. A master password cannot currently be removed from an account once it has one, so to avoid this outcome we recommend that you (i) instruct the user to export their data to a backup, (ii) completely delete the lost account, (iii) ask the user to [re-onboard to your organization using trusted devices](https://bitwarden.com/help/add-a-trusted-device/) and (iv) once they've done so instruct them to import their backup.
 
 ### Impact on other features

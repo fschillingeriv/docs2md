@@ -628,7 +628,7 @@ The `config` command specifies settings for the Bitwarden CLI to use:
 bw config server <setting> [value]
 ```
 
-A primary use of `bw config` is to [connect your CLI to a self-hosted](https://bitwarden.com/help/change-client-environment/#cli/) Bitwarden server:
+A primary use of `bw config` is to [connect your CLI to a self-hosted](https://bitwarden.com/help/change-client-environment/#tab-cli-4dQ4hW1QAwVBuReXk2Txx0/) Bitwarden server:
 
 ```
 bw config server https://your.bw.domain.com
@@ -701,7 +701,7 @@ bw import lastpasscsv /Users/myaccount/Documents/mydata.csv
 > [!NOTE] bw import -- formats
 > Bitwarden supports lots of formats for import, too many to list here! Use `bw import --formats` to return the list in your CLI, or [see here](https://bitwarden.com/help/import-faqs/#q-what-file-formats-does-bitwarden-support-for-import/).
 > 
-> If you are importing an [encrypted .json file that you've created with a password](https://bitwarden.com/help/cli/#export/), you will be prompted to enter the password before import completes.
+> If you are importing an [encrypted .json file that you've created with a password](https://bitwarden.com/help/encrypted-export/), you will be prompted to enter the password before import completes.
 
 #### import to an organization vault
 

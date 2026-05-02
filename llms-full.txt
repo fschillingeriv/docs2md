@@ -150,6 +150,7 @@ Users who log in for the first time to a Key Connector enabled organizations wil
 | Vault lock/unlock | Under ordinary circumstances, a [locked vault can be unlocked](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) using a master password. When your organization is using Key Connector, locked client applications can only be unlocked with a [PIN](https://bitwarden.com/help/unlock-with-pin/) or with [biometrics](https://bitwarden.com/help/biometrics/). If neither PIN nor biometrics are enabled for a client application, the vault will always log out instead of lock. Unlike unlocking, logging in **always**requires a connection to your self-hosted server ([learn more](https://bitwarden.com/help/vault-timeout/#session-timeout-action/)). |
 | Master password re-prompt | When Key Connector is being used, [master password re-prompt](https://bitwarden.com/help/managing-items/#protect-individual-items/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
 | Admin password reset | When Key Connector is being used, [admin password reset](https://bitwarden.com/help/admin-reset/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
+| Revoking access | Members who do not have master passwords will be fully locked out of their account if they are [revoked](https://bitwarden.com/help/revoke-users/). |
 | Emergency access | When Key Connector is being used, the emergency access [account takeover option](https://bitwarden.com/help/emergency-access/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. Trusted emergency contacts may still **View**a grantor's individual vault data, subject to the established [emergency access workflow](https://bitwarden.com/help/emergency-access/#use-emergency-access/). |
 | Change email | When Key Connector is being used, a user's vault email address cannot be changed. |
 
@@ -288,8 +289,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
-
+[Embedded content]
 > [!TIP] Use SCIM Guides.
 > The following section covers some generic information that can be used to set up SCIM, however Bitwarden recommends using one of the integration documents for:
 > 
@@ -344,12 +344,12 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 - Not occupy a license seat.
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 
 ### Member email address
 
@@ -613,12 +613,12 @@ While SSO with trusted devices eliminates the need for a master password, it doe
 - If a user is onboarded **after** SSO with trusted devices is activated and they select **Log in**→**Enterprise SSO**from the organization invite for [JIT provisioning](https://bitwarden.com/help/sso-faqs/#q-how-does-login-with-sso-work-for-new-users-just-in-time/), their account will not have a master password. Should you change to the master password [member decryption option](https://bitwarden.com/help/sso-decryption-options/), these users will be prompted to create a master password when they log in as long as they are still a member of the organization ([learn more](https://bitwarden.com/help/setup-sso-with-trusted-devices/)).
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 - If a user account is recovered using [account recovery](https://bitwarden.com/help/account-recovery/), their account will necessarily be assigned a master password. A master password cannot currently be removed from an account once it has one, so to avoid this outcome we recommend that you (i) instruct the user to export their data to a backup, (ii) completely delete the lost account, (iii) ask the user to [re-onboard to your organization using trusted devices](https://bitwarden.com/help/add-a-trusted-device/) and (iv) once they've done so instruct them to import their backup.
 
 ### Impact on other features
@@ -2447,19 +2447,19 @@ When you [create a collection](https://bitwarden.com/help/about-collections/), y
 
 ## Assign access to un-managed collections
 
-Collections should always have at least one assigned member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Under certain circumstances, for example when a managing member leaves your organization, collections can end up without a member with that level of permission.
-
 > [!NOTE] Only applies if 'Owner/Admin Manage All' setting is off.
 > The following only applies if the [Owners and admins can manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection management setting is **off.** If this setting is **on** in your organization:
 > 
-> - Owners and admins can always, rather than temporarily, modify access to a collection from the **Collections** view.
+> - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collections** view.
 > - The **Add Access** badge and tab described below will not appear.
 
-When this occurs, owners and admins will temporarily gain management capabilities for these collections through the **Add Access** tab of the **Collections**view:
+Collections should always have at least one assigned member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Under certain circumstances, for example when a managing member leaves your organization, collections can end up without a member with that level of permission.
+
+When this occurs, [owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission will temporarily gain management capabilities for these collections through the **Add Access** tab of the **Collections**view:
 
 ![Add access to un-managed collections](https://bitwarden.com/assets/1Nqn29nNIkKtb5HfWkfcWK/64c3875f60d3d292837d0655ad3b146c/2024-12-05_09-56-43.png)
 
-Using the steps described previously in this article, owners and admins should assign a new member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Once done, owners and admins lose management capabilities for that collection and the Add Access label is removed.
+Using the steps described previously in this article, owners, admins, and permitted custom role members should assign a new member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Once done, the assigner will lose management capabilities for that collection and the Add Access label is removed.
 
 ## Next steps
 
@@ -3558,7 +3558,10 @@ In order to turn on automatic confirmation of new members, you must turn it on b
 
 ### For the organization
 
-To turn on automatic confirmation for your organization, make sure you've met the eligibility requirements described above. Once you've contacted your Bitwarden team, an activation panel will be issued to organization owners the next time they log in. 
+To turn on automatic confirmation for your organization, make sure you've met the eligibility requirements described above. Once you've contacted your Bitwarden team and it's been made available to your organization:
+
+1. Owners and admins will get an email with the subject line **Automatic confirmation is available for <organization>**.
+2. An activation panel will be issued to organization owners and admins, the next time they log in, prompting them to turn on the policy.
 
 Once the functionality is added for your organization by Bitwarden, Automatic confirmation can also be activated [via a policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/) from the **Settings** → **Policies** menu in the Admin Console. Either way, select **Continue** to turn on automatic confirmation for the organization:
 
@@ -4509,7 +4512,7 @@ To turn on biometric unlock:
 
 To turn on biometric unlock:
 
-1. Copy [this policy](https://github.com/bitwarden/clients/blob/main/apps/desktop/resources/com.bitwarden.desktop.policy) to `/usr/share/polkit-1/actions/com.Bitwarden.policy` on your machine, for example:
+1. Copy [this policy](https://github.com/bitwarden/clients/blob/main/apps/desktop/resources/com.bitwarden.desktop.policy) to `/usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy` on your machine, for example:
 
 ```bash
 sudo wget -O /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy https://raw.githubusercontent.com/bitwarden/clients/main/apps/desktop/resources/com.bitwarden.desktop.policy
@@ -4732,6 +4735,7 @@ btwrdn.co | btwrdn.com
 - scim.bitwarden.com / scim.bitwarden.eu
 - sso.bitwarden.com / sso.bitwarden.eu
 - push.bitwarden.com / push.bitwarden.eu
+- notifications.bitwarden.com / notifications.bitwarden.eu
 - icons.bitwarden.net
 
 ## GitHub
@@ -7719,7 +7723,10 @@ URL: https://bitwarden.com/help/claimed-domains/
 
 Enterprise customers can claim domain (eg. `mycompany.com`) ownership for their organizations with a valid and unique-to-Bitwarden DNS TXT record. When you claim a domain, your organization gains additional controls over accounts with matching email addresses:
 
-- **Policy to block undesired account creation**: [Turn on a policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts outside the organization. When the policy on, email accounts with matching domains can only be used to create Bitwarden accounts by being invited to join the organization.
+- **Policy to block undesired account creation**: [Turn on a policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts on that Bitwarden server that are outside the organization. When the policy is on, email accounts with matching domains can only be used to create Bitwarden accounts on that Bitwarden server by being invited to join the organization.
+
+> [!TIP] Block account creation on cloud when self-hosting
+> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
 - **Claimed member accounts**: Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`) will automatically be [claimed by your organization](https://bitwarden.com/help/claimed-accounts/), restricting users from taking some account actions and allowing administrators to [delete the accounts](https://bitwarden.com/help/delete-member-accounts/) outright instead of only being able to remove them from the organization.
 
 Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`), referred to as [claimed accounts](https://bitwarden.com/help/claimed-accounts/), also gain the following benefits:
@@ -8519,7 +8526,7 @@ The `config` command specifies settings for the Bitwarden CLI to use:
 bw config server <setting> [value]
 ```
 
-A primary use of `bw config` is to [connect your CLI to a self-hosted](https://bitwarden.com/help/change-client-environment/#cli/) Bitwarden server:
+A primary use of `bw config` is to [connect your CLI to a self-hosted](https://bitwarden.com/help/change-client-environment/#tab-cli-4dQ4hW1QAwVBuReXk2Txx0/) Bitwarden server:
 
 ```
 bw config server https://your.bw.domain.com
@@ -8592,7 +8599,7 @@ bw import lastpasscsv /Users/myaccount/Documents/mydata.csv
 > [!NOTE] bw import -- formats
 > Bitwarden supports lots of formats for import, too many to list here! Use `bw import --formats` to return the list in your CLI, or [see here](https://bitwarden.com/help/import-faqs/#q-what-file-formats-does-bitwarden-support-for-import/).
 > 
-> If you are importing an [encrypted .json file that you've created with a password](https://bitwarden.com/help/cli/#export/), you will be prompted to enter the password before import completes.
+> If you are importing an [encrypted .json file that you've created with a password](https://bitwarden.com/help/encrypted-export/), you will be prompted to enter the password before import completes.
 
 #### import to an organization vault
 
@@ -9221,9 +9228,9 @@ This option interacts with the [owner and admin member roles](https://bitwarden.
 
 ### Restrict collection deletion to owners and admins
 
-This option interacts with the [owner and admin member roles](https://bitwarden.com/help/user-types-access-control/) to determine whether **only** that user population has the ability to delete collections. When on, this option also has downstream impact on the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. 
+This option interacts with the [owner, admin, and certain custom member roles](https://bitwarden.com/help/user-types-access-control/) to determine whether **only** that user population has the ability to delete collections. When on, this option also has downstream impact on the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. 
 
-| **On** | When on, only owners and admins can delete collections. Functionally, this option supersedes the ability to delete a collection that would have been granted to members with the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. |
+| **On** | When on, only owners, admins, and custom role members with the **Delete any collection** permission can delete collections. Functionally, this option supersedes the ability to delete a collection that would have been granted to members with the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. |
 |------|------|
 | **Off** | When off, members with any role can delete collections provided they have [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission over the collection they'd like to delete. |
 
@@ -10765,17 +10772,17 @@ Welcome to the family! This course shows you how to use your Bitwarden account, 
 
 ## Demo
 
-### Browser Extension (4 min)
+### Browser extension (4 min)
 
 [![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 ### Join a public training session (30 min)
 
-Get a live walkthrough of Bitwarden Password Manager basics and see how easy everyday password security can be.
+Join a free 30-minute live session hosted by the Bitwarden team. See the product in action, get your questions answered, and learn how to make the most of Bitwarden as a new user.
 
 [Embedded content componentCtaLink]
 
@@ -10823,6 +10830,8 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 ## Import your passwords
 
 Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
+
+## Import your passwords
 
 ### Browser Extension (1 min)
 
@@ -10873,6 +10882,8 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 ## Autofill from Browser extension
 
 Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
+
+## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
@@ -10932,6 +10943,8 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
 
+## Autofill from Android App
+
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -10975,6 +10988,8 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
+## Autofill from iOS App
+
 ### Keyboard autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1154446838.jpg)](https://vimeo.com/1154446838)
@@ -11014,7 +11029,7 @@ As a member of your organization, you can securely share information like login 
 ![Courses - Personal Collections](https://bitwarden.com/assets/7wwt8vRq23ZkVOg4K2eyb9/6064ce43049a04a220386ef071cf8a00/Screenshot_2025-12-13_at_1.22.55â__AM.png)
 *Courses - Personal Collections*
 
-## Share Bitwarden Send links
+## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
@@ -11024,7 +11039,7 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-## Add attachments
+## Adding attachments
 
 ### Using the browser extension
 
@@ -11435,17 +11450,17 @@ Ready to finally get your passwords under control? This course walks you through
 
 ## Demo
 
-### Browser Extension (4 min)
+### Browser extension (4 min)
 
 [![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 ### Join a public training session (30 min)
 
-Get a live walkthrough of Bitwarden Password Manager basics and see how easy everyday password security can be.
+Join a free 30-minute live session hosted by the Bitwarden team. See the product in action, get your questions answered, and learn how to make the most of Bitwarden as a new user.
 
 [Embedded content componentCtaLink]
 
@@ -11490,6 +11505,8 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 ## Import your passwords
 
 Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
+
+## Import your passwords
 
 ### Browser Extension (1 min)
 
@@ -11540,6 +11557,8 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 ## Autofill from Browser extension
 
 Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
+
+## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
@@ -11599,6 +11618,8 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
 
+## Autofill from Android App
+
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -11642,6 +11663,8 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
+## Autofill from iOS App
+
 ### Keyboard autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1154446838.jpg)](https://vimeo.com/1154446838)
@@ -11672,7 +11695,7 @@ Learn how to autofill using the browser app extension on iOS.
 **Video Chapters:**
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
-## Add attachments
+## Adding attachments
 
 ### Using the browser extension
 
@@ -11743,21 +11766,21 @@ URL: https://bitwarden.com/help/courses/password-manager-team-member/
 ---
 # Enterprise Member
 
-Your admin has set up Bitwarden for your organization—now it's time to make it work for you. This course shows you how to save passwords automatically, share credentials securely, and integrate Bitwarden into your daily workflow so staying secure becomes effortless.
+This Bitwarden training for enterprise members walks you through everything you need to get up and running as part of your organization. Through short video tutorials, you'll learn how to join your organization, set up your vault, use autofill across your devices, and securely share credentials so that Bitwarden for teams works for you from day one.
 
 ## Demo
 
-### Browser Extension (4 min)
+### Browser extension (4 min)
 
 [![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 ### Join a public training session (30 min)
 
-Get a live walkthrough of Bitwarden Password Manager basics and see how easy everyday password security can be.
+Join a free 30-minute live session hosted by the Bitwarden team. See the product in action, get your questions answered, and learn how to make the most of Bitwarden as a new user.
 
 [Embedded content componentCtaLink]
 
@@ -11813,8 +11836,6 @@ Your organization may offer a [free Bitwarden Families plan](https://bitwarden.c
 
 ## Import your passwords
 
-Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -11861,9 +11882,8 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 [Embedded content componentCtaLink]
 
-[Embedded content]## Autofill from Browser extension
-
-Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
+[Embedded content]
+## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
@@ -11921,8 +11941,6 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 ## Autofill from Android App
 
-Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
-
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -11964,8 +11982,6 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 ## Autofill from iOS App
 
-Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
-
 ### Keyboard autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1154446838.jpg)](https://vimeo.com/1154446838)
@@ -11997,7 +12013,7 @@ Learn how to autofill using the browser app extension on iOS.
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
 [Embedded content]
-## Share using Collections
+## Sharing with Collections
 
 ### Access shared passwords (2 min)
 
@@ -12005,7 +12021,7 @@ As a member of your organization, you can securely share information like login 
 
 ![Courses - collections - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/3eeb08d790153cb8d1c1b70f4efd45c6/Screenshot_2025-12-13_at_1.21.45â__AM.png)
 
-## Share Bitwarden Send links
+## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
@@ -12015,7 +12031,7 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-## Add attachments
+## Adding attachments
 
 ### Using the browser extension
 
@@ -12246,17 +12262,17 @@ Get up to speed on using Bitwarden as a team member. This course shows you how t
 
 ## Demo
 
-### Browser Extension (4 min)
+### Browser extension (4 min)
 
 [![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 ### Join a public training session (30 min)
 
-Get a live walkthrough of Bitwarden Password Manager basics and see how easy everyday password security can be.
+Join a free 30-minute live session hosted by the Bitwarden team. See the product in action, get your questions answered, and learn how to make the most of Bitwarden as a new user.
 
 [Embedded content componentCtaLink]
 
@@ -12291,6 +12307,8 @@ From the web app, you can fill your vault with information to keep secure, organ
 ## Import your passwords
 
 Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
+
+## Import your passwords
 
 ### Browser Extension (1 min)
 
@@ -12341,6 +12359,8 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 ## Autofill from Browser extension
 
 Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
+
+## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
@@ -12400,6 +12420,8 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
 
+## Autofill from Android App
+
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -12443,6 +12465,8 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
+## Autofill from iOS App
+
 ### Keyboard autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1154446838.jpg)](https://vimeo.com/1154446838)
@@ -12473,7 +12497,7 @@ Learn how to autofill using the browser app extension on iOS.
 **Video Chapters:**
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
-## Share using Collections
+## Sharing with Collections
 
 ### Access shared passwords (2 min)
 
@@ -12481,7 +12505,7 @@ As a member of your organization, you can securely share information like login 
 
 ![Courses - collections - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/3eeb08d790153cb8d1c1b70f4efd45c6/Screenshot_2025-12-13_at_1.21.45â__AM.png)
 
-## Share Bitwarden Send links
+## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
@@ -12491,7 +12515,7 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-## Add attachments
+## Adding attachments
 
 ### Using the browser extension
 
@@ -14469,7 +14493,7 @@ bwdc sync
 Synced users and groups will be immediately available in your Bitwarden organization. Newly added users will receive an email invite to your organization.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 
@@ -14674,7 +14698,7 @@ Automatic syncing will poll your directory based on the **Interval** specified i
 To start automatic sync polling with Directory Connector, open the [dashboard] **Dashboard** tab and select the [play] **Start Sync** button.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 ---
@@ -16921,7 +16945,7 @@ Download Bitwarden apps for all your devices [here](https://bitwarden.com/downlo
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 Learn more about getting started with the browser extension [here](https://bitwarden.com/help/getting-started-browserext/), or jump to the following points in the video to learn about specific topics:
 
@@ -22708,7 +22732,7 @@ This article will help you configure a SCIM integration with JumpCloud. Configu
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -22739,8 +22763,8 @@ Re-open the application and navigate to the **Identity Management**tab. Expand t
 
 | **Field** | **Description** |
 |------|------|
-| Base URL | Enter the SCIM URL ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim-in-the-web-vault/)). |
-| Token Key | Enter the SCIM API Key ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim-in-the-web-vault/)). |
+| Base URL | Enter the SCIM URL ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim/)). |
+| Token Key | Enter the SCIM API Key ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim/)). |
 
 Once you have configured these fields, select the **Activate** button. Once the test comes back successfully, select **Save**.
 
@@ -23373,7 +23397,7 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 
@@ -23685,6 +23709,7 @@ The following emails alert members of Bitwarden organizations, in all roles, to 
 |------|------|------|
 | You can now access items from {Organization} | {Organization} = Your organization's display name. | A user receives this email when their access to the organization is confirmed. |
 | Access Requested for Secrets Manager | n/a | An admin or owner receives this email when a user has requested access to [Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/). |
+| Automatic user confirmation is available for {Organization} | {Organization} = Your organization's display name. | Admins and owners receive this email when [automatic confirmation](https://bitwarden.com/help/automatic-confirmation/) has been made available to your organization by Bitwarden. |
 | Accept Your Free Families Subscription | n/a | A user receives this email when a member of an organization invited them to [create a sponsored Families organization](https://bitwarden.com/help/families-for-enterprise/). |
 | Success! Families Subscription Accepted | n/a | A user receives this email when they've redeemed an invitation to [create a sponsored Families organization](https://bitwarden.com/help/families-for-enterprise/). |
 | Your Families Sponsorship was Removed | n/a | A user receives this email when they've manually removed [sponsorship for a Families organization](https://bitwarden.com/help/families-for-enterprise/). |
@@ -25127,7 +25152,7 @@ This article will help you configure a SCIM integration with Azure. Configurati
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -25160,8 +25185,8 @@ Select **Provisioning**from the navigation and complete the following steps:
 
 1. Select the + **New configuration** button.
 2. In the **Select authentication method** dropdown, select **Bearer authentication**.
-3. Enter your SCIM URL ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim-in-the-web-vault/)) in the **Tenant URL**field.
-4. Enter your SCIM API Key ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim-in-the-web-vault/)) in the **Secret Token**field.
+3. Enter your SCIM URL ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim/)) in the **Tenant URL**field.
+4. Enter your SCIM API Key ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim/)) in the **Secret Token**field.
 5. Select the **Test Connection**button.
 6. If your connection test successfully, select the **Save**button.
 
@@ -25229,11 +25254,11 @@ If **Provision Microsoft Entra ID Users** has been enabled in your Mappings, the
 - When a user who is already a member of your organization is assigned in Azure, the Bitwarden user is linked to the Azure user through their first available matching precedence attribute.
 
  - Users linked in this way are still subject to the other workflows in this list, however values like `displayName` and `externalId/mailNickname` are not automatically changed in Bitwarden.
-- When an assigned user is disabled via the `accountEnabled` property in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
-- When an assigned user is "soft" deleted in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
+- When an assigned user is disabled via the `accountEnabled` property in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
+- When an assigned user is "soft" deleted in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
 
  - When the user is permanently deleted in Azure, the user is removed from the organization.
-- When an assigned user is removed from the Enterprise application in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
+- When an assigned user is removed from the Enterprise application in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
 - When an assigned user is removed from a group in Azure, the user is removed from that group in Bitwarden but remains a member of the organization.
 
 #### Groups
@@ -25452,7 +25477,7 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 ---
@@ -25982,7 +26007,7 @@ URL: https://bitwarden.com/help/my-items/
 Once the policy has been enabled by an owner or admin, **My Items** will be added to each organization member's vault and, depending on the organization’s policy settings, users may be prompted to [transfer items from My Vault to My Items](https://bitwarden.com/help/transfer-ownership/).
 
 > [!WARNING] Phases of My Items
-> At this time, Bitwarden recommends only organizations that have not started onboarding members to turn on the [Enforce organization data ownership policy](https://bitwarden.com/help/policies/#centralize-organization-ownership/). If your organization activated the policy before version [2025.11.0](https://bitwarden.com/help/releasenotes/), **My Items** will be created for members confirmed since that release. Preexisting members will not have **My Items** and can continue using their **My vault**.
+> At this time, Bitwarden recommends only organizations that have not started onboarding members to turn on the [Centralize organization ownership policy](https://bitwarden.com/help/policies/#centralize-organization-ownership/). If your organization activated the policy before version [2025.11.0](https://bitwarden.com/help/releasenotes/), **My Items** will be created for members confirmed since that release. Preexisting members will not have **My Items** and can continue using their **My vault**.
 
 **My Items** is each organization member's primary location for storing items, specifically those that don't need to be shared with other members:
 
@@ -26644,7 +26669,7 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 ---
@@ -26681,7 +26706,7 @@ The following provisioning features are supported by this integration:
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -26866,7 +26891,7 @@ Once Alice is removed from your organization:
 | **Individual items** | Will still be able to use her individual vault and access the items stored therein. |
 | **Permissions in the organization** | Will**lose all permissions over and access to**anything related to the organization. |
 | **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can setup one of our free two-step login options or upgrade to premium for more. |
-| **Created collections** | Alice's "Marketing Team" collection will be retained by organization owners and admins, who can assign a new user Manage collection permission |
+| **Created collections** | Organization owners, admins and custom role members with the **Edit any collection**permission will temporarily gain access to Alice's "Marketing Team" collection so they can can assign a new member the **Manage collection** permission. |
 | **Shared items** | Ownership of collections and shared items **belongs to the organization**, so Alice will lose access to all these items despite having created them. |
 
 > [!TIP] Remove Org Members + Cacheing
@@ -26875,12 +26900,12 @@ Once Alice is removed from your organization:
 ### Advanced deprovisioning
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 
 #### Claimed member accounts
 
@@ -27464,7 +27489,7 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 ---
@@ -27486,7 +27511,7 @@ This article will help you configure a SCIM integration with OneLogin. Configur
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -27518,8 +27543,8 @@ Enter the following values in the **API Connection** section:
 
 | **Application setting** | **Description** |
 |------|------|
-| SCIM base URL | Set this field to the SCIM URL ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-SCIM/)). |
-| SCIM bearer token | Set this field to the SCIM API key ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-SCIM/)). |
+| SCIM base URL | Set this field to the SCIM URL ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-scim/)). |
+| SCIM bearer token | Set this field to the SCIM API key ([learn more](https://bitwarden.com/help/onelogin-scim-integration/#enable-scim/)). |
 
 Select **Save**once you have configured these fields.
 
@@ -28519,7 +28544,7 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -28543,7 +28568,7 @@ Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM 
 > [!NOTE] Remove action Ping Identity SCIM
 > Setting the Remove Action setting to `Disable` will result in Bitwarden users being moved to `Revoked` status rather if the user fails to meet the filter criteria set on Ping Identity. Restoring the criteria will return the user to their `previous state`.
 > 
-> If the Remove Action is set to `Delete`, the same action will [deprovision the user](https://bitwarden.com/help/managing-users/#deprovision-users/).
+> If the Remove Action is set to `Delete`, the same action will [deprovision the user](https://bitwarden.com/help/onboarding-and-succession/#deprovisioning-users/).
 9. Select **Save** once complete. Select the newly created Connection and enable the Connection using the toggle.
 
 ![Enable Ping Identity Connection](https://bitwarden.com/assets/1GpO1UTspVLzLh0SwRgKuf/4669f4225cca00108f4f0a8700c38e2e/2024-10-09_14-13-24.png)
@@ -28754,7 +28779,10 @@ Turn on the **Require two-step login** policy to require members to use any two-
 > [!NOTE] Pre-req "Block account creation" policy.
 > A [domain must be claimed](https://bitwarden.com/help/claimed-domains/) before you can turn on this policy.
 
-Turn on the **Block account creation for claimed domains** policy to prevent people with email addresses that match your [claimed domain](https://bitwarden.com/help/claimed-domains/) from creating a Bitwarden account outside of the organization. When this policy is on, email addresses that match your claimed domain can only be used to create Bitwarden accounts by being invited to join your organization or when [JIT provisioning using SSO](https://bitwarden.com/help/jit-provisioning/).
+Turn on the **Block account creation for claimed domains** policy to prevent people with email addresses that match your [claimed domain](https://bitwarden.com/help/claimed-domains/) from creating a Bitwarden accounts on that Bitwarden server that are outside the organization. When this policy is on, email addresses that match your claimed domain can only be used to create Bitwarden accounts on that server by being invited to join your organization or when [JIT provisioning using SSO](https://bitwarden.com/help/jit-provisioning/).
+
+> [!TIP] Block account creation on cloud when self-hosting
+> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
 
 ### Session timeout
 
@@ -31643,12 +31671,12 @@ To remove members from your organization:
 Offline devices cache a read-only copy of data, including organization items. Some clients may retain access to this read-only data for a short time after a member is removed. If you anticipate malicious exploitation of this, update credentials the member had access to when you remove them from the organization.
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 
 ## What happens to removed members' data
 
@@ -31799,6 +31827,9 @@ Members with revoked access are listed in the **Revoked**tab and will:
 
 - Not have access to any organization vault items or collections.
 - Not be able to log in to the account using your organization's [SSO](https://bitwarden.com/help/about-sso/).
+
+> [!NOTE] Revoked users without master passwords
+> Members who **do not have master passwords**, for example in organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) or [Key Connector](https://bitwarden.com/help/about-key-connector/), will be fully locked out of their account if they are revoked.
 - Not be subject to your organization's [policies](https://bitwarden.com/help/policies/).
 - Not occupy a license seat.
 
@@ -33424,7 +33455,7 @@ The Single sign-on screen separates configuration into two sections:
 
 ### Service provider configuration
 
-Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-app/):
+Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-application/):
 
 | **Field** | **Description** |
 |------|------|
@@ -35260,9 +35291,9 @@ For a full list of Bitwarden security and compliance certifications, please visi
 
 ### Q: What third-party services, libraries or identifiers are used in my Bitwarden account?
 
-**A:** In the mobile apps, Firebase Cloud Messaging (often mistaken for a tracker) is used only for push notifications related to [sync](https://bitwarden.com/help/vault-sync/) and performs absolutely no tracking functions. Microsoft Visual Studio App Center is used for crash reporting on a range of mobile devices. In the web vault, Stripe and PayPal scripts are used for payment processing only on payment pages.
+**A:** In the mobile apps, Firebase Cloud Messaging (often mistaken for a tracker) is used only for push notifications related to [sync](https://bitwarden.com/help/vault-sync/) and performs absolutely no tracking functions. Firebase is also used for crash reporting on a range of mobile devices. In the web vault, Stripe and PayPal scripts are used for payment processing only on payment pages.
 
-For those who prefer to exclude all 3rd party communication, Firebase and Microsoft Visual Studio App Center are removed completely from the [F-Droid build](https://bitwarden.com/download/). Additionally, turning off push notifications on a self-hosted Bitwarden server will disable using the push relay server.
+For those who prefer to exclude all 3rd party communication, Firebase is removed completely from the [F-Droid build](https://bitwarden.com/download/). Additionally, turning off push notifications on a self-hosted Bitwarden server will disable using the push relay server.
 
 The Bitwarden Android application also includes the ability to disable crash reporting under Settings.
 
@@ -40173,7 +40204,7 @@ There are three default member roles: owner, admin, and user. Each role grants d
 
 ## Default role permissions
 
-The following tables list the permissions for each member role.
+The following tables list the permissions for each default member role. **Custom role**members allow the creation of highly-configurable levels of permission and are described later in this article. 
 
 ### Items and collections
 
@@ -40258,9 +40289,12 @@ By default, custom roles include the same permissions as the **user** member rol
  - This includes the ability to create, edit, and delete any collection.
 - Create new collections
 - Delete any collection
+
+ - This permission allows the member to delete any collection, even if the [Restrict collection deletion to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting is on.
 - Edit any collection
 
  - This permission allows the member to change [collection permissions](https://bitwarden.com/help/collection-permissions/) for any collection, which could be used to provide provide full access to vault items to a member of the organization who is not intended to have that level of access.
+ - This permission allows the member to [assign access to an un-managed collection](https://bitwarden.com/help/assign-users-to-collections/#assign-access-to-un-managed-collections/), for example when a managing member leaves the organization.
 - Manage groups
 - Manage SSO
 - Manage [policies](https://bitwarden.com/help/policies/)
@@ -41084,6 +41118,6 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.

@@ -152,6 +152,6 @@ Directory Connector will begin polling your directory based on the configured [s
 If you exit or close the application, automatic sync will stop. To keep Directory Connector running in the background, minimize the application or hide it to the system tray.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.

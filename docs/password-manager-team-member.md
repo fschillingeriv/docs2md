@@ -4,21 +4,21 @@ URL: https://bitwarden.com/help/courses/password-manager-team-member/
 
 # Enterprise Member
 
-Your admin has set up Bitwarden for your organization—now it's time to make it work for you. This course shows you how to save passwords automatically, share credentials securely, and integrate Bitwarden into your daily workflow so staying secure becomes effortless.
+This Bitwarden training for enterprise members walks you through everything you need to get up and running as part of your organization. Through short video tutorials, you'll learn how to join your organization, set up your vault, use autofill across your devices, and securely share credentials so that Bitwarden for teams works for you from day one.
 
 ## Demo
 
-### Browser Extension (4 min)
+### Browser extension (4 min)
 
 [![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 ### Join a public training session (30 min)
 
-Get a live walkthrough of Bitwarden Password Manager basics and see how easy everyday password security can be.
+Join a free 30-minute live session hosted by the Bitwarden team. See the product in action, get your questions answered, and learn how to make the most of Bitwarden as a new user.
 
 [Embedded content componentCtaLink]
 
@@ -74,8 +74,6 @@ Your organization may offer a [free Bitwarden Families plan](https://bitwarden.c
 
 ## Import your passwords
 
-Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -122,9 +120,8 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 [Embedded content componentCtaLink]
 
-[Embedded content]## Autofill from Browser extension
-
-Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
+[Embedded content]
+## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
@@ -182,8 +179,6 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 ## Autofill from Android App
 
-Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
-
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -225,8 +220,6 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 ## Autofill from iOS App
 
-Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
-
 ### Keyboard autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1154446838.jpg)](https://vimeo.com/1154446838)
@@ -258,7 +251,7 @@ Learn how to autofill using the browser app extension on iOS.
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
 [Embedded content]
-## Share using Collections
+## Sharing with Collections
 
 ### Access shared passwords (2 min)
 
@@ -266,7 +259,7 @@ As a member of your organization, you can securely share information like login 
 
 ![Courses - collections - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/3eeb08d790153cb8d1c1b70f4efd45c6/Screenshot_2025-12-13_at_1.21.45â__AM.png)
 
-## Share Bitwarden Send links
+## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
@@ -276,7 +269,7 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-## Add attachments
+## Adding attachments
 
 ### Using the browser extension
 

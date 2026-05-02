@@ -18,7 +18,7 @@ This article will help you configure a SCIM integration with JumpCloud. Configu
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -49,8 +49,8 @@ Re-open the application and navigate to the **Identity Management**tab. Expand t
 
 | **Field** | **Description** |
 |------|------|
-| Base URL | Enter the SCIM URL ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim-in-the-web-vault/)). |
-| Token Key | Enter the SCIM API Key ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim-in-the-web-vault/)). |
+| Base URL | Enter the SCIM URL ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim/)). |
+| Token Key | Enter the SCIM API Key ([learn more](https://bitwarden.com/help/jumpcloud-scim-integration/#enable-scim/)). |
 
 Once you have configured these fields, select the **Activate** button. Once the test comes back successfully, select **Save**.
 

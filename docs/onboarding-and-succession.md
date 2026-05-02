@@ -128,7 +128,7 @@ Once Alice is removed from your organization:
 | **Individual items** | Will still be able to use her individual vault and access the items stored therein. |
 | **Permissions in the organization** | Will**lose all permissions over and access to**anything related to the organization. |
 | **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can setup one of our free two-step login options or upgrade to premium for more. |
-| **Created collections** | Alice's "Marketing Team" collection will be retained by organization owners and admins, who can assign a new user Manage collection permission |
+| **Created collections** | Organization owners, admins and custom role members with the **Edit any collection**permission will temporarily gain access to Alice's "Marketing Team" collection so they can can assign a new member the **Manage collection** permission. |
 | **Shared items** | Ownership of collections and shared items **belongs to the organization**, so Alice will lose access to all these items despite having created them. |
 
 > [!TIP] Remove Org Members + Cacheing
@@ -137,12 +137,12 @@ Once Alice is removed from your organization:
 ### Advanced deprovisioning
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 
 #### Claimed member accounts
 

@@ -57,6 +57,7 @@ btwrdn.co | btwrdn.com
 - scim.bitwarden.com / scim.bitwarden.eu
 - sso.bitwarden.com / sso.bitwarden.eu
 - push.bitwarden.com / push.bitwarden.eu
+- notifications.bitwarden.com / notifications.bitwarden.eu
 - icons.bitwarden.net
 
 ## GitHub

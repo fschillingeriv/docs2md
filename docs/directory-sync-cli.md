@@ -128,7 +128,7 @@ bwdc sync
 Synced users and groups will be immediately available in your Bitwarden organization. Newly added users will receive an email invite to your organization.
 
 > [!NOTE] Teams Starter + BWDC
-> If you're on the [Teams Starter](https://bitwarden.com/help/password-manager-plans/#teams-starter-organizations/) plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
+> If you're on the Teams Starter plan, you are limited to 10 members. Directory Connector will display an error and stop syncing if you try to sync more than 10 members.
 > 
 > **This plan is no longer available for purchase**. This error does not apply to Teams plans.
 

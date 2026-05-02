@@ -26,8 +26,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
-
+[Embedded content]
 > [!TIP] Use SCIM Guides.
 > The following section covers some generic information that can be used to set up SCIM, however Bitwarden recommends using one of the integration documents for:
 > 
@@ -82,12 +81,12 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 - Not occupy a license seat.
 
 > [!WARNING] Accounts without MPs & TDE
-> For member accounts that do not have master passwords as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
+> For member accounts that **do not have master passwords** as a result of [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/):
 > 
 > - [Removing them from your organization](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) eliminates all access to their Bitwarden account unless they were previously assigned a master password using [account recovery](https://bitwarden.com/help/account-recovery/) and they log in with that master password at least once before being removed.
 > 
 > These users will not be able to re-join your organization unless the above steps are taken **before** they are removed from the organization. If they aren't, each removed user will be required to [delete their account](https://bitwarden.com/help/delete-your-account/#delete-an-individual-account/) and be issued a new invitation to create an account and join your organization.
-> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still allow them to log in to Bitwarden and access **only** their individual vault.
+> - [Revoking access to the organization](https://bitwarden.com/help/revoke-users/), but not removing them from the organization, will still fully locked them out of their account until their access to the organization is restored.
 
 ### Member email address
 

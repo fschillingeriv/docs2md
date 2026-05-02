@@ -67,9 +67,9 @@ For a full list of Bitwarden security and compliance certifications, please visi
 
 ### Q: What third-party services, libraries or identifiers are used in my Bitwarden account?
 
-**A:** In the mobile apps, Firebase Cloud Messaging (often mistaken for a tracker) is used only for push notifications related to [sync](https://bitwarden.com/help/vault-sync/) and performs absolutely no tracking functions. Microsoft Visual Studio App Center is used for crash reporting on a range of mobile devices. In the web vault, Stripe and PayPal scripts are used for payment processing only on payment pages.
+**A:** In the mobile apps, Firebase Cloud Messaging (often mistaken for a tracker) is used only for push notifications related to [sync](https://bitwarden.com/help/vault-sync/) and performs absolutely no tracking functions. Firebase is also used for crash reporting on a range of mobile devices. In the web vault, Stripe and PayPal scripts are used for payment processing only on payment pages.
 
-For those who prefer to exclude all 3rd party communication, Firebase and Microsoft Visual Studio App Center are removed completely from the [F-Droid build](https://bitwarden.com/download/). Additionally, turning off push notifications on a self-hosted Bitwarden server will disable using the push relay server.
+For those who prefer to exclude all 3rd party communication, Firebase is removed completely from the [F-Droid build](https://bitwarden.com/download/). Additionally, turning off push notifications on a self-hosted Bitwarden server will disable using the push relay server.
 
 The Bitwarden Android application also includes the ability to disable crash reporting under Settings.
 

@@ -55,6 +55,7 @@ The following emails alert members of Bitwarden organizations, in all roles, to 
 |------|------|------|
 | You can now access items from {Organization} | {Organization} = Your organization's display name. | A user receives this email when their access to the organization is confirmed. |
 | Access Requested for Secrets Manager | n/a | An admin or owner receives this email when a user has requested access to [Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/). |
+| Automatic user confirmation is available for {Organization} | {Organization} = Your organization's display name. | Admins and owners receive this email when [automatic confirmation](https://bitwarden.com/help/automatic-confirmation/) has been made available to your organization by Bitwarden. |
 | Accept Your Free Families Subscription | n/a | A user receives this email when a member of an organization invited them to [create a sponsored Families organization](https://bitwarden.com/help/families-for-enterprise/). |
 | Success! Families Subscription Accepted | n/a | A user receives this email when they've redeemed an invitation to [create a sponsored Families organization](https://bitwarden.com/help/families-for-enterprise/). |
 | Your Families Sponsorship was Removed | n/a | A user receives this email when they've manually removed [sponsorship for a Families organization](https://bitwarden.com/help/families-for-enterprise/). |

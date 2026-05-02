@@ -107,7 +107,7 @@ The Single sign-on screen separates configuration into two sections:
 
 ### Service provider configuration
 
-Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-app/):
+Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-application/):
 
 | **Field** | **Description** |
 |------|------|

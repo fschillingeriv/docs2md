@@ -128,7 +128,10 @@ Turn on the **Require two-step login** policy to require members to use any two-
 > [!NOTE] Pre-req "Block account creation" policy.
 > A [domain must be claimed](https://bitwarden.com/help/claimed-domains/) before you can turn on this policy.
 
-Turn on the **Block account creation for claimed domains** policy to prevent people with email addresses that match your [claimed domain](https://bitwarden.com/help/claimed-domains/) from creating a Bitwarden account outside of the organization. When this policy is on, email addresses that match your claimed domain can only be used to create Bitwarden accounts by being invited to join your organization or when [JIT provisioning using SSO](https://bitwarden.com/help/jit-provisioning/).
+Turn on the **Block account creation for claimed domains** policy to prevent people with email addresses that match your [claimed domain](https://bitwarden.com/help/claimed-domains/) from creating a Bitwarden accounts on that Bitwarden server that are outside the organization. When this policy is on, email addresses that match your claimed domain can only be used to create Bitwarden accounts on that server by being invited to join your organization or when [JIT provisioning using SSO](https://bitwarden.com/help/jit-provisioning/).
+
+> [!TIP] Block account creation on cloud when self-hosting
+> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
 
 ### Session timeout
 

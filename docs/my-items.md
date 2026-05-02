@@ -9,7 +9,7 @@ URL: https://bitwarden.com/help/my-items/
 Once the policy has been enabled by an owner or admin, **My Items** will be added to each organization member's vault and, depending on the organization’s policy settings, users may be prompted to [transfer items from My Vault to My Items](https://bitwarden.com/help/transfer-ownership/).
 
 > [!WARNING] Phases of My Items
-> At this time, Bitwarden recommends only organizations that have not started onboarding members to turn on the [Enforce organization data ownership policy](https://bitwarden.com/help/policies/#centralize-organization-ownership/). If your organization activated the policy before version [2025.11.0](https://bitwarden.com/help/releasenotes/), **My Items** will be created for members confirmed since that release. Preexisting members will not have **My Items** and can continue using their **My vault**.
+> At this time, Bitwarden recommends only organizations that have not started onboarding members to turn on the [Centralize organization ownership policy](https://bitwarden.com/help/policies/#centralize-organization-ownership/). If your organization activated the policy before version [2025.11.0](https://bitwarden.com/help/releasenotes/), **My Items** will be created for members confirmed since that release. Preexisting members will not have **My Items** and can continue using their **My vault**.
 
 **My Items** is each organization member's primary location for storing items, specifically those that don't need to be shared with other members:
 

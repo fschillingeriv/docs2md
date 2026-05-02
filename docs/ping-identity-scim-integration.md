@@ -18,7 +18,7 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -42,7 +42,7 @@ Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM 
 > [!NOTE] Remove action Ping Identity SCIM
 > Setting the Remove Action setting to `Disable` will result in Bitwarden users being moved to `Revoked` status rather if the user fails to meet the filter criteria set on Ping Identity. Restoring the criteria will return the user to their `previous state`.
 > 
-> If the Remove Action is set to `Delete`, the same action will [deprovision the user](https://bitwarden.com/help/managing-users/#deprovision-users/).
+> If the Remove Action is set to `Delete`, the same action will [deprovision the user](https://bitwarden.com/help/onboarding-and-succession/#deprovisioning-users/).
 9. Select **Save** once complete. Select the newly created Connection and enable the Connection using the toggle.
 
 ![Enable Ping Identity Connection](https://bitwarden.com/assets/1GpO1UTspVLzLh0SwRgKuf/4669f4225cca00108f4f0a8700c38e2e/2024-10-09_14-13-24.png)

@@ -39,9 +39,9 @@ This option interacts with the [owner and admin member roles](https://bitwarden.
 
 ### Restrict collection deletion to owners and admins
 
-This option interacts with the [owner and admin member roles](https://bitwarden.com/help/user-types-access-control/) to determine whether **only** that user population has the ability to delete collections. When on, this option also has downstream impact on the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. 
+This option interacts with the [owner, admin, and certain custom member roles](https://bitwarden.com/help/user-types-access-control/) to determine whether **only** that user population has the ability to delete collections. When on, this option also has downstream impact on the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. 
 
-| **On** | When on, only owners and admins can delete collections. Functionally, this option supersedes the ability to delete a collection that would have been granted to members with the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. |
+| **On** | When on, only owners, admins, and custom role members with the **Delete any collection** permission can delete collections. Functionally, this option supersedes the ability to delete a collection that would have been granted to members with the [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission. |
 |------|------|
 | **Off** | When off, members with any role can delete collections provided they have [Manage collection](https://bitwarden.com/help/user-types-access-control/) permission over the collection they'd like to delete. |
 

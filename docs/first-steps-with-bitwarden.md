@@ -31,7 +31,7 @@ Download Bitwarden apps for all your devices [here](https://bitwarden.com/downlo
 *[Watch on Vimeo](https://vimeo.com/1084695614)*
 
 **Video Chapters:**
-Bitwarden browser extensions make it easy to quickly log in to your accounts with saved passwords with the magic of autofill. [Download](https://bitwarden.com/download/) the browser extension and [learn how to autofill passwords](https://bitwarden.com/help/auto-fill-browser/) while browsing the web.
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
 
 Learn more about getting started with the browser extension [here](https://bitwarden.com/help/getting-started-browserext/), or jump to the following points in the video to learn about specific topics:
 

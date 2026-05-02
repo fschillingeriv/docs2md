@@ -64,7 +64,7 @@ To turn on biometric unlock:
 
 To turn on biometric unlock:
 
-1. Copy [this policy](https://github.com/bitwarden/clients/blob/main/apps/desktop/resources/com.bitwarden.desktop.policy) to `/usr/share/polkit-1/actions/com.Bitwarden.policy` on your machine, for example:
+1. Copy [this policy](https://github.com/bitwarden/clients/blob/main/apps/desktop/resources/com.bitwarden.desktop.policy) to `/usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy` on your machine, for example:
 
 ```bash
 sudo wget -O /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy https://raw.githubusercontent.com/bitwarden/clients/main/apps/desktop/resources/com.bitwarden.desktop.policy

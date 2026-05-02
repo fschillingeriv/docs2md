@@ -31,7 +31,7 @@ There are three default member roles: owner, admin, and user. Each role grants d
 
 ## Default role permissions
 
-The following tables list the permissions for each member role.
+The following tables list the permissions for each default member role. **Custom role**members allow the creation of highly-configurable levels of permission and are described later in this article. 
 
 ### Items and collections
 
@@ -116,9 +116,12 @@ By default, custom roles include the same permissions as the **user** member rol
  - This includes the ability to create, edit, and delete any collection.
 - Create new collections
 - Delete any collection
+
+ - This permission allows the member to delete any collection, even if the [Restrict collection deletion to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting is on.
 - Edit any collection
 
  - This permission allows the member to change [collection permissions](https://bitwarden.com/help/collection-permissions/) for any collection, which could be used to provide provide full access to vault items to a member of the organization who is not intended to have that level of access.
+ - This permission allows the member to [assign access to an un-managed collection](https://bitwarden.com/help/assign-users-to-collections/#assign-access-to-un-managed-collections/), for example when a managing member leaves the organization.
 - Manage groups
 - Manage SSO
 - Manage [policies](https://bitwarden.com/help/policies/)

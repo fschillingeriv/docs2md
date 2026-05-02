@@ -30,6 +30,9 @@ Members with revoked access are listed in the **Revoked**tab and will:
 
 - Not have access to any organization vault items or collections.
 - Not be able to log in to the account using your organization's [SSO](https://bitwarden.com/help/about-sso/).
+
+> [!NOTE] Revoked users without master passwords
+> Members who **do not have master passwords**, for example in organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) or [Key Connector](https://bitwarden.com/help/about-key-connector/), will be fully locked out of their account if they are revoked.
 - Not be subject to your organization's [policies](https://bitwarden.com/help/policies/).
 - Not occupy a license seat.
 

@@ -23,7 +23,7 @@ This article will help you configure a SCIM integration with Azure. Configurati
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/a4f4e18e561733297338e4ed44c6ed8c/2024-12-03_15-25-46.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
 
@@ -56,8 +56,8 @@ Select **Provisioning**from the navigation and complete the following steps:
 
 1. Select the + **New configuration** button.
 2. In the **Select authentication method** dropdown, select **Bearer authentication**.
-3. Enter your SCIM URL ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim-in-the-web-vault/)) in the **Tenant URL**field.
-4. Enter your SCIM API Key ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim-in-the-web-vault/)) in the **Secret Token**field.
+3. Enter your SCIM URL ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim/)) in the **Tenant URL**field.
+4. Enter your SCIM API Key ([learn more](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#enable-scim/)) in the **Secret Token**field.
 5. Select the **Test Connection**button.
 6. If your connection test successfully, select the **Save**button.
 
@@ -125,11 +125,11 @@ If **Provision Microsoft Entra ID Users** has been enabled in your Mappings, the
 - When a user who is already a member of your organization is assigned in Azure, the Bitwarden user is linked to the Azure user through their first available matching precedence attribute.
 
  - Users linked in this way are still subject to the other workflows in this list, however values like `displayName` and `externalId/mailNickname` are not automatically changed in Bitwarden.
-- When an assigned user is disabled via the `accountEnabled` property in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
-- When an assigned user is "soft" deleted in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
+- When an assigned user is disabled via the `accountEnabled` property in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
+- When an assigned user is "soft" deleted in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
 
  - When the user is permanently deleted in Azure, the user is removed from the organization.
-- When an assigned user is removed from the Enterprise application in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#revoking-restoring-access/).
+- When an assigned user is removed from the Enterprise application in Azure, the user has their access to the organization [revoked](https://bitwarden.com/help/about-scim/#member-status/).
 - When an assigned user is removed from a group in Azure, the user is removed from that group in Bitwarden but remains a member of the organization.
 
 #### Groups

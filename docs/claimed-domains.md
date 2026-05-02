@@ -6,7 +6,10 @@ URL: https://bitwarden.com/help/claimed-domains/
 
 Enterprise customers can claim domain (eg. `mycompany.com`) ownership for their organizations with a valid and unique-to-Bitwarden DNS TXT record. When you claim a domain, your organization gains additional controls over accounts with matching email addresses:
 
-- **Policy to block undesired account creation**: [Turn on a policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts outside the organization. When the policy on, email accounts with matching domains can only be used to create Bitwarden accounts by being invited to join the organization.
+- **Policy to block undesired account creation**: [Turn on a policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts on that Bitwarden server that are outside the organization. When the policy is on, email accounts with matching domains can only be used to create Bitwarden accounts on that Bitwarden server by being invited to join the organization.
+
+> [!TIP] Block account creation on cloud when self-hosting
+> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
 - **Claimed member accounts**: Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`) will automatically be [claimed by your organization](https://bitwarden.com/help/claimed-accounts/), restricting users from taking some account actions and allowing administrators to [delete the accounts](https://bitwarden.com/help/delete-member-accounts/) outright instead of only being able to remove them from the organization.
 
 Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`), referred to as [claimed accounts](https://bitwarden.com/help/claimed-accounts/), also gain the following benefits:
