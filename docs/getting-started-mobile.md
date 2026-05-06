@@ -92,7 +92,7 @@ You can launch a website directly from Bitwarden by selecting the [share-square]
 
 ### Unlock with biometrics
 
-Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't setup [fingerprint unlock](https://support.google.com/nexus/answer/6285273?hl=en) or [face unlock](https://support.google.com/pixelphone/answer/9517039?hl=en) on your Android device, you will need to do that first from the Android ⚙️ **Settings** app.
+Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't set up [fingerprint unlock](https://support.google.com/nexus/answer/6285273?hl=en) or [face unlock](https://support.google.com/pixelphone/answer/9517039?hl=en) on your Android device, you will need to do that first from the Android ⚙️ **Settings** app.
 
 1. In Bitwarden, tap the ⚙️ **Settings** tab located at the bottom of your screen.
 2. Tap **Account security**.
@@ -105,7 +105,7 @@ Once enabled, you will be able to open Bitwarden or autofill logins using just y
 
 ### Login using autofill
 
-Once you have setup [autofill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
+Once you have set up [autofill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
 
 1. Tap the email/username or password input box in the app or website.
 2. Depending on which auto-fill option your device uses, tap the available overlay:
@@ -137,7 +137,7 @@ You can launch a website directly from Bitwarden by selecting the [share-square]
 
 ### Unlock with biometrics
 
-Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't setup Touch ID or Face ID on your iOS device, you'll need to do that first from the iOS ⚙️ **Settings** app.
+Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't set up Touch ID or Face ID on your iOS device, you'll need to do that first from the iOS ⚙️ **Settings** app.
 
 1. In your Bitwarden iOS app, tap the ⚙️ **Settings** tab located at the bottom of your screen.
 2. Tap **Account security**:
@@ -153,7 +153,7 @@ Once enabled, you will be able to open Bitwarden or AutoFill logins using just y
 
 ### Login using AutoFill
 
-Once you've setup [Auto-fill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
+Once you've set up [Auto-fill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
 
 1. Tap the email/username or password input box in the app or website.
 2. Above your keyboard, tap **Passwords**.

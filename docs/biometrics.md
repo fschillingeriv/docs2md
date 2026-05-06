@@ -94,7 +94,7 @@ The ability to unlock your vault with biometrics is supported on these browsers:
 - Firefox 87+ (Firefox ESR is not supported.)
 - Safari 14+
 
-To set up biometrics on the browser extension or a mobile device:
+To set up biometrics on the browser extension:
 
 ### Chromium-based & Firefox
 

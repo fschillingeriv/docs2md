@@ -156,7 +156,7 @@ For example, if the URI `https://sub.domain.com/path/` uses starts with match de
 > [!WARNING] Don't use regex
 > Regular expressions are an advanced option and can be quite dangerous if used incorrectly. You should not use this option if you do not know exactly what you are doing.
 
-Selecting **Regular expression** will prompt Bitwarden to offer autofill when the detected resource matches a specified [regular expression](https://en.wikipedia.org/wiki/Regular_expression). Regular expressions are always case insensitive.
+Selecting **Regular expression** will prompt Bitwarden to offer autofill when the detected resource matches a specified [regular expression](https://en.wikipedia.org/wiki/Regular_expression). Regular expressions are always case insensitive. Bitwarden uses the browser's built-in JavaScript regex engine, which varies by browser. 
 
 #### Unsafe example
 

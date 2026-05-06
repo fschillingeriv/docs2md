@@ -4542,7 +4542,7 @@ The ability to unlock your vault with biometrics is supported on these browsers:
 - Firefox 87+ (Firefox ESR is not supported.)
 - Safari 14+
 
-To set up biometrics on the browser extension or a mobile device:
+To set up biometrics on the browser extension:
 
 ### Chromium-based & Firefox
 
@@ -18001,7 +18001,7 @@ You can launch a website directly from Bitwarden by selecting the [share-square]
 
 ### Unlock with biometrics
 
-Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't setup [fingerprint unlock](https://support.google.com/nexus/answer/6285273?hl=en) or [face unlock](https://support.google.com/pixelphone/answer/9517039?hl=en) on your Android device, you will need to do that first from the Android ⚙️ **Settings** app.
+Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't set up [fingerprint unlock](https://support.google.com/nexus/answer/6285273?hl=en) or [face unlock](https://support.google.com/pixelphone/answer/9517039?hl=en) on your Android device, you will need to do that first from the Android ⚙️ **Settings** app.
 
 1. In Bitwarden, tap the ⚙️ **Settings** tab located at the bottom of your screen.
 2. Tap **Account security**.
@@ -18014,7 +18014,7 @@ Once enabled, you will be able to open Bitwarden or autofill logins using just y
 
 ### Login using autofill
 
-Once you have setup [autofill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
+Once you have set up [autofill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
 
 1. Tap the email/username or password input box in the app or website.
 2. Depending on which auto-fill option your device uses, tap the available overlay:
@@ -18046,7 +18046,7 @@ You can launch a website directly from Bitwarden by selecting the [share-square]
 
 ### Unlock with biometrics
 
-Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't setup Touch ID or Face ID on your iOS device, you'll need to do that first from the iOS ⚙️ **Settings** app.
+Unlocking Bitwarden with biometrics allows for seamless access to your vault. If you haven't set up Touch ID or Face ID on your iOS device, you'll need to do that first from the iOS ⚙️ **Settings** app.
 
 1. In your Bitwarden iOS app, tap the ⚙️ **Settings** tab located at the bottom of your screen.
 2. Tap **Account security**:
@@ -18062,7 +18062,7 @@ Once enabled, you will be able to open Bitwarden or AutoFill logins using just y
 
 ### Login using AutoFill
 
-Once you've setup [Auto-fill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
+Once you've set up [Auto-fill](https://bitwarden.com/help/getting-started-mobile/#setup-auto-fill/) and [biometrics](https://bitwarden.com/help/getting-started-mobile/#unlock-with-biometrics/), logging into an app or website using Bitwarden is simple.
 
 1. Tap the email/username or password input box in the app or website.
 2. Above your keyboard, tap **Passwords**.
@@ -40059,7 +40059,7 @@ For example, if the URI `https://sub.domain.com/path/` uses starts with match de
 > [!WARNING] Don't use regex
 > Regular expressions are an advanced option and can be quite dangerous if used incorrectly. You should not use this option if you do not know exactly what you are doing.
 
-Selecting **Regular expression** will prompt Bitwarden to offer autofill when the detected resource matches a specified [regular expression](https://en.wikipedia.org/wiki/Regular_expression). Regular expressions are always case insensitive.
+Selecting **Regular expression** will prompt Bitwarden to offer autofill when the detected resource matches a specified [regular expression](https://en.wikipedia.org/wiki/Regular_expression). Regular expressions are always case insensitive. Bitwarden uses the browser's built-in JavaScript regex engine, which varies by browser. 
 
 #### Unsafe example
 
