@@ -33,9 +33,7 @@ Navigate to the ⚙️ **Settings**tab and select **About** → **About Bitwarde
 
 ### Desktop app
 
-On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden:**
-
-![Desktop app version](https://bitwarden.com/assets/6GOZ3TPKmrnBbol1FWMZSm/8a86c4556ec42170f65538c6598c534e/Screen_Shot_2022-09-29_at_2.52.13_PM.png)
+On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden.**
 
 ### Mobile app
 

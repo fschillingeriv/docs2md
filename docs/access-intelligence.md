@@ -25,7 +25,7 @@ The **Activity** tab of the Access Intelligence report provides a summary of cru
 ![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/70128699f9db718b6c99c5f0abcf241e/2026-04-08_09-29-26.png)
 *Access Intelligence, Activity tab*
 
-- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts.
+- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts. This data is downloadable from this page as a `.csv`.
 - **At-risk members**: Number of members with access to [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/) items for [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications.
 - **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
 - **Critical applications**: Proportion of [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications that are currently [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/).

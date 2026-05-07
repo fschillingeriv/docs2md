@@ -40,12 +40,13 @@ If you're using account switching, your mobile app will default to auto-fill cre
 
 To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
-![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/1062adaaed12e43a9c53e8e182453c96/2026-01-28_09-08-28.png)
+![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
 
 Selecting + **Add Account**will take you to the login screen:
 
-![Product: Desktop Account Switching - Light](https://bitwarden.com/assets/3gAo9PEjSXwgf4VY0Ew3TZ/a1ccd94f595bee3baf1220ec7c577b85/Desktop_Light.png)
+![Log in on desktop](https://bitwarden.com/assets/6Dvz7SzKBp90RDcROWgBhW/2407b5d1399cc1b8d0780b31dcbd95ee/2026-04-23_09-29-54.png)
+*Log in on desktop*
 
 > [!TIP] Account Switching across Servers
 > If you have accounts on multiple servers, for example if an employer who self-hosts Bitwarden has issued you a [families organization sponsorship](https://bitwarden.com/help/families-for-enterprise/), use the **server selector drop down**that is located on the login screen and select the **Self-hosted** menu to change the **Server URL**to the URL for the account.
@@ -64,7 +65,7 @@ Once you log in to your second account, you can quickly switch between them from
 > Some **Preferences**, however, are set for **All Accounts**:
 > 
 > 
-> ![Desktop settings for all accounts](https://bitwarden.com/assets/4tZUuuDPHnHQh5RNihx0TB/42bb8417406c45468ddcbb868a0d546f/2026-01-28_09-15-01.png)
+> ![Desktop settings for all accounts](https://bitwarden.com/assets/4tZUuuDPHnHQh5RNihx0TB/e20745ac076e7274ec0652692159c4e1/2026-04-23_09-34-58.png)
 > *Desktop settings for all accounts*
 
 ### Browser extension

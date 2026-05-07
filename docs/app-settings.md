@@ -84,7 +84,6 @@ The following sections list the settings available to Bitwarden Password Manager
 
  - **Show website icons and retrieve change password URLs**: Allow Bitwarden to fetch [website icons](https://bitwarden.com/help/website-icons/) and [change password URLs](https://bitwarden.com/help/change-at-risk-passwords/) for credentials stored in your vault.
  - **Show quick copy actions on Vault**: Display [buttons for copying a username or password](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/) for each item in the Vaults view.
- - **Click items in autofill suggestion to fill**: [Click an item in the Vaults view](https://bitwarden.com/help/auto-fill-browser/#click-items/) to autofill its credentials, rather than the Fill button.
 
 ## Mobile
 

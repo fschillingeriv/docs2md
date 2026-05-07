@@ -25,7 +25,7 @@ The Bitwarden desktop app will default to the your device's system language, how
 1. Open the desktop app's **Preferences** panel (on Windows, **File** → **Settings**) (on macOS, **Bitwarden** → **Preferences**).
 2. Scroll to bottom of the **App Settings** section and use the **Language** dropdown to select your language:
 
-![Desktop app language setting](https://bitwarden.com/assets/6NSZV46oKRi7Roeu7g2ATZ/4e16d7cfe375619777fcef7b22004328/2026-03-04_09-42-39.png)
+![Desktop app language setting](https://bitwarden.com/assets/6NSZV46oKRi7Roeu7g2ATZ/8a7cacb71d48d47bb11c7ef46ec88903/2026-04-23_11-12-59.png)
 *Desktop app language setting*
 
 ### Mobile

@@ -41,6 +41,23 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.4.1
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.2, Browser Extension 2026.4.0, Desktop 2026.4.0, Mobile 2026.4.1, and CLI 2026.4.0)*
+
+> [!NOTE] 2026 CLI key rotation.
+> **Security notice**: To resolve a bug with the local storage of API keys for the [Bitwarden CLI](https://bitwarden.com/help/cli/), the **next Bitwarden server release** following this one will automatically rotate the [personal API keys](https://bitwarden.com/help/personal-api-key/) of users of the Bitwarden CLI. If you use the Bitwarden CLI for any automated workflows, update those workflows with your new API keys immediately following that release in order to maintain continuity.
+
+#### Password Manager
+
+- ⭐ **Change master password on extensions and desktop**: You can now [change your master password](https://bitwarden.com/help/master-password/#change-master-password/) on browser extensions and desktop apps. To support future improvements, workflows that allowed a master password change via the CLI were removed.
+- ⭐ **Desktop UI updates**: The desktop app UI has been updated with visual improvements.
+- ⭐ **Click to autofill by default**: Within the browser extension, you can now click anywhere on an item within **Autofill suggestions** to insert your credentials. This update removes the **Fill** button and **Click items in autofill suggestions to fill** setting for a more streamlined appearance.
+- **Updated Clear Clipboard default**: The browser extension's [Clear Clipboard setting](https://bitwarden.com/help/auto-fill-browser/#set-up-autofill/) now defaults to five minutes, an extra precaution to help keep your credentials secure.
+- **mTLS support now on iOS:** Both the iOS and Android mobile apps now support uploading mTLS certificates for self-hosted servers that require client authentication. Upload your certificate [when you set your server URL](https://bitwarden.com/help/change-client-environment/#tab-mobile-app-4dQ4hW1QAwVBuReXk2Txx0/).
+- **Attachment status loading bar**: Uploading an attachment on the desktop app and browser extension will display an upload status bar.
+- **Keeper JSON importer**: You can now [import data from Keeper](https://bitwarden.com/help/import-from-keeper/) with a JSON file.
+
 ## 2026.4.0
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.0 and Mobile 2026.4.0.)*

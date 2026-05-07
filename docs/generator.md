@@ -48,13 +48,13 @@ When using inline, use the [generate] generate button to generate a new password
 
 Select **Generator** from the navigation menu:
 
-![Desktop App Password Generator](https://bitwarden.com/assets/6cFQ3iojZXLy1ZIdIXp6Zr/cfff50e193c533ef1bbc09c489693e9e/2026-01-28_10-59-21.png)
-*Desktop App Password Generator*
+![Desktop app password generator](https://bitwarden.com/assets/6cFQ3iojZXLy1ZIdIXp6Zr/bf4dfb3537ea709542432997aa4f6986/2026-04-23_10-54-46.png)
+*Desktop app password generator*
 
 You can also generate a strong password from the Add/Edit Item screen using the [generate] **Generate**button:
 
-![Desktop App Password Generator](https://bitwarden.com/assets/6VInVRr9tZBOndfe4VrpXf/b57e2bd43fad800bc010ebf767d26784/2026-01-28_11-06-53.png)
-*Desktop App Password Generator*
+![Desktop app password generator](https://bitwarden.com/assets/6VInVRr9tZBOndfe4VrpXf/789852c09b48e1ac121347d224816d09/2026-04-23_10-48-31-4.png)
+*Desktop app password generator*
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
@@ -149,13 +149,13 @@ You can also generate a username from the Edit screen using the [generate] **Gen
 
 Select **Generator** from the navigation menu:
 
-![Desktop App Username Generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/3f27f0390d85b8622e6b1baae611d3fc/2026-01-28_11-10-11.png)
-*Desktop App Username Generator*
+![Desktop app username generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/f2f447821533afc4dad139bc0059a05f/2026-04-23_10-55-35.png)
+*Desktop app username generator*
 
 You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
 
-![Desktop App Username Generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/b40a5255fcef08a3d17c3bad13c34f16/2026-01-28_11-13-24.png)
-*Desktop App Username Generator*
+![Desktop app username generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/6f187f63e0cf89dcd4fa9b4fb2866ad5/2026-04-23_10-48-31-5.png)
+*Desktop app username generator*
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.

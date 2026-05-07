@@ -34,7 +34,7 @@ Create a new SSH key using the Bitwarden desktop app, web app, or browser extens
 
 1. Select the **New** button and choose **SSH key** as the item type:
 
-![Create new SSH key on desktop](https://bitwarden.com/assets/1XYC3HwXOTMAPvyW1GS3Mk/5c7833241844eded5fa119d44d6efebd/new-ssh.png)
+![Create new SSH key on desktop](https://bitwarden.com/assets/1XYC3HwXOTMAPvyW1GS3Mk/1301eaf741b5867a33ba1b679e5a2e38/2026-04-23_12-36-06.png)
 *Create new SSH key on desktop*
 
 > [!NOTE] Create SSH key only ED25519
@@ -54,7 +54,7 @@ To add a new shared SSH key to the organization vault:
 2. Using the **Owner** dropdown, choose the organization you want this item to be owned by.
 3. Using the **Collections** dropdown, choose the collection(s) to share this item with.
 
-![Share an SSH key](https://bitwarden.com/assets/1YnrhzwCw78KuFsArEioOO/b7db01ff5dbd209ebe30f6454275ba41/Share-ssh.png)
+![Share an SSH key](https://bitwarden.com/assets/1YnrhzwCw78KuFsArEioOO/76dceaa53917a8078b1e96f0fcbb5f65/2026-04-23_12-36-17.png)
 *Share an SSH key*
 
 > [!NOTE] SSH key sharing best practices

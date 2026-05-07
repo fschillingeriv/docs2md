@@ -19,7 +19,7 @@ Within the **Settings** → **Autofill** menu, some options apply to all or most
 
 - For best performance, check **Make Bitwarden your default password manager** and [deactivate your browser's password manager](https://bitwarden.com/help/disable-browser-autofill/). This prevents the browser's password tool from interfering with the Bitwarden autofill.
 - If you do not want a TOTP to be automatically copied when autofill is activated, uncheck [**Copy TOTP automatically**](https://bitwarden.com/help/auto-fill-browser/#totp-autofill/).
-- From the **Clear clipboard** dropdown menu, select your preferred interval to control how long copied values from your vault remain available.
+- From the **Clear clipboard** dropdown menu, select your preferred interval to control how long copied values from your vault remain available. The default is five minutes.
 - Choose your**Default URI match detection**, the logic that Bitwarden uses to pair the website to your saved credential. The default, unless [specified by your organization](https://bitwarden.com/help/policies/#default-uri-match-detection/), is **Base domain**.
 - Select and add [**Blocked domains**](https://bitwarden.com/help/blocking-uris/) to prevent autofilling on specific websites.
 
@@ -34,55 +34,46 @@ Select the [shield] **Bitwarden extension badge** to open your vault, and the ma
 
 To find an item, select the 🎚️ **Filters icon** to open and apply filters to the **Autofill suggestions** and **All items** results:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
-*Browser extension filters and suggestions*
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
+*Browser extension filters*
 
-### Fill button
+### Click item from Autofill suggestions
 
-To autofill a login:
+To autofill an item that appears within the top **Autofill suggestions** section:
 
 1. When on the website's login page, open the Bitwarden browser extension.
 2. Go to the **Vault** tab.
-3. Select **Fill** next to the login to enter. It will likely be at the top in the **Autofill suggestions** section:
+3. If the item is listed in the **Autofill suggestions** section, click anywhere on the item to autofill your credentials:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
-Selecting the **Fill**button will enter the credential to the detected input fields. In cases where a web page or service has multiple items with relevant URIs, Bitwarden will always autofill the last-used login.
+This will enter your saved details into the detected input fields. In cases where a web page or service has multiple items with relevant URIs, Bitwarden will always autofill the last-used login.
 
 > [!NOTE] Autofill on untrusted iframes and mismatched SSL
 > You may receive a warning before autofilling if the targeted fields are in an [untrusted iframe](https://bitwarden.com/help/auto-fill-browser/#autofill-in-iframes/) or the current site uses HTTP but the [item's saved URI](https://bitwarden.com/help/uri-match-detection/) requires HTTPS.
+
+If you want to open an item when it's located within **Autofill suggestions**, select the⋮ **Menu icon** → **View**.
 
 ### Copy credentials
 
 You can also select the [clone] **Copy icon** next to an item. A menu will appear where you select **Copy username** or **Copy password**:
 
-![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/5c5fa1150e5e4f4ded19baf0afecfa6e/Standard_Copy_icon.png)
+![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/d1b1f78084ed20940ec76fc397b25ae8/Standard_copy_icon.png)
 *Standard copy icon*
 
 Alternatively, you can add three quick-copy action buttons next to items to specifically copy your username, password, or verification code to the clipboard:
 
-![Quick copy actions](https://bitwarden.com/assets/5w7lobEk81aOGfLKFjRp2e/d37711426641f91deb9ea28715901fb0/Quick_copy_icons.png)
+![Quick copy actions](https://bitwarden.com/assets/5w7lobEk81aOGfLKFjRp2e/301afdc4fffc7878b1b0baacc58e788b/Quick_copy_icons.png)
 *Quick copy actions*
 
 This option is off by default. To turn it on, go to **Settings** → **Appearance** and toggle on **Show quick copy actions on Vault**.
-
-### Click items
-
-Alternatively, you can set up the browser extension to autofill when you click anywhere on an item, as long as it appears in the **Autofill suggestions** section. When this option is used, the **Fill** button is not present:
-
-![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/b3698262ce7c19baeda6afc87c485167/2025-01-02_11-14-19.png)
-*Click item to autofill*
-
-To activate this method, go to **Settings** → **Appearance** and toggle **Click items in autofill suggestion to fill** on.
-
-If you want to open an item within the browser extension when this option is turned on, select the⋮ **Menu icon** → **View**.
 
 ### View Login
 
 When the browser is open to a saved URI, click on its corresponding login item in the extension to open the **View Login** page. Then select **Autofill** to enter your information on that page:
 
-![Autofill on View Login](https://bitwarden.com/assets/Y4VkZTrM140OgvjZe5lhc/f1bfffb355ce24ec915283e015fba176/Autofill_on_View_Login.png)
+![Autofill on View Login](https://bitwarden.com/assets/Y4VkZTrM140OgvjZe5lhc/a2f9c0003aec18d74b26581c57768e96/Autofill_on_View_Login.png)
 *Autofill on View Login*
 
 If you select **Autofill** and the website you're on does not match the login item's saved URI, you have the choice to **Autofill and add this website** to the login item or use **Autofill without adding the website** to your vault. 
@@ -246,7 +237,7 @@ Browser extensions will quietly disable [autofill on page load](https://bitwarde
 
 ### TOTP autofill
 
-If you use the [integrated authenticator](https://bitwarden.com/help/integrated-authenticator/), the browser extension will autofill your TOTP code provided that you're using the context menu, keyboard shortcuts, or manual autofill (using the **Fill** button for items without a saved URI). You may also use the inline autofill menu for TOTP codes. Browser extensions **will not autofill your TOTP code if you're using autofill on page load**.
+If you use the [integrated authenticator](https://bitwarden.com/help/integrated-authenticator/), the browser extension will autofill your TOTP code provided that you're using the context menu, keyboard shortcuts or manual autofill. You may also use the inline autofill menu for TOTP codes. Browser extensions **will not autofill your TOTP code if you're using autofill on page load**.
 
 By default, your TOTP will also be copied to the clipboard when a login is autofilled. This is the recommended workflow if you're using autofill on page load.
 

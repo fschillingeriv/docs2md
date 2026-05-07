@@ -71,4 +71,5 @@ Any option will work, though. Authenticate with a lower-preference method by sel
 
 ### Desktop
 
-![Use another two-step login method](https://bitwarden.com/assets/36novNT7xJ8ZJSoG66MQXg/774092e3a3361e3a92d3bd84786b260e/setup-two-step-login-1.png)
+![Use another two-step method on desktop](https://bitwarden.com/assets/36novNT7xJ8ZJSoG66MQXg/636ac40e844fb7b32c37ffeac8932b36/2026-04-23_09-47-21.png)
+*Use another two-step method on desktop*

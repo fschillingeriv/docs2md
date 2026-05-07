@@ -31,7 +31,7 @@ Select an item and open the Edit screen. Select the **Favorite** checkbox and **
 
 On the Add Item or Edit Item screen, check the **Favorite** checkbox and **Save** the item:
 
-![Favorite an item](https://bitwarden.com/assets/2BtbpzNSnydUYBu92j1bCH/9ad9e283584adb0b67be65b3f30e23eb/2026-01-28_10-24-52.png)
+![Favorite an item](https://bitwarden.com/assets/2BtbpzNSnydUYBu92j1bCH/12674ca7b80eaa8d327e5eb88175665d/2026-04-23_10-48-31-1.png)
 *Favorite an item*
 
 ### Mobile

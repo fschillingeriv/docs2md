@@ -109,12 +109,12 @@ Complete the following fields in the **SAML identity provider configuration** se
 | Want Authentication Requests Signed | Whether Keycloak expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you're done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Additional Keycloak settings
 

@@ -37,15 +37,15 @@ Now that you have saved a new login, let's improve its security by replacing you
 
 1. In your web browser, login to the account with your existing username and password. We're going to be replacing your existing password with a stronger one, but this is a great opportunity to practice autofill!
 
-To autofill, open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the **Fill** button for the suggested item:
+To autofill, open the Bitwarden browser extension while you're on the website's login page. If the item is listed within the **Autofill suggestions** section on the 🔒 **Vault**view, click on the item to autofill it:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 2. Once logged in, find where you can change your password.
-3. On the website's change password form, enter your **Current Password**, which you can copy and paste from Bitwarden using the [clone] **Copy**icon:
+3. On the website's change password form, enter your **Current Password**, which you can copy and paste from Bitwarden using the [clone] **Copy icon**:
 
-![Copy a password](https://bitwarden.com/assets/40l7cU1a0jzaTNUJXd5jPD/97b9ed67c0b255384ce84fa53fad2015/screenshot_2.png)
-*Copy a password*
+![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/d1b1f78084ed20940ec76fc397b25ae8/Standard_copy_icon.png)
+*Standard copy icon*
 4. Once your old password is filled in, open the login item in Bitwarden and select **Edit**.
 5. In the **Password** box, select [generate] **Generate**and tweak your password settings to your liking. You can use to [generate] icon until you get a password you like and, once you do, select **Use this password**. Moving from `Fido1234` to `X@Ln@x9J@&u@5n##B` can stop a hacker in their tracks.
 6. Select **Save**.
@@ -112,15 +112,15 @@ Most web browsers will automatically save your passwords by default, but experts
 
 ### Autofill a login
 
-There are lots of ways to autofill credentials with Bitwarden browser extensions! The basic method is to open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the **Fill** button for the suggested item:
+There are lots of ways to autofill credentials with Bitwarden browser extensions! The basic method is to open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the suggested item for your login details to be autofilled:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
 Note that, when you have logins saved for a website you're trying to log in to, Bitwarden browser extensions will overlay a notification bubble reporting the number of logins you have for that website. Those items will appear at the top of your **Autofill suggestions.** You can filter what will appear in the suggestions and what's displayed in the **All items** list using the filter dropdown menus, which can be shown or hidden using the 🎚️ button:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
-*Browser extension filters and suggestions*
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
+*Browser extension filters*
 
 There are plenty of other methods and ways of customizing autofill from your browser extension, including [context menus and keyboard shortcuts](https://bitwarden.com/help/auto-fill-browser/). Learn more.
 

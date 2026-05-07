@@ -89,7 +89,7 @@ The single sign-on screen separates configuration into two sections:
 | Sign authentication requests | Check this checkbox if your IdP should expect SAML requests from Bitwarden to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 ### SAML attributes & claims
 

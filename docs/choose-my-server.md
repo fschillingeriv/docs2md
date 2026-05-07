@@ -30,4 +30,5 @@ To choose which server you're logging into or creating an account on, use the **
 
 ### Desktop app
 
-![Region selector on desktop apps](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/43aeb8ee7de20a3cc0156fbf2c766432/choose-my-service-1.png)
+![Region selector on desktop](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/e5c40a136a11ee48c5e74a068bda2405/2026-04-23_09-17-05.png)
+*Region selector on desktop*

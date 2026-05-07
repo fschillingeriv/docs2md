@@ -64,7 +64,7 @@ Do you have multiple Bitwarden accounts, perhaps one for personal use and one fo
 
 To login to an additional account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
-![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/1062adaaed12e43a9c53e8e182453c96/2026-01-28_09-08-28.png)
+![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
 
 Once you log in to your second account, you can quickly swap between them from the same menu, which will also show the current status of each account's vault (*locked *or *unlocked*). If you log out of one of these accounts, it will be removed from this list.

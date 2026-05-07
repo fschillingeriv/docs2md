@@ -19,12 +19,13 @@ Master passwords made after the [2023.3.0 release](https://bitwarden.com/help/re
 
 ## Change master password
 
-If you know your current master password, you can update it from the web vault:
+You can change your master password from the web app, browser extension, or desktop app. You'll need to know your current master password in order to do so:
 
-> [!TIP] If you don't know your master password.
-> If you do not know your current master password, [learn what to do](https://bitwarden.com/help/forgot-master-password/).
+### Web app
 
-1. In the web app, select the **Settings** → **Security** from the navigation:
+In the web app:
+
+1. Select **Settings** → **Security** from the navigation.
 2. Select the **Master password** tab:
 
 ![Master password settings](https://bitwarden.com/assets/2Svv0PwlH9i7SSK73dlv9A/e451afb190346e492110a7bf1bd3a518/Master_password_settings.png)
@@ -37,6 +38,39 @@ If you know your current master password, you can update it from the web vault:
 > [!WARNING] Rotate account encryption key.
 > Don't check the **rotate account's encryption key** box unless you fully understand the ramifications and required follow-up actions. [Learn more](https://bitwarden.com/help/account-encryption-key/).
 7. Select the **Change master password** button.
+
+Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
+
+### Browser extension
+
+In the browser extension:
+
+1. Open the **Settings** tab and select **Account security**.
+2. Scroll to the **Other options** section and select **Change master password**:
+
+![Change master password on browser extension](https://bitwarden.com/assets/13NQDBUne0d99ssQlhxnTy/5320be0c494c351f808db48db48105ba/2026-04-21_09-58-31.png)
+*Change master password on browser extension*
+3. Enter your **Current master password**.
+4. Enter and confirm your **New master password**.
+5. (Optional) **Enter a Master password hint** that will help you recall your password. When requested, the hint is sent to the account holder's email.
+6. (Optional) If you want to check your master password through [HIBP](https://haveibeenpwned.com/) before submitting it, check **Check known data breaches for the password** to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/). This will send a hash of your master password to HIBP and compare it to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
+7. Select the **Change master password** button.
+
+Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
+
+### Desktop app
+
+In the desktop app:
+
+1. From the menu bar, select **Account** → **Change master password**:
+
+![Change master password on desktop](https://bitwarden.com/assets/5X1HjOgjvRg0ewMD30zYaY/4d9dfb5f92429b3b42d5111e0b759ca5/2026-04-21_09-00-24.png)
+*Change master password on desktop*
+2. Enter your **Current master password**.
+3. Enter and confirm your **New master password**.
+4. (Optional) **Enter a Master password hint** that will help you recall your password. When requested, the hint is sent to the account holder's email.
+5. (Optional) If you want to check your master password through [HIBP](https://haveibeenpwned.com/) before submitting it, check **Check known data breaches for the password** to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/). This will send a hash of your master password to HIBP and compare it to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
+6. Select the **Change master password** button.
 
 Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
 

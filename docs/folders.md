@@ -33,14 +33,14 @@ Once created, you can rename or delete a folder at any time from the **Settings*
 
 ### Desktop
 
-To create a folder, select **File** → **New Folder** from the menu bar:
+To create a folder, select **New** → **Folder**:
 
-![Add a folder on desktop](https://bitwarden.com/assets/5aN4a0qkKkJDJSVAzTy3Ix/14cd1d0f480b018df722d6c07c1aeed7/2026-01-29_08-57-38.png)
-*Add a folder on desktop*
+![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/af2b2ef342350a68b000c405ee698ab4/2026-04-23_09-58-10.png)
+*Add an item*
 
-Once created, you can rename or delete a folder at any time using the hover-over [pencil] **Pencil** icon:
+Once created, you can rename or delete a folder at any time using the [pencil] **Pencil** icon:
 
-![Edit a folder on desktop](https://bitwarden.com/assets/6t2aoywIMdBPMuJktnhEqA/7e889e22ecb7ea15bd08eda9c11096b8/2026-01-29_09-05-29.png)
+![Edit a folder on desktop](https://bitwarden.com/assets/6t2aoywIMdBPMuJktnhEqA/53742fbe25b11095406c40ff6178d6c4/2026-04-23_10-46-29.png)
 *Edit a folder on desktop*
 
 ### Mobile
@@ -108,7 +108,7 @@ Open the vault item you want to move, select the **Edit** button, use the **Fold
 
 Open the vault item you want to move, select the **Folders** dropdown, and choose the folder to move the item to:
 
-![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/aa66bd79357757c4cff73ff531c459bb/2026-01-29_09-06-16.png)
+![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/85db2d1104337e5ebc6e4dd0e8b57f8a/2026-04-23_10-48-31.png)
 *Add an item to a folder*
 
 ### Mobile

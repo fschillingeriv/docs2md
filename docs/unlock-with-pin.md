@@ -69,7 +69,7 @@ To set up a PIN for your desktop app:
 1. open your Settings (on Windows or Linux, **File** → **Settings**) (on macOS, **Bitwarden** → **Settings**) and scroll to the **Security** section.
 2. Toggle the **Unlock with PIN** option on:
 
-![Unlock with PIN on desktop](https://bitwarden.com/assets/78q1ueLazPoYxUVCqPDjCC/1a614603978a9571eea9c2d33be28333/2026-01-28_09-38-16.png)
+![Unlock with PIN on desktop](https://bitwarden.com/assets/78q1ueLazPoYxUVCqPDjCC/ed73cc20db1533f3901d49349cebdbde/2026-04-23_09-37-30.png)
 *Unlock with PIN on desktop*
 3. When prompted, enter the PIN you want to use in the popup. Your PIN can be any combination of characters (a-z, 0-9, $, #, etc.).
 

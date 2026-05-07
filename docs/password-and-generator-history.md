@@ -40,7 +40,7 @@ Open the item and select **Password history**:
 
 Open the item and select **Password history**near the bottom of the window:
 
-![Password history on desktop](https://bitwarden.com/assets/lvf2rvKuNcJNUYzXOTI99/f739e51e3fdd72e21647b190a9b075c8/Password_history_on_desktop.png)
+![Password history on desktop](https://bitwarden.com/assets/lvf2rvKuNcJNUYzXOTI99/cef223bdb6cf8f575314705ed12766aa/2026-04-23_11-08-39.png)
 *Password history on desktop*
 
 ## Generator history

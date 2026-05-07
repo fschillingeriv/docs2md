@@ -88,8 +88,8 @@ To delete a Send from a browser extension, select the 🗑️ **Trash** icon nex
 
 To delete a Send from the desktop app, use the ⋮ options menu to select the 🗑️ **Delete** button:
 
-![Delete from a Desktop App ](https://bitwarden.com/assets/12eLcz2aoBkcDRGS3U1jzP/66e1b7625ac1290f2d110d0d4e7086c8/delete_send_desktop.png)
-*Delete from a Desktop App *
+![Send options on desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/fb20d049505d8a69dce6f39e4e4a9c4c/2026-04-23_11-49-34.png)
+*Send options on desktop*
 
 ### Mobile
 

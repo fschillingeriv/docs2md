@@ -289,7 +289,9 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-[Embedded content]
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+*SCIM provisioning*
+
 > [!TIP] Use SCIM Guides.
 > The following section covers some generic information that can be used to set up SCIM, however Bitwarden recommends using one of the integration documents for:
 > 
@@ -735,7 +737,7 @@ The **Activity** tab of the Access Intelligence report provides a summary of cru
 ![Access Intelligence, Activity tab](https://bitwarden.com/assets/4ors4hBI2rwbW0zvjb2W0U/70128699f9db718b6c99c5f0abcf241e/2026-04-08_09-29-26.png)
 *Access Intelligence, Activity tab*
 
-- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts.
+- **Risk over time**: Visualize how at-risk applications, passwords, and members have changed over time relative to absolute changes in application, password, and member counts. This data is downloadable from this page as a `.csv`.
 - **At-risk members**: Number of members with access to [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/) items for [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications.
 - **Password change progress**: Percentage completion of [dispatched password change requests](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/).
 - **Critical applications**: Proportion of [critical](https://bitwarden.com/help/access-intelligence/#marking-critical-applications/) applications that are currently [at-risk](https://bitwarden.com/help/access-intelligence/#determining-risk/).
@@ -1018,12 +1020,13 @@ If you're using account switching, your mobile app will default to auto-fill cre
 
 To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
-![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/1062adaaed12e43a9c53e8e182453c96/2026-01-28_09-08-28.png)
+![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
 
 Selecting + **Add Account**will take you to the login screen:
 
-![Product: Desktop Account Switching - Light](https://bitwarden.com/assets/3gAo9PEjSXwgf4VY0Ew3TZ/a1ccd94f595bee3baf1220ec7c577b85/Desktop_Light.png)
+![Log in on desktop](https://bitwarden.com/assets/6Dvz7SzKBp90RDcROWgBhW/2407b5d1399cc1b8d0780b31dcbd95ee/2026-04-23_09-29-54.png)
+*Log in on desktop*
 
 > [!TIP] Account Switching across Servers
 > If you have accounts on multiple servers, for example if an employer who self-hosts Bitwarden has issued you a [families organization sponsorship](https://bitwarden.com/help/families-for-enterprise/), use the **server selector drop down**that is located on the login screen and select the **Self-hosted** menu to change the **Server URL**to the URL for the account.
@@ -1042,7 +1045,7 @@ Once you log in to your second account, you can quickly switch between them from
 > Some **Preferences**, however, are set for **All Accounts**:
 > 
 > 
-> ![Desktop settings for all accounts](https://bitwarden.com/assets/4tZUuuDPHnHQh5RNihx0TB/42bb8417406c45468ddcbb868a0d546f/2026-01-28_09-15-01.png)
+> ![Desktop settings for all accounts](https://bitwarden.com/assets/4tZUuuDPHnHQh5RNihx0TB/e20745ac076e7274ec0652692159c4e1/2026-04-23_09-34-58.png)
 > *Desktop settings for all accounts*
 
 ### Browser extension
@@ -2161,7 +2164,6 @@ The following sections list the settings available to Bitwarden Password Manager
 
  - **Show website icons and retrieve change password URLs**: Allow Bitwarden to fetch [website icons](https://bitwarden.com/help/website-icons/) and [change password URLs](https://bitwarden.com/help/change-at-risk-passwords/) for credentials stored in your vault.
  - **Show quick copy actions on Vault**: Display [buttons for copying a username or password](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/) for each item in the Vaults view.
- - **Click items in autofill suggestion to fill**: [Click an item in the Vaults view](https://bitwarden.com/help/auto-fill-browser/#click-items/) to autofill its credentials, rather than the Fill button.
 
 ## Mobile
 
@@ -2986,7 +2988,7 @@ Within the **Settings** → **Autofill** menu, some options apply to all or most
 
 - For best performance, check **Make Bitwarden your default password manager** and [deactivate your browser's password manager](https://bitwarden.com/help/disable-browser-autofill/). This prevents the browser's password tool from interfering with the Bitwarden autofill.
 - If you do not want a TOTP to be automatically copied when autofill is activated, uncheck [**Copy TOTP automatically**](https://bitwarden.com/help/auto-fill-browser/#totp-autofill/).
-- From the **Clear clipboard** dropdown menu, select your preferred interval to control how long copied values from your vault remain available.
+- From the **Clear clipboard** dropdown menu, select your preferred interval to control how long copied values from your vault remain available. The default is five minutes.
 - Choose your**Default URI match detection**, the logic that Bitwarden uses to pair the website to your saved credential. The default, unless [specified by your organization](https://bitwarden.com/help/policies/#default-uri-match-detection/), is **Base domain**.
 - Select and add [**Blocked domains**](https://bitwarden.com/help/blocking-uris/) to prevent autofilling on specific websites.
 
@@ -3001,55 +3003,46 @@ Select the [shield] **Bitwarden extension badge** to open your vault, and the ma
 
 To find an item, select the 🎚️ **Filters icon** to open and apply filters to the **Autofill suggestions** and **All items** results:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
-*Browser extension filters and suggestions*
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
+*Browser extension filters*
 
-### Fill button
+### Click item from Autofill suggestions
 
-To autofill a login:
+To autofill an item that appears within the top **Autofill suggestions** section:
 
 1. When on the website's login page, open the Bitwarden browser extension.
 2. Go to the **Vault** tab.
-3. Select **Fill** next to the login to enter. It will likely be at the top in the **Autofill suggestions** section:
+3. If the item is listed in the **Autofill suggestions** section, click anywhere on the item to autofill your credentials:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
-Selecting the **Fill**button will enter the credential to the detected input fields. In cases where a web page or service has multiple items with relevant URIs, Bitwarden will always autofill the last-used login.
+This will enter your saved details into the detected input fields. In cases where a web page or service has multiple items with relevant URIs, Bitwarden will always autofill the last-used login.
 
 > [!NOTE] Autofill on untrusted iframes and mismatched SSL
 > You may receive a warning before autofilling if the targeted fields are in an [untrusted iframe](https://bitwarden.com/help/auto-fill-browser/#autofill-in-iframes/) or the current site uses HTTP but the [item's saved URI](https://bitwarden.com/help/uri-match-detection/) requires HTTPS.
+
+If you want to open an item when it's located within **Autofill suggestions**, select the⋮ **Menu icon** → **View**.
 
 ### Copy credentials
 
 You can also select the [clone] **Copy icon** next to an item. A menu will appear where you select **Copy username** or **Copy password**:
 
-![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/5c5fa1150e5e4f4ded19baf0afecfa6e/Standard_Copy_icon.png)
+![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/d1b1f78084ed20940ec76fc397b25ae8/Standard_copy_icon.png)
 *Standard copy icon*
 
 Alternatively, you can add three quick-copy action buttons next to items to specifically copy your username, password, or verification code to the clipboard:
 
-![Quick copy actions](https://bitwarden.com/assets/5w7lobEk81aOGfLKFjRp2e/d37711426641f91deb9ea28715901fb0/Quick_copy_icons.png)
+![Quick copy actions](https://bitwarden.com/assets/5w7lobEk81aOGfLKFjRp2e/301afdc4fffc7878b1b0baacc58e788b/Quick_copy_icons.png)
 *Quick copy actions*
 
 This option is off by default. To turn it on, go to **Settings** → **Appearance** and toggle on **Show quick copy actions on Vault**.
-
-### Click items
-
-Alternatively, you can set up the browser extension to autofill when you click anywhere on an item, as long as it appears in the **Autofill suggestions** section. When this option is used, the **Fill** button is not present:
-
-![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/b3698262ce7c19baeda6afc87c485167/2025-01-02_11-14-19.png)
-*Click item to autofill*
-
-To activate this method, go to **Settings** → **Appearance** and toggle **Click items in autofill suggestion to fill** on.
-
-If you want to open an item within the browser extension when this option is turned on, select the⋮ **Menu icon** → **View**.
 
 ### View Login
 
 When the browser is open to a saved URI, click on its corresponding login item in the extension to open the **View Login** page. Then select **Autofill** to enter your information on that page:
 
-![Autofill on View Login](https://bitwarden.com/assets/Y4VkZTrM140OgvjZe5lhc/f1bfffb355ce24ec915283e015fba176/Autofill_on_View_Login.png)
+![Autofill on View Login](https://bitwarden.com/assets/Y4VkZTrM140OgvjZe5lhc/a2f9c0003aec18d74b26581c57768e96/Autofill_on_View_Login.png)
 *Autofill on View Login*
 
 If you select **Autofill** and the website you're on does not match the login item's saved URI, you have the choice to **Autofill and add this website** to the login item or use **Autofill without adding the website** to your vault. 
@@ -3213,7 +3206,7 @@ Browser extensions will quietly disable [autofill on page load](https://bitwarde
 
 ### TOTP autofill
 
-If you use the [integrated authenticator](https://bitwarden.com/help/integrated-authenticator/), the browser extension will autofill your TOTP code provided that you're using the context menu, keyboard shortcuts, or manual autofill (using the **Fill** button for items without a saved URI). You may also use the inline autofill menu for TOTP codes. Browser extensions **will not autofill your TOTP code if you're using autofill on page load**.
+If you use the [integrated authenticator](https://bitwarden.com/help/integrated-authenticator/), the browser extension will autofill your TOTP code provided that you're using the context menu, keyboard shortcuts or manual autofill. You may also use the inline autofill menu for TOTP codes. Browser extensions **will not autofill your TOTP code if you're using autofill on page load**.
 
 By default, your TOTP will also be copied to the clipboard when a login is autofilled. This is the recommended workflow if you're using autofill on page load.
 
@@ -3236,7 +3229,7 @@ URL: https://bitwarden.com/help/auto-fill-card-id/
 ---
 # Autofill Cards & Identities
 
-Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/)! Some Bitwarden apps can autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more. For organization members, a policy may [prevent the use of card items](https://bitwarden.com/help/policies/#remove-card-item-type/) and therefore the ability to autofill them.
+Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). Some Bitwarden apps can autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more. For organization members, a policy may [prevent the use of card items](https://bitwarden.com/help/policies/#remove-card-item-type/) and, in turn, not offer the ability to autofill them.
 
 > [!NOTE] Support for auto-fill cards and identities.
 > Autofill of cards is currently available for browser extensions and Android. Autofill of identities is currently only available for browser extensions.
@@ -3246,12 +3239,12 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 > [!TIP] Android autofill card setup
 > On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
 
-You can add or remove cards from your autofill suggestions and from the inline autofill menu using four settings found in the **Settings** → **Autofill** menu:
+You can add or remove cards from your autofill suggestions and from the inline autofill menu using settings found in **Settings** → **Autofill**:
 
 - **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
-- **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
-- **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. These can be autofilled using the **Fill** button.
+- **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
+- **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
 
 ## Use card & identity autofill
 
@@ -3266,17 +3259,19 @@ To enable card and identity autofill using the inline autofill menu, turn on the
 Once on, your stored cards and identities will be listed when you click on a form. Select the card or identity you wish to use when filling out a form information:
 
 ![Inline Autofill Card](https://bitwarden.com/assets/2IZKkQJjPBvDgT3Z6IZMoR/2d00c6b6789b78addd486fd974720ddd/2024-08-13_13-10-20.png)
+*Inline Autofill Card*
 
 > [!NOTE] Save new card inline autofill
 > If you do not have a card or identity saved in your Bitwarden vault, you may select + **New Card**/ **New identity** from the inline menu after filling out the information to save the new item in your Bitwarden vault.
 
-### Using the Fill button
+### Using the browser extension's vault view
 
-To autofill a card or identity using the **Fill**button, turn on the **Show cards as Autofill suggestions on Vault view** and **Show identities as Autofill suggestions on Vault view** options as described in the previous section.
+To autofill a card or identity from the extension's vault, turn on the **Show cards as Autofill suggestions on Vault view** and **Show identities as Autofill suggestions on Vault view** options as described in the previous section.
 
-Once on, your cards and identities will be available in the **Autofill suggestions**section of the **Vault**view. Select the **Fill**button to autofill:
+Once on, your cards and identities will be available in the **Autofill suggestions**section of the **Vault**view. Click anywhere on the card or identity to autofill:
 
-![Fill Card and Identities](https://bitwarden.com/assets/78MbqVeoL6Juo7E5cMUUNh/57b31fd7fd315aa6334125bf168fb67d/Card___identity_fill.png)
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
 The browser extension will find any fields on the web page that map to card or identity information and autofill them.
 
@@ -3288,6 +3283,7 @@ The browser extension will find any fields on the web page that map to card or i
 Without opening your browser extension, you can autofill cards and identities by right-clicking on an input field and using the **Bitwarden** → **Autofill** option. If your vault is locked when you attempt this, a window will open prompting you to unlock. Once unlocked, the browser extension will automatically proceed with autofilling your information.
 
 ![Browser Extension Context Menu](https://bitwarden.com/assets/6GKKvIe7GwwOBtp9gmh862/4d39f59a8a862bb83d53e50f9f68d107/2024-12-03_09-12-06.png)
+*Browser Extension Context Menu*
 
 ### Using keyboard shortcuts
 
@@ -3307,7 +3303,7 @@ URL: https://bitwarden.com/help/auto-fill-custom-fields/
 ---
 # Autofill Custom Fields
 
-Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/)! Bitwarden browser extensions can autofill [custom fields](https://bitwarden.com/help/custom-fields/) to simplify filling in security questions, PINS, and more.
+Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). Bitwarden browser extensions can autofill [custom fields](https://bitwarden.com/help/custom-fields/) to simplify filling in security questions, PINS, and more.
 
 Additionally, if your browser extension is having issues autofilling usernames and passwords for a particular site, using [linked custom fields](https://bitwarden.com/help/auto-fill-custom-fields/#using-linked-custom-fields/) can force an autofill.
 
@@ -3317,9 +3313,10 @@ Additionally, if your browser extension is having issues autofilling usernames a
 To autofill custom fields:
 
 1. Open the browser extension to the **Vault** view. This view automatically detects the website (for example, `myverizon.com`) of the page displayed in the open tab and surfaces any logins with corresponding URIs.
-2. Select the **Fill** button on item that contains the custom field you want to autofill:
+2. If an item appears in **Autofill suggestions**, click anywhere on the item that contains the custom field to autofill:
 
-![Item with a custom field ](https://bitwarden.com/assets/4ExHyb45ZapKssCpRl6Uro/b8e686e8a58e0ed24f8aa58dd746253e/2024-12-03_09-55-22.png)
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
 The browser extension will find any fields that match the [custom field name](https://bitwarden.com/help/custom-fields/#custom-field-names/) and autofill that field's value.
 
@@ -3333,7 +3330,9 @@ Linked custom fields can be used to solve issues where your browser extension ca
 > [!TIP] Use context menu for custom field name.
 > You can get the right value by right-clicking the form element and using the **Copy Custom Field Name** context menu option:
 > 
+> 
 > ![Copy custom field name](https://bitwarden.com/assets/5nnPLqyzgAhDCinQNB0uUC/a721194f39f0a8fa919066d73ff9e2c8/2024-10-29_10-50-34.png)
+> *Copy custom field name*
 3. Select **Add**.
 4. Select **Username** or **Password** for the field's value depending on which credential you are having trouble autofilling. In many cases, you'll need to create a linked custom field for each.
 5. **Save** the changes to the vault item.
@@ -7562,7 +7561,8 @@ To connect a mobile app to your self-hosted server:
 
 ![Server selection on mobile](https://bitwarden.com/assets/0mBtygWpIfx8MLtcPwxwD/0041c5a129a88b9fb5dd021a07a6da4e/2025-01-22_10-17-39.png)
 2. In the **Server URL**field, enter the domain name for your server with `https://` (for example, `https://my.bitwarden.domain.com`).
-3. Select **Save**.
+3. If your self-hosted server requires it, upload a certificate.
+4. Select **Save**.
 
 > [!TIP] Advanced Client-Server Specification
 > Users with unique setups can specify the URL of each service independently in the **Custom Environment**section.
@@ -7571,9 +7571,10 @@ To connect a mobile app to your self-hosted server:
 
 [Each account](https://bitwarden.com/help/account-switching/) that's logged in to your desktop app can be connected to a different server. To connect an account to your self-hosted server:
 
-1. On the login or registration screen, select the **Logging in on**dropdown and choose the **Self-hosted**option.
+1. On the login or registration screen, select the **Accessing**dropdown and choose the **Self-hosted**option.
 
-![Server selection desktop](https://bitwarden.com/assets/4KVc44Osl3K38W0dxdCl3M/53ad13b8f456e8d92594c29c54091bd0/desktop.png)
+![Region selector on desktop](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/e5c40a136a11ee48c5e74a068bda2405/2026-04-23_09-17-05.png)
+*Region selector on desktop*
 2. In the **Server URL**field, enter the domain name for your server with `https://` (for example, `https://my.bitwarden.domain.com`).
 3. Select **Save**.
 
@@ -7637,7 +7638,7 @@ To change the theme of your desktop app:
 1. Open the desktop app's **Preferences** panel (on Windows, **File** → **Settings**) (on macOS, **Bitwarden** → Preferences).
 2. Scroll to the **App Settings** section and use the **Theme** dropdown to select your favorite theme!
 
-![Change theme ](https://bitwarden.com/assets/7dOzSglXr4rlM97zKoqptq/5c07e025316518564fd77207944fd546/2026-01-28_11-16-18.png)
+![Change theme ](https://bitwarden.com/assets/7dOzSglXr4rlM97zKoqptq/2737fefeb63bc9fd09e863f8d3690ed1/2026-04-23_11-12-59.png)
 *Change theme *
 
 > [!TIP] Theme + Account Switching
@@ -7686,7 +7687,8 @@ To choose which server you're logging into or creating an account on, use the **
 
 ### Desktop app
 
-![Region selector on desktop apps](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/43aeb8ee7de20a3cc0156fbf2c766432/choose-my-service-1.png)
+![Region selector on desktop](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/e5c40a136a11ee48c5e74a068bda2405/2026-04-23_09-17-05.png)
+*Region selector on desktop*
 ---
 URL: https://bitwarden.com/help/claimed-accounts/
 ---
@@ -10258,7 +10260,7 @@ The single sign-on screen separates configuration into two sections:
 | Sign authentication requests | Check this checkbox if your IdP should expect SAML requests from Bitwarden to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 ### SAML attributes & claims
 
@@ -12837,7 +12839,7 @@ To create a new Send from a desktop app:
 
 2. Select the **New Send** button:
 
-![Send view in a Desktop App ](https://bitwarden.com/assets/2O01p5FyMpUhlhi5bAq7mH/0c154046969e8028d95fb4bdbaf12b93/2026-02-26_15-40-37.png)
+![Send view in a Desktop App ](https://bitwarden.com/assets/2O01p5FyMpUhlhi5bAq7mH/3135d39e953c52bb0d843ee6afeb1121/2026-04-23_11-48-19.png)
 *Send view in a Desktop App *
 
 3. In the right-most column, specify the following:
@@ -12867,8 +12869,8 @@ Once you are happy your Send, select **Save** to finish.
 
 Once your Send is created, select the ⋮ and then **Copy Send link**to copy the generated link to your clipboard:
 
-![Copy send link desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/aef61f80bb7426874c937d07eaa58b85/2026-02-25_11-40-24.png)
-*Copy send link desktop*
+![Send options on desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/fb20d049505d8a69dce6f39e4e4a9c4c/2026-04-23_11-49-34.png)
+*Send options on desktop*
 
 Once copied, share your Send link with intended recipients however you prefer. Sends are end-to-end encrypted, so you don't need to worry about exposing any data to whatever intermediary communications services you use.
 
@@ -16826,7 +16828,7 @@ Select an item and open the Edit screen. Select the **Favorite** checkbox and **
 
 On the Add Item or Edit Item screen, check the **Favorite** checkbox and **Save** the item:
 
-![Favorite an item](https://bitwarden.com/assets/2BtbpzNSnydUYBu92j1bCH/9ad9e283584adb0b67be65b3f30e23eb/2026-01-28_10-24-52.png)
+![Favorite an item](https://bitwarden.com/assets/2BtbpzNSnydUYBu92j1bCH/12674ca7b80eaa8d327e5eb88175665d/2026-04-23_10-48-31-1.png)
 *Favorite an item*
 
 ### Mobile
@@ -16854,7 +16856,7 @@ Either:
 
 Use the **Vault**, **Collection**, **Folder**, or **Type** selectors at the top of the 🔒 **Vault** tab. You toggle the visibility of the filter dropdown menus with the 🎚️ button:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
 
 ### Mobile
 
@@ -16864,9 +16866,9 @@ Choose a vault by selecting the **Vault**menu button (⋯ ) on the **Vaults**tab
 
 ### Desktop
 
-Select a vault from the left-most column (in the following screenshot, **My Vault**or **My Organization**):
+Select a filter criterion from the left-most column:
 
-![Filtering on desktop](https://bitwarden.com/assets/2Lng0L2TRQ177CaU8EUQ1m/fc80b9452396db84c9f1abd405275ddb/2026-01-28_10-20-04.png)
+![Filtering on desktop](https://bitwarden.com/assets/2Lng0L2TRQ177CaU8EUQ1m/650d82f70422611353ce70a347a99c72/2026-04-23_10-14-43.png)
 *Filtering on desktop*
 
 ### CLI
@@ -17071,14 +17073,14 @@ Once created, you can rename or delete a folder at any time from the **Settings*
 
 ### Desktop
 
-To create a folder, select **File** → **New Folder** from the menu bar:
+To create a folder, select **New** → **Folder**:
 
-![Add a folder on desktop](https://bitwarden.com/assets/5aN4a0qkKkJDJSVAzTy3Ix/14cd1d0f480b018df722d6c07c1aeed7/2026-01-29_08-57-38.png)
-*Add a folder on desktop*
+![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/af2b2ef342350a68b000c405ee698ab4/2026-04-23_09-58-10.png)
+*Add an item*
 
-Once created, you can rename or delete a folder at any time using the hover-over [pencil] **Pencil** icon:
+Once created, you can rename or delete a folder at any time using the [pencil] **Pencil** icon:
 
-![Edit a folder on desktop](https://bitwarden.com/assets/6t2aoywIMdBPMuJktnhEqA/7e889e22ecb7ea15bd08eda9c11096b8/2026-01-29_09-05-29.png)
+![Edit a folder on desktop](https://bitwarden.com/assets/6t2aoywIMdBPMuJktnhEqA/53742fbe25b11095406c40ff6178d6c4/2026-04-23_10-46-29.png)
 *Edit a folder on desktop*
 
 ### Mobile
@@ -17146,7 +17148,7 @@ Open the vault item you want to move, select the **Edit** button, use the **Fold
 
 Open the vault item you want to move, select the **Folders** dropdown, and choose the folder to move the item to:
 
-![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/aa66bd79357757c4cff73ff531c459bb/2026-01-29_09-06-16.png)
+![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/85db2d1104337e5ebc6e4dd0e8b57f8a/2026-04-23_10-48-31.png)
 *Add an item to a folder*
 
 ### Mobile
@@ -17287,13 +17289,13 @@ When using inline, use the [generate] generate button to generate a new password
 
 Select **Generator** from the navigation menu:
 
-![Desktop App Password Generator](https://bitwarden.com/assets/6cFQ3iojZXLy1ZIdIXp6Zr/cfff50e193c533ef1bbc09c489693e9e/2026-01-28_10-59-21.png)
-*Desktop App Password Generator*
+![Desktop app password generator](https://bitwarden.com/assets/6cFQ3iojZXLy1ZIdIXp6Zr/bf4dfb3537ea709542432997aa4f6986/2026-04-23_10-54-46.png)
+*Desktop app password generator*
 
 You can also generate a strong password from the Add/Edit Item screen using the [generate] **Generate**button:
 
-![Desktop App Password Generator](https://bitwarden.com/assets/6VInVRr9tZBOndfe4VrpXf/b57e2bd43fad800bc010ebf767d26784/2026-01-28_11-06-53.png)
-*Desktop App Password Generator*
+![Desktop app password generator](https://bitwarden.com/assets/6VInVRr9tZBOndfe4VrpXf/789852c09b48e1ac121347d224816d09/2026-04-23_10-48-31-4.png)
+*Desktop app password generator*
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
@@ -17388,13 +17390,13 @@ You can also generate a username from the Edit screen using the [generate] **Gen
 
 Select **Generator** from the navigation menu:
 
-![Desktop App Username Generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/3f27f0390d85b8622e6b1baae611d3fc/2026-01-28_11-10-11.png)
-*Desktop App Username Generator*
+![Desktop app username generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/f2f447821533afc4dad139bc0059a05f/2026-04-23_10-55-35.png)
+*Desktop app username generator*
 
 You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
 
-![Desktop App Username Generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/b40a5255fcef08a3d17c3bad13c34f16/2026-01-28_11-13-24.png)
-*Desktop App Username Generator*
+![Desktop app username generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/6f187f63e0cf89dcd4fa9b4fb2866ad5/2026-04-23_10-48-31-5.png)
+*Desktop app username generator*
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
@@ -17601,15 +17603,15 @@ Now that you have saved a new login, let's improve its security by replacing you
 
 1. In your web browser, login to the account with your existing username and password. We're going to be replacing your existing password with a stronger one, but this is a great opportunity to practice autofill!
 
-To autofill, open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the **Fill** button for the suggested item:
+To autofill, open the Bitwarden browser extension while you're on the website's login page. If the item is listed within the **Autofill suggestions** section on the 🔒 **Vault**view, click on the item to autofill it:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 2. Once logged in, find where you can change your password.
-3. On the website's change password form, enter your **Current Password**, which you can copy and paste from Bitwarden using the [clone] **Copy**icon:
+3. On the website's change password form, enter your **Current Password**, which you can copy and paste from Bitwarden using the [clone] **Copy icon**:
 
-![Copy a password](https://bitwarden.com/assets/40l7cU1a0jzaTNUJXd5jPD/97b9ed67c0b255384ce84fa53fad2015/screenshot_2.png)
-*Copy a password*
+![Standard copy icon](https://bitwarden.com/assets/7y8WE9sWACC2KLASo9yASw/d1b1f78084ed20940ec76fc397b25ae8/Standard_copy_icon.png)
+*Standard copy icon*
 4. Once your old password is filled in, open the login item in Bitwarden and select **Edit**.
 5. In the **Password** box, select [generate] **Generate**and tweak your password settings to your liking. You can use to [generate] icon until you get a password you like and, once you do, select **Use this password**. Moving from `Fido1234` to `X@Ln@x9J@&u@5n##B` can stop a hacker in their tracks.
 6. Select **Save**.
@@ -17676,15 +17678,15 @@ Most web browsers will automatically save your passwords by default, but experts
 
 ### Autofill a login
 
-There are lots of ways to autofill credentials with Bitwarden browser extensions! The basic method is to open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the **Fill** button for the suggested item:
+There are lots of ways to autofill credentials with Bitwarden browser extensions! The basic method is to open the Bitwarden browser extension while you're on the website's login page and, in the 🔒 **Vault**tab, select the suggested item for your login details to be autofilled:
 
-![Autofill via browser extension](https://bitwarden.com/assets/1pamjhdWn7obh8UBxXcIPF/1841242fa5299a780d53f3ae70e546b3/screenshot_5.png)
-*Autofill via browser extension*
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
 Note that, when you have logins saved for a website you're trying to log in to, Bitwarden browser extensions will overlay a notification bubble reporting the number of logins you have for that website. Those items will appear at the top of your **Autofill suggestions.** You can filter what will appear in the suggestions and what's displayed in the **All items** list using the filter dropdown menus, which can be shown or hidden using the 🎚️ button:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
-*Browser extension filters and suggestions*
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
+*Browser extension filters*
 
 There are plenty of other methods and ways of customizing autofill from your browser extension, including [context menus and keyboard shortcuts](https://bitwarden.com/help/auto-fill-browser/). Learn more.
 
@@ -17797,7 +17799,7 @@ Do you have multiple Bitwarden accounts, perhaps one for personal use and one fo
 
 To login to an additional account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
-![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/1062adaaed12e43a9c53e8e182453c96/2026-01-28_09-08-28.png)
+![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
 
 Once you log in to your second account, you can quickly swap between them from the same menu, which will also show the current status of each account's vault (*locked *or *unlocked*). If you log out of one of these accounts, it will be removed from this list.
@@ -19290,8 +19292,8 @@ Individual vaults can be purged from the **Settings** → **My account** page. O
 - [Chrome (csv)](https://bitwarden.com/help/import-from-chrome/)
 - Clipperz (html)
 - Codebook (csv)
-- Dashlane (json)
-- Dashlane (csv)
+- [Dashlane (json)](https://bitwarden.com/help/import-from-dashlane/)
+- [Dashlane (csv)](https://bitwarden.com/help/import-from-dashlane/)
 - Edge (csv)
 - Encryptr (csv)
 - Enpass (csv)
@@ -19302,7 +19304,8 @@ Individual vaults can be purged from the **Settings** → **My account** page. O
 - Kaspersky Password Manager (txt)
 - KeePass 2 (xml)
 - KeePassX (csv)
-- Keeper (csv)
+- [Keeper (csv)](https://bitwarden.com/help/import-from-keeper/)
+- [Keeper (json)](https://bitwarden.com/help/import-from-keeper/)
 - [LastPass (csv)](https://bitwarden.com/help/import-from-lastpass/)
 - LogMeOnce (csv)
 - Meldium (csv)
@@ -19930,17 +19933,21 @@ URL: https://bitwarden.com/help/import-from-keeper/
 ---
 # Import from Keeper
 
-Use this article for help exporting data from Keeper and importing into Bitwarden. Bitwarden supports import of Keeper data that is exported as a `.csv` file.
+Use this article for help exporting data from Keeper and importing into Bitwarden. Bitwarden supports import of Keeper data that is exported as a `.csv` or `.json` file.
 
 ## Export from Keeper
 
 To export data from the Keeper web app:
 
-1. Select your account email in the top corner of the web app and select Settings from the dropdown:
+1. Select your account email in the top corner of the web app and select **Settings** from the dropdown:
 
 ![Export from Keeper](https://bitwarden.com/assets/37IrIjwTCvp8aeNOYgVINt/b5520f293391b24fa825eaa2e944788b/2025-01-06_09-30-34.png)
-2. From the Settings pop out, select **Export**.
-3. Choose the **CSV**export file type, and select **Export**. You'll be required to confirm your master password in order to finish the export.
+*Export from Keeper*
+2. Select **Export** from the pop-up window.
+3. Choose the **CSV** or **JSON**export file type.
+4. Select **Export**.
+5. Enter your master password.
+6. Select **Export Now**.
 
 ## Import to Bitwarden
 
@@ -23801,7 +23808,7 @@ The Bitwarden desktop app will default to the your device's system language, how
 1. Open the desktop app's **Preferences** panel (on Windows, **File** → **Settings**) (on macOS, **Bitwarden** → **Preferences**).
 2. Scroll to bottom of the **App Settings** section and use the **Language** dropdown to select your language:
 
-![Desktop app language setting](https://bitwarden.com/assets/6NSZV46oKRi7Roeu7g2ATZ/4e16d7cfe375619777fcef7b22004328/2026-03-04_09-42-39.png)
+![Desktop app language setting](https://bitwarden.com/assets/6NSZV46oKRi7Roeu7g2ATZ/8a7cacb71d48d47bb11c7ef46ec88903/2026-04-23_11-12-59.png)
 *Desktop app language setting*
 
 ### Mobile
@@ -24698,7 +24705,7 @@ Select the + **New** button and choose the item type to create:
 
 ### Desktop
 
-![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/2abe25e62c5a34e2b41e503fb119c2d3/2026-01-28_09-55-00.png)
+![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/af2b2ef342350a68b000c405ee698ab4/2026-04-23_09-58-10.png)
 *Add an item*
 
 ### CLI
@@ -24741,7 +24748,7 @@ Select the ⋮ options menu for the item you want to edit and select **Edit**:
 
 Select an item to open it and select the [pencil] edit icon:
 
-![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/0793598383e76b81433d815db7af9d01/2026-01-28_09-59-02.png)
+![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/63bbce3c7f3e0f99d6c0783c0b367a16/2026-04-23_10-02-08.png)
 *Edit an item*
 
 ### CLI
@@ -24760,19 +24767,25 @@ To archive an item:
 
 ### Web app
 
-Select the item(s) you want to archive and use the ⋮ options menu to choose **Archive**:
+1. Select the item(s) you want to archive and use the ⋮ options menu to choose **Archive**:
 
 ![Archive with the web app](https://bitwarden.com/assets/1aRyGxLdpcvGF3fM2Bbd17/24408086dd8835286d079cb48cd6069a/2026-01-27_10-28-36.png)
 *Archive with the web app*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On the web app, select **Archive** from your vault filters in order to view your archived items and use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
 ### Browser extension
 
-Use the ⋮ options menu for the item you want to archive and choose **Archive**:
+1. Use the ⋮ options menu for the item you want to archive and choose **Archive**.
 
 ![Archive with the browser extension](https://bitwarden.com/assets/40gA9zgbeBjx2gw77H61kM/08e93903af859aa75bbdd277b4098a90/2026-01-27_10-40-25.png)
 *Archive with the browser extension*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On browser extensions, navigate to **Settings** → **Vault options** → **Archive** to view your archived items and use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
@@ -24783,14 +24796,19 @@ Use the ⋯ options menu for the item you want to archive and choose **Archive**
 ![Archive with the mobile app](https://bitwarden.com/assets/rrxmgUU3pLqQrYa5wDDb9/fd90c478bacd1c366e59b4be3d07b185/2026-02-23_11-48-54.png)
 *Archive with the mobile app*
 
+##### Unarchive
+
 On mobile apps, select **Archive** from your vault filters in order to view your archived items and use the ⋯ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
 ### Desktop
 
-Open the item you want to archive and select the Archive button:
+1. Open the item you want to archive and select the **Archive** button.
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/1bb7a48646276475df915a73b5ece014/2026-01-27_10-52-53.png)
+![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/9bef4129b95edcb3189cb114863a117f/2026-04-23_10-02-08-1.png)
 *Archive with the desktop app*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On desktop apps, select **Archive** from your vault filters in order to view your archived items use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
@@ -24829,7 +24847,7 @@ Tap an item to open it and select the ⋮ options menu for the item:
 
 Select an item to open it and select the 🗑️ Delete icon:
 
-![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/bd8b4f23e967bf522981490d23b6396a/2026-01-28_10-01-38.png)
+![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/2ec594025ea37103c9cf0de93c41e9aa/2026-04-23_10-02-08-2.png)
 *Delete an item*
 
 ### CLI
@@ -24862,7 +24880,7 @@ On the **Vaults** tab, scroll down to **Trash** and select the item:
 
 Select **Trash**from the navigation:
 
-![Trash in the desktop app](https://bitwarden.com/assets/viaKopya1CJ9N6mWKyLV6/20bc3829a37c83e2d3c5a2ce16fdd032/2026-01-28_10-06-55.png)
+![Trash in the desktop app](https://bitwarden.com/assets/viaKopya1CJ9N6mWKyLV6/b6a8a6e6fc9449ac1630f89deee9da79/2026-04-23_10-08-16.png)
 *Trash in the desktop app*
 
 ### Clone
@@ -24892,9 +24910,9 @@ Tap an item to open it and select the ⋮ options menu for the item:
 
 ### Desktop
 
-Select an item to open it and select the [clone] Clone icon:
+Select the ⋮ options menu for the item you want to duplicate and select [clone] **Clone**:
 
-![Clone an item](https://bitwarden.com/assets/5KRdegIaIbOHxGkMj64Fs9/b1168078f6eded0673dd7dd96f3739e9/2026-01-28_10-12-51.png)
+![Clone an item](https://bitwarden.com/assets/5KRdegIaIbOHxGkMj64Fs9/fce91fc0bc5cabfa299d1fd522c0da7d/2026-04-23_10-12-38.png)
 *Clone an item*
 
 ## Share items
@@ -25086,12 +25104,13 @@ Master passwords made after the [2023.3.0 release](https://bitwarden.com/help/re
 
 ## Change master password
 
-If you know your current master password, you can update it from the web vault:
+You can change your master password from the web app, browser extension, or desktop app. You'll need to know your current master password in order to do so:
 
-> [!TIP] If you don't know your master password.
-> If you do not know your current master password, [learn what to do](https://bitwarden.com/help/forgot-master-password/).
+### Web app
 
-1. In the web app, select the **Settings** → **Security** from the navigation:
+In the web app:
+
+1. Select **Settings** → **Security** from the navigation.
 2. Select the **Master password** tab:
 
 ![Master password settings](https://bitwarden.com/assets/2Svv0PwlH9i7SSK73dlv9A/e451afb190346e492110a7bf1bd3a518/Master_password_settings.png)
@@ -25104,6 +25123,39 @@ If you know your current master password, you can update it from the web vault:
 > [!WARNING] Rotate account encryption key.
 > Don't check the **rotate account's encryption key** box unless you fully understand the ramifications and required follow-up actions. [Learn more](https://bitwarden.com/help/account-encryption-key/).
 7. Select the **Change master password** button.
+
+Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
+
+### Browser extension
+
+In the browser extension:
+
+1. Open the **Settings** tab and select **Account security**.
+2. Scroll to the **Other options** section and select **Change master password**:
+
+![Change master password on browser extension](https://bitwarden.com/assets/13NQDBUne0d99ssQlhxnTy/5320be0c494c351f808db48db48105ba/2026-04-21_09-58-31.png)
+*Change master password on browser extension*
+3. Enter your **Current master password**.
+4. Enter and confirm your **New master password**.
+5. (Optional) **Enter a Master password hint** that will help you recall your password. When requested, the hint is sent to the account holder's email.
+6. (Optional) If you want to check your master password through [HIBP](https://haveibeenpwned.com/) before submitting it, check **Check known data breaches for the password** to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/). This will send a hash of your master password to HIBP and compare it to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
+7. Select the **Change master password** button.
+
+Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
+
+### Desktop app
+
+In the desktop app:
+
+1. From the menu bar, select **Account** → **Change master password**:
+
+![Change master password on desktop](https://bitwarden.com/assets/5X1HjOgjvRg0ewMD30zYaY/4d9dfb5f92429b3b42d5111e0b759ca5/2026-04-21_09-00-24.png)
+*Change master password on desktop*
+2. Enter your **Current master password**.
+3. Enter and confirm your **New master password**.
+4. (Optional) **Enter a Master password hint** that will help you recall your password. When requested, the hint is sent to the account holder's email.
+5. (Optional) If you want to check your master password through [HIBP](https://haveibeenpwned.com/) before submitting it, check **Check known data breaches for the password** to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/). This will send a hash of your master password to HIBP and compare it to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
+6. Select the **Change master password** button.
 
 Changing your master password will automatically log you out of the web vault session. Other logged-in apps may remain active for up to an hour, but will eventually also require you to log back in with your new master password.
 
@@ -26377,7 +26429,7 @@ At this point, you have configured everything you need within the context of the
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ### Additional custom claim types
 
@@ -27093,7 +27145,7 @@ Use this onboarding checklist to track progress and make sure nothing is missed 
 - Practice adding new login items (Click + or Add Item)
 - Learn to edit existing items - click Edit (pencil icon)
 - Set up extension autofill through browser settings
-- Practice using autofill from browser extension (hotkey, inline autofill, fill button)
+- Practice using autofill from browser extension (hotkey, inline autofill)
 - Use built in password generator for creating strong passwords (in extension, click on password field or Generator tab)
 
 **Support links:**
@@ -27507,7 +27559,7 @@ This article will help you configure a SCIM integration with OneLogin. Configur
 ## Enable SCIM
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
@@ -28009,7 +28061,7 @@ Open the item and select **Password history**:
 
 Open the item and select **Password history**near the bottom of the window:
 
-![Password history on desktop](https://bitwarden.com/assets/lvf2rvKuNcJNUYzXOTI99/f739e51e3fdd72e21647b190a9b075c8/Password_history_on_desktop.png)
+![Password history on desktop](https://bitwarden.com/assets/lvf2rvKuNcJNUYzXOTI99/cef223bdb6cf8f575314705ed12766aa/2026-04-23_11-08-39.png)
 *Password history on desktop*
 
 ## Generator history
@@ -28500,12 +28552,12 @@ Identity provider configuration will often require you to refer back to the Ping
 | Want Authentication Requests Signed | Whether Ping Identity expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -29048,11 +29100,7 @@ This article contains frequently asked questions (FAQs) about general Bitwarden 
 
 ### Q: How do I change my master password hint?
 
-**A:** To change your master password hint:
-
-1. In the web app, navigate to **Settings** → **Security** → **Master password**.
-2. To change your hint, you must create a new master password. Enter your **Current master password**, then fill out the **New master password** and **Confirm master password** fields. Enter your new hint in the **Master password hint** box.
-3. Select the **Change master password**button.
+**A:** To change your master password hint, follow the [change master password](https://bitwarden.com/help/master-password/#change-master-password/) workflow. You can't at this time, change you hint without also changing your master password itself.
 
 ### Q: How do I change my email address?
 
@@ -30173,6 +30221,23 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.4.1
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.2, Browser Extension 2026.4.0, Desktop 2026.4.0, Mobile 2026.4.1, and CLI 2026.4.0)*
+
+> [!NOTE] 2026 CLI key rotation.
+> **Security notice**: To resolve a bug with the local storage of API keys for the [Bitwarden CLI](https://bitwarden.com/help/cli/), the **next Bitwarden server release** following this one will automatically rotate the [personal API keys](https://bitwarden.com/help/personal-api-key/) of users of the Bitwarden CLI. If you use the Bitwarden CLI for any automated workflows, update those workflows with your new API keys immediately following that release in order to maintain continuity.
+
+#### Password Manager
+
+- ⭐ **Change master password on extensions and desktop**: You can now [change your master password](https://bitwarden.com/help/master-password/#change-master-password/) on browser extensions and desktop apps. To support future improvements, workflows that allowed a master password change via the CLI were removed.
+- ⭐ **Desktop UI updates**: The desktop app UI has been updated with visual improvements.
+- ⭐ **Click to autofill by default**: Within the browser extension, you can now click anywhere on an item within **Autofill suggestions** to insert your credentials. This update removes the **Fill** button and **Click items in autofill suggestions to fill** setting for a more streamlined appearance.
+- **Updated Clear Clipboard default**: The browser extension's [Clear Clipboard setting](https://bitwarden.com/help/auto-fill-browser/#set-up-autofill/) now defaults to five minutes, an extra precaution to help keep your credentials secure.
+- **mTLS support now on iOS:** Both the iOS and Android mobile apps now support uploading mTLS certificates for self-hosted servers that require client authentication. Upload your certificate [when you set your server URL](https://bitwarden.com/help/change-client-environment/#tab-mobile-app-4dQ4hW1QAwVBuReXk2Txx0/).
+- **Attachment status loading bar**: Uploading an attachment on the desktop app and browser extension will display an upload status bar.
+- **Keeper JSON importer**: You can now [import data from Keeper](https://bitwarden.com/help/import-from-keeper/) with a JSON file.
 
 ## 2026.4.0
 
@@ -32561,12 +32626,12 @@ Identity provider configuration will often require you to refer back to the AWS 
 | Want Authentication Requests Signed | Whether IAM Identity Center expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -33140,12 +33205,12 @@ Complete the following fields in the **SAML identity provider configuration** se
 | Want Authentication Requests Signed | Whether Keycloak expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you're done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Additional Keycloak settings
 
@@ -36464,8 +36529,8 @@ To delete a Send from a browser extension, select the 🗑️ **Trash** icon nex
 
 To delete a Send from the desktop app, use the ⋮ options menu to select the 🗑️ **Delete** button:
 
-![Delete from a Desktop App ](https://bitwarden.com/assets/12eLcz2aoBkcDRGS3U1jzP/66e1b7625ac1290f2d110d0d4e7086c8/delete_send_desktop.png)
-*Delete from a Desktop App *
+![Send options on desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/fb20d049505d8a69dce6f39e4e4a9c4c/2026-04-23_11-49-34.png)
+*Send options on desktop*
 
 ### Mobile
 
@@ -36583,7 +36648,8 @@ To choose which Bitwarden server geography to create your account or organizatio
 
 ### Desktop app
 
-![Region selector on desktop apps](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/43aeb8ee7de20a3cc0156fbf2c766432/choose-my-service-1.png)
+![Region selector on desktop](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/e5c40a136a11ee48c5e74a068bda2405/2026-04-23_09-17-05.png)
+*Region selector on desktop*
 
 Bitwarden data regions are separate, and your account or organization only exists in the region where it was first created.
 
@@ -37266,7 +37332,8 @@ Any option will work, though. Authenticate with a lower-preference method by sel
 
 ### Desktop
 
-![Use another two-step login method](https://bitwarden.com/assets/36novNT7xJ8ZJSoG66MQXg/774092e3a3361e3a92d3bd84786b260e/setup-two-step-login-1.png)
+![Use another two-step method on desktop](https://bitwarden.com/assets/36novNT7xJ8ZJSoG66MQXg/636ac40e844fb7b32c37ffeac8932b36/2026-04-23_09-47-21.png)
+*Use another two-step method on desktop*
 ---
 URL: https://bitwarden.com/help/sharing/
 ---
@@ -37395,7 +37462,7 @@ To share an existing item from the desktop app:
 
 1. In the **Vault**view, right-click the item you want to share and select **Assign to collections** from the menu:
 
-![Share from desktop](https://bitwarden.com/assets/2RRhv9udtSa49Uxzv6rRAQ/e3d783e266bafd7a6fce76a8604fa15b/2026-01-28_11-27-36.png)
+![Share from desktop](https://bitwarden.com/assets/2RRhv9udtSa49Uxzv6rRAQ/fcf14bf329eb05226e389653ff339826/2026-04-23_11-35-49.png)
 *Share from desktop*
 2. On the **Assign to collections** pop-up:
 
@@ -37409,7 +37476,7 @@ There are a few other ways to share an item:
 
 - **Edit an item directly**: If you need to make changes to an individual item prior to sharing it, open the item and, in the **Edit** view, use the **Owner**and **Collections** dropdowns to choose who to share it with while you're making the necessary changes:
 
-![Share while editing on desktop](https://bitwarden.com/assets/4U6pHkqLgt3miuwFLJ9tkH/ac16f1456dd9884656aa275a2b7b6e76/2026-01-28_15-03-14.png)
+![Share while editing on desktop](https://bitwarden.com/assets/4U6pHkqLgt3miuwFLJ9tkH/caeb931f14a8a6b10ba7e299a705e083/2026-04-23_11-41-17.png)
 *Share while editing on desktop*
 
 ### CLI
@@ -38050,7 +38117,7 @@ Create a new SSH key using the Bitwarden desktop app, web app, or browser extens
 
 1. Select the **New** button and choose **SSH key** as the item type:
 
-![Create new SSH key on desktop](https://bitwarden.com/assets/1XYC3HwXOTMAPvyW1GS3Mk/5c7833241844eded5fa119d44d6efebd/new-ssh.png)
+![Create new SSH key on desktop](https://bitwarden.com/assets/1XYC3HwXOTMAPvyW1GS3Mk/1301eaf741b5867a33ba1b679e5a2e38/2026-04-23_12-36-06.png)
 *Create new SSH key on desktop*
 
 > [!NOTE] Create SSH key only ED25519
@@ -38070,7 +38137,7 @@ To add a new shared SSH key to the organization vault:
 2. Using the **Owner** dropdown, choose the organization you want this item to be owned by.
 3. Using the **Collections** dropdown, choose the collection(s) to share this item with.
 
-![Share an SSH key](https://bitwarden.com/assets/1YnrhzwCw78KuFsArEioOO/b7db01ff5dbd209ebe30f6454275ba41/Share-ssh.png)
+![Share an SSH key](https://bitwarden.com/assets/1YnrhzwCw78KuFsArEioOO/76dceaa53917a8078b1e96f0fcbb5f65/2026-04-23_12-36-17.png)
 *Share an SSH key*
 
 > [!NOTE] SSH key sharing best practices
@@ -39630,7 +39697,7 @@ To set up a PIN for your desktop app:
 1. open your Settings (on Windows or Linux, **File** → **Settings**) (on macOS, **Bitwarden** → **Settings**) and scroll to the **Security** section.
 2. Toggle the **Unlock with PIN** option on:
 
-![Unlock with PIN on desktop](https://bitwarden.com/assets/78q1ueLazPoYxUVCqPDjCC/1a614603978a9571eea9c2d33be28333/2026-01-28_09-38-16.png)
+![Unlock with PIN on desktop](https://bitwarden.com/assets/78q1ueLazPoYxUVCqPDjCC/ed73cc20db1533f3901d49349cebdbde/2026-04-23_09-37-30.png)
 *Unlock with PIN on desktop*
 3. When prompted, enter the PIN you want to use in the popup. Your PIN can be any combination of characters (a-z, 0-9, $, #, etc.).
 
@@ -40691,9 +40758,7 @@ Navigate to the ⚙️ **Settings**tab and select **About** → **About Bitwarde
 
 ### Desktop app
 
-On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden:**
-
-![Desktop app version](https://bitwarden.com/assets/6GOZ3TPKmrnBbol1FWMZSm/8a86c4556ec42170f65538c6598c534e/Screen_Shot_2022-09-29_at_2.52.13_PM.png)
+On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden.**
 
 ### Mobile app
 

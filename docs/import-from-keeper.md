@@ -4,17 +4,21 @@ URL: https://bitwarden.com/help/import-from-keeper/
 
 # Import from Keeper
 
-Use this article for help exporting data from Keeper and importing into Bitwarden. Bitwarden supports import of Keeper data that is exported as a `.csv` file.
+Use this article for help exporting data from Keeper and importing into Bitwarden. Bitwarden supports import of Keeper data that is exported as a `.csv` or `.json` file.
 
 ## Export from Keeper
 
 To export data from the Keeper web app:
 
-1. Select your account email in the top corner of the web app and select Settings from the dropdown:
+1. Select your account email in the top corner of the web app and select **Settings** from the dropdown:
 
 ![Export from Keeper](https://bitwarden.com/assets/37IrIjwTCvp8aeNOYgVINt/b5520f293391b24fa825eaa2e944788b/2025-01-06_09-30-34.png)
-2. From the Settings pop out, select **Export**.
-3. Choose the **CSV**export file type, and select **Export**. You'll be required to confirm your master password in order to finish the export.
+*Export from Keeper*
+2. Select **Export** from the pop-up window.
+3. Choose the **CSV** or **JSON**export file type.
+4. Select **Export**.
+5. Enter your master password.
+6. Select **Export Now**.
 
 ## Import to Bitwarden
 

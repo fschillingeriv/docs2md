@@ -52,7 +52,7 @@ Use this onboarding checklist to track progress and make sure nothing is missed 
 - Practice adding new login items (Click + or Add Item)
 - Learn to edit existing items - click Edit (pencil icon)
 - Set up extension autofill through browser settings
-- Practice using autofill from browser extension (hotkey, inline autofill, fill button)
+- Practice using autofill from browser extension (hotkey, inline autofill)
 - Use built in password generator for creating strong passwords (in extension, click on password field or Generator tab)
 
 **Support links:**

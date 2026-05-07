@@ -34,7 +34,7 @@ To change the theme of your desktop app:
 1. Open the desktop app's **Preferences** panel (on Windows, **File** → **Settings**) (on macOS, **Bitwarden** → Preferences).
 2. Scroll to the **App Settings** section and use the **Theme** dropdown to select your favorite theme!
 
-![Change theme ](https://bitwarden.com/assets/7dOzSglXr4rlM97zKoqptq/5c07e025316518564fd77207944fd546/2026-01-28_11-16-18.png)
+![Change theme ](https://bitwarden.com/assets/7dOzSglXr4rlM97zKoqptq/2737fefeb63bc9fd09e863f8d3690ed1/2026-04-23_11-12-59.png)
 *Change theme *
 
 > [!TIP] Theme + Account Switching

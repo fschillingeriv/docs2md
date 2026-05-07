@@ -18,11 +18,7 @@ This article contains frequently asked questions (FAQs) about general Bitwarden 
 
 ### Q: How do I change my master password hint?
 
-**A:** To change your master password hint:
-
-1. In the web app, navigate to **Settings** → **Security** → **Master password**.
-2. To change your hint, you must create a new master password. Enter your **Current master password**, then fill out the **New master password** and **Confirm master password** fields. Enter your new hint in the **Master password hint** box.
-3. Select the **Change master password**button.
+**A:** To change your master password hint, follow the [change master password](https://bitwarden.com/help/master-password/#change-master-password/) workflow. You can't at this time, change you hint without also changing your master password itself.
 
 ### Q: How do I change my email address?
 

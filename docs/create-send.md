@@ -122,7 +122,7 @@ To create a new Send from a desktop app:
 
 2. Select the **New Send** button:
 
-![Send view in a Desktop App ](https://bitwarden.com/assets/2O01p5FyMpUhlhi5bAq7mH/0c154046969e8028d95fb4bdbaf12b93/2026-02-26_15-40-37.png)
+![Send view in a Desktop App ](https://bitwarden.com/assets/2O01p5FyMpUhlhi5bAq7mH/3135d39e953c52bb0d843ee6afeb1121/2026-04-23_11-48-19.png)
 *Send view in a Desktop App *
 
 3. In the right-most column, specify the following:
@@ -152,8 +152,8 @@ Once you are happy your Send, select **Save** to finish.
 
 Once your Send is created, select the ⋮ and then **Copy Send link**to copy the generated link to your clipboard:
 
-![Copy send link desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/aef61f80bb7426874c937d07eaa58b85/2026-02-25_11-40-24.png)
-*Copy send link desktop*
+![Send options on desktop](https://bitwarden.com/assets/4IgMnKAEjk16bJdbuUkVeH/fb20d049505d8a69dce6f39e4e4a9c4c/2026-04-23_11-49-34.png)
+*Send options on desktop*
 
 Once copied, share your Send link with intended recipients however you prefer. Sends are end-to-end encrypted, so you don't need to worry about exposing any data to whatever intermediary communications services you use.
 

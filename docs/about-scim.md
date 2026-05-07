@@ -26,7 +26,9 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-[Embedded content]
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+*SCIM provisioning*
+
 > [!TIP] Use SCIM Guides.
 > The following section covers some generic information that can be used to set up SCIM, however Bitwarden recommends using one of the integration documents for:
 > 

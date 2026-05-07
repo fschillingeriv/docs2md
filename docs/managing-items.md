@@ -44,7 +44,7 @@ Select the + **New** button and choose the item type to create:
 
 ### Desktop
 
-![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/2abe25e62c5a34e2b41e503fb119c2d3/2026-01-28_09-55-00.png)
+![Add an item](https://bitwarden.com/assets/7xia34eJyx1K8Gy8IXajQ7/af2b2ef342350a68b000c405ee698ab4/2026-04-23_09-58-10.png)
 *Add an item*
 
 ### CLI
@@ -87,7 +87,7 @@ Select the ⋮ options menu for the item you want to edit and select **Edit**:
 
 Select an item to open it and select the [pencil] edit icon:
 
-![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/0793598383e76b81433d815db7af9d01/2026-01-28_09-59-02.png)
+![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/63bbce3c7f3e0f99d6c0783c0b367a16/2026-04-23_10-02-08.png)
 *Edit an item*
 
 ### CLI
@@ -106,19 +106,25 @@ To archive an item:
 
 ### Web app
 
-Select the item(s) you want to archive and use the ⋮ options menu to choose **Archive**:
+1. Select the item(s) you want to archive and use the ⋮ options menu to choose **Archive**:
 
 ![Archive with the web app](https://bitwarden.com/assets/1aRyGxLdpcvGF3fM2Bbd17/24408086dd8835286d079cb48cd6069a/2026-01-27_10-28-36.png)
 *Archive with the web app*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On the web app, select **Archive** from your vault filters in order to view your archived items and use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
 ### Browser extension
 
-Use the ⋮ options menu for the item you want to archive and choose **Archive**:
+1. Use the ⋮ options menu for the item you want to archive and choose **Archive**.
 
 ![Archive with the browser extension](https://bitwarden.com/assets/40gA9zgbeBjx2gw77H61kM/08e93903af859aa75bbdd277b4098a90/2026-01-27_10-40-25.png)
 *Archive with the browser extension*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On browser extensions, navigate to **Settings** → **Vault options** → **Archive** to view your archived items and use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
@@ -129,14 +135,19 @@ Use the ⋯ options menu for the item you want to archive and choose **Archive**
 ![Archive with the mobile app](https://bitwarden.com/assets/rrxmgUU3pLqQrYa5wDDb9/fd90c478bacd1c366e59b4be3d07b185/2026-02-23_11-48-54.png)
 *Archive with the mobile app*
 
+##### Unarchive
+
 On mobile apps, select **Archive** from your vault filters in order to view your archived items and use the ⋯ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
 ### Desktop
 
-Open the item you want to archive and select the Archive button:
+1. Open the item you want to archive and select the **Archive** button.
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/1bb7a48646276475df915a73b5ece014/2026-01-27_10-52-53.png)
+![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/9bef4129b95edcb3189cb114863a117f/2026-04-23_10-02-08-1.png)
 *Archive with the desktop app*
+2. Confirm your choice by selecting **Archive** in the dialogue.
+
+##### Unarchive
 
 On desktop apps, select **Archive** from your vault filters in order to view your archived items use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
 
@@ -175,7 +186,7 @@ Tap an item to open it and select the ⋮ options menu for the item:
 
 Select an item to open it and select the 🗑️ Delete icon:
 
-![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/bd8b4f23e967bf522981490d23b6396a/2026-01-28_10-01-38.png)
+![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/2ec594025ea37103c9cf0de93c41e9aa/2026-04-23_10-02-08-2.png)
 *Delete an item*
 
 ### CLI
@@ -208,7 +219,7 @@ On the **Vaults** tab, scroll down to **Trash** and select the item:
 
 Select **Trash**from the navigation:
 
-![Trash in the desktop app](https://bitwarden.com/assets/viaKopya1CJ9N6mWKyLV6/20bc3829a37c83e2d3c5a2ce16fdd032/2026-01-28_10-06-55.png)
+![Trash in the desktop app](https://bitwarden.com/assets/viaKopya1CJ9N6mWKyLV6/b6a8a6e6fc9449ac1630f89deee9da79/2026-04-23_10-08-16.png)
 *Trash in the desktop app*
 
 ### Clone
@@ -238,9 +249,9 @@ Tap an item to open it and select the ⋮ options menu for the item:
 
 ### Desktop
 
-Select an item to open it and select the [clone] Clone icon:
+Select the ⋮ options menu for the item you want to duplicate and select [clone] **Clone**:
 
-![Clone an item](https://bitwarden.com/assets/5KRdegIaIbOHxGkMj64Fs9/b1168078f6eded0673dd7dd96f3739e9/2026-01-28_10-12-51.png)
+![Clone an item](https://bitwarden.com/assets/5KRdegIaIbOHxGkMj64Fs9/fce91fc0bc5cabfa299d1fd522c0da7d/2026-04-23_10-12-38.png)
 *Clone an item*
 
 ## Share items

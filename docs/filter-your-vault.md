@@ -19,7 +19,7 @@ Either:
 
 Use the **Vault**, **Collection**, **Folder**, or **Type** selectors at the top of the 🔒 **Vault** tab. You toggle the visibility of the filter dropdown menus with the 🎚️ button:
 
-![Browser extension filters and suggestions](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/689221013fac56ddb555ed9dabddbdc9/screenshot_6.png)
+![Browser extension filters](https://bitwarden.com/assets/12UsFuA2sxbUCBMIczJsxv/6376ae661b966e4698375c2af2c27c0d/Browser_extension_filters.png)
 
 ### Mobile
 
@@ -29,9 +29,9 @@ Choose a vault by selecting the **Vault**menu button (⋯ ) on the **Vaults**tab
 
 ### Desktop
 
-Select a vault from the left-most column (in the following screenshot, **My Vault**or **My Organization**):
+Select a filter criterion from the left-most column:
 
-![Filtering on desktop](https://bitwarden.com/assets/2Lng0L2TRQ177CaU8EUQ1m/fc80b9452396db84c9f1abd405275ddb/2026-01-28_10-20-04.png)
+![Filtering on desktop](https://bitwarden.com/assets/2Lng0L2TRQ177CaU8EUQ1m/650d82f70422611353ce70a347a99c72/2026-04-23_10-14-43.png)
 *Filtering on desktop*
 
 ### CLI

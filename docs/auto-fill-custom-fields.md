@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/auto-fill-custom-fields/
 
 # Autofill Custom Fields
 
-Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/)! Bitwarden browser extensions can autofill [custom fields](https://bitwarden.com/help/custom-fields/) to simplify filling in security questions, PINS, and more.
+Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). Bitwarden browser extensions can autofill [custom fields](https://bitwarden.com/help/custom-fields/) to simplify filling in security questions, PINS, and more.
 
 Additionally, if your browser extension is having issues autofilling usernames and passwords for a particular site, using [linked custom fields](https://bitwarden.com/help/auto-fill-custom-fields/#using-linked-custom-fields/) can force an autofill.
 
@@ -14,9 +14,10 @@ Additionally, if your browser extension is having issues autofilling usernames a
 To autofill custom fields:
 
 1. Open the browser extension to the **Vault** view. This view automatically detects the website (for example, `myverizon.com`) of the page displayed in the open tab and surfaces any logins with corresponding URIs.
-2. Select the **Fill** button on item that contains the custom field you want to autofill:
+2. If an item appears in **Autofill suggestions**, click anywhere on the item that contains the custom field to autofill:
 
-![Item with a custom field ](https://bitwarden.com/assets/4ExHyb45ZapKssCpRl6Uro/b8e686e8a58e0ed24f8aa58dd746253e/2024-12-03_09-55-22.png)
+![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
+*Click item to autofill*
 
 The browser extension will find any fields that match the [custom field name](https://bitwarden.com/help/custom-fields/#custom-field-names/) and autofill that field's value.
 
@@ -30,7 +31,9 @@ Linked custom fields can be used to solve issues where your browser extension ca
 > [!TIP] Use context menu for custom field name.
 > You can get the right value by right-clicking the form element and using the **Copy Custom Field Name** context menu option:
 > 
+> 
 > ![Copy custom field name](https://bitwarden.com/assets/5nnPLqyzgAhDCinQNB0uUC/a721194f39f0a8fa919066d73ff9e2c8/2024-10-29_10-50-34.png)
+> *Copy custom field name*
 3. Select **Add**.
 4. Select **Username** or **Password** for the field's value depending on which credential you are having trouble autofilling. In many cases, you'll need to create a linked custom field for each.
 5. **Save** the changes to the vault item.
