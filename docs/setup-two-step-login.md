@@ -17,6 +17,11 @@ Using two-step login (also called two-factor authentication, or 2FA) protects yo
 [![Vimeo Video](https://vumbnail.com/1060246387.jpg)](https://vimeo.com/1060246387)
 *[Watch on Vimeo](https://vimeo.com/1060246387)*
 
+**Video Chapters:**
+Email-based two-step login is enabled by default. Explore other methods like authenticator apps and hardware keys to find what works best for you. 
+
+Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/).
+
 There are many different methods available for two-step login. You can have as many active as you'd like. What's important is that any form of two-step login is active to be sure your account is protected.
 
 ## Two-step login for individuals

@@ -1425,7 +1425,7 @@ At this point, you have configured everything you need within the contest of the
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -10384,6 +10384,90 @@ Learn more about Enterprise-sponsored Families organizations [here](https://bitw
 - **0:14**: About sponsored Families plans.
 - **0:35**: Redeem a sponsored Families plan.
 ---
+URL: https://bitwarden.com/help/courses/first-steps-with-bitwarden/
+---
+# First Steps with Bitwarden
+
+Follow these video guides to quickly set up your Bitwarden account and prepare your devices for easy storage of passwords and sensitive information.
+
+## Creating a Bitwarden account
+
+[![Vimeo Video](https://vumbnail.com/1086379394.jpg)](https://vimeo.com/1086379394)
+*[Watch on Vimeo](https://vimeo.com/1086379394)*
+
+Learn more about creating your Bitwarden account [here](https://bitwarden.com/help/create-bitwarden-account/), or jump to the following points in the video to learn about specific topics:
+
+- 0:06 Overview
+- 0:29 From the Bitwarden homepage
+- 1:26 From any Bitwarden client
+- 1:36 From an invitation / SSO
+
+## Bitwarden for all devices
+
+[![Vimeo Video](https://vumbnail.com/796410440.jpg)](https://vimeo.com/796410440)
+*[Watch on Vimeo](https://vimeo.com/796410440)*
+
+Download Bitwarden apps for all your devices [here](https://bitwarden.com/download/).
+
+## Setting up the Bitwarden browser extension
+
+[![Vimeo Video](https://vumbnail.com/1084695614.jpg)](https://vimeo.com/1084695614)
+*[Watch on Vimeo](https://vimeo.com/1084695614)*
+
+**Video Chapters:**
+See how Bitwarden works in your browser, from saving a password the first time you log in to autofilling your credentials on return visits. Download the browser extension and get set up in minutes.
+
+Learn more about getting started with the browser extension [here](https://bitwarden.com/help/getting-started-browserext/), or jump to the following points in the video to learn about specific topics:
+
+- 0:11 Install Bitwarden
+- 0:23 Pin the extension
+- 0:32 Log in or create an accout
+- 0:37 Disable your browser's built-in password manager
+- 0:5 Import items
+- 1:11 Create a new item
+- 1:42 Adding additional fields
+- 1:52 Using folders
+- 2:11 Favorite an item
+- 2:17 Autofill
+- 2:39 Auto-save pop-up
+- 2:45 PIN and biometrics
+- 2:58 Account switching
+- 3:07 Customize Bitwarden
+
+## Disabling Built-in Browser Password Managers
+
+Learn more about disabling built-in browser password managers. Enable a smooth user experience by not having conflicting prompts and ensure all data is being saved in Bitwarden and not inadvertently within the browser.
+
+### Chrome
+
+[![Vimeo Video](https://vumbnail.com/1077612510.jpg)](https://vimeo.com/1077612510)
+*[Watch on Vimeo](https://vimeo.com/1077612510)*
+
+### Microsoft Edge
+
+[![Vimeo Video](https://vumbnail.com/1077612658.jpg)](https://vimeo.com/1077612658)
+*[Watch on Vimeo](https://vimeo.com/1077612658)*
+
+## Activating two-step login for your Bitwarden account
+
+[![Vimeo Video](https://vumbnail.com/1060246387.jpg)](https://vimeo.com/1060246387)
+*[Watch on Vimeo](https://vimeo.com/1060246387)*
+
+**Video Chapters:**
+Email-based two-step login is enabled by default. Explore other methods like authenticator apps and hardware keys to find what works best for you. 
+
+Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/).
+
+Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/), or jump to the following points in the video to learn about specific topics:
+
+- [**0:40**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17142651/): Setup two-step login using email.
+- [**0:57**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17175281/): Setup two-step login using an authenticator app.
+- [**1:25**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17142654/): Setup two-step login using a passkey.
+- [**1:54**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17175355/): Setup two-step login using Yubico OTP.
+- [**2:14**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17142655/): Setup two-step login using Duo.
+- [**2:27**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17175282/): Get your recovery code.
+- [**3:00**](https://bitwarden.com/help/first-steps-with-bitwarden/#vimeo_chapter_1060246387=17175280/): Using multiple methods.
+---
 URL: https://bitwarden.com/help/courses/password-manager-admin/
 ---
 # Enterprise Admin
@@ -11196,6 +11280,104 @@ Running into a technical issue or have account questions? Contact the Bitwarden 
 
 [Embedded content componentCtaLink]
 ---
+URL: https://bitwarden.com/help/courses/password-manager-msp-deployment-guide/
+---
+# MSP Playlist & Deployment
+
+Use the following steps and best practices to deploy Bitwarden to your customers.
+
+[Embedded content]
+## Demo
+
+### Provider Portal Demo (35 min)
+
+[![Vimeo Video](https://vumbnail.com/668382756.jpg)](https://vimeo.com/668382756)
+*[Watch on Vimeo](https://vimeo.com/668382756)*
+
+Learn more about becoming a Bitwarden MSP or reseller [here](https://bitwarden.com/partners/).
+
+- **1:36**: Overview of Bitwarden Password Manager.
+
+ - **1:46**: Bitwarden client apps.
+ - **2:15**: How Bitwarden integrates with your tech stack.
+ - **4:53**: Overview of terminology and concepts.
+- **8:34**: MSP architecture deep dive.
+
+ - **10:05**: Your organization.
+ - **16:19**: The Provider Portal.
+ - **23:13**: Client organizations.
+- **25:49**: Manage your clients.
+
+ - **26:50**: Manage policies.
+ - **27:43**: Import data.
+ - **28:18**: Set up SSO and SCIM.
+- **29:00**: Q&A.
+
+### Phase 1 - Pre-onboarding
+
+Define technical requirements and onboarding strategy for your customer's Bitwarden organization and environment.
+
+| Step | Topic | Action | Resources | Duration (hours) |
+|------|------|------|------|------|
+| 1 | Environment decision | Determine Cloud or Self-Hosted environment | [Hosting FAQs](https://bitwarden.com/help/hosting-faqs/) | 0.5 |
+| 2 | Authentication strategy | Determine if the customer will use Single Sign-On (SSO) | [About SSO](https://bitwarden.com/help/about-sso/) | 0.25 |
+| 3 | Decryption method | If using Login with SSO, select Master Password or trusted devices for decryption | [About trusted devices](https://bitwarden.com/help/about-trusted-devices/) | 0.25 |
+| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#onboard-users/) | 0.25 |
+| 5 | User identification | Identify users, teams, or departments for rollout groups | | 0.25 |
+| 6 | Training strategy | Identify groups and internal advocates who will attend training. Example: end users, service desk, admins | | 0.5 |
+| 7 | Document collection (sharing) strategy | Determine how collections will be configured. Considerations include: Will users be allowed to create collections? Will collections be configured by department, project, function? Will data be imported from another application, which often defines structure? Do Admin and Owner users get access to all shared items, or only the Managers of delegated Collections? | [About collections](https://bitwarden.com/help/about-collections/) | 1 |
+| 8 | Policy planning | Select policies to be configured at launch | [Policies](https://bitwarden.com/help/policies/) | 0.5 |
+| 9 | Rollout timeline | Determine invitation and onboarding mechanisms and timing | | 0.5 |
+| 10 | Internal communication | Create internal messaging or memo about Bitwarden rollout. Review Bitwarden templates to get a sense of the communications | [Welcome email templates](https://bitwarden.com/help/welcome-email-templates/) | 1 |
+| 11 | Leadership communication | Communicate to internal leaders about Password Management Rollout Strategy | | 0.25 |
+
+### Phase 2 - Organization set up
+
+Set up the technical foundation and configure Bitwarden settings for your customer. 
+
+| Step | Topic | Action | Resources | Duration (hours) |
+|------|------|------|------|------|
+| 12 | Organization owner | Identify the organization owner. The owner is the super-user that can control all aspects of your organization. Decide if you want the email to be associated with a specific user or a team inbox. Additionally, the best practice is two owner accounts for redundancy | [Member roles](https://bitwarden.com/help/user-types-access-control/#member-roles/) | 0.25 |
+| 13 | Enterprise policies | Configure Enterprise policies. Any policies should be enabled prior to user invitation. Be sure to check out the following policies: Account recovery administration Enforce organization data ownership Activate autofill | [Policies](https://bitwarden.com/help/policies/) | 1 |
+| 14 | Collection management settings | Choose how collections will behave in the organization. These settings allow for a spectrum of full admin control to completely self-serve where users can create their own collections. These settings can be used to establish a policy of least privilege | [Managing users](https://bitwarden.com/help/managing-users/) | 0.25 |
+| 15 | Co-managed environment | Add administrators or owners to the client organization to co-manage. Best practice is to configure a second owner for redundancy | [Managing users](https://bitwarden.com/help/managing-users/) | 0.5 |
+| 16 | Create collections | Collections are where secure items are located and shared with groups of users | [Collections](https://bitwarden.com/help/collections/) | 0.5 |
+| 17 | Create user groups | Creating user groups allows easy assignment of collections. If you decide to sync groups and users from your Identity Provider or Directory Service, you may need to reconfigure user and group assignments later | [Groups](https://bitwarden.com/help/groups/) | 0.5 |
+| 18 | Collection assignment | Assign groups to collections, making sure to test and demonstrate 'Read Only' and 'Hide Password' options | [User types access control](https://bitwarden.com/help/user-types-access-control/) | 0.5 |
+| 19 | Add items | Add items manually to test collections or import via CSV or JSON from another password management application | [Collections](https://bitwarden.com/help/collections/) | 0.25 |
+| 20 | Login with SSO | If applicable, configure Login with SSO and organization identifier Configure to work with SAML 2.0 or OpenID Connect | [Get started with SSO](https://bitwarden.com/help/getting-started-with-sso/) | 1.5 |
+| 21 | Domain verification | if applicable, verify company and/or other email domains to allow your users to skip entering the Organization identifier during the Enterprise SSO process. Not necessary for non-SSO organizations | [Domain verification](https://bitwarden.com/help/domain-verification/) | 0.5 |
+
+### Phase 3 - Organization roll out
+
+Deploy Bitwarden across your customer's teams and functions. 
+
+| Step | Topic | Action | Resources | Duration (hours) |
+|------|------|------|------|------|
+| 22 | Technical cadence meeting | Plan implementation phase 3 with client | | 0.5 |
+| 23 | Add items to collections | Add items manually to production collections or import data from another password management application | [About collections](https://bitwarden.com/help/about-collections/) | 0.25 |
+| 24 | Enterprise policies | Enterprise Policies can be used to tailor your Bitwarden Organization to fit your security needs. Enable and configure desired policies before user onboarding begins | [Policies](https://bitwarden.com/help/policies/) | 0.1 |
+| 25 | Centralize organization ownership | To take full advantage of reporting like Access Intelligence, consider turning on the Centralize organization ownership policy. This ensures all items saved to Bitwarden are owned by the organization. | [Centralize organization ownership ](https://bitwarden.com/help/policies/#centralize-organization-ownership/) | 0.1 |
+| 26 | Login with SSO | If applicable, configure Bitwarden to authenticate using your SAML 2.0 or OIDC Identity Provider | [About SSO](https://bitwarden.com/help/about-sso/) | 1.5 |
+| 27 | Early users | Add a set of users to the client organization manually and assign them to different groups. With these users, you'll broadly test all pre-configured functionality in the next step, before moving on to advanced functions like Directory Connector. Share the attached onboarding workflow instructions with the users | [Managing users - Invite](https://bitwarden.com/help/managing-users/#invite/) [Onboarding Workflows](https://bitwarden.com/help/onboarding-workflows/) | 0.5 |
+| 28 | SIEM integration | If applicable, connect Bitwarden to customer's SIEM tool | [SIEM](https://bitwarden.com/help/event-logs/#siem-and-external-systems-integrations/) | 0.5 |
+| 29 | Bitwarden clients | All Organization members added for the pilot group should download Bitwarden on an assortment of devices, login, and test access to shared items via collections. They should test the proper implementation of policies. | [Download](https://bitwarden.com/download/) | 0.5 |
+| 30 | Deploy client applications | Configure your application management or MDM tooling to prepare for mass deployment of Bitwarden applications | [Deploy client applications](https://bitwarden.com/help/browserext-deploy/) | 0.5 |
+| 31 | Disable built-in password manager | Make Bitwarden Password Manager the default password manager and turn off built-in browser solutions. Educate users how to do the same when onboarded | [Disable built-in password manager](https://bitwarden.com/help/getting-started-browserext/#disable-a-built-in-password-manager/) | 0.25 |
+| 32 | Test user onboarding | Configure and test Bitwarden SCIM or Directory Connector integrations to automatically sync users and groups | [About SCIM](https://bitwarden.com/help/about-scim/) [About Directory Connector](https://bitwarden.com/help/directory-sync/) | 1.5 |
+| 33 | User onboarding | Execute on SCIM or Directory Connector syncing to invite additional users in groups to the organization. Share the attached onboarding workflow instructions with the users | [About SCIM](https://bitwarden.com/help/about-scim/) [About Directory Connector](https://bitwarden.com/help/directory-sync/) [Onboarding Workflows](https://bitwarden.com/help/onboarding-workflows/) | 1 |
+
+### Phase 4 - User training
+
+Train all users and stakeholders on how to use Bitwarden and provide continuing education. 
+
+| Step | Topic | Action | Resources | Duration (hours) |
+|------|------|------|------|------|
+| 33 | Admin training | Provide essential day-to-day task training for administrative users with the addition of any special topics requested Example special topics include, but are not limited to: Demonstrating the configured SSO login flow User onboarding and offboarding Custom roles | [Get to know the Admin Console](https://bitwarden.com/help/get-started-administrator/#get-to-know-the-admin-console/) [Bitwarden for business admins](https://bitwarden.com/help/courses/bitwarden-for-business-admins/) | 0.75 |
+| 34 | Service desk training | Advise service desk users on their role/operations. Review what tasks can be done with the custom role and what require admin intervention | | 0.75 |
+| 35 | Team member training | A general training session for end users will cover: Bitwarden for all devices Setting up the Bitwarden Browser Extension Creating your account Getting to know the Bitwarden vault How to use the Bitwarden Password Manager Bitwarden Send | [Get to know your vault ](https://bitwarden.com/help/get-started-team-member/#get-to-know-your-vault/) [Get to know Password Manager](https://bitwarden.com/help/get-to-know-password-manager/) | 0.75 |
+| 36 | Ongoing education | All users can take advantage of monthly new and updated learning content in the Bitwarden Learning Center | [Courses](https://bitwarden.com/help/courses/) | 0.75 |
+---
 URL: https://bitwarden.com/help/courses/password-manager-partner-provider-admin/
 ---
 # Provider Admin
@@ -11838,6 +12020,16 @@ Your organization may offer a [free Bitwarden Families plan](https://bitwarden.c
 
 ## Import your passwords
 
+### Overview (1 min)
+
+The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
+
+If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
+
+For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -11886,6 +12078,12 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 [Embedded content]
 ## Autofill from Browser extension
+
+### Overview (1 min)
+
+Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -12033,6 +12231,10 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
+### Using the browser extension
+
+[Embedded content]
+
 ## Adding attachments
 
 ### Using the browser extension
@@ -12042,6 +12244,12 @@ As a member of your organization, you can securely share information like login 
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+
+### Using the mobile app
+
+### Using the web app
+
+### Using the desktop app
 
 ## Learn more
 
@@ -12312,6 +12520,16 @@ Learn how to to import your passwords with the browser extension, or explore oth
 
 ## Import your passwords
 
+### Overview (1 min)
+
+The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
+
+If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
+
+For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -12363,6 +12581,12 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
 
 ## Autofill from Browser extension
+
+### Overview (1 min)
+
+Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -12517,6 +12741,10 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
+### Using the browser extension
+
+[Embedded content]
+
 ## Adding attachments
 
 ### Using the browser extension
@@ -12526,6 +12754,12 @@ As a member of your organization, you can securely share information like login 
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+
+### Using the mobile app
+
+### Using the web app
+
+### Using the desktop app
 
 ## Learn More
 
@@ -22735,7 +22969,7 @@ This article will help you configure a SCIM integration with JumpCloud. Configu
 ## Enable SCIM
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
@@ -25200,7 +25434,7 @@ This article will help you configure a SCIM integration with Azure. Configurati
 ## Enable SCIM
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
@@ -26540,7 +26774,7 @@ At this point, you have configured everything you need within the context of the
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -26550,7 +26784,7 @@ Once your configuration is complete, test it by navigating to [https://vault.bit
 
 Enter the [configured organization identifier](https://bitwarden.com/help/oidc-okta/#/) and select **Log In**. If your implementation is successfully configured, you'll be redirected to the Okta login screen:
 
-![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/4342c56fa656be94ef90dd620251a868/okta-login.png)
+![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/8f6e1d8555c9e1b60d2e145d0f0bb565/Log_in_with_Okta.png)
 
 After you authenticate with your Okta credentials, enter your Bitwarden master password to decrypt your vault!
 
@@ -26727,7 +26961,7 @@ If you exit or close the application, automatic sync will stop. To keep Director
 ---
 URL: https://bitwarden.com/help/okta-scim-integration/
 ---
-# Okta SCIM Integration
+# Okta SCIM
 
 System for cross-domain identity management (SCIM) can be used to automatically provision and de-provision members and groups in your Bitwarden organization. 
 
@@ -26736,77 +26970,88 @@ System for cross-domain identity management (SCIM) can be used to automatically 
 
 This article will help you configure a SCIM integration with Okta. Configuration involves working simultaneously with the Bitwarden web vault and Okta Admin Portal. As you proceed, we recommend having both readily available and completing steps in the order they are documented.
 
-### Supported features
+## Supported features
 
 The following provisioning features are supported by this integration:
 
-- **Push Users: **Users in Okta that are assigned to Bitwarden are added as users in Bitwarden.
-- **Deactivate Users:**Users with the deactivated status will no longer have access to their assigned apps. Deactivating a user in Okta will change their Bitwarden status to revoked. 
+- **Push users: **Users in Okta that are assigned to Bitwarden are added as users in Bitwarden.
+- **Deactivate users:**Users with the deactivated status will no longer have access to their assigned apps. Deactivating a user in Okta will change their Bitwarden status to revoked. 
 - **Delete user**: Users deleted in Okta will be moved to revoked status in the Bitwarden organization.
 
 > [!NOTE] Suspended users Okta
-> Choosing the suspended status for a user in Okta will **not** result in a revoked status in Bitwarden.
-- **Push Groups: **Groups and their users in Okta can be pushed to Bitwarden.
+> Choosing the suspended status for a user in Okta will **not** result in a [revoked status in Bitwarden](https://bitwarden.com/help/revoke-users/).
+- **Push groups: **Groups and their users in Okta can be pushed to Bitwarden.
 
 > [!NOTE] SCIM Okta Support for Email Stuff
-> Please note, Bitwarden does not support changing a user's email address once provisioned. Bitwarden also does not support changing a user's email address type, or using a type other than `primary`. The values entered for email and username should be the same.[ Learn more](https://bitwarden.com/help/about-scim/#required-attributes/).
+> Bitwarden does not support changing a user's email address once provisioned. Bitwarden also does not support changing a user's email address type or using a type other than `primary`. The values entered for email and username should be the same. [Learn more](https://bitwarden.com/help/about-scim/#required-attributes/).
 
-## Enable SCIM
+## Enable SCIM in Bitwarden
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
-To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
+To start your SCIM integration:
+
+1. From the Admin Console, go to **Settings**→ **SCIM provisioning**.
+2. Check **Enable SCIM**.
+3. Select **Save**.
+4. Your **SCIM URL**and **SCIM API key** will appear, which you will later [enter in Okta](https://bitwarden.com/help/okta-scim-integration/#connect-your-bitwarden-organization/):
 
 ![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+*SCIM provisioning*
 
-Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+## Add the Bitwarden app to Okta
 
-## Add the Bitwarden app
+To add Bitwarden within Okta:
 
-In the Okta Admin Portal, select **Applications** → **Applications**from the navigation. On the Application screen, select the **Browse App Catalog**button:
+1. From the Okta Admin Portal, go to **Applications** → **Applications**.
+2. Select **Browse App Catalog**.
+3. In the search bar, enter `Bitwarden` and select **Bitwarden**:
 
-![Browse App Catalog](https://bitwarden.com/assets/nBs4O5osFzxI0QCfQLpxx/c8232cb95494901d8c04e38efc1b3662/Screen_Shot_2022-08-29_at_11.43.30_AM.png)
+![Browse app catalog for Bitwarden](https://bitwarden.com/assets/7DjlcFofhaHLVKyy2TId7c/86dc82876b88ba717ecfb107b192e7c7/Browse_app_catalog_for_Bitwarden_.png)
+*Browse app catalog for Bitwarden*
+4. Select **Add Integration**, which will open the Bitwarden app's general settings.
+5. Enter a unique, Bitwarden-specific name in **Application label**.
+6. Check **Do not display application icon to users.**
+7. Select **Done**.
 
-In the search bar, enter `Bitwarden` and select **Bitwarden**:
+## Set up provisioning in Okta
 
-![Bitwarden Okta App](https://bitwarden.com/assets/4I8U9GJFm2w25scodW6aHu/cff940398de8ba4e363b706a2fe98d9f/today1.png)
+To set up provisioning, the following steps must be completed in the same order that's presented here.
 
-Select the **Add Integration**button to proceed to configuration.
+### Connect your Bitwarden organization
 
-### General settings
+To connect Okta with Bitwarden:
 
-On the **General Settings**tab, give the application a unique, Bitwarden-specific label. Check the **Do not display application icon to users**and **Do not display application icon in Okta Mobile App**options and select **Done**.
+1. While still on the Bitwarden app configuration page in Okta, select **Provisioning**.
+2. Select **Configure API Integration**.
+3. Check **Enable API Integration**.
+4. Enter details you found earlier in the Bitwarden Admin Console, from **Settings**→ **SCIM provisioning**:
 
-## Setup provisioning
+ - In the **Base URL** field, enter your **SCIM URL** from Bitwarden.
+ - In the **API Token** field, enter your **SCIM API key** from Bitwarden.
 
-To setup provisioning, the following steps must be completed in the order presented.
+![Enter Bitwarden SCIM URL and API key](https://bitwarden.com/assets/5GMQfUOLdpOaKhNxDf88D6/86617a7ee28f2fc5d2e6d646652406a1/Enter_Bitwarden_SCIM_URL_and_API_key.png)
+*Enter Bitwarden SCIM URL and API key*
+5. Select **Test API Credentials**. If you see a confirmation message like "Bitwarden was verified successfully!" then your connection works.
+6. Select **Save**.
 
-### Provisioning settings
+### Set provisioning actions
 
-Open the **Provisioning**tab and select the **Configure API Integration**button.
+To allow specific provisioning actions:
 
-Once selected, Okta will list a few options for you to configure:
+1. While still on the **Provisioning** tab, select **To App**.
+2. Select **Edit**:
 
-![Configure API Integration](https://bitwarden.com/assets/1vyUChnKJS2WM2V6u0gMGS/826c7a34f32cc9dc3b864a969d1b00c5/Screen_Shot_2023-02-06_at_1.39.09_PM.png)
+![Provisioning to app](https://bitwarden.com/assets/2xFykuY8l8QtAp8ZfvrwQB/f7e98ede27e13479d54aa04f1a8fec18/Provisioning_to_app.png)
+*Provisioning to app*
+3. Check **Create Users** and **Deactivate Users**.
+4. Select **Save**.
+5. (Optional) Customize the **Bitwarden Attribute Mappings**.
 
-1. Check the **Enable API Integration** checkbox.
-2. In the **Base URL** field, enter your SCIM URL, which can be found on the SCIM Provisioning screen ([learn more](https://bitwarden.com/help/okta-scim-integration/#enable-scim/)).
-3. In the **API Token** field, enter your SCIM API Key ([learn more](https://bitwarden.com/help/okta-scim-integration/#enable-scim/)).
+### Set Assignments
 
-Once you are finished, use the **Test API Credentials**button to test your configuration. If it passes the test, select the **Save** button.
-
-### Set Provisioning actions
-
-After the provisioning settings step has been completed, navigate to the **Provisioning**→ **To App** screen. Then, select the **Edit**button:
-
-![Provisioning To App](https://bitwarden.com/assets/7HbSzaHxTZ8iddtJ3p0ATj/b24242f237309de4d51e1f7c943d7903/today3.png)
-
-Enable, at a minimum, **Create Users** and **Deactivate Users**. Select **Save**when you are done.
-
-## Assignments
-
-Open the **Assignments**tab and use the Assign dropdown menu to assign people or groups to the application. Assigned users and groups will be automatically issued an invitation. Depending on your workflow, you may need to use the **Push Groups**tab to trigger group provisioning once they are assigned. 
+Open the **Assignments**tab and use the **Assign** dropdown menu to assign people or groups to the application. Assigned users and groups will be automatically issued an invitation. Depending on your workflow, you may need to use the **Push Groups**tab to trigger group provisioning once they are assigned. 
 
 ## Finish user onboarding
 
@@ -28449,7 +28694,7 @@ At this point, you have configured everything you need within the context of Pin
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -28592,7 +28837,7 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 ## Enable SCIM
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
@@ -32311,12 +32556,12 @@ Identity provider configuration will often require you to refer back to the AD F
 | Sign authentication requests | Whether AD FS expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -32481,12 +32726,12 @@ Identity provider configuration will often require you to refer back to the Auth
 | Want Authentication Requests Signed | Whether Auth0 expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -32769,12 +33014,12 @@ Identity provider configuration will often require you to refer back to the Duo 
 | Want Authentication Requests Signed | Whether Duo expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the Configuration
 
@@ -32910,12 +33155,12 @@ Identity provider configuration will often require you to refer back to the Work
 | Want Authentication Requests Signed | Whether Google Workspace expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -33074,12 +33319,12 @@ Identity provider configuration will often require you to refer back to the Jump
 | Want Authentication Requests Signed | Whether JumpCloud expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -33379,12 +33624,12 @@ Identity provider configuration will often require you to refer back to the Azur
 | Want Authentication Requests Signed | Whether Azure expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -33421,47 +33666,47 @@ This article contains **Okta-specific** help for configuring Login with SSO via 
 
 Configuration involves working simultaneously within the Bitwarden web app and the Okta Admin Portal. As you proceed, we recommend having both readily available and completing steps in the order they are documented.
 
-> [!NOTE]
+> [!TIP] Okta settings screenshot
 > **Already an SSO expert?** Skip the instructions in this article and download screenshots of sample configurations to compare against your own.
 > 
-> ⬇️ [Download Sample](https://bitwarden.com/assets/3tQfArvZQ1vigzlnjdBxr1/41449d881bd3292eed3046cf457495f1/saml-okta-sample.zip)
+> ⬇️ [Download Sample](https://bitwarden.com/assets/3tQfArvZQ1vigzlnjdBxr1/364da08e7280662e743b6f6b75eb225f/saml-okta.zip.zip)
 
 ## Open SSO in the web app
 
 Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
 
 Open your organization's **Settings** → **Single sign-on** screen:
 
 ![SAML 2.0 configuration ](https://bitwarden.com/assets/20720mRAluo6crSdTiYJrn/1175889d7f6ab42fe7614f34cdd1dcdd/2024-12-04_09-41-15.png)
+*SAML 2.0 configuration *
 
 If you haven't already, create a unique **SSO identifier**for your organization and select **SAML**from the the **Type**dropdown. Keep this screen open for easy reference.
 
-You can turn off the **Set a unique SP entity ID**option at this stage if you wish. Doing so will remove your organization ID from your SP entity ID value, however in almost all cases it is recommended to leave this option on.
+You can uncheck **Set a unique SP entity ID**. If you do, this will remove your organization ID from your SP entity ID value. We recommend leaving this setting checked in almost all cases.
 
 > [!TIP] Self-hosting, use alternative Member Decryption Options.
 > There are alternative **Member decryption options**. Learn how to get started using [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/) or [Key Connector](https://bitwarden.com/help/about-key-connector/).
 
 ## Create an Okta application
 
-In the Okta Admin Portal, select **Applications** → **Applications** from the navigation. On the Applications screen, select the **Create App Integration** button:
+Next, create a new Okta application:
 
-![Okta create app integration](https://bitwarden.com/assets/6cYqg9EBmbzQQuf53Yzsc5/0b61a779d1c366a785f01618e04cc09d/Screen_Shot_2022-10-20_at_4.13.03_PM.png)
+1. From the Okta Admin Portal, go to **Applications** → **Applications**.
+2. Select **Create App Integration.**
+3. Select **SAML 2.0**:
 
-In the Create a New Application Integration dialog, select the **SAML 2.0** radio button:
-
-![SAML 2.0 radio button](https://bitwarden.com/assets/3Cdqx3qvpCDnc9xBuHOkLx/ae7861920eb5b09268d29bcfc0c68e1a/Screen_Shot_2022-10-24_at_10.13.31_AM.png)
-
-Select the **Next** button to proceed to configuration.
-
-### General settings
-
-On the **General Settings** screen, give the application a unique, Bitwarden-specific name and select **Next**.
+![Create new app for SAML 2.0](https://bitwarden.com/assets/6QTVpxi659XVt11Azdtoz/38f8eb0cb2d003de0bba59bf4a6fa3be/Create_new_app_for_SAML_2.0.png)
+*Create new app for SAML 2.0*
+4. Select **Next**, which will open the app's general settings.
+5. Enter a unique, Bitwarden-specific name in **App name**.
+6. Select **Next**.
 
 ### Configure SAML
 
-On the **Configure SAML** screen, configure the following fields:
+This will open the **Configure SAML** page. Configure the following fields:
 
 | **Field** | **Description** |
 |------|------|
@@ -33472,9 +33717,12 @@ On the **Configure SAML** screen, configure the following fields:
 
 ### Advanced settings
 
-Select the **Show Advanced Settings** link and configure the following fields:
+Next, select **Show Advanced Settings**:
 
-![Advanced Settings ](https://bitwarden.com/assets/4VOeKsTeXHPsipA0SoDgHb/d19693e16cb98ab475cb1873bf5641d7/okta-advsettings.png)
+![Show Advanced Settings](https://bitwarden.com/assets/7vxaIVnLCCTyb55hOpkctS/13481c873198fca937f2c92045bbc8c3/Show_Advanced_Settings.png)
+*Show Advanced Settings*
+
+Set up these fields:
 
 | **Field** | **Description** |
 |------|------|
@@ -33483,44 +33731,54 @@ Select the **Show Advanced Settings** link and configure the following fields:
 | Signature Algorithm | The signing algorithm used to sign the response and/or assertion, depending on which is set to **Signed**. By default, `rsa-sha256`. |
 | Digest Algorithm | The digest algorithm used to sign the response and/or assertion, depending on which is set to **Signed**. This field must match the selected **Signature Algorithm**. |
 
+Once configured, select **Next** and then **Finish**.
+
 ### Attribute statements
 
-In the **Attribute Statements** section, construct the following SP → IdP attribute mappings:
+To define attribute statements in your new Bitwarden app:
 
-![Attribute Statements ](https://bitwarden.com/assets/VJZ2ZJtqdCdnzxG4xf4G8/b9fce227ebf1ba72e3598875e1f6f7aa/okta-attr.png)
+1. Go to the **Sign On** tab.
+2. Within the **Attribute statements** section, select **Show legacy configuration**.
+3. Select **Edit**:
 
-Once configured, select the **Next** button to proceed to the **Feedback** screen and select **Finish**.
+![Create attribute statements](https://bitwarden.com/assets/6zV8VlsjIKhynmkq6p1xpW/a85a7d67ba233cfeeb569c5861d0203b/Create_attribute_statements.png)
+*Create attribute statements*
+4. By default, one line will appear below to build an attribute statement. Select **Add Another** twice so you can build these three SP → IdP attribute mappings. Then select **Save**:
+
+| **Name** | **Name format** | **Value** |
+|------|------|------|
+| email | Unspecified | user.email |
+| firstname | Unspecified | user.firstName |
+| lastname | Unspecified | user.lastName |
 
 ### Get IdP values
 
-Once your application is created, select the **Sign On** tab for the app and select the **View Setup Instructions** button located on the right side of the screen:
+While still on the **Sign On** tab, select **View Setup Instructions** on the right:
 
-![View SAML setup instructions ](https://bitwarden.com/assets/apJpQyn4GTUJGzRNBUf02/e5fbd8ca4f7875bc9ec2a87cbc433db6/Screen_Shot_2022-10-25_at_9.39.47_AM__2_.png)
+![View SAML setup instructions](https://bitwarden.com/assets/20AjFNFk4VoBt2HrDtB9Zt/86bb2b1181f09d03b1ac7ac05844c46e/View_SAML_setup_instructions.png)
+*View SAML setup instructions*
 
-Either leave this page up [for future use](https://bitwarden.com/help/saml-okta/#identity-provider-configuration/), or copy the **Identity Provider Single Sign-On URL** and **Identity Provider Issuer** and download the **X.509 Certificate**:
+Leave this page open for [next steps](https://bitwarden.com/help/saml-okta/#saml-identity-provider-configuration/), or copy the **Identity Provider Single Sign-On URL** and **Identity Provider issuer** and download the **X.509 Certificate**:
 
-![IdP Values ](https://bitwarden.com/assets/4SRYsrAZjCPhksikeAOnBp/f975c57912f6c1a8c5d5d6002d23bd38/okta-values.png)
+![IdP values](https://bitwarden.com/assets/3oc8QKbmtLzkZctLDxCCes/356c439aca47a5d0bca3c14ce0126ab2/IdP_values_.png)
+*IdP values*
 
 ### Assignments
 
-Navigate to the **Assignments** tab and select the **Assign** button:
+Return to your Bitwarden app configuration in Okta and go to **Assignments**. Select **Assign**:
 
-![Assigning Groups ](https://bitwarden.com/assets/4KcjFuFnHFMnQda4NbKTGh/731a0c635efde1f3333ed6afd58d994e/okta-assign.png)
+![Assign to People or Groups](https://bitwarden.com/assets/1XoCbTbrAZV37R3wBTHgVl/0030e828cc635e1a70a719c94885f5ac/Assign_to_People_or_Groups.png)
+*Assign to People or Groups*
 
-You can assign access to the application on a user-by-user basis using the **Assign to People** option, or in-bulk using the **Assign to Groups** option.
+You can assign access to the application on a user-by-user basis using the **Assign to People** option or in-bulk using the **Assign to Groups** option.
 
 ## Back to the web app
 
-At this point, you have configured everything you need within the context of the Okta Admin Portal. Return to the Bitwarden web app to complete configuration.
+At this point, you've configured everything needed within the Okta Admin Portal. Open the Bitwarden web app and go to **Settings** → **Single sign-on** to complete your SSO setup.
 
-The Single sign-on screen separates configuration into two sections:
+### SAML service provider configuration
 
-- **SAML service provider configuration** will determine the format of SAML requests.
-- **SAML identity provider configuration** will determine the format to expect for SAML responses.
-
-### Service provider configuration
-
-Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-application/):
+The first section is **SAML service provider configuration** and determine the format of SAML requests. Configure the following fields according to the choices selected in the Okta Admin Portal [during app creation](https://bitwarden.com/help/saml-okta/#create-an-okta-application/):
 
 | **Field** | **Description** |
 |------|------|
@@ -33531,40 +33789,42 @@ Configure the following fields according to the choices selected in the Okta Adm
 | Expect signed assertions | Check this box if you set the Assertion Signature field to **Signed**[in Okta](https://bitwarden.com/help/saml-okta/#advanced-settings/). |
 | Validate certificates | Check this box when using trusted and valid certificates from your IdP through a trusted CA. Self-signed certificates may fail unless proper trust chains are configure within the Bitwarden login with SSO docker image. |
 
-When you're done with the service provider configuration, **Save** your work.
+When you're done with the service provider configuration, select **Save**.
 
-### Identity provider configuration
+### SAML identity provider configuration
 
-Identity provider configuration will often require you to refer back to the Okta Admin Portal to retrieve application values:
+The second section on this page is **SAML identity provider configuration** and determines the format to expect for SAML responses. Refer back to the Okta Admin Portal to retrieve some of these values:
 
 | **Field** | **Description** |
 |------|------|
 | Entity ID | Enter your **Identity Provider Issuer**, retrieved from the Okta [Sign On Settings](https://bitwarden.com/help/saml-okta/#get-idp-values/) screen by selecting the **View Setup Instructions**button. This field is case sensitive. |
-| Binding Type | Set to **Redirect**. Okta currently does not support HTTP POST. |
-| Single Sign On Service URL | Enter your **Identity Provider Single Sign-On URL**, retrieved from the Okta [Sign On Settings](https://bitwarden.com/help/saml-okta/#get-idp-values/) screen. |
-| Single Log Out Service URL | Login with SSO currently **does not**support SLO. This option is planned for future development, however you may pre-configure it if you wish. |
-| X509 Public Certificate | Paste the [downloaded certificate](https://bitwarden.com/help/saml-okta/#get-idp-values/), removing `-----BEGIN CERTIFICATE-----` and  `-----END CERTIFICATE-----` The certificate value is case sensitive, extra spaces, carriage returns, and other extraneous characters **will cause certification validation to fail**. |
-| Outbound Signing Algorithm | Select the Signature Algorithm selected [during Okta app configuration](https://bitwarden.com/help/saml-okta/#advanced-settings/). If you didn't change the Signature Algorithm, leave the default (`rsa-sha256`). |
+| Binding type | Set to **Redirect**. Okta currently does not support HTTP POST. |
+| Single sign-on service URL | Enter your **Identity Provider Single Sign-On URL**, retrieved from the Okta [Sign On Settings](https://bitwarden.com/help/saml-okta/#get-idp-values/) screen. |
+| Single log-out service URL | Login with SSO currently **does not**support SLO. |
+| X509 public certificate | Paste the [downloaded certificate](https://bitwarden.com/help/saml-okta/#get-idp-values/), removing `-----BEGIN CERTIFICATE-----` and  `-----END CERTIFICATE-----` The certificate value is case sensitive, extra spaces, carriage returns, and other extraneous characters **will cause certification validation to fail**. |
+| Outbound signing algorithm | Select the Signature Algorithm selected [during Okta app configuration](https://bitwarden.com/help/saml-okta/#advanced-settings/). If you didn't change the Signature Algorithm, leave the default (`rsa-sha256`). |
 | Allow outbound logout requests | Login with SSO currently **does not**support SLO. |
-| Want Authentication Requests Signed | Whether Okta expects SAML requests to be signed. |
+| Sign authentication requests | Whether Okta expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
-When you're done with the identity provider configuration, **Save** your work.
+When you're done with the identity provider configuration, select **Save**.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
-Once your configuration is complete, test it by navigating to [https://vault.bitwarden.com](https://vault.bitwarden.com), entering your email address and selecting the **Enterprise Single-On** button:
+Once your configuration is complete, test it. Go to [https://vault.bitwarden.com](https://vault.bitwarden.com), enter your email address, and select **Use single sign-on**:
 
 ![Log in options screen](https://bitwarden.com/assets/3BdlHeogd42LEoG06qROyQ/c68021df4bf45d72e9d37b1fbf5a6040/login.png)
+*Log in options screen*
 
-Enter the [configured organization identifier](https://bitwarden.com/help/configure-sso-saml/#step-1-enabling-login-with-sso/) and select **Log In**. If your implementation is successfully configured, you will be redirected to the Okta login screen:
+Enter the [configured organization identifier](https://bitwarden.com/help/configure-sso-saml/#step-1-enabling-login-with-sso/) and select **Continue**. If your implementation is successfully configured, you will be redirected to the Okta login screen:
 
-![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/4342c56fa656be94ef90dd620251a868/okta-login.png)
+![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/8f6e1d8555c9e1b60d2e145d0f0bb565/Log_in_with_Okta.png)
+*Log in with Okta *
 
 After you authenticate with your Okta credentials, enter your Bitwarden master password to decrypt your vault!
 
@@ -33713,12 +33973,12 @@ Identity provider configuration will often require you to refer back to the OneL
 | Sign authentication requests | Whether OneLogin expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
-> When completing the X509 certificate, take note of the expiration date. Certificates will have to be renewed in order to prevent any disruptions in service to SSO end users. If a certificate has expired, Admin and Owner accounts will always be able to log in with email address and master password.
+> When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
 
 When you are done with the identity provider configuration, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -37277,6 +37537,11 @@ Using two-step login (also called two-factor authentication, or 2FA) protects yo
 
 [![Vimeo Video](https://vumbnail.com/1060246387.jpg)](https://vimeo.com/1060246387)
 *[Watch on Vimeo](https://vimeo.com/1060246387)*
+
+**Video Chapters:**
+Email-based two-step login is enabled by default. Explore other methods like authenticator apps and hardware keys to find what works best for you. 
+
+Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/).
 
 There are many different methods available for two-step login. You can have as many active as you'd like. What's important is that any form of two-step login is active to be sure your account is protected.
 

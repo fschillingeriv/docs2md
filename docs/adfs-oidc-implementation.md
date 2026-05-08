@@ -91,7 +91,7 @@ At this point, you have configured everything you need within the contest of the
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 

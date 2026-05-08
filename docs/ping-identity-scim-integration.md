@@ -14,7 +14,7 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 ## Enable SCIM
 
 > [!NOTE] Self-hosting SCIM
-> **Are you self-hosting Bitwarden?** If so, complete [these steps to enable SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
+> **Are you self-hosting Bitwarden?** If so, complete these steps to [set up SCIM for your server](https://bitwarden.com/help/self-hosting-scim/) before proceeding.
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 

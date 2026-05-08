@@ -79,7 +79,7 @@ At this point, you have configured everything you need within the context of the
 When you are done configuring these fields, **Save** your work.
 
 > [!TIP] Policies for SSO Guides
-> You can require users to log in with SSO by activating the single sign-on authentication policy. Please note, this will require activating the single organization policy as well. [Learn more](https://bitwarden.com/help/policies/).
+> You can require users to log in with SSO by activating the [single sign-on authentication policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/).
 
 ## Test the configuration
 
@@ -89,7 +89,7 @@ Once your configuration is complete, test it by navigating to [https://vault.bit
 
 Enter the [configured organization identifier](https://bitwarden.com/help/oidc-okta/#/) and select **Log In**. If your implementation is successfully configured, you'll be redirected to the Okta login screen:
 
-![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/4342c56fa656be94ef90dd620251a868/okta-login.png)
+![Log in with Okta ](https://bitwarden.com/assets/3Rh2Bg17sCE57xJsUKfqwN/8f6e1d8555c9e1b60d2e145d0f0bb565/Log_in_with_Okta.png)
 
 After you authenticate with your Okta credentials, enter your Bitwarden master password to decrypt your vault!
 
