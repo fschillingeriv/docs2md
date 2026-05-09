@@ -69,6 +69,16 @@ Learn how to to import your passwords with the browser extension, or explore oth
 
 ## Import your passwords
 
+### Overview (1 min)
+
+The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
+
+If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
+
+For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -120,6 +130,12 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
 
 ## Autofill from Browser extension
+
+### Overview (1 min)
+
+Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -265,6 +281,12 @@ Long-press in any text field to autofill on iOS (requires keyboard autofill to b
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+
+### Using the mobile app
+
+### Using the web app
+
+### Using the desktop app
 
 ## Learn More
 

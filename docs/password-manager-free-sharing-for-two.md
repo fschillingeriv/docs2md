@@ -61,6 +61,16 @@ As an owner, you'll be responsible for inviting the other member to your organiz
 
 ## Import your data
 
+### Overview (1 min)
+
+The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
+
+If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
+
+For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
+
+Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -108,6 +118,8 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5AL
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
+
+### From LastPass
 
 ## Support
 

@@ -112,8 +112,8 @@ When creating a new passkey on a website or app, the iOS application will prompt
 
 Select **Continue**.
 
-> [!NOTE] Other options for passkeys (iOS)
-> Select **Other Options** if you do not wish to store the passkey in Bitwarden or **Other Sign In Options** to sign in with a passkey not stored in Bitwarden.
+> [!NOTE] Sign in with non-Bitwarden saved passkey (iOS)
+> If you prefer to sign in with a passkey not stored in Bitwarden, select **Other Sign In Options**.
 
 If a passkey already exists for this service, Bitwarden will allow you to save a new passkey by selecting the + icon to create a new item, or by overwriting an existing passkey:
 
@@ -132,5 +132,5 @@ To use a passkey stored in Bitwarden, initiate the passkey login on the website.
 
 Select **Continue**.
 
-> [!NOTE] Other options for passkeys (iOS)
-> Select **Other Options** if you do not wish to store the passkey in Bitwarden or **Other Sign In Options** to sign in with a passkey not stored in Bitwarden.
+> [!NOTE] Sign in with non-Bitwarden saved passkey (iOS)
+> If you prefer to sign in with a passkey not stored in Bitwarden, select **Other Sign In Options**.

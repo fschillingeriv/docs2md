@@ -254,6 +254,9 @@ Select the ⋮ options menu for the item you want to duplicate and select [clone
 ![Clone an item](https://bitwarden.com/assets/5KRdegIaIbOHxGkMj64Fs9/fce91fc0bc5cabfa299d1fd522c0da7d/2026-04-23_10-12-38.png)
 *Clone an item*
 
+> [!NOTE] Passkeys not cloned
+> [Passkeys](https://bitwarden.com/help/storing-passkeys/) are not copied when an item is cloned. The new item will include the same details as the original one, except the passkey field will be empty.
+
 ## Share items
 
 If you're a member of an [organization](https://bitwarden.com/help/about-organizations/), you can [assign vault items to your organization's collections](https://bitwarden.com/help/sharing/), transferring ownership of the vault item to the organization. To share with other organization members, use the ⋮ menu:

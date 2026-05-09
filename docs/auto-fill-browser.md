@@ -253,5 +253,5 @@ You can [use passkeys to log in](https://bitwarden.com/help/storing-passkeys/) t
 
 The [inline autofill menu](https://bitwarden.com/help/auto-fill-browser/#inline-autofill-menu/) can also be used to easily authenticate with passkeys.
 
-> [!NOTE] Excluded domains surpress passkeys
-> When a domain is in the [**Excluded Domains**](https://bitwarden.com/help/exclude-domains/)list, Bitwarden browser extensions won't issue passkey prompts.
+> [!NOTE] Excluded domains supress passkeys
+> The browser extension will not offer to save or use a passkey for any domain included in the [**excluded domains**](https://bitwarden.com/help/exclude-domains/) list.

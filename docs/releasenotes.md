@@ -45,9 +45,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.2, Browser Extension 2026.4.0, Desktop 2026.4.0, Mobile 2026.4.1, and CLI 2026.4.0)*
 
-> [!NOTE] 2026 CLI key rotation.
-> **Security notice**: To resolve a bug with the local storage of API keys for the [Bitwarden CLI](https://bitwarden.com/help/cli/), the **next Bitwarden server release** following this one will automatically rotate the [personal API keys](https://bitwarden.com/help/personal-api-key/) of users of the Bitwarden CLI. If you use the Bitwarden CLI for any automated workflows, update those workflows with your new API keys immediately following that release in order to maintain continuity.
-
 #### Password Manager
 
 - ⭐ **Change master password on extensions and desktop**: You can now [change your master password](https://bitwarden.com/help/master-password/#change-master-password/) on browser extensions and desktop apps. To support future improvements, workflows that allowed a master password change via the CLI were removed.
@@ -549,7 +546,7 @@ This release includes:
 #### Password Manager
 
 - **Click to autofill setting moved**: The Click to autofill setting on the browser extension has been moved to the **Settings** → **Appearance** tab. Learn more [here](https://bitwarden.com/help/auto-fill-browser/#customizing-autofill-behavior/).
-- **Prevent duplicate passkeys on iOS**: Duplicate passkeys cannot be saved on iOS that match an existing username and service already stored in the Bitwarden vault. The existing passkey may be modified or overwritten instead. Learn more about creating passkeys [here](https://bitwarden.com/help/storing-passkeys/#using-passkeys-with-bitwarden/).
+- **Prevent duplicate passkeys on iOS**: Duplicate passkeys cannot be saved on iOS that match an existing username and service already stored in the Bitwarden vault. The existing passkey may be modified or overwritten instead. Learn more about creating passkeys [here](https://bitwarden.com/help/storing-passkeys/#save-and-autofill-passkeys-with-bitwarden/).
 - **Enterprise single sign-on login update**: The "Use single sign-on" button has been added to the first step of the SSO login workflow in order to streamline Enterprise SSO login. Learn more [here](https://bitwarden.com/help/using-sso/#login-using-sso/).
 
 #### Admin Console
