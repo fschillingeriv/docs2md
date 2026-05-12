@@ -65,10 +65,6 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 
 ## Import your passwords
 
-Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
-
-## Import your passwords
-
 ### Overview (1 min)
 
 The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
@@ -124,10 +120,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5AL
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
-
-## Autofill from Browser extension
-
-Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
 
 ## Autofill from Browser extension
 
@@ -193,10 +185,6 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 ## Autofill from Android App
 
-Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
-
-## Autofill from Android App
-
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -235,10 +223,6 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 > [!NOTE] Mobile TOTP copied to clipboard
 > If your login uses Bitwarden Authenticator for TOTPs, Bitwarden automatically copies the TOTP to your clipboard after autofill. Long press in the TOTP field to paste the code.
-
-## Autofill from iOS App
-
-Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
 ## Autofill from iOS App
 
@@ -281,12 +265,6 @@ Long-press in any text field to autofill on iOS (requires keyboard autofill to b
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
-
-### Using the mobile app
-
-### Using the web app
-
-### Using the desktop app
 
 ## Learn More
 

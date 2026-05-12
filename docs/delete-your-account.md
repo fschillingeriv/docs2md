@@ -21,7 +21,7 @@ To delete your individual account:
 
 To delete your account without needing to log in (for example, if you have lost your master password): 
 
-1. Open [https://vault.bitwarden.com/#/recover-delete](https://vault.bitwarden.com/#/recover-delete) (or [https://vault.bitwarden.eu/#/recover-delete](https://vault.bitwarden.eu/#/recover-delete)) in a web browser.
+1. Open [https://vault.bitwarden.com/#/recover-delete](https://vault.bitwarden.com/#/recover-delete) (or [https://vault.bitwarden.eu/#/recover-delete](https://vault.bitwarden.eu/#/recover-delete), or `https://your-server.com/#/recover-delete` if you're self-hosting) in a web browser.
 2. Enter the **Email Address**associated with the account to issue a deletion confirmation email.
 3. In your inbox, open the email and verify you want to delete this Bitwarden account.
 

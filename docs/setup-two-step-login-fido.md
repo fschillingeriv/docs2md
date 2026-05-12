@@ -9,7 +9,7 @@ URL: https://bitwarden.com/help/setup-two-step-login-fido/
 > 
 > - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.
 > - Use [2FA with passkeys](https://bitwarden.com/help/setup-two-step-login-fido/) to log in to your Bitwarden account.
-> - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault
+> - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault.
 
 Two-step login using FIDO2 WebAuthn credentials is available for free to all Bitwarden users. Any FIDO2 WebAuthn Certified credentials can be used, including security keys such as YubiKeys, SoloKeys, and Nitrokeys, as well as native biometrics options like Windows Hello. On macOS, non-security keys like TouchID are not currently supported.
 

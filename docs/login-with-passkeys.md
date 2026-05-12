@@ -9,7 +9,7 @@ URL: https://bitwarden.com/help/login-with-passkeys/
 > 
 > - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.
 > - Use [2FA with passkeys](https://bitwarden.com/help/setup-two-step-login-fido/) to log in to your Bitwarden account.
-> - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault
+> - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault.
 
 Passkeys offer secure authentication for your Bitwarden account. Use them to log in and, with a [PRF-capable setup](https://bitwarden.com/help/login-with-passkeys/#unlock-vault-requirements/), automatically [unlock your vault](https://bitwarden.com/help/understand-log-in-vs-unlock/) without entering your master password. Passkeys bypass two-step login, offering a streamlined alternative to traditional password-based authentication.
 
