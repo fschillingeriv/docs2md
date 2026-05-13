@@ -104,7 +104,7 @@ Get started with:
 
 ### Database options
 
-All Bitwarden self-hosted server deployments, except for [unified](https://bitwarden.com/help/install-and-deploy-lite/), ship with an MSSQL Express image by default, however customers may connect to an external MSSQL server or cluster of version 2019 or higher. [Learn more](https://bitwarden.com/help/database-options/).
+All Bitwarden self-hosted server deployments, except for [Lite](https://bitwarden.com/help/install-and-deploy-lite/), ship with an MSSQL Express image by default, however customers may connect to an external MSSQL server or cluster of version 2019 or higher. [Learn more](https://bitwarden.com/help/database-options/).
 
 ### Certificate options
 

@@ -780,7 +780,7 @@ Using Access Intelligence, administrators can preemptively assess which applicat
 
 ### Requesting password changes
 
-Requesting password changes will dispatch notifications to organization members with access to critical applications informing them that they [need to take action on at-risk passwords](https://bitwarden.com/help/change-at-risk-passwords/). Members will receive notifications both in their email inbox and as a banner in a Bitwarden browser extensions they're logged in to.
+Requesting password changes will dispatch notifications to organization members with access to critical applications informing them that they [need to take action on at-risk passwords](https://bitwarden.com/help/change-at-risk-passwords/). Members who have [permission to edit the password](https://bitwarden.com/help/collection-permissions/) will receive notifications both in their email inbox and as a banner in a Bitwarden browser extensions they're logged in to.
 
 > [!TIP] Best practices before sending Access Intelligence notifications.
 > Before dispatching your first password change requests, or as part of employee Bitwarden training, we recommend:
@@ -10792,16 +10792,6 @@ Now that you're setup to securely share data with your family through Bitwarden,
 
 ## Import your data
 
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -10935,20 +10925,6 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 
 ## Import your passwords
 
-Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
-
-## Import your passwords
-
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -10996,16 +10972,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 [Embedded content componentCtaLink]
 
 ## Autofill from Browser extension
-
-Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
-
-## Autofill from Browser extension
-
-### Overview (1 min)
-
-Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -11063,10 +11029,6 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 ## Autofill from Android App
 
-Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
-
-## Autofill from Android App
-
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -11105,10 +11067,6 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 > [!NOTE] Mobile TOTP copied to clipboard
 > If your login uses Bitwarden Authenticator for TOTPs, Bitwarden automatically copies the TOTP to your clipboard after autofill. Long press in the TOTP field to paste the code.
-
-## Autofill from iOS App
-
-Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
 ## Autofill from iOS App
 
@@ -11161,25 +11119,15 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-### Using the browser extension
-
-[Embedded content]
-
 ## Adding attachments
 
-### Using the browser extension
+### Using the browser extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
 *[Watch on Vimeo](https://vimeo.com/1175169132)*
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
-
-### Using the mobile app
-
-### Using the web app
-
-### Using the desktop app
 
 ## Support
 
@@ -11259,16 +11207,6 @@ As an owner, you'll be responsible for inviting the other member to your organiz
 ![Invite member to an organization](https://bitwarden.com/assets/7AJjR4oqEnCH3A89YYoWpH/498d594fa9703bee9c5f49e2af9f83d0/Invite_member_to_an_organization.png)
 
 ## Import your data
-
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
 
 ### Web App (1 min)
 
@@ -11710,8 +11648,8 @@ Join a free 30-minute live session hosted by the Bitwarden team. See the product
 
 ### Sign up for Bitwarden (3 min)
 
-[![Vimeo Video](https://vumbnail.com/1086379394.jpg)](https://vimeo.com/1086379394)
-*[Watch on Vimeo](https://vimeo.com/1086379394)*
+[![Vimeo Video](https://vumbnail.com/1168625816.jpg)](https://vimeo.com/1168625816)
+*[Watch on Vimeo](https://vimeo.com/1168625816)*
 
 Bitwarden offers free accounts with no limits to the number of devices or number of logins you can use. [Why wait?](https://bitwarden.com/go/start-free/) Learn more about creating your Bitwarden account [here](https://bitwarden.com/help/create-bitwarden-account/).
 
@@ -11730,6 +11668,14 @@ Using two-step login, also called 2-factor authentication or 2FA, is the most im
 
 It's so important that we offer a few options for free, including [Bitwarden Authenticator](https://bitwarden.com/help/bitwarden-authenticator/), a standalone mobile authenticator.
 
+### Recovery Code
+
+Your Bitwarden [recovery code](https://bitwarden.com/help/two-step-recovery-code/) is a one-time backup for regaining account access if you lose your two-step login device. 
+
+### Security Readiness Kit
+
+The Bitwarden [Security Readiness Kit ](https://bitwarden.com/resources/bitwarden-security-readiness-kit/)is a downloadable checklist to confirm your account is fully protected. 
+
 ### Get to know your vault (1 min)
 
 The Bitwarden Password Manager web app will list all your vault items, including [logins, cards, identities, and secure notes](https://bitwarden.com/help/managing-items/):
@@ -11745,16 +11691,6 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 ![Bitwarden on iOS and Android](https://bitwarden.com/assets/53OzJZ4klYWemxUepHMtq4/5ab47331f033259bd2e82817a99e992f/2025-01-21_15-22-10.png)
 
 ## Import your passwords
-
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
 
 ### Browser Extension (1 min)
 
@@ -11803,12 +11739,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 [Embedded content componentCtaLink]
 
 ## Autofill from Browser extension
-
-### Overview (1 min)
-
-Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -11939,7 +11869,7 @@ Long-press in any text field to autofill on iOS (requires keyboard autofill to b
 
 ## Adding attachments
 
-### Using the browser extension
+### Using the browser extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
 *[Watch on Vimeo](https://vimeo.com/1175169132)*
@@ -12078,16 +12008,6 @@ Your organization may offer a [free Bitwarden Families plan](https://bitwarden.c
 
 ## Import your passwords
 
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -12136,12 +12056,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 [Embedded content]
 ## Autofill from Browser extension
-
-### Overview (1 min)
-
-Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -12289,25 +12203,15 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-### Using the browser extension
-
-[Embedded content]
-
 ## Adding attachments
 
-### Using the browser extension
+### Using the browser extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
 *[Watch on Vimeo](https://vimeo.com/1175169132)*
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
-
-### Using the mobile app
-
-### Using the web app
-
-### Using the desktop app
 
 ## Learn more
 
@@ -12582,20 +12486,6 @@ From the web app, you can fill your vault with information to keep secure, organ
 
 ## Import your passwords
 
-Learn how to to import your passwords with the browser extension, or explore other methods, such as the desktop and mobile apps, which provide direct import for compatible browsers and apps.
-
-## Import your passwords
-
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -12643,16 +12533,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 [Embedded content componentCtaLink]
 
 ## Autofill from Browser extension
-
-Learn how to use the inline menu to autofill your passwords and other credentials, or explore other methods, such as the fill button or keyboard shortcuts.
-
-## Autofill from Browser extension
-
-### Overview (1 min)
-
-Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -12710,10 +12590,6 @@ Learn how to autofill with the Bitwarden browser extension and automatically sav
 
 ## Autofill from Android App
 
-Learn how to use inline suggestions to autofill your passwords and other credentials, or explore other methods, such as the popup menu.
-
-## Autofill from Android App
-
 ### Inline suggestions (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1149193513.jpg)](https://vimeo.com/1149193513)
@@ -12752,10 +12628,6 @@ Check out the [Android troubleshooting guide ](https://bitwarden.com/help/auto-f
 
 > [!NOTE] Mobile TOTP copied to clipboard
 > If your login uses Bitwarden Authenticator for TOTPs, Bitwarden automatically copies the TOTP to your clipboard after autofill. Long press in the TOTP field to paste the code.
-
-## Autofill from iOS App
-
-Learn how to use keyboard autofill for your passwords and other credentials, or explore other methods, such as long-pressing on a text field, or using the browser app extension
 
 ## Autofill from iOS App
 
@@ -12807,25 +12679,15 @@ As a member of your organization, you can securely share information like login 
 **Video Chapters:**
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
 
-### Using the browser extension
-
-[Embedded content]
-
 ## Adding attachments
 
-### Using the browser extension
+### Using the browser extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
 *[Watch on Vimeo](https://vimeo.com/1175169132)*
 
 **Video Chapters:**
 Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
-
-### Using the mobile app
-
-### Using the web app
-
-### Using the desktop app
 
 ## Learn More
 
@@ -28596,6 +28458,81 @@ In the following table, "premium features" (included for **Teams organizations**
 
 Self-hosted Bitwarden organizations will be able to utilize all paid features provided by their chosen plan. Only Families and Enterprise organizations can be imported to self-hosted servers. Learn more about [self-hosting an organization](https://bitwarden.com/help/self-host-an-organization/).
 ---
+URL: https://bitwarden.com/help/payment-methods/
+---
+# Payment Methods
+
+Bitwarden accepts several payment methods for paid plans. Payment methods vary depending on your plan and billing country.
+
+## Accepted payment methods
+
+All available payment methods are listed when you upgrade your subscription or [update your billing information](https://bitwarden.com/help/update-billing-info/) in the web app.
+
+### Credit or debit card
+
+All Bitwarden plans types accept major credit cards, including Visa, Mastercard, American Express, and Discover. Card payments are processed securely through Stripe. Card details are added in the web app when first signing up or [updating your billing information](https://bitwarden.com/help/update-billing-info/):
+
+![Payment methods](https://bitwarden.com/assets/2r9qy9dkCQrrt9DsQ5HLhi/1b15e08dc14153e81037ffeb69d21c8a/2026-03-05_15-15-21.png)
+*Payment methods*
+
+### PayPal
+
+PayPal is available as a payment method for all plans. When selecting PayPal, you can link your PayPal account or add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout, when updating billing information, or from an [unpaid invoice](https://bitwarden.com/help/invoices-and-receipts/). 
+
+### Bank account
+
+Bank account payments are available for some Teams and Enterprise plans:
+
+- For domestic transfers within the United States, you can set up a direct bank deposit (ACH) through your [payment details](https://bitwarden.com/help/update-billing-info/) or via invoiced billing. ACH payments are processed using Stripe's bank transfer system.
+- Wire transfers from outside of the United States are only accepted with [invoiced billing](https://bitwarden.com/help/payment-methods/#invoiced-billing/). Once invoiced, you'll find our bank account details on the invoice to complete your wire transfer. To confirm that your account is eligible for international wire transfer payments and switch to invoiced billing, [contact us](https://bitwarden.com/contact/).
+
+### Check
+
+Corporate checks are accepted for annual organization plans, Families, Teams, and Enterprise, that [pay by invoice](https://bitwarden.com/help/payment-methods/#invoiced-billing/). The mailing address is listed on your invoice. To ensure the fastest processing, checks must include your company name, invoice number, and contact information.
+
+### Cryptocurrency
+
+Cryptocurrency, such as Bitcoin, is accepted. You need to purchase [account credit](https://bitwarden.com/help/payment-methods/#account-credit/) to upgrade or renew your subscription with cryptocurrency.
+
+### Account credit
+
+Account credit lets you pay for your Bitwarden upgrade or subscription in advance. Purchase credits in your local currency through PayPal or cryptocurrency through BitPay. If you want to pay via account credit, make sure you purchase the account credits **before** upgrading or your renewal date. We'll deduct the upgrade or renewal payment from your account credit balance.
+
+To add credit to your account:
+
+1. Go to **Settings → Billing**.
+2. Select **Add credit**.
+3. Enter the total in USD that you'd like to purchase.
+4. Select **Submit**.
+5. You'll be taken to PayPal or BitPay to complete the transaction. Once complete, you will receive an email confirmation.
+
+> [!NOTE] Apply account credit to invoice
+> To pay an unpaid invoice with account credit, [contact us](https://bitwarden.com/contact/).
+
+## Invoiced billing
+
+Most payment methods are processed automatically when you upgrade or on your renewal date. Some plans allows you to instead pay an emailed [invoice](https://bitwarden.com/help/invoices-and-receipts/) manually. With this option, an invoice is sent to the billing contact on your renewal date. Pay the invoice manually with one of the methods listed on the invoice itself.
+
+> [!TIP] Keep billing contact accurate
+> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can receive invoices and manage billing.
+
+Who is eligible for invoiced billing and when invoice payments are due depends:
+
+| Subscription type | Payment due date |
+|------|------|
+| Annual plans switched to invoicing after [contacting us](https://bitwarden.com/contact/) | 30 days from invoice date |
+| Annual plans set up through [Bitwarden sales](https://bitwarden.com/contact-sales/) | 30 days from invoice date |
+| [Resellers](https://bitwarden.com/help/bitwarden-resellers/) | 45 days from invoice date |
+
+> [!NOTE] Failed payments, invoice due
+> If you are on any other plan and we were unable to process your automatic payment, an [unpaid invoice](https://bitwarden.com/help/invoices-and-receipts/) will appear in your **Billing history**. Payment is due 14 days from the invoice date to avoid disruption. If you need help, please [contact us](https://bitwarden.com/contact/).
+
+If an invoice is not paid by its due date, your account and, if applicable organization members, may be affected. Pay the invoice to [restore your organization's services](https://bitwarden.com/help/organization-renewal/#re-enabling-a-disabled-organization/) or your Premium plan.
+
+## Manage your payment method
+
+Use the Bitwarden web app to [review or update your payment details](https://bitwarden.com/help/update-billing-info/).
+---
 URL: https://bitwarden.com/help/personal-api-key/
 ---
 # CLI Authentication via API Key
@@ -36025,7 +35962,7 @@ Get started with:
 
 ### Database options
 
-All Bitwarden self-hosted server deployments, except for [unified](https://bitwarden.com/help/install-and-deploy-lite/), ship with an MSSQL Express image by default, however customers may connect to an external MSSQL server or cluster of version 2019 or higher. [Learn more](https://bitwarden.com/help/database-options/).
+All Bitwarden self-hosted server deployments, except for [Lite](https://bitwarden.com/help/install-and-deploy-lite/), ship with an MSSQL Express image by default, however customers may connect to an external MSSQL server or cluster of version 2019 or higher. [Learn more](https://bitwarden.com/help/database-options/).
 
 ### Certificate options
 

@@ -29,8 +29,8 @@ Join a free 30-minute live session hosted by the Bitwarden team. See the product
 
 ### Sign up for Bitwarden (3 min)
 
-[![Vimeo Video](https://vumbnail.com/1086379394.jpg)](https://vimeo.com/1086379394)
-*[Watch on Vimeo](https://vimeo.com/1086379394)*
+[![Vimeo Video](https://vumbnail.com/1168625816.jpg)](https://vimeo.com/1168625816)
+*[Watch on Vimeo](https://vimeo.com/1168625816)*
 
 Bitwarden offers free accounts with no limits to the number of devices or number of logins you can use. [Why wait?](https://bitwarden.com/go/start-free/) Learn more about creating your Bitwarden account [here](https://bitwarden.com/help/create-bitwarden-account/).
 
@@ -49,6 +49,14 @@ Using two-step login, also called 2-factor authentication or 2FA, is the most im
 
 It's so important that we offer a few options for free, including [Bitwarden Authenticator](https://bitwarden.com/help/bitwarden-authenticator/), a standalone mobile authenticator.
 
+### Recovery Code
+
+Your Bitwarden [recovery code](https://bitwarden.com/help/two-step-recovery-code/) is a one-time backup for regaining account access if you lose your two-step login device. 
+
+### Security Readiness Kit
+
+The Bitwarden [Security Readiness Kit ](https://bitwarden.com/resources/bitwarden-security-readiness-kit/)is a downloadable checklist to confirm your account is fully protected. 
+
 ### Get to know your vault (1 min)
 
 The Bitwarden Password Manager web app will list all your vault items, including [logins, cards, identities, and secure notes](https://bitwarden.com/help/managing-items/):
@@ -64,16 +72,6 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 ![Bitwarden on iOS and Android](https://bitwarden.com/assets/53OzJZ4klYWemxUepHMtq4/5ab47331f033259bd2e82817a99e992f/2025-01-21_15-22-10.png)
 
 ## Import your passwords
-
-### Overview (1 min)
-
-The easiest way to import is using the **Bitwarden Desktop app**, which can pull passwords directly from Chromium browsers like Chrome, Edge, Brave, Vivaldi, and Opera)—no file export needed.
-
-If you're migrating from a compatible iOS 26 password manager, you can also import directly into the **Bitwarden mobile app**.
-
-For other methods, you'll need to export a file from your current password manager, then import it into Bitwarden. Watch the following **short videos** to get started.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/import-data/).
 
 ### Browser Extension (1 min)
 
@@ -122,12 +120,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 [Embedded content componentCtaLink]
 
 ## Autofill from Browser extension
-
-### Overview (1 min)
-
-Bitwarden makes logging in quick and secure with autofill. Watch the following **short video** to learn about the different ways you can autofill.
-
-Prefer reading? View the full [documentation](https://bitwarden.com/help/auto-fill-browser/). 
 
 ### Inline menu (1 min)
 
@@ -258,7 +250,7 @@ Long-press in any text field to autofill on iOS (requires keyboard autofill to b
 
 ## Adding attachments
 
-### Using the browser extension
+### Using the browser extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
 *[Watch on Vimeo](https://vimeo.com/1175169132)*

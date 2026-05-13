@@ -68,7 +68,7 @@ Using Access Intelligence, administrators can preemptively assess which applicat
 
 ### Requesting password changes
 
-Requesting password changes will dispatch notifications to organization members with access to critical applications informing them that they [need to take action on at-risk passwords](https://bitwarden.com/help/change-at-risk-passwords/). Members will receive notifications both in their email inbox and as a banner in a Bitwarden browser extensions they're logged in to.
+Requesting password changes will dispatch notifications to organization members with access to critical applications informing them that they [need to take action on at-risk passwords](https://bitwarden.com/help/change-at-risk-passwords/). Members who have [permission to edit the password](https://bitwarden.com/help/collection-permissions/) will receive notifications both in their email inbox and as a banner in a Bitwarden browser extensions they're logged in to.
 
 > [!TIP] Best practices before sending Access Intelligence notifications.
 > Before dispatching your first password change requests, or as part of employee Bitwarden training, we recommend:
