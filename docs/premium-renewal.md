@@ -9,7 +9,7 @@ Premium individual subscriptions renew automatically on an annual basis. You can
 ![Subscription page](https://bitwarden.com/assets/3Ru9TSLguhRNYtLe2TLwXk/bec6794eb58efa8780504720d4acb250/2026-03-03_10-24-17.png)
 *Subscription page*
 
-As your renewal date approaches, Bitwarden recommends that you validate the payment method by navigating to **Settings** → **Subscription**→ **Payment method**. For help updating your payment method, see [Update Your Billing Information](https://bitwarden.com/help/update-billing-info/).
+As your renewal date approaches, we recommend confirming your [payment method](https://bitwarden.com/help/payment-methods/) is up-top-date by going to **Settings** → **Subscription**→ **Payment method**. Learn how to [update your billing information](https://bitwarden.com/help/update-billing-info/#update-billing-for-individual-premium-subscriptions/).
 
 > [!NOTE] Payment disruption 
 > If we cannot process your payment method, or if you have cancelled your subscription, your account will revert to [free individual](https://bitwarden.com/help/password-manager-plans/#free-individual/). Until you re-instate your premium subscription, this will result in the following:

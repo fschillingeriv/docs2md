@@ -8,18 +8,15 @@ Bitwarden accepts several payment methods for paid plans. Payment methods vary d
 
 ## Accepted payment methods
 
-All available payment methods are listed when you upgrade your subscription or [update your billing information](https://bitwarden.com/help/update-billing-info/) in the web app.
+All available payment methods are listed when you upgrade your subscription or [update your billing information](https://bitwarden.com/help/update-billing-info/) in the web app. The payment method on file is used for automatic [Premium plan renewals](https://bitwarden.com/help/premium-renewal/) and [organization plan renewals](https://bitwarden.com/help/organization-renewal/) to ensure you don't lose access to paid features unexpectedly. It's also used when you [add attachment storage space](https://bitwarden.com/help/attachments/#add-storage-space/).
 
 ### Credit or debit card
 
-All Bitwarden plans types accept major credit cards, including Visa, Mastercard, American Express, and Discover. Card payments are processed securely through Stripe. Card details are added in the web app when first signing up or [updating your billing information](https://bitwarden.com/help/update-billing-info/):
-
-![Payment methods](https://bitwarden.com/assets/2r9qy9dkCQrrt9DsQ5HLhi/1b15e08dc14153e81037ffeb69d21c8a/2026-03-05_15-15-21.png)
-*Payment methods*
+All Bitwarden plans types accept major credit cards, including Visa, Mastercard, American Express, and Discover. Card payments are processed securely through Stripe. Card details are added in the web app when first signing up or [updating your billing information](https://bitwarden.com/help/update-billing-info/).
 
 ### PayPal
 
-PayPal is available as a payment method for all plans. When selecting PayPal, you can link your PayPal account or add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout, when updating billing information, or from an [unpaid invoice](https://bitwarden.com/help/invoices-and-receipts/). 
+PayPal is available as a payment method for all plans. When selecting PayPal, you can link your PayPal account or add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout or when updating your billing information. 
 
 ### Bank account
 
@@ -30,7 +27,7 @@ Bank account payments are available for some Teams and Enterprise plans:
 
 ### Check
 
-Corporate checks are accepted for annual organization plans, Families, Teams, and Enterprise, that [pay by invoice](https://bitwarden.com/help/payment-methods/#invoiced-billing/). The mailing address is listed on your invoice. To ensure the fastest processing, checks must include your company name, invoice number, and contact information.
+Corporate checks are accepted for annual Teams and Enterprise subscriptions when you [pay by invoice](https://bitwarden.com/help/payment-methods/#invoiced-billing/). The mailing address is listed on your invoice. To ensure the fastest processing, checks must include your company name, invoice number, and contact information.
 
 ### Cryptocurrency
 
@@ -38,7 +35,7 @@ Cryptocurrency, such as Bitcoin, is accepted. You need to purchase [account cred
 
 ### Account credit
 
-Account credit lets you pay for your Bitwarden upgrade or subscription in advance. Purchase credits in your local currency through PayPal or cryptocurrency through BitPay. If you want to pay via account credit, make sure you purchase the account credits **before** upgrading or your renewal date. We'll deduct the upgrade or renewal payment from your account credit balance.
+Account credit lets you pay for your Bitwarden upgrade or subscription in advance. Purchase credits in your local currency through PayPal or cryptocurrency through BitPay. If you want to pay via account credit, make sure you purchase the account credits **before** upgrading or your renewal date. We'll deduct the upgrade or renewal cost from your account credit balance.
 
 To add credit to your account:
 
@@ -53,16 +50,16 @@ To add credit to your account:
 
 ## Invoiced billing
 
-Most payment methods are processed automatically when you upgrade or on your renewal date. Some plans allows you to instead pay an emailed [invoice](https://bitwarden.com/help/invoices-and-receipts/) manually. With this option, an invoice is sent to the billing contact on your renewal date. Pay the invoice manually with one of the methods listed on the invoice itself.
+Most payment methods are processed automatically when you upgrade or on your renewal date. Some plans allows you to instead pay an emailed [invoice](https://bitwarden.com/help/invoices-and-receipts/). With this option, an invoice is sent to the billing contact on your renewal date. Pay the invoice manually with one of the methods listed on the invoice itself.
 
 > [!TIP] Keep billing contact accurate
-> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can receive invoices and manage billing.
+> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can view and update their [billing contact](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/).
 
 Who is eligible for invoiced billing and when invoice payments are due depends:
 
 | Subscription type | Payment due date |
 |------|------|
-| Annual plans switched to invoicing after [contacting us](https://bitwarden.com/contact/) | 30 days from invoice date |
+| Annual Teams and Enterprise subscriptions switched to invoicing after [contacting us](https://bitwarden.com/contact/) | 30 days from invoice date |
 | Annual plans set up through [Bitwarden sales](https://bitwarden.com/contact-sales/) | 30 days from invoice date |
 | [Resellers](https://bitwarden.com/help/bitwarden-resellers/) | 45 days from invoice date |
 

@@ -82,6 +82,8 @@ Learn more about how users will experience the SSO Login workflow when the Enter
 **Video Chapters:**
 Your organization may offer a [free Bitwarden Families plan](https://bitwarden.com/help/families-for-enterprise/) (separate from work) to secure personal passwords and share with up to 5 people, providing around-the-clock security.
 
+Courses are also available for [individuals](https://bitwarden.com/help/courses/password-manager-personal/), [family admins](https://bitwarden.com/help/courses/password-manager-family-admin/) and [family members](https://bitwarden.com/help/courses/password-manager-family-member/).
+
 Learn more about Enterprise-sponsored Families organizations [here](https://bitwarden.com/help/families-for-enterprise/), or jump to the following points in the video to learn more about specific topics:
 
 - **0:14**: About sponsored Families plans.

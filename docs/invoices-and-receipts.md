@@ -4,15 +4,17 @@ URL: https://bitwarden.com/help/invoices-and-receipts/
 
 # Invoices & Receipts
 
-Bitwarden automatically generates invoices and receipts for paid subscriptions. Only subscription holders, like a user on the Premium plan or an organization [owner](https://bitwarden.com/help/user-types-access-control/#default-roles/), can view or download invoices as a PDF.
+Bitwarden automatically generates invoices and receipts for paid subscriptions. Only subscription holders, those on the Premium plan or an organization [owner](https://bitwarden.com/help/user-types-access-control/#default-roles/), can view or download invoices as a PDF.
 
 > [!TIP] Invoices if you're self-hosting.
 > If you're self-hosting, invoices and receipts are available through the [cloud account that's connected to your self-hosted deployment](https://bitwarden.com/help/licensing-on-premise/).
 
 Two types of invoices are available:
 
-- **Unpaid Invoices**: If we are unable to process the payment or you pay for a business plan via invoice, like Enterprise, the invoice will be listed in this section.
+- **Unpaid Invoices**: If we are unable to process the payment or you [pay by invoice](https://bitwarden.com/help/payment-methods/#invoiced-billing/) for a business plan, like Enterprise, the invoice will be listed in this section.
 - **Paid Invoices**: This section contains receipts, which are generated as soon as payment is processed.
+
+## Review invoices
 
 To access your account or organization's invoices:
 
@@ -60,3 +62,7 @@ Invoices include:
 - The amount due for that subscription period, including any applicable [tax](https://bitwarden.com/help/tax-calculation/) as a line item.
 - For organization subscriptions, the number of [paid seats](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 - The payment method used to process payment, if applicable.
+
+## Pay an invoice
+
+Follow the directions on your invoice with one of the listed [payment methods](https://bitwarden.com/help/payment-methods/).

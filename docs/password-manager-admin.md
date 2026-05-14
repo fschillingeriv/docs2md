@@ -211,6 +211,8 @@ Free Bitwarden Families plans are enabled by default and can be [disabled](https
 **Video Chapters:**
 Your organization may offer a [free Bitwarden Families plan](https://bitwarden.com/help/families-for-enterprise/) (separate from work) to secure personal passwords and share with up to 5 people, providing around-the-clock security.
 
+Courses are also available for [individuals](https://bitwarden.com/help/courses/password-manager-personal/), [family admins](https://bitwarden.com/help/courses/password-manager-family-admin/) and [family members](https://bitwarden.com/help/courses/password-manager-family-member/).
+
 ## Reporting
 
 ### Access Intelligence (2 min)

@@ -10,17 +10,6 @@ For help selecting the right Bitwarden plan for you, refer to [what plan is righ
 
 ## Account management
 
-### Q: How do I find out what subscription plan I'm on?
-
-**A:** Log in to the web app:
-
-- For individual subscriptions, navigate to **Settings**→ **Subscription**. If this screen can't be found, this account is on a free plan. If this screen exists, this account is on a premium plan.
-- For organization subscriptions, organization owners can open the Admin Console and navigate to the organization's **Billing** → **Subscription** view. The **Plan** section will log this organization's plan.
-
-### Q: How do I view my billing information?
-
-**A:** Viewing billing information is different depending on whether you are viewing it for an individual or organization subscription. Use [Update your Billing Information](https://bitwarden.com/help/update-billing-info/) to guide you through both processes.
-
 ### Q: How do I upgrade from an individual subscription to an organization?
 
 **A:** Use [Upgrade from Individual to Organization](https://bitwarden.com/help/upgrade-from-individual-to-org/) to guide you through this process.
@@ -39,31 +28,7 @@ Per the Bitwarden terms of service, one organization deployment is permitted per
 
 **A**: To ensure that you don't inadvertently lose organization functionality, we provide a 2 month grace period between the expiration of the license on cloud and expiration of the license on your self-hosted server. Learn more [here](https://bitwarden.com/help/organization-renewal/).
 
-### Q: What is the holder of my organization's billing email allowed to do?
-
-**A**: The holder of your organization's [billing email](https://bitwarden.com/help/about-organizations/#create-an-organization/) may, by contacting us:
-
-- Add or remove a credit card from the subscription.
-- Change the billing email for the organization.
-- Inquire about invoices and billing information on-file.
-- Swap between a monthly and annual billing cycle (if applicable for your organization).
-- Request a plan upgrade, downgrade, cancellation, or seat adjustment.
-
-They **may not** for any reason request deletion of an organization, be given the identity of current organization owners, or request the promotion of any user to an owner.
-
 ## Payment options
-
-### Q: What payment options do you accept for customers based in the United States?
-
-**A:** We accept credit/debit cards, PayPal, bank account (ACH), and Bitcoin. For business subscriptions, we also accept wire transfers and corporate checks, with a minimum payment of 500 USD. For more information regarding payment options, please [contact support](https://bitwarden.com/contact/).
-
-### Q: What payment options do you accept for customers outside the United States?
-
-**A:** We accept credit/debit Cards, PayPal, and Bitcoin. For business subscriptions, we also accept international wire transfers and corporate checks, with a minimum payment of 500 USD. For more information regarding payment options, please [contact support](https://bitwarden.com/contact/).
-
-### Q: Can I pay with Bitcoin?
-
-**A:** Yes! Please note, you will need to **Add Credit** using Bitcoin on the **Settings** → **Billing** screen before purchasing the subscription.
 
 ### Q: Can I use a Bitwarden Free plan for commercial use?
 
