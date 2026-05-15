@@ -71,3 +71,10 @@ When you accept the offer, your old subscription will be replaced by the Enterpr
 
 > [!NOTE] You'll still get renewal emails when you're F4E.
 > After redeeming your sponsorship, you may still get renewal reminder emails for your Families organization in your personal inbox. As long as you're still an active member of that sponsoring Enterprise organization, you can ignore these emails. If you're no longer a member, navigate to **Billing** → **Payment method**, and check that the payment method is valid.
+
+## Next steps
+
+Once you've setup your sponsored Families organization:
+
+- Learn the basics of [administering a Families organization](https://bitwarden.com/help/courses/password-manager-family-admin/).
+- Dig deeper into [how to use an organization to share data with your family or friends](https://bitwarden.com/help/getting-started-organizations/).

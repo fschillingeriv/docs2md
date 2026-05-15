@@ -30,6 +30,12 @@ In order to turn on automatic confirmation of new members, you must turn it on b
 To turn on automatic confirmation for your organization, make sure you've met the eligibility requirements described above. Once you've contacted your Bitwarden team and it's been made available to your organization:
 
 1. Owners and admins will get an email with the subject line **Automatic confirmation is available for <organization>**.
+
+> [!NOTE] Automatic Confirmation on Self-hosted Servers
+> If you're **self-hosting** Bitwarden:
+> 
+> - This email will be sent to the owners and admins **of the cloud organization**associated with your self-hosted organization.
+> - One of those owners or admins must [update the self-hosted organization's license file](https://bitwarden.com/help/licensing-on-premise/) before proceeding with Step 2. Once the license file is updated, Step 2 and all subsequent steps can be completed from the self-hosted server.
 2. An activation panel will be issued to organization owners and admins, the next time they log in, prompting them to turn on the policy.
 
 Once the functionality is added for your organization by Bitwarden, Automatic confirmation can also be activated [via a policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/) from the **Settings** → **Policies** menu in the Admin Console. Either way, select **Continue** to turn on automatic confirmation for the organization:

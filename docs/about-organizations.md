@@ -43,7 +43,7 @@ Organizations are created and managed from the [web app](https://bitwarden.com/h
 
 ![New organization](https://bitwarden.com/assets/3eSqWiTIuPSFxXdo5AAjT9/248b0fa7bb381add0d71682acd244a63/2024-12-03_13-57-58.png)
 
-Enter an **Organization name** and a **Billing email** we can reach you at. [Learn what the holder of your billing email is allowed to do](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/).
+Enter an **Organization name** and a **Billing email** we can reach you at. [Learn what the holder of your billing email is allowed to do](https://bitwarden.com/help/update-billing-info/#update-billing-email/).
 2. **Choose your plan**. Bitwarden offers organizations suited to any need. Check out the [feature-by-feature breakdown](https://bitwarden.com/help/password-manager-plans/#compare-business-plans/) to figure out which is best for you.
 
 > [!NOTE] Organization premium features

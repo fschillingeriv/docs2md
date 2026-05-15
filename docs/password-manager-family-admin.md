@@ -115,8 +115,6 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 [Embedded content componentCtaLink]
 
-### From LastPass
-
 ## Support
 
 ### Ask Smart Search

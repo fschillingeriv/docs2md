@@ -8,7 +8,7 @@ Bitwarden accepts several payment methods for paid plans. Payment methods vary d
 
 ## Accepted payment methods
 
-All available payment methods are listed when you upgrade your subscription or [update your billing information](https://bitwarden.com/help/update-billing-info/) in the web app. The payment method on file is used for automatic [Premium plan renewals](https://bitwarden.com/help/premium-renewal/) and [organization plan renewals](https://bitwarden.com/help/organization-renewal/) to ensure you don't lose access to paid features unexpectedly. It's also used when you [add attachment storage space](https://bitwarden.com/help/attachments/#add-storage-space/).
+All available payment methods are listed when you upgrade or [update billing information](https://bitwarden.com/help/update-billing-info/) in the web app. The payment method on file is used for automatic [Premium plan renewals](https://bitwarden.com/help/premium-renewal/) and [organization plan renewals](https://bitwarden.com/help/organization-renewal/) to ensure you don't lose access to paid features unexpectedly. It's also used when you add [attachment](https://bitwarden.com/help/attachments/#add-storage-space/) storage space.
 
 ### Credit or debit card
 
@@ -16,7 +16,7 @@ All Bitwarden plans types accept major credit cards, including Visa, Mastercard,
 
 ### PayPal
 
-PayPal is available as a payment method for all plans. When selecting PayPal, you can link your PayPal account or add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout or when updating your billing information. 
+PayPal is available as a payment method for all plans. You can link your PayPal account for automatic payments or to add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout or when updating your billing information. 
 
 ### Bank account
 
@@ -53,7 +53,7 @@ To add credit to your account:
 Most payment methods are processed automatically when you upgrade or on your renewal date. Some plans allows you to instead pay an emailed [invoice](https://bitwarden.com/help/invoices-and-receipts/). With this option, an invoice is sent to the billing contact on your renewal date. Pay the invoice manually with one of the methods listed on the invoice itself.
 
 > [!TIP] Keep billing contact accurate
-> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can view and update their [billing contact](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/).
+> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can view and update their [billing contact](https://bitwarden.com/help/update-billing-info/#update-billing-email/).
 
 Who is eligible for invoiced billing and when invoice payments are due depends:
 

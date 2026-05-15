@@ -14,4 +14,5 @@ Whether you're administering your organization or using Bitwarden as part of you
 ### Enterprise Plan
 
 - [Enterprise Member](https://bitwarden.com/help/courses/password-manager-team-member/)
+- [Enterprise Help Desk](https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk)
 - [Enterprise Admin](https://bitwarden.com/help/courses/password-manager-admin/)

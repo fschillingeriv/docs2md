@@ -57,14 +57,14 @@ To update your KDF algorithm:
 4. (Optional) Update the additional settings that appear.
 5. Select **Update encryption settings**.
 
-More KDF iterations will increase both the time it will take an attacker to crack a password **and** the time it will take a legitimate user to log in. Setting your KDF iterations too high could result in poor performance when logging into and unlocking Bitwarden on devices with slower CPUs. We recommend increasing the value in increments of 100,000, and then testing on all of your devices.
+More KDF iterations will increase both the time it will take an attacker to crack a password **and** the time it will take a legitimate user to log in. Setting your KDF iterations too high could result in slower performance when logging into and unlocking Bitwarden on devices with slower CPUs. We recommend increasing the value in increments of 100,000 and then testing on all of your devices.
 
 For **PBKDF2 SHA-256**, the default KDF iteration setting is 600,000. 
 
 For **Argon2id**, the default settings are: 
 
-- KDF memory: 64
-- KDF iterations: 3
+- KDF memory: 32
+- KDF iterations: 6
 - KDF parallelism: 4
 
 ### Low PBKDF2 KDF iterations

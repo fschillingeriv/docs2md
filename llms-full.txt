@@ -213,7 +213,7 @@ Organizations are created and managed from the [web app](https://bitwarden.com/h
 
 ![New organization](https://bitwarden.com/assets/3eSqWiTIuPSFxXdo5AAjT9/248b0fa7bb381add0d71682acd244a63/2024-12-03_13-57-58.png)
 
-Enter an **Organization name** and a **Billing email** we can reach you at. [Learn what the holder of your billing email is allowed to do](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/).
+Enter an **Organization name** and a **Billing email** we can reach you at. [Learn what the holder of your billing email is allowed to do](https://bitwarden.com/help/update-billing-info/#update-billing-email/).
 2. **Choose your plan**. Bitwarden offers organizations suited to any need. Check out the [feature-by-feature breakdown](https://bitwarden.com/help/password-manager-plans/#compare-business-plans/) to figure out which is best for you.
 
 > [!NOTE] Organization premium features
@@ -3560,6 +3560,12 @@ In order to turn on automatic confirmation of new members, you must turn it on b
 To turn on automatic confirmation for your organization, make sure you've met the eligibility requirements described above. Once you've contacted your Bitwarden team and it's been made available to your organization:
 
 1. Owners and admins will get an email with the subject line **Automatic confirmation is available for <organization>**.
+
+> [!NOTE] Automatic Confirmation on Self-hosted Servers
+> If you're **self-hosting** Bitwarden:
+> 
+> - This email will be sent to the owners and admins **of the cloud organization**associated with your self-hosted organization.
+> - One of those owners or admins must [update the self-hosted organization's license file](https://bitwarden.com/help/licensing-on-premise/) before proceeding with Step 2. Once the license file is updated, Step 2 and all subsequent steps can be completed from the self-hosted server.
 2. An activation panel will be issued to organization owners and admins, the next time they log in, prompting them to turn on the policy.
 
 Once the functionality is added for your organization by Bitwarden, Automatic confirmation can also be activated [via a policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/) from the **Settings** → **Policies** menu in the Admin Console. Either way, select **Continue** to turn on automatic confirmation for the organization:
@@ -10692,7 +10698,60 @@ Whether you're administering your organization or using Bitwarden as part of you
 ### Enterprise Plan
 
 - [Enterprise Member](https://bitwarden.com/help/courses/password-manager-team-member/)
+- [Enterprise Help Desk](https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk)
 - [Enterprise Admin](https://bitwarden.com/help/courses/password-manager-admin/)
+---
+URL: https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/
+---
+# Enterprise Help Desk
+
+As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
+
+## Access
+
+### Approve a device request (1 min)
+
+Learn how to review and approve device access requests in the Admin Console so employees can quickly regain access to their Vault.
+
+[![Vimeo Video](https://vumbnail.com/1191294901.jpg)](https://vimeo.com/1191294901)
+*[Watch on Vimeo](https://vimeo.com/1191294901)*
+
+[Embedded content][Embedded content]
+## Recovery
+
+### Recover a member account (2 min)
+
+Easily recover a member account for someone who has forgotten their master password or lost all their trusted devices.
+
+[![Vimeo Video](https://vumbnail.com/1190598451.jpg)](https://vimeo.com/1190598451)
+*[Watch on Vimeo](https://vimeo.com/1190598451)*
+
+## Security
+
+### Send a password change request (1 min)
+
+Bitwarden makes it easy to prompt users to change at-risk passwords.
+
+[![Vimeo Video](https://vumbnail.com/1192034974.jpg)](https://vimeo.com/1192034974)
+*[Watch on Vimeo](https://vimeo.com/1192034974)*
+
+## Support
+
+### Ask Smart Search
+
+Find answers instantly with **Bitwarden Smart Search**. 
+
+[Embedded content componentCtaLink]
+
+### Ask the Community
+
+Connect with experienced Bitwarden users who share tips and solve problems together. Ask questions on the [Community Forums](https://community.bitwarden.com/c/support/pm-ask-the-community/) or [Reddit](https://www.reddit.com/r/Bitwarden/new/).
+
+### Contact Support
+
+Running into a technical issue or have account questions? Contact the Bitwarden support team for direct assistance.
+
+[Embedded content componentCtaLink]
 ---
 URL: https://bitwarden.com/help/courses/password-manager-family-admin/
 ---
@@ -10808,8 +10867,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5AL
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
-
-### From LastPass
 
 ## Support
 
@@ -12343,12 +12400,6 @@ Teams Bitwarden organizations provide powerful tools for improving your online s
 
 ## Import your data
 
-### Overview (1 min)
-
-Import your organization's passwords and data into Bitwarden for secure scalable sharing and autofill across your team. Choose an import method below based on your preferred Bitwarden client. 
-
-Prefer reading? Read the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -12384,8 +12435,6 @@ Download the desktop app directly from the Bitwarden website to use the 'import 
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
-
-### From LastPass
 
 ## Support
 
@@ -16929,6 +16978,13 @@ When you accept the offer, your old subscription will be replaced by the Enterpr
 
 > [!NOTE] You'll still get renewal emails when you're F4E.
 > After redeeming your sponsorship, you may still get renewal reminder emails for your Families organization in your personal inbox. As long as you're still an active member of that sponsoring Enterprise organization, you can ignore these emails. If you're no longer a member, navigate to **Billing** → **Payment method**, and check that the payment method is valid.
+
+## Next steps
+
+Once you've setup your sponsored Families organization:
+
+- Learn the basics of [administering a Families organization](https://bitwarden.com/help/courses/password-manager-family-admin/).
+- Dig deeper into [how to use an organization to share data with your family or friends](https://bitwarden.com/help/getting-started-organizations/).
 ---
 URL: https://bitwarden.com/help/favorites/
 ---
@@ -22518,7 +22574,7 @@ From this view, you can also download a `.csv` file containing a client-by-clien
 
 Invoices include:
 
-- The [billing address](https://bitwarden.com/help/update-billing-info/) associated with Bitwarden and your subscription.
+- The [billing email](https://bitwarden.com/help/update-billing-info/#update-billing-email/) associated with Bitwarden and your subscription.
 - The amount due for that subscription period, including any applicable [tax](https://bitwarden.com/help/tax-calculation/) as a line item.
 - For organization subscriptions, the number of [paid seats](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 - The payment method used to process payment, if applicable.
@@ -23009,14 +23065,14 @@ To update your KDF algorithm:
 4. (Optional) Update the additional settings that appear.
 5. Select **Update encryption settings**.
 
-More KDF iterations will increase both the time it will take an attacker to crack a password **and** the time it will take a legitimate user to log in. Setting your KDF iterations too high could result in poor performance when logging into and unlocking Bitwarden on devices with slower CPUs. We recommend increasing the value in increments of 100,000, and then testing on all of your devices.
+More KDF iterations will increase both the time it will take an attacker to crack a password **and** the time it will take a legitimate user to log in. Setting your KDF iterations too high could result in slower performance when logging into and unlocking Bitwarden on devices with slower CPUs. We recommend increasing the value in increments of 100,000 and then testing on all of your devices.
 
 For **PBKDF2 SHA-256**, the default KDF iteration setting is 600,000. 
 
 For **Argon2id**, the default settings are: 
 
-- KDF memory: 64
-- KDF iterations: 3
+- KDF memory: 32
+- KDF iterations: 6
 - KDF parallelism: 4
 
 ### Low PBKDF2 KDF iterations
@@ -24802,7 +24858,7 @@ If you do not have access to the owner or billing contact email address:
  - Amount of the last payment.
 
 > [!NOTE] Cancel subscription without owner
-> This information will help Bitwarden support confirm your identity and process the cancellation request, see [here](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/) for additional information.
+> This information will help Bitwarden support confirm your identity and process the cancellation request, see [here](https://bitwarden.com/help/update-billing-info/#update-billing-email/) for additional information.
 ---
 URL: https://bitwarden.com/help/managing-items/
 ---
@@ -28443,7 +28499,7 @@ Bitwarden accepts several payment methods for paid plans. Payment methods vary d
 
 ## Accepted payment methods
 
-All available payment methods are listed when you upgrade your subscription or [update your billing information](https://bitwarden.com/help/update-billing-info/) in the web app. The payment method on file is used for automatic [Premium plan renewals](https://bitwarden.com/help/premium-renewal/) and [organization plan renewals](https://bitwarden.com/help/organization-renewal/) to ensure you don't lose access to paid features unexpectedly. It's also used when you [add attachment storage space](https://bitwarden.com/help/attachments/#add-storage-space/).
+All available payment methods are listed when you upgrade or [update billing information](https://bitwarden.com/help/update-billing-info/) in the web app. The payment method on file is used for automatic [Premium plan renewals](https://bitwarden.com/help/premium-renewal/) and [organization plan renewals](https://bitwarden.com/help/organization-renewal/) to ensure you don't lose access to paid features unexpectedly. It's also used when you add [attachment](https://bitwarden.com/help/attachments/#add-storage-space/) storage space.
 
 ### Credit or debit card
 
@@ -28451,7 +28507,7 @@ All Bitwarden plans types accept major credit cards, including Visa, Mastercard,
 
 ### PayPal
 
-PayPal is available as a payment method for all plans. When selecting PayPal, you can link your PayPal account or add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout or when updating your billing information. 
+PayPal is available as a payment method for all plans. You can link your PayPal account for automatic payments or to add [account credit](https://bitwarden.com/help/payment-methods/#account-credit/). PayPal includes built-in buyer protection and additional security features. To use PayPal, select this method during checkout or when updating your billing information. 
 
 ### Bank account
 
@@ -28488,7 +28544,7 @@ To add credit to your account:
 Most payment methods are processed automatically when you upgrade or on your renewal date. Some plans allows you to instead pay an emailed [invoice](https://bitwarden.com/help/invoices-and-receipts/). With this option, an invoice is sent to the billing contact on your renewal date. Pay the invoice manually with one of the methods listed on the invoice itself.
 
 > [!TIP] Keep billing contact accurate
-> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can view and update their [billing contact](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/).
+> Keep your billing contact's email address current to avoid missed invoices. For the individual Premium plan, this is your [account email](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/). For organizations, only [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can view and update their [billing contact](https://bitwarden.com/help/update-billing-info/#update-billing-email/).
 
 Who is eligible for invoiced billing and when invoice payments are due depends:
 

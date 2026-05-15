@@ -62,4 +62,4 @@ If you do not have access to the owner or billing contact email address:
  - Amount of the last payment.
 
 > [!NOTE] Cancel subscription without owner
-> This information will help Bitwarden support confirm your identity and process the cancellation request, see [here](https://bitwarden.com/help/billing-faqs/#q-what-is-the-holder-of-my-organizations-billing-email-allowed-to-do/) for additional information.
+> This information will help Bitwarden support confirm your identity and process the cancellation request, see [here](https://bitwarden.com/help/update-billing-info/#update-billing-email/) for additional information.

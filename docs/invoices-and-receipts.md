@@ -58,7 +58,7 @@ From this view, you can also download a `.csv` file containing a client-by-clien
 
 Invoices include:
 
-- The [billing address](https://bitwarden.com/help/update-billing-info/) associated with Bitwarden and your subscription.
+- The [billing email](https://bitwarden.com/help/update-billing-info/#update-billing-email/) associated with Bitwarden and your subscription.
 - The amount due for that subscription period, including any applicable [tax](https://bitwarden.com/help/tax-calculation/) as a line item.
 - For organization subscriptions, the number of [paid seats](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 - The payment method used to process payment, if applicable.
