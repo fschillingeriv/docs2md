@@ -116,12 +116,6 @@ Enterprise Bitwarden organizations provide powerful tools for improving your onl
 
 ## Import your data
 
-### Overview (1 min)
-
-Import your organization's passwords and data into Bitwarden for secure scalable sharing and autofill across your team. Choose an import method below based on your preferred Bitwarden client. 
-
-Prefer reading? Read the full [documentation](https://bitwarden.com/help/import-data/).
-
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -157,8 +151,6 @@ Download the desktop app directly from the Bitwarden website to use the 'import 
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
-
-### From LastPass
 
 ## Managing Users
 
@@ -200,6 +192,11 @@ Simplify the SSO process for your team by [claiming your domain](https://bitward
 Learn how to enable the Enterprise Policy 'Centralize organization ownership' for improved risk analysis and collection management. 
 
 Read more: [https://bitwarden.com/help/policies/#enforce-organization-data-ownership](https://bitwarden.com/help/policies/#enforce-organization-data-ownership/)
+
+### Account Recovery (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1190591629.jpg)](https://vimeo.com/1190591629)
+*[Watch on Vimeo](https://vimeo.com/1190591629)*
 
 ### Free Families Plan (2 min)
 

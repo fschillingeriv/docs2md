@@ -155,7 +155,7 @@ To export vault data:
 3. Tap **Export vault**.
 
 > [!NOTE] CXP on iOS
-> On iOS 26, you can choose between **Export vault to a file**and **Export vault to another app**. 
+> On iOS 26+, you can choose between **Export vault to a file**and **Export vault to another app**. 
 > 
 > If you choose **Export vault to a file**, continue with these instructions. If you choose **Export vault to another app**, follow the simple on-screen process to export data directly to any other app that supports the [FIDO Credential Exchange Protocol](https://fidoalliance.org/specifications-credential-exchange-specifications).
 4. Select a **File Format**: `.json`, `.csv`, or `.json (Password protected)`.
