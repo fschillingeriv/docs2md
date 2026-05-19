@@ -100,7 +100,7 @@ Configure the following fields according to the choices selected in the Duo Admi
 | Outbound Signing Algorithm | Algorithm used to sign SAML requests, by default `rsa-sha256`. |
 | Signing Behavior | Whether/when SAML requests will be signed. By default, Duo will not require requests to be signed. |
 | Minimum Incoming Signing Algorithm | The minimum signing algorithm Bitwarden will accept in SAML responses. By default, Duo will sign with `rsa-sha256`, so choose that option from the dropdown unless you have [selected a different option](https://bitwarden.com/help/saml-duo/#saml-response/). |
-| Want Assertions Signed | Whether Bitwarden wants SAML assertions signed. Check this box if you [selected the **Sign assertion** signing option](https://bitwarden.com/help/saml-duo/#saml-response/). |
+| Want Assertions Signed | Whether Bitwarden wants SAML assertions signed. Check this box if you [selected the "Sign assertion" signing option](https://bitwarden.com/help/saml-duo/#saml-response/). |
 | Validate Certificates | Check this box when using trusted and valid certificates from your IdP through a trusted CA. Self-signed certificates may fail unless proper trust chains are configured within the Bitwarden Login with SSO docker image. |
 
 When you are done with the service provider configuration, **Save** your work.
