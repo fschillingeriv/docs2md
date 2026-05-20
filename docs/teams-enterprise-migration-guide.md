@@ -51,7 +51,7 @@ Bitwarden organizations relate users and vault items together for [secure sharin
 
 > [!NOTE] Creating a self-hosted org.
 > To self-host Bitwarden, create an organization on the Bitwarden cloud, generate a [license key](https://bitwarden.com/host/), and use the key to [unlock organizations](https://bitwarden.com/help/licensing-on-premise/#organization-license/) on your server.
-2. **Onboard administrative users**. With your organization created, further setup procedures can be made easier by onboarding some [administrative users](https://bitwarden.com/help/user-types-access-control/). It's important that you **do not begin end-user onboarding** at this point, as there are a few steps left to prepare your organization. Learn how to invite admins [here](https://bitwarden.com/help/managing-users/#onboard-users/).
+2. **Onboard administrative users**. With your organization created, further setup procedures can be made easier by onboarding some [administrative users](https://bitwarden.com/help/user-types-access-control/). It's important that you **do not begin end-user onboarding** at this point, as there are a few steps left to prepare your organization. Learn how to invite admins [here](https://bitwarden.com/help/managing-users/#add-new-members/).
 3. **Configure identity services**. Enterprise organizations support [logging in with single-sign-on](https://bitwarden.com/help/about-sso/) (SSO) using either SAML 2.0 or OpenID Connect (OIDC). To configure SSO, open the organization's **Settings** → **Single Sign-On** screen in the Admin Console, accessible by [organization owners and administrators](https://bitwarden.com/help/user-types-access-control/).
 4. **Enable enterprise policies**. [Enterprise policies](https://bitwarden.com/help/policies/) enable organizations to implement rules for users, for example requiring use of two-step login. It is highly recommended that you configure policies before onboarding users.
 
@@ -92,7 +92,7 @@ Bitwarden supports manual onboarding via the web vault and automated onboarding 
 
 ### Manual onboarding
 
-To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding a new member, [invite](https://bitwarden.com/help/managing-users/) → [accept](https://bitwarden.com/help/managing-users/) → [confirm](https://bitwarden.com/help/managing-users/). Learn how to invite new users [here](https://bitwarden.com/help/managing-users/#onboard-users/).
+To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding a new member, [invite](https://bitwarden.com/help/managing-users/) → [accept](https://bitwarden.com/help/managing-users/) → [confirm](https://bitwarden.com/help/managing-users/). Learn how to invite new users [here](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 ### Automated onboarding
 

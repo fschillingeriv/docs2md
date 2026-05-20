@@ -44,7 +44,7 @@ Changing the iteration count can help protect your master password from being br
 Changing the KDF algorithm re-encrypts the protected symmetric key and updates the authentication hash, much like a normal master password change. The [symmetric encryption key](https://bitwarden.com/help/bitwarden-security-white-paper/#rotating-the-account-encryption-key/) is not rotated, however, so vault data is not re-encrypted. Learn more about [re-encrypting your data](https://bitwarden.com/help/account-encryption-key/#rotate-your-encryption-key/).
 
 > [!WARNING] Backup before changing KDF.
-> Before making **any** changes to encryption settings, we recommend backing up your [individual vault data](https://bitwarden.com/help/export-your-data/) first.
+> Backing up your vault data is not required before changing your encryption settings, however taking regular backups is highly recommended.
 
 To update your KDF algorithm:
 
