@@ -75,18 +75,18 @@ Bitwarden organizations manage members and data in a scalable and secure fashion
 
 Once your organization is established and collections are setup to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
 
-Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#onboard-users/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
+Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#add-new-members/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
 
 #### Adding members
 
 In the simplest cases, users can be added to your organization directly from the web app. When adding users, you can designate which [collections](https://bitwarden.com/help/onboarding-and-succession/#collections/) to grant them access to, which [role](https://bitwarden.com/help/onboarding-and-succession/#comprehensive-role--based-access-controls/) to give them, and more.
 
-[Learn step-by-step how to add users to your organization](https://bitwarden.com/help/managing-users/#onboard-users/).
+[Learn step-by-step how to add users to your organization](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 Once users are fully onboarded to your organization, you can assign access to your organization's vault data by assigning them to [collections](https://bitwarden.com/help/onboarding-and-succession/#collections/). Teams and Enterprise organizations can assign users to [groups](https://bitwarden.com/help/onboarding-and-succession/#groups/) for scalable permissions assignment, and construct group-collection associations instead of assigning access on the individual level.
 
 > [!NOTE]
-> For large organizations, [SCIM](https://bitwarden.com/help/about-scim/) and [Directory Connector](https://bitwarden.com/help/onboarding-and-succession/#directory-connector/) are the best ways to onboard and offboard users at scale.
+> For large organizations, [SCIM](https://bitwarden.com/help/about-scim/) and [Directory Connector](https://bitwarden.com/help/directory-sync/) are the best ways to onboard and offboard users at scale.
 
 #### Groups
 

@@ -63,7 +63,7 @@ Owners and admins have enhanced capabilities for managing users and accessing or
 
 | **Action** | **Owner** | **Admin** | **User** |
 |------|------|------|------|
-| [Invite and confirm new users](https://bitwarden.com/help/managing-users/#onboard-users/) | ✓ | ✓ | [close] |
+| [Invite and confirm new users](https://bitwarden.com/help/managing-users/#add-new-members/) | ✓ | ✓ | [close] |
 | [Revoke](https://bitwarden.com/help/revoke-users/) and [remove](https://bitwarden.com/help/remove-users/) users | ✓ | ✓ | [close] |
 | Assign and manage member roles | ✓ | ✓ | [close] |
 | Create and delete [groups](https://bitwarden.com/help/about-groups/) | ✓ | ✓ | [close] |

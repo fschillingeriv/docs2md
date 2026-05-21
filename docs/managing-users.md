@@ -116,7 +116,7 @@ The member list export includes the following information about each account:
 |------|------|
 | Email | The email address of the account |
 | Name | The name of the user, from **Settings** → **My account** |
-| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
+| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
 | Role | The user's [member role](https://bitwarden.com/help/user-types-access-control/) in the organization |
 | Two-step login | Shows if the user logs in with any [two-step login method](https://bitwarden.com/help/setup-two-step-login/) |
 | Account recovery | Shows if the user is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) |

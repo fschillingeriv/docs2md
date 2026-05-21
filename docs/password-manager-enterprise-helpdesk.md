@@ -4,9 +4,26 @@ URL: https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/
 
 # Enterprise Help Desk
 
-As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
+As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. 
+
+Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
 
 ## Access
+
+### Using the single sign-on button (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193617940.jpg)](https://vimeo.com/1193617940)
+*[Watch on Vimeo](https://vimeo.com/1193617940)*
+
+### Understanding SSO identifiers (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193629881.jpg)](https://vimeo.com/1193629881)
+*[Watch on Vimeo](https://vimeo.com/1193629881)*
+
+### Choosing the right server (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193387322.jpg)](https://vimeo.com/1193387322)
+*[Watch on Vimeo](https://vimeo.com/1193387322)*
 
 ### Approve a device request (1 min)
 

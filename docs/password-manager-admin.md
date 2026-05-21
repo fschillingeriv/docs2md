@@ -31,6 +31,12 @@ Watch Bitwarden experts demonstrate security configurations, manage user permiss
 
 [Embedded content componentCtaLink]
 
+### Browse the technical deep dive library (20 min)
+
+Check out the full library of Bitwarden Brilliance sessions.
+
+[Embedded content componentCtaLink]
+
 ## Onboarding Resources
 
 ### Customer Success Hub

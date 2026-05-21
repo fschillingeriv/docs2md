@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/remove-users/
 
 Organization [admins, owners, and some custom role members](https://bitwarden.com/help/user-types-access-control/) can remove members from an organization. Removing a member:
 
-- **Eliminates** their access to the organization and its data. Removed members need to [re-join the organization](https://bitwarden.com/help/managing-users/#onboard-users/) to re-gain access.
+- **Eliminates** their access to the organization and its data. Removed members need to [re-join the organization](https://bitwarden.com/help/managing-users/#add-new-members/) to re-gain access.
 - **Does not delete** their Bitwarden account in most cases. Removed members are still able to access their personally-owned vault items unless you [delete their account](https://bitwarden.com/help/delete-member-accounts/).
 - Is **automatically** done for organizations using [directory sync](https://bitwarden.com/help/directory-sync/) if the **Remove disabled users during sync option** is turned on.
 

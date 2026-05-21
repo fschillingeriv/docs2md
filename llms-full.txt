@@ -1726,7 +1726,7 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > **Standard Invites**
 > 
-> You can manually invite users through the web app. [Learn about standard invites](https://bitwarden.com/help/managing-users/#onboard-users/).
+> You can manually invite users through the web app. [Learn about standard invites](https://bitwarden.com/help/managing-users/#add-new-members/).
 > 
 > **Directory Connector**
 > 
@@ -8852,7 +8852,7 @@ URL: https://bitwarden.com/help/client-org-removal/
 As a Provider, you may need to remove your Provider-client relationship with an organization if you are no longer providing services to them. In order for a client organization to be eligible for removal:
 
 - You must be a [Provider admin](https://bitwarden.com/help/provider-users/#provider-user-types/).
-- The client organization must have at least one [confirmed owner](https://bitwarden.com/help/managing-users/#onboard-users/).
+- The client organization must have at least one [confirmed owner](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 > [!NOTE] Deleting a client organization.
 > Client organizations can only be unlinked from within the Provider Portal UI, not **deleted**. To delete a client organization, you must be a Provider admin and follow these steps:
@@ -8926,7 +8926,7 @@ Common collections patterns include **Collections by Department** (for example, 
 One common group-collection pattern is to create **Groups by Department** and **Collections by Function**, for example:
 
 ![Collections](https://bitwarden.com/assets/6qodHGqBPABEFv3XJxaOUe/780cd4624a5d0a5fe315677968003e2d/collections-graphic-2.png)
-6. **Start inviting users**. Now that the infrastructure for the secure and scalable sharing of credentials is in place for your client, you can begin [inviting users to the organization](https://bitwarden.com/help/managing-users/#onboard-users/). To ensure the security of the organization, Bitwarden applies a three-step process for onboarding new users, **Invite** → **Accept**→ **Confirm**.
+6. **Start inviting users**. Now that the infrastructure for the secure and scalable sharing of credentials is in place for your client, you can begin [inviting users to the organization](https://bitwarden.com/help/managing-users/#add-new-members/). To ensure the security of the organization, Bitwarden applies a three-step process for onboarding new users, **Invite** → **Accept**→ **Confirm**.
 
 > [!TIP] SCIM & BWDC for Providers.
 > **If your customer uses directory service** or IdP (active directory, an LDAP, Okta, and more), use [SCIM](https://bitwarden.com/help/about-scim/) or [Directory Connector](https://bitwarden.com/help/directory-sync/) to automatically sync organization users from the source directory and automatically issue invitations.
@@ -10472,6 +10472,12 @@ Watch Bitwarden experts demonstrate security configurations, manage user permiss
 
 [Embedded content componentCtaLink]
 
+### Browse the technical deep dive library (20 min)
+
+Check out the full library of Bitwarden Brilliance sessions.
+
+[Embedded content componentCtaLink]
+
 ## Onboarding Resources
 
 ### Customer Success Hub
@@ -10702,9 +10708,26 @@ URL: https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/
 ---
 # Enterprise Help Desk
 
-As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
+As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. 
+
+Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
 
 ## Access
+
+### Using the single sign-on button (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193617940.jpg)](https://vimeo.com/1193617940)
+*[Watch on Vimeo](https://vimeo.com/1193617940)*
+
+### Understanding SSO identifiers (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193629881.jpg)](https://vimeo.com/1193629881)
+*[Watch on Vimeo](https://vimeo.com/1193629881)*
+
+### Choosing the right server (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1193387322.jpg)](https://vimeo.com/1193387322)
+*[Watch on Vimeo](https://vimeo.com/1193387322)*
 
 ### Approve a device request (1 min)
 
@@ -11339,7 +11362,7 @@ Define technical requirements and onboarding strategy for your customer's Bitwar
 | 1 | Environment decision | Determine Cloud or Self-Hosted environment | [Hosting FAQs](https://bitwarden.com/help/hosting-faqs/) | 0.5 |
 | 2 | Authentication strategy | Determine if the customer will use Single Sign-On (SSO) | [About SSO](https://bitwarden.com/help/about-sso/) | 0.25 |
 | 3 | Decryption method | If using Login with SSO, select Master Password or trusted devices for decryption | [About trusted devices](https://bitwarden.com/help/about-trusted-devices/) | 0.25 |
-| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#onboard-users/) | 0.25 |
+| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#add-new-members/) | 0.25 |
 | 5 | User identification | Identify users, teams, or departments for rollout groups | | 0.25 |
 | 6 | Training strategy | Identify groups and internal advocates who will attend training. Example: end users, service desk, admins | | 0.5 |
 | 7 | Document collection (sharing) strategy | Determine how collections will be configured. Considerations include: Will users be allowed to create collections? Will collections be configured by department, project, function? Will data be imported from another application, which often defines structure? Do Admin and Owner users get access to all shared items, or only the Managers of delegated Collections? | [About collections](https://bitwarden.com/help/about-collections/) | 1 |
@@ -11491,7 +11514,7 @@ Define technical requirements and onboarding strategy for your customer's Bitwar
 | 1 | Environment decision | Determine Cloud or Self-Hosted environment | [Hosting FAQs](https://bitwarden.com/help/hosting-faqs/) | 0.5 |
 | 2 | Authentication strategy | Determine if the customer will use Single Sign-On (SSO) | [About SSO](https://bitwarden.com/help/about-sso/) | 0.25 |
 | 3 | Decryption method | If using Login with SSO, select Master Password or trusted devices for decryption | [About trusted devices](https://bitwarden.com/help/about-trusted-devices/) | 0.25 |
-| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#onboard-users/) | 0.25 |
+| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#add-new-members/) | 0.25 |
 | 5 | User identification | Identify users, teams, or departments for rollout groups | | 0.25 |
 | 6 | Training strategy | Identify groups and internal advocates who will attend training. Example: end users, service desk, admins | | 0.5 |
 | 7 | Document collection (sharing) strategy | Determine how collections will be configured. Considerations include: Will users be allowed to create collections? Will collections be configured by department, project, function? Will data be imported from another application, which often defines structure? Do Admin and Owner users get access to all shared items, or only the Managers of delegated Collections? | [About collections](https://bitwarden.com/help/about-collections/) | 1 |
@@ -14952,7 +14975,7 @@ URL: https://bitwarden.com/help/directory-sync/
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
-The Bitwarden Directory Connector app automatically provisions users, groups, and group associations in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#onboard-users/).
+The Bitwarden Directory Connector app automatically provisions users, groups, and group associations in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 Directory Connector can be configured to remove users from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization. 
 
@@ -23366,7 +23389,7 @@ Bitwarden organizations relate users and vault items together for [secure sharin
 
 > [!NOTE] Creating a self-hosted org.
 > To self-host Bitwarden, create an organization on the Bitwarden cloud, generate a [license key](https://bitwarden.com/host/), and use the key to [unlock organizations](https://bitwarden.com/help/licensing-on-premise/#organization-license/) on your server.
-2. **Onboard administrative users**. With your organization created, further setup procedures can be made easier by onboarding some [administrative users](https://bitwarden.com/help/user-types-access-control/). It's important that you **do not begin end-user onboarding** at this point, as there are a few steps left to prepare your organization. Learn how to invite admins [here](https://bitwarden.com/help/managing-users/#onboard-users/).
+2. **Onboard administrative users**. With your organization created, further setup procedures can be made easier by onboarding some [administrative users](https://bitwarden.com/help/user-types-access-control/). It's important that you **do not begin end-user onboarding** at this point, as there are a few steps left to prepare your organization. Learn how to invite admins [here](https://bitwarden.com/help/managing-users/#add-new-members/).
 3. **Configure identity services**. Enterprise organizations support [logging in with single sign-on](https://bitwarden.com/help/about-sso/) (SSO) using either SAML 2.0 or OpenID Connect (OIDC). To configure SSO, open the organization's **Settings** → **Single Sign-On** screen in the Admin Console, accessible by [organization owners and administrators](https://bitwarden.com/help/user-types-access-control/).
 4. **Enable enterprise policies**. [Enterprise policies](https://bitwarden.com/help/policies/) enable organizations to implement rules for users, for example requiring use of two-step login. It is highly recommended that you configure policies before onboarding users.
 
@@ -23400,7 +23423,7 @@ Bitwarden supports manual onboarding via the web vault and automated onboarding 
 
 ### Manual onboarding
 
-To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding a new member, [invite](https://bitwarden.com/help/managing-users/) → [accept](https://bitwarden.com/help/managing-users/) → [confirm](https://bitwarden.com/help/managing-users/). Learn how to invite new users [here](https://bitwarden.com/help/managing-users/#onboard-users/).
+To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding a new member, [invite](https://bitwarden.com/help/managing-users/) → [accept](https://bitwarden.com/help/managing-users/) → [confirm](https://bitwarden.com/help/managing-users/). Learn how to invite new users [here](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 > [!TIP] Instruct users to import from LP
 > Once users are onboarded, instruct them to import their personal data to Bitwarden using an exported file or, if their LastPass accounts are still active, using the **Direct import**method described [here](https://bitwarden.com/help/import-from-lastpass/#import-to-bitwarden/).
@@ -24265,9 +24288,11 @@ URL: https://bitwarden.com/help/login-with-passkeys/
 > [!NOTE] Autofill vs. Log in with Passkeys
 > Bitwarden offers three passkey features:
 > 
-> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.
-> - Use [2FA with passkeys](https://bitwarden.com/help/setup-two-step-login-fido/) to log in to your Bitwarden account.
 > - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault.
+> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.*
+> - Use [passkeys for 2FA](https://bitwarden.com/help/setup-two-step-login-fido/) to protect your Bitwarden account.*
+> 
+> * Some authenticators, notably Windows Hello, will not allow you to use a passkey for both login and 2FA.
 
 Passkeys offer secure authentication for your Bitwarden account. Use them to log in and, with a [PRF-capable setup](https://bitwarden.com/help/login-with-passkeys/#unlock-vault-requirements/), automatically [unlock your vault](https://bitwarden.com/help/understand-log-in-vs-unlock/) without entering your master password. Passkeys bypass two-step login, offering a streamlined alternative to traditional password-based authentication.
 
@@ -24580,7 +24605,7 @@ Once in the client's Admin Console you can fully administer the client organizat
 
 | **Task** | **Description** | **Resources** |
 |------|------|------|
-| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
+| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
 | Change user permissions | When end-users change roles, change their permissions as appropriate. | [User types and access control](https://bitwarden.com/help/user-types-access-control/) |
 | Add and remove user seats | As the customers' business grows, manage the number of user seats for the client organization. | [Manage user seats](https://bitwarden.com/help/provider-billing/) |
 | Reset users' master passwords | If enabled, use Account Recovery reset to recover end-user accounts if they forget their master password. | [Account Recovery](https://bitwarden.com/help/account-recovery/) |
@@ -25241,7 +25266,7 @@ The member list export includes the following information about each account:
 |------|------|
 | Email | The email address of the account |
 | Name | The name of the user, from **Settings** → **My account** |
-| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#onboard-users/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
+| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
 | Role | The user's [member role](https://bitwarden.com/help/user-types-access-control/) in the organization |
 | Two-step login | Shows if the user logs in with any [two-step login method](https://bitwarden.com/help/setup-two-step-login/) |
 | Account recovery | Shows if the user is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) |
@@ -27098,18 +27123,18 @@ Bitwarden organizations manage members and data in a scalable and secure fashion
 
 Once your organization is established and collections are setup to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
 
-Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#onboard-users/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
+Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#add-new-members/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
 
 #### Adding members
 
 In the simplest cases, users can be added to your organization directly from the web app. When adding users, you can designate which [collections](https://bitwarden.com/help/onboarding-and-succession/#collections/) to grant them access to, which [role](https://bitwarden.com/help/onboarding-and-succession/#comprehensive-role--based-access-controls/) to give them, and more.
 
-[Learn step-by-step how to add users to your organization](https://bitwarden.com/help/managing-users/#onboard-users/).
+[Learn step-by-step how to add users to your organization](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 Once users are fully onboarded to your organization, you can assign access to your organization's vault data by assigning them to [collections](https://bitwarden.com/help/onboarding-and-succession/#collections/). Teams and Enterprise organizations can assign users to [groups](https://bitwarden.com/help/onboarding-and-succession/#groups/) for scalable permissions assignment, and construct group-collection associations instead of assigning access on the individual level.
 
 > [!NOTE]
-> For large organizations, [SCIM](https://bitwarden.com/help/about-scim/) and [Directory Connector](https://bitwarden.com/help/onboarding-and-succession/#directory-connector/) are the best ways to onboard and offboard users at scale.
+> For large organizations, [SCIM](https://bitwarden.com/help/about-scim/) and [Directory Connector](https://bitwarden.com/help/directory-sync/) are the best ways to onboard and offboard users at scale.
 
 #### Groups
 
@@ -29345,7 +29370,7 @@ Now that your organization is ready for use in production, onboard the rest of y
 
 - [Using SCIM](https://bitwarden.com/help/about-scim/)
 - [Using Directory Connector](https://bitwarden.com/help/directory-sync/)
-- [Using manual invitation](https://bitwarden.com/help/managing-users/#onboard-users/)
+- [Using manual invitation](https://bitwarden.com/help/managing-users/#add-new-members/)
 
 We highly recommend reviewing, or re-reviewing, the [Onboarding and Succession](https://bitwarden.com/help/onboarding-and-succession/) guide before onboarding your remaining users.
 ---
@@ -31896,7 +31921,7 @@ The Bitwarden team is happy to announce the rollout of Admin Password Reset, the
 
 - **Admin Password Reset**: Enterprise Organizations can enroll in Admin Password Reset to allow designated administrators to reset the Master Password of Organization users (see [here](https://bitwarden.com/help/account-recovery/) for details).
 - **Master Password Re-prompt**: Use the new Master Password re-prompt option to require verification of your Master Password to access sensitive Vault items as designated by the user (see [here](https://bitwarden.com/help/managing-items/#protect-individual-items/) for details).
-- **Bulk User Management**: Organization Owners and Admins can now re-send invitations, confirm accepted users, and remove users from an Organization in-bulk (see [here](https://bitwarden.com/help/managing-users/#onboard-users/) for details).
+- **Bulk User Management**: Organization Owners and Admins can now re-send invitations, confirm accepted users, and remove users from an Organization in-bulk (see [here](https://bitwarden.com/help/managing-users/#add-new-members/) for details).
 - **Event Log Export**: Export event logs directly from the Web Vault (see [here](https://bitwarden.com/help/event-logs/#export-events/) for details).
 - **Directory Connector API Key Authentication**: Starting with this release, users of Directory Connector will need to use the [Organization API Key](https://bitwarden.com/help/public-api/#authentication/) to login.
 - **Directory Connector Sync Limit Increase**: Directory Connector can now sync an unlimited number of users or groups, where previously the limit was set at 2000 of either. To sync more than 2000 users or groups, toggle the new Sync Option (see [here](https://bitwarden.com/help/user-group-filters/#large-syncs/) for details).
@@ -31990,7 +32015,7 @@ URL: https://bitwarden.com/help/remove-users/
 
 Organization [admins, owners, and some custom role members](https://bitwarden.com/help/user-types-access-control/) can remove members from an organization. Removing a member:
 
-- **Eliminates** their access to the organization and its data. Removed members need to [re-join the organization](https://bitwarden.com/help/managing-users/#onboard-users/) to re-gain access.
+- **Eliminates** their access to the organization and its data. Removed members need to [re-join the organization](https://bitwarden.com/help/managing-users/#add-new-members/) to re-gain access.
 - **Does not delete** their Bitwarden account in most cases. Removed members are still able to access their personally-owned vault items unless you [delete their account](https://bitwarden.com/help/delete-member-accounts/).
 - Is **automatically** done for organizations using [directory sync](https://bitwarden.com/help/directory-sync/) if the **Remove disabled users during sync option** is turned on.
 
@@ -32149,7 +32174,7 @@ Organization [admins and some custom role members](https://bitwarden.com/help/us
 - **Automatically** done when users are in violation of some [enterprise policies](https://bitwarden.com/help/policies/).
 - **Automatically**done for organizations [using SCIM](https://bitwarden.com/help/about-scim/) when a member is suspended or de-activated in the IdP.
 
-Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they won't need to [be re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#onboard-users/).
+Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they won't need to [be re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 ## Revoke access
 
@@ -35845,7 +35870,7 @@ You're now ready to start administering your self-hosted organization! Here's ho
 
 Every all-star organization needs an all-star admin team. Start inviting high-privileged members who can help you build a foundation for secure credential sharing with Bitwarden. If you’re building an Enterprise organization, you can give members [highly-flexible custom permissions to fit your needs](https://bitwarden.com/help/user-types-access-control/#custom-role/).
 
-For protective redundancy, we recommend including at least one other **organization owner**in [your newly-formed admin team](https://bitwarden.com/help/managing-users/#onboard-users/).
+For protective redundancy, we recommend including at least one other **organization owner**in [your newly-formed admin team](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 ### Set policies (Enterprise-only)
 
@@ -37368,9 +37393,11 @@ URL: https://bitwarden.com/help/setup-two-step-login-fido/
 > [!NOTE] Autofill vs. Log in with Passkeys
 > Bitwarden offers three passkey features:
 > 
-> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.
-> - Use [2FA with passkeys](https://bitwarden.com/help/setup-two-step-login-fido/) to log in to your Bitwarden account.
 > - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault.
+> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.*
+> - Use [passkeys for 2FA](https://bitwarden.com/help/setup-two-step-login-fido/) to protect your Bitwarden account.*
+> 
+> * Some authenticators, notably Windows Hello, will not allow you to use a passkey for both login and 2FA.
 
 Two-step login using FIDO2 WebAuthn credentials is available for free to all Bitwarden users. Any FIDO2 WebAuthn Certified credentials can be used, including security keys such as YubiKeys, SoloKeys, and Nitrokeys, as well as native biometrics options like Windows Hello. On macOS, non-security keys like TouchID are not currently supported.
 
@@ -38874,9 +38901,11 @@ URL: https://bitwarden.com/help/storing-passkeys/
 > [!NOTE] Autofill vs. Log in with Passkeys
 > Bitwarden offers three passkey features:
 > 
-> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.
-> - Use [2FA with passkeys](https://bitwarden.com/help/setup-two-step-login-fido/) to log in to your Bitwarden account.
 > - [Save and autofill passkeys](https://bitwarden.com/help/storing-passkeys/) for other services from your Bitwarden vault.
+> - Use [passkeys to log in and unlock](https://bitwarden.com/help/login-with-passkeys/) your Bitwarden account.*
+> - Use [passkeys for 2FA](https://bitwarden.com/help/setup-two-step-login-fido/) to protect your Bitwarden account.*
+> 
+> * Some authenticators, notably Windows Hello, will not allow you to use a passkey for both login and 2FA.
 
 Passkeys can be stored and used by Bitwarden Password Manager. Using browser extensions and mobile apps, users can log in to their favorite apps and websites that have passkey login capability. Passkeys are a safe, passwordless alternative for users to log into services across their devices.
 
@@ -40056,7 +40085,7 @@ To access your organization's billing details:
  - **Add credit** to buy [account credit](https://bitwarden.com/help/payment-methods/#account-credit/) via PayPal or BitPay. Available credit will be automatically applied towards your next payment.
 
 > [!NOTE] Contact if can't fix downgrade, organization
-> If we can't process your [organization's renewal](https://bitwarden.com/help/organization-renewal/), your subscription will revert to the free plan. To fix this, update your payment method or pay the unpaid [invoice](https://bitwarden.com/help/invoices-and-receipts/#review-invoices/) directly. If your organization doesn't return to your paid subscription, [contact us](https://bitwarden.com/contact/).
+> If we can't process your [organization's renewal](https://bitwarden.com/help/organization-renewal/), access to your organization's data is limited. To fix this, update your payment method or pay the unpaid [invoice](https://bitwarden.com/help/invoices-and-receipts/#review-invoices/) directly. If your organization doesn't return to your paid subscription, [contact us](https://bitwarden.com/contact/).
 
 ### Subscription seats
 
@@ -40624,7 +40653,7 @@ Owners and admins have enhanced capabilities for managing users and accessing or
 
 | **Action** | **Owner** | **Admin** | **User** |
 |------|------|------|------|
-| [Invite and confirm new users](https://bitwarden.com/help/managing-users/#onboard-users/) | ✓ | ✓ | [close] |
+| [Invite and confirm new users](https://bitwarden.com/help/managing-users/#add-new-members/) | ✓ | ✓ | [close] |
 | [Revoke](https://bitwarden.com/help/revoke-users/) and [remove](https://bitwarden.com/help/remove-users/) users | ✓ | ✓ | [close] |
 | Assign and manage member roles | ✓ | ✓ | [close] |
 | Create and delete [groups](https://bitwarden.com/help/about-groups/) | ✓ | ✓ | [close] |

@@ -7,7 +7,7 @@ URL: https://bitwarden.com/help/client-org-removal/
 As a Provider, you may need to remove your Provider-client relationship with an organization if you are no longer providing services to them. In order for a client organization to be eligible for removal:
 
 - You must be a [Provider admin](https://bitwarden.com/help/provider-users/#provider-user-types/).
-- The client organization must have at least one [confirmed owner](https://bitwarden.com/help/managing-users/#onboard-users/).
+- The client organization must have at least one [confirmed owner](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 > [!NOTE] Deleting a client organization.
 > Client organizations can only be unlinked from within the Provider Portal UI, not **deleted**. To delete a client organization, you must be a Provider admin and follow these steps:

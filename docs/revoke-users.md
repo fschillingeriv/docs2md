@@ -10,7 +10,7 @@ Organization [admins and some custom role members](https://bitwarden.com/help/us
 - **Automatically** done when users are in violation of some [enterprise policies](https://bitwarden.com/help/policies/).
 - **Automatically**done for organizations [using SCIM](https://bitwarden.com/help/about-scim/) when a member is suspended or de-activated in the IdP.
 
-Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they won't need to [be re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#onboard-users/).
+Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they won't need to [be re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 ## Revoke access
 

@@ -288,7 +288,7 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > **Standard Invites**
 > 
-> You can manually invite users through the web app. [Learn about standard invites](https://bitwarden.com/help/managing-users/#onboard-users/).
+> You can manually invite users through the web app. [Learn about standard invites](https://bitwarden.com/help/managing-users/#add-new-members/).
 > 
 > **Directory Connector**
 > 

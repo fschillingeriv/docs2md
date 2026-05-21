@@ -53,7 +53,7 @@ To access your organization's billing details:
  - **Add credit** to buy [account credit](https://bitwarden.com/help/payment-methods/#account-credit/) via PayPal or BitPay. Available credit will be automatically applied towards your next payment.
 
 > [!NOTE] Contact if can't fix downgrade, organization
-> If we can't process your [organization's renewal](https://bitwarden.com/help/organization-renewal/), your subscription will revert to the free plan. To fix this, update your payment method or pay the unpaid [invoice](https://bitwarden.com/help/invoices-and-receipts/#review-invoices/) directly. If your organization doesn't return to your paid subscription, [contact us](https://bitwarden.com/contact/).
+> If we can't process your [organization's renewal](https://bitwarden.com/help/organization-renewal/), access to your organization's data is limited. To fix this, update your payment method or pay the unpaid [invoice](https://bitwarden.com/help/invoices-and-receipts/#review-invoices/) directly. If your organization doesn't return to your paid subscription, [contact us](https://bitwarden.com/contact/).
 
 ### Subscription seats
 

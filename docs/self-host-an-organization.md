@@ -65,7 +65,7 @@ You're now ready to start administering your self-hosted organization! Here's ho
 
 Every all-star organization needs an all-star admin team. Start inviting high-privileged members who can help you build a foundation for secure credential sharing with Bitwarden. If you’re building an Enterprise organization, you can give members [highly-flexible custom permissions to fit your needs](https://bitwarden.com/help/user-types-access-control/#custom-role/).
 
-For protective redundancy, we recommend including at least one other **organization owner**in [your newly-formed admin team](https://bitwarden.com/help/managing-users/#onboard-users/).
+For protective redundancy, we recommend including at least one other **organization owner**in [your newly-formed admin team](https://bitwarden.com/help/managing-users/#add-new-members/).
 
 ### Set policies (Enterprise-only)
 

@@ -96,7 +96,7 @@ Define technical requirements and onboarding strategy for your customer's Bitwar
 | 1 | Environment decision | Determine Cloud or Self-Hosted environment | [Hosting FAQs](https://bitwarden.com/help/hosting-faqs/) | 0.5 |
 | 2 | Authentication strategy | Determine if the customer will use Single Sign-On (SSO) | [About SSO](https://bitwarden.com/help/about-sso/) | 0.25 |
 | 3 | Decryption method | If using Login with SSO, select Master Password or trusted devices for decryption | [About trusted devices](https://bitwarden.com/help/about-trusted-devices/) | 0.25 |
-| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#onboard-users/) | 0.25 |
+| 4 | Provisioning strategy | Select provisioning strategy like SCIM, directory connector, or manual provisioning. | [Managing users](https://bitwarden.com/help/managing-users/#add-new-members/) | 0.25 |
 | 5 | User identification | Identify users, teams, or departments for rollout groups | | 0.25 |
 | 6 | Training strategy | Identify groups and internal advocates who will attend training. Example: end users, service desk, admins | | 0.5 |
 | 7 | Document collection (sharing) strategy | Determine how collections will be configured. Considerations include: Will users be allowed to create collections? Will collections be configured by department, project, function? Will data be imported from another application, which often defines structure? Do Admin and Owner users get access to all shared items, or only the Managers of delegated Collections? | [About collections](https://bitwarden.com/help/about-collections/) | 1 |

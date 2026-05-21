@@ -54,7 +54,7 @@ Common collections patterns include **Collections by Department** (for example, 
 One common group-collection pattern is to create **Groups by Department** and **Collections by Function**, for example:
 
 ![Collections](https://bitwarden.com/assets/6qodHGqBPABEFv3XJxaOUe/780cd4624a5d0a5fe315677968003e2d/collections-graphic-2.png)
-6. **Start inviting users**. Now that the infrastructure for the secure and scalable sharing of credentials is in place for your client, you can begin [inviting users to the organization](https://bitwarden.com/help/managing-users/#onboard-users/). To ensure the security of the organization, Bitwarden applies a three-step process for onboarding new users, **Invite** → **Accept**→ **Confirm**.
+6. **Start inviting users**. Now that the infrastructure for the secure and scalable sharing of credentials is in place for your client, you can begin [inviting users to the organization](https://bitwarden.com/help/managing-users/#add-new-members/). To ensure the security of the organization, Bitwarden applies a three-step process for onboarding new users, **Invite** → **Accept**→ **Confirm**.
 
 > [!TIP] SCIM & BWDC for Providers.
 > **If your customer uses directory service** or IdP (active directory, an LDAP, Okta, and more), use [SCIM](https://bitwarden.com/help/about-scim/) or [Directory Connector](https://bitwarden.com/help/directory-sync/) to automatically sync organization users from the source directory and automatically issue invitations.

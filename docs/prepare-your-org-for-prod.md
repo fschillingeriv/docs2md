@@ -74,6 +74,6 @@ Now that your organization is ready for use in production, onboard the rest of y
 
 - [Using SCIM](https://bitwarden.com/help/about-scim/)
 - [Using Directory Connector](https://bitwarden.com/help/directory-sync/)
-- [Using manual invitation](https://bitwarden.com/help/managing-users/#onboard-users/)
+- [Using manual invitation](https://bitwarden.com/help/managing-users/#add-new-members/)
 
 We highly recommend reviewing, or re-reviewing, the [Onboarding and Succession](https://bitwarden.com/help/onboarding-and-succession/) guide before onboarding your remaining users.
