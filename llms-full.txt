@@ -6558,7 +6558,6 @@ Bitwarden is open source software. All of our source code is hosted on GitHub an
 
 In addition to Bitwarden source code being audited by reputable third-party security auditing firms and independent security researchers, Bitwarden source code is scanned by the following set of tools whenever a push is made to any branch in any Bitwarden repository:
 
-- **Checkmarx One**: Used for static application security testing (SAST), dynamic application security testing (DAST), software composition analysis (SCA), malicious package detection, infrastructure as code (IaC), and container scanning to uncover potential vulnerabilities quickly and surface them to Bitwarden engineers.
 - **SonarQube**: Used for code quality analysis to ensure best practices for security, reliability, and maintainability are followed.
 - **Codecov**: Used for test coverage analysis to maximize the amount of code that is included in automated testing.
 - **Linters**: Several security-focused linters are also used to inspect all code changes.
