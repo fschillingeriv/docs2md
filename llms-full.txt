@@ -6717,7 +6717,7 @@ For all underlying platforms on which Bitwarden clients applications are install
 
 ### Platforms for self-hosted Bitwarden servers
 
-Unless otherwise specified in the System Requirements, self-hosted installations should be maintained on up-to-date operating systems and compute platforms under active support from their vendor(s).
+Unless otherwise specified in the System Requirements, self-hosted installations should be maintained on up-to-date operating systems and compute platforms under active mainstream support from their vendor(s).
 ---
 URL: https://bitwarden.com/help/blocker-access-rule/
 ---
