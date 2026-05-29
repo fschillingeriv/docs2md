@@ -3239,12 +3239,18 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 > [!TIP] Android autofill card setup
 > On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
 
-You can add or remove cards from your autofill suggestions and from the inline autofill menu using settings found in **Settings** → **Autofill**:
+You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
 
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
+
+> [!NOTE] Jumping from favorites to autofill suggestions
+> Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
+
+You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
+
+- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 
 ## Use card & identity autofill
 
@@ -13485,7 +13491,7 @@ Regardless of whether you use the included MSSQL Express image or your own exter
 
 ## Databases for Lite deployments
 
-Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PosgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
+Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PostgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
 
 > [!NOTE] Lite database require your management.
 > Because Bitwarden lite databases are not provided by or collocated with the application container, database maintenance, including updates, maintenance, and backups, must be fully managed by you.
@@ -17011,8 +17017,10 @@ Any item can be designated as a **Favorite** to allow quick access to your most 
 
 Even items [shared with you from an organization](https://bitwarden.com/help/sharing/) can be designated a favorite, but this will only impact how they appear in your individual vault (i.e. you won't make that item a favorite for other users with access to the organization or collection).
 
-> [!NOTE]
+> [!TIP] What happens to favorites
 > Items marked as a favorite will appear at the top of your 🔒 **Vault** view in browser extensions and mobile apps, and in the ⭐ **Favorites** filter in your web vault and desktop apps.
+> 
+> In browser extensions, login items will jump from the **Favorites**section to the **Autofill suggestions** section when you're browsing the web page they're associated with.
 
 ## Designating favorites
 
@@ -18859,7 +18867,9 @@ This article contains Frequently Asked Questions (FAQs) regarding self-hosting.
 
 ### Q: What platforms can I host on?
 
-**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines.
+**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines. 
+
+The platform you host on must be under active mainstream support by its vendor. In other words, Bitwarden does not support hosting on any platform version that has reached EoL. Windows Server, for example requires at least version 2022; versions 2019 and 2016 have both ended active mainstream support.
 
 Docker Desktop on Windows may require a license depending on whether your company meets [Docker's requirements for licenses](https://www.docker.com/pricing/), however Docker on Linux is free.
 
@@ -18870,10 +18880,6 @@ You can read more about Docker and container technologies at the [Docker website
 **A**: While we expect most client functionality to work with non-official servers, such as Vaultwarden, Bitwarden cannot guarantee that official clients will work perfectly with non-official servers. If you're using a non-official server, we recommend that you keep it as up-to-date as possible to take advantage of compatibility updates written by its maintainers. Bitwarden Customer Support may be limited in their ability to assist you with client issues if you're using a non-official server.
 
 As an example, Vaultwarden introduced support for native mobile apps in version 1.31.0. If you’re using native mobile apps and a version of vaultwarden prior to 1.31.0, you will receive an error and should ugrade your server.
-
-### Q: How do I deploy Bitwarden on AWS, Azure, GCP, or VMware vCenter?
-
-**A:** Bitwarden is generally deployed as either a single Windows or Linux VM, or a cluster of machines. At this time, Bitwarden does not publish pre-built images for these platforms, but you can find instructions on how to configure a VM on all of the above platforms and more [here](https://bitwarden.com/help/self-host-an-organization/).
 
 ### Q: How should I achieve high availability?
 
@@ -26181,8 +26187,8 @@ If you are migrating an organization to the cloud, continue with the following s
 
 ### Host to host
 
-> [!TIP] Host to host is only for linux
-> These instructions are currently only for migration from one Linux self-hosted server to another Linux self-hosted server.
+> [!NOTE] Host to host is only for linux
+> If you're experiencing issues with your self-hosted Linux server and are unable to troubleshoot the issue, this process will help you start fresh.
 
 To migrate from one self-hosted Bitwarden server to another:
 
@@ -39780,7 +39786,10 @@ You can manually copy a local code to your Bitwarden vault for access from both 
  - If a matching login item is found, tap the login item. Edit or enter any additional details and tap the ✓ **Check icon** when done.
  - If no matching login item is found, tap + **New item**. Edit or enter any additional details and tap the ✓ **Check icon** when done.
 
-[Embedded content]## How syncing works
+> [!NOTE] Copy codes from Authenticator one-way
+> Manually copying a code is a one-way transfer that does not depend on the **Allow authenticator syncing** setting in Password Manager. This sync setting only controls if TOTPs saved in your vault are made visible in Authenticator. If you only want to move local codes from Authenticator to your Bitwarden vault, do not turn on the setting.
+
+## How syncing works
 
 Though the core key exchange workflows are the same from platform-to-platform, the secure storage and communication methods that facilitate sync between Password Manager and Authenticator are specific to Android and iOS:
 
@@ -39820,6 +39829,17 @@ When you open Authenticator and **Allow authenticator sync** is activated:
 3. Authenticator locally decrypts your authenticator keys, display names, and usernames with the **global symmetric key**.
 
 When you turn off **Allow authenticator sync**or fully log out of Bitwarden Password Manager, the encrypted data stored in an App Group (authenticator keys, display names, and usernames) are deleted. If all associated Bitwarden accounts deactivate **Allow authenticator sync** or logout, the **global symmetric key** is also deleted.
+
+## How logout affects sync
+
+Synced TOTP codes require Password Manager to be logged in. The account encryption key required to decrypt and re-encrypt your vault items is only persisted locally while you are logged in. Logging out of Password Manager will result in the persisted account encryption key being wiped. Password Manager can no longer fulfill Authenticator sync requests, and your synced TOTP codes will be unavailable in Authenticator until you log back in. Several actions may result in becoming logged out of the Password Manager such as:
+
+- Session expiring
+- KDF setting change
+- Manual logout
+
+> [!NOTE] Synced TOTP codes not stored independantly
+> Synced TOTP codes are not stored independently on your device. If you rely on Bitwarden Authenticator for two-step login on your Bitwarden account, logging out of the Password Manager will prevent you from accessing those codes. We recommend having an alternative two-step login method available.
 ---
 URL: https://bitwarden.com/help/transfer-ownership/
 ---
