@@ -3239,18 +3239,12 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 > [!TIP] Android autofill card setup
 > On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
 
-You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
+You can add or remove cards from your autofill suggestions and from the inline autofill menu using settings found in **Settings** → **Autofill**:
 
+- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
-
-> [!NOTE] Jumping from favorites to autofill suggestions
-> Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
-
-You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
-
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 
 ## Use card & identity autofill
 
@@ -13491,7 +13485,7 @@ Regardless of whether you use the included MSSQL Express image or your own exter
 
 ## Databases for Lite deployments
 
-Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PostgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
+Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PosgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
 
 > [!NOTE] Lite database require your management.
 > Because Bitwarden lite databases are not provided by or collocated with the application container, database maintenance, including updates, maintenance, and backups, must be fully managed by you.
@@ -17017,10 +17011,8 @@ Any item can be designated as a **Favorite** to allow quick access to your most 
 
 Even items [shared with you from an organization](https://bitwarden.com/help/sharing/) can be designated a favorite, but this will only impact how they appear in your individual vault (i.e. you won't make that item a favorite for other users with access to the organization or collection).
 
-> [!TIP] What happens to favorites
+> [!NOTE]
 > Items marked as a favorite will appear at the top of your 🔒 **Vault** view in browser extensions and mobile apps, and in the ⭐ **Favorites** filter in your web vault and desktop apps.
-> 
-> In browser extensions, login items will jump from the **Favorites**section to the **Autofill suggestions** section when you're browsing the web page they're associated with.
 
 ## Designating favorites
 
@@ -18867,9 +18859,7 @@ This article contains Frequently Asked Questions (FAQs) regarding self-hosting.
 
 ### Q: What platforms can I host on?
 
-**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines. 
-
-The platform you host on must be under active mainstream support by its vendor. In other words, Bitwarden does not support hosting on any platform version that has reached EoL. Windows Server, for example requires at least version 2022; versions 2019 and 2016 have both ended active mainstream support.
+**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines.
 
 Docker Desktop on Windows may require a license depending on whether your company meets [Docker's requirements for licenses](https://www.docker.com/pricing/), however Docker on Linux is free.
 
@@ -18880,6 +18870,10 @@ You can read more about Docker and container technologies at the [Docker website
 **A**: While we expect most client functionality to work with non-official servers, such as Vaultwarden, Bitwarden cannot guarantee that official clients will work perfectly with non-official servers. If you're using a non-official server, we recommend that you keep it as up-to-date as possible to take advantage of compatibility updates written by its maintainers. Bitwarden Customer Support may be limited in their ability to assist you with client issues if you're using a non-official server.
 
 As an example, Vaultwarden introduced support for native mobile apps in version 1.31.0. If you’re using native mobile apps and a version of vaultwarden prior to 1.31.0, you will receive an error and should ugrade your server.
+
+### Q: How do I deploy Bitwarden on AWS, Azure, GCP, or VMware vCenter?
+
+**A:** Bitwarden is generally deployed as either a single Windows or Linux VM, or a cluster of machines. At this time, Bitwarden does not publish pre-built images for these platforms, but you can find instructions on how to configure a VM on all of the above platforms and more [here](https://bitwarden.com/help/self-host-an-organization/).
 
 ### Q: How should I achieve high availability?
 
@@ -25292,91 +25286,6 @@ The **Members** page is also where you can withdraw someone from an organization
 > [!WARNING] Danger Zone
 > Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
 ---
-URL: https://bitwarden.com/help/marketplace-deployments/
----
-# Marketplace Deployments
-
-This article will walk you through deploying a self-hosted Bitwarden server using a pre-built virtual machine image from the AWS or Azure marketplace. These deployment options are a good fit for organizations that already operate in AWS or Azure and want to keep their Bitwarden server inside the same environment as the rest of their stack:
-
-- [Self-host Bitwarden via the AWS marketplace](https://aws.amazon.com/marketplace/pp/prodview-tuo4cqgcd3f5w)
-- [Self-host Bitwarden via the Azure marketplace](https://marketplace.microsoft.com/en-us/product/saas/bitwardeninc.bitwarden-self-host)
-
-These marketplace deployments launch a virtual machine (VM) with the core software requirements for self-hosting Bitwarden and the installation script pre-loaded. Once launched, you can SSH into the VM and start the installation script to complete the setup procedure.
-
-## Before you begin
-
-### Included in the image
-
-Both the AWS AMI and and Azure VM image are pre-loaded with:
-
-- Ubuntu 22.04 LTS
-- Docker Engine
-- Docker Compose
-- Bitwarden installation script
-
-> [!WARNING] OS support for marketplace deployments
-> The Bitwarden marketplace images are pre-loaded Ubuntu 22.04 LTS, however **operating system maintenance, patching, and OS-level troubleshooting are not in-scope for Bitwarden customer support**. You are responsible for maintaining the underlying OS, including applying security updates, monitoring, and backups as you would be for any other VM in your environment.
-
-### Prerequisites
-
-Have the following ready:
-
-- An AWS or Azure account with permission to launch a VM from the marketplace.
-- An installation ID and key, retrieved from [bitwarden.com/host](https://bitwarden.com/host/).
-- A registered domain name with a DNS record pointing to the public IP your VM instance will use.
-- An SMTP server or cloud SMTP provider that the VM can reach.
-- An SSH key pair that can be used to access the VM.
-- (**Optional**) An SSL certificate to apply to the VM. Let's Encrypt can be used once you SSH into the VM to generate and issue a certificate for free.
-
-## Deployment
-
-### AWS
-
-1. Subscribe to the product from the [Bitwarden self-hosted server listing on the AWS marketplace](https://aws.amazon.com/marketplace/pp/prodview-tuo4cqgcd3f5w).
-2. Open the launch wizard for the AMI through the AWS console.
-3. Configure the AMI. The launch wizard will allow you to specify VPC, subnet, security group and a few other attributes, but make sure to take note of the following:
-
- - The designated **security group** must open ports 80 and 443.
- - There are many **instance types** to choose from, but a recommendation is provided.
- - A **key pair** can be generated for accessing the VM once it's launched.
-4. Launch the instance. Once it reaches a running state, SSH into the VM. The `./bitwarden.sh install` command will automatically be launched to [begin the installation wizard](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/).
-
-> [!TIP] Skip some steps for marketplace deployments.
-> Because marketplace deployments are pre-packaged with the installation script, you can skip directly to **Step 3** ("Complete the prompts in the installer") in the linked instructions.
-
-### Azure
-
-1. Select **Get it now** from the [Bitwarden self-hosted server listing on the Azure marketplace](https://marketplace.microsoft.com/en-us/product/saas/bitwardeninc.bitwarden-self-host). Azure will require you to enter information about your Azure account, like first and last name, before proceeding.
-2. Choose which subscription to associate the VM with and select **Create** to launch the VM creation wizard.
-3. Configure the AMI. The creation wizard will allow you to specify a wide variety of attributes, but make sure to take note of the following:
-
- - The designated **Network** **Security Group** must open ports 80 and 443.
- - There are many VM**sizes** to choose from, but a recommendation is provided.
- - A **key pair** can be generated for accessing the VM once it's launched.
-4. Review and create the VM. Once it reaches a running state, SSH into the VM.he `./bitwarden.sh install` command will automatically be launched to [begin the installation wizard](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/).
-
-> [!TIP] Skip some steps for marketplace deployments.
-> Because marketplace deployments are pre-packaged with the installation script, you can skip directly to **Step 3** ("Complete the prompts in the installer") in the linked instructions.
-
-## Additional information
-
-### Support
-
-Bitwarden customer support covers the Bitwarden server and its configuration. For operating system support, including system maintenance, patching, and OS-level troubleshooting refer to your OS vendor's support infrastructure. For cloud account and platform support, refer to AWS or Azure's support infrastructure.
-
-### Costs
-
-The Bitwarden marketplace images are available at no extra charge through Bitwarden or the AWS and Azure marketplaces. You will be billed:
-
-- By Bitwarden, as normal, for your subscription based on plan and seat count.
-- By AWS or Azure, as for any other application, for compute and storage costs.
-
-### Automatic updates
-
-Marketplace deployments are setup by default with a cronjob that automatically applies updates to keep your Bitwarden server current. Updates to the Bitwarden server are applied in place using the [installation script's pre-packaged update commands](https://bitwarden.com/help/updating-on-premise/). 
-
-To prevent downtime in the case of an unexpected update failure, Bitwarden **strongly recommends** that you put in place systems for regularly [backing up server data](https://bitwarden.com/help/backup-on-premise/) and for monitoring server availability.
----
 URL: https://bitwarden.com/help/master-password-re-prompt/
 ---
 # Master Password Re-Prompt
@@ -26187,8 +26096,8 @@ If you are migrating an organization to the cloud, continue with the following s
 
 ### Host to host
 
-> [!NOTE] Host to host is only for linux
-> If you're experiencing issues with your self-hosted Linux server and are unable to troubleshoot the issue, this process will help you start fresh.
+> [!TIP] Host to host is only for linux
+> These instructions are currently only for migration from one Linux self-hosted server to another Linux self-hosted server.
 
 To migrate from one self-hosted Bitwarden server to another:
 
@@ -39786,10 +39695,7 @@ You can manually copy a local code to your Bitwarden vault for access from both 
  - If a matching login item is found, tap the login item. Edit or enter any additional details and tap the ✓ **Check icon** when done.
  - If no matching login item is found, tap + **New item**. Edit or enter any additional details and tap the ✓ **Check icon** when done.
 
-> [!NOTE] Copy codes from Authenticator one-way
-> Manually copying a code is a one-way transfer that does not depend on the **Allow authenticator syncing** setting in Password Manager. This sync setting only controls if TOTPs saved in your vault are made visible in Authenticator. If you only want to move local codes from Authenticator to your Bitwarden vault, do not turn on the setting.
-
-## How syncing works
+[Embedded content]## How syncing works
 
 Though the core key exchange workflows are the same from platform-to-platform, the secure storage and communication methods that facilitate sync between Password Manager and Authenticator are specific to Android and iOS:
 
@@ -39829,17 +39735,6 @@ When you open Authenticator and **Allow authenticator sync** is activated:
 3. Authenticator locally decrypts your authenticator keys, display names, and usernames with the **global symmetric key**.
 
 When you turn off **Allow authenticator sync**or fully log out of Bitwarden Password Manager, the encrypted data stored in an App Group (authenticator keys, display names, and usernames) are deleted. If all associated Bitwarden accounts deactivate **Allow authenticator sync** or logout, the **global symmetric key** is also deleted.
-
-## How logout affects sync
-
-Synced TOTP codes require Password Manager to be logged in. The account encryption key required to decrypt and re-encrypt your vault items is only persisted locally while you are logged in. Logging out of Password Manager will result in the persisted account encryption key being wiped. Password Manager can no longer fulfill Authenticator sync requests, and your synced TOTP codes will be unavailable in Authenticator until you log back in. Several actions may result in becoming logged out of the Password Manager such as:
-
-- Session expiring
-- KDF setting change
-- Manual logout
-
-> [!NOTE] Synced TOTP codes not stored independantly
-> Synced TOTP codes are not stored independently on your device. If you rely on Bitwarden Authenticator for two-step login on your Bitwarden account, logging out of the Password Manager will prevent you from accessing those codes. We recommend having an alternative two-step login method available.
 ---
 URL: https://bitwarden.com/help/transfer-ownership/
 ---

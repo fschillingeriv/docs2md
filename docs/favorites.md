@@ -8,10 +8,8 @@ Any item can be designated as a **Favorite** to allow quick access to your most 
 
 Even items [shared with you from an organization](https://bitwarden.com/help/sharing/) can be designated a favorite, but this will only impact how they appear in your individual vault (i.e. you won't make that item a favorite for other users with access to the organization or collection).
 
-> [!TIP] What happens to favorites
+> [!NOTE]
 > Items marked as a favorite will appear at the top of your 🔒 **Vault** view in browser extensions and mobile apps, and in the ⭐ **Favorites** filter in your web vault and desktop apps.
-> 
-> In browser extensions, login items will jump from the **Favorites**section to the **Autofill suggestions** section when you're browsing the web page they're associated with.
 
 ## Designating favorites
 

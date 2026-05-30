@@ -18,7 +18,7 @@ Regardless of whether you use the included MSSQL Express image or your own exter
 
 ## Databases for Lite deployments
 
-Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PostgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
+Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PosgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
 
 > [!NOTE] Lite database require your management.
 > Because Bitwarden lite databases are not provided by or collocated with the application container, database maintenance, including updates, maintenance, and backups, must be fully managed by you.

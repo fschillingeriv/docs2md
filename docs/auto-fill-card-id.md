@@ -14,18 +14,12 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 > [!TIP] Android autofill card setup
 > On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
 
-You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
+You can add or remove cards from your autofill suggestions and from the inline autofill menu using settings found in **Settings** → **Autofill**:
 
+- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
-
-> [!NOTE] Jumping from favorites to autofill suggestions
-> Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
-
-You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
-
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 
 ## Use card & identity autofill
 

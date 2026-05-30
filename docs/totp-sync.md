@@ -43,10 +43,7 @@ You can manually copy a local code to your Bitwarden vault for access from both 
  - If a matching login item is found, tap the login item. Edit or enter any additional details and tap the ✓ **Check icon** when done.
  - If no matching login item is found, tap + **New item**. Edit or enter any additional details and tap the ✓ **Check icon** when done.
 
-> [!NOTE] Copy codes from Authenticator one-way
-> Manually copying a code is a one-way transfer that does not depend on the **Allow authenticator syncing** setting in Password Manager. This sync setting only controls if TOTPs saved in your vault are made visible in Authenticator. If you only want to move local codes from Authenticator to your Bitwarden vault, do not turn on the setting.
-
-## How syncing works
+[Embedded content]## How syncing works
 
 Though the core key exchange workflows are the same from platform-to-platform, the secure storage and communication methods that facilitate sync between Password Manager and Authenticator are specific to Android and iOS:
 
@@ -86,14 +83,3 @@ When you open Authenticator and **Allow authenticator sync** is activated:
 3. Authenticator locally decrypts your authenticator keys, display names, and usernames with the **global symmetric key**.
 
 When you turn off **Allow authenticator sync**or fully log out of Bitwarden Password Manager, the encrypted data stored in an App Group (authenticator keys, display names, and usernames) are deleted. If all associated Bitwarden accounts deactivate **Allow authenticator sync** or logout, the **global symmetric key** is also deleted.
-
-## How logout affects sync
-
-Synced TOTP codes require Password Manager to be logged in. The account encryption key required to decrypt and re-encrypt your vault items is only persisted locally while you are logged in. Logging out of Password Manager will result in the persisted account encryption key being wiped. Password Manager can no longer fulfill Authenticator sync requests, and your synced TOTP codes will be unavailable in Authenticator until you log back in. Several actions may result in becoming logged out of the Password Manager such as:
-
-- Session expiring
-- KDF setting change
-- Manual logout
-
-> [!NOTE] Synced TOTP codes not stored independantly
-> Synced TOTP codes are not stored independently on your device. If you rely on Bitwarden Authenticator for two-step login on your Bitwarden account, logging out of the Password Manager will prevent you from accessing those codes. We recommend having an alternative two-step login method available.

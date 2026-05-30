@@ -69,8 +69,8 @@ If you are migrating an organization to the cloud, continue with the following s
 
 ### Host to host
 
-> [!NOTE] Host to host is only for linux
-> If you're experiencing issues with your self-hosted Linux server and are unable to troubleshoot the issue, this process will help you start fresh.
+> [!TIP] Host to host is only for linux
+> These instructions are currently only for migration from one Linux self-hosted server to another Linux self-hosted server.
 
 To migrate from one self-hosted Bitwarden server to another:
 
