@@ -89,9 +89,9 @@ From the **Members** page, you can also review and update individual members' ac
 ![Update member](https://bitwarden.com/assets/5tspjHKPHunTlRhylIJo5O/c707a3e1780364f8820832c216b5ca64/Update_member.png)
 *Update member*
 
-### Review 2FA status
+### Review 2FA and account recovery status
 
-The 2FA status of users can be viewed from the **Members** page. If the user has a 🔒 **Lock icon**, two-step login is used on their Bitwarden account:
+The **Members** page also notes which users have set up certain features in the **Policies** column. The 🔑 **Key icon** means the member is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). The 🔒 **Lock icon** is present when [two-step login](https://bitwarden.com/help/setup-two-step-login/) is used: 
 
 ![2FA status](https://bitwarden.com/assets/HNlJNX9VJVURxGqrrBdRb/1592f5c29694cf36e973ddac553e95e1/2FA_status.png)
 *2FA status*

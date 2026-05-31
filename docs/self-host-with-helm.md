@@ -12,6 +12,9 @@ This article will describe the generic steps for hosting Bitwarden on Kubernetes
 - [OpenShift Deployment](https://bitwarden.com/help/openshift-deployment/)
 - [AWS EKS Deployment](https://bitwarden.com/help/aws-eks-deployment/)
 
+> [!NOTE] NGINX ingress deprecation
+> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+
 ## Requirements
 
 Before proceeding with the installation, ensure the following requirements are met:
@@ -19,13 +22,13 @@ Before proceeding with the installation, ensure the following requirements are m
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) is installed.
 - [Helm 3](https://helm.sh/docs/intro/install/) is installed.
 - You have an SSL certificate and key or access to creating one via a certificate provider.
-- You have a SMTP server or access to a cloud SMTP provider.
+- You have an SMTP server or access to a cloud SMTP provider.
 - A [storage class](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) that supports ReadWriteMany.
 - You have an installation id and key retrieved from [https://bitwarden.com/host](https://bitwarden.com/host/).
 
 ### Rootless requirements
 
-Bitwarden will detect whether your environment restricts what user containers can be run as during startup and will automatically initiate deployment in rootless mode if restriction is detected. Successfully deploying in rootless mode requires one of the following two options:
+Bitwarden will detect whether your environment restricts what user containers can be run as during startup and will automatically initiate deployment in rootless mode if restrictions are detected. Successfully deploying in rootless mode requires one of the following two options:
 
 - Deploying an [external MSSQL database](https://bitwarden.com/help/external-db/) instead of the SQL container included by default in the Helm chart.
 - Assigning elevated privileges to the included SQL container [using a service account](https://bitwarden.com/help/kubernetes-service-accounts/), [pod security context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod), or other method.
@@ -60,17 +63,12 @@ Create a `my-values.yaml` configuration file, which you will use to customize yo
 helm show values bitwarden/self-host > my-values.yaml
 ```
 
-At a minimum, you must configure your `my-values.yaml` file with the values in the following table, however a comprehensive list of values can be found [here](https://github.com/bitwarden/helm-charts/blob/main/charts/self-host/values.yaml):
+At a minimum, you must configure your `my-values.yaml` file with the values in the following table, however a comprehensive list of values can be found [here](https://github.com/bitwarden/helm-charts/blob/main/charts/self-host/values.yaml).
+
+#### Required variables
 
 | Value | Description |
 |------|------|
-| `general.domain:` | The domain that will point to your cluster's public IP address. |
-| `general.ingress.enabled:` | Whether to use the nginx ingress controller defined in the chart ([see an example using a non-included ingress controller](https://bitwarden.com/help/add-rawmanifest-files/#traefik-ingressroute/)). |
-| `general.ingress.className:` | For example, `"nginx"` or `"azure-application-gateway"` ([see an example](https://bitwarden.com/help/azure-aks-deployment/#azure-application-gateway/)). Set `general.ingress.enabled: false` to use other ingress controllers. |
-| `general.ingress.annotations:` | Annotations to add to the ingress controller. If you're using the included nginx controller, defaults are provided that you must uncomment and can customize as needed. |
-| `general.ingress.paths:` | If you're using the default nginx controller, defaults are provided that you can customize as needed. |
-| `general.ingress.tls.name:` | The name of your TLS certificate. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
-| `general.ingress.tls.clusterIssuer:` | The name of your TLS certificate issuer. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
 | `general.admins:` | A comma-separated list of email addresses that will be permitted to access to the [System Admin Portal](https://bitwarden.com/help/system-administrator-portal/). |
 | `general.email.replyToEmail:` | Email address used for invitations, typically `no_reply@smtp_host`. |
 | `general.email.smtpHost:` | Your SMTP server hostname or IP address. |
@@ -83,6 +81,44 @@ At a minimum, you must configure your `my-values.yaml` file with the values in t
 | `database.enabled:` | Whether to use the SQL pod included in the chart. Only set to `false` if you're using an external SQL server. |
 | `component.scim.enabled` | The SCIM pod is disabled by default. To enable the SCIM pod, set value `= true`. |
 | `volume.logs.enabled:` | While not required, we recommend setting to `true` for troubleshooting purposes. |
+
+#### Traffic routing options
+
+The following sections describe the methods and values for configuring external traffic to your Bitwarden deployment. `my-values.yaml` includes configurations for both ingress and Gateway API implementations. Enabling both `general.ingress.enabled` and `general.gateway.enabled `simultaneously is not recommended.
+
+##### Ingress
+
+The following table contains the required values for a Kubernetes ingress controller object. Please be aware that NGINX Ingress is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
+
+| Value | Description |
+|------|------|
+| `general.domain:` | The domain that will point to your cluster's public IP address. |
+| `general.ingress.enabled:` | Whether to use an ingress controller defined in the chart ([see an example using a non-included ingress controller](https://bitwarden.com/help/add-rawmanifest-files/#traefik-ingressroute/)). |
+| `general.ingress.className:` | For example, `"azure-application-gateway"` ([see an example](https://bitwarden.com/help/azure-aks-deployment/#azure-application-gateway/)). Set `general.ingress.enabled: false` to use other ingress controllers. |
+| `general.ingress.annotations:` | Annotations to add to the ingress controller. |
+| `general.ingress.paths:` | Defaults are provided that you can customize as needed. |
+| `general.ingress.tls.name:` | The name of your TLS certificate. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
+| `general.ingress.tls.clusterIssuer:` | The name of your TLS certificate issuer. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
+
+##### Gateway API
+
+Bitwarden supports routing traffic using an `HTTPRoute` resource as an alternative to an ingress controller. For additional information on Gateway, please refer to:
+
+- Gateway API core documentation
+- Gateway controller implementations
+
+Configure the following values in `my-values.yaml` to enable Gateway API support:
+
+| Value | Description |
+|------|------|
+| `general.gateway.enabled:` | Set to `true` to create an `HTTPRoute` resource for GatewayAPI based ingress. |
+| `general.gateway.parentRefs:` | A list of `Gateway` resource references that your `HTTPRoute` attaches to. Each entry should specify the `namespace` of an externally managed Gateway resource. |
+| `general.gateway.annotations:` | Annotations to add to the `HTTPRoute` resource. Accepts a map of `key:value` pairs. Leave empty `{ }` if no annotations are needed. |
+| `general.gateway.labels:` | Labels to add to the `HTTPRoute` resource. Accepts a map of `key:value` pairs. Leave empty `{ }` if no labels are needed. |
+| `general.gateway.paths:` | Path prefix configuration for each Bitwarden Service exposed with `HTTPRoute`. Each entry maps a service to a URL path using `PathPrefix` matching. Do not change the default paths as they match the Bitwarden routing. Available key paths are: `web attachments api icons notifications events scim sso identity attachments admin` |
+
+> [!NOTE] TLS is handled at the Gateway resource level, not on the HTTPRoute.
+> `TLS` is handled at the Gateway resource level, not on the `HTTPRoute`.
 
 ### Create a secret object
 
@@ -146,7 +182,7 @@ spec:
  solvers:
  - http01:
  ingress:
- class: nginx #use "azure/application-gateway" for Application Gateway ingress
+ class: azure/application-gateway # use for Application Gateway ingress
 EOF
 ```
 
@@ -167,17 +203,23 @@ spec:
  solvers:
  - http01:
  ingress:
- class: nginx #use "azure/application-gateway" for Application Gateway ingress
+ class: azure/application-gateway # use for Application Gateway ingress
 EOF
 ```
-3. If you haven't already, be sure to set the `general.ingress.cert.tls.name:` and `general.ingress.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
+3. If you haven't already, be sure to set the ingress or gateway general settings.
+
+ 1. For ingress, `general.ingress.cert.tls.name:` and `general.ingress.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
 
  - `general.ingress.cert.tls.name: tls-secret`
  - `general.ingress.cert.tls.clusterIssuer: letsencrypt-staging`
+ 2. For a gateway setup, `general.gateway.cert.tls.name:` and `general.gateway.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
+
+ - `general.gateway.cert.tls.name: tls-secret`
+ - `general.gateway.cert.tls.clusterIssuer: letsencrypt-staging`
 
 ### Adding rawManifest files
 
-The Bitwarden self-host Helm Chart allows you to include other Kubernetes manifest files either pre- or post-install. To do this, update the `rawManifests` section of the chart ([learn more](https://bitwarden.com/help/add-rawmanifest-files/)). This is useful, for example, in scenarios where you want to use an ingress controller other than the nginx controller defined by default.
+The Bitwarden self-host Helm Chart allows you to include other Kubernetes manifest files either pre- or post-install. To do this, update the `rawManifests` section of the chart ([learn more](https://bitwarden.com/help/add-rawmanifest-files/)). 
 
 ## Install the chart
 

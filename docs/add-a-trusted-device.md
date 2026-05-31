@@ -70,7 +70,7 @@ To approve a request with the desktop app:
 
 1. In the desktop app, wait for a device approval request to be received:
 
-![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/abd4d9949f342ff7efb3c289ec1942f5/2026-01-29_10-13-52.png)
+![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/916f1988e815f23d871bc56effbc1247/2026-05-28_14-05-19.png)
 *Approve on desktop*
 2. Verify that fingerprint phrase matches and select **Confirm access**.
 - **Use master password**: If you are an admin or owner, or joined your organization before SSO with trusted devices was implemented, and therefore still have a master password associated with your account, you can enter it to approve the device.

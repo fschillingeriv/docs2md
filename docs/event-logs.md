@@ -51,13 +51,13 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 
 - Logged in (`1000`)
 - Changed account password. (`1001`)
-- Enabled/updated two-step login. (`1002`)
-- Disabled two-step login. (`1003`)
-- Recovered account from two-step login. (`1004`)
+- Two-step login saved (`1002`)
+- Two-step login turned off (`1003`)
+- [Recovered account](https://bitwarden.com/help/two-step-recovery-code/) from two-step login. (`1004`)
 - Login attempted failed with incorrect password. (`1005`)
 - Login attempt failed with incorrect two-step login. (`1006`)
 - User exported their individual vault items. (`1007`)
-- User updated a password issued through [account recovery.](https://bitwarden.com/help/account-recovery/) (`1008`)
+- User reset their master password through [account recovery.](https://bitwarden.com/help/account-recovery/) (`1008`)
 - User migrated their decryption key with [Key Connector.](https://bitwarden.com/help/about-key-connector/) (`1009`)
 - User requested [device approval.](https://bitwarden.com/help/approve-a-trusted-device/) (`1010`)
 - User set a master password during TDE offboarding. (`1011`).
@@ -106,7 +106,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Unlinked SSO for user `user-identifier`. (`1505`)
 - User `user-identifier` enrolled in account recovery. (`1506`)
 - User `user-identifier` withdrew from account recovery. (`1507`)
-- Master Password reset for `user-identifier`. (`1508`)
+- [Account recovery](https://bitwarden.com/help/account-recovery/) with master password initiated for `user-identifier`. (`1508`)
 - Reset SSO link for user `user-identifier`. (`1509`)
 - `user-identifier` logged in using SSO for the first time. (`1510`)
 - Revoked organization access for `user-identifier`.* *(`1511`)
@@ -117,6 +117,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - User `user-identifier` left organization. (`1516`)
 - Automatically confirmed user `user-identifier`. (`1517`)
 - User `user-identifier` self-revoked from organization. (`1518`)
+- [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -146,6 +147,12 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
+
+### Phishing blocker events
+
+- User attempted to access known phishing site (`2400`)
+- User exited phishing warning page (`2401`)
+- User bypassed phishing warning page (`2402`)
 
 ### Secrets Manager events
 

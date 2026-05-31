@@ -5,24 +5,25 @@ URL: https://bitwarden.com/help/account-recovery/
 # About Account Recovery
 
 > [!NOTE] Account recovery plan availability
-> Account recovery is available for **Enterprise organizations**.
+> Account recovery is available for **Enterprise organizations** and is a more robust alternative to individually managed two-step login [recovery codes](https://bitwarden.com/help/two-step-recovery-code/).
 
-Account recovery allows [owners, admins, and some custom role members](https://bitwarden.com/help/user-types-access-control/) to help organization members regain access when they forget their [master password](https://bitwarden.com/help/master-password/) or lose their [trusted devices](https://bitwarden.com/help/about-trusted-devices/). Account recovery:
+Losing a master password,[ two-step login method](https://bitwarden.com/help/setup-two-step-login/), or [trusted device](https://bitwarden.com/help/about-trusted-devices/) can lock a member out of their vault. Account recovery gives administrators the ability to reset member credentials and restore their access. Once [account recovery is set up](https://bitwarden.com/help/account-recovery-enrollment/) and members are enrolled, there are two steps to regain access to the account:
 
-- Can be activated for an organization by turning on the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/).
-- Requires that members [enroll](https://bitwarden.com/help/account-recovery-enrollment/), using automatic enrollment or through self-enrollment, to be eligible for account recovery. Enrollment triggers the key exchange that makes account recovery secure.
-- **Does not bypass members' two-step login or SSO**. If a [two-step login method](https://bitwarden.com/help/setup-two-step-login/) is enabled for the account or if the organization [requires SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), members will still be required to use these methods to access their account after recovery.
+1. An [administrator](https://bitwarden.com/help/account-recovery/#who-can-recover-accounts/) resets the member's master password, two-step login method, or both. Bitwarden then sends a recovery link to the member's account email.
+2. With the [emailed recovery link](https://bitwarden.com/help/my-account-was-recovered/), the member can then reset their master password and/or set up a new two-step login method.
+
+Account recovery only affects credentials configured within Bitwarden. It **does not bypass SSO** or any two-factor authentication configured with your IdP. If your organization [requires SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), members will still be required to use these methods to access their account after recovery.
 
 > [!WARNING] Account recovery not related to deleted accounts
 > Account recovery does not restore deleted accounts. [Deleting an account](https://bitwarden.com/help/delete-member-accounts/) is permanent and cannot be undone.
 
 ## Who can recover accounts
 
-Account recovery can be executed by [owners, admins, and permitted custom users](https://bitwarden.com/help/user-types-access-control/). Account recovery uses a hierarchical permission structure to determine who can reset whose master password, meaning:
+[Owners, admins, and permitted custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Manage account recovery** permission can initiate account recovery. Who can reset whose master password or two-step login method depends on their role:
 
-- Any owner, admin, or member with a custom role that includes **Manage account recovery** can reset a user's or custom role member's master password.
-- Only an admin or owner can reset an admin's master password.
-- Only an owner can reset another owner's master password.
+- Any owner, admin, or member with a custom role that includes **Manage account recovery** can recover a user's or custom role member's account.
+- Only an admin or owner can recover an admin's account.
+- Only an owner can recover another owner's account.
 
 ## How it works
 
@@ -41,14 +42,13 @@ When an recovery action is taken:
 
 [Events](https://bitwarden.com/help/event-logs/) are logged when:
 
-- A user's master password is reset using account recovery.
-- A user updates a password issued through account recovery.
-- A user enrolls in account recovery.
-- A user withdraws from account recovery.
+- A user enrolls in or withdraws from account recovery.
+- An administrator initiates account recovery by resetting the master password or removing two-step login methods.
+- A user updates their master password via account recovery.
+- A user saves a new two-step login.
 
 ## Next steps
 
-- Set up account recovery by turning on the [Account recovery administration policy](https://bitwarden.com/help/policies/) .
+- Turn on the [Account recovery administration policy](https://bitwarden.com/help/policies/).
 - Instruct users to [enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/) if they joined before the policy was turned on or if you didn't turn on automatic enrollment.
-- Learn how to [recover the account of an enrolled member](https://bitwarden.com/help/recover-a-member-account/).
-- Provide members with [instructions on what to do when their account is recovered](https://bitwarden.com/help/my-account-was-recovered/).
+- Learn how to [recover an account](https://bitwarden.com/help/recover-a-member-account/).

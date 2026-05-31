@@ -34,7 +34,7 @@ To create a new Send from the web app:
 | **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
 | **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email) |
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send name**: Choose an identifiable, meaningful name for this Send.
 
  - By default, a Send is scheduled for deletion seven days from its creation. You can change this and other options (see step 4), otherwise select **Save** to finish creating your Send.
 
@@ -74,7 +74,7 @@ To create a new Send from a browser extension:
 
 3. On the **New Send** view, specify the following:
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send n****ame**: Choose an identifiable, meaningful name for this Send.
 - Some options will depend on whether you selected **Text** or **File**:
 
 | **Type** | **Steps** |
@@ -180,7 +180,7 @@ To create a new Send from a mobile app:
 | **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
 | **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email). |
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send n****ame**: Choose an identifiable, meaningful name for this Send.
 
  - By default, a Send is scheduled for deletion seven days from its creation. You may change this and other options using the [angle-down] **Additional options** menu (see Step 4), otherwise tap **Save** to finish creating your Send.
 

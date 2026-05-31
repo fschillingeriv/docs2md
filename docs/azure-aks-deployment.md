@@ -29,29 +29,10 @@ Bitwarden will detect whether your environment restricts what user containers ca
 
 ## Ingress controllers
 
-This section documents 2 options for ingress controllers that can be used in your Azure AKS deployment:
+This section documents using the **Azure Application Gateway** ingress controller (AGIC) to deploy Bitwarden behind an application load balancer.
 
-- Using the **Azure nginx** ingress controller to optionally integrate with Azure DNS for zone management and Azure Key Vault for certificate issuance.
-- Using the **Azure Application Gateway** ingress controller (AGIC) to deploy Bitwarden behind an application load balancer.
-
-### Azure nginx
-
-Azure provides an nginx ingress controller option that supports an application routing add-on and optionally integrates with Azure DNS for zone management and Azure Key Vault for certificate issuance. If you use this option:
-
-1. [Create a "managed" nginx ingress controller.](https://learn.microsoft.com/en-us/azure/aks/app-routing#create-the-ingress-object)
-2. In your `my-values.yaml` file, set `general.ingress.className:`to `webapprouting.kubernetes.azure.com`.
-3. In your `my-values.yaml` file, uncomment the following values:
-
-```yaml
-nginx.ingress.kubernetes.io/use-regex: "true"
-nginx.ingress.kubernetes.io/rewrite-target: /$1
-```
-
-Once complete, you can retrieve the IP address assigned to your Azure nginx ingress controller using the command `kubectl get ingress -n bitwarden`. It may take a few minutes after deployment for your IP address to populate.
-
-### Azure Application Gateway
-
-Azure customers may, however, prefer to use an Azure Application Gateway as the ingress controller for their AKS cluster in order to deploy Bitwarden behind an application load balancer. 
+> [!NOTE] Microsoft azure ingress deprecation
+> Azure NGINX Ingress has reached EOL and is no longer receiving support. Please see the [Microsoft](https://learn.microsoft.com/en-us/azure/aks/app-routing) and [Kubernetes](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) statements regarding the deprecation of ingress and movement to Gateway.
 
 #### Before installing the chart
 

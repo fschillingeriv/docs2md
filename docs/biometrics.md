@@ -47,7 +47,12 @@ To turn on biometric unlock:
 Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent and secret service daemon, such as GNOME Keyring. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
 
 > [!NOTE] Linux-biometrics compatibility by package
-> We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because they are fully supported with automatic updates. These versions are not, however, compatible with biometrics in the Bitwarden browser extension. The other Linux package types, `AppImage`, `.deb`, and `.rpm`, are compatible with biometrics in the browser extension but do not receive automatic updates.
+> We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because both fully support biometric unlock and automatic updates. Both also support biometric integration with Bitwarden browser extensions:
+> 
+> - **Flatpak**: Supports biometric integration with sandboxed and un-sandboxed browser extensions.
+> - **Snap**: Supports biometric integration with un-sandboxed browser extensions.
+> 
+> Learn more about [desktop app feature support](https://bitwarden.com/help/desktop-app-feature-support/).
 
 ## AppImage, Snap, .deb, and .rpm
 

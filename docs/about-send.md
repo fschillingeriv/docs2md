@@ -26,7 +26,7 @@ Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden
 *New Send*
 2. Select the required [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
 
-![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/9b624f8fd77801241f48263f4428e16d/2026-02-24_10-48-59.png)
+![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/ff88a11a1da2500eeaa8ff713d459d71/Send_Options.png)
 *Send options*
 3. Share the Send link using any communication channel you prefer.
 

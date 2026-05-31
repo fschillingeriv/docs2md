@@ -41,6 +41,34 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.5.0
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.5.0, Browser Extension 2026.5.0, Desktop 2026.5.0, Mobile 2026.5.0, and CLI 2026.5.0)*
+
+#### Password Manager
+
+- ⭐ **Devices list now available on desktop**: The [Devices list](https://bitwarden.com/help/manage-devices/) is now available on the desktop app, alongside the web app and browser extension, to surface devices that your account has been used on.
+- **Biometrics integration now available on Flatpak and Snap**: [Biometric unlock of browser extensions](https://bitwarden.com/help/biometrics/), usable through an integration with the Bitwarden desktop app, is now available on Flatpak and Snap distributions.
+- ⭐ **Web app quick actions**: Launch a website and copy vault data from new quick actions buttons, available by hovering over an item in the web app.
+- **Send UI update:**Selecting a [Send](https://bitwarden.com/help/about-send/) item in the browser extension and web app will now display a View screen instead of routing directly to the Edit screen.
+
+#### Admin Console
+
+- ⭐ **Blumira SIEM integration**: Teams and Enterprise organizations can now [integrate with Blumira](https://bitwarden.com/help/blumira-siem/) for security and event management (SIEM).
+- **Expanded account recovery options**: Account recovery now supports revoked members and can [reset two-step login methods](https://bitwarden.com/help/recover-a-member-account/).
+- **Revoked member reason**: There's a new tooltip next to each member on the **Members** → **Revoked** page that explains why members were [revoked](https://bitwarden.com/help/revoke-users/) from your organization.
+- **Updated event logs**: Password Manager now saves when an attachment is added to an organization-owned item, using the existing [Created attachment for item](https://bitwarden.com/help/event-logs/#item-events/) event.
+
+#### Self-host
+
+- **Helm Chart v2.0**: Version 2.0 of the self-host Helm chart will includes two breaking changes:
+
+ - NGINX `ingress` is now **disabled by default** in this version of the chart. The chart includes support for Gateway API as an alternative.
+ - The `image.name` field has been removed from `values.yaml`. Any configurations using `image.name` must be updated to use `image.repository` instead.
+
+> [!NOTE] Helm Ingress deprecation
+> Before upgrading to this version of the chart, review these changes and update your values file accordingly. For additional information on setting up or migrating to Gateway API, refer to [Helm Traffic Routing](https://bitwarden.com/help/traffic-routing/).
+
 ## 2026.4.1
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.4.2, Browser Extension 2026.4.0, Desktop 2026.4.0, Mobile 2026.4.1, and CLI 2026.4.0)*

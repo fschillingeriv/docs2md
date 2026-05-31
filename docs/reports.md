@@ -4,32 +4,39 @@ URL: https://bitwarden.com/help/reports/
 
 # Vault Health Reports
 
-Vault health reports can help you evaluate the security of your Bitwarden individual or organization vault. Reports, for example the Reused Passwords and Weak Passwords report, are run locally on your client. This allows offending items to be identified, without Bitwarden ever having access to unencrypted versions of this data.
+Vault health reports can help you evaluate the security of your Bitwarden individual or organization vault. Reports, such as the Reused Passwords and Weak Passwords report, are run locally on your client. This allows offending items to be identified, without Bitwarden ever having access to unencrypted versions of this data.
 
 > [!NOTE] health report 
 > Most vault health reports are only available for premium users, including members of paid organizations (families, teams, or enterprise), but the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) is free for all users.
 
 ## View a report
 
-To run any vault health report for your **individual vault**:
+Individual vault reports scan items saved to your personal vault. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
 
-1. Log in to the web app and select **Reports**from the navigation:
+#### Run an individual vault report
+
+Log in to the web app and select **Reports**from the left navigation. Then, select a report to run:
 
 ![Reports page](https://bitwarden.com/assets/JcoKvP7eLrZHUEKmjTqgc/0213680bf5546cfc7df498d9931c8d2f/2024-12-02_16-29-59.png)
-2. Select a report to run.
+*Reports page*
 
-To run any vault health report for your **organization vault**:
+#### Run an organization vault report
 
-1. Log in to the Bitwarden web app.
-2. Open the Admin Console using the product switcher:
+Access organization vault reports from the Admin Console:
+
+1. Log in to the Bitwarden web app and open the Admin Console:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-3. In your organization, select **Reporting** → **Reports** from the navigation:
+*Product switcher*
+2. Navigate to **Reporting** → **Reports**.
+3. Select a report to run:
 
 ![Organization reports ](https://bitwarden.com/assets/5POQmt3TrEgfFzRNwHancg/9a67882a07d8894747ebb5bc3bbdcaae/2024-12-02_16-31-14.png)
-4. Select a report to run.
+*Organization reports *
 
 ## Available reports
+
+The following reports are available from the **Reports**page of your individual vault, or the **Reporting → Reports** page of the Admin console.
 
 ### Exposed Passwords
 
@@ -37,18 +44,18 @@ The Exposed Passwords report will identify passwords that have been uncovered in
 
 This report uses a trusted web service to search the first five digits of the hash of all your passwords in a database of known leaked passwords. The returned matching list of hashes is then locally compared with the full hash of your passwords. That comparison is only done locally to preserve your [k-anonymity](https://en.wikipedia.org/wiki/K-anonymity).
 
-Once identified, you should create a new password for offending accounts or services.
-
 > [!NOTE] five digit password hash
 > Why use the first five digits of password hashes?
 > 
 > If the report was performed with your actual passwords, it doesn't matter if they were exposed or not; you would be voluntarily leaking it to the service. This report’s result may not mean your account has been compromised, rather that you are using a password that has been found in these databases of exposed passwords. Nevertheless, we highly recommend not using leaked and non-unique passwords.
 
+Once identified, you should create a new password for affected accounts or services.
+
 ### Reused Passwords
 
 The Reused Passwords report identifies non-unique passwords in your vault. Reusing the same password for multiple services can allow hackers to easily gain access to more of your online accounts when one service is breached.
 
-Once identified, you should create a unique password for offending accounts or services.
+Once identified, you should create a unique password for affected accounts or services.
 
 ### Weak Passwords
 
@@ -71,15 +78,17 @@ The Inactive 2FA report identifies login items where:
 
 Two-factor authentication (2FA) is an important security step that helps secure your accounts. If any website offers it, you should always enable 2FA. Offending items are identified by cross-referencing URI-data with data from [https://2fa.directory/](https://2fa.directory/).
 
-Once identified, setup 2FA using the `Instructions` hyperlink for each offending item:
+Once identified, set up 2FA using the `Instructions` hyperlink for each offending item:
 
 ![Report Instructions](https://bitwarden.com/assets/3USpBf7beuGcdJvMhDrwNI/570672e3220f09e0398ced33a154b1ea/inactive-2fa.png)
+*Report Instructions*
 
-### Member access
+### Member Access
 
 The Member access report shows the total number of **Groups**, **Collections**, and **Items** each user can access:
 
 ![Member access report](https://bitwarden.com/assets/4oNfzpIcDwn2XjUgG0lPG3/a51bac815082055fdd6f47a40937b72d/2024-09-10_16-13-31.png)
+*Member access report*
 
 To locate a specific person, enter their email into the **Search members** field. Select the neighboring [sign-in] **Export icon** to download a `.csv` that details per member:
 
@@ -93,7 +102,7 @@ To locate a specific person, enter their email into the **Search members** field
 
 ### Data Breach (individual vaults only)
 
-The Data Breach report identifies compromised data (email addresses, passwords, credit cards, DoB, and more) in known breaches, using a service called Have I Been Pwned (HIBP).
+The Data Breach report identifies compromised data (email addresses, passwords, credit cards, date of birth, and more) in known breaches, using a service called Have I Been Pwned (HIBP).
 
 When you create a Bitwarden account, you'll have the option to run this report on your master password before deciding to use it. To run this report, the first five digits of a hash of your master password is sent to HIBP and compared to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
 

@@ -31,7 +31,7 @@ Bitwarden will detect whether your environment restricts what user containers ca
 
 ## Ingress controller
 
-An nginx controller is defined by default in `my-values.yaml`, and will require an AWS Network Load Balancer. AWS Application Load Balancers (ALB) are not currently recommended as they do not support path rewrites and path-based routing.
+Ingress controller and Gateway API configurations have been defined in `my-values.yaml`, and will require an AWS Network Load Balancer. AWS Application Load Balancers (ALB) are not currently recommended as they do not support path rewrites and path-based routing.
 
 > [!TIP] Assumption about NLB for EC2
 > The following assumes that you have an SSL certificate saved in AWS Certificate Manager, as you will need a certificate Amazon Resource Name (ARN). 
@@ -41,75 +41,7 @@ An nginx controller is defined by default in `my-values.yaml`, and will require 
 To connect a Network Load Balancer to your cluster:
 
 1. Follow [these instructions](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html) to create an IAM policy and role, and to install the AWS Load Balancer Controller in your cluster.
-2. Run the following commands to setup an ingress controller for your cluster. This will create an AWS Network Load Balancer. Note that there are values you **must** replace as well as values you can configure to suit your needs in this example command:
-
-```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
-helm upgrade ingress-nginx ingress-nginx/ingress-nginx -i \
- --namespace kube-system \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-backend-protocol'="ssl" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-cross-zone-load-balancing-enabled'="true" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-type'="external" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-nlb-target-type'="instance" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-scheme'="internet-facing" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-ssl-cert'="arn:aws:acm:REPLACEME:REPLACEME:certificate/REPLACEME" \ #Replace with the ARN for your certificate
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-ssl-ports'="443" \
- --set controller.service.externalTrafficPolicy="Local"
-```
-3. Update your `my-values.yaml` file according to the following example, making sure to replace any `REPLACE` placeholders:
-
-```bash
-general:
- domain: "REPLACEME.com"
- ingress:
- enabled: true
- className: "nginx"
- ## - Annotations to add to the Ingress resource
- annotations:
- nginx.ingress.kubernetes.io/ssl-redirect: "true"
- nginx.ingress.kubernetes.io/use-regex: "true"
- nginx.ingress.kubernetes.io/rewrite-target: /$1
- ## - Labels to add to the Ingress resource
- labels: {}
- # Certificate options
- tls:
- # TLS certificate secret name
- name: # Handled via the NLB defined in the ingress controller
- # Cluster cert issuer (ex. Let's Encrypt) name if one exists
- clusterIssuer:
- paths:
- web:
- path: /(.*)
- pathType: ImplementationSpecific
- attachments:
- path: /attachments/(.*)
- pathType: ImplementationSpecific
- api:
- path: /api/(.*)
- pathType: ImplementationSpecific
- icons:
- path: /icons/(.*)
- pathType: ImplementationSpecific
- notifications:
- path: /notifications/(.*)
- pathType: ImplementationSpecific
- events:
- path: /events/(.*)
- pathType: ImplementationSpecific
- scim:
- path: /scim/(.*)
- pathType: ImplementationSpecific
- sso:
- path: /(sso/.*)
- pathType: ImplementationSpecific
- identity:
- path: /(identity/.*)
- pathType: ImplementationSpecific
- admin:
- path: /(admin/?.*)
- pathType: ImplementationSpecific
-```
+2. Ingress NGINX has reach EOL and will no longer receive support (see the [Kubernetes official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/)). Bitwarden and AWS recommend migration to an alternative such as [Gateway API or third-party ingress controllers](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html). `my-values.yaml` will contain configuration variables for Ingress or Gateway API setups. It is not recommended to configure both simultaneously. The following table contains
 
 ## Create a storage class
 

@@ -10,7 +10,9 @@ This article contains Frequently Asked Questions (FAQs) regarding self-hosting.
 
 ### Q: What platforms can I host on?
 
-**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines.
+**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines. 
+
+The platform you host on must be under active mainstream support by its vendor. In other words, Bitwarden does not support hosting on any platform version that has reached EoL. Windows Server, for example requires at least version 2022; versions 2019 and 2016 have both ended active mainstream support.
 
 Docker Desktop on Windows may require a license depending on whether your company meets [Docker's requirements for licenses](https://www.docker.com/pricing/), however Docker on Linux is free.
 
@@ -21,10 +23,6 @@ You can read more about Docker and container technologies at the [Docker website
 **A**: While we expect most client functionality to work with non-official servers, such as Vaultwarden, Bitwarden cannot guarantee that official clients will work perfectly with non-official servers. If you're using a non-official server, we recommend that you keep it as up-to-date as possible to take advantage of compatibility updates written by its maintainers. Bitwarden Customer Support may be limited in their ability to assist you with client issues if you're using a non-official server.
 
 As an example, Vaultwarden introduced support for native mobile apps in version 1.31.0. If you’re using native mobile apps and a version of vaultwarden prior to 1.31.0, you will receive an error and should ugrade your server.
-
-### Q: How do I deploy Bitwarden on AWS, Azure, GCP, or VMware vCenter?
-
-**A:** Bitwarden is generally deployed as either a single Windows or Linux VM, or a cluster of machines. At this time, Bitwarden does not publish pre-built images for these platforms, but you can find instructions on how to configure a VM on all of the above platforms and more [here](https://bitwarden.com/help/self-host-an-organization/).
 
 ### Q: How should I achieve high availability?
 

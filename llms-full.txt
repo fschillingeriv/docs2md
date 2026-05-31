@@ -424,7 +424,7 @@ Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden
 *New Send*
 2. Select the required [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
 
-![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/9b624f8fd77801241f48263f4428e16d/2026-02-24_10-48-59.png)
+![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/ff88a11a1da2500eeaa8ff713d459d71/Send_Options.png)
 *Send options*
 3. Share the Send link using any communication channel you prefer.
 
@@ -891,39 +891,48 @@ To rotate your account encryption key:
 ---
 URL: https://bitwarden.com/help/account-recovery-enrollment/
 ---
-# Account Recovery Enrollment
+# Set Up Account Recovery
 
-In order for members to be eligible for [account recovery](https://bitwarden.com/help/account-recovery/), they must be enrolled in the program. Enrollment triggers the key exchange that makes account recovery secure. There are two ways for members to be enrolled:
+[Account recovery](https://bitwarden.com/help/account-recovery/) helps organization members regain access to their account. After the Enterprise policy is activated, members need to enroll in the program. Enrollment triggers the key exchange that makes account recovery secure. There are two ways for members to be enrolled:
 
-- **Automatic enrollment**: When you turn on the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/), you can also turn on the option **Require new members to be enrolled automatically**. This option will enroll new members in account recovery automatically.
-- **Self-enrollment**: Organization members can follow a quick process in the web app to enroll themselves in account recovery. 
+- [Automatic enrollment](https://bitwarden.com/help/account-recovery-enrollment/#automatic-enrollment/) is the quickest option, but only applies to members who join after the policy is turned on.
+- [Self-enrollment](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) allows members to manually enroll through the web app.
 
-> [!TIP] When self-enrollment is necessary
-> Bitwarden recommends turning on automatic enrollment, however members that are already part of your organization **prior to account recovery being turned on** will be required to self-enroll.
+## Turn on Enterprise policy
+
+First, turn on the [Account recovery administration](https://bitwarden.com/help/policies/#account-recovery-administration/) policy. After it's activated, members must enroll in account recovery.
 
 ## Automatic enrollment
 
-Turning on the option to **Require new members to be enrolled automatically** will:
+When you turn on the **Account recovery administration** policy, you have the option to check **Automatically enroll new members in account recovery**. Turning on this setting will:
 
 - Enroll new members in account recovery automatically when they [enter an accepted status](https://bitwarden.com/help/managing-users/#accept/).
 - Prevent them from withdrawing from account recovery.
 
-> [!NOTE] Notify users of admin password reset.
-> If you automatically enroll members in account recovery, we recommend notifying them of this feature. Some organization members can choose to store personal credentials under their own ownership and should be made aware that account recovery could allow an administrator to access their personal items.
+> [!WARNING] Existing members need to self-enroll account recovery
+> Bitwarden recommends turning on automatic enrollment. However, automatic enrollment only applies to members who join **after** the policy was activated. If your organization already had members **before the policy was turned on**, those members must self-enroll to be eligible.
+
+If you automatically enroll members in account recovery, we recommend notifying them. Some organization members can choose to store personal credentials under their own ownership and should be made aware that account recovery could allow an administrator to access their personal items.
 
 ## Self-enrollment
 
-Members that are already part of your organization **prior to account recovery being turned on** if you're using automatic enrollment, or all users if you're not using automatic enrollment, will be required to self-enroll.
+Members must opt in proactively if [automatic enrollment](https://bitwarden.com/help/account-recovery-enrollment/#automatic-enrollment/) is off or if they joined before it was turned on. To enroll in account recovery:
 
-To enroll in account recovery, select the ⋮ **Options**menu next to the organization in the Vaults view and select **Enroll in account recovery**:
+1. From the web app, select the ⋮ **Options icon** next to the organization in the Vaults view.
+2. Select **Enroll in account recovery**:
 
 ![Enroll in account recovery](https://bitwarden.com/assets/4ape19S5L7lf0tAAEyInGR/87fadad707f8c7acb5894e94e758c6c3/2024-12-03_15-33-13.png)
+*Enroll in account recovery*
+3. Enter your **Master password**.
+4. Select **Submit**.
+5. Select **Trust**.
 
 ### Withdraw enrollment
 
-Members of organizations that have turned on the automatic enrollment option **will not be allowed to withdraw** from account recovery, however members of organizations that have not turned it on can **Withdraw** from the same dropdown used to enroll:
+Members of organizations that turned on the automatic enrollment policy **are not allowed to withdraw** from account recovery. Members of organizations that have not turned it on, however, can select **Withdraw** from the same menu used to enroll:
 
 ![Withdraw from account recovery](https://bitwarden.com/assets/4GR176lad9pre4sZN3rA35/642bdef55248fb84ddb24fc316875b11/2024-12-03_15-34-30.png)
+*Withdraw from account recovery*
 
 Manually changing your master password or [rotating an encryption key](https://bitwarden.com/help/account-encryption-key/) **will not** withdraw a member from account recovery.
 ---
@@ -932,24 +941,25 @@ URL: https://bitwarden.com/help/account-recovery/
 # About Account Recovery
 
 > [!NOTE] Account recovery plan availability
-> Account recovery is available for **Enterprise organizations**.
+> Account recovery is available for **Enterprise organizations** and is a more robust alternative to individually managed two-step login [recovery codes](https://bitwarden.com/help/two-step-recovery-code/).
 
-Account recovery allows [owners, admins, and some custom role members](https://bitwarden.com/help/user-types-access-control/) to help organization members regain access when they forget their [master password](https://bitwarden.com/help/master-password/) or lose their [trusted devices](https://bitwarden.com/help/about-trusted-devices/). Account recovery:
+Losing a master password,[ two-step login method](https://bitwarden.com/help/setup-two-step-login/), or [trusted device](https://bitwarden.com/help/about-trusted-devices/) can lock a member out of their vault. Account recovery gives administrators the ability to reset member credentials and restore their access. Once [account recovery is set up](https://bitwarden.com/help/account-recovery-enrollment/) and members are enrolled, there are two steps to regain access to the account:
 
-- Can be activated for an organization by turning on the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/).
-- Requires that members [enroll](https://bitwarden.com/help/account-recovery-enrollment/), using automatic enrollment or through self-enrollment, to be eligible for account recovery. Enrollment triggers the key exchange that makes account recovery secure.
-- **Does not bypass members' two-step login or SSO**. If a [two-step login method](https://bitwarden.com/help/setup-two-step-login/) is enabled for the account or if the organization [requires SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), members will still be required to use these methods to access their account after recovery.
+1. An [administrator](https://bitwarden.com/help/account-recovery/#who-can-recover-accounts/) resets the member's master password, two-step login method, or both. Bitwarden then sends a recovery link to the member's account email.
+2. With the [emailed recovery link](https://bitwarden.com/help/my-account-was-recovered/), the member can then reset their master password and/or set up a new two-step login method.
+
+Account recovery only affects credentials configured within Bitwarden. It **does not bypass SSO** or any two-factor authentication configured with your IdP. If your organization [requires SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), members will still be required to use these methods to access their account after recovery.
 
 > [!WARNING] Account recovery not related to deleted accounts
 > Account recovery does not restore deleted accounts. [Deleting an account](https://bitwarden.com/help/delete-member-accounts/) is permanent and cannot be undone.
 
 ## Who can recover accounts
 
-Account recovery can be executed by [owners, admins, and permitted custom users](https://bitwarden.com/help/user-types-access-control/). Account recovery uses a hierarchical permission structure to determine who can reset whose master password, meaning:
+[Owners, admins, and permitted custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Manage account recovery** permission can initiate account recovery. Who can reset whose master password or two-step login method depends on their role:
 
-- Any owner, admin, or member with a custom role that includes **Manage account recovery** can reset a user's or custom role member's master password.
-- Only an admin or owner can reset an admin's master password.
-- Only an owner can reset another owner's master password.
+- Any owner, admin, or member with a custom role that includes **Manage account recovery** can recover a user's or custom role member's account.
+- Only an admin or owner can recover an admin's account.
+- Only an owner can recover another owner's account.
 
 ## How it works
 
@@ -968,17 +978,16 @@ When an recovery action is taken:
 
 [Events](https://bitwarden.com/help/event-logs/) are logged when:
 
-- A user's master password is reset using account recovery.
-- A user updates a password issued through account recovery.
-- A user enrolls in account recovery.
-- A user withdraws from account recovery.
+- A user enrolls in or withdraws from account recovery.
+- An administrator initiates account recovery by resetting the master password or removing two-step login methods.
+- A user updates their master password via account recovery.
+- A user saves a new two-step login.
 
 ## Next steps
 
-- Set up account recovery by turning on the [Account recovery administration policy](https://bitwarden.com/help/policies/) .
+- Turn on the [Account recovery administration policy](https://bitwarden.com/help/policies/).
 - Instruct users to [enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/) if they joined before the policy was turned on or if you didn't turn on automatic enrollment.
-- Learn how to [recover the account of an enrolled member](https://bitwarden.com/help/recover-a-member-account/).
-- Provide members with [instructions on what to do when their account is recovered](https://bitwarden.com/help/my-account-was-recovered/).
+- Learn how to [recover an account](https://bitwarden.com/help/recover-a-member-account/).
 ---
 URL: https://bitwarden.com/help/account-switching/
 ---
@@ -1134,7 +1143,7 @@ To approve a request with the desktop app:
 
 1. In the desktop app, wait for a device approval request to be received:
 
-![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/abd4d9949f342ff7efb3c289ec1942f5/2026-01-29_10-13-52.png)
+![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/916f1988e815f23d871bc56effbc1247/2026-05-28_14-05-19.png)
 *Approve on desktop*
 2. Verify that fingerprint phrase matches and select **Confirm access**.
 - **Use master password**: If you are an admin or owner, or joined your organization before SSO with trusted devices was implemented, and therefore still have a master password associated with your account, you can enter it to approve the device.
@@ -3239,12 +3248,18 @@ Bitwarden can do more than just [autofill your usernames and passwords](https://
 > [!TIP] Android autofill card setup
 > On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
 
-You can add or remove cards from your autofill suggestions and from the inline autofill menu using settings found in **Settings** → **Autofill**:
+You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
 
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 - **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
 - **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
+
+> [!NOTE] Jumping from favorites to autofill suggestions
+> Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
+
+You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
+
+- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
+- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
 
 ## Use card & identity autofill
 
@@ -3668,7 +3683,7 @@ Bitwarden will detect whether your environment restricts what user containers ca
 
 ## Ingress controller
 
-An nginx controller is defined by default in `my-values.yaml`, and will require an AWS Network Load Balancer. AWS Application Load Balancers (ALB) are not currently recommended as they do not support path rewrites and path-based routing.
+Ingress controller and Gateway API configurations have been defined in `my-values.yaml`, and will require an AWS Network Load Balancer. AWS Application Load Balancers (ALB) are not currently recommended as they do not support path rewrites and path-based routing.
 
 > [!TIP] Assumption about NLB for EC2
 > The following assumes that you have an SSL certificate saved in AWS Certificate Manager, as you will need a certificate Amazon Resource Name (ARN). 
@@ -3678,75 +3693,7 @@ An nginx controller is defined by default in `my-values.yaml`, and will require 
 To connect a Network Load Balancer to your cluster:
 
 1. Follow [these instructions](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html) to create an IAM policy and role, and to install the AWS Load Balancer Controller in your cluster.
-2. Run the following commands to setup an ingress controller for your cluster. This will create an AWS Network Load Balancer. Note that there are values you **must** replace as well as values you can configure to suit your needs in this example command:
-
-```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
-helm upgrade ingress-nginx ingress-nginx/ingress-nginx -i \
- --namespace kube-system \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-backend-protocol'="ssl" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-cross-zone-load-balancing-enabled'="true" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-type'="external" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-nlb-target-type'="instance" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-scheme'="internet-facing" \
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-ssl-cert'="arn:aws:acm:REPLACEME:REPLACEME:certificate/REPLACEME" \ #Replace with the ARN for your certificate
- --set-string controller.service.annotations.'service\.beta\.kubernetes\.io/aws-load-balancer-ssl-ports'="443" \
- --set controller.service.externalTrafficPolicy="Local"
-```
-3. Update your `my-values.yaml` file according to the following example, making sure to replace any `REPLACE` placeholders:
-
-```bash
-general:
- domain: "REPLACEME.com"
- ingress:
- enabled: true
- className: "nginx"
- ## - Annotations to add to the Ingress resource
- annotations:
- nginx.ingress.kubernetes.io/ssl-redirect: "true"
- nginx.ingress.kubernetes.io/use-regex: "true"
- nginx.ingress.kubernetes.io/rewrite-target: /$1
- ## - Labels to add to the Ingress resource
- labels: {}
- # Certificate options
- tls:
- # TLS certificate secret name
- name: # Handled via the NLB defined in the ingress controller
- # Cluster cert issuer (ex. Let's Encrypt) name if one exists
- clusterIssuer:
- paths:
- web:
- path: /(.*)
- pathType: ImplementationSpecific
- attachments:
- path: /attachments/(.*)
- pathType: ImplementationSpecific
- api:
- path: /api/(.*)
- pathType: ImplementationSpecific
- icons:
- path: /icons/(.*)
- pathType: ImplementationSpecific
- notifications:
- path: /notifications/(.*)
- pathType: ImplementationSpecific
- events:
- path: /events/(.*)
- pathType: ImplementationSpecific
- scim:
- path: /scim/(.*)
- pathType: ImplementationSpecific
- sso:
- path: /(sso/.*)
- pathType: ImplementationSpecific
- identity:
- path: /(identity/.*)
- pathType: ImplementationSpecific
- admin:
- path: /(admin/?.*)
- pathType: ImplementationSpecific
-```
+2. Ingress NGINX has reach EOL and will no longer receive support (see the [Kubernetes official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/)). Bitwarden and AWS recommend migration to an alternative such as [Gateway API or third-party ingress controllers](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html). `my-values.yaml` will contain configuration variables for Ingress or Gateway API setups. It is not recommended to configure both simultaneously. The following table contains
 
 ## Create a storage class
 
@@ -3955,29 +3902,10 @@ Bitwarden will detect whether your environment restricts what user containers ca
 
 ## Ingress controllers
 
-This section documents 2 options for ingress controllers that can be used in your Azure AKS deployment:
+This section documents using the **Azure Application Gateway** ingress controller (AGIC) to deploy Bitwarden behind an application load balancer.
 
-- Using the **Azure nginx** ingress controller to optionally integrate with Azure DNS for zone management and Azure Key Vault for certificate issuance.
-- Using the **Azure Application Gateway** ingress controller (AGIC) to deploy Bitwarden behind an application load balancer.
-
-### Azure nginx
-
-Azure provides an nginx ingress controller option that supports an application routing add-on and optionally integrates with Azure DNS for zone management and Azure Key Vault for certificate issuance. If you use this option:
-
-1. [Create a "managed" nginx ingress controller.](https://learn.microsoft.com/en-us/azure/aks/app-routing#create-the-ingress-object)
-2. In your `my-values.yaml` file, set `general.ingress.className:`to `webapprouting.kubernetes.azure.com`.
-3. In your `my-values.yaml` file, uncomment the following values:
-
-```yaml
-nginx.ingress.kubernetes.io/use-regex: "true"
-nginx.ingress.kubernetes.io/rewrite-target: /$1
-```
-
-Once complete, you can retrieve the IP address assigned to your Azure nginx ingress controller using the command `kubectl get ingress -n bitwarden`. It may take a few minutes after deployment for your IP address to populate.
-
-### Azure Application Gateway
-
-Azure customers may, however, prefer to use an Azure Application Gateway as the ingress controller for their AKS cluster in order to deploy Bitwarden behind an application load balancer. 
+> [!NOTE] Microsoft azure ingress deprecation
+> Azure NGINX Ingress has reached EOL and is no longer receiving support. Please see the [Microsoft](https://learn.microsoft.com/en-us/azure/aks/app-routing) and [Kubernetes](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) statements regarding the deprecation of ingress and movement to Gateway.
 
 #### Before installing the chart
 
@@ -4465,7 +4393,12 @@ To turn on biometric unlock:
 Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent and secret service daemon, such as GNOME Keyring. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
 
 > [!NOTE] Linux-biometrics compatibility by package
-> We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because they are fully supported with automatic updates. These versions are not, however, compatible with biometrics in the Bitwarden browser extension. The other Linux package types, `AppImage`, `.deb`, and `.rpm`, are compatible with biometrics in the browser extension but do not receive automatic updates.
+> We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because both fully support biometric unlock and automatic updates. Both also support biometric integration with Bitwarden browser extensions:
+> 
+> - **Flatpak**: Supports biometric integration with sandboxed and un-sandboxed browser extensions.
+> - **Snap**: Supports biometric integration with un-sandboxed browser extensions.
+> 
+> Learn more about [desktop app feature support](https://bitwarden.com/help/desktop-app-feature-support/).
 
 ## AppImage, Snap, .deb, and .rpm
 
@@ -6792,6 +6725,64 @@ For websites accessed via a web browser, a proper URI will be the `https://..` a
 > For iOS users, an app URI can be obtained by using autofill to open Bitwarden. Once Bitwarden is open, select the + icon on the top right corner of the screen. From here, copy the URI that has been included in the new vault item. Paste the URI into your existing login item for this app.
 
 ``
+---
+URL: https://bitwarden.com/help/blumira-siem/
+---
+# Blumira SIEM
+
+Blumira is a security information and event management (SIEM) and extended detection and response (XDR) platform that centralizes log data from across your environment. Bitwarden integrates with Blumira by forwarding organization event log data, giving security teams unified visibility into password management activity alongside the rest of their security data.
+
+Bitwarden sends events to Blumira using HTTP ingestion. After generating a unique endpoint and token in Blumira, you'll add those values to the Blumira integration in the Bitwarden Admin Console.
+
+## Requirements
+
+To set up Bitwarden as a log source in Blumira, you must:
+
+- Have a Bitwarden Teams or Enterprise organization.
+- Have a Blumira account with the ability to add HTTP ingestion instances.
+- Have administrative access to both Bitwarden and Blumira.
+
+## Setup
+
+Integrating Bitwarden with Blumira will require short setup procedures in both platforms.
+
+### Set up HTTP ingestion in Blumira
+
+Before connecting from Bitwarden, generate the credentials that Bitwarden will use to send events to Blumira:
+
+1. Log in to the Blumira app and go to **Ingestion** → **HTTP Ingestion**.
+2. Select **Add Ingestion Instance**:
+
+![Add an instance in Blumira](https://bitwarden.com/assets/1MI8gE0thIwBSXgvgkBUxX/82efcf3cf23be0862ff8efa06e001087/2026-05-20_09-42-37.png)
+*Add an instance in Blumira*
+3. In the setup window:
+
+ - From the **Vendor**dropdown, select **Bitwarden**.
+ - (Optional) Edit the pre-populated **Ingestion Instance Name**.
+ - (Optional) Enter a **Description** for any additional context.
+ - Select **Save**.
+4. Your **Credentials** will be displayed, showing an **HTTP Event Collector URL** and **HTTP Event Collector Token**. Both are needed to complete the next section.
+
+> [!NOTE] Blumira credentials
+> The **HTTP Event Collector Token** will only be displayed once. Either copy and save this value to a secure location now, or keep the window open in a separate browser tab while you complete the Bitwarden side of setup.
+
+### Connect to Blumira from Bitwarden
+
+Once you have your **HTTP Event Collector URL** and **HTTP Event Collector Token**, provide that information in your Bitwarden organization to complete setup:
+
+1. Log in to the Bitwarden web app and open the **Admin Console**.
+2. In the Admin Console, go to **Integrations** → **Event management.**
+3. Find the **Blumira** card and select **Connect**:
+
+![Connect to Blumira from Bitwarden](https://bitwarden.com/assets/21ppzLWsQU55qNt44Hf2sN/8630153cae92e04e5c15babb1c2e010d/2026-05-20_10-14-45.png)
+*Connect to Blumira from Bitwarden*
+4. Enter your **HTTP Event Collector URL** and **HTTP Event Collector Token**.
+5. Select **Save**.
+
+## Additional resources
+
+- Learn more about [what events are surfaced by Bitwarden](https://bitwarden.com/help/event-logs/).
+- Learn more about [managing HTTP Ingestion in Blumira](https://blumirabeta.zendesk.com/hc/en-us/articles/51420656192147-Using-Blumira-HTTP-Ingestion).
 ---
 URL: https://bitwarden.com/help/browserext-deploy/
 ---
@@ -12950,7 +12941,7 @@ To create a new Send from the web app:
 | **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
 | **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email) |
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send name**: Choose an identifiable, meaningful name for this Send.
 
  - By default, a Send is scheduled for deletion seven days from its creation. You can change this and other options (see step 4), otherwise select **Save** to finish creating your Send.
 
@@ -12990,7 +12981,7 @@ To create a new Send from a browser extension:
 
 3. On the **New Send** view, specify the following:
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send n****ame**: Choose an identifiable, meaningful name for this Send.
 - Some options will depend on whether you selected **Text** or **File**:
 
 | **Type** | **Steps** |
@@ -13096,7 +13087,7 @@ To create a new Send from a mobile app:
 | **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
 | **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email). |
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
+- **Send n****ame**: Choose an identifiable, meaningful name for this Send.
 
  - By default, a Send is scheduled for deletion seven days from its creation. You may change this and other options using the [angle-down] **Additional options** menu (see Step 4), otherwise tap **Save** to finish creating your Send.
 
@@ -13485,7 +13476,7 @@ Regardless of whether you use the included MSSQL Express image or your own exter
 
 ## Databases for Lite deployments
 
-Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PosgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
+Bitwarden Lite self-host deployments do not ship with a built-in database, but can connect to an existing MySQL/MariaDB, MSSQL, SQLite, or PostgreSQL database ([learn more](https://bitwarden.com/help/install-and-deploy-lite/)). **Only lite deployments** support these database options, standard deployments require MSSQL.
 
 > [!NOTE] Lite database require your management.
 > Because Bitwarden lite databases are not provided by or collocated with the application container, database maintenance, including updates, maintenance, and backups, must be fully managed by you.
@@ -14415,7 +14406,7 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 |------|------|------|------|------|------|
 | Automatic Updates | * | ✓ | ✓ | | |
 | Desktop Biometrics | ✓ | ✓ | ** | ✓ | ✓ |
-| Extension Biometrics | ✓ | | | ✓ | ✓ |
+| Extension Biometrics | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Integration with OS | * | ✓ | ✓ | ✓ | ✓ |
 | Startup on Launch | | ✓ | ✓ | ✓ | ✓ |
 | Direct Importer | ✓ | | | | |
@@ -16315,13 +16306,13 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 
 - Logged in (`1000`)
 - Changed account password. (`1001`)
-- Enabled/updated two-step login. (`1002`)
-- Disabled two-step login. (`1003`)
-- Recovered account from two-step login. (`1004`)
+- Two-step login saved (`1002`)
+- Two-step login turned off (`1003`)
+- [Recovered account](https://bitwarden.com/help/two-step-recovery-code/) from two-step login. (`1004`)
 - Login attempted failed with incorrect password. (`1005`)
 - Login attempt failed with incorrect two-step login. (`1006`)
 - User exported their individual vault items. (`1007`)
-- User updated a password issued through [account recovery.](https://bitwarden.com/help/account-recovery/) (`1008`)
+- User reset their master password through [account recovery.](https://bitwarden.com/help/account-recovery/) (`1008`)
 - User migrated their decryption key with [Key Connector.](https://bitwarden.com/help/about-key-connector/) (`1009`)
 - User requested [device approval.](https://bitwarden.com/help/approve-a-trusted-device/) (`1010`)
 - User set a master password during TDE offboarding. (`1011`).
@@ -16370,7 +16361,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Unlinked SSO for user `user-identifier`. (`1505`)
 - User `user-identifier` enrolled in account recovery. (`1506`)
 - User `user-identifier` withdrew from account recovery. (`1507`)
-- Master Password reset for `user-identifier`. (`1508`)
+- [Account recovery](https://bitwarden.com/help/account-recovery/) with master password initiated for `user-identifier`. (`1508`)
 - Reset SSO link for user `user-identifier`. (`1509`)
 - `user-identifier` logged in using SSO for the first time. (`1510`)
 - Revoked organization access for `user-identifier`.* *(`1511`)
@@ -16381,6 +16372,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - User `user-identifier` left organization. (`1516`)
 - Automatically confirmed user `user-identifier`. (`1517`)
 - User `user-identifier` self-revoked from organization. (`1518`)
+- [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -16410,6 +16402,12 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
+
+### Phishing blocker events
+
+- User attempted to access known phishing site (`2400`)
+- User exited phishing warning page (`2401`)
+- User bypassed phishing warning page (`2402`)
 
 ### Secrets Manager events
 
@@ -17011,8 +17009,10 @@ Any item can be designated as a **Favorite** to allow quick access to your most 
 
 Even items [shared with you from an organization](https://bitwarden.com/help/sharing/) can be designated a favorite, but this will only impact how they appear in your individual vault (i.e. you won't make that item a favorite for other users with access to the organization or collection).
 
-> [!NOTE]
+> [!TIP] What happens to favorites
 > Items marked as a favorite will appear at the top of your 🔒 **Vault** view in browser extensions and mobile apps, and in the ⭐ **Favorites** filter in your web vault and desktop apps.
+> 
+> In browser extensions, login items will jump from the **Favorites**section to the **Autofill suggestions** section when you're browsing the web page they're associated with.
 
 ## Designating favorites
 
@@ -18859,7 +18859,9 @@ This article contains Frequently Asked Questions (FAQs) regarding self-hosting.
 
 ### Q: What platforms can I host on?
 
-**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines.
+**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines. 
+
+The platform you host on must be under active mainstream support by its vendor. In other words, Bitwarden does not support hosting on any platform version that has reached EoL. Windows Server, for example requires at least version 2022; versions 2019 and 2016 have both ended active mainstream support.
 
 Docker Desktop on Windows may require a license depending on whether your company meets [Docker's requirements for licenses](https://www.docker.com/pricing/), however Docker on Linux is free.
 
@@ -18870,10 +18872,6 @@ You can read more about Docker and container technologies at the [Docker website
 **A**: While we expect most client functionality to work with non-official servers, such as Vaultwarden, Bitwarden cannot guarantee that official clients will work perfectly with non-official servers. If you're using a non-official server, we recommend that you keep it as up-to-date as possible to take advantage of compatibility updates written by its maintainers. Bitwarden Customer Support may be limited in their ability to assist you with client issues if you're using a non-official server.
 
 As an example, Vaultwarden introduced support for native mobile apps in version 1.31.0. If you’re using native mobile apps and a version of vaultwarden prior to 1.31.0, you will receive an error and should ugrade your server.
-
-### Q: How do I deploy Bitwarden on AWS, Azure, GCP, or VMware vCenter?
-
-**A:** Bitwarden is generally deployed as either a single Windows or Linux VM, or a cluster of machines. At this time, Bitwarden does not publish pre-built images for these platforms, but you can find instructions on how to configure a VM on all of the above platforms and more [here](https://bitwarden.com/help/self-host-an-organization/).
 
 ### Q: How should I achieve high availability?
 
@@ -24255,7 +24253,7 @@ To approve a request with the desktop app:
 
 1. In the desktop app, wait for a device approval request to be received:
 
-![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/abd4d9949f342ff7efb3c289ec1942f5/2026-01-29_10-13-52.png)
+![Approve on desktop](https://bitwarden.com/assets/5cpkevhyuiSg82yfopvmc1/916f1988e815f23d871bc56effbc1247/2026-05-28_14-05-19.png)
 *Approve on desktop*
 2. Verify that fingerprint phrase matches and select **Confirm access**.
 
@@ -24621,6 +24619,29 @@ Additionally, **if your service users help to train customers' end-users to use 
 | Help setup two-step login | Give users instructions to help facilitate setup of two-step login. | [Two-step login methods](https://bitwarden.com/help/setup-two-step-login/) |
 | Demonstrate Bitwarden apps | Help users understand the benefits of Bitwarden mobile apps, browser extensions, and other apps. | [Getting started guides](https://bitwarden.com/help/password-manager-overview/#clients/) |
 | Register for demos | Encourage power users to learn independently by attending a weekly demo. | [Bitwarden events](https://www.crowdcast.io/bitwarden) |
+---
+URL: https://bitwarden.com/help/manage-devices/
+---
+# Manage Devices
+
+The **Devices** list shows every Bitwarden client app that has logged in to your account. For each device you can see the client type, when it was last active, and when it first logged in to your account. You can also use this list to approve or deny [login requests from another device](https://bitwarden.com/help/log-in-with-device/#approve-a-log-in-request/) or [device trust requests](https://bitwarden.com/help/add-a-trusted-device/).
+
+> [!NOTE] What is a device?
+> A **device** is a unique installation of the Bitwarden app where you have logged in. Reinstalling, clearing app data, or clearing your cookies could result in a device appearing multiple times.
+
+To get to the **Devices**list:
+
+- In the web app, navigate to **Settings** → **Security** → **Devices**.
+- In browser extensions, navigate to **Settings** → **Account security** → **Devices**.
+- In desktop apps, use the menu bar to navigate to **Account** → **Devices**.
+
+In the **Devices**list, you'll see one row per device that contains the following:
+
+| Column | Description |
+|------|------|
+| Device | The type of device, for example **Mobile** or **Extension**, and its OS or platform, for example **iOS** or **Firefox**. |
+| Recently active | The timeframe, for example **Past 14 days**, in which the device was last active, or: - **Current session**: Indicates the device you're currently using. - **Request pending**: Indicates a [login request](https://bitwarden.com/help/log-in-with-device/#approve-a-log-in-request/) or [device trust request](https://bitwarden.com/help/add-a-trusted-device/) from the device. Select the device to approve or deny the request. |
+| First login | The date and time at which the device first logged in to your Bitwarden account. |
 ---
 URL: https://bitwarden.com/help/manage-subscription-seats-in-your-organization/
 ---
@@ -25238,9 +25259,9 @@ From the **Members** page, you can also review and update individual members' ac
 ![Update member](https://bitwarden.com/assets/5tspjHKPHunTlRhylIJo5O/c707a3e1780364f8820832c216b5ca64/Update_member.png)
 *Update member*
 
-### Review 2FA status
+### Review 2FA and account recovery status
 
-The 2FA status of users can be viewed from the **Members** page. If the user has a 🔒 **Lock icon**, two-step login is used on their Bitwarden account:
+The **Members** page also notes which users have set up certain features in the **Policies** column. The 🔑 **Key icon** means the member is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). The 🔒 **Lock icon** is present when [two-step login](https://bitwarden.com/help/setup-two-step-login/) is used: 
 
 ![2FA status](https://bitwarden.com/assets/HNlJNX9VJVURxGqrrBdRb/1592f5c29694cf36e973ddac553e95e1/2FA_status.png)
 *2FA status*
@@ -25285,6 +25306,91 @@ The **Members** page is also where you can withdraw someone from an organization
 
 > [!WARNING] Danger Zone
 > Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+---
+URL: https://bitwarden.com/help/marketplace-deployments/
+---
+# Marketplace Deployments
+
+This article will walk you through deploying a self-hosted Bitwarden server using a pre-built virtual machine image from the AWS or Azure marketplace. These deployment options are a good fit for organizations that already operate in AWS or Azure and want to keep their Bitwarden server inside the same environment as the rest of their stack:
+
+- [Self-host Bitwarden via the AWS marketplace](https://aws.amazon.com/marketplace/pp/prodview-tuo4cqgcd3f5w)
+- [Self-host Bitwarden via the Azure marketplace](https://marketplace.microsoft.com/en-us/product/saas/bitwardeninc.bitwarden-self-host)
+
+These marketplace deployments launch a virtual machine (VM) with the core software requirements for self-hosting Bitwarden and the installation script pre-loaded. Once launched, you can SSH into the VM and start the installation script to complete the setup procedure.
+
+## Before you begin
+
+### Included in the image
+
+Both the AWS AMI and and Azure VM image are pre-loaded with:
+
+- Ubuntu 24.04 LTS
+- Docker Engine
+- Docker Compose
+- Bitwarden installation script
+
+> [!WARNING] OS support for marketplace deployments
+> The Bitwarden marketplace images are pre-loaded Ubuntu 24.04 LTS, however **operating system maintenance, patching, and OS-level troubleshooting are not in-scope for Bitwarden customer support**. You are responsible for maintaining the underlying OS, including applying security updates, monitoring, and backups as you would be for any other VM in your environment.
+
+### Prerequisites
+
+Have the following ready:
+
+- An AWS or Azure account with permission to launch a VM from the marketplace.
+- An installation ID and key, retrieved from [bitwarden.com/host](https://bitwarden.com/host/).
+- A registered domain name with a DNS record pointing to the public IP your VM instance will use.
+- An SMTP server or cloud SMTP provider that the VM can reach.
+- An SSH key pair that can be used to access the VM.
+- (**Optional**) An SSL certificate to apply to the VM. Let's Encrypt can be used once you SSH into the VM to generate and issue a certificate for free.
+
+## Deployment
+
+### AWS
+
+1. Subscribe to the product from the [Bitwarden self-hosted server listing on the AWS marketplace](https://aws.amazon.com/marketplace/pp/prodview-tuo4cqgcd3f5w).
+2. Open the launch wizard for the AMI through the AWS console.
+3. Configure the AMI. The launch wizard will allow you to specify VPC, subnet, security group and a few other attributes, but make sure to take note of the following:
+
+ - The designated **security group** must open ports 80 and 443.
+ - There are many **instance types** to choose from, but a recommendation is provided.
+ - A **key pair** can be generated for accessing the VM once it's launched.
+4. Launch the instance. Once it reaches a running state, SSH into the VM. The `./bitwarden.sh install` command will automatically be launched to [begin the installation wizard](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/).
+
+> [!TIP] Skip some steps for marketplace deployments.
+> Because marketplace deployments are pre-packaged with the installation script, you can skip directly to **Step 3** ("Complete the prompts in the installer") in the linked instructions.
+
+### Azure
+
+1. Select **Get it now** from the [Bitwarden self-hosted server listing on the Azure marketplace](https://marketplace.microsoft.com/en-us/product/saas/bitwardeninc.bitwarden-self-host). Azure will require you to enter information about your Azure account, like first and last name, before proceeding.
+2. Choose which subscription to associate the VM with and select **Create** to launch the VM creation wizard.
+3. Configure the AMI. The creation wizard will allow you to specify a wide variety of attributes, but make sure to take note of the following:
+
+ - The designated **Network** **Security Group** must open ports 80 and 443.
+ - There are many VM**sizes** to choose from, but a recommendation is provided.
+ - A **key pair** can be generated for accessing the VM once it's launched.
+4. Review and create the VM. Once it reaches a running state, SSH into the VM.he `./bitwarden.sh install` command will automatically be launched to [begin the installation wizard](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/).
+
+> [!TIP] Skip some steps for marketplace deployments.
+> Because marketplace deployments are pre-packaged with the installation script, you can skip directly to **Step 3** ("Complete the prompts in the installer") in the linked instructions.
+
+## Additional information
+
+### Support
+
+Bitwarden customer support covers the Bitwarden server and its configuration. For operating system support, including system maintenance, patching, and OS-level troubleshooting refer to your OS vendor's support infrastructure. For cloud account and platform support, refer to AWS or Azure's support infrastructure.
+
+### Costs
+
+The Bitwarden marketplace images are available at no extra charge through Bitwarden or the AWS and Azure marketplaces. You will be billed:
+
+- By Bitwarden, as normal, for your subscription based on plan and seat count.
+- By AWS or Azure, as for any other application, for compute and storage costs.
+
+### Automatic updates
+
+Marketplace deployments are setup by default with a cronjob that automatically applies updates to keep your Bitwarden server current. Updates to the Bitwarden server are applied in place using the [installation script's pre-packaged update commands](https://bitwarden.com/help/updating-on-premise/). 
+
+To prevent downtime in the case of an unexpected update failure, Bitwarden **strongly recommends** that you put in place systems for regularly [backing up server data](https://bitwarden.com/help/backup-on-premise/) and for monitoring server availability.
 ---
 URL: https://bitwarden.com/help/master-password-re-prompt/
 ---
@@ -26096,8 +26202,8 @@ If you are migrating an organization to the cloud, continue with the following s
 
 ### Host to host
 
-> [!TIP] Host to host is only for linux
-> These instructions are currently only for migration from one Linux self-hosted server to another Linux self-hosted server.
+> [!NOTE] Host to host is only for linux
+> If you're experiencing issues with your self-hosted Linux server and are unable to troubleshoot the issue, this process will help you start fresh.
 
 To migrate from one self-hosted Bitwarden server to another:
 
@@ -26262,14 +26368,35 @@ URL: https://bitwarden.com/help/my-account-was-recovered/
 ---
 # My Account Was Recovered
 
-If you are an organization member whose master password was [reset by an administrator](https://bitwarden.com/help/recover-a-member-account/), you'll receive an email from Bitwarden to inform you that **your admin has initiated account recovery**. When you receive this email:
+If your organization administrator [resets your master password or two-step login method](https://bitwarden.com/help/recover-a-member-account/), Bitwarden will send you an email. This message is meant to keep you informed and help you regain access to your account.
 
-1. Reach out to your admin, if they haven't already reached out to you, to obtain your new temporary master password. Use a secure channel like [Bitwarden Send](https://bitwarden.com/help/create-send/) to receive the temporary master password.
-2. Log in to the Bitwarden web app using that temporary master password. Before you can access your items, you'll be prompted to set a new master password:
+> [!NOTE] Account recovery doesn't bypass SSO
+> Account recovery only affects credentials configured within Bitwarden. It **does not bypass SSO** or any two-factor authentication configured with your IdP. If your organization [requires SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), you are still required to use those methods to access your account after recovery.
 
-![Update your master password ](https://bitwarden.com/assets/rNAgMVW0w9f6rZ8ygEpwO/5e3820246b6b27783374ee772185fe09/2025-09-08_13-13-02.png)
+## Reset master password
+
+After you receive the account recovery email, ask your administrator for the temporary master password. Use a secure channel to receive it, such as [Bitwarden Send](https://bitwarden.com/help/create-send/). To then reset your master password:
+
+1. Within the email, select **Recover your account** to open the recovery web page.
+2. Enter your email and select **Continue**.
+3. Enter your temporary master password and select **Log in with master password**.
+4. Create a new master password and select **Change master password**.
+5. Log in to your Bitwarden account with your email and new master password.
+6. (Optional) Go to **Settings** -> **Security** to set up a new [two-step login method](https://bitwarden.com/help/setup-two-step-login/).
 
 You are required to update your master password after a reset because a master password should be **strong**, **memorable**, and something **only you** know.
+
+## Reset two-step login
+
+Your administrator may instead leave your master password as-in and only remove the two-step login configured for your Bitwarden account. To add a new two-step login method in this scenario:
+
+1. Within the email, select **Recover your account** to open the recovery web page.
+2. Enter your email and select **Continue**.
+3. Enter your existing master password and select **Log in with master password**.
+4. The page to set up [two-step login methods](https://bitwarden.com/help/setup-two-step-login/) will open. Set up the method of your choice.
+
+> [!NOTE] Need to restore account after account recovery if two-step policy enabled
+> If you're unable to access your organization's data after connecting a new two-step login method, contact your administrator. They may need to [restore](https://bitwarden.com/help/revoke-users/#restore-access/) your account.
 ---
 URL: https://bitwarden.com/help/my-items/
 ---
@@ -30464,26 +30591,32 @@ URL: https://bitwarden.com/help/recover-a-member-account/
 ---
 # Recover a Member Account
 
-To recover the account of a member who has forgotten their master password or lost their trusted devices:
+To [recover](https://bitwarden.com/help/account-recovery/) the account of a member who lost their master password, two-step login method, or trusted devices:
 
-- You must be an [owner, admin, or permitted custom role](https://bitwarden.com/help/user-types-access-control/) member.
+- You must be an [owner, admin, or permitted custom role](https://bitwarden.com/help/account-recovery/#who-can-recover-accounts/) member.
 - Your organization must have the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/) turned on.
-- The member whose account you want to recover must [be enrolled](https://bitwarden.com/help/account-recovery-enrollment/).
+- The member whose account you want to recover must be [enrolled](https://bitwarden.com/help/account-recovery-enrollment/).
 
-> [!TIP] Seeing who is enrolled
-> A member that is enrolled in account recovery will have a key icon ( 🔑 ) displayed in the **Policies** column.
+> [!TIP] See who is enrolled in account recovery
+> You can view which members are enrolled in account recovery on the **Members** page. A 🔑 **Key icon** will be present in the **Policies** column.
 
-Complete the following steps to recover an organization member's account:
+To help your organization member regain access via account recovery:
 
-1. In the Admin Console, navigate to the **Members** view.
-2. For the member whose account you want to recover, use the ⋮ Options menu to select 🔑 **Recover account**:
+1. In the Admin Console, go to **Members**.
+2. (Optional) If the account is revoked, select **Revoked**.
+3. For the member whose account you want to recover, select the ⋮ **Menu icon**on the same line as their account.
+4. Select 🔑 **Recover account**:
 
 ![Recover account](https://bitwarden.com/assets/26oD8iqDY15SNJXCJlQE71/22e66b7e11a56d99c13ac41a1236c4e7/2024-12-03_15-35-51.png)
-3. In the Recover account window, create a **New password** for the user. If your organization has enabled the [master password requirements policy](https://bitwarden.com/help/policies/#master-password-requirements/), you will need to create a password that meets the implemented requirements (for example, min. eight characters or contains numbers):
+*Recover account*
+5. In the **Recover account** window that appears, check which credential(s) you want to reset:
 
-![Create new password](https://bitwarden.com/assets/28qKke9XJLj6nTZJjg4mK4/7b1c2c5cb2c139bf08ea4c5f65c9a02a/2024-12-03_15-38-52.png)
-4. Copy the new master password and contact the member to coordinate secure communication of it, for example by using [Bitwarden Send](https://bitwarden.com/help/create-send/).
-5. Select **Save** to proceed with account recovery. Doing so will log the user out of their current sessions. Active sessions on some client applications, like mobile apps, may remain active for up to one hour.
+ - Check **Reset master password** to create a new temporary password, which must meet your organizations' requirements if the [Master password requirements policy](https://bitwarden.com/help/policies/#master-password-requirements/) is on. Copy the new master password and share it securely with the member, such as with [Bitwarden Send](https://bitwarden.com/help/create-send/).
+ - Check **Reset two-step login** to remove two-factor authentication set up for Bitwarden (not your IdP). If the member hasn't set up any two-step login method, this option cannot be checked.
+
+> [!NOTE] Account recovery, revoked if 2FA policy
+> If the [Require two-step login policy](https://bitwarden.com/help/policies/#require-two-step-login/) is on, resetting a member's two-step login method will automatically [revoke](https://bitwarden.com/help/revoke-users/) them because they'll no longer be compliant. Ask them to notify you after they set up a new two-step login method to [restore access](https://bitwarden.com/help/revoke-users/#restore-access/).
+6. Select **Save**. This will send an email to the member's account email with [next steps](https://bitwarden.com/help/my-account-was-recovered/) and log the user out of their current sessions. Active sessions on some client applications, like mobile apps, may remain active for up to one hour.
 ---
 URL: https://bitwarden.com/help/releasenotes/
 ---
@@ -30525,6 +30658,34 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.5.0
+
+(*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.5.0, Browser Extension 2026.5.0, Desktop 2026.5.0, Mobile 2026.5.0, and CLI 2026.5.0)*
+
+#### Password Manager
+
+- ⭐ **Devices list now available on desktop**: The [Devices list](https://bitwarden.com/help/manage-devices/) is now available on the desktop app, alongside the web app and browser extension, to surface devices that your account has been used on.
+- **Biometrics integration now available on Flatpak and Snap**: [Biometric unlock of browser extensions](https://bitwarden.com/help/biometrics/), usable through an integration with the Bitwarden desktop app, is now available on Flatpak and Snap distributions.
+- ⭐ **Web app quick actions**: Launch a website and copy vault data from new quick actions buttons, available by hovering over an item in the web app.
+- **Send UI update:**Selecting a [Send](https://bitwarden.com/help/about-send/) item in the browser extension and web app will now display a View screen instead of routing directly to the Edit screen.
+
+#### Admin Console
+
+- ⭐ **Blumira SIEM integration**: Teams and Enterprise organizations can now [integrate with Blumira](https://bitwarden.com/help/blumira-siem/) for security and event management (SIEM).
+- **Expanded account recovery options**: Account recovery now supports revoked members and can [reset two-step login methods](https://bitwarden.com/help/recover-a-member-account/).
+- **Revoked member reason**: There's a new tooltip next to each member on the **Members** → **Revoked** page that explains why members were [revoked](https://bitwarden.com/help/revoke-users/) from your organization.
+- **Updated event logs**: Password Manager now saves when an attachment is added to an organization-owned item, using the existing [Created attachment for item](https://bitwarden.com/help/event-logs/#item-events/) event.
+
+#### Self-host
+
+- **Helm Chart v2.0**: Version 2.0 of the self-host Helm chart will includes two breaking changes:
+
+ - NGINX `ingress` is now **disabled by default** in this version of the chart. The chart includes support for Gateway API as an alternative.
+ - The `image.name` field has been removed from `values.yaml`. Any configurations using `image.name` must be updated to use `image.repository` instead.
+
+> [!NOTE] Helm Ingress deprecation
+> Before upgrading to this version of the chart, review these changes and update your values file accordingly. For additional information on setting up or migrating to Gateway API, refer to [Helm Traffic Routing](https://bitwarden.com/help/traffic-routing/).
 
 ## 2026.4.1
 
@@ -32056,32 +32217,39 @@ URL: https://bitwarden.com/help/reports/
 ---
 # Vault Health Reports
 
-Vault health reports can help you evaluate the security of your Bitwarden individual or organization vault. Reports, for example the Reused Passwords and Weak Passwords report, are run locally on your client. This allows offending items to be identified, without Bitwarden ever having access to unencrypted versions of this data.
+Vault health reports can help you evaluate the security of your Bitwarden individual or organization vault. Reports, such as the Reused Passwords and Weak Passwords report, are run locally on your client. This allows offending items to be identified, without Bitwarden ever having access to unencrypted versions of this data.
 
 > [!NOTE] health report 
 > Most vault health reports are only available for premium users, including members of paid organizations (families, teams, or enterprise), but the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) is free for all users.
 
 ## View a report
 
-To run any vault health report for your **individual vault**:
+Individual vault reports scan items saved to your personal vault. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
 
-1. Log in to the web app and select **Reports**from the navigation:
+#### Run an individual vault report
+
+Log in to the web app and select **Reports**from the left navigation. Then, select a report to run:
 
 ![Reports page](https://bitwarden.com/assets/JcoKvP7eLrZHUEKmjTqgc/0213680bf5546cfc7df498d9931c8d2f/2024-12-02_16-29-59.png)
-2. Select a report to run.
+*Reports page*
 
-To run any vault health report for your **organization vault**:
+#### Run an organization vault report
 
-1. Log in to the Bitwarden web app.
-2. Open the Admin Console using the product switcher:
+Access organization vault reports from the Admin Console:
+
+1. Log in to the Bitwarden web app and open the Admin Console:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-3. In your organization, select **Reporting** → **Reports** from the navigation:
+*Product switcher*
+2. Navigate to **Reporting** → **Reports**.
+3. Select a report to run:
 
 ![Organization reports ](https://bitwarden.com/assets/5POQmt3TrEgfFzRNwHancg/9a67882a07d8894747ebb5bc3bbdcaae/2024-12-02_16-31-14.png)
-4. Select a report to run.
+*Organization reports *
 
 ## Available reports
+
+The following reports are available from the **Reports**page of your individual vault, or the **Reporting → Reports** page of the Admin console.
 
 ### Exposed Passwords
 
@@ -32089,18 +32257,18 @@ The Exposed Passwords report will identify passwords that have been uncovered in
 
 This report uses a trusted web service to search the first five digits of the hash of all your passwords in a database of known leaked passwords. The returned matching list of hashes is then locally compared with the full hash of your passwords. That comparison is only done locally to preserve your [k-anonymity](https://en.wikipedia.org/wiki/K-anonymity).
 
-Once identified, you should create a new password for offending accounts or services.
-
 > [!NOTE] five digit password hash
 > Why use the first five digits of password hashes?
 > 
 > If the report was performed with your actual passwords, it doesn't matter if they were exposed or not; you would be voluntarily leaking it to the service. This report’s result may not mean your account has been compromised, rather that you are using a password that has been found in these databases of exposed passwords. Nevertheless, we highly recommend not using leaked and non-unique passwords.
 
+Once identified, you should create a new password for affected accounts or services.
+
 ### Reused Passwords
 
 The Reused Passwords report identifies non-unique passwords in your vault. Reusing the same password for multiple services can allow hackers to easily gain access to more of your online accounts when one service is breached.
 
-Once identified, you should create a unique password for offending accounts or services.
+Once identified, you should create a unique password for affected accounts or services.
 
 ### Weak Passwords
 
@@ -32123,15 +32291,17 @@ The Inactive 2FA report identifies login items where:
 
 Two-factor authentication (2FA) is an important security step that helps secure your accounts. If any website offers it, you should always enable 2FA. Offending items are identified by cross-referencing URI-data with data from [https://2fa.directory/](https://2fa.directory/).
 
-Once identified, setup 2FA using the `Instructions` hyperlink for each offending item:
+Once identified, set up 2FA using the `Instructions` hyperlink for each offending item:
 
 ![Report Instructions](https://bitwarden.com/assets/3USpBf7beuGcdJvMhDrwNI/570672e3220f09e0398ced33a154b1ea/inactive-2fa.png)
+*Report Instructions*
 
-### Member access
+### Member Access
 
 The Member access report shows the total number of **Groups**, **Collections**, and **Items** each user can access:
 
 ![Member access report](https://bitwarden.com/assets/4oNfzpIcDwn2XjUgG0lPG3/a51bac815082055fdd6f47a40937b72d/2024-09-10_16-13-31.png)
+*Member access report*
 
 To locate a specific person, enter their email into the **Search members** field. Select the neighboring [sign-in] **Export icon** to download a `.csv` that details per member:
 
@@ -32145,7 +32315,7 @@ To locate a specific person, enter their email into the **Search members** field
 
 ### Data Breach (individual vaults only)
 
-The Data Breach report identifies compromised data (email addresses, passwords, credit cards, DoB, and more) in known breaches, using a service called Have I Been Pwned (HIBP).
+The Data Breach report identifies compromised data (email addresses, passwords, credit cards, date of birth, and more) in known breaches, using a service called Have I Been Pwned (HIBP).
 
 When you create a Bitwarden account, you'll have the option to run this report on your master password before deciding to use it. To run this report, the first five digits of a hash of your master password is sent to HIBP and compared to stored exposed hashes. Your master password itself is never exposed by Bitwarden.
 
@@ -32167,50 +32337,58 @@ URL: https://bitwarden.com/help/revoke-users/
 ---
 # Temporarily Revoke Access
 
-Organization [admins and some custom role members](https://bitwarden.com/help/user-types-access-control/) can manage members' access to the organization on a temporary basis through revoking and restoring. Revoking access is:
+Revoking a member is how you temporarily remove someone from your organization. You can later [restore their access](https://bitwarden.com/help/revoke-users/#restore-access/) or [permanently remove](https://bitwarden.com/help/remove-users/) them from your organization. When a member is revoked, they:
 
-- Often useful when a member shouldn't have access for a period of time, but will need to have access restored in the future.
-- **Automatically** done when users are in violation of some [enterprise policies](https://bitwarden.com/help/policies/).
-- **Automatically**done for organizations [using SCIM](https://bitwarden.com/help/about-scim/) when a member is suspended or de-activated in the IdP.
-
-Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they won't need to [be re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#add-new-members/).
-
-## Revoke access
-
-> [!NOTE] Revoke/Restore Owners.
-> Only **owners**can revoke and restore access to other **owners**.
-
-To revoke organization access to a member:
-
-1. In the Admin Console, navigate to the **Members** view.
-2. Select the members you want to revoke access for and use the ⋮ Options menu to **Revoke access**:
-
-![Revoke access](https://bitwarden.com/assets/6hBUggWWvdttF0RUqU8IZ9/389eb47b90742bb3e3844f5105bc643a/2024-12-03_15-06-01.png)
-
-### Restrictions on revoked members
-
-Members with revoked access are listed in the **Revoked**tab and will:
-
-- Not have access to any organization vault items or collections.
-- Not be able to log in to the account using your organization's [SSO](https://bitwarden.com/help/about-sso/).
+- Cannot access any organization vault items or collections.
+- Cannot log in with your organization's [SSO](https://bitwarden.com/help/about-sso/).
 
 > [!NOTE] Revoked users without master passwords
 > Members who **do not have master passwords**, for example in organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) or [Key Connector](https://bitwarden.com/help/about-key-connector/), will be fully locked out of their account if they are revoked.
-- Not be subject to your organization's [policies](https://bitwarden.com/help/policies/).
-- Not occupy a license seat.
+- Are not subject to your organization's [policies](https://bitwarden.com/help/policies/).
+- Do not occupy a [subscription seat](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
+
+## Revoke access
+
+There are a few ways to revoke a member. Members are **automatically** revoked when they violate certain [enterprise policies](https://bitwarden.com/help/policies/) or the member is suspended or deactivated in the IdP used for their organization's [SCIM](https://bitwarden.com/help/about-scim/).
+
+Alternatively, an [owner, admin, or custom role member](https://bitwarden.com/help/user-types-access-control/) with **Manage users** permission can **manually** revoke users:
+
+1. In the Admin Console, select **Members**.
+2. Check the member(s) you want to revoke.
+3. Select the ⋮ **Options menu**.
+4. Select **Revoke access**:
+
+![Revoke access](https://bitwarden.com/assets/6hBUggWWvdttF0RUqU8IZ9/389eb47b90742bb3e3844f5105bc643a/2024-12-03_15-06-01.png)
+*Revoke access*
+5. Select **Revoke members** to confirm.
+
+> [!TIP] View revoked members
+> To view which members are revoked, go to **Members** → **Revoked**. Hover over the ℹ️ **Revoked** **icon** next to a specific user to learn why they were revoked:
+> 
+> 
+> ![Revoke reason tooltip](https://bitwarden.com/assets/4K6UcJtGBxlmEyY0ASKBBs/f4ed8fec1ad67da90dd0f980ef2744a6/Revoke_reason_tooltip.png)
+> *Revoke reason tooltip*
+> 
+> If it says "Unknown reason," then the member was revoked before [release 2026.5.0](https://bitwarden.com/help/releasenotes/#2026-5-0/).
 
 ## Restore access
 
+An [owner, admin, or custom role member](https://bitwarden.com/help/user-types-access-control/) with **Manage users** permission can restore members' access quickly. Restoring access to a revoked member does not require that they take any steps to rejoin the organization, meaning they don't need to be [re-invited, accept an invite, or be confirmed](https://bitwarden.com/help/managing-users/#add-new-members/).
+
 > [!NOTE] Can't restore until policy compliance
-> Members who are not compliant with some [policies](https://bitwarden.com/help/policies/) will not be able to have their access restored until they take steps to become compliant.
+> Members who are not compliant with some [enterprise policies](https://bitwarden.com/help/policies/) cannot be restored to your organization until they take steps to become compliant with those policies.
 
 To restore access to a member:
 
-1. In the Admin Console, navigate to the **Members** view.
-2. Open the **Revoked**tab.
-3. Select the members you want to restore access for and use the ⋮ Options menu to **Restore access**:
+1. In the Admin Console, select **Members**.
+2. Select **Revoked**.
+3. Check the member(s) you want to return to the organization.
+4. Select the ⋮ **Options menu**.
+5. Select **Restore access**:
 
 ![Restore access](https://bitwarden.com/assets/2xe3Vt7l9CCO85RhhmoVJU/47321af7571e298c697a412c650403d6/2024-12-03_15-11-35.png)
+*Restore access*
+6. Select **Revoke members** to confirm.
 ---
 URL: https://bitwarden.com/help/rollout-email-templates/
 ---
@@ -36214,6 +36392,9 @@ This article will describe the generic steps for hosting Bitwarden on Kubernetes
 - [OpenShift Deployment](https://bitwarden.com/help/openshift-deployment/)
 - [AWS EKS Deployment](https://bitwarden.com/help/aws-eks-deployment/)
 
+> [!NOTE] NGINX ingress deprecation
+> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+
 ## Requirements
 
 Before proceeding with the installation, ensure the following requirements are met:
@@ -36221,13 +36402,13 @@ Before proceeding with the installation, ensure the following requirements are m
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) is installed.
 - [Helm 3](https://helm.sh/docs/intro/install/) is installed.
 - You have an SSL certificate and key or access to creating one via a certificate provider.
-- You have a SMTP server or access to a cloud SMTP provider.
+- You have an SMTP server or access to a cloud SMTP provider.
 - A [storage class](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) that supports ReadWriteMany.
 - You have an installation id and key retrieved from [https://bitwarden.com/host](https://bitwarden.com/host/).
 
 ### Rootless requirements
 
-Bitwarden will detect whether your environment restricts what user containers can be run as during startup and will automatically initiate deployment in rootless mode if restriction is detected. Successfully deploying in rootless mode requires one of the following two options:
+Bitwarden will detect whether your environment restricts what user containers can be run as during startup and will automatically initiate deployment in rootless mode if restrictions are detected. Successfully deploying in rootless mode requires one of the following two options:
 
 - Deploying an [external MSSQL database](https://bitwarden.com/help/external-db/) instead of the SQL container included by default in the Helm chart.
 - Assigning elevated privileges to the included SQL container [using a service account](https://bitwarden.com/help/kubernetes-service-accounts/), [pod security context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod), or other method.
@@ -36262,17 +36443,12 @@ Create a `my-values.yaml` configuration file, which you will use to customize yo
 helm show values bitwarden/self-host > my-values.yaml
 ```
 
-At a minimum, you must configure your `my-values.yaml` file with the values in the following table, however a comprehensive list of values can be found [here](https://github.com/bitwarden/helm-charts/blob/main/charts/self-host/values.yaml):
+At a minimum, you must configure your `my-values.yaml` file with the values in the following table, however a comprehensive list of values can be found [here](https://github.com/bitwarden/helm-charts/blob/main/charts/self-host/values.yaml).
+
+#### Required variables
 
 | Value | Description |
 |------|------|
-| `general.domain:` | The domain that will point to your cluster's public IP address. |
-| `general.ingress.enabled:` | Whether to use the nginx ingress controller defined in the chart ([see an example using a non-included ingress controller](https://bitwarden.com/help/add-rawmanifest-files/#traefik-ingressroute/)). |
-| `general.ingress.className:` | For example, `"nginx"` or `"azure-application-gateway"` ([see an example](https://bitwarden.com/help/azure-aks-deployment/#azure-application-gateway/)). Set `general.ingress.enabled: false` to use other ingress controllers. |
-| `general.ingress.annotations:` | Annotations to add to the ingress controller. If you're using the included nginx controller, defaults are provided that you must uncomment and can customize as needed. |
-| `general.ingress.paths:` | If you're using the default nginx controller, defaults are provided that you can customize as needed. |
-| `general.ingress.tls.name:` | The name of your TLS certificate. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
-| `general.ingress.tls.clusterIssuer:` | The name of your TLS certificate issuer. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
 | `general.admins:` | A comma-separated list of email addresses that will be permitted to access to the [System Admin Portal](https://bitwarden.com/help/system-administrator-portal/). |
 | `general.email.replyToEmail:` | Email address used for invitations, typically `no_reply@smtp_host`. |
 | `general.email.smtpHost:` | Your SMTP server hostname or IP address. |
@@ -36285,6 +36461,44 @@ At a minimum, you must configure your `my-values.yaml` file with the values in t
 | `database.enabled:` | Whether to use the SQL pod included in the chart. Only set to `false` if you're using an external SQL server. |
 | `component.scim.enabled` | The SCIM pod is disabled by default. To enable the SCIM pod, set value `= true`. |
 | `volume.logs.enabled:` | While not required, we recommend setting to `true` for troubleshooting purposes. |
+
+#### Traffic routing options
+
+The following sections describe the methods and values for configuring external traffic to your Bitwarden deployment. `my-values.yaml` includes configurations for both ingress and Gateway API implementations. Enabling both `general.ingress.enabled` and `general.gateway.enabled `simultaneously is not recommended.
+
+##### Ingress
+
+The following table contains the required values for a Kubernetes ingress controller object. Please be aware that NGINX Ingress is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
+
+| Value | Description |
+|------|------|
+| `general.domain:` | The domain that will point to your cluster's public IP address. |
+| `general.ingress.enabled:` | Whether to use an ingress controller defined in the chart ([see an example using a non-included ingress controller](https://bitwarden.com/help/add-rawmanifest-files/#traefik-ingressroute/)). |
+| `general.ingress.className:` | For example, `"azure-application-gateway"` ([see an example](https://bitwarden.com/help/azure-aks-deployment/#azure-application-gateway/)). Set `general.ingress.enabled: false` to use other ingress controllers. |
+| `general.ingress.annotations:` | Annotations to add to the ingress controller. |
+| `general.ingress.paths:` | Defaults are provided that you can customize as needed. |
+| `general.ingress.tls.name:` | The name of your TLS certificate. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
+| `general.ingress.tls.clusterIssuer:` | The name of your TLS certificate issuer. We will walk through [an example](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/) later, so enter it now if you have it or circle back later. |
+
+##### Gateway API
+
+Bitwarden supports routing traffic using an `HTTPRoute` resource as an alternative to an ingress controller. For additional information on Gateway, please refer to:
+
+- Gateway API core documentation
+- Gateway controller implementations
+
+Configure the following values in `my-values.yaml` to enable Gateway API support:
+
+| Value | Description |
+|------|------|
+| `general.gateway.enabled:` | Set to `true` to create an `HTTPRoute` resource for GatewayAPI based ingress. |
+| `general.gateway.parentRefs:` | A list of `Gateway` resource references that your `HTTPRoute` attaches to. Each entry should specify the `namespace` of an externally managed Gateway resource. |
+| `general.gateway.annotations:` | Annotations to add to the `HTTPRoute` resource. Accepts a map of `key:value` pairs. Leave empty `{ }` if no annotations are needed. |
+| `general.gateway.labels:` | Labels to add to the `HTTPRoute` resource. Accepts a map of `key:value` pairs. Leave empty `{ }` if no labels are needed. |
+| `general.gateway.paths:` | Path prefix configuration for each Bitwarden Service exposed with `HTTPRoute`. Each entry maps a service to a URL path using `PathPrefix` matching. Do not change the default paths as they match the Bitwarden routing. Available key paths are: `web attachments api icons notifications events scim sso identity attachments admin` |
+
+> [!NOTE] TLS is handled at the Gateway resource level, not on the HTTPRoute.
+> `TLS` is handled at the Gateway resource level, not on the `HTTPRoute`.
 
 ### Create a secret object
 
@@ -36348,7 +36562,7 @@ spec:
  solvers:
  - http01:
  ingress:
- class: nginx #use "azure/application-gateway" for Application Gateway ingress
+ class: azure/application-gateway # use for Application Gateway ingress
 EOF
 ```
 
@@ -36369,17 +36583,23 @@ spec:
  solvers:
  - http01:
  ingress:
- class: nginx #use "azure/application-gateway" for Application Gateway ingress
+ class: azure/application-gateway # use for Application Gateway ingress
 EOF
 ```
-3. If you haven't already, be sure to set the `general.ingress.cert.tls.name:` and `general.ingress.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
+3. If you haven't already, be sure to set the ingress or gateway general settings.
+
+ 1. For ingress, `general.ingress.cert.tls.name:` and `general.ingress.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
 
  - `general.ingress.cert.tls.name: tls-secret`
  - `general.ingress.cert.tls.clusterIssuer: letsencrypt-staging`
+ 2. For a gateway setup, `general.gateway.cert.tls.name:` and `general.gateway.cert.tls.clusterIssuer:` values in `my-values.yaml`. In this example, you would set:
+
+ - `general.gateway.cert.tls.name: tls-secret`
+ - `general.gateway.cert.tls.clusterIssuer: letsencrypt-staging`
 
 ### Adding rawManifest files
 
-The Bitwarden self-host Helm Chart allows you to include other Kubernetes manifest files either pre- or post-install. To do this, update the `rawManifests` section of the chart ([learn more](https://bitwarden.com/help/add-rawmanifest-files/)). This is useful, for example, in scenarios where you want to use an ingress controller other than the nginx controller defined by default.
+The Bitwarden self-host Helm Chart allows you to include other Kubernetes manifest files either pre- or post-install. To do this, update the `rawManifests` section of the chart ([learn more](https://bitwarden.com/help/add-rawmanifest-files/)). 
 
 ## Install the chart
 
@@ -36891,7 +37111,7 @@ Paid Bitwarden plan users (Premium, Families, Teams, Enterprise) can require ema
 
 1. Select the **Specific people** option in the **Who can view** menu. Then, add the intended recipients to the **Emails**field. Complete the [Send setup](https://bitwarden.com/help/about-send/#using-send/) and share the send link with intended recipients.
 
-![Verified user Send](https://bitwarden.com/assets/9isz2fm2soiJJOau1sq7b/1b9cdff84b482c8698ef6e0a20ebf826/Send_access_list.png)
+![Verified user Send](https://bitwarden.com/assets/9isz2fm2soiJJOau1sq7b/a87258146b97095651a5550ef3bc24b4/Verified_User_Send.png)
 *Verified user Send*
 2. Recipients who access the Send link will be asked to enter their email address. A verification code will be sent to that users email address. Enter the verification code to view the content of the send.
 
@@ -39695,7 +39915,10 @@ You can manually copy a local code to your Bitwarden vault for access from both 
  - If a matching login item is found, tap the login item. Edit or enter any additional details and tap the ✓ **Check icon** when done.
  - If no matching login item is found, tap + **New item**. Edit or enter any additional details and tap the ✓ **Check icon** when done.
 
-[Embedded content]## How syncing works
+> [!NOTE] Copy codes from Authenticator one-way
+> Manually copying a code is a one-way transfer that does not depend on the **Allow authenticator syncing** setting in Password Manager. This sync setting only controls if TOTPs saved in your vault are made visible in Authenticator. If you only want to move local codes from Authenticator to your Bitwarden vault, do not turn on the setting.
+
+## How syncing works
 
 Though the core key exchange workflows are the same from platform-to-platform, the secure storage and communication methods that facilitate sync between Password Manager and Authenticator are specific to Android and iOS:
 
@@ -39735,6 +39958,183 @@ When you open Authenticator and **Allow authenticator sync** is activated:
 3. Authenticator locally decrypts your authenticator keys, display names, and usernames with the **global symmetric key**.
 
 When you turn off **Allow authenticator sync**or fully log out of Bitwarden Password Manager, the encrypted data stored in an App Group (authenticator keys, display names, and usernames) are deleted. If all associated Bitwarden accounts deactivate **Allow authenticator sync** or logout, the **global symmetric key** is also deleted.
+
+## How logout affects sync
+
+Synced TOTP codes require Password Manager to be logged in. The account encryption key required to decrypt and re-encrypt your vault items is only persisted locally while you are logged in. Logging out of Password Manager will result in the persisted account encryption key being wiped. Password Manager can no longer fulfill Authenticator sync requests, and your synced TOTP codes will be unavailable in Authenticator until you log back in. Several actions may result in becoming logged out of the Password Manager such as:
+
+- Session expiring
+- KDF setting change
+- Manual logout
+
+> [!NOTE] Synced TOTP codes not stored independantly
+> Synced TOTP codes are not stored independently on your device. If you rely on Bitwarden Authenticator for two-step login on your Bitwarden account, logging out of the Password Manager will prevent you from accessing those codes. We recommend having an alternative two-step login method available.
+---
+URL: https://bitwarden.com/help/traffic-routing/
+---
+# Traffic Routing
+
+> [!NOTE]
+> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+
+This article provides sample traffic routing configurations for Kubernetes based Bitwarden deployments, and should be used alongside [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/). This article covers a standard Gateway API setup, as well as migration steps if you are running the deprecated NGINX Ingress configuration.
+
+## Prerequisites
+
+Before proceeding with the Gateway API setup, ensure the following requirements and initial setup have been completed in [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/#requirements/):
+
+1. [Bitwarden namespace created](https://bitwarden.com/help/self-host-with-helm/#prepare-the-chart/)
+2. [Create Secrets](https://bitwarden.com/help/self-host-with-helm/#create-a-secret-object/)
+3. [Create and install certificates](https://bitwarden.com/help/self-host-with-helm/#example-certificate-setup/)
+
+## NGINX Gateway Fabric
+
+The following sections include instructions to [setup](https://bitwarden.com/help/helm-traffic-routing/#install-the-gateway-api-custom-resource-definition/) or [migrate](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) from NGINX Ingress to NGINX Gateway Fabric. Configure Gateway API for your Bitwarden Helm deployment using the steps below:
+
+- **New Deployment**: Follow the steps in order.
+- **Migrating from NGINX Ingress:**Complete the steps up to Create the Gateway resource, then skip to [Migrating from NGINX Ingres](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) to [NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+
+### Install the Gateway API custom resource definition
+
+Install the Gateway API custom resource definitions before deploying a Gateway controller. The following example is using NGINX Gateway Fabric v2.4.2:
+
+```bash
+kubectl kustomize "https://github.com/nginx/nginx-gateway-fabric/config/crd/gateway-api/standard?ref=v2.4.2" | kubectl apply -f -
+```
+
+> [!NOTE] CRD versions are tied to the Gateway controller version
+> CRD versions are tied to the Gateway controller version. Check your controller's documentation to confirm the compatible CRD version before running this command. In this example, the CRD version is tied to NGINX Gateway Fabric.
+
+Additional implementation options can be found in Gateway API's documentation.
+
+### Install a Gateway controller
+
+A Gateway controller handles the traffic routing. To install NGINX Gateway Fabric using Helm:
+
+```bash
+helm install ngf oci://ghcr.io/nginx/charts/nginx-gateway-fabric \
+ --create-namespace \
+ -n nginx-gateway \
+ --set nginx.service.type=LoadBalancer
+```
+
+### Create the Gateway resource
+
+Create a `Gateway` resource in the `bitwarden` namespace. The Gateway terminates TLS using the `self-signed-cert` secret created during the [prerequisite setup](https://bitwarden.com/help/self-host-with-helm/), and restricts attached routes to the same namespace.
+
+```yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+ name: bw-gateway
+ namespace: bitwarden
+spec:
+ # Change this if your controller uses a different GatewayClass.
+ # For example, many environments will NOT use "nginx" here.
+ gatewayClassName: nginx
+ listeners:
+ - name: http
+ hostname: bw.localtest.me # change this value
+ port: 80
+ protocol: HTTP
+ allowedRoutes:
+ namespaces:
+ from: Same
+ - name: https
+ hostname: bw.localtest.me # change this value
+ port: 443
+ protocol: HTTPS
+ tls:
+ mode: Terminate
+ certificateRefs:
+ - kind: Secret
+ name: self-signed-cert
+ allowedRoutes:
+ namespaces:
+ from: Same
+```
+
+If your setup requires HTTP to HTTPS redirect, you can use the following additional route to a `redirect.yaml` file:
+
+[Embedded content]To apply HTTP to HTTPS:
+
+[Embedded content]Apply the manifest:
+
+```bash
+kubectl apply -f gateway.yaml
+```
+
+To list the `GatewayClass` resources installed by your controller, run:
+
+[Embedded content]The `gatewayClassName` value above must match one of these.
+
+> [!NOTE] Continue to Migrate
+> At this point, if you are migrating from an NGINX Ingress setup, continue to [Migrating from NGINX Ingress to Gateway API](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+
+### Configure the Helm chart for Gateway API
+
+Update the `my-values.yaml` file to disable the deprecated Ingress, and enable the Gateway API HTTPRoute. Set `parentRefs` to point to the Gateway:
+
+```yaml
+general:
+ ingress:
+ # Ingress is deprecated. Disable it when using Gateway API.
+ enabled: false
+ gateway:
+ # Set to true to create an HTTPRoute resource managed by the Helm chart.
+ enabled: true
+ # parentRefs attach the HTTPRoute to the Gateway.
+ parentRefs:
+ - name: bw-gateway # Must match the Gateway metadata.name
+ namespace: bitwarden # Must match the Gateway metadata.namespace
+ sectionName: https # Must match the listener name in the Gateway spec
+```
+
+Apply the changes:
+
+```bash
+helm upgrade bitwarden bitwarden/self-host \
+ --install \
+ --namespace bitwarden \
+ --values my-values.yaml
+```
+
+> [!NOTE] ingress & Gateway API parallel use
+> The provided `my-values.yaml` file includes configurations for both Ingress and Gateway API setups. Both of these methods can be utilized at the same time depending on your specific infrastructure needs.
+
+### HTTPRoute functionality
+
+When `general.gateway.enabled` is `true`, the Helm chart creates an `HTTPRoute` resource in the `bitwarden` namespace. The `HTTPRoute` attaches to the Gateway defined in `parentRefs` and routes traffic to each Bitwarden service by path prefix. The HTTPRoute chart produced by the configuration can be reviewed [here](https://bitwarden.com/assets/2BFMWDWYdIOkE0AwvxN5Jr/357fdcbfcdbde5fe76c6a02659c5e10b/HTTPRoute.yaml).
+
+> [!NOTE] TLS handled on gateway level
+> TLS is handled at the Gateway level, not the HTTPRoute. Do not add TLS configuration to the HTTPRoute resource.
+
+## Migrating from NGINX Ingress to Gateway API
+
+If you have an existing Bitwarden Helm deployment using the deprecated `general.ingress` configuration, you may migrate to Gateway API. If you have not completed [Install NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#install-a-gateway-controller/), and [Create Gateway resource](https://bitwarden.com/help/helm-traffic-routing/#create-the-gateway-resource/) from the steps above, please do so before returning to this section.
+
+1. Next, update your values file to disable Ingress and enable the Gateway:
+
+```yaml
+general:
+ ingress:
+ enabled: false
+ gateway:
+ enabled: true
+ parentRefs:
+ - name: bw-gateway
+ namespace: bitwarden
+ sectionName: https
+```
+2. Apply the changes:
+
+```bash
+helm upgrade bitwarden bitwarden/self-host \
+ --namespace bitwarden \
+ --values my-values.yaml
+```
+
+The chart will delete the old `Ingress` resource and create the `HTTPRoute` in its place.
 ---
 URL: https://bitwarden.com/help/transfer-ownership/
 ---
@@ -39789,6 +40189,9 @@ URL: https://bitwarden.com/help/two-step-recovery-code/
 
 Bitwarden provides a unique recovery code when you activate any [two-step login method](https://bitwarden.com/help/setup-two-step-login/). If you [lose your authentication device](https://bitwarden.com/help/lost-two-step-device/), use this code to disconnect all two-step login methods and regain access to your account. If you lose both your recovery code and two-step device, like a phone with an authenticator app or linked email inbox, you may be locked out of your vault.
 
+> [!TIP] Account recovery for 2FA
+> If you're enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) with an organization, you can ask an organization owner or admin to reset your two-step login. This method does not require your personal recovery code, as described below.
+
 ## Save your recovery code
 
 Save your recovery code immediately after turning on any two-step login method and store it in the secure location of your choice. A printed copy kept in a safe place is a good option, because it prevents digital theft and accidental deletion.
@@ -39802,8 +40205,8 @@ To find your recovery code in the Bitwarden web app:
 2. Select **Two-step login**.
 3. Select **View recovery code**:
 
-![Two-step login](https://bitwarden.com/assets/2BsKs83g4cmiCUwxf2ad83/b2a90e85355f3d937aeb46139203737e/2024-12-02_10-54-31.png)
-*Two-step login*
+![Two-step login settings](https://bitwarden.com/assets/2IjxRoQwl1powHRhah6Bq/39067a5fe6c53732054f323e4afb431b/Screenshot_2025-12-31_at_1.52.00â__PM.png)
+*Two-step login settings*
 4. Enter your master password and select **Continue**. Your recovery code will appear:
 
 ![Example recovery code](https://bitwarden.com/assets/64piqJsX7vN25To16iRFIp/09e977fae9485c0764f832c6bb4b4b04/2024-12-02_11-24-35.png)

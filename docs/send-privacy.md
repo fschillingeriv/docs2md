@@ -14,7 +14,7 @@ Paid Bitwarden plan users (Premium, Families, Teams, Enterprise) can require ema
 
 1. Select the **Specific people** option in the **Who can view** menu. Then, add the intended recipients to the **Emails**field. Complete the [Send setup](https://bitwarden.com/help/about-send/#using-send/) and share the send link with intended recipients.
 
-![Verified user Send](https://bitwarden.com/assets/9isz2fm2soiJJOau1sq7b/1b9cdff84b482c8698ef6e0a20ebf826/Send_access_list.png)
+![Verified user Send](https://bitwarden.com/assets/9isz2fm2soiJJOau1sq7b/a87258146b97095651a5550ef3bc24b4/Verified_User_Send.png)
 *Verified user Send*
 2. Recipients who access the Send link will be asked to enter their email address. A verification code will be sent to that users email address. Enter the verification code to view the content of the send.
 

@@ -6,6 +6,9 @@ URL: https://bitwarden.com/help/two-step-recovery-code/
 
 Bitwarden provides a unique recovery code when you activate any [two-step login method](https://bitwarden.com/help/setup-two-step-login/). If you [lose your authentication device](https://bitwarden.com/help/lost-two-step-device/), use this code to disconnect all two-step login methods and regain access to your account. If you lose both your recovery code and two-step device, like a phone with an authenticator app or linked email inbox, you may be locked out of your vault.
 
+> [!TIP] Account recovery for 2FA
+> If you're enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) with an organization, you can ask an organization owner or admin to reset your two-step login. This method does not require your personal recovery code, as described below.
+
 ## Save your recovery code
 
 Save your recovery code immediately after turning on any two-step login method and store it in the secure location of your choice. A printed copy kept in a safe place is a good option, because it prevents digital theft and accidental deletion.
@@ -19,8 +22,8 @@ To find your recovery code in the Bitwarden web app:
 2. Select **Two-step login**.
 3. Select **View recovery code**:
 
-![Two-step login](https://bitwarden.com/assets/2BsKs83g4cmiCUwxf2ad83/b2a90e85355f3d937aeb46139203737e/2024-12-02_10-54-31.png)
-*Two-step login*
+![Two-step login settings](https://bitwarden.com/assets/2IjxRoQwl1powHRhah6Bq/39067a5fe6c53732054f323e4afb431b/Screenshot_2025-12-31_at_1.52.00â__PM.png)
+*Two-step login settings*
 4. Enter your master password and select **Continue**. Your recovery code will appear:
 
 ![Example recovery code](https://bitwarden.com/assets/64piqJsX7vN25To16iRFIp/09e977fae9485c0764f832c6bb4b4b04/2024-12-02_11-24-35.png)
