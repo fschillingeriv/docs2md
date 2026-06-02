@@ -55,7 +55,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Admin Console
 
 - ⭐ **Blumira SIEM integration**: Teams and Enterprise organizations can now [integrate with Blumira](https://bitwarden.com/help/blumira-siem/) for security and event management (SIEM).
-- **Expanded account recovery options**: Account recovery now supports revoked members and can [reset two-step login methods](https://bitwarden.com/help/recover-a-member-account/).
+- ⭐ **Expanded account recovery options**: Account recovery now supports revoked members and can [reset two-step login methods](https://bitwarden.com/help/recover-a-member-account/).
 - **Revoked member reason**: There's a new tooltip next to each member on the **Members** → **Revoked** page that explains why members were [revoked](https://bitwarden.com/help/revoke-users/) from your organization.
 - **Updated event logs**: Password Manager now saves when an attachment is added to an organization-owned item, using the existing [Created attachment for item](https://bitwarden.com/help/event-logs/#item-events/) event.
 

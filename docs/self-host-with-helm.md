@@ -81,6 +81,7 @@ At a minimum, you must configure your `my-values.yaml` file with the values in t
 | `database.enabled:` | Whether to use the SQL pod included in the chart. Only set to `false` if you're using an external SQL server. |
 | `component.scim.enabled` | The SCIM pod is disabled by default. To enable the SCIM pod, set value `= true`. |
 | `volume.logs.enabled:` | While not required, we recommend setting to `true` for troubleshooting purposes. |
+| `distributedCache.redis.enabled:` | Set to `true` to inject` globalSettings__distributedCache__redis__connectionString` into all backend service deployments. |
 
 #### Traffic routing options
 
@@ -134,6 +135,7 @@ Create a [Kubernetes secret object](https://kubernetes.io/docs/tasks/inject-data
 | `globalSettings__yubico__key` | Secret key for YubiCloud Validation Service or self-hosted Yubico Validation Server. If YubiCloud, get your client ID and secret key [here](https://upgrade.yubico.com/getapikey/). |
 | `globalSettings__hibpApiKey` | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). This key allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
 | If you're using the Bitwarden SQL pod, `SA_PASSWORD` If you're using your own SQL server, `globalSettings__sqlServer__connectionString` | Credentials for the database connected to your Bitwarden instance. What is required will depend on whether you're using the included SQL pod or an external SQL server. |
+| `distributedCache.secretName` | Name of Kubernetes secret containing the connection string. Defaults to `secrets.secretName` when empty. Include the `secretKey` in the following variable. |
 
 For example, using the `kubectl create secret` command to set these values would look like the following:
 
