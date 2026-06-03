@@ -34,11 +34,10 @@ docker compose -f ./docker/docker-compose.yml down && docker compose -f ./docker
 
 ## Download logs
 
-If you've deployed Bitwarden with Docker using the `bitwarden.sh` or `bitwarden.ps1` installation script, you can additionally use the `compresslogs` command to download a tarball of all server logs, or all server logs in a specified date range:
+If you've deployed Bitwarden with Docker using the `bitwarden.sh` installation script, you can also use the `compresslogs` command to download a tarball of all server logs, or all server logs in a specified date range:
 
 ```bash
 ./bitwarden.sh compresslogs 20240304 20240305
-.\bitwarden.ps1 -compresslogs 20240304 20240305
 ```
 
 ### Helm

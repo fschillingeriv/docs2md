@@ -4428,7 +4428,7 @@ sudo chown root:root /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 3. Change the security context of the file:
 
 ```bash
-sudo chcon system_u:object_r:usr_t:s0
+sudo chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 ```
 4. Turn on system authentication on your machine.
 5. Open the Bitwarden desktop and go to **File** → **Settings**.
@@ -37277,11 +37277,10 @@ docker compose -f ./docker/docker-compose.yml down && docker compose -f ./docker
 
 ## Download logs
 
-If you've deployed Bitwarden with Docker using the `bitwarden.sh` or `bitwarden.ps1` installation script, you can additionally use the `compresslogs` command to download a tarball of all server logs, or all server logs in a specified date range:
+If you've deployed Bitwarden with Docker using the `bitwarden.sh` installation script, you can also use the `compresslogs` command to download a tarball of all server logs, or all server logs in a specified date range:
 
 ```bash
 ./bitwarden.sh compresslogs 20240304 20240305
-.\bitwarden.ps1 -compresslogs 20240304 20240305
 ```
 
 ### Helm

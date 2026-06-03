@@ -82,7 +82,7 @@ sudo chown root:root /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 3. Change the security context of the file:
 
 ```bash
-sudo chcon system_u:object_r:usr_t:s0
+sudo chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 ```
 4. Turn on system authentication on your machine.
 5. Open the Bitwarden desktop and go to **File** → **Settings**.
