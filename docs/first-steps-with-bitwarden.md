@@ -1,5 +1,5 @@
 ---
-URL: https://bitwarden.com/help/first-steps-with-bitwarden/
+URL: https://bitwarden.com/help/courses/first-steps-with-bitwarden/
 ---
 
 # First Steps with Bitwarden
@@ -68,6 +68,11 @@ Learn more about disabling built-in browser password managers. Enable a smooth u
 
 [![Vimeo Video](https://vumbnail.com/1060246387.jpg)](https://vimeo.com/1060246387)
 *[Watch on Vimeo](https://vimeo.com/1060246387)*
+
+**Video Chapters:**
+Email-based two-step login is enabled by default. Explore other methods like authenticator apps and hardware keys to find what works best for you. 
+
+Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/).
 
 Learn more about your two-step login options [here](https://bitwarden.com/help/setup-two-step-login/), or jump to the following points in the video to learn about specific topics:
 

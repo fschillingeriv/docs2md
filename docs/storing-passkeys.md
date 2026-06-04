@@ -13,13 +13,13 @@ URL: https://bitwarden.com/help/storing-passkeys/
 > 
 > * Some authenticators, notably Windows Hello, will not allow you to use a passkey for both login and 2FA.
 
-Passkeys can be stored and used by Bitwarden Password Manager. Using browser extensions and mobile apps, users can log in to their favorite apps and websites that have passkey login capability. Passkeys are a safe, passwordless alternative for users to log into services across their devices.
+Passkeys are a secure alternative to traditional passwords that let you log in to apps and websites without entering a password. Developed with the standards set by the [<u>FIDO Alliance</u>](https://fidoalliance.org/overview/), passkeys bypass vulnerabilities that come with standard passwords, like phishing. 
 
-Developed with the standards set by the [<u>FIDO Alliance</u>](https://fidoalliance.org/overview/), passkeys allow a user to secure their accounts and bypass the vulnerabilities that come with standard password authentication, such as phishing. Stored passkeys are protected with Bitwarden's trusted end-to-end encryption.
+Save passkeys in your Bitwarden vault and use the browser extension or mobile apps to autofill them across the apps and websites you use every day. Stored passkeys are protected with Bitwarden's trusted end-to-end encryption.
 
 ## What are passkeys?
 
-[Passkeys](https://bitwarden.com/resources/passkeys-faq/) are a replacement for passwords that provide fast, easy, and secure sign-ins to websites and apps. Passkeys are a discoverable FIDO credential that can be synced to allow secure passwordless sign-ins across devices, or dedicated to a single piece of hardware as a device-bound passkey. 
+[Passkeys](https://bitwarden.com/resources/passkeys-faq/) are a replacement for passwords that provide fast, easy, and secure sign-ins to websites and apps. Passkeys are a discoverable FIDO credential that can be synced to allow secure passwordless sign-ins across devices or dedicated to a single piece of hardware as a device-bound passkey. 
 
 Apps and services can request that passkeys created with them are verified with a PIN, password, pattern, or biometric factor when you save or access them.
 
@@ -61,10 +61,10 @@ First, confirm that the **Ask to save and use passkeys** extension setting is tu
 
 ![Log in with passkey](https://bitwarden.com/assets/5KeuUZox5shd0zDMxPHKXn/1aab35dfceed0ed9cdb17b143be9a890/2024-10-29_11-39-33.png)
 
-If you prefer to use an existing passkey stored outside of Bitwarden, select **Use your device or hardware key**. This will close the pop-up window and not enter any passkey from Bitwarden.
+Alternatively, the [inline autofill menu](https://bitwarden.com/help/auto-fill-browser/#inline-autofill-menu/) can also be used to authenticate with passkeys.
 
-> [!TIP] Inline autofill menu for passkeys
-> The [inline autofill menu](https://bitwarden.com/help/auto-fill-browser/#inline-autofill-menu/) can also be used to easily authenticate with passkeys.
+> [!NOTE] Undo use own passkey
+> If you previously selected **Use your device or hardware key**, Bitwarden will not offer to enter or save a passkey. If you clicked this by accident or change your mind, remove the website from [blocked domains](https://bitwarden.com/help/blocking-uris/). The next time you go to that service's login screen, Bitwarden will ask to save your passkey.
 
 ### iOS
 
