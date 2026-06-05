@@ -80,7 +80,7 @@ Then test that the app extension is working correctly:
 
 ### Long-press a text field
 
-By long-pressing any text field, you can autofill data from Bitwarden and long as it's active as the keyboard auto-fill option:
+Set up Bitwarden as your device's keyboard autofill service. This allows you to long-press any text field to autofill data from Bitwarden:
 
 ![Long-press a text field on iOS](https://bitwarden.com/assets/77glhnjH87Z6PKscElWtZy/f9229264859577c0490cf423237f8502/2025-01-22_11-05-33.png)
 
@@ -121,7 +121,7 @@ If a passkey already exists for this service, Bitwarden will allow you to save a
 *Save or overwrite a passkey*
 
 > [!NOTE] One passkey per login
-> Only one passkey can be saved per login item. If a credential is saved in multiple places, for instance as two separate login items in the individual vault and organization vault respectively, a different passkey can be be stored with each login item.
+> Only one passkey can be saved per login item. If a credential is saved in multiple places, such as a login item in an individual vault and another login item in an organization vault, a different passkey can be stored with each login item.
 
 ### Sign in using a passkey stored in Bitwarden
 

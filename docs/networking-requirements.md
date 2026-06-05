@@ -84,7 +84,7 @@ Bitwarden may be dangerous to operate in environments with man-in-the-middle (MI
 
 ## Environmental factors
 
-The following section describes how a self-hosted Bitwarden server can operate in certain environments:
+The following sections describe host environment configurations that will affect a self-hosted deployment:
 
 ### Air-gapped environments
 
@@ -92,3 +92,37 @@ Bitwarden **supports** operating in an air-gapped or offline environment, howeve
 
 - [Linux Offline Deployment Guide](https://bitwarden.com/help/install-and-deploy-offline/)
 - [Windows Offline Deployment Guide](https://bitwarden.com/help/install-and-deploy-offline-windows/)
+
+### Docker firewall backend (nftables)
+
+Bitwarden **supports** Docker-based deployments running with either the `iptables` backend or the **experimental** `nftables` backend. If you run Docker with the experimental `nftables` backend, the following daemon configuration steps are required on the host before deploying Bitwarden:
+
+1. **Enable IP forwarding**. Docker with nftables does not automatically enable IP forwarding, so enable it manually by adding the following lines to `/etc/sysctl.d/99-docker-forward.conf`:
+
+```plain text
+net.ipv4.ip_forward=1
+net.ipv6.conf.all.forwarding=1
+```
+
+Then apply the configuration change using `sudo sysctl --system`.
+2. **Configure the Docker daemon**. Create or edit `/etc/docker/daemon.json` to specify the firewall backend:
+
+```plain text
+{
+ "firewall-backend": "nftables"
+}
+```
+
+Then apply the configuration change by restarting Docker with `sudo systemctl restart docker`.
+3. **Verify the configuration**. Confirm that your changes were correctly applied using `sudo nft list ruleset`. A table of ip docker-bridges or similar Docker-managed chains should be printed to your console. 
+
+You can also check the daemon logs for any backend initialization errors with `sudo journalctl -u docker`.
+
+> [!NOTE] nftables compatability with firewalld
+> **Compatibility with firewalld**. `firewalld` is the default frontend on many Linux distributions and typically uses `nftables` as its backend. Docker and `firewalld` can conflict when both manage rules. If container networking fails after enabling the `nftables` backend, ensure that the `docker` zone has masquerading enabled as this is needed for container internet access:
+> 
+> 
+> ```plain text
+> sudo firewall-cmd --zone=docker --add-masquerade --permanent
+> sudo firewall-cmd --reload
+> ```

@@ -9,7 +9,10 @@ Emergency access allows you to designate and manage trusted emergency contacts, 
 - **View**: When an emergency access request is granted, this user is granted view/read access to all items in your individual vault, including login items' passwords and attachments.
 - **Takeover**: When an emergency access request is granted, this user must create a master password for permanent read/write access to your vault. This will **replace** your previous master password and remove any [two-step login methods](https://bitwarden.com/help/setup-two-step-login/) that were previously set up.
 
-[Embedded content]## Add trusted emergency contacts
+> [!NOTE] No emergency access if autoconfirmation
+> If your organization turned on the [Automatic confirmation policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/), emergency access is not available for your account.
+
+## Add trusted emergency contacts
 
 Only premium users, including members of paid organizations (Families, Teams, or Enterprise) can appoint trusted emergency contacts. Anyone with a free or premium Bitwarden account on the same [Bitwarden server](https://bitwarden.com/help/server-geographies/) can be designated as a trusted emergency contact. There is no limit to the number of trusted emergency contacts you can have.
 

@@ -993,11 +993,11 @@ URL: https://bitwarden.com/help/account-switching/
 ---
 # Log In to Multiple Accounts
 
-Did you know that you can have **up to five** Bitwarden accounts logged-in at the same time with the Bitwarden browser extension, desktop app and mobile app? Using account switching, seamlessly switch between Bitwarden accounts such as personal and work accounts.
+You can be logged in to **up to five** Bitwarden accounts simultaneously in the browser extension, desktop app and mobile app. This allows you to quickly access all of your saved items while storing them separately, such as within personal and work accounts. Once logged in, switch between your Bitwarden accounts seamlessly to access your different vaults.
 
 ### Mobile
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top menu bar and select + **Add Account**.
+To log in to an additional account, select the currently logged-in account from the top menu bar and select + **Add Account**.
 
 ![Account switching on mobile](https://bitwarden.com/assets/56xAZhiS6wZqKktMlFwbVn/9af5d0ce782af44fc48ebfd8057ddc4c/2025-01-21_14-58-15.png)
 
@@ -1027,7 +1027,7 @@ If you're using account switching, your mobile app will default to auto-fill cre
 
 ### Desktop
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
+To log in to an additional account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
 ![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
@@ -1059,7 +1059,7 @@ Once you log in to your second account, you can quickly switch between them from
 
 ### Browser extension
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top menu bar:
+To log in to an additional account, select the currently logged-in account from the top menu bar:
 
 ![Browser extension account switching](https://bitwarden.com/assets/7xbbMZ89zcTHz6ee0cA1MK/8d8972a6b995b3fd7367f248c9c60d69/screenshot_3.png)
 
@@ -1072,6 +1072,9 @@ Once you log in to your second account, you can quickly switch between them from
 ## Auto-fill
 
 If you're using account switching, browser extension will default to auto-fill credentials from the currently active account.
+
+> [!NOTE] Account switching doesn't transfer items
+> Logging in to more than one account does not transfer items between accounts. If you want to move saved items from one Bitwarden account to another, [import your data](https://bitwarden.com/help/import-data/).
 ---
 URL: https://bitwarden.com/help/add-a-trusted-device/
 ---
@@ -3448,7 +3451,7 @@ Then test that the app extension is working correctly:
 
 ### Long-press a text field
 
-By long-pressing any text field, you can autofill data from Bitwarden and long as it's active as the keyboard auto-fill option:
+Set up Bitwarden as your device's keyboard autofill service. This allows you to long-press any text field to autofill data from Bitwarden:
 
 ![Long-press a text field on iOS](https://bitwarden.com/assets/77glhnjH87Z6PKscElWtZy/f9229264859577c0490cf423237f8502/2025-01-22_11-05-33.png)
 
@@ -3489,7 +3492,7 @@ If a passkey already exists for this service, Bitwarden will allow you to save a
 *Save or overwrite a passkey*
 
 > [!NOTE] One passkey per login
-> Only one passkey can be saved per login item. If a credential is saved in multiple places, for instance as two separate login items in the individual vault and organization vault respectively, a different passkey can be be stored with each login item.
+> Only one passkey can be saved per login item. If a credential is saved in multiple places, such as a login item in an individual vault and another login item in an organization vault, a different passkey can be stored with each login item.
 
 ### Sign in using a passkey stored in Bitwarden
 
@@ -9800,7 +9803,7 @@ To centrally configure the Desktop app for deployment, first complete the follow
 1. Install the Desktop app. If you're using Windows, silently install Bitwarden as an administrator using `installer.exe /allusers /S` (see [NSIS documentation](https://nsis.sourceforge.io/Docs/Chapter4.html#silent)).
 2. Navigate to the Desktop app's locally stored settings. This directory is different depending on your OS (e.g. `%AppData%\Bitwarden` on Windows, `~/Library/Application Support/Bitwarden` on macOS). [Find your directory.](https://bitwarden.com/help/data-storage/)
 3. In the directory, open the `data.json` file.
-4. Edit `data.json` to configure the Desktop app as desired. In particular, create the following object to configure the app with your self-hosted Server URL:
+4. Edit `data.json` to configure the Desktop app with your self-hosted server URL:
 
 ```
 "global_environment_environment": {
@@ -9813,7 +9816,7 @@ To centrally configure the Desktop app for deployment, first complete the follow
 
 > [!TIP] EU instead of self-host desktop config
 > Customers using Bitwarden cloud servers may instead set `"region":` to `"US"` or `"EU"` to connect to those servers.
-5. Once configured the way you want it, use your endpoint management solution of choice (like [Jamf](https://www.jamf.com/)) to deploy the pre-configured Desktop app as a template.
+5. Once configured to use the correct server, use your endpoint management solution of choice (like [Jamf](https://www.jamf.com/)) to deploy the pre-configured Desktop app as a template.
 
 > [!NOTE] Copy data.json after configuring in GUI
 > As an alternative to manually configuring the `data.json` file, you can assign `environmentUrls` using the Bitwarden desktop app. Select your desired region using the desktop app GUI, then close the app and[ locate your data.json file](https://bitwarden.com/help/data-storage/#on-your-local-machine/) in order to copy the environment variable information.
@@ -15272,7 +15275,10 @@ Emergency access allows you to designate and manage trusted emergency contacts, 
 - **View**: When an emergency access request is granted, this user is granted view/read access to all items in your individual vault, including login items' passwords and attachments.
 - **Takeover**: When an emergency access request is granted, this user must create a master password for permanent read/write access to your vault. This will **replace** your previous master password and remove any [two-step login methods](https://bitwarden.com/help/setup-two-step-login/) that were previously set up.
 
-[Embedded content]## Add trusted emergency contacts
+> [!NOTE] No emergency access if autoconfirmation
+> If your organization turned on the [Automatic confirmation policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/), emergency access is not available for your account.
+
+## Add trusted emergency contacts
 
 Only premium users, including members of paid organizations (Families, Teams, or Enterprise) can appoint trusted emergency contacts. Anyone with a free or premium Bitwarden account on the same [Bitwarden server](https://bitwarden.com/help/server-geographies/) can be designated as a trusted emergency contact. There is no limit to the number of trusted emergency contacts you can have.
 
@@ -17075,7 +17081,9 @@ URL: https://bitwarden.com/help/folders/
 ---
 # Folders
 
-Folders are structures used to organize your individual vault by gathering together logins, cards, identities, and secure notes. Using folders is a great way to make your vault items easy to find and are listed in alphabetical order in Bitwarden apps. Any vault item can be added to a folder, including [items shared with you from an organization](https://bitwarden.com/help/sharing/).
+Folders are structures used to organize your individual vault by gathering together logins, cards, identities, and secure notes. Using folders is a great way to make your vault items easy to find and are listed in alphabetical order in Bitwarden apps. 
+
+Any vault item can be added to a folder, including [items shared with you from an organization](https://bitwarden.com/help/sharing/). If you're sharing items through an organization, it's important note that folders only organize vault items for you personally; other organization members can setup different folder layouts. Learn more about [how folders differ from collections](https://bitwarden.com/help/about-collections/).
 
 > [!NOTE] Folders deleted items 
 > Items added to a folder will still appear in your vault when **All vaults** is selected from the filter menu, and deleting a folder **will not** delete the items in that folder. Deleting a folder is permanent, and the folder cannot be recovered once deleted.
@@ -26376,7 +26384,7 @@ Bitwarden may be dangerous to operate in environments with man-in-the-middle (MI
 
 ## Environmental factors
 
-The following section describes how a self-hosted Bitwarden server can operate in certain environments:
+The following sections describe host environment configurations that will affect a self-hosted deployment:
 
 ### Air-gapped environments
 
@@ -26384,6 +26392,40 @@ Bitwarden **supports** operating in an air-gapped or offline environment, howeve
 
 - [Linux Offline Deployment Guide](https://bitwarden.com/help/install-and-deploy-offline/)
 - [Windows Offline Deployment Guide](https://bitwarden.com/help/install-and-deploy-offline-windows/)
+
+### Docker firewall backend (nftables)
+
+Bitwarden **supports** Docker-based deployments running with either the `iptables` backend or the **experimental** `nftables` backend. If you run Docker with the experimental `nftables` backend, the following daemon configuration steps are required on the host before deploying Bitwarden:
+
+1. **Enable IP forwarding**. Docker with nftables does not automatically enable IP forwarding, so enable it manually by adding the following lines to `/etc/sysctl.d/99-docker-forward.conf`:
+
+```plain text
+net.ipv4.ip_forward=1
+net.ipv6.conf.all.forwarding=1
+```
+
+Then apply the configuration change using `sudo sysctl --system`.
+2. **Configure the Docker daemon**. Create or edit `/etc/docker/daemon.json` to specify the firewall backend:
+
+```plain text
+{
+ "firewall-backend": "nftables"
+}
+```
+
+Then apply the configuration change by restarting Docker with `sudo systemctl restart docker`.
+3. **Verify the configuration**. Confirm that your changes were correctly applied using `sudo nft list ruleset`. A table of ip docker-bridges or similar Docker-managed chains should be printed to your console. 
+
+You can also check the daemon logs for any backend initialization errors with `sudo journalctl -u docker`.
+
+> [!NOTE] nftables compatability with firewalld
+> **Compatibility with firewalld**. `firewalld` is the default frontend on many Linux distributions and typically uses `nftables` as its backend. Docker and `firewalld` can conflict when both manage rules. If container networking fails after enabling the `nftables` backend, ensure that the `docker` zone has masquerading enabled as this is needed for container internet access:
+> 
+> 
+> ```plain text
+> sudo firewall-cmd --zone=docker --add-masquerade --permanent
+> sudo firewall-cmd --reload
+> ```
 ---
 URL: https://bitwarden.com/help/new-device-verification/
 ---
@@ -41372,16 +41414,12 @@ URL: https://bitwarden.com/help/website-icons/
 ---
 # Data Privacy for Website Icons
 
-Bitwarden does not collect any information when you download icons for website logins stored in your Bitwarden vault.
-
-## Using website icons
-
-When Bitwarden displays a [login item](https://bitwarden.com/help/managing-items/) with a website (see [Using URIs](https://bitwarden.com/help/uri-match-detection/)) associated with it in your vault, it attempts to accompany it with a graphical icon. Website icons help you to easily identify particular logins in your vault with recognizable iconography, usually represented by a logo or brand image of that website.
+When Bitwarden offers to autofill a login item with a [saved URI](https://bitwarden.com/help/uri-match-detection/), it may display an icon representing that website, like their logo or brand image. Website icons help you to easily identify particular logins in your vault with recognizable iconography. Bitwarden does not collect any information when you download icons for website logins stored in your Bitwarden vault.
 
 > [!NOTE] Icons unavailable on android autofil
 > Website icons are not displayed by entries in the auto-fill menu on Android.
 
-### About the icon server
+## About the icon server
 
 The Bitwarden icon server provides the delivery endpoint for website icons. If you are using website icons on a device, Bitwarden will issue requests to `icons.bitwarden.net` for each login in your vault that has a URI that resembles a website (for example, `google.com` or `https://google.com`, but not `google` or `http://localhost`).
 
@@ -41390,7 +41428,7 @@ The icon server is fronted with a CDN that caches the icons on Fastly nodes all 
 > [!NOTE] Icons not cached on self-host
 > If you are self-hosting Bitwarden, icons are* *not cached to a CDN. All requests will always hit your icon container directly.
 
-### Privacy considerations
+## Privacy considerations
 
 Because a request for an icon contains the hostname of the website stored in your vault, it is important to understand that this feature will "leak" otherwise cryptographically protected information to Bitwarden servers and/or CDN endpoints and be visible in your local cache. An example of an icon request looks like the following:
 

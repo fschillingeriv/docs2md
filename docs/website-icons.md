@@ -4,16 +4,12 @@ URL: https://bitwarden.com/help/website-icons/
 
 # Data Privacy for Website Icons
 
-Bitwarden does not collect any information when you download icons for website logins stored in your Bitwarden vault.
-
-## Using website icons
-
-When Bitwarden displays a [login item](https://bitwarden.com/help/managing-items/) with a website (see [Using URIs](https://bitwarden.com/help/uri-match-detection/)) associated with it in your vault, it attempts to accompany it with a graphical icon. Website icons help you to easily identify particular logins in your vault with recognizable iconography, usually represented by a logo or brand image of that website.
+When Bitwarden offers to autofill a login item with a [saved URI](https://bitwarden.com/help/uri-match-detection/), it may display an icon representing that website, like their logo or brand image. Website icons help you to easily identify particular logins in your vault with recognizable iconography. Bitwarden does not collect any information when you download icons for website logins stored in your Bitwarden vault.
 
 > [!NOTE] Icons unavailable on android autofil
 > Website icons are not displayed by entries in the auto-fill menu on Android.
 
-### About the icon server
+## About the icon server
 
 The Bitwarden icon server provides the delivery endpoint for website icons. If you are using website icons on a device, Bitwarden will issue requests to `icons.bitwarden.net` for each login in your vault that has a URI that resembles a website (for example, `google.com` or `https://google.com`, but not `google` or `http://localhost`).
 
@@ -22,7 +18,7 @@ The icon server is fronted with a CDN that caches the icons on Fastly nodes all 
 > [!NOTE] Icons not cached on self-host
 > If you are self-hosting Bitwarden, icons are* *not cached to a CDN. All requests will always hit your icon container directly.
 
-### Privacy considerations
+## Privacy considerations
 
 Because a request for an icon contains the hostname of the website stored in your vault, it is important to understand that this feature will "leak" otherwise cryptographically protected information to Bitwarden servers and/or CDN endpoints and be visible in your local cache. An example of an icon request looks like the following:
 

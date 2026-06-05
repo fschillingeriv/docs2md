@@ -4,11 +4,11 @@ URL: https://bitwarden.com/help/account-switching/
 
 # Log In to Multiple Accounts
 
-Did you know that you can have **up to five** Bitwarden accounts logged-in at the same time with the Bitwarden browser extension, desktop app and mobile app? Using account switching, seamlessly switch between Bitwarden accounts such as personal and work accounts.
+You can be logged in to **up to five** Bitwarden accounts simultaneously in the browser extension, desktop app and mobile app. This allows you to quickly access all of your saved items while storing them separately, such as within personal and work accounts. Once logged in, switch between your Bitwarden accounts seamlessly to access your different vaults.
 
 ### Mobile
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top menu bar and select + **Add Account**.
+To log in to an additional account, select the currently logged-in account from the top menu bar and select + **Add Account**.
 
 ![Account switching on mobile](https://bitwarden.com/assets/56xAZhiS6wZqKktMlFwbVn/9af5d0ce782af44fc48ebfd8057ddc4c/2025-01-21_14-58-15.png)
 
@@ -38,7 +38,7 @@ If you're using account switching, your mobile app will default to auto-fill cre
 
 ### Desktop
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
+To log in to an additional account, select the currently logged-in account from the top-right of the desktop app and select + **Add Account:**
 
 ![Switch accounts on desktop](https://bitwarden.com/assets/7fpUmakpNIByzoWQa1cU8L/bd9e35756805bba8bd35bc43c7630aaf/2026-04-23_09-27-28.png)
 *Switch accounts on desktop*
@@ -70,7 +70,7 @@ Once you log in to your second account, you can quickly switch between them from
 
 ### Browser extension
 
-To log in to a second (or third, or fourth, or fifth) account, select the currently logged-in account from the top menu bar:
+To log in to an additional account, select the currently logged-in account from the top menu bar:
 
 ![Browser extension account switching](https://bitwarden.com/assets/7xbbMZ89zcTHz6ee0cA1MK/8d8972a6b995b3fd7367f248c9c60d69/screenshot_3.png)
 
@@ -83,3 +83,6 @@ Once you log in to your second account, you can quickly switch between them from
 ## Auto-fill
 
 If you're using account switching, browser extension will default to auto-fill credentials from the currently active account.
+
+> [!NOTE] Account switching doesn't transfer items
+> Logging in to more than one account does not transfer items between accounts. If you want to move saved items from one Bitwarden account to another, [import your data](https://bitwarden.com/help/import-data/).

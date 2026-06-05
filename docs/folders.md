@@ -4,7 +4,9 @@ URL: https://bitwarden.com/help/folders/
 
 # Folders
 
-Folders are structures used to organize your individual vault by gathering together logins, cards, identities, and secure notes. Using folders is a great way to make your vault items easy to find and are listed in alphabetical order in Bitwarden apps. Any vault item can be added to a folder, including [items shared with you from an organization](https://bitwarden.com/help/sharing/).
+Folders are structures used to organize your individual vault by gathering together logins, cards, identities, and secure notes. Using folders is a great way to make your vault items easy to find and are listed in alphabetical order in Bitwarden apps. 
+
+Any vault item can be added to a folder, including [items shared with you from an organization](https://bitwarden.com/help/sharing/). If you're sharing items through an organization, it's important note that folders only organize vault items for you personally; other organization members can setup different folder layouts. Learn more about [how folders differ from collections](https://bitwarden.com/help/about-collections/).
 
 > [!NOTE] Folders deleted items 
 > Items added to a folder will still appear in your vault when **All vaults** is selected from the filter menu, and deleting a folder **will not** delete the items in that folder. Deleting a folder is permanent, and the folder cannot be recovered once deleted.

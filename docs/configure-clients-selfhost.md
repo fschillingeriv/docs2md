@@ -333,7 +333,7 @@ To centrally configure the Desktop app for deployment, first complete the follow
 1. Install the Desktop app. If you're using Windows, silently install Bitwarden as an administrator using `installer.exe /allusers /S` (see [NSIS documentation](https://nsis.sourceforge.io/Docs/Chapter4.html#silent)).
 2. Navigate to the Desktop app's locally stored settings. This directory is different depending on your OS (e.g. `%AppData%\Bitwarden` on Windows, `~/Library/Application Support/Bitwarden` on macOS). [Find your directory.](https://bitwarden.com/help/data-storage/)
 3. In the directory, open the `data.json` file.
-4. Edit `data.json` to configure the Desktop app as desired. In particular, create the following object to configure the app with your self-hosted Server URL:
+4. Edit `data.json` to configure the Desktop app with your self-hosted server URL:
 
 ```
 "global_environment_environment": {
@@ -346,7 +346,7 @@ To centrally configure the Desktop app for deployment, first complete the follow
 
 > [!TIP] EU instead of self-host desktop config
 > Customers using Bitwarden cloud servers may instead set `"region":` to `"US"` or `"EU"` to connect to those servers.
-5. Once configured the way you want it, use your endpoint management solution of choice (like [Jamf](https://www.jamf.com/)) to deploy the pre-configured Desktop app as a template.
+5. Once configured to use the correct server, use your endpoint management solution of choice (like [Jamf](https://www.jamf.com/)) to deploy the pre-configured Desktop app as a template.
 
 > [!NOTE] Copy data.json after configuring in GUI
 > As an alternative to manually configuring the `data.json` file, you can assign `environmentUrls` using the Bitwarden desktop app. Select your desired region using the desktop app GUI, then close the app and[ locate your data.json file](https://bitwarden.com/help/data-storage/#on-your-local-machine/) in order to copy the environment variable information.
