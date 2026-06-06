@@ -158,7 +158,7 @@ To create a new account using the inline autofill menu:
 
 1. Enter a username in the login form's username field.
 2. Select the password field. The inline autofill menu will display.
-3. Select **Fill generated password** if you're satisfied with the generated password**.**You can also use the [refresh-tab] Generate button to generate a new password until you're satisfied with it:
+3. Select **Fill generated password** if you're satisfied with the generated password**.**You can also use the [refresh] Generate button to generate a new password until you're satisfied with it:
 
 ![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/ce116e8ff337f90fbbd57b52aa15fdcd/2024-11-05_10-07-08.png)
 *Fill generated password*
