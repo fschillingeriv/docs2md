@@ -156,9 +156,6 @@ Using the [Master password reset policy](https://bitwarden.com/help/policies/#ma
 
 Resetting a user's master password logs the user out of all active Bitwarden sessions and resets their login credentials to the ones specified by the administrator, meaning that administrator (and only that administrator) will have the keys to the user's vault data, including items in the individual vault. This vault takeover tactic is commonly used by organizations to ensure that employees don't retain access to individual vault items that may be work-related and can be used to facilitate audits of every credential an employee may have been using.
 
-> [!NOTE] 2FA Admin takeover
-> **Admin password reset does not bypass two-step login**. In many cases, we recommend using SSO as some IdPs will allow you to configure 2FA and 2FA bypass policies for your users.
-
 #### Removing the individual vault
 
 If your organization requires real-time control of all vault items, you can use the [Centralize organization ownership](https://bitwarden.com/help/policies/#centralize-organization-ownership/) policy to require users to save all vault items to the organization. This will circumvent the need to takeover and audit a user's account during succession, as it'll be completely empty of data once removed from the organization.

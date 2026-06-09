@@ -17478,7 +17478,7 @@ On the Add/Edit Item screen of browser extensions and desktop apps, you can sele
 
 #### Forwarded email alias
 
-Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay.
+Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay. Many external aliasing services offer free plans, however some may require a subscription.
 
 > [!NOTE] Why use Forwarded Email Alias?
 > **Why use forwarded email alias?**
@@ -27196,9 +27196,6 @@ When you claim a domain, any organization member accounts that have email addres
 Using the [Master password reset policy](https://bitwarden.com/help/policies/#master-password-reset/), owners and admins in your organization can [reset a user's master password](https://bitwarden.com/help/account-recovery/) during succession.
 
 Resetting a user's master password logs the user out of all active Bitwarden sessions and resets their login credentials to the ones specified by the administrator, meaning that administrator (and only that administrator) will have the keys to the user's vault data, including items in the individual vault. This vault takeover tactic is commonly used by organizations to ensure that employees don't retain access to individual vault items that may be work-related and can be used to facilitate audits of every credential an employee may have been using.
-
-> [!NOTE] 2FA Admin takeover
-> **Admin password reset does not bypass two-step login**. In many cases, we recommend using SSO as some IdPs will allow you to configure 2FA and 2FA bypass policies for your users.
 
 #### Removing the individual vault
 

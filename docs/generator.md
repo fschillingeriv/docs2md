@@ -198,7 +198,7 @@ On the Add/Edit Item screen of browser extensions and desktop apps, you can sele
 
 #### Forwarded email alias
 
-Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay.
+Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay. Many external aliasing services offer free plans, however some may require a subscription.
 
 > [!NOTE] Why use Forwarded Email Alias?
 > **Why use forwarded email alias?**
