@@ -11,7 +11,7 @@ To keep your account safe and secure, Bitwarden requires additional verification
 
 Most users will not experience this prompt unless they are frequently logging into new devices. This verification is only needed for new devices or after clearing browser cookies.
 
-If you regularly access your email, retrieving the verification code should be straightforward. If you prefer not to rely on your Bitwarden account email for verification, you can [set up two-step login](https://bitwarden.com/help/setup-two-step-login/) through an [Authenticator app](https://bitwarden.com/help/setup-two-step-login-authenticator/), a [hardware key](https://bitwarden.com/help/setup-two-step-login-yubikey/), or two-step login via a [different email](https://bitwarden.com/help/setup-two-step-login-email/).
+If you regularly access your email, retrieving the verification code should be straightforward. If you prefer not to rely on your Bitwarden account email for verification, you can [set up two-step login](https://bitwarden.com/help/setup-two-step-login/) through an [Authenticator app](https://bitwarden.com/help/setup-two-step-login-authenticator/), a [passkey](https://bitwarden.com/help/setup-two-step-login-fido/), a [YubiKey](https://bitwarden.com/help/setup-two-step-login-yubikey/), or set up two-step login via a [different email](https://bitwarden.com/help/setup-two-step-login-email/).
 
 ## FAQs
 

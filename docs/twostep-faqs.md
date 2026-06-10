@@ -12,7 +12,7 @@ This article contains frequently asked questions (FAQs) regarding two-step login
 
 ### Q: Can I require my organization's users to use two-step login?
 
-**A:** You can require your organization's users to use two-step login by enabling the [two-step login policy](https://bitwarden.com/help/policies/#two-step-login/). Additionally, you can setup [organization-wide Duo 2FA](https://bitwarden.com/help/setup-two-step-login-duo/) to ensure that all of your users have a secure two-step login method at their disposal.
+**A:** You can require your organization's users to use two-step login by enabling the [two-step login policy](https://bitwarden.com/help/policies/#require-two-step-login/). Additionally, you can setup [organization-wide Duo 2FA](https://bitwarden.com/help/setup-two-step-login-duo/) to ensure that all of your users have a secure two-step login method at their disposal.
 
 ### Q: Is FIDO U2F or FIDO2 WebAuthn supported on my iOS or Android app?
 
