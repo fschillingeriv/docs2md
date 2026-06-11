@@ -41,6 +41,22 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.6.0
+
+(The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Directory Connector 2026.6.0, Web 2026.6.0 and Mobile 2026.5.1)
+
+#### Password Manager
+
+- ⭐ **Devices list now available on Android**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on the Android.
+
+#### Directory Connector
+
+The newest version of Directory Connector includes modernizations and infrastructure improvements that will affect installing or updating the app:
+
+- Directory Connector for macOS is **now shipped as a native ARM64 binary**, replacing the Rosetta build of the app. On macOS, Directory Connector is now only supported on Apple Silicon.
+- If you use both the Directory Connector Desktop App and CLI, you must update both clients before using the newest version of either.
+- Keytar has been replaced with OS-specific native modules. As a result, a different file is packaged with the `bwdc` CLI executable. The [setup process](https://bitwarden.com/help/directory-sync-cli/) remains the same despite the new filename.
+
 ## 2026.5.0
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.5.0, Browser Extension 2026.5.0, Desktop 2026.5.0, Mobile 2026.5.0, and CLI 2026.5.0)*
