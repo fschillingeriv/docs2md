@@ -6,14 +6,12 @@ URL: https://bitwarden.com/help/phishing-blocked/
 
 Bitwarden phishing blocker detects known phishing websites and redirects Bitwarden users to a secure notification page, helping to ensure that credentials are not mistakenly entered or compromised. Phishing blocker identifies phishing websites using the regularly updated, open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
 
-Phishing blocker is available for Bitwarden individual Premium and Families plans on browser clients `2026.1.1` and newer.
-
 > [!NOTE] Phishing blocker unavailable for Safari
 > At this time, phishing blocker is not available on the Bitwarden browser extension for Safari.
 
-## Phishing blocker
+## Use phishing blocker
 
-Phishing blocker operates using the browser extension. When phishing blocker identifies a known phishing website: 
+By default, phishing blocker is enabled for individual Premium and Families users. To use phishing blocker, you must be logged in to the Bitwarden browser extension. When phishing blocker identifies a known phishing website: 
 
 1. Instead of loading a known phishing website, Bitwarden will redirect the user to a warning page, indicating that the site has been blocked.
 
@@ -26,9 +24,11 @@ Phishing blocker operates using the browser extension. When phishing blocker ide
 > [!NOTE] Continue to phishing website warning
 > Selecting **Continue** will proceed to the website that was identified for previous phishing activity. This action could result in your credentials being compromised. Caution is recommended if selecting this option.
 
-## Toggle phishing blocker
+If you selected **Continue**and believe that the website is incorrectly considered phishing, [submit a false positive report to Phishing.Database](https://github.com/Phishing-Database/Phishing.Database/issues/new?template=00-false-positive.yml).
 
-By default, phishing blocker will be enabled for individual premium and families users. You may toggle the feature **on**or **off** in the browser extension by navigating to **Settings** → **Account security** and selecting the toggle:
+## Turn phishing blocker on or off
+
+You can toggle phishing blocker **on**or **off** in the browser extension by navigating to **Settings** → **Account security** and selecting the toggle:
 
 ![Toggle phishing blocker](https://bitwarden.com/assets/4jeEBHYQeUpsZNOoKKUeW1/d19fe64cfed2edba32983f45c5434490/phishing_setting.png)
 *Toggle phishing blocker*
