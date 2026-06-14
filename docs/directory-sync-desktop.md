@@ -6,8 +6,7 @@ URL: https://bitwarden.com/help/directory-sync-desktop/
 
 The Directory Connector desktop app is a standalone desktop application that can be used to sync users, groups, and group associations from a selection of directory services.
 
-![Directory Connector desktop app ](https://bitwarden.com/assets/7r6eylncijFasEUrKXe2Hk/089d2dc5efdb12a551e17de9f89a86db/2026-06-03_13-45-56.png)
-*Directory Connector desktop app *
+![Directory Connector Desktop App ](https://bitwarden.com/assets/7r6eylncijFasEUrKXe2Hk/b6eec60c8a6452a300eeba5272c46ea4/app.png)
 
 Directory Connector is also available as a [CLI tool](https://bitwarden.com/help/directory-sync-cli/). The desktop app and CLI [share a database and configurations](https://bitwarden.com/help/directory-sync-shared/), so **simultaneous** use on a single machine is not recommended. The recommended path is to complete configuration and testing using the [desktop app](https://bitwarden.com/help/directory-sync-desktop/), and subsequently using the [CLI](https://bitwarden.com/help/directory-sync-cli/) to [schedule automatic syncing](https://bitwarden.com/help/schedule-directory-sync/) to your production organization.
 

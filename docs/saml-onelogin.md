@@ -11,19 +11,17 @@ Configuration involves working simultaneously within the Bitwarden web app and t
 > [!NOTE]
 > **Already an SSO expert?** Skip the instructions in this article and download screenshots of sample configurations to compare against your own.
 > 
-> ⬇️ [Download Sample](https://bitwarden.com/assets/mQMTlMcvpyBPzgAkgqDvg/420fde23d3edf526d97f22bea8a5ed80/OneLogin.zip)
+> ⬇️ [Download Sample](https://bitwarden.com/assets/mQMTlMcvpyBPzgAkgqDvg/ace51cc7a46379048140042282e6b24f/saml-onelogin-sample.zip)
 
 ## Open SSO in the web app
 
 Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
 
 Open your organization's **Settings** → **Single sign-on** screen:
 
 ![SAML 2.0 configuration ](https://bitwarden.com/assets/20720mRAluo6crSdTiYJrn/1175889d7f6ab42fe7614f34cdd1dcdd/2024-12-04_09-41-15.png)
-*SAML 2.0 configuration *
 
 If you haven't already, create a unique **SSO identifier**for your organization and select **SAML**from the the **Type**dropdown. Keep this screen open for easy reference.
 
@@ -36,13 +34,11 @@ You can turn off the **Set a unique SP entity ID**option at this stage if you wi
 
 In the OneLogin Portal, navigate to the the **Applications** screen and select the **Add App** button:
 
-![Add an Application](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/b6caa5f68ed17b43cd2c7247ee00bacf/OneLogin1.png)
-*Add an Application*
+![Add an Application ](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/3bf9fa6b57a45b357a9d2bc012d8a6af/ol-addapp.png)
 
 In the search bar, type `saml custom connector` and select the **SAML Custom Connector (Advanced)** app:
 
 ![SAML Test Connector App ](https://bitwarden.com/assets/hTfoABj2iirzB1X7UT69x/520891ab503ad773178fef291d49e198/2026-03-02_09-22-12.png)
-*SAML Test Connector App *
 
 Give your application a Bitwarden-specific **Display Name** and select the **Save** button.
 
@@ -50,8 +46,7 @@ Give your application a Bitwarden-specific **Display Name** and select the **Sav
 
 Select **Configuration** from the left-hand navigation and configure the following information, some of which you will need to retrieve from the Single Sign-On screen:
 
-![App Configuration](https://bitwarden.com/assets/12yP5ohPGhqcCZZdpwVDQd/e31bd5ade4c3677b8f5426f5fef6fb3e/onelogin2.png)
-*App Configuration*
+![App Configuration](https://bitwarden.com/assets/12yP5ohPGhqcCZZdpwVDQd/7fc5661e4fb4954ad00246deae2fd9b1/ol-appconfig.png)
 
 | **Application Setting** | **Description** |
 |------|------|
@@ -83,8 +78,7 @@ Select **SSO** from the left-hand navigation and complete the following:
 
 1. Select the **View Details** link under your X.509 Certificate:
 
-![View your Cert ](https://bitwarden.com/assets/7emKbivWUWKO1ufVC9Rkgu/e023c4c3fb7195afd93d6515f86d8cbf/onelogin3.png)
-*View your Cert *
+![View your Cert ](https://bitwarden.com/assets/7emKbivWUWKO1ufVC9Rkgu/0039e55d93ba69fadc8c39e0be3d8a07/Screen_Shot_2022-12-29_at_9.42.14_AM.png)
 
 On the Certificate screen, download or copy your X.509 PEM Certificate, as you will need to [use it later](https://bitwarden.com/help/saml-onelogin/#identity-provider-configuration/). Once copied, return to the main SSO screen.
 2. Set your **SAML Signature Algorithm**.
@@ -94,8 +88,7 @@ On the Certificate screen, download or copy your X.509 PEM Certificate, as you w
 
 Select **Access** from the left-hand navigation. In the **Roles** section, assign application access to all the roles you would like to be able to use Bitwarden. Most implementations create a Bitwarden-specific role and instead opt to assign based on a catch-all (for example, **Default**) or based on pre-existing roles.
 
-![Role Assignment](https://bitwarden.com/assets/6D4j0WofpBcvSCMB0rN4Db/5303beacbc3ce331dfddc6dc6b19d6ea/ol-roles.png)
-*Role Assignment*
+![Role Assignment ](https://bitwarden.com/assets/6D4j0WofpBcvSCMB0rN4Db/5303beacbc3ce331dfddc6dc6b19d6ea/ol-roles.png)
 
 ## Back to the web app
 
@@ -149,14 +142,10 @@ When you are done with the identity provider configuration, **Save** your work.
 Once your configuration is complete, test it by navigating to [https://vault.bitwarden.com](https://vault.bitwarden.com), entering your email address and selecting the **Use single sign-on** button:
 
 ![Log in options screen](https://bitwarden.com/assets/3BdlHeogd42LEoG06qROyQ/c68021df4bf45d72e9d37b1fbf5a6040/login.png)
-*Log in options screen*
 
 Enter the [configured organization identifier](https://bitwarden.com/help/saml-onelogin/#/) and select **Log In**. If your implementation is successfully configured, you will be redirected to the OneLogin login screen:
 
-![OneLogin Login](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
-
-![OneLogin Login](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
-*OneLogin Login*
+![OneLogin Login ](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
 
 After you authenticate with your OneLogin credentials, enter your Bitwarden master password to decrypt your vault!
 

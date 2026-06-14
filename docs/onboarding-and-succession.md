@@ -102,7 +102,7 @@ Bitwarden takes an enterprise-friendly approach to sharing at scale. Members can
 
 At Bitwarden, we see sharing of credentials as a vital aspect to getting work done efficiently and securely. We also recognize that once a credential is shared, it is *technically* possible for the recipient to keep it. For that reason, secure onboarding using appropriate [role-based access controls](https://bitwarden.com/help/onboarding-and-succession/#comprehensive-role--based-access-controls/) and [implementing policies](https://bitwarden.com/help/onboarding-and-succession/#enterprise-policies/) plays an important role in facilitating secure succession.
 
-There are a variety of tools provided by Bitwarden for tailoring your workflow and exercising more control over succession. The following sections will describe a [basic succession workflow](https://bitwarden.com/help/onboarding-and-succession/#basic-deprovisioning/), which uses none of these tools, and some [advanced succession tactics](https://bitwarden.com/help/onboarding-and-succession/#advanced-deprovisioning/) frequently used by organizations.
+There are a variety of tools provided by Bitwarden for tailoring your workflow and exercising more control over succession. The following sections will describe a [basic succession workflow](https://bitwarden.com/help/onboarding-and-succession/#basic-deprovisioning/), which uses none of these tools, and some [advanced succession tactics](https://bitwarden.com/help/onboarding-and-succession/#advanced-deprovisioning/) frequently used by organizations:
 
 ### Basic deprovisioning
 
@@ -152,12 +152,9 @@ When you claim a domain, any organization member accounts that have email addres
 
 #### Administrative take-over
 
-With the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/), owners and admins can reset [enrolled members'](https://bitwarden.com/help/account-recovery-enrollment/) master password or two-step login methods. This immediately ends all of the member's active sessions and gives the owner or admin exclusive access to the member's vault, including individual vault items.
+Using the [Master password reset policy](https://bitwarden.com/help/policies/#master-password-reset/), owners and admins in your organization can [reset a user's master password](https://bitwarden.com/help/account-recovery/) during succession.
 
-> [!NOTE] Account recovery doesn't bypass SSO
-> Account recovery only affects credentials configured within Bitwarden. It does not bypass SSO or any two-factor authentication configured with your IdP.
-
-Organizations commonly use this account takeover method to prevent employees from retaining access to work-related vault items or to audit credentials they may have used.
+Resetting a user's master password logs the user out of all active Bitwarden sessions and resets their login credentials to the ones specified by the administrator, meaning that administrator (and only that administrator) will have the keys to the user's vault data, including items in the individual vault. This vault takeover tactic is commonly used by organizations to ensure that employees don't retain access to individual vault items that may be work-related and can be used to facilitate audits of every credential an employee may have been using.
 
 #### Removing the individual vault
 

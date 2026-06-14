@@ -26,7 +26,7 @@ Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM 
 
 In the OneLogin Portal, navigate to the the **Applications** screen and select the **Add App** button:
 
-![Add an Application](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/b6caa5f68ed17b43cd2c7247ee00bacf/OneLogin1.png)
+![Add an Application ](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/3bf9fa6b57a45b357a9d2bc012d8a6af/ol-addapp.png)
 
 In the search bar, type `SCIM` and select the **SCIM Provisioner with SAML (SCIM v2 Enterprise)** app:
 

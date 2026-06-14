@@ -74,7 +74,7 @@ When importing this file, select **Bitwarden (csv)** as your file format.
 
 ### Minimum required values
 
-You may not have data for all the values shown in the above formats, however most are optional. In order for the Bitwarden `.csv` importer to function properly, it's most important that your header row match the format documented in this article:
+You may not have data for all the values shown in the above formats, however most are optional. In order for the Bitwarden `.csv` importer to function properly, you are only required to have the following values for any given object:
 
 ```
 folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp

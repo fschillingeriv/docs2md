@@ -25,8 +25,7 @@ To export your data from Safari:
 1. Select **File** → **Export browsing data to file** from the macOS menu bar, choose passwords, and select **Download**:
 
 ![Export from Safari](https://bitwarden.com/assets/3j4W80s3G7wqFtVrbzKMO4/36308c2c647912bf204739f2bc5f80f2/2024-12-30_12-58-55.png)
-2. Save the `.zip` export to any location and use Touch ID or your macOS password to complete the export.
-3. When you're ready, unzup the `.zip` to obtain your `Passwords.csv` file for import into Bitwarden.
+2. Save your export to any location and use Touch ID or your macOS password to complete the export.
 
 ## From an iPhone
 
