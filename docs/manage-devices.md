@@ -14,6 +14,7 @@ To get to the **Devices**list:
 - In the web app, navigate to **Settings** → **Security** → **Devices**.
 - In browser extensions, navigate to **Settings** → **Account security** → **Devices**.
 - In desktop apps, use the menu bar to navigate to **Account** → **Devices**.
+- In the Android mobile app, navigate to **Account Security** → **Devices**.
 
 In the **Devices**list, you'll see one row per device that contains the following:
 

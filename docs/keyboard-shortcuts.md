@@ -77,7 +77,6 @@ Use the following keyboard shortcuts to navigate the Bitwarden desktop app with 
 | Zoom out. | `Ctrl/Cmd` + `-` |
 | Reset the zoom level. | `Ctrl/Cmd` + `0` |
 | Enter full-screen mode. | Windows and Linux: `F11` Mac: `Fn` + `F` |
-| Open developer mode. | Windows and Linux: `F12` |
 
 ### Control window
 

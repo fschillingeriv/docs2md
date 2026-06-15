@@ -148,12 +148,6 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
 
-### Phishing blocker events
-
-- User attempted to access known phishing site (`2400`)
-- User exited phishing warning page (`2401`)
-- User bypassed phishing warning page (`2402`)
-
 ### Secrets Manager events
 
 Secrets Manager events are available both from the **Reporting** tab of your organization vault and from the [machine account Event logs page](https://bitwarden.com/help/service-accounts/#service-account-events/). Secrets Manager events can be reviewed by Admins, Owners, and individuals with the appropriate custom role to view, regardless of individual access to Secrets Manager. The following Secrets Manager events are captured:

@@ -18,6 +18,12 @@ You can subscribe to email notifications for self-hosted server releases by navi
 > [!NOTE]
 > We highly recommend backing up your data before updating your self-hosted instance. For more information, see [Backup your Hosted Data](https://bitwarden.com/help/backup-on-premise/).
 
+## 
+
+### Update Docker
+
+### Update standard deployment
+
 If you're running a standard installation, update your Bitwarden instance using the same Bash (Linux or macOS) or PowerShell (Windows) script (`bitwarden.sh`) used to install Bitwarden. Run the following sequence of commands:
 
 🐧 🍎 Bash
@@ -39,3 +45,23 @@ If you're running a standard installation, update your Bitwarden instance using 
 If you're running a [manually-installed](https://bitwarden.com/help/install-on-premise-manual/#update-your-server/) or an [offline Linux](https://bitwarden.com/help/install-and-deploy-offline/#update-your-server/) or [offline Windows](https://bitwarden.com/help/install-and-deploy-offline-windows/#update-your-server/) installation, follow the procedures in the linked articles.
 
 Your Bitwarden installation should now be fully up to date and running.
+
+### Update Helm
+
+If you are running a Helm installation, use the following steps to update your deployment:
+
+1. Before updating your Helm deployment, pull the latest Bitwarden Helm chart:
+
+```bash
+helm repo update
+```
+2. Check for changes in the latest version of the chart. Perform a diff between the `new-defaults.yaml` and your `my-values.yaml`. Copy-over any updates to your `my-values.yaml` before proceeding.
+
+```bash
+helm show values bitwarden/self-host --version <new-version-number> > new-defaults.yaml
+```
+3. Next, update your Bitwarden installation using your `my-values.yaml` file:
+
+```bash
+helm upgrade bitwarden bitwarden/self-host --namespace bitwarden --values my-values.yaml
+```

@@ -9261,7 +9261,7 @@ When importing this file, select **Bitwarden (csv)** as your file format.
 
 ### Minimum required values
 
-You may not have data for all the values shown in the above formats, however most are optional. In order for the Bitwarden `.csv` importer to function properly, you are only required to have the following values for any given object:
+You may not have data for all the values shown in the above formats, however most are optional. In order for the Bitwarden `.csv` importer to function properly, it's most important that your header row match the format documented in this article:
 
 ```
 folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
@@ -14480,9 +14480,9 @@ To get started using the Bitwarden Directory Connector CLI:
 1. Download the CLI from one of the following links:
 
  - 🪟 [Windows CLI](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip)
- - 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip)
+ - 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip) (ARM64-only)
  - 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip)
-2. Extract the `.zip` and move the contents (`bwdc` and `keytar.node`) to `/usr/local/bin` or another directory in your `$PATH`. Please note, `keytar.node` **must** be in the same directory as the primary `bwdc` executable.
+2. Extract the `.zip` and move the contents to `/usr/local/bin` or another directory in your `$PATH`. The `bwdc` executable and the `.node` (`dc_native.win32-x64-msvc.node`, `dc_native.darwin-arm64.node`, or `dc_native.linux-x64-gnu.node`) file **must** be put in the same directory.
 
 **Linux only:** If not already installed, install `libsecret` with your package manager of choice. Note that the package is titled `libsecret-1-0` for Ubuntu and Debian specifically, users should find the equivalent title for their particular distribution:
 
@@ -14732,7 +14732,8 @@ URL: https://bitwarden.com/help/directory-sync-desktop/
 
 The Directory Connector desktop app is a standalone desktop application that can be used to sync users, groups, and group associations from a selection of directory services.
 
-![Directory Connector Desktop App ](https://bitwarden.com/assets/7r6eylncijFasEUrKXe2Hk/b6eec60c8a6452a300eeba5272c46ea4/app.png)
+![Directory Connector desktop app ](https://bitwarden.com/assets/7r6eylncijFasEUrKXe2Hk/089d2dc5efdb12a551e17de9f89a86db/2026-06-03_13-45-56.png)
+*Directory Connector desktop app *
 
 Directory Connector is also available as a [CLI tool](https://bitwarden.com/help/directory-sync-cli/). The desktop app and CLI [share a database and configurations](https://bitwarden.com/help/directory-sync-shared/), so **simultaneous** use on a single machine is not recommended. The recommended path is to complete configuration and testing using the [desktop app](https://bitwarden.com/help/directory-sync-desktop/), and subsequently using the [CLI](https://bitwarden.com/help/directory-sync-cli/) to [schedule automatic syncing](https://bitwarden.com/help/schedule-directory-sync/) to your production organization.
 
@@ -14872,16 +14873,47 @@ URL: https://bitwarden.com/help/directory-sync/
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
-The Bitwarden Directory Connector app automatically provisions users, groups, and group associations in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
+The Bitwarden Directory Connector app:
 
-Directory Connector can be configured to remove users from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization. 
+- **Automatically provisions users, groups, and group associations** in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
+- **Can be configured to remove users** from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization.
+- **Can be run on-demand or automatically** on a configured interval.
+
+## Applications
+
+Directory Connector is available as a cross-platform [desktop app](https://bitwarden.com/help/directory-sync-desktop/) and as a [command line interface (CLI)](https://bitwarden.com/help/directory-sync-cli/). The desktop app and CLI [share a database and configurations](https://bitwarden.com/help/directory-sync-shared/), so **simultaneous** use on a single machine is not recommended. 
+
+The recommended path is to complete configuration and testing using the [desktop app](https://bitwarden.com/help/directory-sync-desktop/), and subsequently using the [CLI](https://bitwarden.com/help/directory-sync-cli/) to [schedule automatic syncing](https://bitwarden.com/help/schedule-directory-sync/) to your production organization.
+
+Directory Connector can be **installed on any desktop device that can access the source directory**, including as an agent on the server that hosts your directory or on an administrator's workstation. 
 
 > [!NOTE] Directory connector teams and enterprises
 > To use Directory Connector, you must have access to your [organization API key](https://bitwarden.com/help/public-api/#authentication/) which can only be retrieved by an [organization owner](https://bitwarden.com/help/user-types-access-control/) and securely shared using [Bitwarden Send](https://bitwarden.com/help/about-send/).
 
-![Directory Connector Diagram](https://bitwarden.com/assets/6RFsU5sJGDLMPawg64sBqM/85c9e9f6e7758944d76c8ecb79ca4af9/Marketing_Diagram_2024__1_.png)
+### Download
 
-A Directory Connector sync operation can be run on-demand or automatically on a configured interval. Directory Connector applications can be installed as an agent on the server that hosts your directory, an administrator's workstation, or any other desktop device that can access the source directory.
+Download Directory Connector now:
+
+### Desktop app
+
+Download the latest version of the Directory Connector desktop app from [GitHub](https://github.com/bitwarden/directory-connector/releases) or using one of the following links:
+
+- 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows)
+- 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable)
+- 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos)
+- 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux)
+
+### CLI
+
+Download the latest version of the Directory Connector CLI from [GitHub](https://github.com/bitwarden/directory-connector/releases) or using one of the following links:
+
+- 🪟 [Windows CLI (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip)
+- 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip) (ARM64-only)
+- 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip)
+
+As with everything at Bitwarden, Directory Connector is open source and hosted on GitHub at [github.com/bitwarden/directory-connector](https://github.com/bitwarden/directory-connector).
+
+## Source directories
 
 Directory Connector supports sync from the following sources:
 
@@ -14892,36 +14924,21 @@ Directory Connector supports sync from the following sources:
 - [Okta](https://bitwarden.com/help/okta-directory/)
 - [OneLogin](https://bitwarden.com/help/onelogin-directory/)
 
-## Directory Connector applications
+### Changing email addresses 
 
-Directory Connector is available as a cross-platform [desktop app](https://bitwarden.com/help/directory-sync-desktop/) and as a [command line interface (CLI)](https://bitwarden.com/help/directory-sync-cli/). The desktop app and CLI [share a database and configurations](https://bitwarden.com/help/directory-sync-shared/), so **simultaneous** use on a single machine is not recommended. The recommended path is to complete configuration and testing using the [desktop app](https://bitwarden.com/help/directory-sync-desktop/), and subsequently using the [CLI](https://bitwarden.com/help/directory-sync-cli/) to [schedule automatic syncing](https://bitwarden.com/help/schedule-directory-sync/) to your production organization.
+> [!NOTE] Who can change email addresses in organizations.
+> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
+> 
+> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
 
-![Directory Connector Desktop App ](https://bitwarden.com/assets/7r6eylncijFasEUrKXe2Hk/b6eec60c8a6452a300eeba5272c46ea4/app.png)
+Members provisioned using Directory Connector are able to change their account email address in Bitwarden and in the source directory, however in order to do so:
 
-### Download Directory Connector
+1. First change the email address in Bitwarden by navigating to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
+2. Once the email has been changed in Bitwarden, an administrator can change the user value on the directory.
+3. Re-sync the directory to implement the changes.
 
-Use the following links to download Directory Connector:
-
-### Desktop app
-
-Download the latest version of the Directory Connector desktop app from our [GitHub releases page](https://github.com/bitwarden/directory-connector/releases) or by using one of the following official links:
-
-- 🪟 [Windows Installer (.exe)](https://bitwarden.com/download/?app=connector&platform=windows)
-- 🪟 [Windows Portable (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=portable)
-- 🍎 [macOS (.dmg)](https://bitwarden.com/download/?app=connector&platform=macos)
-- 🐧 [Linux (.AppImage)](https://bitwarden.com/download/?app=connector&platform=linux)
-
-### CLI
-
-Download the latest version of the Directory Connector CLI from one of the following links:
-
-- 🪟 [Windows CLI (.exe)](https://bitwarden.com/download/?app=connector&platform=windows&variant=cli-zip)
-- 🍎 [macOS CLI](https://bitwarden.com/download/?app=connector&platform=macos&variant=cli-zip)
-- 🐧 [Linux CLI](https://bitwarden.com/download/?app=connector&platform=linux&variant=cli-zip)
-
-## Source code
-
-As with everything at Bitwarden, Directory Connector is open source and hosted on GitHub at [github.com/bitwarden/directory-connector](https://github.com/bitwarden/directory-connector).
+> [!NOTE] Changing the Bitwarden email in SCIM org
+> If the user email address is updated and synced on the IdP or AD prior to updating the Bitwarden email, the updated email will be interpreted as a new user.
 ---
 URL: https://bitwarden.com/help/disable-browser-autofill/
 ---
@@ -16312,12 +16329,6 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
-
-### Phishing blocker events
-
-- User attempted to access known phishing site (`2400`)
-- User exited phishing warning page (`2401`)
-- User bypassed phishing warning page (`2402`)
 
 ### Secrets Manager events
 
@@ -20419,7 +20430,8 @@ To export your data from Safari:
 1. Select **File** → **Export browsing data to file** from the macOS menu bar, choose passwords, and select **Download**:
 
 ![Export from Safari](https://bitwarden.com/assets/3j4W80s3G7wqFtVrbzKMO4/36308c2c647912bf204739f2bc5f80f2/2024-12-30_12-58-55.png)
-2. Save your export to any location and use Touch ID or your macOS password to complete the export.
+2. Save the `.zip` export to any location and use Touch ID or your macOS password to complete the export.
+3. When you're ready, unzup the `.zip` to obtain your `Passwords.csv` file for import into Bitwarden.
 
 ## From an iPhone
 
@@ -23133,7 +23145,6 @@ Use the following keyboard shortcuts to navigate the Bitwarden desktop app with 
 | Zoom out. | `Ctrl/Cmd` + `-` |
 | Reset the zoom level. | `Ctrl/Cmd` + `0` |
 | Enter full-screen mode. | Windows and Linux: `F11` Mac: `Fn` + `F` |
-| Open developer mode. | Windows and Linux: `F12` |
 
 ### Control window
 
@@ -24467,6 +24478,7 @@ To get to the **Devices**list:
 - In the web app, navigate to **Settings** → **Security** → **Devices**.
 - In browser extensions, navigate to **Settings** → **Account security** → **Devices**.
 - In desktop apps, use the menu bar to navigate to **Account** → **Devices**.
+- In the Android mobile app, navigate to **Account Security** → **Devices**.
 
 In the **Devices**list, you'll see one row per device that contains the following:
 
@@ -27143,7 +27155,7 @@ Bitwarden takes an enterprise-friendly approach to sharing at scale. Members can
 
 At Bitwarden, we see sharing of credentials as a vital aspect to getting work done efficiently and securely. We also recognize that once a credential is shared, it is *technically* possible for the recipient to keep it. For that reason, secure onboarding using appropriate [role-based access controls](https://bitwarden.com/help/onboarding-and-succession/#comprehensive-role--based-access-controls/) and [implementing policies](https://bitwarden.com/help/onboarding-and-succession/#enterprise-policies/) plays an important role in facilitating secure succession.
 
-There are a variety of tools provided by Bitwarden for tailoring your workflow and exercising more control over succession. The following sections will describe a [basic succession workflow](https://bitwarden.com/help/onboarding-and-succession/#basic-deprovisioning/), which uses none of these tools, and some [advanced succession tactics](https://bitwarden.com/help/onboarding-and-succession/#advanced-deprovisioning/) frequently used by organizations:
+There are a variety of tools provided by Bitwarden for tailoring your workflow and exercising more control over succession. The following sections will describe a [basic succession workflow](https://bitwarden.com/help/onboarding-and-succession/#basic-deprovisioning/), which uses none of these tools, and some [advanced succession tactics](https://bitwarden.com/help/onboarding-and-succession/#advanced-deprovisioning/) frequently used by organizations.
 
 ### Basic deprovisioning
 
@@ -27193,9 +27205,12 @@ When you claim a domain, any organization member accounts that have email addres
 
 #### Administrative take-over
 
-Using the [Master password reset policy](https://bitwarden.com/help/policies/#master-password-reset/), owners and admins in your organization can [reset a user's master password](https://bitwarden.com/help/account-recovery/) during succession.
+With the [Account recovery administration policy](https://bitwarden.com/help/policies/#account-recovery-administration/), owners and admins can reset [enrolled members'](https://bitwarden.com/help/account-recovery-enrollment/) master password or two-step login methods. This immediately ends all of the member's active sessions and gives the owner or admin exclusive access to the member's vault, including individual vault items.
 
-Resetting a user's master password logs the user out of all active Bitwarden sessions and resets their login credentials to the ones specified by the administrator, meaning that administrator (and only that administrator) will have the keys to the user's vault data, including items in the individual vault. This vault takeover tactic is commonly used by organizations to ensure that employees don't retain access to individual vault items that may be work-related and can be used to facilitate audits of every credential an employee may have been using.
+> [!NOTE] Account recovery doesn't bypass SSO
+> Account recovery only affects credentials configured within Bitwarden. It does not bypass SSO or any two-factor authentication configured with your IdP.
+
+Organizations commonly use this account takeover method to prevent employees from retaining access to work-related vault items or to audit credentials they may have used.
 
 #### Removing the individual vault
 
@@ -27794,7 +27809,7 @@ Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM 
 
 In the OneLogin Portal, navigate to the the **Applications** screen and select the **Add App** button:
 
-![Add an Application ](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/3bf9fa6b57a45b357a9d2bc012d8a6af/ol-addapp.png)
+![Add an Application](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/b6caa5f68ed17b43cd2c7247ee00bacf/OneLogin1.png)
 
 In the search bar, type `SCIM` and select the **SCIM Provisioner with SAML (SCIM v2 Enterprise)** app:
 
@@ -28628,14 +28643,12 @@ URL: https://bitwarden.com/help/phishing-blocked/
 
 Bitwarden phishing blocker detects known phishing websites and redirects Bitwarden users to a secure notification page, helping to ensure that credentials are not mistakenly entered or compromised. Phishing blocker identifies phishing websites using the regularly updated, open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
 
-Phishing blocker is available for Bitwarden individual Premium and Families plans on browser clients `2026.1.1` and newer.
-
 > [!NOTE] Phishing blocker unavailable for Safari
 > At this time, phishing blocker is not available on the Bitwarden browser extension for Safari.
 
-## Phishing blocker
+## Use phishing blocker
 
-Phishing blocker operates using the browser extension. When phishing blocker identifies a known phishing website: 
+By default, phishing blocker is enabled for individual Premium and Families users. To use phishing blocker, you must be logged in to the Bitwarden browser extension. When phishing blocker identifies a known phishing website: 
 
 1. Instead of loading a known phishing website, Bitwarden will redirect the user to a warning page, indicating that the site has been blocked.
 
@@ -28648,9 +28661,11 @@ Phishing blocker operates using the browser extension. When phishing blocker ide
 > [!NOTE] Continue to phishing website warning
 > Selecting **Continue** will proceed to the website that was identified for previous phishing activity. This action could result in your credentials being compromised. Caution is recommended if selecting this option.
 
-## Toggle phishing blocker
+If you selected **Continue**and believe that the website is incorrectly considered phishing, [submit a false positive report to Phishing.Database](https://github.com/Phishing-Database/Phishing.Database/issues/new?template=00-false-positive.yml).
 
-By default, phishing blocker will be enabled for individual premium and families users. You may toggle the feature **on**or **off** in the browser extension by navigating to **Settings** → **Account security** and selecting the toggle:
+## Turn phishing blocker on or off
+
+You can toggle phishing blocker **on**or **off** in the browser extension by navigating to **Settings** → **Account security** and selecting the toggle:
 
 ![Toggle phishing blocker](https://bitwarden.com/assets/4jeEBHYQeUpsZNOoKKUeW1/d19fe64cfed2edba32983f45c5434490/phishing_setting.png)
 *Toggle phishing blocker*
@@ -29059,15 +29074,13 @@ Turn on this sub-option of the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Send controls
+### Send options
 
-Turn on the **Send controls** policy to specify options for creating and editing [Sends](https://bitwarden.com/help/about-send/). This policy is not enforced for owners and admins. When turning on this policy, you must check one of the listed options:
+Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send.This policy is not enforced for owners and admins.
 
-- **Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/).
-- **Always show member's email address with recipients when creating or editing a Send** removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), providing transparency to those who receive a Send.
+### Remove Send
 
-> [!NOTE] Send controls, only check one setting
-> Make sure you select only one setting. If you check both, members will be subject to the **Remove Send** option.
+**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
 ### Remove export
 
@@ -29096,9 +29109,9 @@ Use the **Require existing members to change their passwords**option to require 
 
 ### Account recovery administration
 
-Turn on the **Account recovery administration** policy to allow owners and admins to help members regain access to their account. With this policy, owners and admins can send members enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) a link to reset their master password. By default, users must [self-enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) to be eligible.
+Turn on the **Account recovery administration** policy to allow owners and admins to help members regain access to their account. With this policy, owners and admins can reset the master password or disconnect two-step login methods for accounts enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). By default, users must [self-enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) to be eligible.
 
-To simplify account recovery enrollment, check **Require new members to be enrolled automatically** when activating the policy. This enrolls new members when their [invitation to the organization is accepted](https://bitwarden.com/help/managing-users/#accept/) and prevents them from withdrawing from account recovery. Current organization members are not retroactively added, so they still need to self-enroll.
+To simplify account recovery enrollment, check **Automatically enroll new members in account recovery** when activating the policy. This enrolls new members when their [invitation to the organization is accepted](https://bitwarden.com/help/managing-users/#accept/) and prevents them from withdrawing from account recovery. Current organization members are not retroactively added, so they still need to self-enroll.
 
 The **Account recovery administration** policy is required for your organization to use [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/).
 
@@ -30523,6 +30536,22 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.6.0
+
+(The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Directory Connector 2026.6.0, Web 2026.6.0 and Mobile 2026.5.1)
+
+#### Password Manager
+
+- ⭐ **Devices list now available on Android**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on the Android.
+
+#### Directory Connector
+
+The newest version of Directory Connector includes modernizations and infrastructure improvements that will affect installing or updating the app:
+
+- Directory Connector for macOS is **now shipped as a native ARM64 binary**, replacing the Rosetta build of the app. On macOS, Directory Connector is now only supported on Apple Silicon.
+- If you use both the Directory Connector Desktop App and CLI, you must update both clients before using the newest version of either.
+- Keytar has been replaced with OS-specific native modules. As a result, a different file is packaged with the `bwdc` CLI executable. The [setup process](https://bitwarden.com/help/directory-sync-cli/) remains the same despite the new filename.
+
 ## 2026.5.0
 
 (*The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Web 2026.5.0, Browser Extension 2026.5.0, Desktop 2026.5.0, Mobile 2026.5.0, and CLI 2026.5.0)*
@@ -30575,7 +30604,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Admin Console
 
-- **Send controls Enterprise policy**: Two Enterprise policies, Send Options and Remove Send, were merged into the newly titled [Send controls policy](https://bitwarden.com/help/policies/#send-controls/). If either policy was previously turned on, the chosen options will transfer and remain unchanged.
 - **Updated Enterprise Policies page**: On the Policies page, the [Enterprise Policies](https://bitwarden.com/help/policies/) are now organized into three categories: Data Controls, Authentication, and Vault Management. You can also review at a glance which policies are turned on or off.
 - **Access Intelligence dashboard update**: Visualize [how at-risk applications, passwords, and members have changed over time](https://bitwarden.com/help/access-intelligence/#activity/) relative to absolute changes in application, password, and member counts with new graphs on the Access Intelligence Activity view.
 
@@ -33143,17 +33171,19 @@ Configuration involves working simultaneously with the Bitwarden web app and the
 > [!NOTE]
 > **Already an SSO expert?** Skip the instructions in this article and download screenshots of sample configurations to compare against your own.
 > 
-> ⬇️ [Download Sample](https://bitwarden.com/assets/2qc3QwfnmHhjJ5RCwL5hQN/aedad77e918df194f3033a34a141fcec/saml-google-sample.zip)
+> ⬇️ [Download Sample](https://bitwarden.com/assets/2qc3QwfnmHhjJ5RCwL5hQN/d4269573500aceab129a182b24b91439/saml-google-sample_2__2.zip)
 
 ## Open SSO in the web app
 
 Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
 
 Open your organization's **Settings** → **Single sign-on** screen:
 
 ![SAML 2.0 configuration ](https://bitwarden.com/assets/20720mRAluo6crSdTiYJrn/1175889d7f6ab42fe7614f34cdd1dcdd/2024-12-04_09-41-15.png)
+*SAML 2.0 configuration *
 
 If you haven't already, create a unique **SSO identifier**for your organization and select **SAML**from the the **Type**dropdown. Keep this screen open for easy reference.
 
@@ -33166,7 +33196,8 @@ You can turn off the **Set a unique SP entity ID**option at this stage if you wi
 
 In the Google Workspace Admin console, select **Apps** → **Web and mobile apps** from the navigation. On the Web and mobile apps screen, select **Add App** → **Add custom SAML app**:
 
-![Create a SAML App ](https://bitwarden.com/assets/C9jyVEQXkiBxRwU82ix0U/c9cda4568d3a7f43170e4b3ef0aebab4/g-addapp.png)
+![Create a SAML App Google](https://bitwarden.com/assets/NmHk4ayCuU2Ni3dEAy3T4/366dcad5f763fdf8056de3acd915543b/add-app-google.png)
+*Create a SAML App Google*
 
 ### App details
 
@@ -33176,7 +33207,8 @@ On the app details screen, give the application a unique Bitwarden-specific name
 
 On the Google Identity Provider details screen, copy your **SSO URL**, **Entity ID**, and **Certificate** for [use during a later step](https://bitwarden.com/help/saml-google/#identity-provider-configuration/):
 
-![IdP Details ](https://bitwarden.com/assets/6YxeYEY4VdrJNYO0zYkPqd/bbe5b99b54570ef14f7a4ff5a1bcb7a6/g-details.png)
+![IdP Details](https://bitwarden.com/assets/6YxeYEY4VdrJNYO0zYkPqd/bbe5b99b54570ef14f7a4ff5a1bcb7a6/g-details.png)
+*IdP Details*
 
 Select **Continue** when you are finished.
 
@@ -33209,7 +33241,8 @@ Select **Finish**.
 
 By default, Workspace SAML apps will be **OFF for everyone**. Open the User access section for the SAML app and set to **ON for everyone** or for specific Groups, depending on your needs:
 
-![User Access ](https://bitwarden.com/assets/1cFjmvCmDIAMy6zy4e9x0a/03a1613a1186da2f014c40add256047e/g-activate.png)
+![User access](https://bitwarden.com/assets/2f5kVFNLn1XP9fNwzBtdxI/b1b85a8d7d5f9c95e55701b96acc785f/user_access.png)
+*User access*
 
 **Save** your changes. Please note that it can take up to 24 hours for a new Workspace app to propagate to users existing sessions.
 
@@ -33249,8 +33282,8 @@ Identity provider configuration will often require you to refer back to the Work
 | Single Log Out URL | Login with SSO currently **does not**support SLO. This option is planned for future development, however you may pre-configure it if you wish. |
 | X509 Public Certificate | Paste the [retrieved certificate](https://bitwarden.com/help/saml-google/#identity-provider-details/), removing `-----BEGIN CERTIFICATE-----`  and  `-----END CERTIFICATE-----` The certificate value is case sensitive, extra spaces, carriage returns, and other extraneous characters **will cause certification validation to fail**. |
 | Outbound Signing Algorithm | By default, Google Workspace will sign with RSA SHA-256. Select `sha-256 `from the dropdown. |
-| Disable Outbound Logout Requests | Login with SSO currently **does not**support SLO. This option is planned for future development. |
-| Want Authentication Requests Signed | Whether Google Workspace expects SAML requests to be signed. |
+| Allow outbout logout requests | Login with SSO currently **does not**support SLO. This option is planned for future development. |
+| Sign authentication requests | Whether Google Workspace expects SAML requests to be signed. |
 
 > [!NOTE] X509 cert expiration
 > When completing the X509 certificate, take note of the expiration date. Certificates will need to be renewed to prevent any disruptions in service to SSO end-users. If a certificate expires, Admin and Owner accounts can still log in with their email address and master password.
@@ -33265,10 +33298,12 @@ When you are done with the identity provider configuration, **Save** your work.
 Once your configuration is complete, test it by navigating to [https://vault.bitwarden.com](https://vault.bitwarden.com), entering your email address and selecting the **Enterprise Single-On** button:
 
 ![Log in options screen](https://bitwarden.com/assets/3BdlHeogd42LEoG06qROyQ/c68021df4bf45d72e9d37b1fbf5a6040/login.png)
+*Log in options screen*
 
 Enter the [configured organization identifier](https://bitwarden.com/help/configure-sso-saml/#step-1-enabling-login-with-sso/) and select **Log In**. If your implementation is successfully configured, you will be redirected to the Google Workspace login screen:
 
 ![Login ](https://bitwarden.com/assets/1hJ5ERnbj5UA7QriG0UPTb/95f36b9cb7573b1a966fe1331bf02fcd/g-login.png)
+*Login *
 
 After you authenticate with your Workspace credentials, enter your Bitwarden master password to decrypt your vault!
 
@@ -33952,17 +33987,19 @@ Configuration involves working simultaneously within the Bitwarden web app and t
 > [!NOTE]
 > **Already an SSO expert?** Skip the instructions in this article and download screenshots of sample configurations to compare against your own.
 > 
-> ⬇️ [Download Sample](https://bitwarden.com/assets/mQMTlMcvpyBPzgAkgqDvg/ace51cc7a46379048140042282e6b24f/saml-onelogin-sample.zip)
+> ⬇️ [Download Sample](https://bitwarden.com/assets/mQMTlMcvpyBPzgAkgqDvg/420fde23d3edf526d97f22bea8a5ed80/OneLogin.zip)
 
 ## Open SSO in the web app
 
 Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
 
 Open your organization's **Settings** → **Single sign-on** screen:
 
 ![SAML 2.0 configuration ](https://bitwarden.com/assets/20720mRAluo6crSdTiYJrn/1175889d7f6ab42fe7614f34cdd1dcdd/2024-12-04_09-41-15.png)
+*SAML 2.0 configuration *
 
 If you haven't already, create a unique **SSO identifier**for your organization and select **SAML**from the the **Type**dropdown. Keep this screen open for easy reference.
 
@@ -33975,11 +34012,13 @@ You can turn off the **Set a unique SP entity ID**option at this stage if you wi
 
 In the OneLogin Portal, navigate to the the **Applications** screen and select the **Add App** button:
 
-![Add an Application ](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/3bf9fa6b57a45b357a9d2bc012d8a6af/ol-addapp.png)
+![Add an Application](https://bitwarden.com/assets/37OSt7e5j969j9ikvH8buI/b6caa5f68ed17b43cd2c7247ee00bacf/OneLogin1.png)
+*Add an Application*
 
 In the search bar, type `saml custom connector` and select the **SAML Custom Connector (Advanced)** app:
 
 ![SAML Test Connector App ](https://bitwarden.com/assets/hTfoABj2iirzB1X7UT69x/520891ab503ad773178fef291d49e198/2026-03-02_09-22-12.png)
+*SAML Test Connector App *
 
 Give your application a Bitwarden-specific **Display Name** and select the **Save** button.
 
@@ -33987,7 +34026,8 @@ Give your application a Bitwarden-specific **Display Name** and select the **Sav
 
 Select **Configuration** from the left-hand navigation and configure the following information, some of which you will need to retrieve from the Single Sign-On screen:
 
-![App Configuration](https://bitwarden.com/assets/12yP5ohPGhqcCZZdpwVDQd/7fc5661e4fb4954ad00246deae2fd9b1/ol-appconfig.png)
+![App Configuration](https://bitwarden.com/assets/12yP5ohPGhqcCZZdpwVDQd/e31bd5ade4c3677b8f5426f5fef6fb3e/onelogin2.png)
+*App Configuration*
 
 | **Application Setting** | **Description** |
 |------|------|
@@ -34019,7 +34059,8 @@ Select **SSO** from the left-hand navigation and complete the following:
 
 1. Select the **View Details** link under your X.509 Certificate:
 
-![View your Cert ](https://bitwarden.com/assets/7emKbivWUWKO1ufVC9Rkgu/0039e55d93ba69fadc8c39e0be3d8a07/Screen_Shot_2022-12-29_at_9.42.14_AM.png)
+![View your Cert ](https://bitwarden.com/assets/7emKbivWUWKO1ufVC9Rkgu/e023c4c3fb7195afd93d6515f86d8cbf/onelogin3.png)
+*View your Cert *
 
 On the Certificate screen, download or copy your X.509 PEM Certificate, as you will need to [use it later](https://bitwarden.com/help/saml-onelogin/#identity-provider-configuration/). Once copied, return to the main SSO screen.
 2. Set your **SAML Signature Algorithm**.
@@ -34029,7 +34070,8 @@ On the Certificate screen, download or copy your X.509 PEM Certificate, as you w
 
 Select **Access** from the left-hand navigation. In the **Roles** section, assign application access to all the roles you would like to be able to use Bitwarden. Most implementations create a Bitwarden-specific role and instead opt to assign based on a catch-all (for example, **Default**) or based on pre-existing roles.
 
-![Role Assignment ](https://bitwarden.com/assets/6D4j0WofpBcvSCMB0rN4Db/5303beacbc3ce331dfddc6dc6b19d6ea/ol-roles.png)
+![Role Assignment](https://bitwarden.com/assets/6D4j0WofpBcvSCMB0rN4Db/5303beacbc3ce331dfddc6dc6b19d6ea/ol-roles.png)
+*Role Assignment*
 
 ## Back to the web app
 
@@ -34083,10 +34125,14 @@ When you are done with the identity provider configuration, **Save** your work.
 Once your configuration is complete, test it by navigating to [https://vault.bitwarden.com](https://vault.bitwarden.com), entering your email address and selecting the **Use single sign-on** button:
 
 ![Log in options screen](https://bitwarden.com/assets/3BdlHeogd42LEoG06qROyQ/c68021df4bf45d72e9d37b1fbf5a6040/login.png)
+*Log in options screen*
 
 Enter the [configured organization identifier](https://bitwarden.com/help/saml-onelogin/#/) and select **Log In**. If your implementation is successfully configured, you will be redirected to the OneLogin login screen:
 
-![OneLogin Login ](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
+![OneLogin Login](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
+
+![OneLogin Login](https://bitwarden.com/assets/58dRC3pPEm0bO8xtd2Tqzq/415b83d361b49c73550d0932ddca8576/ol-login.png)
+*OneLogin Login*
 
 After you authenticate with your OneLogin credentials, enter your Bitwarden master password to decrypt your vault!
 
@@ -40496,6 +40542,12 @@ You can subscribe to email notifications for self-hosted server releases by navi
 > [!NOTE]
 > We highly recommend backing up your data before updating your self-hosted instance. For more information, see [Backup your Hosted Data](https://bitwarden.com/help/backup-on-premise/).
 
+## 
+
+### Update Docker
+
+### Update standard deployment
+
 If you're running a standard installation, update your Bitwarden instance using the same Bash (Linux or macOS) or PowerShell (Windows) script (`bitwarden.sh`) used to install Bitwarden. Run the following sequence of commands:
 
 🐧 🍎 Bash
@@ -40517,6 +40569,26 @@ If you're running a standard installation, update your Bitwarden instance using 
 If you're running a [manually-installed](https://bitwarden.com/help/install-on-premise-manual/#update-your-server/) or an [offline Linux](https://bitwarden.com/help/install-and-deploy-offline/#update-your-server/) or [offline Windows](https://bitwarden.com/help/install-and-deploy-offline-windows/#update-your-server/) installation, follow the procedures in the linked articles.
 
 Your Bitwarden installation should now be fully up to date and running.
+
+### Update Helm
+
+If you are running a Helm installation, use the following steps to update your deployment:
+
+1. Before updating your Helm deployment, pull the latest Bitwarden Helm chart:
+
+```bash
+helm repo update
+```
+2. Check for changes in the latest version of the chart. Perform a diff between the `new-defaults.yaml` and your `my-values.yaml`. Copy-over any updates to your `my-values.yaml` before proceeding.
+
+```bash
+helm show values bitwarden/self-host --version <new-version-number> > new-defaults.yaml
+```
+3. Next, update your Bitwarden installation using your `my-values.yaml` file:
+
+```bash
+helm upgrade bitwarden bitwarden/self-host --namespace bitwarden --values my-values.yaml
+```
 ---
 URL: https://bitwarden.com/help/upgrade-from-individual-to-org/
 ---

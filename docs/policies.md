@@ -61,15 +61,13 @@ Turn on this sub-option of the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Send controls
+### Send options
 
-Turn on the **Send controls** policy to specify options for creating and editing [Sends](https://bitwarden.com/help/about-send/). This policy is not enforced for owners and admins. When turning on this policy, you must check one of the listed options:
+Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send.This policy is not enforced for owners and admins.
 
-- **Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/).
-- **Always show member's email address with recipients when creating or editing a Send** removes the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/), providing transparency to those who receive a Send.
+### Remove Send
 
-> [!NOTE] Send controls, only check one setting
-> Make sure you select only one setting. If you check both, members will be subject to the **Remove Send** option.
+**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
 ### Remove export
 
@@ -98,9 +96,9 @@ Use the **Require existing members to change their passwords**option to require 
 
 ### Account recovery administration
 
-Turn on the **Account recovery administration** policy to allow owners and admins to help members regain access to their account. With this policy, owners and admins can send members enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) a link to reset their master password. By default, users must [self-enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) to be eligible.
+Turn on the **Account recovery administration** policy to allow owners and admins to help members regain access to their account. With this policy, owners and admins can reset the master password or disconnect two-step login methods for accounts enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). By default, users must [self-enroll in account recovery](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) to be eligible.
 
-To simplify account recovery enrollment, check **Require new members to be enrolled automatically** when activating the policy. This enrolls new members when their [invitation to the organization is accepted](https://bitwarden.com/help/managing-users/#accept/) and prevents them from withdrawing from account recovery. Current organization members are not retroactively added, so they still need to self-enroll.
+To simplify account recovery enrollment, check **Automatically enroll new members in account recovery** when activating the policy. This enrolls new members when their [invitation to the organization is accepted](https://bitwarden.com/help/managing-users/#accept/) and prevents them from withdrawing from account recovery. Current organization members are not retroactively added, so they still need to self-enroll.
 
 The **Account recovery administration** policy is required for your organization to use [SSO with trusted devices](https://bitwarden.com/help/about-trusted-devices/).
 
