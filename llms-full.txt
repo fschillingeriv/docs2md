@@ -4381,15 +4381,12 @@ To turn on biometric unlock:
 
 ### macOS
 
-Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com/en-us/HT207054). This option is supported in the macOS desktop app when it’s installed from the [Mac App Store](https://apps.apple.com/us/app/bitwarden/id1352778147?mt=12), but not from the Bitwarden downloads page.
-
-To turn on biometric unlock:
+Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com/en-us/HT207054). To turn on biometric unlock:
 
 1. [Turn on Touch ID](https://support.apple.com/guide/mac-help/use-touch-id-mchl16fbf90a/mac) in your device’s system settings.
-2. Download the Bitwarden desktop app from the [Mac App Store](https://apps.apple.com/us/app/bitwarden/id1352778147?mt=12) (if you haven’t already). Bitwarden desktop app installs from the Bitwarden Download page do not support biometric unlock.
-3. Open the Bitwarden desktop and go to **Bitwarden** → **Settings**.
-4. Under **Security**, check **Unlock with Touch ID** and confirm the update when prompted.
-5. (Optional) Check **Ask for Touch ID on app start** to use Touch ID when the desktop app first opens, skipping the initial unlock screen.
+2. Open the Bitwarden desktop and go to **Bitwarden** → **Settings**.
+3. Under **Security**, check **Unlock with Touch ID** and confirm the update when prompted.
+4. (Optional) Check **Ask for Touch ID on app start** to use Touch ID when the desktop app first opens, skipping the initial unlock screen.
 
 ### Linux
 
@@ -30035,7 +30032,7 @@ You can set user types when you [invite](https://bitwarden.com/help/provider-use
 
 | **Role** | **Description** |
 |------|------|
-| Service user | Service users can access and manage all [client organizations](https://bitwarden.com/help/client-orgs/), including: - Create or delete collections - Assign users and user groups to collections - Assign users to user groups - Create or delete user groups - Invite and confirm new users - Manage enterprise policies - View event logs - Export organization vault data - Manage password reset - Add or remove seats from a client organization, as long as they're within the [total seats available to the provider](https://bitwarden.com/help/provider-billing/#about-provider-billing/) |
+| Service user | Service users can access and manage all [client organizations](https://bitwarden.com/help/client-orgs/), including: - Create or delete collections - Assign users and user groups to collections - Assign users to user groups - Create or delete user groups - Invite and confirm new users - Manage enterprise policies - View event logs - Manage password reset - Add or remove seats from a client organization, as long as they're within the [total seats available to the provider](https://bitwarden.com/help/provider-billing/#about-provider-billing/) |
 | Provider admin | Provider admins manage all aspects of the provider and all client organizations. Provider admins can do all of the above, plus: - Create new client organizations - Invite and confirm new service users and provider admins - View provider event logs - Edit provider settings - Manage billing, subscription, and [total seats available to the provider](https://bitwarden.com/help/provider-billing/#about-provider-billing/) |
 ---
 URL: https://bitwarden.com/help/providers-faqs/

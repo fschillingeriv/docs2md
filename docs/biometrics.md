@@ -32,15 +32,12 @@ To turn on biometric unlock:
 
 ### macOS
 
-Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com/en-us/HT207054). This option is supported in the macOS desktop app when it’s installed from the [Mac App Store](https://apps.apple.com/us/app/bitwarden/id1352778147?mt=12), but not from the Bitwarden downloads page.
-
-To turn on biometric unlock:
+Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com/en-us/HT207054). To turn on biometric unlock:
 
 1. [Turn on Touch ID](https://support.apple.com/guide/mac-help/use-touch-id-mchl16fbf90a/mac) in your device’s system settings.
-2. Download the Bitwarden desktop app from the [Mac App Store](https://apps.apple.com/us/app/bitwarden/id1352778147?mt=12) (if you haven’t already). Bitwarden desktop app installs from the Bitwarden Download page do not support biometric unlock.
-3. Open the Bitwarden desktop and go to **Bitwarden** → **Settings**.
-4. Under **Security**, check **Unlock with Touch ID** and confirm the update when prompted.
-5. (Optional) Check **Ask for Touch ID on app start** to use Touch ID when the desktop app first opens, skipping the initial unlock screen.
+2. Open the Bitwarden desktop and go to **Bitwarden** → **Settings**.
+3. Under **Security**, check **Unlock with Touch ID** and confirm the update when prompted.
+4. (Optional) Check **Ask for Touch ID on app start** to use Touch ID when the desktop app first opens, skipping the initial unlock screen.
 
 ### Linux
 
