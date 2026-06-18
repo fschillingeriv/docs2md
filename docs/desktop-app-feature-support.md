@@ -29,8 +29,8 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 | Feature | [Installer (.dmg)](https://bitwarden.com/download/#downloads-desktop-applications/) | [App Store](https://apps.apple.com/us/app/bitwarden/id1352778147?mt=12) |
 |------|------|------|
 | Automatic Updates | ✓ | ✓ |
-| Desktop Biometrics | | ✓ |
-| Extension Biometrics | | ✓ |
+| Desktop Biometrics | ✓ | ✓ |
+| Extension Biometrics | ✓ | ✓ |
 | Integration with OS | ✓ | ✓ |
 | Startup on Launch | ✓ | ✓ |
 | Direct Importer | ✓ | |

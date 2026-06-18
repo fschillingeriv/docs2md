@@ -22,7 +22,7 @@ This table lists Bitwarden subprocessors. Note that **no Bitwarden subprocessor*
 | Datadog, Inc. | Infrastructure monitoring | USA, EU |
 | Hubspot, Inc. | Communication tools | USA |
 | Outreach Corporation | Communication tools | USA |
-| Nooks Communications, Inc. | Communication tools |
+| Nooks Communications, Inc. | Communication tools | USA |
 | 6Sense Insights, Inc. | Account-based marketing | USA |
 | LinkedIn Corporation | Business development/Communication tool | USA |
 | Zapier, Inc. | Workflow automation | USA |

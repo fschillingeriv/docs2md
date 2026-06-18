@@ -10,12 +10,13 @@ URL: https://bitwarden.com/help/lost-two-step-device/
 
 Try the following options to see if you can reset your two-step login method or [export your vault](https://bitwarden.com/help/export-your-data/) before creating a new account.
 
-> [!NOTE] Account recovery doesn't remove 2FA
-> [Account recovery](https://bitwarden.com/help/account-recovery/) does not bypass or turn off two-step authentication.
-
 ### Alternate two-step login method
 
 If you set up more than one two-step login method, try another one. When on the login screen, select **Use another two-step login method**.
+
+### Account recovery
+
+If you are a member of an organization that's using [account recovery](https://bitwarden.com/help/account-recovery/), and you're [enrolled](https://bitwarden.com/help/account-recovery-enrollment/#self-enrollment/) in account recovery, an administrator can reset two-step login for your Bitwarden account.
 
 ### Recovery code
 

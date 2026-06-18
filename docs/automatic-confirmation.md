@@ -10,7 +10,7 @@ Enterprise organizations can optionally set up automatic confirmation of users i
 
 In order to be eligible for automatic confirmation functionality:
 
-- **Added by your Bitwarden team**: In order to gain access to this automation, Bitwarden support will need to add it to your organization. The first step is to [contact us](https://bitwarden.com/contact/).
+- **Added by your Bitwarden team**: In order to gain access to this automation, Bitwarden support will need to add it to your organization. The first step is for an organization owner to [contact us](https://bitwarden.com/contact/).
 - **Single organization policy will extend to all roles**: The [Single organization policy](https://bitwarden.com/help/policies/#single-organization/) must be on and all members, including owners and admins who are not typically subject to the policy, must be compliant with it.
 - **No emergency access**: To mitigate some risks of using automatic confirmation, [emergency access](https://bitwarden.com/help/emergency-access/) will be removed for all members of your organization. Members using emergency access will receive an email informing them it's been turned off.
 - **No provisioned provider accounts**: A member of a [provider](https://bitwarden.com/help/providers/) may not be an provisioned member of in your organization. A provider can still manage your organization, but its members cannot occupy a seat in your organization.
@@ -40,7 +40,7 @@ To turn on automatic confirmation for your organization, make sure you've met th
 
 Once the functionality is added for your organization by Bitwarden, Automatic confirmation can also be activated [via a policy](https://bitwarden.com/help/policies/#automatic-user-confirmation/) from the **Settings** → **Policies** menu in the Admin Console. Either way, select **Continue** to turn on automatic confirmation for the organization:
 
-![Automatic confirmation of new users](https://bitwarden.com/assets/1ggo2uyCvldAlJcOxAmGdv/eabe1eb2c5a82731268d6b3486fbc3d5/2026-02-05_10-43-27.png)
+![Automatic confirmation of new users](https://bitwarden.com/assets/1ggo2uyCvldAlJcOxAmGdv/3871422628d3fc2029a2387b5687db46/2026-06-16_09-47-45.png)
 *Automatic confirmation of new users*
 
 ### For each administrator

@@ -11,17 +11,19 @@ Configuration involves working simultaneously within the Bitwarden web app and t
 > [!NOTE]
 > **Already an SSO expert?** Skip the instructions in this article and download screenshots of sample configurations to compare against your own.
 > 
-> ⬇️ [Download Sample](https://bitwarden.com/assets/2jY7iejfs0KgdWBnwhGMHF/4bdd393ef26aac504ac2dd5b38cd283f/saml-jumpcloud-sample.zip)
+> ⬇️ [Download sample](https://bitwarden.com/assets/4boTHE97ghQv4ymygDFHMD/aa59f80df8b5921ed1fb097eea0dfad6/Jumpcloud-saml.zip).
 
 ## Open SSO in the web app
 
 Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
 
 Open your organization's **Settings** → **Single sign-on** screen:
 
 ![SAML 2.0 configuration ](https://bitwarden.com/assets/20720mRAluo6crSdTiYJrn/1175889d7f6ab42fe7614f34cdd1dcdd/2024-12-04_09-41-15.png)
+*SAML 2.0 configuration *
 
 If you haven't already, create a unique **SSO identifier**for your organization and select **SAML**from the the **Type**dropdown. Keep this screen open for easy reference.
 
@@ -32,13 +34,15 @@ You can turn off the **Set a unique SP entity ID**option at this stage if you wi
 
 ## Create a JumpCloud SAML application
 
-In the JumpCloud Portal, select **Applications** from the menu and select the **Get Started** button:
+In the JumpCloud Portal, select **Access → SSO Applications** from the menu. On the following screen, select the + **Add New Application** button.
 
-![Create Bitwarden app Jumpcloud](https://bitwarden.com/assets/63S5F953fjQN6V4xYKZR3h/515abac11c991e20cf8d5286e1b80a1d/Screen_Shot_2023-02-07_at_10.49.15_AM__2_.png)
+![Create Bitwarden app JumpCloud](https://bitwarden.com/assets/63S5F953fjQN6V4xYKZR3h/d2f5eff68f3c5f4fb7f7b25c71c6dc7d/Create-Bitwarden-App.png)
+*Create Bitwarden app JumpCloud*
 
-Enter `Bitwarden` in the search box and select the **configure** button:
+Enter `Bitwarden` in the search box and select the Bitwarden app. Select **Next**:
 
-![Configure Bitwarden ](https://bitwarden.com/assets/2pFRcBTjlIjBhMbqlKMhxb/b80b23ecfd660d5c314028297c606879/jc-bw.png)
+![Configure Bitwarden JumpCloud](https://bitwarden.com/assets/2pFRcBTjlIjBhMbqlKMhxb/fc85babc5dfa8b90b6edf028bb347a52/Configure_Bitwarden.png)
+*Configure Bitwarden JumpCloud*
 
 > [!NOTE] Custom SAML App 
 > If you are more comfortable with SAML, or want more control over things like NameID Format and Signing Algorithms, create a **Custom SAML Application** instead.
@@ -53,9 +57,12 @@ In the **General Info** section, configure the following information:
 
 ### Single sign-on configuration
 
-In the **Single Sign-On Configuration** section, configure the following information:
+Next, continue to the **Configure Application** screeen:
 
-![Jumpcloud SSO configuration ](https://bitwarden.com/assets/29XSIA5254JE0flwlFEGBf/5f078dec5b873be5568b2485c221c645/Screen_Shot_2023-02-07_at_3.20.29_PM__2_.png)
+![JumpCloud SSO configuration ](https://bitwarden.com/assets/29XSIA5254JE0flwlFEGBf/4889cdd2562033c7975deee1b90cd90c/JumpCloud_SSO_Configuration.png)
+*JumpCloud SSO configuration *
+
+Once complete, select **Save Application**.
 
 | **Field** | **Description** |
 |------|------|
@@ -80,24 +87,28 @@ If you created a Custom SAML Application, you will also need to configure the fo
 In the **Single Sign-On Configuration** → **Attributes** section, construct the following SP → IdP attribute mappings. If you selected the Bitwarden Application in JumpCloud, these should already be constructed:
 
 ![Attribute Mapping ](https://bitwarden.com/assets/5vRaXPal1HJsXhJZX8MdTL/b7c71fb6d4156d104f0f2b826f78a247/jc-attr.png)
+*Attribute Mapping *
 
-Once you are finished, select the **activate** button.
+Once you are finished, select the **Save** button.
 
 ### Download the certificate
 
-Once the application is activated, use the **SSO** menu option again to open the created Bitwarden application. Select the **IDP Certificate** dropdown and **Download certificate**:
+Once the application is activated, use the **SSO Applications** menu option again to open the created Bitwarden application. Select the **Actions** dropdown and **Download certificate**:
 
-![Download Certificate ](https://bitwarden.com/assets/6Y2DUGlm3LxBK6Ws44SjRg/a032010b5c0df73cccf7418892c9c00f/jc-cert.png)
+![Download Certificate](https://bitwarden.com/assets/6Y2DUGlm3LxBK6Ws44SjRg/d15ec22031306fa8d49b9c22d6e7fb5b/download_certificate.png)
+*Download Certificate*
 
 ### Bind user groups
 
 In the JumpCloud Portal, select **User Groups** from the menu:
 
-![User Groups ](https://bitwarden.com/assets/3nIOyl4xedMgTRTNobFqwG/35151b1af8594d15fd9d69531c5e4e04/jc-groups.png)
+![User Groups](https://bitwarden.com/assets/3nIOyl4xedMgTRTNobFqwG/dc5ec9a5d8144249c81a0c4188ede96a/User_Groups.png)
+*User Groups*
 
 Either create a Bitwarden-specific user group, or open the All Users default user group. In either case, select the **Applications** tab and enable access to the created Bitwarden SSO application for that user group:
 
 ![Bind App Access ](https://bitwarden.com/assets/7BUUQUi79zmEy8xm64qwog/7d5537c45423a87f92485e7b6cad5d5e/jc-group-app.png)
+*Bind App Access *
 
 > [!NOTE]
 > Alternatively, you can bind access to user groups directly from the **SSO** → **Bitwarden Application** screen.
@@ -121,7 +132,7 @@ Configure the following fields according to the choices selected in the JumpClou
 | Outbound Signing Algorithm | The algorithm Bitwarden will use to sign SAML requests. |
 | Signing Behavior | Whether/when SAML requests will be signed. By default, JumpCloud will not require requests to be signed. |
 | Minimum Incoming Signing Algorithm | If you created a Custom SAML Application, set this to whichever Signature Algorithm you selected. Otherwise, leave as `rsa-sha256`. |
-| Want Assertions Signed | If you created a Custom SAML Application, check this box if you set the **Sign Assertion**option in JumpCloud. Otherwise, leave unchecked. |
+| Expect signed assertions | If you created a Custom SAML Application, check this box if you set the **Sign Assertion**option in JumpCloud. Otherwise, leave unchecked. |
 | Validate Certificates | Check this box when using trusted and valid certificates from your IdP through a trusted CA. Self-signed certificates may fail unless proper trust chains are configured within the Bitwarden login with SSO docker image. |
 
 When you are done with the service provider configuration, **Save** your work.
@@ -154,10 +165,12 @@ When you are done with the identity provider configuration, **Save** your work.
 Once your configuration is complete, test it by navigating to [https://vault.bitwarden.com](https://vault.bitwarden.com), entering your email address and selecting the **Use single sign-on** button:
 
 ![Log in options screen](https://bitwarden.com/assets/3BdlHeogd42LEoG06qROyQ/c68021df4bf45d72e9d37b1fbf5a6040/login.png)
+*Log in options screen*
 
 Enter the [configured organization identifier](https://bitwarden.com/help/saml-jumpcloud/#/) and select **Log In**. If your implementation is successfully configured, you will be redirected to the JumpCloud login screen:
 
-![JumpCloud Login ](https://bitwarden.com/assets/678vDfFuKfH8FBZkhJdt5J/df1e8bad4f88f013ca194d9c9c82fccc/jc-login.png)
+![JumpCloud Login ](https://bitwarden.com/assets/678vDfFuKfH8FBZkhJdt5J/3d21f8344708eea792da7eb3160a9246/JumpCloud_Login.png)
+*JumpCloud Login *
 
 After you authenticate with your JumpCloud credentials, enter your Bitwarden master password to decrypt your vault!
 

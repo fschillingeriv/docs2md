@@ -14,7 +14,7 @@ Sends are created, edited, managed, and deleted from the **Send** view in any Bi
 *Send in the web app*
 
 > [!NOTE] Remove Send policy
-> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-controls/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
+> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-options/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
 
 ## Using Send
 

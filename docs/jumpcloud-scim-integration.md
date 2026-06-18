@@ -29,11 +29,11 @@ Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM 
 
 In the JumpCloud Portal, select **Applications** from the menu and select the **Get Started** button:
 
-![Create Bitwarden app Jumpcloud](https://bitwarden.com/assets/63S5F953fjQN6V4xYKZR3h/515abac11c991e20cf8d5286e1b80a1d/Screen_Shot_2023-02-07_at_10.49.15_AM__2_.png)
+![Create Bitwarden app JumpCloud](https://bitwarden.com/assets/63S5F953fjQN6V4xYKZR3h/d2f5eff68f3c5f4fb7f7b25c71c6dc7d/Create-Bitwarden-App.png)
 
 Enter `Bitwarden` in the search box and select the **configure**button:
 
-![Configure Bitwarden ](https://bitwarden.com/assets/2pFRcBTjlIjBhMbqlKMhxb/b80b23ecfd660d5c314028297c606879/jc-bw.png)
+![Configure Bitwarden JumpCloud](https://bitwarden.com/assets/2pFRcBTjlIjBhMbqlKMhxb/fc85babc5dfa8b90b6edf028bb347a52/Configure_Bitwarden.png)
 
 ### General info
 
