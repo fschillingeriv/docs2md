@@ -4,9 +4,9 @@ URL: https://bitwarden.com/help/send-lifespan/
 
 # Send Lifespan
 
-Unlike regular vault items and file attachments, Sends are ephemeral and have a **default lifespan of seven days**and can be set to last for up to 31 days using the [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/) option. When a Send reaches its deletion date, it's purged from Bitwarden systems and inaccessible to both sender and recipients.
+Unlike regular vault items and file attachments, Sends are ephemeral and have a **default lifespan of seven days**and can be set to last for up to 30 days using the [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/) option. When a Send reaches its deletion date, it's purged from Bitwarden systems and inaccessible to the sender and recipients.
 
-Different client apps allow you to set additional limitations on access like an [expiration date](https://bitwarden.com/help/send-lifespan/#expiration-date/) and/or [maximum access count](https://bitwarden.com/help/send-lifespan/#maximum-access-count/) options. You can also manually [deactivate or delete](https://bitwarden.com/help/send-lifespan/#manually-deactivate-or-delete/) a Send at any time.
+Different client apps allow you to set additional limitations on access, like an [expiration date](https://bitwarden.com/help/send-lifespan/#expiration-date/) and/or [maximum access count](https://bitwarden.com/help/send-lifespan/#maximum-access-count/) options. You can also manually [deactivate or delete](https://bitwarden.com/help/send-lifespan/#manually-deactivate-or-delete/) a Send at any time.
 
 ## Deletion date
 

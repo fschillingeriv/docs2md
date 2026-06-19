@@ -927,6 +927,7 @@ Used with the `create` command to specify a [vault item type](https://bitwarden.
 | Secure Note | 2 |
 | Card | 3 |
 | Identity | 4 |
+| SSH key | 5 |
 
 #### Login URI match types
 
