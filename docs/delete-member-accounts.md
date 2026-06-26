@@ -5,7 +5,10 @@ URL: https://bitwarden.com/help/delete-member-accounts/
 # Delete Organization Member Accounts
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 
 Depending on your organization's setup, you may be able to delete member accounts. Deleting an account is different than removing a user.
 

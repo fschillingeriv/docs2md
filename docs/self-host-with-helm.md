@@ -13,7 +13,7 @@ This article will describe the generic steps for hosting Bitwarden on Kubernetes
 - [AWS EKS Deployment](https://bitwarden.com/help/aws-eks-deployment/)
 
 > [!NOTE] NGINX ingress deprecation
-> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+> Ingress NGINX has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of Ingress NGINX.
 
 ## Requirements
 
@@ -89,7 +89,7 @@ The following sections describe the methods and values for configuring external 
 
 ##### Ingress
 
-The following table contains the required values for a Kubernetes ingress controller object. Please be aware that NGINX Ingress is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
+The following table contains the required values for a Kubernetes ingress controller object. Please be aware that Ingress NGINX is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
 
 | Value | Description |
 |------|------|

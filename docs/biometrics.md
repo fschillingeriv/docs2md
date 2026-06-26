@@ -41,7 +41,7 @@ Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com
 
 ### Linux
 
-Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent and secret service daemon, such as GNOME Keyring. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
+Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
 
 > [!NOTE] Linux-biometrics compatibility by package
 > We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because both fully support biometric unlock and automatic updates. Both also support biometric integration with Bitwarden browser extensions:
@@ -51,7 +51,7 @@ Unlocking the Bitwarden desktop app with biometrics is supported in Linux when y
 > 
 > Learn more about [desktop app feature support](https://bitwarden.com/help/desktop-app-feature-support/).
 
-## AppImage, Snap, .deb, and .rpm
+## Snap, AppImage, .deb, and .rpm
 
 To turn on biometric unlock:
 

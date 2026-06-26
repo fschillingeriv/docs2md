@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/receive-send/
 
 Sends can be received and opened by anyone with the link, including those who do not have Bitwarden accounts—unlike regular vault items. Send links are randomly generated, and will look something like this:
 
-- `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden/com/#/send/...`
+- `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden.com/#/send/...`
 - `https://your.selfhosted.domain.com/#/send/....` if you're self-hosting
 
 ![A received Send](https://bitwarden.com/assets/LLnrgZwyr6IAJ0GImXLnj/da3e363db0474f4cd6a57a44a6f1bd8f/Receive_a_send.png)

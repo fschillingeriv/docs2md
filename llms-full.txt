@@ -402,7 +402,14 @@ URL: https://bitwarden.com/help/about-send/
 ---
 # About Send
 
-Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+Bitwarden Send is a tool to transmit sensitive text or files directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+
+> [!NOTE] Remove Send policy
+> If you're a member of an organization that activated the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/), your access to Sends is limited:
+> 
+> - You cannot create new Sends or edit existing ones.
+> - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
+> - You cannot access the Sends page with the Bitwarden web app.
 
 ## Accessing Send
 
@@ -410,23 +417,6 @@ Sends are created, edited, managed, and deleted from the **Send** view in any Bi
 
 ![Send in the web app](https://bitwarden.com/assets/7umXxS0YG58NdB3vb4kwKo/c2a5f8ae8fa0bae6becb2e20e7f59390/2026-02-24_12-52-46.png)
 *Send in the web app*
-
-> [!NOTE] Remove Send policy
-> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-options/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
-
-## Using Send
-
-Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden.com/help/create-send/) and share with [intended recipients](https://bitwarden.com/help/receive-send/). To create a Send:
-
-1. Select **New Send**:
-
-![New Send](https://bitwarden.com/assets/5ixV8tBpmNQsujpAfan69u/bc04bef94830ec05cfa414bc4b1d7a58/2026-02-24_10-39-18.png)
-*New Send*
-2. Select the required [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
-
-![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/ff88a11a1da2500eeaa8ff713d459d71/Send_Options.png)
-*Send options*
-3. Share the Send link using any communication channel you prefer.
 
 Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) which allows you to monitor the Send. Your created Sends will display status icons when a lifespan-related event occurs:
 
@@ -438,7 +428,13 @@ Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/)
 | ✗ | This Send has reached its specified [maximum access count](https://bitwarden.com/help/send-lifespan/#maximum-access-count/). |
 | 🗑️ | This Send has reached its specified [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/) and is **pending deletion**. |
 
-## 
+## Using Send
+
+Using Bitwarden Send is a three-step process:
+
+1. [Create a Send](https://bitwarden.com/help/create-send/) and configure its [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
+2. Share the Send link with recipients through any channel you prefer.
+3. [Recipients open the Send link](https://bitwarden.com/help/receive-send/) to access the content.
 
 ## Send security
 
@@ -4390,7 +4386,7 @@ Set up unlock with biometrics for macOS via [Touch ID](https://support.apple.com
 
 ### Linux
 
-Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent and secret service daemon, such as GNOME Keyring. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
+Unlocking the Bitwarden desktop app with biometrics is supported in Linux when your system has a polkit agent. All available Linux versions of the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) support unlock with biometrics.
 
 > [!NOTE] Linux-biometrics compatibility by package
 > We recommend installing the `Snap` or `Flatpak` versions of the Bitwarden desktop app, because both fully support biometric unlock and automatic updates. Both also support biometric integration with Bitwarden browser extensions:
@@ -4400,7 +4396,7 @@ Unlocking the Bitwarden desktop app with biometrics is supported in Linux when y
 > 
 > Learn more about [desktop app feature support](https://bitwarden.com/help/desktop-app-feature-support/).
 
-## AppImage, Snap, .deb, and .rpm
+## Snap, AppImage, .deb, and .rpm
 
 To turn on biometric unlock:
 
@@ -7384,16 +7380,18 @@ URL: https://bitwarden.com/help/change-at-risk-passwords/
 ---
 # Change At-Risk Passwords
 
-If you see a **Review and change at-risk passwords**or a**Your password is at-risk, update it now** banner, you have a password in your vault that should be replaced with something stronger. This banner is appearing to you for one of two reasons:
+Bitwarden prompts you to update weak, reused, or exposed passwords with a **Review and change at-risk passwords** banner in your vault or an **At-risk password** or **Change now** label below the password field in the opened login item. Replacing at-risk passwords strengthens your overall security and reduces the risk of your accounts being compromised.
 
-- The administrative team for your organization has identified a weak, re-used, or exposed password and requires you to update it, you may also receive an email informing you of this. Browser extensions will report in the **Vaults** view when your admin team requires you to update a password.
-- As a Premium user, a weak, re-used, or exposed password has been automatically identified by underlying [vault health reporting](https://bitwarden.com/help/reports/) and suggested by Bitwarden as an important opportunity to improve your security hygiene. Browser extensions, desktop apps, and the web app will report in the **Item** view when a particular password should be improved.
+This notification appears for one of two reasons:
+
+- As an organization member, the administrative team identified a weak, reused, or exposed password and requires you to update it. You may also receive an email notification. The banner appears in the **Vaults** view of your browser extension and you may also receive an email about the at-risk password:
 
 ![Change an at-risk password](https://bitwarden.com/assets/2N1WqXBUVvutN9qQR73WbQ/ad56aeac00234010b56e1cc74a4ba542/2025-04-25_13-08-23.png)
+- As a Premium user, Bitwarden automatically identified a weak, reused, or exposed password in your vault with [vault health reporting](https://bitwarden.com/help/reports/). The notification appears when on the opened **View Login** page in your browser extension, desktop app, or the web app.
 
-In your browser extension, click the banner and use the **Change**button for each at-risk password to replace a weak, re-used, or exposed password with a strong new one. In most cases, the browser extension will guide you directly to that service's "Change password" page. Remember that:
+In your browser extension, select the banner and use the **Change** button to update each at-risk password with a new, stronger one. Alternatively, select the **Change now**button within each flagged login item. In most cases, the browser extension will take you directly to that service's change password page. Remember that:
 
-- You must change the password within the website's "Change password" form as well as within Bitwarden.
+- You must update the password within the website's "Change password" form and within your Bitwarden vault.
 - You should use the [password generator](https://bitwarden.com/help/generator/#tab-browser-extension-6xKx6UelBVUbCceB9IupEa/) to create a strong and unique new password.
 ---
 URL: https://bitwarden.com/help/change-client-environment/
@@ -12814,12 +12812,26 @@ To create a collection:
 ---
 URL: https://bitwarden.com/help/create-send/
 ---
-# Create a Send
+# Create & Edit a Send
 
-Anyone can create text Sends, but file Sends can only be created by [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (families, teams, or enterprise). 
+[Bitwarden Send](https://bitwarden.com/help/about-send/) lets you share encrypted text or files with anyone via a secure, generated link. Create a Send from any Bitwarden app and configure access and privacy options to fit your sharing needs.
 
 > [!NOTE] Remove Send policy
-> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-options/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
+> If you're a member of an organization that activated the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/), your access to Sends is limited:
+> 
+> - You cannot create new Sends or edit existing ones.
+> - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
+> - You cannot access the Sends page with the Bitwarden web app.
+
+## Create a Send
+
+There are two types of Sends:
+
+- A **text Send** shares encrypted text content, such as a message or note. All Bitwarden users can create and edit a text Send.
+- A **file Send** contains an encrypted file, such as a document or image. Only [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise) can make a file Send. To create a file Send, your account's email address must also be verified.
+
+> [!NOTE] Older accounts may need to verify an email
+> If your account is older, you may need to proactively verify your email. Log in to the [web app](https://vault.bitwarden.com/) and select **Verify Email**. If your account email is not verified, then you cannot create [Sends](https://bitwarden.com/help/about-send/).
 
 Choose the Bitwarden app you want to Send from to get started:
 
@@ -12827,41 +12839,41 @@ Choose the Bitwarden app you want to Send from to get started:
 
 To create a new Send from the web app:
 
-1. Select **Send** from the navigation.
+1. Select [send] **Send**.
 
 > [!NOTE] About the Send View
-> This view will list Sends that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). Like the **Vaults** view, you can filter your Sends by selecting one of the available **Types**.
-
-2. Select the + **New Send** button:
+> This page lists all Sends you created that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). You can filter your Sends by selecting one of the available **Types**.
+2. Select + **New**:
 
 ![New Send](https://bitwarden.com/assets/9KgYcB25tb8NfYnitr0c0/a874be205a9a09ed66ad33a8d4c95ca9/2026-02-25_10-37-01.png)
 *New Send*
+3. Select which Send type you want to create, **Text** or **File**.
+4. Enter a **Name**. This will be visible to anyone who opens the Send.
+5. Depending on the type of Send:
 
-3. On the **New Send** dialog, specify the following:
+ - For a **text Send**, enter the **Text to share**. If you don't want the Send to display this text when the link is first opened in a browser, check **Hide text by default**. This will require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to read your message.
 
-- **What type of Send is this?**: Choose whether this Send will be **Text** or a **File**:
+> [!NOTE] Note; Create Send, text character limits
+> Text Sends can include up to 1,000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted.
+ - For a **file Send**, select **Choose file** and pick your file.
 
-| **Type** | **Steps** |
-|------|------|
-| **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
-| **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email) |
+> [!NOTE] Create Send, file Send size limit
+> The maximum file size per file Send is 500 MB (100 MB on mobile).
+6. Pick a **Deletion date** from the dropdown menu, which is when the Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/). The default is seven days and the maximum allowed time is 30 days from creation.
+7. (Optional) Adjust the remaining options as needed:
 
-- **Send name**: Choose an identifiable, meaningful name for this Send.
+ - Pick **Who can view** from the dropdown menu:
 
- - By default, a Send is scheduled for deletion seven days from its creation. You can change this and other options (see step 4), otherwise select **Save** to finish creating your Send.
+ - Choose **Anyone with the link** to allow anybody to open the Send link and view its contents. This is the default.
+ - Choose **Specific people** and enter their email addresses (up to 2,500 characters) to require [Send email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) before the Send can be opened.
+ - Choose **Anyone with a password set by you** to require recipients to enter a [password to open the Send](https://bitwarden.com/help/send-privacy/#send-passwords/).
+ - Enter a number in **Limit views** to control how many times the Send can be opened before it's [deactivated](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/). No limit is set by default.
+ - Check **Hide your email address from viewers** to remove your account's email from the opened Send.
 
-4. Configure the following options as needed:
-
-| **Option** | **Description** |
-|------|------|
-| **Hide text by default** | The contents of the send will be hidden by default. |
-| **Deletion date** | The Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/) on the specified date and time. By default, seven days from creation. The **maximum allowed value**is 30 days from creation. |
-| **Who can view** | Choose who can view: **Anyone with the link:** Anyone who receives the Send link can view the contents of the Send. **Specific people:** [Specify the email address](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) of recipients who can receive this Send. They will receive a verification code in their email when accessing the Send (**Requires Premium**). **Anyone with a password set by you:**[Require a password](https://bitwarden.com/help/send-privacy/#send-passwords/) to be entered by recipients of this Send in order to gain access. |
-| **Limit views** | The Send will be [disabled](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/) after the specified access count is reached. By default, unspecified. |
-| **Hide your email address from viewers** | [Hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from Send recipients. |
-| **Private note** | Enter private notes for this Send, which will only be visible to you. |
-
-Once you are happy with your Send, select **Save** to finish.
+> [!NOTE] Send, hide email from viewers
+> When a Send is restricted to **Specific people** or **Anyone with a password set by you**, your email address is always hidden until the recipient enters the emailed verification code or password. The **Hide your email address from viewers** setting only applies after that point.
+ - Enter a **Private note** that's visible only to you, the creator of the Send. This note does not appear on the opened Send.
+8. Select **Save**.
 
 Once your Send is created, use the ⋮ **Options** menu and select the [clone] **Copy Send link** button to copy the generated link to your clipboard:
 
@@ -12872,30 +12884,6 @@ Once copied, share your Send link with intended recipients however you prefer. S
 
 ### Browser extension
 
-To create a new Send from a browser extension:
-
-1. Select the [send]**Send** tab.
-
-> [!NOTE] About the Send View
-> This view will list Sends that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). Like the **Vaults** view, you can filter your Sends by selecting one of the available **Types**.
-
-2. Select the + **New** button and choose **Text** or **File**:
-
-![Send view in a browser extension ](https://bitwarden.com/assets/2qOv6DJYX1is2zurmeVBOd/5d2f0fd435c2534bc3377d651cd4f7f1/2026-02-25_11-11-56.png)
-*Send view in a browser extension *
-
-3. On the **New Send** view, specify the following:
-
-- **Send name**: Choose an identifiable, meaningful name for this Send.
-- Some options will depend on whether you selected **Text** or **File**:
-
-| **Type** | **Steps** |
-|------|------|
-| **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
-| **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email). |
-
-By default, a Send is scheduled for deletion seven days from its creation. You can change this and other options (see Step 4), otherwise select **Save** to finish creating your Send.
-
 > [!NOTE] Firefox and Safari browser send
 > To create a send while using the Firefox or Safari browser extension, you must open the extension in the side bar or select the popout button:
 > 
@@ -12903,18 +12891,43 @@ By default, a Send is scheduled for deletion seven days from its creation. You c
 > ![Browser extension pop-out](https://bitwarden.com/assets/1cbJy0jLBmSQmRumvYzVwp/a9e43f4c154686249056924eb3e56323/pop_out_screenshot.png)
 > *Browser extension pop-out*
 
-4. Configure the following options as needed:
+To create a new Send from the browser extension:
 
-| **Option** | **Description** |
-|------|------|
-| **Hide text by default** | The contents of the send will be hidden by default. |
-| **Deletion date** | The Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/) on the specified date and time. By default, seven days from creation. The **maximum allowed value**is 30 days from creation. |
-| **Who can view** | Choose who can view: **Anyone with the link:** Anyone who receives the Send link can view the contents of the Send. **Specific people:** [Specify the email address](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) of recipients who can receive this Send. They will receive a verification code in their email when accessing the Send (**Requires Premium**). **Anyone with a password set by you:**[Require a password](https://bitwarden.com/help/send-privacy/#send-passwords/) to be entered by recipients of this Send in order to gain access. |
-| **Limit views** | The Send will be [disabled](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/) after the specified access count is reached. By default, unspecified. |
-| **Hide your email address from viewers** | [Hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from Send recipients. |
-| **Private note** | Enter private notes for this Send, which will only be visible to you. |
+1. Select [send]**Send** .
 
-Once you are happy your Send, select **Save** to finish.
+> [!NOTE] About the Send View
+> This page lists all Sends you created that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). You can filter your Sends by selecting one of the available **Types**.
+2. Select + **New**:
+
+![Send view in a browser extension ](https://bitwarden.com/assets/2qOv6DJYX1is2zurmeVBOd/5d2f0fd435c2534bc3377d651cd4f7f1/2026-02-25_11-11-56.png)
+*Send view in a browser extension *
+3. Select which Send type you want to create, **Text** or **File**.
+4. Enter a **Name**. This will be visible to anyone who opens the Send.
+5. Depending on the type of Send:
+
+ - For a **text Send**, enter the **Text to share**. If you don't want the Send to display this text when the link is first opened in a browser, check **Hide text by default**. This will require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to read your message.
+
+> [!NOTE] Note; Create Send, text character limits
+> Text Sends can include up to 1,000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted.
+ - For a **file Send**, select **Choose file** and pick your file.
+
+> [!NOTE] Create Send, file Send size limit
+> The maximum file size per file Send is 500 MB (100 MB on mobile).
+6. Pick a **Deletion date** from the dropdown menu, which is when the Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/). The default is seven days and the maximum allowed time is 30 days from creation.
+7. (Optional) Adjust the remaining options as needed:
+
+ - Pick **Who can view** from the dropdown menu:
+
+ - Choose **Anyone with the link** to allow anybody to open the Send link and view its contents. This is the default.
+ - Choose **Specific people** and enter their email addresses (up to 2,500 characters) to require [Send email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) before the Send can be opened.
+ - Choose **Anyone with a password set by you** to require recipients to enter a [password to open the Send](https://bitwarden.com/help/send-privacy/#send-passwords/).
+ - Enter a number in **Limit views** to control how many times the Send can be opened before it's [deactivated](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/). No limit is set by default.
+ - Check **Hide your email address from viewers** to remove your account's email from the opened Send.
+
+> [!NOTE] Send, hide email from viewers
+> When a Send is restricted to **Specific people** or **Anyone with a password set by you**, your email address is always hidden until the recipient enters the emailed verification code or password. The **Hide your email address from viewers** setting only applies after that point.
+ - Enter a **Private note** that's visible only to you, the creator of the Send. This note does not appear on the opened Send.
+8. Select **Save**.
 
 Once your Send is created, you may Copy the link or select the ⋮ and then **Copy Send link**to copy the generated link to your clipboard:
 
@@ -12925,42 +12938,43 @@ Once copied, share your Send link with intended recipients however you prefer. S
 
 ### Desktop
 
-To create a new Send from a desktop app:
+To create a new Send from the desktop app:
 
-1. Select the [send] **Send** tab.
+1. Select [send] **Send**.
 
 > [!NOTE] About the Send View
-> This view will list Sends that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). Like the **Vaults** view, you can filter your Sends by selecting one of the available **Types**.
-
-2. Select the **New Send** button:
+> This page lists all Sends you created that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). You can filter your Sends by selecting one of the available **Types**.
+2. Select + **New**:
 
 ![Send view in a Desktop App ](https://bitwarden.com/assets/2O01p5FyMpUhlhi5bAq7mH/3135d39e953c52bb0d843ee6afeb1121/2026-04-23_11-48-19.png)
 *Send view in a Desktop App *
+3. Select which Send type you want to create, **Text** or **File**.
+4. Enter a **Name**. This will be visible to anyone who opens the Send.
+5. Depending on the type of Send:
 
-3. In the right-most column, specify the following:
+ - For a **text Send**, enter the **Text to share**. If you don't want the Send to display this text when the link is first opened in a browser, check **Hide text by default**. This will require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to read your message.
 
-- **Name**: Choose an identifiable, meaningful name for this Send.
-- **Type**: Choose whether this Send will be **Text** or a **File**:
+> [!NOTE] Note; Create Send, text character limits
+> Text Sends can include up to 1,000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted.
+ - For a **file Send**, select **Choose file** and pick your file.
 
-| **Type** | **Steps** |
-|------|------|
-| **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
-| **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email). |
+> [!NOTE] Create Send, file Send size limit
+> The maximum file size per file Send is 500 MB (100 MB on mobile).
+6. Pick a **Deletion date** from the dropdown menu, which is when the Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/). The default is seven days and the maximum allowed time is 30 days from creation.
+7. (Optional) Adjust the remaining options as needed:
 
-By default, a Send is scheduled for deletion seven days from its creation. You can change this and other options (see step 4), otherwise select **Save** to finish creating your Send.
+ - Pick **Who can view** from the dropdown menu:
 
-4. Configure the following options as needed:
+ - Choose **Anyone with the link** to allow anybody to open the Send link and view its contents. This is the default.
+ - Choose **Specific people** and enter their email addresses (up to 2,500 characters) to require [Send email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) before the Send can be opened.
+ - Choose **Anyone with a password set by you** to require recipients to enter a [password to open the Send](https://bitwarden.com/help/send-privacy/#send-passwords/).
+ - Enter a number in **Limit views** to control how many times the Send can be opened before it's [deactivated](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/). No limit is set by default.
+ - Check **Hide your email address from viewers** to remove your account's email from the opened Send.
 
-| **Option** | **Description** |
-|------|------|
-| **Hide text by default** | The contents of the send will be hidden by default. |
-| **Deletion date** | The Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/) on the specified date and time. By default, seven days from creation. The **maximum allowed value**is 30 days from creation. |
-| **Who can view** | Choose who can view: **Anyone with the link:** Anyone who receives the Send link can view the contents of the Send. **Specific people:** [Specify the email address](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) of recipients who can receive this Send. They will receive a verification code in their email when accessing the Send (**Requires Premium**). **Anyone with a password set by you:**[Require a password](https://bitwarden.com/help/send-privacy/#send-passwords/) to be entered by recipients of this Send in order to gain access. |
-| **Limit views** | The Send will be [disabled](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/) after the specified access count is reached. By default, unspecified. |
-| **Hide your email address from viewers** | [Hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from Send recipients. |
-| **Private note** | Enter private notes for this Send, which will only be visible to you. |
-
-Once you are happy your Send, select **Save** to finish.
+> [!NOTE] Send, hide email from viewers
+> When a Send is restricted to **Specific people** or **Anyone with a password set by you**, your email address is always hidden until the recipient enters the emailed verification code or password. The **Hide your email address from viewers** setting only applies after that point.
+ - Enter a **Private note** that's visible only to you, the creator of the Send. This note does not appear on the opened Send.
+8. Select **Save**.
 
 Once your Send is created, select the ⋮ and then **Copy Send link**to copy the generated link to your clipboard:
 
@@ -12973,41 +12987,41 @@ Once copied, share your Send link with intended recipients however you prefer. S
 
 To create a new Send from a mobile app:
 
-1. Tap the [send] **Send** tab.
+1. Tap [send] **Send**.
 
 > [!NOTE] About the Send View
-> This view will list Sends that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). Like the **Vaults** view, you can filter your Sends by selecting one of the available **Types**.
-
-2. Tap the + **New send** button:
+> This page lists all Sends you created that have not reached their [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/). You can filter your Sends by selecting one of the available **Types**.
+2. Tap the + **New icon**:
 
 ![Send on mobile](https://bitwarden.com/assets/5vHsSA3o9O735MitlnOPVr/e2eeb5387bf1358f4aa0aaafbfaa3d5c/new_send_mobile.png)
 *Send on mobile*
+3. Select which Send type you want to create, **Text** or **File**.
+4. Enter a **Send name**. This will be visible to anyone who opens the Send.
+5. Depending on the type of Send:
 
-3. On the **Add Send** view, specify the following:
+ - For a **text Send**, enter the **Text to share**. If you don't want the Send to display this text when the link is first opened in a browser, toggle on **When accessing the Send, hide the text by default**. This will require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to read your message.
 
-- **Type**: Choose whether this Send will be **Text** or a **File**:
+> [!NOTE] Note; Create Send, text character limits
+> Text Sends can include up to 1,000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted.
+ - For a **file Send**, select **Choose file** and pick your file.
 
-| **Type** | **Steps** |
-|------|------|
-| **Text** | Type or paste the desired text into the input box. Toggle the **When accessing the Send, hide the text by default**option to require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) when they open a Send. Sends may not exceed 1000 characters encrypted. When saved, the character count of a Send's text is increased due to encryption, meaning that an 700-character Send will scale to ~1,000 characters when it comes into contact with Bitwarden, triggering this error. As a rule of thumb, character counts will grow between 30-50% when encrypted. |
-| **File** | Select the **Choose File**button and browse for the file to Send. The maximum file size per Send is 500 MB (100 MB on Mobile). (**Requires Premium**& Verified Email). |
+> [!NOTE] Create Send, file Send size limit
+> The maximum file size per file Send is 500 MB (100 MB on mobile).
+6. Pick a **Deletion date** from the dropdown menu, which is when the Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/). The default is seven days and the maximum allowed time is 30 days from creation.
+7. (Optional) Adjust the remaining options as needed:
 
-- **Send name**: Choose an identifiable, meaningful name for this Send.
+ - Pick **Who can view** from the dropdown menu:
 
- - By default, a Send is scheduled for deletion seven days from its creation. You may change this and other options using the [angle-down] **Additional options** menu (see Step 4), otherwise tap **Save** to finish creating your Send.
+ - Choose **Anyone with the link** to allow anybody to open the Send link and view its contents. This is the default.
+ - Choose **Specific people** and enter their email addresses (up to 2,500 characters) to require [Send email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) before the Send can be opened.
+ - Choose **Anyone with a password set by you** to require recipients to enter a [password to open the Send](https://bitwarden.com/help/send-privacy/#send-passwords/).
+ - Enter a number in **Maximum access count** to control how many times the Send can be opened before it's [deactivated](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/). No limit is set by default.
+ - Toggle on **Hide my email address from recipients** to remove your account's email from the opened Send.
 
-4. Configure the following options as needed:
-
-| **Option** | **Description** |
-|------|------|
-| **Hide text by default** | The contents of the send will be hidden by default. |
-| **Deletion date** | The Send will be permanently [deleted](https://bitwarden.com/help/send-lifespan/#deletion-behavior/) on the specified date and time. By default, seven days from creation. The **maximum allowed value**is 30 days from creation. |
-| **Who can view** | Choose who can view: **Anyone with the link:** Anyone who receives the Send link can view the contents of the Send. **Specific people:** [Specify the email address](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) of recipients who can receive this Send. They will receive a verification code in their email when accessing the Send (**Requires Premium**). **Anyone with a password set by you:**[Require a password](https://bitwarden.com/help/send-privacy/#send-passwords/) to be entered by recipients of this Send in order to gain access. |
-| **Limit views** | The Send will be [disabled](https://bitwarden.com/help/send-lifespan/#maximum-access-count-behavior/) after the specified access count is reached. By default, unspecified. |
-| **Hide your email address from viewers** | [Hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from Send recipients. |
-| **Private note** | Enter private notes for this Send, which will only be visible to you. |
-
-Once you are happy your Send, select **Save** to finish.
+> [!NOTE] Send, hide email from viewers
+> When a Send is restricted to **Specific people** or **Anyone with a password set by you**, your email address is always hidden until the recipient enters the emailed verification code or password. The **Hide your email address from viewers** setting only applies after that point.
+ - Enter a **Private note** that's visible only to you, the creator of the Send. This note does not appear on the opened Send.
+8. Tap **Save**.
 
 Once your Send is created, select the ⋯ and then choose the **Share link** option:
 
@@ -13034,6 +13048,49 @@ To create a simple file Send with a [deletion date](https://bitwarden.com/help/s
 ```
 bw send -n "My File Send" - d 14 -f /Users/myaccount/Documents/my_file.pdf
 ```
+
+## Edit a Send
+
+You may want to update a Send after creating it.
+
+### Web app
+
+To edit a Send:
+
+1. Go to **Send**.
+2. Select the name of the **Send**.
+3. Select **Edit**.
+4. Make your desired changes and then select **Save**.
+
+### Browser extension
+
+To edit a Send:
+
+1. Go to **Send**.
+2. Select the name of the **Send**.
+3. Make your desired changes and then select **Save**.
+
+### Desktop
+
+To edit a Send:
+
+1. Go to **Send**.
+2. Select the name of the **Send**.
+3. Make your desired changes and then select **Save**.
+
+### Mobile
+
+To edit a Send:
+
+1. Tap **Send**.
+2. Tap the name of the **Send**.
+3. Tap the ⋯ **Menu icon**.
+4. Tap **Edit**.
+5. Make your desired changes and then tap the ✓ **Check icon**.
+
+### CLI
+
+Use the `edit` command to [update a Send with the CLI](https://bitwarden.com/help/send-cli/#edit/).
 ---
 URL: https://bitwarden.com/help/custom-fields/
 ---
@@ -13699,7 +13756,10 @@ URL: https://bitwarden.com/help/delete-member-accounts/
 # Delete Organization Member Accounts
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 
 Depending on your organization's setup, you may be able to delete member accounts. Deleting an account is different than removing a user.
 
@@ -13724,7 +13784,10 @@ URL: https://bitwarden.com/help/delete-your-account/
 # Delete an Account or Organization
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 
 Deleting a Bitwarden account or organization permanently deletes the account or organization and **all data that is associated with it**. Bitwarden does not "soft delete" any data.
 
@@ -16962,6 +17025,38 @@ On the Add Item or Edit Item screen, select the **Favorite** ⭐ and **Save** th
 
 ![Favorite an item on mobile](https://bitwarden.com/assets/1rvKA8zNjd1RktotXjBEUg/f25cc45f33b29b901ec8e1f3ddc96d7c/2025-01-22_09-46-54.png)
 ---
+URL: https://bitwarden.com/help/fill-assist/
+---
+# Fill Assist
+
+Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension can use to determine how to autofill credentials.
+
+Often, websites cause autofill issues because they deviate from a widely-adopted set of norms found in the code for login or account creation forms. Fill assist solves this problem by allowing Bitwarden to identify sites that behave differently and create custom instructions for how browser extensions should autofill on those sites.
+
+## Turn on fill assist
+
+Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
+
+> [!NOTE] Fill assist, keep reading for more details.
+> No further action is required! Once turned on, you should observe better autofill performance on sites included the curated list. The rest of the article covers more detail about how fill assist works.
+
+## How it works
+
+Powered by the Bitwarden [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
+
+- **Supported sites**: Fill assist only steps in when the site you're browsing is included in [Map the Web](https://github.com/bitwarden/map-the-web/); typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
+- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics that they look in favor of a more targeted alternative.
+- **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
+
+Those maps, which can be found in the [Map the Web](https://github.com/bitwarden/map-the-web/) project, are retrieved by your browser extension client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
+
+- **Data privacy**: Once retrieved, your browser extension stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
+- **Independent of client release**: Because the browser extension recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
+
+### Report an issue
+
+Please also note that, because fill assist instructions are targeted on specific CSS selectors on a form, they are liable to stop working when the maintainers of that website make changes. We encourage all users to continue to [report autofill issues](https://docs.google.com/forms/d/e/1FAIpQLSfkxh1w6vK8fLYwAbAAEVhvhMAJwfFNDtYtPUVk1y5WTHvJmQ/viewform), as some reports may be good candidates for updating or adding fill assist instructions.
+---
 URL: https://bitwarden.com/help/filter-your-vault/
 ---
 # Filter your Vault
@@ -17037,7 +17132,10 @@ Not knowing your fingerprint phrase will never result in you being locked out of
 You cannot change your current account's fingerprint phrase. If you wish to create a new fingerprint phrase, you can [delete the account](https://bitwarden.com/help/delete-your-account/) and start a new one to generate a new phrase. 
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 
 Our fingerprint phrases are generated from the [Electronic Frontier Foundation's long word list](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases), which has been "manually checked and [the EFF has] attempted to remove as many profane, insulting, sensitive, or emotionally-charged words as possible."
 ---
@@ -17875,12 +17973,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable Windows Hello on your computer.
 2. In the Security section, an **Unlock with Windows Hello** option will appear if Windows Hello is supported and enabled on your computer:
 
-![Windows unlock options ](https://bitwarden.com/assets/HQYTF4l5WyPbeTMHhhDnN/fe4ddb713557443e7836f3737534ca1e/windows.png)
+![Windows unlock options ](https://bitwarden.com/assets/HQYTF4l5WyPbeTMHhhDnN/a1c42606ebb2144f88da3cbf975ec198/app_settings_windows.png)
+*Windows unlock options *
 
 Check the **Unlock with Windows Hello** option to proceed. Your computer will prompt you to input your biometric.
 3. Once enabled, use the **Unlock with Windows Hello**button on the unlock screen to unlock your vault.
 
 ![Unlock desktop with biometric](https://bitwarden.com/assets/JSmueUxWjUGxQK0bA716O/f6bcfa6ec4523b8080a77e418e1eae8e/2025-08-13_11-20-59.png)
+*Unlock desktop with biometric*
 
 **Security**settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 
@@ -17906,12 +18006,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable Touch ID on your computer. See Apple's [Touch ID Documentation](https://support.apple.com/en-us/HT207054) for help.
 2. In the Security section, an **Unlock with Touch ID** option will appear if Touch ID is supported and enabled on your computer:
 
-![macOS unlock options](https://bitwarden.com/assets/3O1If6IchE83Qb8ee0mYqx/9c61afb380d8479eb4e55e97c2e628c6/macos-bio1.png)
+![macOS unlock options](https://bitwarden.com/assets/3O1If6IchE83Qb8ee0mYqx/f212b79cde0811dfc7ecc1f50e9b3826/App_settings_update_macOS.png)
+*macOS unlock options*
 
 Check the **Unlock with Touch ID** checkbox to proceed. Your computer will prompt you to input your fingerprint to confirm.
 3. Once enabled, use the **Unlock with Touch ID**button on the Unlock screen to unlock your vault.
 
 ![Unlock with Touch ID ](https://bitwarden.com/assets/MPQwBfgcoTZJvan99sZCZ/e7a2305ffdc24af1fc08adf466463841/mac_unlock_with_touch_id.png)
+*Unlock with Touch ID *
 
 **Security**settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 
@@ -17944,12 +18046,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable System Authentication on your machine.
 2. In the Security section of your Bitwarden desktop app, an enable **Unlock with system authentication** option will appear if system authentication is supported and enabled on your machine:
 
-![Unlock with system authentication](https://bitwarden.com/assets/2AMdLd9zqVZwkDMfS1ZW00/bfe0b4bd4b93541fed04563e55722358/Aug_15_Screenshot_from_Bitwarden.png)
+![Unlock with system authentication](https://bitwarden.com/assets/2AMdLd9zqVZwkDMfS1ZW00/110ef66157f378b7c84748710d0ffd2c/unlock_options_linux.png)
+*Unlock with system authentication*
 
 Check the **Unlock with system authentication**checkbox to proceed. You machine will prompt you to input your verification to confirm.
 3. Once enabled, use **Unlock with system authentication** button on the unlock screen to unlock your vault.
 
 ![Unlock vault system authentication](https://bitwarden.com/assets/6UIFh90LrxZzgrbacuMw3o/ef9b39a24775d098f1ad9825094206f0/Aug_15_Screenshot_from_Bitwarden__1_.png)
+*Unlock vault system authentication*
 
 Security settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 
@@ -25035,7 +25139,7 @@ To ensure the security of your organization, Bitwarden applies a three-step proc
 ### Invite
 
 > [!TIP] Enterprise policy before inviting users
-> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
+> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization. Once users have entered the [accept](https://bitwarden.com/help/managing-users/#accept/) state, they will be subject to organization policies.
 
 To invite someone to your organization:
 
@@ -25072,6 +25176,12 @@ Invited users will receive an email from Bitwarden inviting them to join the org
 *Organization invitation*
 
 You must **fully log in to the Bitwarden web app** to accept the invitation. When you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. Additionally, organization members will have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when they accept an invitation.
+
+> [!NOTE] Accepted status require compliance
+> The following policies will require compliance before users can be [confirmed](https://bitwarden.com/help/managing-users/#confirm/). These policies include:
+> 
+> - [Single organization](https://bitwarden.com/help/policies/#single-organization/)
+> - [Require two-step login](https://bitwarden.com/help/policies/?q=enterprise+policies#require-two-step-login/)
 
 ### Confirm
 
@@ -25149,7 +25259,10 @@ The **Members** page is also where you can withdraw someone from an organization
 - [Delete organization member accounts](https://bitwarden.com/help/delete-member-accounts/)
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 ---
 URL: https://bitwarden.com/help/marketplace-deployments/
 ---
@@ -29023,7 +29136,7 @@ Enterprise policies allow Enterprise organizations to enforce security rules and
 
 ## Set Enterprise policies
 
-Organization owners and admins can apply Enterprise policies. To update a policy: 
+Organization owners and admins can configure Enterprise policies. Enterprise policies are applied to current organization members and members who have [accepted](https://bitwarden.com/help/managing-users/#accept/) an invitation to your organization. To update a policy: 
 
 1. Within the Bitwarden web app, open the Admin Console.
 2. Select **Settings**.
@@ -29069,13 +29182,13 @@ After a [member is removed](https://bitwarden.com/help/remove-users/), the data 
 
 #### Prompt users to move items to the organization
 
-Turn on this sub-option of the **Centralize organization ownership** policy to prompt users who have items currently stored in **My Vault** to [transfer all such items to organization ownership under the My items location](https://bitwarden.com/help/transfer-ownership/). This transfer procedure is a quick, one-click process. 
+Turn on this option within the **Centralize organization ownership** policy to prompt users who have items currently stored in **My Vault** to [transfer all such items to organization ownership under the My items location](https://bitwarden.com/help/transfer-ownership/). This transfer procedure is a quick, one-click process. 
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
 ### Send options
 
-Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send.This policy is not enforced for owners and admins.
+Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
 
 ### Remove Send
 
@@ -30408,7 +30521,7 @@ URL: https://bitwarden.com/help/receive-send/
 
 Sends can be received and opened by anyone with the link, including those who do not have Bitwarden accounts—unlike regular vault items. Send links are randomly generated, and will look something like this:
 
-- `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden/com/#/send/...`
+- `https://send.bitwarden.com/#...`, which will automatically resolve to `https://vault.bitwarden.com/#/send/...`
 - `https://your.selfhosted.domain.com/#/send/....` if you're self-hosting
 
 ![A received Send](https://bitwarden.com/assets/LLnrgZwyr6IAJ0GImXLnj/da3e363db0474f4cd6a57a44a6f1bd8f/Receive_a_send.png)
@@ -30534,6 +30647,23 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.6.1
+
+(The listed release number is for the Bitwarden Server, other version numbers released in this cycle include Web 2026.6.2, Browser Extension 2026.6.0, Desktop 2026.6.0, Mobile 2026.6.1, and CLI 2026.6.0)
+
+#### Password Manager
+
+- ⭐ **Fill assist for browser extensions**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
+- ⭐ **Biometrics on Linux simplified**: Setting up [biometrics on Linux](https://bitwarden.com/help/biometrics/#tab-linux-2vCWb5iFg4OqKS0B2xXpqW/) to unlock the Bitwarden desktop no longer requires a secret service daemon.
+- ⭐ **Desktop app settings UI update**: The Desktop app settings dialogue has been updated. Learn more about the [Desktop app](https://bitwarden.com/help/getting-started-desktop/).
+- **Send recipient limit**: When creating a Send restricted to [specific people](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), the email address field now supports up to 2,500 characters.
+- ⭐ **At-risk password notification UI update:** The [at-risk password label](https://bitwarden.com/help/change-at-risk-passwords/) below the password field on **View Login** remains, but the banner that previously appeared at the top of the view was removed. The banner that appears in your vault when Access Intelligence is used to [request a password change](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/) did not change.
+- **Vault sync UI update in browser extension**: The **Sync vault now** text is now greyed out while a [sync](https://bitwarden.com/help/vault-sync/) is in progress and becomes clickable again once the sync is complete.
+
+#### Admin Console
+
+- ⭐ **Organization policies now enforced for accepted members**: Once a user accepts an organization invite, all configured [organization policies](https://bitwarden.com/help/policies/) apply to their account.
 
 ## 2026.6.0
 
@@ -36315,7 +36445,7 @@ This article will describe the generic steps for hosting Bitwarden on Kubernetes
 - [AWS EKS Deployment](https://bitwarden.com/help/aws-eks-deployment/)
 
 > [!NOTE] NGINX ingress deprecation
-> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+> Ingress NGINX has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`, as well as an [article for configuring Gateway API](https://bitwarden.com/help/traffic-routing/). Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of Ingress NGINX.
 
 ## Requirements
 
@@ -36391,7 +36521,7 @@ The following sections describe the methods and values for configuring external 
 
 ##### Ingress
 
-The following table contains the required values for a Kubernetes ingress controller object. Please be aware that NGINX Ingress is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
+The following table contains the required values for a Kubernetes ingress controller object. Please be aware that Ingress NGINX is no longer supported. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) regarding the deprecation of ingress.
 
 | Value | Description |
 |------|------|
@@ -37027,7 +37157,7 @@ URL: https://bitwarden.com/help/send-privacy/
 
 Protect the contents of your Send by configuring a [password for access](https://bitwarden.com/help/send-privacy/#send-passwords/) so unintended recipients can't see the information, and/or to [hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from recipients. For text Sends, you can also optionally require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to prevent exposure to unintentional onlookers.
 
-The **Password**, **Hide Email**, and **Hide Text** options can be set while creating a new Send, or from the **Edit Send** view at any time prior to the Send's [deletion](https://bitwarden.com/help/send-lifespan/#deletion-behavior/).
+The **Password**, **Hide Email**, and **Hide Text** options can be set while creating a new Send, or when [editing a Send](https://bitwarden.com/help/create-send/#edit-a-send/) at any time prior to the Send's [deletion](https://bitwarden.com/help/send-lifespan/#deletion-behavior/).
 
 ## Email-verified recipients
 
@@ -37053,7 +37183,7 @@ Once you password-protect a Send, you won't be able to view the configured passw
 
 ### Change Send passwords
 
-You can change a Send's password at any time from the **Edit Send** view. Changing a Send's password will not require you to enter the previous password. When changing a Send's password, the **Password** field will change to **New Password.**
+You can change a Send's password at any time when [editing a Send](https://bitwarden.com/help/create-send/#edit-a-send/). Changing a Send's password will not require you to enter the previous password. When changing a Send's password, the **Password** field will change to **New Password.**
 
 ### Remove Send passwords
 
@@ -37419,7 +37549,7 @@ You will need a Duo account in order to obtain some information required by Bitw
 > [!WARNING] Org Duo
 > Once you initially configure and setup Duo, it is **critically important** that you disable it for the organization before making any further application configuration changes from the Duo Admin Panel. To make configuration changes; disable Duo in Bitwarden, make the required changes in the Duo Admin Panel, and re-enable Duo in Bitwarden.
 > 
-> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members.
+> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members. To mitigate this risk, we recommend that each member enables an [individual two-step login](https://bitwarden.com/help/setup-two-step-login/) method.
 
 You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to setup Duo for your organization. To enable two-step login using Duo for your organization:
 
@@ -37463,7 +37593,7 @@ If you haven't already downloaded the Duo mobile app, we recommend that you do s
 
 The following assumes that **Duo** is your [highest-priority enabled method](https://bitwarden.com/help/setup-two-step-login/#using-multiple-methods/). For organization members, **org-wide Duo is always the highest-priority method**. To access your vault using Duo two-step login:
 
-1. Login to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
+1. Log in to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
 2. Depending on how you have configured Duo, complete the authentication request by:
 
  - Approving the **Duo Push** request from your registered device.
@@ -39425,7 +39555,7 @@ For personal subscriptions, including [Premium individual](https://bitwarden.com
 
 ### Business subscriptions
 
-Business subscriptions, including [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/) and [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) organizations, are subject to VAT or GST rates according to your billing country. If tax is assessed, it's included on invoices as a separate line item. Organization [owners](https://bitwarden.com/help/user-types-access-control/) can remove tax from future payments by entering a valid tax ID for their registered business during sign-up or at any time in the Admin Console.
+Business subscriptions, including [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/) and [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) organizations, are subject to VAT or GST rates according to your billing country. If tax is assessed, it's included on invoices as a separate line item. Depending on your country, organization [owners](https://bitwarden.com/help/user-types-access-control/) can remove tax from future payments by entering a valid tax ID for their registered business during sign-up or at any time in the Admin Console.
 
 To add or update a business subscription's VAT or GST tax ID:
 
@@ -39614,7 +39744,7 @@ Several optional attributes can be added to your `.tf` files. Some of these valu
 | `access_token` | `BW_ACCESS_TOKEN` | (*Sensitive*) The [access token](https://bitwarden.com/help/access-tokens/) value for the configured machine account. This will grant the Terraform Provider access to only specific data in Secrets Manager. |
 | `organization_id` | `BW_ORGANIZATION_ID` | The unique identifier of your organization. Available from the address bar when you're logged in to the Secrets Manager web app. |
 | `api_url` | `BW_API_URL` | URI of the Bitwarden Secrets Manager `/api` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
-| `identity_url` | `BW_IDENTITY_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
+| `identity_url` | `BW_IDENTITY_API_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
 
 A `.tf` file with all attributes explicitly included, instead of passed by environment variables, should look like the following:
 
@@ -39898,9 +40028,9 @@ URL: https://bitwarden.com/help/traffic-routing/
 # Traffic Routing
 
 > [!NOTE]
-> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+> Ingress NGINX has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of Ingress NGINX.
 
-This article provides sample traffic routing configurations for Kubernetes based Bitwarden deployments, and should be used alongside [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/). This article covers a standard Gateway API setup, as well as migration steps if you are running the deprecated NGINX Ingress configuration.
+This article provides sample traffic routing configurations for Kubernetes based Bitwarden deployments, and should be used alongside [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/). This article covers a standard Gateway API setup, as well as migration steps if you are running the deprecated Ingress NGINX configuration.
 
 ## Prerequisites
 
@@ -39912,10 +40042,10 @@ Before proceeding with the Gateway API setup, ensure the following requirements 
 
 ## NGINX Gateway Fabric
 
-The following sections include instructions to [setup](https://bitwarden.com/help/helm-traffic-routing/#install-the-gateway-api-custom-resource-definition/) or [migrate](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) from NGINX Ingress to NGINX Gateway Fabric. Configure Gateway API for your Bitwarden Helm deployment using the steps below:
+The following sections include instructions to [setup](https://bitwarden.com/help/helm-traffic-routing/#install-the-gateway-api-custom-resource-definition/) or [migrate](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) from Ingress NGINX to NGINX Gateway Fabric. Configure Gateway API for your Bitwarden Helm deployment using the steps below:
 
 - **New Deployment**: Follow the steps in order.
-- **Migrating from NGINX Ingress:**Complete the steps up to Create the Gateway resource, then skip to [Migrating from NGINX Ingres](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) to [NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+- **Migrating from Ingress NGINX:**Complete the steps up to Create the Gateway resource, then skip to [Migrating from Ingress NGINX](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) to [NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/).
 
 ### Install the Gateway API custom resource definition
 
@@ -39928,7 +40058,7 @@ kubectl kustomize "https://github.com/nginx/nginx-gateway-fabric/config/crd/gate
 > [!NOTE] CRD versions are tied to the Gateway controller version
 > CRD versions are tied to the Gateway controller version. Check your controller's documentation to confirm the compatible CRD version before running this command. In this example, the CRD version is tied to NGINX Gateway Fabric.
 
-Additional implementation options can be found in Gateway API's documentation.
+Additional implementation options can be found in [Gateway API's documentation](https://gateway-api.sigs.k8s.io/docs/implementations/list/).
 
 ### Install a Gateway controller
 
@@ -39979,9 +40109,35 @@ spec:
 
 If your setup requires HTTP to HTTPS redirect, you can use the following additional route to a `redirect.yaml` file:
 
-[Embedded content]To apply HTTP to HTTPS:
+```yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+ name: bw-gateway-http-redirect
+ namespace: bitwarden
+spec:
+ hostnames:
+ - bw.localtest.me
+ parentRefs:
+ - group: gateway.networking.k8s.io
+ kind: Gateway
+ name: bw-gateway
+ sectionName: http
+ rules:
+ - filters:
+ - type: RequestRedirect
+ requestRedirect:
+ scheme: https
+ statusCode: 301
+```
 
-[Embedded content]Apply the manifest:
+To apply HTTP to HTTPS:
+
+```bash
+kubectl apply -f <redirectFileName>
+```
+
+Apply the manifest:
 
 ```bash
 kubectl apply -f gateway.yaml
@@ -39989,10 +40145,14 @@ kubectl apply -f gateway.yaml
 
 To list the `GatewayClass` resources installed by your controller, run:
 
-[Embedded content]The `gatewayClassName` value above must match one of these.
+```bash
+kubectl get gatewayclass
+```
+
+The `gatewayClassName` value above must match one of these.
 
 > [!NOTE] Continue to Migrate
-> At this point, if you are migrating from an NGINX Ingress setup, continue to [Migrating from NGINX Ingress to Gateway API](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+> At this point, if you are migrating from an Ingress NGINX setup, continue to [Migrating from Ingress NGINX](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) to Gateway API.
 
 ### Configure the Helm chart for Gateway API
 
@@ -40032,7 +40192,7 @@ When `general.gateway.enabled` is `true`, the Helm chart creates an `HTTPRoute` 
 > [!NOTE] TLS handled on gateway level
 > TLS is handled at the Gateway level, not the HTTPRoute. Do not add TLS configuration to the HTTPRoute resource.
 
-## Migrating from NGINX Ingress to Gateway API
+## Migrating from Ingress NGINX to Gateway API
 
 If you have an existing Bitwarden Helm deployment using the deprecated `general.ingress` configuration, you may migrate to Gateway API. If you have not completed [Install NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#install-a-gateway-controller/), and [Create Gateway resource](https://bitwarden.com/help/helm-traffic-routing/#create-the-gateway-resource/) from the steps above, please do so before returning to this section.
 

@@ -5,9 +5,9 @@ URL: https://bitwarden.com/help/traffic-routing/
 # Traffic Routing
 
 > [!NOTE]
-> NGINX Ingress has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of NGINX Ingress.
+> Ingress NGINX has reached EOL and will no longer receive support. Bitwarden has included configurations for Gateway API in `my-values.yaml`. Please see Kubernetes' [official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/) on the deprecation of Ingress NGINX.
 
-This article provides sample traffic routing configurations for Kubernetes based Bitwarden deployments, and should be used alongside [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/). This article covers a standard Gateway API setup, as well as migration steps if you are running the deprecated NGINX Ingress configuration.
+This article provides sample traffic routing configurations for Kubernetes based Bitwarden deployments, and should be used alongside [Self-host with Helm](https://bitwarden.com/help/self-host-with-helm/). This article covers a standard Gateway API setup, as well as migration steps if you are running the deprecated Ingress NGINX configuration.
 
 ## Prerequisites
 
@@ -19,10 +19,10 @@ Before proceeding with the Gateway API setup, ensure the following requirements 
 
 ## NGINX Gateway Fabric
 
-The following sections include instructions to [setup](https://bitwarden.com/help/helm-traffic-routing/#install-the-gateway-api-custom-resource-definition/) or [migrate](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) from NGINX Ingress to NGINX Gateway Fabric. Configure Gateway API for your Bitwarden Helm deployment using the steps below:
+The following sections include instructions to [setup](https://bitwarden.com/help/helm-traffic-routing/#install-the-gateway-api-custom-resource-definition/) or [migrate](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) from Ingress NGINX to NGINX Gateway Fabric. Configure Gateway API for your Bitwarden Helm deployment using the steps below:
 
 - **New Deployment**: Follow the steps in order.
-- **Migrating from NGINX Ingress:**Complete the steps up to Create the Gateway resource, then skip to [Migrating from NGINX Ingres](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/) to [NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+- **Migrating from Ingress NGINX:**Complete the steps up to Create the Gateway resource, then skip to [Migrating from Ingress NGINX](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) to [NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/).
 
 ### Install the Gateway API custom resource definition
 
@@ -35,7 +35,7 @@ kubectl kustomize "https://github.com/nginx/nginx-gateway-fabric/config/crd/gate
 > [!NOTE] CRD versions are tied to the Gateway controller version
 > CRD versions are tied to the Gateway controller version. Check your controller's documentation to confirm the compatible CRD version before running this command. In this example, the CRD version is tied to NGINX Gateway Fabric.
 
-Additional implementation options can be found in Gateway API's documentation.
+Additional implementation options can be found in [Gateway API's documentation](https://gateway-api.sigs.k8s.io/docs/implementations/list/).
 
 ### Install a Gateway controller
 
@@ -86,9 +86,35 @@ spec:
 
 If your setup requires HTTP to HTTPS redirect, you can use the following additional route to a `redirect.yaml` file:
 
-[Embedded content]To apply HTTP to HTTPS:
+```yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+ name: bw-gateway-http-redirect
+ namespace: bitwarden
+spec:
+ hostnames:
+ - bw.localtest.me
+ parentRefs:
+ - group: gateway.networking.k8s.io
+ kind: Gateway
+ name: bw-gateway
+ sectionName: http
+ rules:
+ - filters:
+ - type: RequestRedirect
+ requestRedirect:
+ scheme: https
+ statusCode: 301
+```
 
-[Embedded content]Apply the manifest:
+To apply HTTP to HTTPS:
+
+```bash
+kubectl apply -f <redirectFileName>
+```
+
+Apply the manifest:
 
 ```bash
 kubectl apply -f gateway.yaml
@@ -96,10 +122,14 @@ kubectl apply -f gateway.yaml
 
 To list the `GatewayClass` resources installed by your controller, run:
 
-[Embedded content]The `gatewayClassName` value above must match one of these.
+```bash
+kubectl get gatewayclass
+```
+
+The `gatewayClassName` value above must match one of these.
 
 > [!NOTE] Continue to Migrate
-> At this point, if you are migrating from an NGINX Ingress setup, continue to [Migrating from NGINX Ingress to Gateway API](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-nginx-ingress-to-gateway-api/).
+> At this point, if you are migrating from an Ingress NGINX setup, continue to [Migrating from Ingress NGINX](https://bitwarden.com/help/helm-traffic-routing/#migrating-from-ingress-nginx-to-gateway-api/) to Gateway API.
 
 ### Configure the Helm chart for Gateway API
 
@@ -139,7 +169,7 @@ When `general.gateway.enabled` is `true`, the Helm chart creates an `HTTPRoute` 
 > [!NOTE] TLS handled on gateway level
 > TLS is handled at the Gateway level, not the HTTPRoute. Do not add TLS configuration to the HTTPRoute resource.
 
-## Migrating from NGINX Ingress to Gateway API
+## Migrating from Ingress NGINX to Gateway API
 
 If you have an existing Bitwarden Helm deployment using the deprecated `general.ingress` configuration, you may migrate to Gateway API. If you have not completed [Install NGINX Gateway Fabric](https://bitwarden.com/help/helm-traffic-routing/#install-a-gateway-controller/), and [Create Gateway resource](https://bitwarden.com/help/helm-traffic-routing/#create-the-gateway-resource/) from the steps above, please do so before returning to this section.
 

@@ -37,6 +37,9 @@ Not knowing your fingerprint phrase will never result in you being locked out of
 You cannot change your current account's fingerprint phrase. If you wish to create a new fingerprint phrase, you can [delete the account](https://bitwarden.com/help/delete-your-account/) and start a new one to generate a new phrase. 
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).
 
 Our fingerprint phrases are generated from the [Electronic Frontier Foundation's long word list](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases), which has been "manually checked and [the EFF has] attempted to remove as many profane, insulting, sensitive, or emotionally-charged words as possible."

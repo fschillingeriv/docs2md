@@ -112,7 +112,7 @@ You will need a Duo account in order to obtain some information required by Bitw
 > [!WARNING] Org Duo
 > Once you initially configure and setup Duo, it is **critically important** that you disable it for the organization before making any further application configuration changes from the Duo Admin Panel. To make configuration changes; disable Duo in Bitwarden, make the required changes in the Duo Admin Panel, and re-enable Duo in Bitwarden.
 > 
-> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members.
+> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members. To mitigate this risk, we recommend that each member enables an [individual two-step login](https://bitwarden.com/help/setup-two-step-login/) method.
 
 You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to setup Duo for your organization. To enable two-step login using Duo for your organization:
 
@@ -156,7 +156,7 @@ If you haven't already downloaded the Duo mobile app, we recommend that you do s
 
 The following assumes that **Duo** is your [highest-priority enabled method](https://bitwarden.com/help/setup-two-step-login/#using-multiple-methods/). For organization members, **org-wide Duo is always the highest-priority method**. To access your vault using Duo two-step login:
 
-1. Login to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
+1. Log in to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
 2. Depending on how you have configured Duo, complete the authentication request by:
 
  - Approving the **Duo Push** request from your registered device.

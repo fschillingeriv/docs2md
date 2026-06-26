@@ -11,7 +11,7 @@ Enterprise policies allow Enterprise organizations to enforce security rules and
 
 ## Set Enterprise policies
 
-Organization owners and admins can apply Enterprise policies. To update a policy: 
+Organization owners and admins can configure Enterprise policies. Enterprise policies are applied to current organization members and members who have [accepted](https://bitwarden.com/help/managing-users/#accept/) an invitation to your organization. To update a policy: 
 
 1. Within the Bitwarden web app, open the Admin Console.
 2. Select **Settings**.
@@ -57,13 +57,13 @@ After a [member is removed](https://bitwarden.com/help/remove-users/), the data 
 
 #### Prompt users to move items to the organization
 
-Turn on this sub-option of the **Centralize organization ownership** policy to prompt users who have items currently stored in **My Vault** to [transfer all such items to organization ownership under the My items location](https://bitwarden.com/help/transfer-ownership/). This transfer procedure is a quick, one-click process. 
+Turn on this option within the **Centralize organization ownership** policy to prompt users who have items currently stored in **My Vault** to [transfer all such items to organization ownership under the My items location](https://bitwarden.com/help/transfer-ownership/). This transfer procedure is a quick, one-click process. 
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
 ### Send options
 
-Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send.This policy is not enforced for owners and admins.
+Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
 
 ### Remove Send
 

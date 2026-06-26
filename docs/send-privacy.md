@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/send-privacy/
 
 Protect the contents of your Send by configuring a [password for access](https://bitwarden.com/help/send-privacy/#send-passwords/) so unintended recipients can't see the information, and/or to [hide your email](https://bitwarden.com/help/send-privacy/#hide-email/) from recipients. For text Sends, you can also optionally require recipients to [toggle visibility](https://bitwarden.com/help/send-privacy/#hide-text/) to prevent exposure to unintentional onlookers.
 
-The **Password**, **Hide Email**, and **Hide Text** options can be set while creating a new Send, or from the **Edit Send** view at any time prior to the Send's [deletion](https://bitwarden.com/help/send-lifespan/#deletion-behavior/).
+The **Password**, **Hide Email**, and **Hide Text** options can be set while creating a new Send, or when [editing a Send](https://bitwarden.com/help/create-send/#edit-a-send/) at any time prior to the Send's [deletion](https://bitwarden.com/help/send-lifespan/#deletion-behavior/).
 
 ## Email-verified recipients
 
@@ -32,7 +32,7 @@ Once you password-protect a Send, you won't be able to view the configured passw
 
 ### Change Send passwords
 
-You can change a Send's password at any time from the **Edit Send** view. Changing a Send's password will not require you to enter the previous password. When changing a Send's password, the **Password** field will change to **New Password.**
+You can change a Send's password at any time when [editing a Send](https://bitwarden.com/help/create-send/#edit-a-send/). Changing a Send's password will not require you to enter the previous password. When changing a Send's password, the **Password** field will change to **New Password.**
 
 ### Remove Send passwords
 

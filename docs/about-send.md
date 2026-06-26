@@ -4,7 +4,14 @@ URL: https://bitwarden.com/help/about-send/
 
 # About Send
 
-Bitwarden Send is an encrypted file and text sharing tool that transmits sensitive information directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+Bitwarden Send is a tool to transmit sensitive text or files directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
+
+> [!NOTE] Remove Send policy
+> If you're a member of an organization that activated the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/), your access to Sends is limited:
+> 
+> - You cannot create new Sends or edit existing ones.
+> - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
+> - You cannot access the Sends page with the Bitwarden web app.
 
 ## Accessing Send
 
@@ -12,23 +19,6 @@ Sends are created, edited, managed, and deleted from the **Send** view in any Bi
 
 ![Send in the web app](https://bitwarden.com/assets/7umXxS0YG58NdB3vb4kwKo/c2a5f8ae8fa0bae6becb2e20e7f59390/2026-02-24_12-52-46.png)
 *Send in the web app*
-
-> [!NOTE] Remove Send policy
-> If you are a member of an organization that activated the [Send controls policy's](https://bitwarden.com/help/policies/#send-options/) **Remove Send** option, you cannot create new Sends or edit existing ones. While the Sends page cannot be accessed with the Bitwarden web app when this policy is enforced, you can view or delete existing Sends from any other client.
-
-## Using Send
-
-Using Bitwarden Send is a two-step process: [Create your Send](https://bitwarden.com/help/create-send/) and share with [intended recipients](https://bitwarden.com/help/receive-send/). To create a Send:
-
-1. Select **New Send**:
-
-![New Send](https://bitwarden.com/assets/5ixV8tBpmNQsujpAfan69u/bc04bef94830ec05cfa414bc4b1d7a58/2026-02-24_10-39-18.png)
-*New Send*
-2. Select the required [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
-
-![Send options](https://bitwarden.com/assets/5vAk27se4vF8LYczDueYex/ff88a11a1da2500eeaa8ff713d459d71/Send_Options.png)
-*Send options*
-3. Share the Send link using any communication channel you prefer.
 
 Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/) which allows you to monitor the Send. Your created Sends will display status icons when a lifespan-related event occurs:
 
@@ -40,7 +30,13 @@ Each Send has a [configured lifespan](https://bitwarden.com/help/send-lifespan/)
 | ✗ | This Send has reached its specified [maximum access count](https://bitwarden.com/help/send-lifespan/#maximum-access-count/). |
 | 🗑️ | This Send has reached its specified [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/) and is **pending deletion**. |
 
-## 
+## Using Send
+
+Using Bitwarden Send is a three-step process:
+
+1. [Create a Send](https://bitwarden.com/help/create-send/) and configure its [lifespan options](https://bitwarden.com/help/send-lifespan/) and [privacy options](https://bitwarden.com/help/send-privacy/) to fit your sharing needs.
+2. Share the Send link with recipients through any channel you prefer.
+3. [Recipients open the Send link](https://bitwarden.com/help/receive-send/) to access the content.
 
 ## Send security
 

@@ -41,6 +41,23 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.6.1
+
+(The listed release number is for the Bitwarden Server, other version numbers released in this cycle include Web 2026.6.2, Browser Extension 2026.6.0, Desktop 2026.6.0, Mobile 2026.6.1, and CLI 2026.6.0)
+
+#### Password Manager
+
+- ⭐ **Fill assist for browser extensions**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
+- ⭐ **Biometrics on Linux simplified**: Setting up [biometrics on Linux](https://bitwarden.com/help/biometrics/#tab-linux-2vCWb5iFg4OqKS0B2xXpqW/) to unlock the Bitwarden desktop no longer requires a secret service daemon.
+- ⭐ **Desktop app settings UI update**: The Desktop app settings dialogue has been updated. Learn more about the [Desktop app](https://bitwarden.com/help/getting-started-desktop/).
+- **Send recipient limit**: When creating a Send restricted to [specific people](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), the email address field now supports up to 2,500 characters.
+- ⭐ **At-risk password notification UI update:** The [at-risk password label](https://bitwarden.com/help/change-at-risk-passwords/) below the password field on **View Login** remains, but the banner that previously appeared at the top of the view was removed. The banner that appears in your vault when Access Intelligence is used to [request a password change](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/) did not change.
+- **Vault sync UI update in browser extension**: The **Sync vault now** text is now greyed out while a [sync](https://bitwarden.com/help/vault-sync/) is in progress and becomes clickable again once the sync is complete.
+
+#### Admin Console
+
+- ⭐ **Organization policies now enforced for accepted members**: Once a user accepts an organization invite, all configured [organization policies](https://bitwarden.com/help/policies/) apply to their account.
+
 ## 2026.6.0
 
 (The listed release number is for the Bitwarden Server, other version numbers released in this cycle also include Directory Connector 2026.6.0, Web 2026.6.0 and Mobile 2026.5.1)

@@ -21,7 +21,7 @@ To ensure the security of your organization, Bitwarden applies a three-step proc
 ### Invite
 
 > [!TIP] Enterprise policy before inviting users
-> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization.
+> For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization. Once users have entered the [accept](https://bitwarden.com/help/managing-users/#accept/) state, they will be subject to organization policies.
 
 To invite someone to your organization:
 
@@ -58,6 +58,12 @@ Invited users will receive an email from Bitwarden inviting them to join the org
 *Organization invitation*
 
 You must **fully log in to the Bitwarden web app** to accept the invitation. When you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. Additionally, organization members will have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when they accept an invitation.
+
+> [!NOTE] Accepted status require compliance
+> The following policies will require compliance before users can be [confirmed](https://bitwarden.com/help/managing-users/#confirm/). These policies include:
+> 
+> - [Single organization](https://bitwarden.com/help/policies/#single-organization/)
+> - [Require two-step login](https://bitwarden.com/help/policies/?q=enterprise+policies#require-two-step-login/)
 
 ### Confirm
 
@@ -135,4 +141,7 @@ The **Members** page is also where you can withdraw someone from an organization
 - [Delete organization member accounts](https://bitwarden.com/help/delete-member-accounts/)
 
 > [!WARNING] Danger Zone
-> Deleting an account is permanent and cannot be undone or restored. To create a backup of your vault data to store in a safe location, [export your vault data](https://bitwarden.com/help/export-your-data/).
+> Deleting an account or organization is **permanent, cannot be undone or restored, and will delete all associated vault data**. You may want to export data before proceeding with account or organization delete:
+> 
+> - [Export individual vault data](https://bitwarden.com/help/export-your-data/).
+> - [Export organization vault data](https://bitwarden.com/help/export-organization-items/).

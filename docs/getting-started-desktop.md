@@ -92,12 +92,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable Windows Hello on your computer.
 2. In the Security section, an **Unlock with Windows Hello** option will appear if Windows Hello is supported and enabled on your computer:
 
-![Windows unlock options ](https://bitwarden.com/assets/HQYTF4l5WyPbeTMHhhDnN/fe4ddb713557443e7836f3737534ca1e/windows.png)
+![Windows unlock options ](https://bitwarden.com/assets/HQYTF4l5WyPbeTMHhhDnN/a1c42606ebb2144f88da3cbf975ec198/app_settings_windows.png)
+*Windows unlock options *
 
 Check the **Unlock with Windows Hello** option to proceed. Your computer will prompt you to input your biometric.
 3. Once enabled, use the **Unlock with Windows Hello**button on the unlock screen to unlock your vault.
 
 ![Unlock desktop with biometric](https://bitwarden.com/assets/JSmueUxWjUGxQK0bA716O/f6bcfa6ec4523b8080a77e418e1eae8e/2025-08-13_11-20-59.png)
+*Unlock desktop with biometric*
 
 **Security**settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 
@@ -123,12 +125,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable Touch ID on your computer. See Apple's [Touch ID Documentation](https://support.apple.com/en-us/HT207054) for help.
 2. In the Security section, an **Unlock with Touch ID** option will appear if Touch ID is supported and enabled on your computer:
 
-![macOS unlock options](https://bitwarden.com/assets/3O1If6IchE83Qb8ee0mYqx/9c61afb380d8479eb4e55e97c2e628c6/macos-bio1.png)
+![macOS unlock options](https://bitwarden.com/assets/3O1If6IchE83Qb8ee0mYqx/f212b79cde0811dfc7ecc1f50e9b3826/App_settings_update_macOS.png)
+*macOS unlock options*
 
 Check the **Unlock with Touch ID** checkbox to proceed. Your computer will prompt you to input your fingerprint to confirm.
 3. Once enabled, use the **Unlock with Touch ID**button on the Unlock screen to unlock your vault.
 
 ![Unlock with Touch ID ](https://bitwarden.com/assets/MPQwBfgcoTZJvan99sZCZ/e7a2305ffdc24af1fc08adf466463841/mac_unlock_with_touch_id.png)
+*Unlock with Touch ID *
 
 **Security**settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 
@@ -161,12 +165,14 @@ One of the most popular desktop app settings is [unlock with biometrics](https:/
 1. Enable System Authentication on your machine.
 2. In the Security section of your Bitwarden desktop app, an enable **Unlock with system authentication** option will appear if system authentication is supported and enabled on your machine:
 
-![Unlock with system authentication](https://bitwarden.com/assets/2AMdLd9zqVZwkDMfS1ZW00/bfe0b4bd4b93541fed04563e55722358/Aug_15_Screenshot_from_Bitwarden.png)
+![Unlock with system authentication](https://bitwarden.com/assets/2AMdLd9zqVZwkDMfS1ZW00/110ef66157f378b7c84748710d0ffd2c/unlock_options_linux.png)
+*Unlock with system authentication*
 
 Check the **Unlock with system authentication**checkbox to proceed. You machine will prompt you to input your verification to confirm.
 3. Once enabled, use **Unlock with system authentication** button on the unlock screen to unlock your vault.
 
 ![Unlock vault system authentication](https://bitwarden.com/assets/6UIFh90LrxZzgrbacuMw3o/ef9b39a24775d098f1ad9825094206f0/Aug_15_Screenshot_from_Bitwarden__1_.png)
+*Unlock vault system authentication*
 
 Security settings are set per-account, so if you want to enable biometric unlock for another account you'll need to go through these steps again!
 

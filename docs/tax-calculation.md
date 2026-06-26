@@ -30,7 +30,7 @@ For personal subscriptions, including [Premium individual](https://bitwarden.com
 
 ### Business subscriptions
 
-Business subscriptions, including [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/) and [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) organizations, are subject to VAT or GST rates according to your billing country. If tax is assessed, it's included on invoices as a separate line item. Organization [owners](https://bitwarden.com/help/user-types-access-control/) can remove tax from future payments by entering a valid tax ID for their registered business during sign-up or at any time in the Admin Console.
+Business subscriptions, including [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/) and [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) organizations, are subject to VAT or GST rates according to your billing country. If tax is assessed, it's included on invoices as a separate line item. Depending on your country, organization [owners](https://bitwarden.com/help/user-types-access-control/) can remove tax from future payments by entering a valid tax ID for their registered business during sign-up or at any time in the Admin Console.
 
 To add or update a business subscription's VAT or GST tax ID:
 
