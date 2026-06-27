@@ -38,7 +38,7 @@ Several optional attributes can be added to your `.tf` files. Some of these valu
 | `access_token` | `BW_ACCESS_TOKEN` | (*Sensitive*) The [access token](https://bitwarden.com/help/access-tokens/) value for the configured machine account. This will grant the Terraform Provider access to only specific data in Secrets Manager. |
 | `organization_id` | `BW_ORGANIZATION_ID` | The unique identifier of your organization. Available from the address bar when you're logged in to the Secrets Manager web app. |
 | `api_url` | `BW_API_URL` | URI of the Bitwarden Secrets Manager `/api` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
-| `identity_url` | `BW_IDENTITY_API_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
+| `identity_url` | `BW_IDENTITY_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
 
 A `.tf` file with all attributes explicitly included, instead of passed by environment variables, should look like the following:
 
