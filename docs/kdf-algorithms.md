@@ -29,7 +29,7 @@ Argon2, as implemented by Bitwarden, works by salting your master password with 
 
 Argon2 then allocates a portion of memory (**KDF memory**) and fills it with the computed hash until full. This is repeated, starting in the subsequent portion of memory where it left off in the first, a number of times iteratively (**KDF iterations**) across a number of threads (**KDF parallelism**). The resultant value after all iterations, is your master key, which acts as input for the master password hash used to authenticate that user whenever they log in ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#hashing-key-derivation-and-encryption/)).
 
-By default, Bitwarden is set to allocate 64 MiB of memory, iterate over it 3 times, and do so across 4 threads. These defaults are above [current OWASP recommendations](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#introduction), but here are some tips should you choose to change your settings:
+By default, Bitwarden is set to allocate 32 MiB of memory, iterate over it 6 times, and do so across 4 threads. These defaults are above [current OWASP recommendations](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#introduction), but here are some tips should you choose to change your settings:
 
 - Increasing **KDF iterations** will increase running time linearly.
 - The amount of **KDF parallelism** you can use depends on your machine's CPU. Generally, Max. Parallelism = Num. of Cores x 2.

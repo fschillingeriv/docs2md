@@ -15047,9 +15047,9 @@ Then, set the toggle for **Ask to save password** and **Autofill passwords and p
 
 ### Firefox
 
-In Firefox, navigate to **Settings** → **Privacy & Security**. Scroll down and uncheck all pre-checked options in the **Passwords**, **Payment methods**, and **Addresses and more**sections:
+In Firefox, navigate to **Settings** → **Passwords and autofill**. Scroll down and uncheck all pre-checked options in the **Passwords**, **Payment methods**, and **Addresses and more**sections:
 
-![Firefox password options ](https://bitwarden.com/assets/72yK5CCMKa9pcfCcdvUZqL/95494d5079e32ae509ea62347ccc9ee8/Firefox_settings.png)
+![Firefox password options ](https://bitwarden.com/assets/72yK5CCMKa9pcfCcdvUZqL/70345d0065b2e093519bcb0dbf74ce86/firefox_update.png)
 *Firefox password options *
 
 > [!TIP] Bitwarden has more reporting than Firefox, duh.
@@ -15057,10 +15057,8 @@ In Firefox, navigate to **Settings** → **Privacy & Security**. Scroll down and
 
 You may also review any logins Firefox has already saved by selecting the **Saved Passwords** button:
 
-![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/a2148eaa8dcaaf4f7158e8d806dcb97b/2025-08-06_16-53-15.png)
+![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/fb1d2fc1bd28f1af3fdf4ad890039c84/firefox_update_2.png)
 *Firefox Saved Logins *
-
-![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/a2148eaa8dcaaf4f7158e8d806dcb97b/2025-08-06_16-53-15.png)
 
 If you haven't already saved these passwords in Bitwarden, [export them](https://bitwarden.com/help/import-from-firefox/) for future import to Bitwarden. Once exported, you should 🗑️ **Remove** these passwords from Firefox.
 
@@ -22999,7 +22997,7 @@ Argon2, as implemented by Bitwarden, works by salting your master password with 
 
 Argon2 then allocates a portion of memory (**KDF memory**) and fills it with the computed hash until full. This is repeated, starting in the subsequent portion of memory where it left off in the first, a number of times iteratively (**KDF iterations**) across a number of threads (**KDF parallelism**). The resultant value after all iterations, is your master key, which acts as input for the master password hash used to authenticate that user whenever they log in ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#hashing-key-derivation-and-encryption/)).
 
-By default, Bitwarden is set to allocate 64 MiB of memory, iterate over it 3 times, and do so across 4 threads. These defaults are above [current OWASP recommendations](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#introduction), but here are some tips should you choose to change your settings:
+By default, Bitwarden is set to allocate 32 MiB of memory, iterate over it 6 times, and do so across 4 threads. These defaults are above [current OWASP recommendations](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#introduction), but here are some tips should you choose to change your settings:
 
 - Increasing **KDF iterations** will increase running time linearly.
 - The amount of **KDF parallelism** you can use depends on your machine's CPU. Generally, Max. Parallelism = Num. of Cores x 2.
@@ -36055,7 +36053,7 @@ Some features used by Bitwarden organizations are not configured by the standard
 | globalSettings__mail__smtp__port= | The SMTP port used by the SMTP server. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__ssl= | (Boolean) Whether your SMTP server uses an encryption protocol: `true` = SSL `false` = TLS | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__username= | A valid username for the `smtp__host`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
-| globalSettings__mail__smtp__passsword= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
+| globalSettings__mail__smtp__password= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__enableCloudCommunication= | Set to `true` to allow communication between your server and our cloud system. | Used for [billing and license sync](https://bitwarden.com/help/self-host-an-organization/#step-4-setup-billing-and-license-sync/). |
 | globalSettings__duo__aKey= | A randomly generated Duo akey. For more information, see [Duo's Documentation](https://duo.com/docs/duoweb-v2#1.-generate-an-akey). | Used for [organization-wide two-step login via Duo](https://bitwarden.com/help/setup-two-step-login-duo/). |
 | globalSettings__hibpApiKey= | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). | Allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
@@ -36072,7 +36070,7 @@ At this stage, you're ready to start your organization and port it over to your 
 
 ### Start a self-hosted organization
 
-Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization.
+Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization. Before applying the license, you must create or have an account on your self-hosted server.
 
 Self-hosted Bitwarden organizations will be able to utilize all paid features provided by their chosen plan. Only Families and Enterprise organizations can be imported to self-hosted servers. Learn more [here](https://bitwarden.com/help/about-bitwarden-plans/).
 
@@ -37549,7 +37547,7 @@ You will need a Duo account in order to obtain some information required by Bitw
 > [!WARNING] Org Duo
 > Once you initially configure and setup Duo, it is **critically important** that you disable it for the organization before making any further application configuration changes from the Duo Admin Panel. To make configuration changes; disable Duo in Bitwarden, make the required changes in the Duo Admin Panel, and re-enable Duo in Bitwarden.
 > 
-> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members.
+> This is because Duo for organizations does not currently support [recovery codes](https://bitwarden.com/help/two-step-recovery-code/). Instead, you will need to rely on the Duo Admin Panel to bypass two-step login for members who lose access to Duo. Altering the application configuration from the Duo Admin Panel while Duo is active risks losing the ability to bypass two-step login for you or your organization's members. To mitigate this risk, we recommend that each member enables an [individual two-step login](https://bitwarden.com/help/setup-two-step-login/) method.
 
 You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to setup Duo for your organization. To enable two-step login using Duo for your organization:
 
@@ -37593,7 +37591,7 @@ If you haven't already downloaded the Duo mobile app, we recommend that you do s
 
 The following assumes that **Duo** is your [highest-priority enabled method](https://bitwarden.com/help/setup-two-step-login/#using-multiple-methods/). For organization members, **org-wide Duo is always the highest-priority method**. To access your vault using Duo two-step login:
 
-1. Login to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
+1. Log in to your Bitwarden vault on any app and enter your email address and master password. A prompt will ask you to **Launch Duo**. Once launched, a Duo screen will appear to begin your two-step login verification.
 2. Depending on how you have configured Duo, complete the authentication request by:
 
  - Approving the **Duo Push** request from your registered device.
@@ -39744,7 +39742,7 @@ Several optional attributes can be added to your `.tf` files. Some of these valu
 | `access_token` | `BW_ACCESS_TOKEN` | (*Sensitive*) The [access token](https://bitwarden.com/help/access-tokens/) value for the configured machine account. This will grant the Terraform Provider access to only specific data in Secrets Manager. |
 | `organization_id` | `BW_ORGANIZATION_ID` | The unique identifier of your organization. Available from the address bar when you're logged in to the Secrets Manager web app. |
 | `api_url` | `BW_API_URL` | URI of the Bitwarden Secrets Manager `/api` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
-| `identity_url` | `BW_IDENTITY_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
+| `identity_url` | `BW_IDENTITY_API_URL` | URI of the Secrets Manager `/identity` endpoint. For US and EU cloud-hosted customers, this will be `https://api.bitwarden.com` and `https://identity.bitwarden.eu` respectively, and for self-hosted customers will be determined by the deployment. |
 
 A `.tf` file with all attributes explicitly included, instead of passed by environment variables, should look like the following:
 

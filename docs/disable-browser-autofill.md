@@ -46,9 +46,9 @@ Then, set the toggle for **Ask to save password** and **Autofill passwords and p
 
 ### Firefox
 
-In Firefox, navigate to **Settings** → **Privacy & Security**. Scroll down and uncheck all pre-checked options in the **Passwords**, **Payment methods**, and **Addresses and more**sections:
+In Firefox, navigate to **Settings** → **Passwords and autofill**. Scroll down and uncheck all pre-checked options in the **Passwords**, **Payment methods**, and **Addresses and more**sections:
 
-![Firefox password options ](https://bitwarden.com/assets/72yK5CCMKa9pcfCcdvUZqL/95494d5079e32ae509ea62347ccc9ee8/Firefox_settings.png)
+![Firefox password options ](https://bitwarden.com/assets/72yK5CCMKa9pcfCcdvUZqL/70345d0065b2e093519bcb0dbf74ce86/firefox_update.png)
 *Firefox password options *
 
 > [!TIP] Bitwarden has more reporting than Firefox, duh.
@@ -56,10 +56,8 @@ In Firefox, navigate to **Settings** → **Privacy & Security**. Scroll down and
 
 You may also review any logins Firefox has already saved by selecting the **Saved Passwords** button:
 
-![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/a2148eaa8dcaaf4f7158e8d806dcb97b/2025-08-06_16-53-15.png)
+![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/fb1d2fc1bd28f1af3fdf4ad890039c84/firefox_update_2.png)
 *Firefox Saved Logins *
-
-![Firefox Saved Logins ](https://bitwarden.com/assets/5UrQ6bGCjV0VdHvy6rzece/a2148eaa8dcaaf4f7158e8d806dcb97b/2025-08-06_16-53-15.png)
 
 If you haven't already saved these passwords in Bitwarden, [export them](https://bitwarden.com/help/import-from-firefox/) for future import to Bitwarden. Once exported, you should 🗑️ **Remove** these passwords from Firefox.
 
