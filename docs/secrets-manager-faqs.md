@@ -34,7 +34,7 @@ If you are already self-hosting an Enterprise Bitwarden organization and want to
 
 ### Q: How do I start a proof-of-concept?
 
-**A**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 7-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
+**A**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 14-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
 
 ### Q: Can I try Secrets Manager as a non-administrator user?
 

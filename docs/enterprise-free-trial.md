@@ -6,13 +6,13 @@ URL: https://bitwarden.com/help/enterprise-free-trial/
 
 ## New to Bitwarden?
 
-If you are new to Bitwarden, we would love to help you through the process of setting up an account and starting your 7-day free trial Enterprise organization with our dedicated signup page. [Start your Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/).
+If you are new to Bitwarden, we would love to help you through the process of setting up an account and starting your 14-day free trial Enterprise organization with our dedicated signup page. [Start your Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/).
 
 Or, to learn more about the [Bitwarden enterprise offering](https://bitwarden.com/products/business/), see [Bitwarden Plans and Pricing](https://bitwarden.com/pricing/business/) or [Password Manager Plans](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) and [Secrets Manager Plans](https://bitwarden.com/help/secrets-manager-plans/).
 
 ## Already a user?
 
-If you already have a Bitwarden account, complete the following steps to start your 7-day free trial of Bitwarden Enterprise:
+If you already have a Bitwarden account, complete the following steps to start your 14-day free trial of Bitwarden Enterprise:
 
 1. Log in to the Bitwarden web app and select the **New organization**button:
 
@@ -20,7 +20,7 @@ If you already have a Bitwarden account, complete the following steps to start y
 2. On the **New organization** screen, enter an **Organization name** for your new organization and the **Billing email** we can reach you at.
 
 > [!NOTE] Seven day trial charge
-> We won't charge you until your 7 day free trial of the Enterprise plan is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
+> We won't charge you until your 14 day free trial of the Enterprise plan is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
 3. If you are trialing the Enterprise plan on behalf of a business:
 
  - Check the **This account is owned by a business** checkbox.

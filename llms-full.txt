@@ -261,7 +261,7 @@ If you want to upgrade your organization to another plan in order to unlock the 
 1. In the Admin Console, navigate to your organization's **Billing** → **Subscription**view.
 2. Select the **Upgrade plan** button.
 
-You can only upgrade your organization to a higher plan, for example from Teams to Enterprise. Upgrading an organization in this way will not initiate a 7-day free trial like creating a new organization would.
+You can only upgrade your organization to a higher plan, for example from Teams to Enterprise. Upgrading an organization in this way will not initiate a 14-day free trial like creating a new organization would.
 ---
 URL: https://bitwarden.com/help/about-scim/
 ---
@@ -487,7 +487,7 @@ Using single sign-on (SSO), [Enterprise organizations](https://bitwarden.com/hel
 ![SSO and master password decryption](https://bitwarden.com/assets/76IOpVRQv886zcUYIM2HF0/36300f14123231d0da18081adcc9962b/sso-workflow-3.png)
 *SSO and master password decryption*
 
-If you're new to Bitwarden, [start a 7-day Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/) to begin testing SSO. We recommend this following steps when testing SSO:
+If you're new to Bitwarden, [start a 14-day Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/) to begin testing SSO. We recommend this following steps when testing SSO:
 
 1. Configure your SSO integration using one of the **SSO Guides** for your chosen IdP. If your IdP isn't listed, you can use the [generic SAML](https://bitwarden.com/help/configure-sso-saml/) or [generic OIDC](https://bitwarden.com/help/configure-sso-oidc/) guide.
 2. Test the [member login experience](https://bitwarden.com/help/using-sso/) using master password decryption.
@@ -16127,13 +16127,13 @@ URL: https://bitwarden.com/help/enterprise-free-trial/
 
 ## New to Bitwarden?
 
-If you are new to Bitwarden, we would love to help you through the process of setting up an account and starting your 7-day free trial Enterprise organization with our dedicated signup page. [Start your Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/).
+If you are new to Bitwarden, we would love to help you through the process of setting up an account and starting your 14-day free trial Enterprise organization with our dedicated signup page. [Start your Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/).
 
 Or, to learn more about the [Bitwarden enterprise offering](https://bitwarden.com/products/business/), see [Bitwarden Plans and Pricing](https://bitwarden.com/pricing/business/) or [Password Manager Plans](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/) and [Secrets Manager Plans](https://bitwarden.com/help/secrets-manager-plans/).
 
 ## Already a user?
 
-If you already have a Bitwarden account, complete the following steps to start your 7-day free trial of Bitwarden Enterprise:
+If you already have a Bitwarden account, complete the following steps to start your 14-day free trial of Bitwarden Enterprise:
 
 1. Log in to the Bitwarden web app and select the **New organization**button:
 
@@ -16141,7 +16141,7 @@ If you already have a Bitwarden account, complete the following steps to start y
 2. On the **New organization** screen, enter an **Organization name** for your new organization and the **Billing email** we can reach you at.
 
 > [!NOTE] Seven day trial charge
-> We won't charge you until your 7 day free trial of the Enterprise plan is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
+> We won't charge you until your 14 day free trial of the Enterprise plan is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
 3. If you are trialing the Enterprise plan on behalf of a business:
 
  - Check the **This account is owned by a business** checkbox.
@@ -31544,7 +31544,7 @@ This release includes:
 
 #### Secrets Manager
 
-- **Start a Secrets Manager trial**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. [Sign-up for a free 7-day trial of Secrets Manager today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
+- **Start a Secrets Manager trial**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. [Sign-up for a free 14-day trial of Secrets Manager today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 - **Secrets Manager Kubernetes Operator (beta)**: Use the Bitwarden Secrets Manager Kubernetes Operator to securely and efficiently integrate Secrets Manager into Kubernetes workflows. Learn more [here](https://bitwarden.com/help/secrets-manager-kubernetes-operator/).
 
 #### Admin Console
@@ -35243,7 +35243,7 @@ If you are already self-hosting an Enterprise Bitwarden organization and want to
 
 ### Q: How do I start a proof-of-concept?
 
-**A**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 7-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
+**A**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 14-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
 
 ### Q: Can I try Secrets Manager as a non-administrator user?
 
@@ -35483,12 +35483,10 @@ URL: https://bitwarden.com/help/secrets-manager-plans/
 ---
 # Secrets Manager Plans
 
-In this article, we'll define each [Bitwarden Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/) subscription plan to help you start your secrets management and secure data storage journey. To see Password Manager plans instead, see [here](https://bitwarden.com/help/password-manager-plans/).
+In this article, we'll define each [Bitwarden Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/) subscription plan to help you start your secrets management and secure data storage journey. To see Password Manager plans instead, go [here](https://bitwarden.com/help/password-manager-plans/).
 
 > [!TIP] SM on Families
 > Bitwarden offers Secrets Manager subscriptions for Free, Teams, and Enterprise organizations. If you have a Families plan and would like to use Bitwarden Secrets Manager, simply create a new Free organization and sign up for Secrets Manager following [these steps](https://bitwarden.com/help/secrets-manager-quick-start/).
-
-Pricing on this page shown in USD and based on an annual subscription.
 
 ## Free
 
@@ -35509,7 +35507,7 @@ Support your full development team with additional business functionality. At **
 - $1 per additional Machine account
 - All features offered to [Teams organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [event logs](https://bitwarden.com/help/event-logs/) and [API access](https://bitwarden.com/help/public-api/)
 
-[Sign up for a 7-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
+[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
 
 ## Enterprise
 
@@ -35520,7 +35518,7 @@ Support enterprise needs with automated provisioning and other administrative ca
 - $1 per additional Machine account
 - All features offered to [Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [SCIM provisioning](https://bitwarden.com/help/about-scim/) and [enterprise policies](https://bitwarden.com/help/policies/)
 
-[Sign up for a 7-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
+[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 
 ## Compare plans
 
@@ -36053,7 +36051,7 @@ Some features used by Bitwarden organizations are not configured by the standard
 | globalSettings__mail__smtp__port= | The SMTP port used by the SMTP server. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__ssl= | (Boolean) Whether your SMTP server uses an encryption protocol: `true` = SSL `false` = TLS | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__username= | A valid username for the `smtp__host`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
-| globalSettings__mail__smtp__passsword= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
+| globalSettings__mail__smtp__password= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__enableCloudCommunication= | Set to `true` to allow communication between your server and our cloud system. | Used for [billing and license sync](https://bitwarden.com/help/self-host-an-organization/#step-4-setup-billing-and-license-sync/). |
 | globalSettings__duo__aKey= | A randomly generated Duo akey. For more information, see [Duo's Documentation](https://duo.com/docs/duoweb-v2#1.-generate-an-akey). | Used for [organization-wide two-step login via Duo](https://bitwarden.com/help/setup-two-step-login-duo/). |
 | globalSettings__hibpApiKey= | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). | Allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
@@ -36070,7 +36068,7 @@ At this stage, you're ready to start your organization and port it over to your 
 
 ### Start a self-hosted organization
 
-Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization.
+Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization. Before applying the license, you must create or have an account on your self-hosted server.
 
 Self-hosted Bitwarden organizations will be able to utilize all paid features provided by their chosen plan. Only Families and Enterprise organizations can be imported to self-hosted servers. Learn more [here](https://bitwarden.com/help/about-bitwarden-plans/).
 
@@ -38116,7 +38114,7 @@ URL: https://bitwarden.com/help/sign-up-for-secrets-manager/
 
 To start a Secrets Manager subscription, either [start a new organization](https://bitwarden.com/help/about-organizations/#create-an-organization/) that includes Secrets Manager or upgrade your existing organization. 
 
-If you're creating a new organization, you can start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 7-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
+If you're creating a new organization, you can start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 14-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
 
 The upgrade path will differ based on the current type of organization you're using:
 
@@ -40776,7 +40774,7 @@ Complete the following steps to start your organization:
 2. On the New Organization screen, enter an **Organization name** for your new organization and the **Billing email** we can reach you at.
 
 > [!NOTE] Paid org trials
-> Paid organizations (Families, Teams, or Enterprise) have a 7-day free trial built in. We won't charge you until your trial is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
+> Paid organizations have a 14-day free trial built in. We won't charge you until your trial is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
 3. If you are creating an organization on behalf of a business:
 
  - Check the **This account is owned by a business** checkbox.

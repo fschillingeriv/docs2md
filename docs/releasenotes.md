@@ -939,7 +939,7 @@ This release includes:
 
 #### Secrets Manager
 
-- **Start a Secrets Manager trial**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. [Sign-up for a free 7-day trial of Secrets Manager today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
+- **Start a Secrets Manager trial**: Start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. [Sign-up for a free 14-day trial of Secrets Manager today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 - **Secrets Manager Kubernetes Operator (beta)**: Use the Bitwarden Secrets Manager Kubernetes Operator to securely and efficiently integrate Secrets Manager into Kubernetes workflows. Learn more [here](https://bitwarden.com/help/secrets-manager-kubernetes-operator/).
 
 #### Admin Console

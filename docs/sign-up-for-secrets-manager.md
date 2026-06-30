@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/sign-up-for-secrets-manager/
 
 To start a Secrets Manager subscription, either [start a new organization](https://bitwarden.com/help/about-organizations/#create-an-organization/) that includes Secrets Manager or upgrade your existing organization. 
 
-If you're creating a new organization, you can start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 7-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
+If you're creating a new organization, you can start a Secrets Manager enterprise trial to test a proof-of-concept and gain access to enterprise features like SSO and SCIM integrations, enterprise policies, self-hosting, event logs, and priority support. Sign-up for a for a [free 14-day trial of Secrets Manager](https://bitwarden.com/go/start-secrets-enterprise-trial/) today.
 
 The upgrade path will differ based on the current type of organization you're using:
 

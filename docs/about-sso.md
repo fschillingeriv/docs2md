@@ -20,7 +20,7 @@ Using single sign-on (SSO), [Enterprise organizations](https://bitwarden.com/hel
 ![SSO and master password decryption](https://bitwarden.com/assets/76IOpVRQv886zcUYIM2HF0/36300f14123231d0da18081adcc9962b/sso-workflow-3.png)
 *SSO and master password decryption*
 
-If you're new to Bitwarden, [start a 7-day Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/) to begin testing SSO. We recommend this following steps when testing SSO:
+If you're new to Bitwarden, [start a 14-day Enterprise free trial](https://bitwarden.com/go/start-enterprise-trial/) to begin testing SSO. We recommend this following steps when testing SSO:
 
 1. Configure your SSO integration using one of the **SSO Guides** for your chosen IdP. If your IdP isn't listed, you can use the [generic SAML](https://bitwarden.com/help/configure-sso-saml/) or [generic OIDC](https://bitwarden.com/help/configure-sso-oidc/) guide.
 2. Test the [member login experience](https://bitwarden.com/help/using-sso/) using master password decryption.

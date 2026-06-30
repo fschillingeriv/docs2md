@@ -21,7 +21,7 @@ Some features used by Bitwarden organizations are not configured by the standard
 | globalSettings__mail__smtp__port= | The SMTP port used by the SMTP server. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__ssl= | (Boolean) Whether your SMTP server uses an encryption protocol: `true` = SSL `false` = TLS | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__mail__smtp__username= | A valid username for the `smtp__host`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
-| globalSettings__mail__smtp__passsword= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
+| globalSettings__mail__smtp__password= | A valid password for the `smtp__username`. | Used for [inviting users](https://bitwarden.com/help/managing-users/#invite/) to your organization. |
 | globalSettings__enableCloudCommunication= | Set to `true` to allow communication between your server and our cloud system. | Used for [billing and license sync](https://bitwarden.com/help/self-host-an-organization/#step-4-setup-billing-and-license-sync/). |
 | globalSettings__duo__aKey= | A randomly generated Duo akey. For more information, see [Duo's Documentation](https://duo.com/docs/duoweb-v2#1.-generate-an-akey). | Used for [organization-wide two-step login via Duo](https://bitwarden.com/help/setup-two-step-login-duo/). |
 | globalSettings__hibpApiKey= | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). | Allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
@@ -38,7 +38,7 @@ At this stage, you're ready to start your organization and port it over to your 
 
 ### Start a self-hosted organization
 
-Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization.
+Once your cloud organization is created, follow [these instructions](https://bitwarden.com/help/licensing-on-premise/#organization-license/) to retrieve your license from the cloud and upload it to your self-hosted server to create a self-hosted copy of the organization. Before applying the license, you must create or have an account on your self-hosted server.
 
 Self-hosted Bitwarden organizations will be able to utilize all paid features provided by their chosen plan. Only Families and Enterprise organizations can be imported to self-hosted servers. Learn more [here](https://bitwarden.com/help/about-bitwarden-plans/).
 

@@ -4,12 +4,10 @@ URL: https://bitwarden.com/help/secrets-manager-plans/
 
 # Secrets Manager Plans
 
-In this article, we'll define each [Bitwarden Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/) subscription plan to help you start your secrets management and secure data storage journey. To see Password Manager plans instead, see [here](https://bitwarden.com/help/password-manager-plans/).
+In this article, we'll define each [Bitwarden Secrets Manager](https://bitwarden.com/help/secrets-manager-overview/) subscription plan to help you start your secrets management and secure data storage journey. To see Password Manager plans instead, go [here](https://bitwarden.com/help/password-manager-plans/).
 
 > [!TIP] SM on Families
 > Bitwarden offers Secrets Manager subscriptions for Free, Teams, and Enterprise organizations. If you have a Families plan and would like to use Bitwarden Secrets Manager, simply create a new Free organization and sign up for Secrets Manager following [these steps](https://bitwarden.com/help/secrets-manager-quick-start/).
-
-Pricing on this page shown in USD and based on an annual subscription.
 
 ## Free
 
@@ -30,7 +28,7 @@ Support your full development team with additional business functionality. At **
 - $1 per additional Machine account
 - All features offered to [Teams organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [event logs](https://bitwarden.com/help/event-logs/) and [API access](https://bitwarden.com/help/public-api/)
 
-[Sign up for a 7-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
+[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
 
 ## Enterprise
 
@@ -41,7 +39,7 @@ Support enterprise needs with automated provisioning and other administrative ca
 - $1 per additional Machine account
 - All features offered to [Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [SCIM provisioning](https://bitwarden.com/help/about-scim/) and [enterprise policies](https://bitwarden.com/help/policies/)
 
-[Sign up for a 7-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
+[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 
 ## Compare plans
 

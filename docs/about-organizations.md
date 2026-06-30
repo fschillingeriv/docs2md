@@ -91,4 +91,4 @@ If you want to upgrade your organization to another plan in order to unlock the 
 1. In the Admin Console, navigate to your organization's **Billing** → **Subscription**view.
 2. Select the **Upgrade plan** button.
 
-You can only upgrade your organization to a higher plan, for example from Teams to Enterprise. Upgrading an organization in this way will not initiate a 7-day free trial like creating a new organization would.
+You can only upgrade your organization to a higher plan, for example from Teams to Enterprise. Upgrading an organization in this way will not initiate a 14-day free trial like creating a new organization would.

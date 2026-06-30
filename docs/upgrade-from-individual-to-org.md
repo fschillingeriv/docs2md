@@ -16,7 +16,7 @@ Complete the following steps to start your organization:
 2. On the New Organization screen, enter an **Organization name** for your new organization and the **Billing email** we can reach you at.
 
 > [!NOTE] Paid org trials
-> Paid organizations (Families, Teams, or Enterprise) have a 7-day free trial built in. We won't charge you until your trial is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
+> Paid organizations have a 14-day free trial built in. We won't charge you until your trial is over. You can cancel your subscription at any time in the **Settings** tab of your organization.
 3. If you are creating an organization on behalf of a business:
 
  - Check the **This account is owned by a business** checkbox.
