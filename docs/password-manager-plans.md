@@ -4,23 +4,23 @@ URL: https://bitwarden.com/help/password-manager-plans/
 
 # Password Manager Plans
 
-This article describes each Bitwarden Password Manager subscription plan to help you along your password management and secure data storage journey. This article reflects current Password Manager plans, most recently updated on June 04, 2024. Users who created accounts prior to that date can learn about their plans [here](https://bitwarden.com/help/updates-to-plans/). 
+This article describes each Bitwarden Password Manager subscription plan to help you along your password management and secure data storage journey. This article current Password Manager plans as of June 4, 2024. Users who created accounts earlier than 2024 can learn about their plans [here](https://bitwarden.com/help/updates-to-plans/). 
 
 To see Secrets Manager plans instead, see [here](https://bitwarden.com/help/secrets-manager-plans/).
 
 ## Personal plans
 
-Personal plans are designed to give you or your family all the tools needed to securely manage data:
+Personal plans are designed to give you or your family all the tools needed to securely manage data.
 
 ### Free individual
 
-Bitwarden believes everyone should have access to password security tools. The core features of the Bitwarden Password Manager are 100% free, including unlimited storage of logins, notes, cards, and identities, access to Bitwarden on any device, a secure password generator, and more. Signup [**for free**](https://bitwarden.com/go/start-free/).
+Bitwarden believes everyone should have access to password security tools. The core features of the Bitwarden Password Manager are 100% free, including unlimited storage of logins, notes, cards, and identities, access to Bitwarden on any device, a secure password generator, and more. Sign up [**for free**](https://bitwarden.com/go/start-free/).
 
 ### Premium individual
 
 Upgrade your individual account to unlock premium password security and management features, including advanced 2FA options, the Bitwarden authenticator (TOTP), encrypted file attachments, emergency access and more. 
 
-**To upgrade to a premium account**, use the web app to navigate to the **Settings** section and select **Go Premium**, or use the following link to [**signup for a new Premium individual account**](https://bitwarden.com/go/start-premium/).
+**To upgrade to a premium account**, use the web app, go to **Settings**, and select **Go Premium**. Alternatively, [**sign up for a new Premium individual account here**](https://bitwarden.com/go/start-premium/).
 
 > [!NOTE] Premium features 
 > Premium does not include secure data sharing. In order to access sharing features, you will need a subscription to an organization ([Free](https://bitwarden.com/help/password-manager-plans/#free-organizations/), [Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)). Paid organizations ([Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)) include premium features for all users enrolled in that organization.
@@ -39,13 +39,13 @@ Families organizations subscriptions are billed annually.
 
 ### Compare personal plans
 
-In the following table, "premium features" (included for **Premium individual** and **Families organizations**) are marked with an asterisk (*).
+In the following table, "premium features" (included for **Premium individual** and **Families organizations**) are marked with an asterisk (*). Learn about our [pricing and sign up here](https://bitwarden.com/pricing/).
 
 | **Features for you** | **Free** | **Premium** | **Free org** | **Families org** |
 |------|------|------|------|------|
-| Max users | 1 | 1 | 2 | 6 |
+| Maximum users | 1 | 1 | 2 | 6 |
 | Secure storage for logins, notes, cards, and Identities | Unlimited | Unlimited | Unlimited | Unlimited |
-| Max no. of collections | - | - | 2 | Unlimited |
+| Maximum number of collections | - | - | 2 | Unlimited |
 | Access to Password Manager across devices | ✓ | ✓ | ✓ | ✓ |
 | Storage sync across devices | ✓ | ✓ | ✓ | ✓ |
 | Secure password generator | ✓ | ✓ | ✓ | ✓ |
@@ -59,7 +59,7 @@ In the following table, "premium features" (included for **Premium individual** 
 | *[Emergency access](https://bitwarden.com/help/emergency-access/) | - | ✓ | - | ✓ |
 | Eligible for [Secrets Manager add-on](https://bitwarden.com/help/secrets-manager-overview/) | - | - | ✓ | - |
 | *Priority support | - | ✓ | - | ✓ |
-| Cost to you | Free | $1.65/mo, billed annually | Free | $3.99/mo, billed annually |
+| Price | Free | [Billed annually](https://bitwarden.com/pricing/business/) | Free | [Billed annually](https://bitwarden.com/pricing/) |
 
 ## Business plans
 
@@ -118,7 +118,7 @@ In the following table, "premium features" (included for **Teams organizations**
 | [Custom management role](https://bitwarden.com/help/user-types-access-control/) | - | ✓ |
 | [Families sponsorship for members](https://bitwarden.com/help/families-for-enterprise/) | - | ✓ |
 | [SCIM integrations](https://bitwarden.com/help/about-scim/) | ✓ | ✓ |
-| Cost to you | **Teams**: $4 per user per month, billed annually or $5 per user per month, billed monthly | $6 per user per month, billed annually or $7 per user per month, billed monthly |
+| Price | [Billed per user](https://bitwarden.com/pricing/business/) | [Billed per user](https://bitwarden.com/pricing/business/) |
 
 ## Self-hosted organizations
 

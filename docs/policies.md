@@ -6,10 +6,13 @@ URL: https://bitwarden.com/help/policies/
 
 Enterprise policies allow Enterprise organizations to enforce security rules and default settings for all members, like mandating the use of a two-step login.
 
-> [!WARNING] Enable policies before invite.
-> We recommend setting enterprise policies before inviting users to your organization. Some policies will [revoke](https://bitwarden.com/help/revoke-users/) non-compliant users when turned on, and some are not retroactively enforceable.
+> [!TIP] Suggest collection settings
+> Owners choose who can create, manage, or delete collections across an organization from [collection settings](https://bitwarden.com/help/collection-management/).
 
 ## Set Enterprise policies
+
+> [!WARNING] Enable policies before invite.
+> We recommend setting enterprise policies before inviting users to your organization. Some policies will [revoke](https://bitwarden.com/help/revoke-users/) non-compliant users when turned on, and some are not retroactively enforceable.
 
 Organization owners and admins can configure Enterprise policies. Enterprise policies are applied to current organization members and members who have [accepted](https://bitwarden.com/help/managing-users/#accept/) an invitation to your organization. To update a policy: 
 

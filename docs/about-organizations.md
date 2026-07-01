@@ -55,8 +55,8 @@ Enter an **Organization name** and a **Billing email** we can reach you at. [Lea
  - **Teams/Enterprise:** Choose whether you would like to be billed annually or monthly. Families organizations can only be billed annually.
 4. Once you are happy with your organization, enter your **Payment information** (not required if you're creating a Free organization) and select **Submit**.
 
-> [!TIP] Organizations trial
-> New Families, Teams, and Enterprise organization have a seven day free trial built in! We won't charge you until your trial is over, and you can cancel your subscription at any time from the organization **Settings** tab.
+> [!NOTE] Tip
+> New Families, Teams, and Enterprise organization have a 14 day free trial built in! We won't charge you until your trial is over, and you can cancel your subscription at any time from the organization **Settings** tab.
 
 Once you have created your organization, create a [collection](https://bitwarden.com/help/about-collections/), [invite users](https://bitwarden.com/help/managing-users/), and [start sharing](https://bitwarden.com/help/sharing/).
 

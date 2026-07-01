@@ -21,23 +21,23 @@ Use Secrets Manager to store and securely share [secrets](https://bitwarden.com/
 
 ## Teams
 
-Support your full development team with additional business functionality. At **$6 per user per month**, the Secrets Manager Teams plan offers:
+The Secrets Manager Teams plan supports your full development team with additional business functionality:
 
-- Unlimited [secrets](https://bitwarden.com/help/secrets/), users, and [projects](https://bitwarden.com/help/projects/)
-- Up to 20 [machine accounts](https://bitwarden.com/help/machine-accounts/) included
-- $1 per additional Machine account
+- Unlimited [secrets](https://bitwarden.com/help/secrets/) and [projects](https://bitwarden.com/help/projects/)
+- Up to 20 [machine accounts](https://bitwarden.com/help/machine-accounts/) included, with extra accounts billed per account
 - All features offered to [Teams organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [event logs](https://bitwarden.com/help/event-logs/) and [API access](https://bitwarden.com/help/public-api/)
+- [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
 [Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
 
 ## Enterprise
 
-Support enterprise needs with automated provisioning and other administrative capabilities. At **$12 per user per month**, the Secrets Manager Enterprise plan offers:
+The Secrets Manager Enterprise plan is built for enterprise needs, with automated provisioning and other administrative capabilities. It offers:
 
 - Unlimited [secrets](https://bitwarden.com/help/secrets/), users, and [projects](https://bitwarden.com/help/projects/)
-- Up to 50 [machine accounts](https://bitwarden.com/help/machine-accounts/) included
-- $1 per additional Machine account
+- Up to 50 [machine accounts](https://bitwarden.com/help/machine-accounts/) included, with extra accounts billed per account
 - All features offered to [Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [SCIM provisioning](https://bitwarden.com/help/about-scim/) and [enterprise policies](https://bitwarden.com/help/policies/)
+- [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
 [Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 
@@ -63,4 +63,4 @@ Support enterprise needs with automated provisioning and other administrative ca
 | Priority support | - | - | ✓ |
 | Coming Soon: Self-host option | - | - | ✓ |
 
-`*`Additional machine accounts can be purchased for $1 per month each.
+*Additional machine accounts can be purchased.
