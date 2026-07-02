@@ -39,6 +39,8 @@ The following variables do not already exist in `global.override.env`, and can b
 
 | Variable | Description |
 |------|------|
+| `globalSettings__attachment__connectionString=` | Set a connection string to store file attachments in self-managed Azure Blob Storage, rather than the default location. For example, `=DefaultEndpointsProtocol=https;AccountName=<NAME>;AccountKey=<KEY>;EndpointSuffix=core.windows.net"`. Your `EndpointSuffix` will vary based on which Azure Cloud you're using. |
+| `globalSettings__send__connectionString=` | Set a connection string to store file sends in self-managed Azure Blob Storage, rather than the default location. For example, `=DefaultEndpointsProtocol=https;AccountName=<NAME>;AccountKey=<KEY>;EndpointSuffix=core.windows.net"`. Your `EndpointSuffix` will vary based on which Azure Cloud you're using. |
 | `globalSettings__logDirectory=` | Specifies the directory to save container log file output to. This must be a directory inside the container, by default, `globalSettings__logDirectory=etc/bitwarden/logs`. |
 | `globalSettings__logRollBySizeLimit=` | Specify the size limit in bytes to use for container log files (for example, `globalSettings__logRollBySizeLimit=1073741824`). |
 | `globalSettings__mail__smtp__trustServer=` | Specify `true `to explicitly trust the certificate presented by the SMTP server (**not recommended for production**). |
@@ -53,7 +55,7 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__sqlServer__DisableDatabaseMaintenanceJobs=` | Specify `true` to skip application-side maintenance of the statistics and index rebuild tasks in the database. These tasks require elevated MSSQL privileges and should be reconfigured to run as a database user if this value is set to `true`. [Learn more](https://bitwarden.com/help/database-options/). |
 | `globalSettings__sqlServer__SkipDatabasePreparation=` | Specify `true` to skip application-side database preparation. If not specified, database preparation checks on installation whether a database with the name specified in `globalSettings__sqlServer__connectionString=` exists and, if not, creates one. This task requires elevated MSSQL privileges and, if this value is set to `true`, the named database must exist before initiating installation. [Learn more](https://bitwarden.com/help/database-options/). |
 
-### Load balancers requiring authentication
+[Embedded content]### Load balancers requiring authentication
 
 Bitwarden clients without access to a shared cookie store (such as the Desktop and Mobile clients) cannot communicate with a self-hosted server utilizing a load balancer that requires authentication. To launch an SSO session whose cookie will be copied into the Bitwarden client cookie store, add the following variables to the `global.override.env` file:
 
@@ -62,6 +64,8 @@ Bitwarden clients without access to a shared cookie store (such as the Desktop a
 | `globalSettings__communication__bootstrap=` | To enable this feature, set to `ssoCookieVendor`. |
 | `globalSettings__communication__ssoCookieVendor__cookieName=` | The name of the SSO cookie set by the identity provider (for example, `sso_token`). |
 | `globalSettings__communication__ssoCookieVendor__cookieDomain=` | The domain from which the SSO cookie is read (such as `example.com`). |
+
+[Embedded content]
 
 ### Refresh token variables
 
@@ -72,3 +76,5 @@ Refresh token variables allow you to change the timeout of tokens. Administrator
 | `globalSettings__IdentityServer__ApplyAbsoluteExpirationOnRefreshToken=` | Specify `true` to use **only** a specified absolute lifetime for refresh tokens and ignore expiration sliding based on usage. When true, only `__AbsoluteRefreshTokenLifetimeSeconds=` will be considered to determine behavior. Specify `false` to allow refresh token expiration to slide (i.e. extend validity for a specified period of time) when they're used. When `false`, both of the following options will be considered to determine behavior. |
 | `globalSettings__IdentityServer__AbsoluteRefreshTokenLifetimeSeconds=` | Specify a integer. Refresh tokens will expire after the absolute lifetime of that integer in seconds, regardless of whether sliding is allowed or not. This variable may only be `0` if `__ApplyAbsoluteExpirationOnRefreshToken=true`, in which case refresh tokens are always rejected. |
 | `globalSettings__IdentityServer__SlidingRefreshTokenLifetimeSeconds=` | Specify a integer greater than `0`. Refresh tokens will extend their validity upon use by that integer, in seconds. Refresh tokens will always expire after their configured absolute lifetime, regardless of what's set here. |
+
+[Embedded content]

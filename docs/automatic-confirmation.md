@@ -35,6 +35,7 @@ To turn on automatic confirmation for your organization, make sure you've met th
 > If you're **self-hosting** Bitwarden:
 > 
 > - This email will be sent to the owners and admins **of the cloud organization**associated with your self-hosted organization.
+> - That cloud organization must also meet the criteria for automatic confirmation described in this article.
 > - One of those owners or admins must [update the self-hosted organization's license file](https://bitwarden.com/help/licensing-on-premise/) before proceeding with Step 2. Once the license file is updated, Step 2 and all subsequent steps can be completed from the self-hosted server.
 2. An activation panel will be issued to organization owners and admins, the next time they log in, prompting them to turn on the policy.
 

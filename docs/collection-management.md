@@ -13,7 +13,7 @@ URL: https://bitwarden.com/help/collection-management/
 > - [Collection settings](https://bitwarden.com/help/collection-management/) specify which member roles can create, manage, or delete collections **across the entire organization**.
 > - [Collection permissions](https://bitwarden.com/help/collection-permissions/) control what actions a specific user or group can take **within a single collection**.
 
-## List of settings
+## Available settings
 
 ### Allow owners and admins to manage all collections and items from the Admin Console
 
