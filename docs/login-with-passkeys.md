@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/login-with-passkeys/
 ---
 
-# Log In & Unlock with Passkeys
+# Log in & Unlock with Passkeys
 
 > [!NOTE] Autofill vs. Log in with Passkeys
 > Bitwarden offers three passkey features:
