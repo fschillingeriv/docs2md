@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/account-switching/
 ---
 
-# Log in to Multiple Accounts
+# Log In to Multiple Accounts
 
 You can be logged in to **up to five** Bitwarden accounts simultaneously in the browser extension, desktop app and mobile app. This allows you to quickly access all of your saved items while storing them separately, such as within personal and work accounts. Once logged in, switch between your Bitwarden accounts seamlessly to access your different vaults.
 

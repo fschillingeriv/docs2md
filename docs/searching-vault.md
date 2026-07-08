@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/searching-vault/
 
 # Search your Vault
 
-Bitwarden vaults can be searched to quickly surface relevant items. [Basic searches](https://bitwarden.com/help/searching-vault/#basic-search/) are the default in every Bitwarden app. In the web app, browser extension, and desktop app, you can run more advanced [Lunr searches](https://bitwarden.com/help/searching-vault/#full-text-search/) by prefixing your query with the "greater than" (`>`) character.
+Bitwarden vaults can be searched to quickly surface relevant items. [Basic searches](https://bitwarden.com/help/searching-vault/#basic-search/) can be made in any Bitwarden app, and more advanced [full-text searches](https://bitwarden.com/help/searching-vault/#full-text-search/) can be made in the web vault, desktop app, and browser extension.
 
 The results available for any search are dependent on what is currently opened through the filter menu or navigation, for example:
 
@@ -19,22 +19,25 @@ The placeholder text in the search box will change to indicate the current searc
 
 ## Basic search
 
-Basic search is the default search mode in every Bitwarden app. Entering search text (for example, `Github` or `myusername`) will look for the entered information in the following vault item fields:
+Basic search is used by Bitwarden **mobile apps**. Entering search text (for example, `Github` or `myusername`) will look for the entered information in the following vault item fields:
 
-- For any item, its **name**
-- For any item, its **ID**
-- For login items, **username**
-- For login items, its **URI**
+- Item **name**
+- For logins, **username**
+- For logins, **URI**
+- For cards, **brand** or last four digits of the **number**
+- For identities, **name**
 
-Each term in your search must occur in at least one of the searched fields. For example, a login item with the name `Email MyCompany Work` and the username `alice@example.com` would be returned by queries such as `email work`, `Work MyCompany`, or `MyCompany alice`.
+For your convenience, basic searches automatically include leading and trailing [wildcards](https://bitwarden.com/help/searching-vault/#wildcards-and-advanced-search-parameters/). For example, searching for `mail` will return items with the name `gmail` as well as `email`. 
 
-## Lunr search
+Search results are determined by a simple scoring mechanism. The more fields a search term appears in, the high that vault item's score. [Learn more](https://lunrjs.com/guides/searching.html#scoring). 
 
-In the web app, browser extension, and desktop app, you can run more advanced Lunr searches by prefixing your query with the "greater than" (`>`) character. Lunr search covers additional fields and supports advanced query syntax like term presence, fuzzy matching, and wildcards.
+## Full-text search
+
+Searches in the web app, desktop app, and browser extension are automatically full-text and, like basic searches, automatically include leading and trailing wildcards. When results aren't found in a full-text search, Bitwarden will fall back to a basic search.
 
 ### Indexed fields
 
-Lunr search will search the following fields for every vault item:
+Full-text search will search the following fields for every vault item:
 
 - `shortid`: First eight characters of the item's ID.
 - `organizationid`: ID of the item's organization (if it belongs to one).

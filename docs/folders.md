@@ -61,7 +61,7 @@ bw create folder <foldername>
 
 You can edit an existing folder using `bw edit <folderId>` and delete one using `bw delete folder <folderId>`. For more information, please refer the the Bitwarden [CLI documentation](https://bitwarden.com/help/cli/).
 
-Deleting a folder will not delete any vault items included in it and will not delete other folders that are nested into it or their contents. The folder itself, however, will be permanently deleted.
+Deleting a folder will not delete any vault items included in it and will not delete other folders that are nested into it or their contents.
 
 > [!NOTE] Collections and folders difference
 > If you are a member of an organization, collections will be shown below your folders in the **Filters** menu.
