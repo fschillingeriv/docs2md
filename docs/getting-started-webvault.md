@@ -53,7 +53,7 @@ Now that a new login is saved in your vault, improve its security by replacing t
 2. In a new tab or window, open the corresponding website and login to your account.
 
 > [!TIP] launch from web vault
-> If you entered something in the **URI 1** field, click the [share-square] **Launch** icon to open it directly from your vault.
+> If you saved the item with a URI, use the ✗ **Launch** quick action to open the webpage directly from your vault, and skip **Steps 1**and**2**.
 3. On that website, navigate to the area where you can **Change your password**.
 
 Typically, you can find this in a **Your Account**, **Security**, **Sign in Settings**, or **Login Settings** section.

@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/understand-log-in-vs-unlock/
 ---
 
-# Understand Log In vs. Unlock
+# Understand Log in vs. Unlock
 
 Bitwarden uses two distinct processes to secure your vault without sacrificing convenience: logging in to your Bitwarden account and unlocking your vault. This separation ensures Bitwarden [never stores unencrypted data](https://bitwarden.com/help/vault-data/) on its servers. **When your vault is not unlocked or logged in**, your vault data only exists on the server in its [encrypted form](https://bitwarden.com/help/what-encryption-is-used/).
 

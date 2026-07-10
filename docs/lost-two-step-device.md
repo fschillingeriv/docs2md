@@ -34,7 +34,7 @@ A recovery code looks like this when you retrieve it from your account’s secur
 
 ### Trusted emergency contact
 
-If you designated a [trusted emergency contact](https://bitwarden.com/help/emergency-access/) with takeover access, ask them to [initiate emergency access](https://bitwarden.com/help/emergency-access/#use-emergency-access/). After the **Wait time** set for that emergency contact passes, all two-step login methods are turned off and the emergency contact can change the master password.
+If you designated a [trusted emergency contact](https://bitwarden.com/help/emergency-access/) with takeover access, ask them to [initiate emergency access](https://bitwarden.com/help/request-and-grant-emergency-access/). After the **Wait time** set for that emergency contact passes, all two-step login methods are turned off and the emergency contact can change the master password.
 
 ### Duo bypass code
 

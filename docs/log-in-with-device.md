@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/log-in-with-device/
 ---
 
-# Log In with Device
+# Log in with Device
 
 Set up log in with a device for faster, more convenient Bitwarden access. This login method, called passwordless authentication, eliminates the need to enter your master password every time you log in. Using **Log in with device**, any time you log into Bitwarden on one device, you can opt to use a different Bitwarden app you're logged in to to approve the authentication request instead of typing your master password.
 

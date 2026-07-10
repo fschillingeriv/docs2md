@@ -26,6 +26,13 @@ To create a collection:
 > [!TIP] External ID (Org Entities)
 > The **External Id** field is only relevant if you are using [Directory Connector](https://bitwarden.com/help/directory-sync/) and will be visible in the dialogue when configured using [SCIM](https://bitwarden.com/help/about-scim/), Directory Connector, or the API.
 
+Once created, you can edit, change who has access to, or delete a collection by selecting that collection from your **Filters:**
+
+![Delete a collection](https://bitwarden.com/assets/3CBN5Em0nHhMdzbzPWoLJe/0fd30301f94670098de41dd4e0ea5d77/2026-07-07_08-50-35.png)
+*Delete a collection*
+
+Deleting a collection won't delete any vault items included in it. The collection itself, however, will be permanently deleted.
+
 ## Next steps
 
 - [Learn more about collections](https://bitwarden.com/help/about-collections/).

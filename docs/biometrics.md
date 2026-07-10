@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/biometrics/
 ---
 
-# Unlock With Biometrics
+# Unlock with Biometrics
 
 Quickly and securely access your vault with biometrics in the desktop app, browser extension, and mobile app. After logging in with your standard method, like a [master password](https://bitwarden.com/help/master-password/) or [trusted device](https://bitwarden.com/help/add-a-trusted-device/), [unlock your vault](https://bitwarden.com/help/understand-log-in-vs-unlock/) with biometrics.
 

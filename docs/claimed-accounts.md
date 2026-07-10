@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/claimed-accounts/
 
 # Claimed Accounts
 
-When an Enterprise organization [claims a domain](https://bitwarden.com/help/claimed-domains/), onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`) will be claimed be the organization. Claimed accounts are functionally **owned by the organization**, resulting in a few key changes to the way the account works.
+When an Enterprise organization [claims a domain](https://bitwarden.com/help/claimed-domains/), onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`) will be claimed by the organization. Claimed accounts are functionally **owned by the organization**, resulting in a few key changes to the way the account works.
 
 > [!NOTE] Clarifying claimed member prereqs
 > A user must have a matching domain **and** be a [confirmed member](https://bitwarden.com/help/managing-users/#confirm/) of your Bitwarden organization to be considered a claimed account. Claiming a domain **does not** automatically invite any users and therefore will not in and of itself add to your subscription seat count.

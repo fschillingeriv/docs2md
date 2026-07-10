@@ -28,7 +28,7 @@ The Secrets Manager Teams plan supports your full development team with addition
 - All features offered to [Teams organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [event logs](https://bitwarden.com/help/event-logs/) and [API access](https://bitwarden.com/help/public-api/)
 - [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
-[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
+[Sign up for a free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
 
 ## Enterprise
 
@@ -39,7 +39,7 @@ The Secrets Manager Enterprise plan is built for enterprise needs, with automate
 - All features offered to [Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [SCIM provisioning](https://bitwarden.com/help/about-scim/) and [enterprise policies](https://bitwarden.com/help/policies/)
 - [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
-[Sign up for a 14-day free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
+[Sign up for a free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 
 ## Compare plans
 

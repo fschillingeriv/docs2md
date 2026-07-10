@@ -113,11 +113,11 @@ The following emails alert Bitwarden users, including members of organizations i
 | Payment Failed | n/a | A user receives this email when the payment method attached to their subscription has failed on renewal. |
 | Account Credit Payment Processed | n/a | A user receives this email when account credit is processed toward a subscription renewal. |
 | Welcome to Bitwarden! | n/a | A user receives this email when they create a new Bitwarden account. |
-| Emergency Access Contact Invite | n/a | A user receives this email when they are [invited to be an emergency contact for another user](https://bitwarden.com/help/emergency-access/#add-trusted-emergency-contacts/). |
-| Accepted Emergency Access | n/a | A user receives this email when another user has [accepted an invitation to become an emergency contact](https://bitwarden.com/help/emergency-access/#add-trusted-emergency-contacts/). |
-| You Have Been Confirmed as Emergency Access Contact | n/a | A user receives this email when they are [confirmed as an emergency contact for another user](https://bitwarden.com/help/emergency-access/#add-trusted-emergency-contacts/). |
-| Emergency Access Initiated | n/a | A user receives this email when a emergency contact [requests access to their account](https://bitwarden.com/help/emergency-access/#use-emergency-access/). |
-| Emergency Access Approved | n/a | A user receives this email when their [request for emergency access to another's account is approved](https://bitwarden.com/help/emergency-access/#use-emergency-access/). |
-| Emergency Access Rejected | n/a | A user receives this email when their [request for emergency access to another's account is rejected](https://bitwarden.com/help/emergency-access/#use-emergency-access/). |
-| Pending Emergency Access Request | n/a | A user receives this email when an [initiated emergency access request is still pending](https://bitwarden.com/help/emergency-access/#use-emergency-access/) after a certain amount of time. |
-| Emergency Access Granted | n/a | A user receives this email when access to their account [has been granted to an emergency contact](https://bitwarden.com/help/emergency-access/#use-emergency-access/). |
+| Emergency Access Contact Invite | n/a | A user receives this email when they are [invited to be an emergency contact for another user](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts/). |
+| Accepted Emergency Access | n/a | A user receives this email when another user has [accepted an invitation to become an emergency contact](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts/). |
+| You Have Been Confirmed as Emergency Access Contact | n/a | A user receives this email when they are [confirmed as an emergency contact for another user](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts/). |
+| Emergency Access Initiated | n/a | A user receives this email when a emergency contact [requests access to their account](https://bitwarden.com/help/request-and-grant-emergency-access/). |
+| Emergency Access Approved | n/a | A user receives this email when their [request for emergency access to another's account is approved](https://bitwarden.com/help/request-and-grant-emergency-access/). |
+| Emergency Access Rejected | n/a | A user receives this email when their [request for emergency access to another's account is rejected](https://bitwarden.com/help/request-and-grant-emergency-access/). |
+| Pending Emergency Access Request | n/a | A user receives this email when an [initiated emergency access request is still pending](https://bitwarden.com/help/request-and-grant-emergency-access/) after a certain amount of time. |
+| Emergency Access Granted | n/a | A user receives this email when access to their account [has been granted to an emergency contact](https://bitwarden.com/help/request-and-grant-emergency-access/). |

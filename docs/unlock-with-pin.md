@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/unlock-with-pin/
 ---
 
-# Unlock With PIN
+# Unlock with PIN
 
 > [!NOTE] Policy restriction
 > If you are a member of an Enterprise organization, a [policy](https://bitwarden.com/help/policies/#remove-unlock-with-pin/) may prohibit you from setting up unlock with PIN.

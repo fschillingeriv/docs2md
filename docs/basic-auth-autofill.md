@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/basic-auth-autofill/
 
 # Autofill Basic Auth Prompts
 
-Login prompts like the one pictured below, called "basic" or "native" authentication prompts, will be automatically autofilled by Bitwarden browser extensions **if there is only one login item with a** [**matching URI**](https://bitwarden.com/help/uri-match-detection/). You can also use the browser extension's [share-square] **Launch** button to automatically open and log in to a basic auth-protected resource.
+Login prompts like the one pictured below, called "basic" or "native" authentication prompts, will be automatically autofilled by Bitwarden browser extensions **if there is only one login item with a** [**matching URI**](https://bitwarden.com/help/uri-match-detection/). You can also use the browser extension's ✗ **Launch** button to automatically open and log in to a basic auth-protected resource.
 
 Autofilling on basic auth prompts will, by default, use the [Host](https://bitwarden.com/help/uri-match-detection/#host/) URI match detection option so that autofilling is more restrictive. This can be changed by setting the [match detection option](https://bitwarden.com/help/uri-match-detection/) for the relevant login.
 

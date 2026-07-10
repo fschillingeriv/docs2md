@@ -65,9 +65,12 @@ Bitwarden clients without access to a shared cookie store (such as the Desktop a
 | `globalSettings__communication__ssoCookieVendor__cookieName=` | The name of the SSO cookie set by the identity provider (for example, `sso_token`). |
 | `globalSettings__communication__ssoCookieVendor__cookieDomain=` | The domain from which the SSO cookie is read (such as `example.com`). |
 
-[Embedded content]
+> [!NOTE] load balancer exempt
+> The `/api/config` and `/api/sso-cookie-vendor` endpoints must be excluded from your load balancer's authentication requirement so the session cookie can be copied into the Bitwarden client.
+> 
+> Endpoints used for server-to-server communication, such as those for SCIM and SSO OIDC, must also be excluded.
 
-### Refresh token variables
+[Embedded content]### Refresh token variables
 
 Refresh token variables allow you to change the timeout of tokens. Administrators can use these values, for example, to require users to log in every day. Use the following variables to configure the handling of refresh tokens by your server:
 

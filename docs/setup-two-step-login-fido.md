@@ -87,15 +87,6 @@ If your YubiKey's NFC functionality isn't working properly:
 3. Open the key in Yubico Authenticator and select **Toggle applications**.
 4. Enable all NFC options that are available for your key. If there are no NFC options listed, your key may not support NFC.
 
-##### Check that NFC is configured properly:
-
-1. Download the [YubiKey personalization tool](https://www.yubico.com/products/services-software/download/yubikey-personalization-tools/).
-2. Plug the YubiKey into your device.
-3. Select the **Tools** tab.
-4. Select the **NDEF Programming** button.
-5. Select the the configuration slot you would like the YubiKey to use over NFC.
-6. Select the **Program** button.
-
 ##### (Android-only) Check the following:
 
 - That you checked the **One of my keys supports NFC** checkbox during setup.

@@ -41,9 +41,15 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.6.2
+
+(The listed release number is for the Bitwarden Server, other versions released in this cycle include Web 2026.6.4 and Mobile 2026.6.1)
+
+This release delivers routine maintenance and backend improvements.
+
 ## 2026.6.1
 
-(The listed release number is for the Bitwarden Server, other version numbers released in this cycle include Web 2026.6.2, Browser Extension 2026.6.0, Desktop 2026.6.0, Mobile 2026.6.1, and CLI 2026.6.0)
+(The listed release number is for the Bitwarden Server, other version numbers released in this cycle include Web 2026.6.2, Browser Extension 2026.6.0, Desktop 2026.6.0, Mobile 2026.6.0, and CLI 2026.6.0)
 
 #### Password Manager
 

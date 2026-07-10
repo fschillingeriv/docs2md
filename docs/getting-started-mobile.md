@@ -86,7 +86,7 @@ You'll be prompted to confirm you trust Bitwarden. Tapping **OK** will let Bit
 
 ### Launch from mobile apps
 
-You can launch a website directly from Bitwarden by selecting the [share-square] **Launch** button in any vault item with a valid URI. If you are unfamiliar with using URIs, see [Using URIs](https://bitwarden.com/help/uri-match-detection/).
+You can launch a website directly from Bitwarden by selecting the ✗ **Launch** button in any vault item with a valid URI. If you are unfamiliar with using URIs, see [Using URIs](https://bitwarden.com/help/uri-match-detection/).
 
 ![Launch from mobile](https://bitwarden.com/assets/2PsCaLjOAe6WEfnwMkYG0P/be1fde317404835cba1e600244922d98/2025-01-21_15-32-37.png)
 
@@ -131,7 +131,7 @@ When you create new logins, make sure you enter a website in the [URI field](htt
 
 ### Launch from mobile apps
 
-You can launch a website directly from Bitwarden by selecting the [share-square] **Launch** button in any vault item with a valid URI. If you're unfamiliar with using URIs, see [Using URIs](https://bitwarden.com/help/uri-match-detection/).
+You can launch a website directly from Bitwarden by selecting the ✗ **Launch** button in any vault item with a valid URI. If you're unfamiliar with using URIs, see [Using URIs](https://bitwarden.com/help/uri-match-detection/).
 
 ![Launch from mobile](https://bitwarden.com/assets/2PsCaLjOAe6WEfnwMkYG0P/be1fde317404835cba1e600244922d98/2025-01-21_15-32-37.png)
 

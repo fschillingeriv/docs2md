@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/using-sso/
 ---
 
-# Log In With SSO
+# Log in with SSO
 
 If you're a member of an Enterprise organization, you may be [required](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/) or permitted to log in to Bitwarden using single sign-on, similarly to how you log in to other work-related applications:
 

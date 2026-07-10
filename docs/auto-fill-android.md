@@ -77,7 +77,10 @@ This is required by Chrome so it can securely use Bitwarden to autofill password
 
 ### Quick-action tiles
 
-Quick-action tiles use the Android accessibility service to make autofill actions available from your notifications pull-down's settings menu. Quick-action tiles do not require that the **Autofill service**is toggled on in Bitwarden, however you will need to edit your tiles using the [pencil] icon to put the Bitwarden tile options in a place that makes sense for you:
+Quick-action tiles use the Android accessibility service to make autofill actions available from your notifications pull-down's settings menu. Quick-action tiles do not require that the **Autofill service**is toggled on in Bitwarden, however you will need to edit your tiles using the [pencil] icon to put the Bitwarden tile options in a place that makes sense for you.
+
+> [!NOTE] Android advanced protection disables accessibility services
+> On devices running Android 17, enabling Advanced Protection will prevent Bitwarden from accessing the accessibility service. As a result, quick-action tiles will not work. You may use another [Autofill method](https://bitwarden.com/help/auto-fill-android/#autofill-methods/) instead.
 
 ![Android quick-action autofill](https://bitwarden.com/assets/7MHfjTUrRjdLtBoyL3Ukz2/7980adfc9de7b6b2659f1955d3d987fd/2025-07-30_11-07-51.png)
 
