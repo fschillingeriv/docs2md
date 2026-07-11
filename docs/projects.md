@@ -85,9 +85,6 @@ To add existing machine accounts to your project:
  - **Can read**: Machine account can retrieve secrets from assigned projects.
  - **Can read, write**: Machine account can retrieve and edit secrets from assigned projects, create new secrets in assigned projects, or create new projects altogether.
 
-> [!TIP] SM 07/25 dependency
-> Fully utilizing write access for machine accounts is dependent on a forthcoming [CLI](https://bitwarden.com/help/secrets-manager-cli/) release. For now, this simply makes the option available in the UI. Stay tuned to the [Release Notes](https://bitwarden.com/help/releasenotes/) for more information.
-
 ### Add new machine accounts
 
 To add a machine account for this project:
@@ -100,9 +97,6 @@ To add a machine account for this project:
 
  - **Can read**: Machine account can retrieve secrets from assigned projects.
  - **Can read, write**: Machine account can retrieve and edit secrets from assigned projects, as well as create new secrets in assigned projects or create new projects.
-
-> [!TIP] SM 07/25 dependency
-> Fully utilizing write access for machine accounts is dependent on a forthcoming [CLI](https://bitwarden.com/help/secrets-manager-cli/) release. For now, this simply makes the option available in the UI. Stay tuned to the [Release Notes](https://bitwarden.com/help/releasenotes/) for more information.
 
 ## Delete a project
 

@@ -4,9 +4,9 @@ URL: https://bitwarden.com/help/versioning/
 
 # Server & Client Versioning
 
-Currently Bitwarden clients and server use a `yyyy.mm.r` convention, indicating, for example, that `2022.5.0` is the base release (`.0`) of May (`.5.`) 2022 (`2022.`). If subsequent hotfixes are released, for example, they would be `2022.5.1`, `2022.5.2`, and so on.
+Currently Bitwarden clients and server use a `yyyy.mm.r` convention, indicating, for example, that `2022.5.0` is the base release (`.0`) of May (`.5.`) 2022 (`2022.`). If subsequent minor version and hotfixes are released, for example, they would be `2022.5.1`, `2022.5.2`, and so on.
 
-Initial monthly releases (those ending in `.0`) are shared across all clients and server, but clients and server may deviate as some get hotfixes (`.1`s, `.2`s, and so on) while others don't.
+Initial monthly releases (those ending in `.0`) are shared across all clients and server, but clients and server may deviate as some get further updates and hotfixes (`.1`s, `.2`s, and so on) while others don't.
 
 This hasn't always been the case, though. Prior to May 2022, clients and server each had different versioning systems. If you're using a client or server with a version `1.xx.x` or `2.xx.x`, you're using an old version.
 
@@ -33,7 +33,7 @@ Navigate to the ⚙️ **Settings**tab and select **About** → **About Bitwarde
 
 ### Desktop app
 
-On Windows, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden.**
+On Windows or Linux, select **Help**[arrow-circle-right]**About Bitwarden**. On macOS, select **Bitwarden**[arrow-circle-right]**About Bitwarden.**
 
 ### Mobile app
 

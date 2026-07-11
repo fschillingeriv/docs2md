@@ -15,4 +15,4 @@ Using SSO with Bitwarden retains our zero-knowledge encryption model. Nobody at 
 > [!NOTE] Key Connector disabled default
 > Due to the sensitivity of storing decryption keys, the **Key Connector** option is disabled by default and currently only available to organizations self-hosting Bitwarden.
 > 
-> If you're interesting in using Key Connector, check out the [About Key Connector](https://bitwarden.com/help/about-key-connector/) and [Deploy Key Connector](https://bitwarden.com/help/deploy-key-connector/) articles and [contact us](https://bitwarden.com/contact/) to setup a time for us to help you get started.
+> If you're interested in using Key Connector, check out the [About Key Connector](https://bitwarden.com/help/about-key-connector/) and [Deploy Key Connector](https://bitwarden.com/help/deploy-key-connector/) articles and [contact us](https://bitwarden.com/contact/) to set up a time for us to help you get started.

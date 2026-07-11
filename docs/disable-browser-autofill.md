@@ -20,17 +20,16 @@ Learn how to disable the built-in password manager for major browsers.
 
 In Chrome or any Chromium-based browser (Opera, and Brave), navigate to the **Passwords** page by entering `chrome://password-manager/settings` in the address bar, substituting `chrome` for your browser name (for example, `brave://password-manager/settings`). 
 
-On this page, toggle off both the **Offer to save passwords** option and the **Auto Sign-in** option:
+On this page, toggle off **Offer to save passwords and passkeys** and **Sign in automatically**:
 
-![Chrome Password Options ](https://bitwarden.com/assets/6bpi4fkyZhnkhW5RBtugDW/d8e2de4536d6a34f092fd9d5975fd04a/chrome-disable-autofill.png)
-*Chrome Password Options *
+[Image component - no image]
 
-This page will also list any **Saved Passwords** that are being stored by the browser:
+Then select **Passwords** to view any that are stored in the browser:
 
-![Chrome Saved Passwords ](https://bitwarden.com/assets/4P5alfndwwNgCpTYrSCg61/b3545839a8429f28ee7b6ac66559c3ce/chrome-delete-passwords.png)
+![Chrome Saved Passwords ](https://bitwarden.com/assets/4P5alfndwwNgCpTYrSCg61/bc1570211deec146aa51aa6f35f9fed2/View_passwords_saved_in_Chrome_Password_Manager.png)
 *Chrome Saved Passwords *
 
-If you haven't already saved these passwords in Bitwarden, [export them](https://bitwarden.com/help/import-from-chrome/#export-from-chrome/) to prepare for future import to Bitwarden. Once exported, you should delete these passwords from the browser's storage.
+If you haven't already saved these passwords in Bitwarden, [export them](https://bitwarden.com/help/import-from-chrome/#export-from-chrome/) to prepare for future import to Bitwarden. Once exported, we recommend deleting these passwords from the browser's storage.
 
 ### Edge
 
