@@ -22,7 +22,8 @@ In Chrome or any Chromium-based browser (Opera, and Brave), navigate to the **Pa
 
 On this page, toggle off **Offer to save passwords and passkeys** and **Sign in automatically**:
 
-[Image component - no image]
+![Turn off Chrome Password Manager](https://bitwarden.com/assets/278FMIhP9usz83Q8zlSZRs/34fc118d1a52fcba111b22f786ad00bf/Turn_off_Chrome_Password_Manager.png)
+*Turn off Chrome Password Manager*
 
 Then select **Passwords** to view any that are stored in the browser:
 

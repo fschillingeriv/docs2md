@@ -15147,7 +15147,8 @@ In Chrome or any Chromium-based browser (Opera, and Brave), navigate to the **Pa
 
 On this page, toggle off **Offer to save passwords and passkeys** and **Sign in automatically**:
 
-[Image component - no image]
+![Turn off Chrome Password Manager](https://bitwarden.com/assets/278FMIhP9usz83Q8zlSZRs/34fc118d1a52fcba111b22f786ad00bf/Turn_off_Chrome_Password_Manager.png)
+*Turn off Chrome Password Manager*
 
 Then select **Passwords** to view any that are stored in the browser:
 
@@ -35580,7 +35581,7 @@ The Secrets Manager Teams plan supports your full development team with addition
 - Unlimited [secrets](https://bitwarden.com/help/secrets/) and [projects](https://bitwarden.com/help/projects/)
 - Up to 20 [machine accounts](https://bitwarden.com/help/machine-accounts/) included, with extra accounts billed per account
 - All features offered to [Teams organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [event logs](https://bitwarden.com/help/event-logs/) and [API access](https://bitwarden.com/help/public-api/)
-- [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
+- [Priced per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
 [Sign up for a free trial today](https://bitwarden.com/go/start-secrets-teams-trial/). 
 
@@ -35591,7 +35592,7 @@ The Secrets Manager Enterprise plan is built for enterprise needs, with automate
 - Unlimited [secrets](https://bitwarden.com/help/secrets/), users, and [projects](https://bitwarden.com/help/projects/)
 - Up to 50 [machine accounts](https://bitwarden.com/help/machine-accounts/) included, with extra accounts billed per account
 - All features offered to [Enterprise organizations](https://bitwarden.com/help/about-organizations/#types-of-organizations/), like [SCIM provisioning](https://bitwarden.com/help/about-scim/) and [enterprise policies](https://bitwarden.com/help/policies/)
-- [Billed per user](https://bitwarden.com/products/secrets-manager/#pricing/)
+- [Priced per user](https://bitwarden.com/products/secrets-manager/#pricing/)
 
 [Sign up for a free trial today](https://bitwarden.com/go/start-secrets-enterprise-trial/).
 
