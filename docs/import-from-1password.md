@@ -6,8 +6,8 @@ URL: https://bitwarden.com/help/import-from-1password/
 
 Use this article for help exporting data from 1Password and importing into Bitwarden. 1Password data exports are available as `.1pux` (requires 1Password v8.5+), `.1pif,` and `.csv` files depending on which client version and operating system you are using. Learn [what data 1Password exports include](https://support.1password.com/export/?mac#get-help).
 
-> [!TIP] Export from 1PW with CXP.
-> 1Password for iOS supports export of your data, including passkeys, through Credential Exchange. [Learn how to use Credential Exchange](https://support.1password.com/export/?ios) for easy migration from from 1Password to Bitwarden.
+> [!TIP] 1Password, skip to CXP
+> If your mobile device is on iOS 26+ or Android 10+ and both the Bitwarden and 1Password apps are installed, skip creating an export. Instead, directly [import your data on mobile](https://bitwarden.com/help/import-from-1password/#import-to-bitwarden/) using the FIDO Credential Exchange Protocol (CXP) for the quickest path.
 
 ## Export from 1Password
 
@@ -88,11 +88,50 @@ To import data to your vault:
 
 ### Mobile
 
-In most cases, importing data on a mobile device requires you to do so via the web app, opened in a mobile browser. You can reach this location from Password Manager by navigating to **Settings** → **Vault** → **Import items**.
+There are two ways to import data when using a mobile device. Direct import with CXP is often the easiest, but is only supported by a limited number of password manager apps at this time.
 
-On iOS 26, Bitwarden supports import using the [Fido Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications) for direct and easy migration of passwords, passkeys, credit cards, and personal identity information into your vault. The app you're importing from must also support CXP and steps will vary by application.
+### Most common method for mobile
 
-For example, on the iOS Passwords app, use the ⋯ options menu to select **Export Data to Another App** and choose Bitwarden. 
+For most devices, open a mobile browser. Log in to Bitwarden there and follow the [web app import steps](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/).
+
+### Direct import with the Credential Exchange Protocol (CXP)
+
+Bitwarden supports the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications). This facilitates an alternate, often faster import path by removing the need to manually download and handle a data file. The password manager app that currently stores your data must also support CXP, and the steps vary by application.
+
+#### CXP with iOS devices
+
+To import data using a mobile device with **iOS 26+**:
+
+1. Open the other CXP-compatible password manager app where your data is saved.
+2. Depending on the app, find the export data option and choose which items to import. You may need to complete extra steps, like logging in or confirming you want to move data.
+
+> [!NOTE] Apple Passwords CXP steps
+> In the **Apple Passwords** app, for example:
+> 
+> 1. Tap the ⋯ **Options icon**.
+> 2. Tap **Export Data to Another App**.
+> 3. Check which passwords and passkeys you want to transfer from the list that appears. When done, tap **Continue**.
+3. On the **Export Passwords** screen, tap **Continue**.
+4. Select **Bitwarden** for the destination and then tap **Continue**.
+5. Tap **Continue in "Bitwarden"**.
+6. The Bitwarden app will open. Tap **Continue** to confirm the import.
+7. Once complete, a message confirming that your data was imported will appear.
+
+#### CXP with Android devices
+
+To import data using a mobile device with **Android 10+**:
+
+1. Open the Bitwarden app.
+2. Tap **Settings**.
+3. Tap **Vault**.
+4. Tap **Import items**.
+5. Tap **Import from another app**.
+6. Select the other CXP-compatible password manager app where your data is saved and tap **Continue**.
+7. Depending on the app, choose which items to import. You may need to complete extra steps, like logging in or confirming you want to move data.
+8. Once complete, a message confirming that your data was imported will appear.
+
+> [!NOTE] Android CXP doesn't support Dashlane.
+> At this time, importing Dashlane data via CXP isn't supported on Android.
 
 ### Desktop
 

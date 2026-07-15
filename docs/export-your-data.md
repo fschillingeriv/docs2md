@@ -10,7 +10,7 @@ Export your vault data, including logins and notes, to back up important informa
 > If you’re adding Bitwarden to a new device and your account is hosted on our cloud servers, you don’t need to create an export. Instead, [download Bitwarden](https://bitwarden.com/download/) on your new device and log in with your existing account.
 
 > [!WARNING] Careful w/ Exports
-> Unless you are using an [encrypted export](https://bitwarden.com/help/encrypted-export/), do not store or send the exported file over insecure channels, like email, and delete the file immediately after use.
+> Unless you use an [encrypted export](https://bitwarden.com/help/encrypted-export/), do not store or send the exported file over insecure channels, like email, and delete the file immediately after use.
 
 ## Export file types
 
@@ -26,7 +26,7 @@ Exports can be downloaded in a few formats:
 - (**iOS 26 only**) export directly to another app
 
 > [!NOTE] What is CXP
-> Exporting directly to another app requires that the target app supports the [Fido Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
+> Exporting directly to another app requires that the destination app also supports the [Fido Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
 
 Review [example .csv and .json files](https://bitwarden.com/help/condition-bitwarden-import/) to decide which format is best for you. We recommend the encrypted `.json` option for best security and most complete export. Only `.json` exports include:
 
@@ -163,9 +163,9 @@ To export vault data:
 ![Export vault on mobile](https://bitwarden.com/assets/6IvRA9oYfTvO9GxylX2MMh/528b65ca6d83f0f28c469b62078570d5/2025-01-22_09-51-29.png)
 5. (Optional) If you choose `json (Password protected)`, enter a new password. If you import this file back into Bitwarden, you'll need to enter that password.
 6. Enter your master password.
-7. Select **Export**.
+7. Select **Export**. Export files will be saved **to the location set by your device**. By default this is typically a Downloads folder, but you can change it within the device settings.
 
-Export files will be saved **to the location set by your device**. By default this is typically a Downloads folder, but you can change it within the device settings.
+On Android 10+, you can alternatively use the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications) to export your Bitwarden data directly to another CXP-compatible password manager app. Steps vary by app, and the process starts from the destination app.
 
 ### CLI
 

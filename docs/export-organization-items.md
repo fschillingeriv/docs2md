@@ -24,7 +24,7 @@ To export your organization data from the web app:
 3. On the vault export page, choose a **File format** (`.json`, `.csv`, or `.json (Encrypted)`) and select the **Confirm format**button.
 
 > [!WARNING] Careful w/ Exports
-> Unless you are using an [encrypted export](https://bitwarden.com/help/encrypted-export/), do not store or send the exported file over insecure channels, like email, and delete the file immediately after use.
+> Unless you use an [encrypted export](https://bitwarden.com/help/encrypted-export/), do not store or send the exported file over insecure channels, like email, and delete the file immediately after use.
 4. Enter your master password and select the **Export** button.
 
 > [!NOTE] Exported Org data event
