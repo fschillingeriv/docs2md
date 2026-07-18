@@ -12857,13 +12857,6 @@ Learn more about access tokens [here](https://bitwarden.com/help/access-tokens/)
 
 **Video Chapters:**
 Learn more about exporting Secrets Manager data [here](https://bitwarden.com/help/export-secrets-data/).
-
-## Working with AI Agents
-
-### Securing AI workflows with Bitwarden Secrets Manager and Claude Code (8 min)
-
-[![Vimeo Video](https://vumbnail.com/1209673806.jpg)](https://vimeo.com/1209673806)
-*[Watch on Vimeo](https://vimeo.com/1209673806)*
 ---
 URL: https://bitwarden.com/help/create-bitwarden-account/
 ---
