@@ -16719,7 +16719,7 @@ To export vault data:
 > [!NOTE] CXP on iOS
 > On iOS 26+, you can choose between **Export vault to a file**and **Export vault to another app**. 
 > 
-> If you choose **Export vault to a file**, continue with these instructions. If you choose **Export vault to another app**, follow the simple on-screen process to export data directly to any other app that supports the [FIDO Credential Exchange Protocol](https://fidoalliance.org/specifications-credential-exchange-specifications).
+> If you choose **Export vault to a file**, continue with these instructions. If you choose **Export vault to another app**, follow the simple on-screen process to export data directly to any other app that supports the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
 4. Select a **File Format**: `.json`, `.csv`, or `.json (Password protected)`.
 
 ![Export vault on mobile](https://bitwarden.com/assets/6IvRA9oYfTvO9GxylX2MMh/528b65ca6d83f0f28c469b62078570d5/2025-01-22_09-51-29.png)
@@ -17040,7 +17040,7 @@ Often, websites cause autofill issues because they deviate from a widely-adopted
 Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
 
 > [!NOTE] Fill assist, keep reading for more details.
-> No further action is required! Once turned on, you should observe better autofill performance on sites included the curated list. The rest of the article covers more detail about how fill assist works.
+> No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
 
 Because fill assist is one method for facilitating easier autofill, [custom fields](https://bitwarden.com/help/custom-fields/) are superseded by sites that are fill assisted.
 
@@ -37973,6 +37973,9 @@ You will need a Duo account in order to obtain some information required by Bitw
 ![Duo Bitwarden Application](https://bitwarden.com/assets/35CpllTrg8k1IIQrL4Jf5m/d62f04d003eb8e6f6d7ef1da2a9f7e9b/2024-03-01_11-42-32.png)
 4. Take note of the **Client ID**, **Client secret**, and **API Hostname**. You will need to reference these values when you setup Duo within Bitwarden.
 5. Toggle **User access** to **Enable for all users**.
+
+> [!NOTE] Duo does not satisfy require 2fa policy
+> Organizations that have enabled Duo for all members should not use the [Require two-step login](https://bitwarden.com/help/policies/#require-two-step-login/) policy. Organization Duo is enforced by the provider and will not satisfy the policy's two-step login requirement.
 
 ### Setup Duo in Bitwarden
 

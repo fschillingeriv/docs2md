@@ -107,6 +107,9 @@ You will need a Duo account in order to obtain some information required by Bitw
 4. Take note of the **Client ID**, **Client secret**, and **API Hostname**. You will need to reference these values when you setup Duo within Bitwarden.
 5. Toggle **User access** to **Enable for all users**.
 
+> [!NOTE] Duo does not satisfy require 2fa policy
+> Organizations that have enabled Duo for all members should not use the [Require two-step login](https://bitwarden.com/help/policies/#require-two-step-login/) policy. Organization Duo is enforced by the provider and will not satisfy the policy's two-step login requirement.
+
 ### Setup Duo in Bitwarden
 
 > [!WARNING] Org Duo

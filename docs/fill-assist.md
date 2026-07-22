@@ -13,7 +13,7 @@ Often, websites cause autofill issues because they deviate from a widely-adopted
 Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
 
 > [!NOTE] Fill assist, keep reading for more details.
-> No further action is required! Once turned on, you should observe better autofill performance on sites included the curated list. The rest of the article covers more detail about how fill assist works.
+> No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
 
 Because fill assist is one method for facilitating easier autofill, [custom fields](https://bitwarden.com/help/custom-fields/) are superseded by sites that are fill assisted.
 
