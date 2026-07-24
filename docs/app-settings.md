@@ -189,11 +189,9 @@ The following sections list the settings available to Bitwarden Password Manager
 Unlike **Security** and **Preferences**settings, these settings apply to all accounts you use the desktop app with:
 
 > [!TIP] Tray vs. Dash on Linux.
-> On Windows, the **system tray**is the strip of shortcuts located at the bottom-right of the screen. The **dash** is the strip of frequently-used and open apps typically located at the left of the screen.
+> On Linux, the **system tray**is the strip of shortcuts located at the bottom-right of the screen. The **dash** is the strip of frequently-used and open apps typically located at the left of the screen.
 
-- **Show tray icon**: Always show the Bitwarden desktop app icon in the system tray.
-- **Close to tray icon**: When closing the window, show an icon in the system tray instead of nowhere.
-- **Start to tray icon**: When the Bitwarden desktop app is first started, show an icon in the system tray instead of opening the window.
+- **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the tray. Recommended when using the SSH agent or browser integration.
 - **Start automatically on login**: Start the Bitwarden desktop app automatically when you log in to your computer.
 - **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
 
@@ -210,12 +208,7 @@ Unlike **Security** and **Preferences**settings, these settings apply to all acc
 > [!TIP] Dock vs. menu bar on macOS.
 > On macOS, the **menu bar** is the strip of menus located at the top of the screen. The **Dock** is the strip of frequently-used and open apps available by moving your cursor to the edge of the screen.
 
-- **Show menu bar icon**: Always show the Bitwarden desktop app icon in the menu bar.
-- **Minimize to menu bar**: When minimizing the window, show an icon in the menu bar instead of the Dock.
-- **Close to menu bar**: When closing the window, show an icon in the menu bar instead of nowhere of the Dock.
-- **Start to menu bar**: When Bitwarden desktop app is first started, show an icon in the menu bar instead of opening the window.
-- **Start automatically on login**: Start the Bitwarden desktop app automatically when you log in to your computer.
-- **Always show in the Dock**: Always show the Bitwarden desktop app in the Dock, regardless of active menu bar options.
+- **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the menu bar. Recommended when using the SSH agent or browser integration.
 - **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
 
  - **Require verification for browser integration**: Require [fingerprint phrase](https://bitwarden.com/help/fingerprint-phrase/) confirmation when establishing the integration between Bitwarden desktop app and browser extension.
@@ -233,10 +226,7 @@ Unlike **Security** and **Preferences**settings, these settings apply to all acc
 > [!TIP] Taskbar vs. System Tray on Windows.
 > On Windows, the **system tray**is the strip of shortcuts located at the bottom-right of the screen. The **taskbar** is the strip of frequently-used and open apps typically located at the bottom-middle of the screen.
 
-- **Show tray icon**: Always show the Bitwarden desktop app icon in the system tray.
-- **Minimize to tray icon**: When minimizing the window, show an icon in the system tray instead of the taskbar.
-- **Close to tray icon**: When closing the window, show an icon in the system tray instead of nowhere.
-- **Start to tray icon**: When the Bitwarden desktop app is first started, show an icon in the system tray instead of opening the window.
+- **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the tray. Recommended when using the SSH agent or browser integration.
 - **Start automatically on login**: Start the Bitwarden desktop app automatically when you log in to your computer.
 - **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
 

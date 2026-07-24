@@ -152,24 +152,24 @@ If you have multiple logins for the website, the inline autofill menu will displ
 ![Inline TOTP autofill](https://bitwarden.com/assets/1rc2rXC3daH5mcEZNRgbv1/db47ffbb4a3b987ff2e3e7842900ceb6/2025-01-02_17-23-28.png)
 *Inline TOTP autofill*
 
-### Create account with inline autofill
+### Add an account with inline autofill
 
-To create a new account using the inline autofill menu:
+To add a new account to Bitwarden using the inline autofill menu, while either logging in with pre-existing credentials or creating a new account entirely:
 
-1. Enter a username in the login form's username field.
-2. Select the password field. The inline autofill menu will display.
-3. Select **Fill generated password** if you're satisfied with the generated password**.**You can also use the [refresh] Generate button to generate a new password until you're satisfied with it:
+1. Select the username in the login form. If you already have credentials for the site, enter in your username and password. If you don't, continue to the next step and Bitwarden will help you create them.
 
-![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/ce116e8ff337f90fbbd57b52aa15fdcd/2024-11-05_10-07-08.png)
-*Fill generated password*
+> [!TIP] Don't submit the form yet.
+> Don't submit the login form just yet!
+2. Select the inline **Save to Bitwarden** or **New login**button:
 
-> [!TIP] Inline uses generator settings
-> This option will use the settings you've configured in the browser extension's **Generator**tab. [Learn how to change these settings](https://bitwarden.com/help/generator/#password-types/).
-4. **Before submitting the form by clicking 'Sign up' or 'Create account'**, the inline autofill menu will offer the option to **Save to Bitwarden**. Use this option to open Bitwarden in a pop-up, and select the **Save** button to save the generated credential:
+![Save to Bitwarden](https://bitwarden.com/assets/UuqBaeAqEKusL9ByoUi2q/43352b0ca6b80838e72ab13f7e5bd8a7/2026-07-14_10-16-23.png)
+*Save to Bitwarden*
+3. In the browser extension that pops out, either review the imported username and password or create a new set. If you're creating a new password, use the [password generator](https://bitwarden.com/help/generator/).
+4. Now's also a good time to edit anything else about this item you might want to change, like its **Name** or **Owner**.
+5. Select the **Save and fill** button to save the login in Bitwarden and automatically continue with the site's login or account creation process:
 
-![Save login to Bitwarden](https://bitwarden.com/assets/7cMSUQLfvxHNwHS8xMX1j7/b63d716005ec29eef2a4f42286271d29/2025-04-25_10-21-36.png)
-*Save login to Bitwarden*
-5. Complete the form by selecting Sign up, Create account, or whatever button the website or app offers to complete account creation.
+![Save and fill](https://bitwarden.com/assets/1ATTneDqBvNTFNds8YOCFh/cae4c9f4b872eec97aa5cae911633f1a/2026-07-14_10-17-33.png)
+*Save and fill*
 
 ### Context menu
 

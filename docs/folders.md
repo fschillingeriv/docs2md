@@ -20,16 +20,19 @@ Folders can be created, renamed, and deleted from any Bitwarden client applicati
 To create a folder, select the **New** [angle-down] button and choose **Folder**from the dropdown:
 
 ![New folder](https://bitwarden.com/assets/3BvTWidqL4xWQvFqBSiJIR/d68bc851d44df1b571eed16366159e0c/2024-12-02_13-50-55.png)
+*New folder*
 
 Once created, you can rename or delete a folder at any time by selecting the folder and clicking the [pencil] **Pencil** icon:
 
-![Edit or Delete a Folder](https://bitwarden.com/assets/1aG4313JkmkBvot45gZvEr/a7dc45d314407131948216acc2b2444d/2024-12-02_16-15-07.png)
+![Edit or delete a folder](https://bitwarden.com/assets/1aG4313JkmkBvot45gZvEr/a7dc45d314407131948216acc2b2444d/2024-12-02_16-15-07.png)
+*Edit or delete a folder*
 
 ### Browser extension
 
 To create a folder, select the **New** [angle-down] button and choose **Folder**from the dropdown:
 
 ![Browser extension new folder](https://bitwarden.com/assets/1aPQBd9bT7uUf20Y1fZwSB/506e7010284c1e0d83b75204bac22eaa/2024-12-02_16-13-10.png)
+*Browser extension new folder*
 
 Once created, you can rename or delete a folder at any time from the **Settings** → **Vault** → **Folders** menu.
 
@@ -50,6 +53,7 @@ Once created, you can rename or delete a folder at any time using the [pencil] *
 To create a folder, tap the ⚙️ **Settings** menu, tap the **Vault**option, and tap the **Folders** option. Tap the + **Add** icon to add a folder. Once created, you can rename a folder from the same menu by tapping the folder, or delete the folder using the ⋮ menu:
 
 ![Folders on mobile](https://bitwarden.com/assets/6IwzXSJHGmSeU7oIy4z8kZ/95620b58758e50fa0e8e22a65f2bfa15/2025-01-21_15-26-07.png)
+*Folders on mobile*
 
 ### CLI
 
@@ -76,6 +80,7 @@ Folders can be "nested" in order to logically organize them within your vault. T
 > Searching inside a "parent" folder will not include items in folders nested inside it as potential search results. For more information, see [search your vault](https://bitwarden.com/help/searching-vault/).
 
 ![Nested folders ](https://bitwarden.com/assets/5blNMg0hJ9XW3Ts2qPRzF5/7a2bdfb7672c04a1a1fbae1068b8b422/2024-12-02_16-18-48.png)
+*Nested folders *
 
 To create a nested folder, give a new folder a name that includes the "parent" folder following by a forward slash (`/`) delimiter, for example `Socials/Forums`. You can also rename existing folders in the same way to nest them under other existing folders.
 
@@ -91,26 +96,27 @@ From the web vault, you can either:
 
 - Navigate to the **Add**item or **Edit**item screen, select your new folder from the **Folder** dropdown and **Save** your item:
 
- 
-
 ![Move item to a Folder](https://bitwarden.com/assets/4VfciDIbEZZFAG1AXbRf3S/275100f866612da15b4714adea8f1944/2024-12-02_16-20-15.png)
-- Navigate to the **Vaults** view, select the items you want to move and use the top-level ⋮ options menu to select the 📁 **Add to folder** button. On the move selected dialog box, choose the folder you want to move the item(s) to:
+*Move item to a Folder*
+- Navigate to the **Vaults** view, select the items you want to move, and use the action bar to select the📁 **Add to folder** button. On the move selected dialog box, choose the folder you want to move the item(s) to:
 
  
 
-![Move items to a folder ](https://bitwarden.com/assets/7zQPzdrcVIbPeX5E8LqTq/ce8e8bf7188626093a675eb844d5002a/2024-12-02_16-22-24.png)
+![Move items to a folder ](https://bitwarden.com/assets/7zQPzdrcVIbPeX5E8LqTq/e1554b6cc22a5d50029ab8c5e61940f5/add_to_folder_bar.png)
+*Move items to a folder *
 
 ### Browser extension
 
 Open the vault item you want to move, select the **Edit** button, use the **Folder** dropdown to choose a folder, and select **Save**when you're done:
 
 ![Move item to a folder ](https://bitwarden.com/assets/6b8EOCtuuHmulnNQNJmWWk/f24c97777972b15ee5000e575f2b242c/2024-10-29_11-48-18.png)
+*Move item to a folder *
 
 ### Desktop
 
-Open the vault item you want to move, select the **Folders** dropdown, and choose the folder to move the item to:
+Select the items you want to move, and use the action bar to select the📁 **Add to folder** button. On the move selected dialog box, choose the folder you want to move the item(s) to:
 
-![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/85db2d1104337e5ebc6e4dd0e8b57f8a/2026-04-23_10-48-31.png)
+![Add an item to a folder](https://bitwarden.com/assets/63jzyM75IRzhAbw5nNzMHx/cf70c299326b410b9345a7a047560fae/desktop_folder.png)
 *Add an item to a folder*
 
 ### Mobile
@@ -118,6 +124,7 @@ Open the vault item you want to move, select the **Folders** dropdown, and choos
 Open the vault item you want to move, tap the **Folders** dropdown, and choose the folder to move the item to:
 
 ![Move item to a folder on mobile](https://bitwarden.com/assets/169hAtd0PhW3BcYlSPy6vn/2618596e36941b06dabcb766327b664b/2025-01-22_09-44-03.png)
+*Move item to a folder on mobile*
 
 ### CLI
 

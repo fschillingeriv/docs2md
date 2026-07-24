@@ -165,6 +165,6 @@ The Bitwarden browser extension has a built-in setting to disable your browser's
 1. Navigate to the ⚙️ **settings** tab in the Bitwarden browser extension and then select **Autofill**.
 2. Click to enable the **Make Bitwarden your default password manager**.
 
-![Make Bitwarden default password manager](https://bitwarden.com/assets/5fyBdu5X6JCLu2UsaqYUO0/abfb44cb460314112805bfd0312c1f8f/2025-10-14_12-44-35.png)
-*Make Bitwarden default password manager*
+![Make Bitwarden your default](https://bitwarden.com/assets/5fyBdu5X6JCLu2UsaqYUO0/5cbd0a186251fe8916b5a01be1f3efb8/2026-07-14_14-59-21.png)
+*Make Bitwarden your default*
 3. A dialogue will appear on screen, select **allow** to give Bitwarden permission to make changes to your browser settings.

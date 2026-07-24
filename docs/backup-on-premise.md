@@ -33,10 +33,17 @@ docker exec -i bitwarden-mssql /backup-db.sh
 
 ## Automatic database backups
 
-Bitwarden will automatically take nightly backups of the `mssql` database container, as long as the container running. These backups are stored in the `./bwdata/mssql/backups` directory for 30 days.
+Bitwarden will automatically take nightly backups of the `mssql` database container, as long as the container running. These backups are stored in the `./bwdata/mssql/backups` directory for 30 days. 
 
 > [!NOTE] Lite doesn't do nightly backups.
 > [Bitwarden lite](https://bitwarden.com/help/install-and-deploy-lite/) does not take nightly backups. Using lite, you are required to manage your own backup processes.
+
+By default, backup files are create with the UTC time they were taken included in the name. If you want this to be local time instead, add the following line to `./bwdata/env/mssql.override.env` and then restart the server.
+
+```bash
+# Substitute America/New_York for your IANA time zone name in the following example:
+BACKUP_TIMEZONE=America/New_York
+```
 
 ### Restore a database backup
 

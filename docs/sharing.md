@@ -30,7 +30,10 @@ To add a new shared item from the web app, browser extension, mobile, or desktop
 > [!NOTE] Reminder, sharing means org ownership
 > **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
 > 
+> 
+> 
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
+> *Shared item badge*
 
 ### Importing items
 
@@ -48,7 +51,10 @@ When importing items to Password Manager, you can import them directly to a shar
 > [!NOTE] Reminder, sharing means org ownership
 > **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
 > 
+> 
+> 
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
+> *Shared item badge*
 
 ## Share existing items
 
@@ -62,9 +68,10 @@ The most universal method for sharing existing items using the web app can be us
 
 > [!TIP] Can also be done from Admin Console
 > Organization [owners, admins, and some custom users](https://bitwarden.com/help/user-types-access-control/) can also take this step directly from the **Admin Console** to skip some of the steps in this process.
-2. Using the ⋮ options menu, select the **Assign to collections** option:
+2. Using the action bar, select **Assign to collections**:
 
-![Assign to collections](https://bitwarden.com/assets/stm9byteqzZn9dvqonHrc/0da481b0cf1f54457d08ae02fd917377/2024-12-02_14-33-34.png)
+![Assign to collections](https://bitwarden.com/assets/stm9byteqzZn9dvqonHrc/000099fa7e49dffd712f1c94b966fa09/assign_to_collections.png)
+*Assign to collections*
 3. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.
@@ -77,10 +84,12 @@ The previously described method is the most universal and simplified, however th
 
 - **Share from the Admin Console**: As mentioned previously, organization [owners, admins, and some custom users](https://bitwarden.com/help/user-types-access-control/) can streamline sharing by doing so directly from the Admin Console:
 
-![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/327c0c24e09dce687540499a8eaa5aac/2024-12-02_15-47-21.png)
+![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/e403afa9610a8fc26176d9f4223d8392/Assign_to_collections_in_bulk_edited.png)
+*Assign to collections in bulk*
 - **Edit an item directly**: If you need to make changes to an individual item prior to sharing it, open the item and, in the **Edit** view, use the **Owner**and **Collections** dropdowns to choose who to share it with while you're making the necessary changes:
 
 ![Change item ownership](https://bitwarden.com/assets/34zUaUOVRSXEv90fQiq5mD/e1e41fb5b40e3efcd974c770b101ad55/2025-01-28_10-40-03.png)
+*Change item ownership*
 
 ### Browser extension
 
@@ -89,6 +98,7 @@ To share an existing item from the browser extension:
 1. In the **Vault**view, use the ⋮ options menu for the item you want to share and select **Assign to collections**:
 
 ![Browser extension assign to collections](https://bitwarden.com/assets/7t3FoxPnpWGQAEzH1ERVDi/6c5622df8525848c0b4eb9bba330b70f/2024-12-02_15-32-47.png)
+*Browser extension assign to collections*
 2. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.
@@ -102,6 +112,7 @@ There are a few other ways to share an item:
 - **Edit an item directly**: If you need to make changes to an individual item prior to sharing it, open the item and, in the **Edit** view, use the **Owner**and **Collections** dropdowns to choose who to share it with while you're making the necessary changes:
 
 ![Share while editing on browser](https://bitwarden.com/assets/X73xPwnn5yKQtHhAC8U0H/480609793077866d21105593767d7448/2025-07-29_09-33-57.png)
+*Share while editing on browser*
 
 ### Mobile
 
@@ -125,9 +136,9 @@ There are a few other ways to share an item:
 
 To share an existing item from the desktop app:
 
-1. In the **Vault**view, right-click the item you want to share and select **Assign to collections** from the menu:
+1. In the **Vault**view, select the item you want to share and select **Assign to collections** from the action bar:
 
-![Share from desktop](https://bitwarden.com/assets/2RRhv9udtSa49Uxzv6rRAQ/fcf14bf329eb05226e389653ff339826/2026-04-23_11-35-49.png)
+![Share from desktop](https://bitwarden.com/assets/2RRhv9udtSa49Uxzv6rRAQ/e5b579af047113cf7ea1eb60bbbb533e/2026-07-15_11-18-04.png)
 *Share from desktop*
 2. On the **Assign to collections** pop-up:
 
@@ -164,7 +175,10 @@ For more information, please refer to the Bitwarden [CLI documentation](https:/
 > [!NOTE] Reminder, sharing means org ownership
 > **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
 > 
+> 
+> 
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
+> *Shared item badge*
 
 ### Reclaimed shared item ownership
 

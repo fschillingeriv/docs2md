@@ -5,11 +5,13 @@ URL: https://bitwarden.com/help/releasenotes/
 # Release Notes
 
 > [!TIP] Subscribe to Release Notes
-> Want Release Announcements delivered straight to your inbox? Sign up to receive an email update with the latest Bitwarden release notes.
+> Do you want these updates to come to you? Subscribe to the [RSS feed](https://bitwarden.com/help/releasenotes/feed.xml/) to be the first to know, or sign up for the monthly email roundup and get the release notes in your inbox!
 > 
 > [Contact form]
 > 
-> You can also subscribe to the [Bitwarden Status RSS Feed](https://status.bitwarden.com/) for service updates, including announcements of release windows.
+> 
+> 
+> You can also subscribe to the [Bitwarden Status RSS feed](https://status.bitwarden.com/) for service updates, including announcements of release windows.
 
 ## Overview
 
@@ -40,6 +42,34 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.7.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.7.0, Browser Extension 2026.7.0, Desktop 2026.7.0, Mobile 2026.7.0, and CLI 2026.7.0.)
+
+#### Password Manager 
+
+- ⭐ **Action bar for vault items**: A new batch action bar has been added to the web app, desktop app, and admin console. Use the action bar to perform vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a collection or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Save and fill from extensions**: On browser extensions, the inline menu can now more easily [simultaneously save and autofill new credentials](https://bitwarden.com/help/auto-fill-browser/#tab-add-an-account-with-inline-autofill-1GyDvute7sK75h9VvnBgef/).
+- **CXP available on Android**: With Android 10+, you can [import directly](https://bitwarden.com/help/import-data/#tab-mobile-5ALQx9afSqWXX9jfXsY5sb/) to or [export directly](https://bitwarden.com/help/export-your-data/#tab-mobile-1QlXqfleMlF6jWT87Dbn2u/) from Bitwarden and any other Android app that supports [FIDO's Credential Exchange Protocol](https://fidoalliance.org/specifications-credential-exchange-specifications).
+- ⭐ **Make Bitwarden default on extension installation**: Browser extensions will now prompt you to [make Bitwarden your browser's default password manager](https://bitwarden.com/help/disable-browser-autofill/) on installation.
+- ⭐ **Keeper direct importer**: Transfer your data from Keeper Password Manager without needing to download an export file using the [new direct import option](https://bitwarden.com/help/import-from-keeper/#import-directly-from-keeper/).
+- **KeePass KDBX importer**: You can now [import a KeePass Password Manager KDBX file](https://bitwarden.com/help/import-from-keepass/) directly into Bitwarden, secured with a password or key file. Previously, KeePass data could only be imported using unencrypted CSV or XML files.
+- **SSH Agent updates**: This release includes updates to the SSH agent for reliability and performance. Learn more about the SSH agent in these articles:
+
+ - [About SSH](https://bitwarden.com/help/about-ssh/): A conceptual overview of SSH keys and how the SSH Agent works.
+ - [SSH Agent](https://bitwarden.com/help/ssh-agent/): A step-by-step guide to set up and use the SSH Agent in different scenarios.
+- **Desktop app tray behavior updates**: The settings that control tray or menu bar behavior and minimization have been consolidated into a streamlined [Keep Bitwarden running in the background](https://bitwarden.com/help/app-settings/) setting.
+- **Disable automatic update variable rename**: The environment variable you can use to [prevent Bitwarden desktop apps from automatically updating](https://bitwarden.com/help/product-faqs/#q-can-i-turn-off-automatic-updates-for-bitwarden/) has been renamed.
+
+#### Admin Console
+
+- ⭐ **Vault banner Enterprise policy**: Admins can now display [custom banners](https://bitwarden.com/help/policies/#vault-banner/) at the top of members' vaults, such as service announcements or company reminders.
+- ⭐ **Manage Send policy**: Organizations can now control all Send related functions with the **Manage Send** policy in the Admin Console. The [new policy](https://bitwarden.com/help/policies/#manage-send/) replaces the previous set of separate Send policies.
+
+#### Self-host
+
+- **Change database backup filenames to local time**: Add a variable to your `mssql.override.env` file to express timestamps in backup filenames in [local time instead of the default UTC](https://bitwarden.com/help/backup-on-premise/#tab-docker-1WWwN4pHBa365HVcUSNqdj/).
 
 ## 2026.6.2
 

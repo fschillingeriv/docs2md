@@ -4,21 +4,41 @@ URL: https://bitwarden.com/help/disable-browser-autofill/
 
 # Deactivate My Browser's Built-in Password Manager
 
-If you're new to Bitwarden, your web browser likely saves and autofills your passwords. Most web browsers enable this by default, even though experts generally agree that [built-in password managers are more vulnerable](https://www.wired.com/2016/08/browser-password-manager-probably-isnt-enough/) than dedicated solutions like Bitwarden. We recommend turning off your browser's built-in password manager to improve your security and prevent interference with Bitwarden.
+If you're new to Bitwarden, your web browser likely saves and autofills your passwords. Most web browsers enable this by default, even though experts generally agree that [built-in password managers are more vulnerable](https://www.wired.com/2016/08/browser-password-manager-probably-isnt-enough/) than dedicated solutions like Bitwarden. We recommend making Bitwarden your browser's default password manager to improve your security and prevent interference with Bitwarden.
 
 > [!NOTE] Deploying Browser across organization
 > The Bitwarden browser extension can be deployed across managed endpoints. Learn more about [deploying the Bitwarden browser extension to managed devices](https://bitwarden.com/help/browserext-deploy/).
 
-## Manually disable a browser's built-in password manager
+## When you install Bitwarden
 
-Learn how to disable the built-in password manager for major browsers.
+When you install Bitwarden for the first time, you'll be prompted to make Bitwarden your default password manager:
+
+![Make Bitwarden your default](https://bitwarden.com/assets/6EXjuiuhxjTCNoxlL9uZRq/513b2d10487c86d0ebed4cc050cbcfba/2026-07-14_14-56-41.png)
+*Make Bitwarden your default*
+
+Once you select **Continue**, a dialogue will appear on screen. Select **Allow** to give Bitwarden permission to make changes to your browser settings.
+
+## From the Bitwarden settings menu
+
+If you skipped the prompt during installation, the Bitwarden browser extension on some browsers has a built-in setting to make Bitwarden your default password manager:
+
+1. Navigate to the ⚙️ **Settings** tab in the Bitwarden browser extension and then select **Autofill**.
+2. Click to enable the **Make Bitwarden your default password manager**.
+
+![Make Bitwarden your default](https://bitwarden.com/assets/5fyBdu5X6JCLu2UsaqYUO0/5cbd0a186251fe8916b5a01be1f3efb8/2026-07-14_14-59-21.png)
+*Make Bitwarden your default*
+3. A dialogue will appear on screen, select **Allow** to give Bitwarden permission to make changes to your browser settings.
+
+## Manually from your browser settings
+
+If neither of the above methods worked for you, manually deactivate your browser's built-in password manager from the browser settings menus:
 
 > [!NOTE] Chromium instructions 
-> Several modern browsers, including Edge, Opera, and Brave, use a Google Chrome framework called "Chromium". If you are using one of those browsers, use the **Chrome/Chromium** instructions.
+> Several modern browsers, like Opera and Brave, use a Google Chrome framework called "Chromium". If you are using one of those browsers, use the **Chrome/Chromium** instructions.
 
 ### Chrome/Chromium
 
-In Chrome or any Chromium-based browser (Opera, and Brave), navigate to the **Passwords** page by entering `chrome://password-manager/settings` in the address bar, substituting `chrome` for your browser name (for example, `brave://password-manager/settings`). 
+In Chrome or any Chromium-based browser (for example, Opera or Brave), navigate to the **Passwords** page by entering `chrome://password-manager/settings` in the address bar, substituting `chrome` for your browser name (for example, `brave://password-manager/settings`). 
 
 On this page, toggle off **Offer to save passwords and passkeys** and **Sign in automatically**:
 
@@ -115,17 +135,3 @@ In DuckDuckGo, navigate to **Settings → Autofill**. From this screen, uncheck 
 You can create a backup of your existing data by selecting **Export Passwords**. Once you have created a backup file, select **View Autofill Content...**and delete the stored autofill data to remove previously saved suggestions. 
 
 In the Password Manager section, macOS users can choose to use Bitwarden. Learn more about the Bitwarden DuckDuckGo macOS browser integration [here](https://bitwarden.com/help/duckduckgo-macos-browser-integration/).
-
-## Make Bitwarden your default password manager in Chrome
-
-> [!NOTE] Make Bitwarden default is exclusive to chrome
-> The **Make Bitwarden your default password manager** option is only available for the Chrome and Edge browser extensions. For other browsers, [manually disable their built-in password manager](https://bitwarden.com/help/disable-browser-autofill/#manually-disable-a-browsers-built-in-password-manager/).
-
-The Bitwarden browser extension on Chrome and Edge has a built-in setting to disable your browser's default password manager. To use this setting:
-
-1. Navigate to the ⚙️ **settings** tab in the Bitwarden browser extension and then select **Autofill**.
-2. Click to enable the **Make Bitwarden your default password manager**.
-
-![Make Bitwarden default password manager](https://bitwarden.com/assets/5fyBdu5X6JCLu2UsaqYUO0/abfb44cb460314112805bfd0312c1f8f/2025-10-14_12-44-35.png)
-*Make Bitwarden default password manager*
-3. A dialogue will appear on screen, select **allow** to give Bitwarden permission to make changes to your browser settings.

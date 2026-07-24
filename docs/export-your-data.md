@@ -148,7 +148,11 @@ Export files will be saved **to the location set by your device**. By default th
 
 ### Mobile
 
-To export vault data:
+You can export your Bitwarden data on mobile by downloading a file. If you're moving to another mobile app that supports the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications), you can transfer your data directly instead. Using CXP to [import](https://bitwarden.com/help/import-data/#tab-mobile-5ALQx9afSqWXX9jfXsY5sb/) and export data is supported on iOS 26+ and Android 10+.
+
+Below are steps for file export on iOS and Android, and CXP on iOS. To use CXP on Android, you'll start from the destination app, and the exact steps will depend on which app you're using.
+
+To export vault data on mobile:
 
 1. Tap the ⚙️ **Settings** icon.
 2. Tap **Vault**.
@@ -164,8 +168,6 @@ To export vault data:
 5. (Optional) If you choose `json (Password protected)`, enter a new password. If you import this file back into Bitwarden, you'll need to enter that password.
 6. Enter your master password.
 7. Select **Export**. Export files will be saved **to the location set by your device**. By default this is typically a Downloads folder, but you can change it within the device settings.
-
-On Android 10+, you can alternatively use the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications) to export your Bitwarden data directly to another CXP-compatible password manager app. Steps vary by app, and the process starts from the destination app.
 
 ### CLI
 

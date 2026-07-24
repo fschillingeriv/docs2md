@@ -68,7 +68,7 @@ Unfortunately, F-Droid can not compile our app from source as it is based on Xam
 
 ### Q: Can I turn off automatic updates for Bitwarden?
 
-**A:** Yes! On Windows, you can add the environment variable `ELECTRON_NO_UPDATER=1` to your desktop app template to prevent automatic update procedures from trying and failing on your end-user workstations.
+**A:** Yes! On Windows, you can add the environment variable `BITWARDEN_NO_UPDATER=1` to your desktop app template to prevent automatic update procedures from trying and failing on your end-user workstations.
 
 > [!WARNING] Running older versions.
 > Like with any software, running old versions may present a security risk.

@@ -4,9 +4,62 @@ URL: https://bitwarden.com/help/import-from-keeper/
 
 # Import from Keeper
 
-Use this article for help exporting data from Keeper and importing into Bitwarden. Bitwarden supports import of Keeper data that is exported as a `.csv` or `.json` file.
+Quickly transfer data from Keeper Password Manager to Bitwarden using one of two methods:
 
-## Export from Keeper
+- Using a Bitwarden browser extension or desktop app, [import data directly](https://bitwarden.com/help/import-from-keeper/#import-directly-from-keeper/) without needing to download a file.
+- Using any Bitwarden app, [download an export from your Keeper account and import it](https://bitwarden.com/help/import-from-keeper/#use-an-exported-file-for-import/) into Bitwarden.
+
+## Import directly from Keeper
+
+To import Keeper data directly to Bitwarden, without needing to download an export file and transfer data manually:
+
+1. In the Bitwarden desktop app or browser extension, open the **Import** page:
+
+ - On desktop apps, select **Import** from the navigation.
+ - On browser extensions, navigate to **Settings** > **Vault options** > **Import.**
+2. Choose the **Vault** you want to import to and, optionally, a **Folder** or **Collection** to add imported data to.
+
+![Import directly from Keeper](https://bitwarden.com/assets/1vFewL4JR9Ctyph0J6x5VU/6bb9611b833ab83116c44a8c2d6074a6/2026-07-15_09-53-04.png)
+*Import directly from Keeper*
+3. From the **File format** dropdown, select **Keeper**.
+4. From the **Method** dropdown, select **Direct importer**.
+5. Enter your **Keeper email** and **Data center location**.
+
+> [!TIP] Keeper Data Location
+> Your **Data center location** correlates to the region you select when you log in to Keeper. It can also be found in the URL of your Keeper vault when logged in on the web (for example, `keepersecurity.com` is US, `keepersecurity.eu` is EU, and so on).
+6. Select **Import** and, when prompted, complete your required authentication steps for Keeper. This requires your **Master Password or SSO** and some form of**Device Approval**. Here are two examples of what this will look like:
+
+### Master Password
+
+As a personal user of Keeper, you would typically:
+
+1. Select a **Device approval** method to use. For personal users this can be:
+
+ - An **Email** sent to the inbox attached to your Keeper account.
+ - A **Keeper Push** notification that you can approve from the Keeper web app.
+ - A **Two-factor method** you're using for your Keeper account.
+
+> [!NOTE] Keeper import authentication support
+> Bitwarden currently supports the Keeper Text Message, Authenticator App, and Keeper DNA options for two-factor authentication.
+2. Enter your Keeper **Master Password**.
+
+### SSO
+
+As part of a team using Keeper for work, you would typically:
+
+1. Automatically launch, on selecting **Import**, a browser window in which to complete SSO authentication.
+2. Select a **Device approval** method to use. For business users this can be:
+
+ 1. A **Keeper Push** notification that you can approve from the Keeper web app.
+ 2. **Admin approval** from an administrator on your team.
+ 3. A **Two-factor method** you're using for your Keeper account.
+
+> [!NOTE] Keeper import authentication support
+> Bitwarden currently supports the Keeper Text Message, Authenticator App, and Keeper DNA options for two-factor authentication.
+
+## Use an exported file for import
+
+### Export from Keeper
 
 To export data from the Keeper web app:
 
@@ -17,10 +70,10 @@ To export data from the Keeper web app:
 2. Select **Export** from the pop-up window.
 3. Choose the **CSV** or **JSON**export file type.
 4. Select **Export**.
-5. Enter your master password.
+5. Enter your Keeper Master Password.
 6. Select **Export Now**.
 
-## Import to Bitwarden
+### Import to Bitwarden
 
 Data can be imported to Bitwarden from the web app, browser extension, desktop app, and CLI. Data is [encrypted](https://bitwarden.com/help/what-encryption-is-used/) locally before being sent to the server for storage.
 

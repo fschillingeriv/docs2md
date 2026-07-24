@@ -7,11 +7,13 @@ URL: https://bitwarden.com/help/about-send/
 Bitwarden Send is a tool to transmit sensitive text or files directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
 
 > [!NOTE] Remove Send policy
-> If you're a member of an organization that activated the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/), your access to Sends is limited:
+> If you're a member of an organization that has turned off Send under the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/), your access to Sends is limited:
 > 
 > - You cannot create new Sends or edit existing ones.
 > - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
 > - You cannot access the Sends page with the Bitwarden web app.
+> 
+> Using the Manage Send policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
 
 ## Accessing Send
 

@@ -7,11 +7,13 @@ URL: https://bitwarden.com/help/create-send/
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you share encrypted text or files with anyone via a secure, generated link. Create a Send from any Bitwarden app and configure access and privacy options to fit your sharing needs.
 
 > [!NOTE] Remove Send policy
-> If you're a member of an organization that activated the [Remove Send policy](https://bitwarden.com/help/policies/#remove-send/), your access to Sends is limited:
+> If you're a member of an organization that has turned off Send under the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/), your access to Sends is limited:
 > 
 > - You cannot create new Sends or edit existing ones.
 > - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
 > - You cannot access the Sends page with the Bitwarden web app.
+> 
+> Using the Manage Send policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
 
 ## Create a Send
 

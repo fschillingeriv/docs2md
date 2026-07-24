@@ -64,13 +64,19 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Send options
+### Manage Send
 
-Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
+Turn on **Manage Send** to control how members use Send. **Enable Send** is active by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
-### Remove Send
+Using Manage Send, organization admins can manage how members use Send, including:
 
-**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+- **Send types**: Determines which [type of Send](https://bitwarden.com/help/create-send/#create-a-send/) users may create such as **Text** and **File**.
+- **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [**Email verification**](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [**Password set by member**](https://bitwarden.com/help/send-privacy/#send-passwords/).
+- **Enforce deletion date**: Use this policy to enforce a predetermined [Send Lifespan](https://bitwarden.com/help/send-lifespan/) for Sends created by members.
+- **Always show members' email address with recipients**: Enable option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
+
+> [!NOTE] Enabling policy will not change existing Sends
+> Enabling **Manage Controls** will not retroactivly apply changes to existing Sends at this time.
 
 ### Remove export
 
@@ -123,6 +129,9 @@ Turn on the **Require two-step login** policy to require members to use any two-
 
 > [!WARNING] Non-compliance revokation warning
 > **Organization members who are not owners or admins and do not comply with this policy will have access revoked when you activate this policy.**Users who have access revoked as a result of this policy will be notified via email, and must take steps to become compliant before their access can be restored.
+
+> [!NOTE] Require 2FA does not work with organization DUO
+> Organizations that have enabled [SSO](https://bitwarden.com/help/about-sso/) or [Duo](https://bitwarden.com/help/setup-two-step-login-duo/) for all members should not use this policy. Both SSO and organization Duo are enforced by the provider and will not satisfy the two-step login requirement that this policy enables.
 
 ### Block account creation for claimed domains
 
@@ -257,3 +266,24 @@ Turn on the **Automatic user confirmation** policy to automatically confirm memb
 2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
 3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
 4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
+
+### Vault banner
+
+Turn on the **Vault banner** policy to share important messages with your organization's members, such as system announcements or security reminders. The banner appears at the top of the vault in the web app, browser extension, and desktop app:
+
+![Vault banner](https://bitwarden.com/assets/7y6HtjE0nXjfQc11xR1Lf4/659399cb76287cbd359313bdc96cc9b7/b31491d1-7e1d-4b0b-945d-cf5a05ef80a2.png)
+*Vault banner*
+
+To create a banner:
+
+1. Select the name of the policy, **Vault banner**.
+2. Check **Enable banner**.
+3. Enter your message in **Description**, up to 250 characters. (Hyperlinks are not currently supported.)
+4. (Optional) Customize additional settings as desired:
+
+ - Enter a **Header**.
+ - Enter a **Button** label. This will require members to select the button to dismiss the banner, instead of the [close] **Close icon**. When the button is selected an [event is logged](https://bitwarden.com/help/event-logs/#organization-events/).
+ - Check **Show after every login** to display the banner each time members log in, even if they previously dismissed it.
+5. Select **Save**.
+
+If you edit the banner at a later time, it will be shown to members again even if they previously dismissed it.

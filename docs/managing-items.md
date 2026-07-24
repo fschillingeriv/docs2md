@@ -99,22 +99,22 @@ Use the `edit` command to add a new item. Refer to the [CLI documentation](https
 Archiving is a useful tool for decluttering your vault. Archived items are excluded from search results and autofill suggestions, but included in exports. Archiving:
 
 - Is available for all paid plans, including premium users and members of paid organizations. If that subscription ever lapses, users **will not** lose access to archived items.
-- Is available for organization items and individually-owned items. Like [favorites](https://bitwarden.com/help/favorites/), one user's choice to archive an item will not archive that items for any other users that have access to it.
+- Is available for organization items and individually-owned items. Like [favorites](https://bitwarden.com/help/favorites/), one user's choice to archive an item will not archive that item for any other users who have access to it.
 - **Does not** remove items from reporting or exports.
 
 To archive an item:
 
 ### Web app
 
-1. Select the item(s) you want to archive and use the ⋮ options menu to choose **Archive**:
+1. Select the item(s) you want to archive and use the action bar to choose **Archive**:
 
-![Archive with the web app](https://bitwarden.com/assets/1aRyGxLdpcvGF3fM2Bbd17/24408086dd8835286d079cb48cd6069a/2026-01-27_10-28-36.png)
+![Archive with the web app](https://bitwarden.com/assets/1aRyGxLdpcvGF3fM2Bbd17/d67d2ef7eb7904d6fe02d062d736d980/Archive_with_the_web_app.png)
 *Archive with the web app*
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the web app, select **Archive** from your vault filters in order to view your archived items and use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
+On the web app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
 
 ### Browser extension
 
@@ -141,15 +141,15 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Open the item you want to archive and select the **Archive** button.
+1. Select the item(s) you want to archive and use the action bar to choose **Archive**:
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/9bef4129b95edcb3189cb114863a117f/2026-04-23_10-02-08-1.png)
+![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
 *Archive with the desktop app*
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On desktop apps, select **Archive** from your vault filters in order to view your archived items use the ⋮ options menu to choose **Unarchive**to restore an item to normal vault behavior.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
 
 ### CLI
 
@@ -224,7 +224,7 @@ Select **Trash**from the navigation:
 
 ### Clone
 
-You can clone any item that you have ownership of to create a duplicate item. If an item is owned by an organization, it can only be cloned by a members with [**Can manage**](https://bitwarden.com/help/collection-management/#collection-management-settings/) access to the item's collection and can only be done from the web app:
+You can clone any item that you have ownership of to create a duplicate item. If an item is owned by an organization, it can only be cloned by members with [**Can manage**](https://bitwarden.com/help/collection-management/#collection-management-settings/) access to the item's collection and can only be done from the web app:
 
 ### Web app
 
@@ -259,13 +259,14 @@ Select the ⋮ options menu for the item you want to duplicate and select [clone
 
 ## Share items
 
-If you're a member of an [organization](https://bitwarden.com/help/about-organizations/), you can [assign vault items to your organization's collections](https://bitwarden.com/help/sharing/), transferring ownership of the vault item to the organization. To share with other organization members, use the ⋮ menu:
+If you're a member of an [organization](https://bitwarden.com/help/about-organizations/), you can [assign vault items to your organization's collections](https://bitwarden.com/help/sharing/), transferring ownership of the vault item to the organization. To share with other organization members, use the action bar:
 
-![Assign to collections](https://bitwarden.com/assets/stm9byteqzZn9dvqonHrc/0da481b0cf1f54457d08ae02fd917377/2024-12-02_14-33-34.png)
+![Assign to collections](https://bitwarden.com/assets/stm9byteqzZn9dvqonHrc/000099fa7e49dffd712f1c94b966fa09/assign_to_collections.png)
+*Assign to collections*
 
 ## Next steps
 
 Now that you understand the basics of working with vault items, we recommend:
 
-- Learning how to navigate your vault using [search](https://bitwarden.com/help/searching-vault/), [filtering](https://bitwarden.com/help/filter-your-vault/), and organizing them in [favorites](https://bitwarden.com/help/favorites/) and [folders](https://bitwarden.com/help/folders/).
+- Learning how to navigate your vault using [search](https://bitwarden.com/help/searching-vault/), [filtering](https://bitwarden.com/help/filter-your-vault/), and organizing items in [favorites](https://bitwarden.com/help/favorites/) and [folders](https://bitwarden.com/help/folders/).
 - Learning about what else you can add to items, including [custom fields](https://bitwarden.com/help/custom-fields/), [TOTP seeds](https://bitwarden.com/help/integrated-authenticator/), and [file attachments](https://bitwarden.com/help/attachments/).
