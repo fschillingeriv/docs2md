@@ -538,7 +538,9 @@ To add a new shared SSH key to the organization vault:
 The import function for SSH keys is available on the Bitwarden desktop app. Using the Bitwarden desktop app:
 
 - Select the **New** button and choose **SSH key** as the item type.
-- Copy the existing SSH key you want to import into Bitwarden.
+- Copy the existing SSH key you want to import into Bitwarden. 
+
+ - When copying, include the header and footer of the key, for example `-----BEGIN OPENSSH PRIVATE KEY-----` and `-----END OPENSSH PRIVATE KEY-----`.
 - Use the **Import key from clipboard** icon. This will automatically paste the SSH key into Bitwarden.
 
  - At this time, imported keys must be in **OpenSSH** or **PKCS#8** format.
@@ -11362,7 +11364,7 @@ Once created, you'll land in the Admin Console, which is the central hub for all
 
 As an owner or admin, you might be responsible for managing access to **vault items**, like shared credentials, for your organization. You can create directly from the web app and assign them to collections in order to share them: 
 
-![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/327c0c24e09dce687540499a8eaa5aac/2024-12-02_15-47-21.png)
+![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/e403afa9610a8fc26176d9f4223d8392/Assign_to_collections_in_bulk_edited.png)
 
 Speaking of [**collections**](https://bitwarden.com/help/about-collections/), they're an important construct for grouping together related logins, notes, cards, and identities for secure sharing with your organization:
 
@@ -12514,7 +12516,7 @@ Once created, you'll land in the Admin Console, which is the central hub for all
 
 As an owner or admin, you might be responsible for managing access to **vault items**, like shared credentials, for your company or team. You can create directly from the web app and assign them to collections in order to share them with your team: 
 
-![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/327c0c24e09dce687540499a8eaa5aac/2024-12-02_15-47-21.png)
+![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/e403afa9610a8fc26176d9f4223d8392/Assign_to_collections_in_bulk_edited.png)
 
 Speaking of [**collections**](https://bitwarden.com/help/about-collections/), they're an important construct for grouping together related logins, notes, cards, and identities for secure sharing with your organization:
 
@@ -37772,24 +37774,6 @@ When transmitting a Bitwarden Send link, there are optional steps you can take f
 > You may send the link without the key (everything before the last forward slash) and send the key via a separate channel. This additional security measure can leverge both of the above options. When reassembling a Send URL, be sure to include both the Send ID and the encryption key.
 > 
 > Example: `https://vault.bitwarden.com/#/send/send_id/encryption_key`
----
-URL: https://bitwarden.com/help/send-faqs/
----
-# Send FAQs
-
-### Q: Why can't I create a file Send?
-
-**A:** Use of text Sends is available to all Bitwarden users, however creation of file Sends is only available for premium users, including members of a paid organization (families, teams, or enterprise).
-
-Additionally, creation of file Sends requires your email address to be verified.
-
-### Q: Why are sends missing from my send view?
-
-**A:** By design, Sends are ephemeral. Each created Send has a **maximum lifespan of 31 days**, configurable when you [create a Send](https://bitwarden.com/help/create-send/) or at any time by editing it. When a Send's [deletion date](https://bitwarden.com/help/send-lifespan/#deletion-date/) is reached, it will be purged from Bitwarden systems and inaccessible to both the sender and any recipients.
-
-### Q: Can I disable Send for my organization?
-
-**A:** Enterprise organizations can remove the ability to create new or edit exsting Sends with the [Send controls policy](https://bitwarden.com/help/policies/#send-options/).
 ---
 URL: https://bitwarden.com/help/send-hosting/
 ---

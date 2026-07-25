@@ -69,7 +69,9 @@ To add a new shared SSH key to the organization vault:
 The import function for SSH keys is available on the Bitwarden desktop app. Using the Bitwarden desktop app:
 
 - Select the **New** button and choose **SSH key** as the item type.
-- Copy the existing SSH key you want to import into Bitwarden.
+- Copy the existing SSH key you want to import into Bitwarden. 
+
+ - When copying, include the header and footer of the key, for example `-----BEGIN OPENSSH PRIVATE KEY-----` and `-----END OPENSSH PRIVATE KEY-----`.
 - Use the **Import key from clipboard** icon. This will automatically paste the SSH key into Bitwarden.
 
  - At this time, imported keys must be in **OpenSSH** or **PKCS#8** format.

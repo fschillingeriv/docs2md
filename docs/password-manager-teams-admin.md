@@ -83,7 +83,7 @@ Once created, you'll land in the Admin Console, which is the central hub for all
 
 As an owner or admin, you might be responsible for managing access to **vault items**, like shared credentials, for your company or team. You can create directly from the web app and assign them to collections in order to share them with your team: 
 
-![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/327c0c24e09dce687540499a8eaa5aac/2024-12-02_15-47-21.png)
+![Assign to collections in bulk](https://bitwarden.com/assets/1u6EPNgAlCnvC9DcmUIosQ/e403afa9610a8fc26176d9f4223d8392/Assign_to_collections_in_bulk_edited.png)
 
 Speaking of [**collections**](https://bitwarden.com/help/about-collections/), they're an important construct for grouping together related logins, notes, cards, and identities for secure sharing with your organization:
 
