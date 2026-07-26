@@ -8,7 +8,7 @@ This guide will walk you through migrating your self-hosted Bitwarden instance f
 
 - Requires downtime for your Bitwarden server.
 - Requires administrative access to the Bitwarden server and both databases.
-- Requires that the external database you're migrating to is MSSQL Server 2022.
+- Requires that the external database you're migrating to is MSSQL Server 2022 or Server 2025.
 - Requires that the external database you're migrating to is accessible from the Bitwarden host.
 
 ## Migrate in Docker deployments

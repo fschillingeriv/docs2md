@@ -12,7 +12,7 @@ This default database does not require additional licensing and is pre-configure
 
 ### Using an external database for server deployments
 
-In those self-hosted server deployments that are shipped with an MSSQL Express image, use of that container is optional. For high-availability or to leverage existing infrastructure, customers may connect to an external MSSQL server or cluster ([learn more](https://bitwarden.com/help/external-db/)) of version 2022. 
+In those self-hosted server deployments that are shipped with an MSSQL Express image, use of that container is optional. For high-availability or to leverage existing infrastructure, customers may connect to an external MSSQL server or cluster ([learn more](https://bitwarden.com/help/external-db/)) of version 2022 or 2025. 
 
 Regardless of whether you use the included MSSQL Express image or your own external MSSQL server or cluster, standard Bitwarden deployments must currently use MSSQL.
 

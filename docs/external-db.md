@@ -7,9 +7,9 @@ URL: https://bitwarden.com/help/external-db/
 By default, self-hosted instances of Bitwarden will use a Microsoft SQL Server (MSSQL) database image created as a normal part of [installation setup](https://bitwarden.com/help/install-on-premise-linux/), however you configure Bitwarden to use an external MSSQL database.
 
 > [!NOTE]
-> Bitwarden only **supports and recommends SQL Server 2022**. Learn about the system requirements for SQL Server on [Windows](https://learn.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022?view=sql-server-ver17#pmosr) and [Linux](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver16#supported-platforms).
+> Bitwarden only **supports and recommends SQL Server 2022 and SQL Server 2025**. Learn about the system requirements for SQL Server on [Windows](https://learn.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022?view=sql-server-ver17#pmosr) and [Linux](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver16#supported-platforms).
 > 
-> At this time, Bitwarden does not support SQL Server 2025, and mainstream support ended for Server 2017 and Server 2019. Deprecation of support for a specific SQL server version will be noted here and in the [release notes](https://bitwarden.com/help/releasenotes/) for a given release if Bitwarden implements features that are not available on a specific version of SQL Server.
+> Mainstream support ended for Server 2017 and Server 2019. Deprecation of support for a specific SQL server version will be noted here and in the [release notes](https://bitwarden.com/help/releasenotes/) for a given release if Bitwarden implements features that are not available on a specific version of SQL Server.
 
 ## Setup external database
 
