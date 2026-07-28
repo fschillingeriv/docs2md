@@ -147,6 +147,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
+- Clicked vault banner button (`2004`)
 
 ### Secrets Manager events
 
@@ -166,6 +167,21 @@ Secrets Manager events are available both from the **Reporting** tab of your org
 - Removed group: `group-identifier` from machine account with identifier: `machine-account-identifier`* *(`2303`)
 - Created machine account with identifier: `machine-account-identifier` (`2304`)
 - Deleted machine account with identifier: `machine-account-identifier `(`2305`)
+
+### Send events
+
+- Created text Send `send-id` (`2500`)
+- Created text Send `send-id` with email verification (`2501`)
+- Created text Send `send-id` with password (`2502`)
+- Created file Send `send-id` (`2503`)
+- Created file Send `send-id` with email verification (`2504`)
+- Created file Send `send-id` with password (`2505`)
+- Edited text Send `send-id` (`2506`)
+- Edited file Send `send-id` (`2507`)
+- Deleted text Send `send-id` (`2508`)
+- Deleted file Send `send-id` (`2509`)
+- Accessed text Send `send-id` created by `user-id` (`2510`)
+- Accessed file Send `send-id` created by `user-id` (`2511`)
 
 ### Provider events
 

@@ -66,6 +66,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 - ⭐ **Vault banner Enterprise policy**: Admins can now display [custom banners](https://bitwarden.com/help/policies/#vault-banner/) at the top of members' vaults, such as service announcements or company reminders.
 - ⭐ **Manage Send policy**: Organizations can now control all Send related functions with the **Manage Send** policy in the Admin Console. The [new policy](https://bitwarden.com/help/policies/#manage-send/) replaces the previous set of separate Send policies.
+- ⭐ **Send event logs**: Creating, editing, deleting, and accessing a [Send](https://bitwarden.com/help/about-send/) will now [log an event](https://bitwarden.com/help/event-logs/) in the Admin Console.
 
 #### Self-host
 
