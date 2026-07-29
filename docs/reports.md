@@ -11,7 +11,7 @@ Vault health reports can help you evaluate the security of your Bitwarden indivi
 
 ## View a report
 
-Individual vault reports scan items saved to your personal vault. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
+Individual vault reports scan items saved to your personal vault, as well as organization items that you have access to. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
 
 #### Run an individual vault report
 

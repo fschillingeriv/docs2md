@@ -2,13 +2,13 @@
 URL: https://bitwarden.com/help/server-geographies/
 ---
 
-# Server Geographies
+# Server Regions
 
 The Bitwarden cloud is available globally with data storage in both **United States** and **European Union** regions. The practices used by Bitwarden for securing your sensitive data are the same, regardless of which server region you use. Learn more [about how Bitwarden secures your data](https://bitwarden.com/help/data-storage/).
 
-## Choose your cloud server
+## Choose your server region
 
-To choose which Bitwarden server geography to create your account or organization on, select the **Server** or **Logging in on:**dropdown on the login or registration screen and select your desired region:
+To choose which Bitwarden server region to create your account or organization on, select the **Server** or **Logging in on:**dropdown on the login or registration screen and select your desired region:
 
 ### Web app
 
@@ -27,7 +27,7 @@ To choose which Bitwarden server geography to create your account or organizatio
 ![Region selector on desktop](https://bitwarden.com/assets/3FlU02971dqGGkp86WJJc5/e5c40a136a11ee48c5e74a068bda2405/2026-04-23_09-17-05.png)
 *Region selector on desktop*
 
-Bitwarden data regions are separate, and your account or organization only exists in the region where it was first created.
+Bitwarden server regions are separate, and your account or organization only exists in the region where it was first created.
 
 ### Connect your self-hosted server
 
