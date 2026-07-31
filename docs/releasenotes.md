@@ -61,6 +61,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
  - [SSH Agent](https://bitwarden.com/help/ssh-agent/): A step-by-step guide to set up and use the SSH Agent in different scenarios.
 - **Desktop app tray behavior updates**: The settings that control tray or menu bar behavior and minimization have been consolidated into a streamlined [Keep Bitwarden running in the background](https://bitwarden.com/help/app-settings/) setting.
 - **Disable automatic update variable rename**: The environment variable you can use to [prevent Bitwarden desktop apps from automatically updating](https://bitwarden.com/help/product-faqs/#q-can-i-turn-off-automatic-updates-for-bitwarden/) has been renamed.
+- **Streamlined extension biometrics**: Enabling biometrics for browser extensions has been made easier. Using biometrics will still require running the desktop app, however, you will no longer be required to enable the **Allow browser integration** option to do so. Learn more about [biometric unlock](https://bitwarden.com/help/biometrics/).
 
 #### Admin Console
 

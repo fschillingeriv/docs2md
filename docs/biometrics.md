@@ -100,19 +100,13 @@ To set up biometrics on the browser extension:
 
 ### Chromium-based & Firefox
 
-There are two steps to enabling biometrics for browser extensions: [activate the integration](https://bitwarden.com/help/biometrics/#1-activate-the-integration/) and [activate extension biometrics](https://bitwarden.com/help/biometrics/#2-activate-extension-biometrics/).
+There are two steps to enabling biometrics for browser extensions:
 
-### Activate the integration
+### Enable biometrics on the desktop app
 
-First, open the Bitwarden desktop app and update the settings:
+To turn on biometrics for the desktop app:
 
-1. Turn on unlock with biometrics in the [Bitwarden desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-desktop-app/).
-2. Open the Bitwarden desktop app **Settings**. (For Windows and Linux, go to **File** → **Settings**. For macOS, go to **Bitwarden** → **Settings**.)
-3. Check **Allow browser integration**.
-
-> [!WARNING] macOS username size bug
-> On macOS, you may encounter an error if your username directory (e.g. `/Users/your_username/Library/...`) is longer than 104 characters. If you encounter this error, shorten your username.
-4. (Optional) Check **Require verification for browser integration** to ask for fingerprint verification every time the integration between the desktop app and browser extension is activated.
+1. [Set up unlock with biometrics](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-desktop-app/) on the Bitwarden desktop app.
 
 ### Activate extension biometrics
 
@@ -131,12 +125,7 @@ Next, remain logged in to the Bitwarden desktop app and open the Bitwarden brows
 
 > [!NOTE] Communicate with cooperating native applications
 > This permission is required for the browser extension to unlock with biometrics. If you decline, you can continue using the browser extension, but unlock with biometrics will not work.
-5. Go to the desktop app and there:
-
- 1. Select **Approve** to verify the browser connection.
- 2. Enter your biometric when prompted.
-6. (Optional) If you previously turned on **Require verification for browser integration**, enter your fingerprint when prompted.
-7. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
+5. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
 
 ### Safari
 

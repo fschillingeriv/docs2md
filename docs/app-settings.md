@@ -193,9 +193,6 @@ Unlike **Security** and **Preferences**settings, these settings apply to all acc
 
 - **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the tray. Recommended when using the SSH agent or browser integration.
 - **Start automatically on login**: Start the Bitwarden desktop app automatically when you log in to your computer.
-- **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
-
- - **Require verification for browser integration**: Require [fingerprint phrase](https://bitwarden.com/help/fingerprint-phrase/) confirmation when establishing the integration between Bitwarden desktop app and browser extension.
 - **Use hardware acceleration**: Turn this option off if you experience graphical or performance issues.
 - **Enable SSH agent**: Allow the Bitwarden desktop app to act as an [SSH agent](https://bitwarden.com/help/ssh-agent/).
 - **Theme**: Switch between light mode, dark mode, or align Bitwarden with your system default.
@@ -209,9 +206,6 @@ Unlike **Security** and **Preferences**settings, these settings apply to all acc
 > On macOS, the **menu bar** is the strip of menus located at the top of the screen. The **Dock** is the strip of frequently-used and open apps available by moving your cursor to the edge of the screen.
 
 - **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the menu bar. Recommended when using the SSH agent or browser integration.
-- **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
-
- - **Require verification for browser integration**: Require [fingerprint phrase](https://bitwarden.com/help/fingerprint-phrase/) confirmation when establishing the integration between Bitwarden desktop app and browser extension.
 - **Use hardware acceleration**: Turn this option off if you experience graphical or performance issues.
 - **Enable SSH agent**: Allow the Bitwarden desktop app to act as an [SSH agent](https://bitwarden.com/help/ssh-agent/).
 - **Allow screen capture**: Allow the Bitwarden desktop app to appear in screenshots and screen sharing. When off, the desktop app will be invisible in most screenshots and when screen sharing.
@@ -228,9 +222,6 @@ Unlike **Security** and **Preferences**settings, these settings apply to all acc
 
 - **Keep Bitwarden running in the background**: When you close the window, Bitwarden is accessible from the tray. Recommended when using the SSH agent or browser integration.
 - **Start automatically on login**: Start the Bitwarden desktop app automatically when you log in to your computer.
-- **Allow browser integration**: (non-Safari) Allow Bitwarden browser extensions to [integrate with the desktop app](https://bitwarden.com/help/biometrics/#set-up-biometrics-for-browser-extension/) for biometric unlock. On Safari, integration is available without activating this option.
-
- - **Require verification for browser integration**: Require [fingerprint phrase](https://bitwarden.com/help/fingerprint-phrase/) confirmation when establishing the integration between Bitwarden desktop app and browser extension.
 - **Use hardware acceleration**: Turn this option off if you experience graphical or performance issues.
 - **Enable SSH agent**: Allow the Bitwarden desktop app to act as an [SSH agent](https://bitwarden.com/help/ssh-agent/).
 - **Allow screen capture**: Allow the Bitwarden desktop app to appear in screenshots and screen sharing. When off, the desktop app will be invisible in most screenshots and when screen sharing.
