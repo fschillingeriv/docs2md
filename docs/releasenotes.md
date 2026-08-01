@@ -49,7 +49,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager 
 
-- ⭐ **Action bar for vault items**: A new batch action bar has been added to the web app, desktop app, and admin console. Use the action bar to perform vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a collection or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Action bar for vault items**: A new batch action bar has been added to the vault web app and admin console. Use the action bar to perform vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a collection or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
 - ⭐ **Save and fill from extensions**: On browser extensions, the inline menu can now more easily [simultaneously save and autofill new credentials](https://bitwarden.com/help/auto-fill-browser/#tab-add-an-account-with-inline-autofill-1GyDvute7sK75h9VvnBgef/).
 - **CXP available on Android**: With Android 10+, you can [import directly](https://bitwarden.com/help/import-data/#tab-mobile-5ALQx9afSqWXX9jfXsY5sb/) to or [export directly](https://bitwarden.com/help/export-your-data/#tab-mobile-1QlXqfleMlF6jWT87Dbn2u/) from Bitwarden and any other Android app that supports [FIDO's Credential Exchange Protocol](https://fidoalliance.org/specifications-credential-exchange-specifications).
 - ⭐ **Make Bitwarden default on extension installation**: Browser extensions will now prompt you to [make Bitwarden your browser's default password manager](https://bitwarden.com/help/disable-browser-autofill/) on installation.
@@ -66,7 +66,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Admin Console
 
 - ⭐ **Vault banner Enterprise policy**: Admins can now display [custom banners](https://bitwarden.com/help/policies/#vault-banner/) at the top of members' vaults, such as service announcements or company reminders.
-- ⭐ **Manage Send policy**: Organizations can now control all Send related functions with the **Manage Send** policy in the Admin Console. The [new policy](https://bitwarden.com/help/policies/#manage-send/) replaces the previous set of separate Send policies.
 - ⭐ **Send event logs**: Creating, editing, deleting, and accessing a [Send](https://bitwarden.com/help/about-send/) will now [log an event](https://bitwarden.com/help/event-logs/) in the Admin Console.
 
 #### Self-host

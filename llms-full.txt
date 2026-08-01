@@ -29796,7 +29796,7 @@ Policies in the **Data Controls**section add guardrails to how data may be share
 
 ### Single organization
 
-Turn on the **Single organization** policy to restrict non-owner/non-admin members of your organization from being able to join other organizations or from creating other organizations. This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization, however this policy is not enforced for owners and admins.
+Turn on the **Single organization** policy to restrict members of your organization from being able to join other organizations or from creating other organizations. This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization, however this policy is not enforced for owners and admins.
 
 > [!WARNING] Non-compliance revokation warning
 > **Organization members who are not owners or admins and do not comply with this policy will have access revoked when you activate this policy.**Users who have access revoked as a result of this policy will be notified via email, and must take steps to become compliant before their access can be restored.
@@ -29827,23 +29827,17 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Manage Send
+### Send options
 
-Turn on **Manage Send** to control how members use Send. **Enable Send** is active by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
 
-Using Manage Send, organization admins can manage how members use Send, including:
+### Remove Send
 
-- **Send types**: Determines which [type of Send](https://bitwarden.com/help/create-send/#create-a-send/) users may create such as **Text** and **File**.
-- **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [**Email verification**](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [**Password set by member**](https://bitwarden.com/help/send-privacy/#send-passwords/).
-- **Enforce deletion date**: Use this policy to enforce a predetermined [Send Lifespan](https://bitwarden.com/help/send-lifespan/) for Sends created by members.
-- **Always show members' email address with recipients**: Enable option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
-
-> [!NOTE] Enabling policy will not change existing Sends
-> Enabling **Manage Controls** will not retroactivly apply changes to existing Sends at this time.
+**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
 ### Remove export
 
-Turn on the **Remove export**policy to prohibit non-owner and non-admin members of your organization from [exporting their individual vault data](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
+Turn on the **Remove export**policy to prohibit members of your organization from [exporting their individual vault](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
 
 In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
 
@@ -29879,7 +29873,7 @@ The **Account recovery administration** policy is required for your organization
 
 ### Require single sign-on authentication
 
-Turn on the **Require single sign-on authentication** policy to require non-owner/non-admin users to log in with SSO. If you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). This policy is not enforced for owners and admins.
+Turn on the **Require single sign-on authentication** policy to require non-owner/non-admin users to log in with SSO. This policy is not enforced for owners and admins, however if you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). 
 
 Members of organizations using this policy will not be able to [log in with passkeys](https://bitwarden.com/help/login-with-passkeys/).
 
@@ -29890,11 +29884,11 @@ Members of organizations using this policy will not be able to [log in with pass
 
 Turn on the **Require two-step login** policy to require members to use any two-step login method to access their vaults. If you are using an SSO or identity provider's 2FA functionality, you don't need to enable this policy. This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization.
 
-> [!WARNING] Non-compliance revokation warning
-> **Organization members who are not owners or admins and do not comply with this policy will have access revoked when you activate this policy.**Users who have access revoked as a result of this policy will be notified via email, and must take steps to become compliant before their access can be restored.
-
 > [!NOTE] Require 2FA does not work with organization DUO
 > Organizations that have enabled [SSO](https://bitwarden.com/help/about-sso/) or [Duo](https://bitwarden.com/help/setup-two-step-login-duo/) for all members should not use this policy. Both SSO and organization Duo are enforced by the provider and will not satisfy the two-step login requirement that this policy enables.
+
+> [!WARNING] Non-compliance revokation warning
+> **Organization members who are not owners or admins and do not comply with this policy will have access revoked when you activate this policy.**Users who have access revoked as a result of this policy will be notified via email, and must take steps to become compliant before their access can be restored.
 
 ### Block account creation for claimed domains
 
@@ -29908,7 +29902,7 @@ Turn on the **Block account creation for claimed domains** policy to prevent peo
 
 ### Session timeout
 
-Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options will not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. This policy does not affect organization owners.
+Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options can not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. This policy does not affect organization owners.
 
 You can customize two options:
 
@@ -29945,7 +29939,7 @@ Policies in the **Vault Management** section allow you to set default and minimu
 
 ### Password generator
 
-Turn on the **Password generator** policy to enforce a configurable set of minimum requirements for any user-generated passwords for all members, regardless of role. Organizations can enforce:
+Turn on the **Password generator** policy to enforce a configurable set of minimum requirements for any member-generated passwords for all members, regardless of role. Organizations can enforce:
 
 - Password, passphrase, or user preference
 
@@ -29988,7 +29982,7 @@ Once the policy is activated, members cannot view or change their account's **De
 
 ### Automatic login with SSO
 
-Turn on the **Automatically login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
+Turn on the **Automatic login with SSO** policy to allow login forms to be filled and submitted automatically when accessing non-SSO apps from your identity provider. In order to enable this setting:
 
 1. To enable the **Automatic login with SSO** policy, check the **Turn on** box, and enter your**Identity provider host** URL(s). The URL should include `protocol://domain`.
 
@@ -30002,11 +29996,11 @@ Turn on the **Automatically login with SSO** policy to allow login forms to be f
 
 ### Activate autofill
 
-Turn on the **Activate auto-fill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
+Turn on the **Activate autofill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
 
 ### Remove card item type
 
-Turn on the **Remove card item type**policy will prevent members from creating or importing credit cards to organization and individual vaults.
+Turn on the **Remove card item type**policy to prevent members from creating or importing credit cards to organization and individual vaults.
 
 Users who are members of multiple organizations will still be able to use cards only in an organization that allows it, even if a different organization has activated this policy.
 
@@ -30014,12 +30008,9 @@ Existing cards will be automatically hidden, however the data will not be delete
 
 ### Remove Free Bitwarden Families sponsorship
 
-Turn on the **Remove Free Bitwarden Families sponsorship**policy to prevent members of your organization from having the option to [redeem a free Families plan](https://bitwarden.com/help/families-for-enterprise/) through your organization.
+Turn on the **Remove sponsored Families plan** policy to prevent members of your organization from having the option to [redeem a free Families plan](https://bitwarden.com/help/families-for-enterprise/) through your organization.
 
 Users who have redeemed a sponsored Families organization prior to the policy being activated will continue to have their organization sponsored until the end of the current billing cycle. Their stored payment method will be charged for the organization when the next billing cycle begins.
-
-![Vault export removed](https://bitwarden.com/assets/5E2871D2vZBzveBmVyv9lO/b89f979980566dda40928db1ce450507/2024-10-14_08-50-45.png)
-*Vault export removed*
 
 ### Automatic user confirmation
 
@@ -31321,7 +31312,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager 
 
-- ⭐ **Action bar for vault items**: A new batch action bar has been added to the web app, desktop app, and admin console. Use the action bar to perform vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a collection or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Action bar for vault items**: A new batch action bar has been added to the vault web app and admin console. Use the action bar to perform vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a collection or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
 - ⭐ **Save and fill from extensions**: On browser extensions, the inline menu can now more easily [simultaneously save and autofill new credentials](https://bitwarden.com/help/auto-fill-browser/#tab-add-an-account-with-inline-autofill-1GyDvute7sK75h9VvnBgef/).
 - **CXP available on Android**: With Android 10+, you can [import directly](https://bitwarden.com/help/import-data/#tab-mobile-5ALQx9afSqWXX9jfXsY5sb/) to or [export directly](https://bitwarden.com/help/export-your-data/#tab-mobile-1QlXqfleMlF6jWT87Dbn2u/) from Bitwarden and any other Android app that supports [FIDO's Credential Exchange Protocol](https://fidoalliance.org/specifications-credential-exchange-specifications).
 - ⭐ **Make Bitwarden default on extension installation**: Browser extensions will now prompt you to [make Bitwarden your browser's default password manager](https://bitwarden.com/help/disable-browser-autofill/) on installation.
@@ -31338,7 +31329,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Admin Console
 
 - ⭐ **Vault banner Enterprise policy**: Admins can now display [custom banners](https://bitwarden.com/help/policies/#vault-banner/) at the top of members' vaults, such as service announcements or company reminders.
-- ⭐ **Manage Send policy**: Organizations can now control all Send related functions with the **Manage Send** policy in the Admin Console. The [new policy](https://bitwarden.com/help/policies/#manage-send/) replaces the previous set of separate Send policies.
 - ⭐ **Send event logs**: Creating, editing, deleting, and accessing a [Send](https://bitwarden.com/help/about-send/) will now [log an event](https://bitwarden.com/help/event-logs/) in the Admin Console.
 
 #### Self-host
