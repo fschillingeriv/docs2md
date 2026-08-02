@@ -141,15 +141,16 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Select the item(s) you want to archive and use the action bar to choose **Archive**:
+1. Open the item you want to archive and select the **Archive** button:
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
-*Archive with the desktop app*
+![Archive vault item on desktop](https://bitwarden.com/assets/18fRqQqTtf91GtXuuGZN2B/afe417683249b06802fa03d2e5dbadd8/archive_desktop_old.png)
+
+[Embedded content]
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive**.
 
 ### CLI
 

@@ -25626,15 +25626,16 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Select the item(s) you want to archive and use the action bar to choose **Archive**:
+1. Open the item you want to archive and select the **Archive** button:
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
-*Archive with the desktop app*
+![Archive vault item on desktop](https://bitwarden.com/assets/18fRqQqTtf91GtXuuGZN2B/afe417683249b06802fa03d2e5dbadd8/archive_desktop_old.png)
+
+[Embedded content]
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive**.
 
 ### CLI
 
@@ -38803,10 +38804,11 @@ There are a few other ways to share an item:
 
 To share an existing item from the desktop app:
 
-1. In the **Vault**view, select the item you want to share and select **Assign to collections** from the action bar:
+1. In the **Vault**view, select the item you want to share and select **Assign to collections**:
 
-![Share from desktop](https://bitwarden.com/assets/2RRhv9udtSa49Uxzv6rRAQ/e5b579af047113cf7ea1eb60bbbb533e/2026-07-15_11-18-04.png)
-*Share from desktop*
+![Assign to collection desktop app](https://bitwarden.com/assets/3m51JpGDRG2oshNTgJwPYZ/ddd68ad6f703263aa652b39712c8a55e/assign_to_collections_desktop_old.png)
+
+[Embedded content]
 2. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.
