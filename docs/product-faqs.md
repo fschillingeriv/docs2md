@@ -46,7 +46,7 @@ When you change your email address, you should immediately logout of all Bitward
 
 ### Q: What's the safest way to make a backup of my vault data?
 
-**A:** You can use [encrypted exports](https://bitwarden.com/help/encrypted-export/#create-an-encrypted-export/) to make secure long-term backups of your vault data that are encrypted with your account encryption key, organization encryption key, or with a password of your choosing.
+**A:** You can use [encrypted exports](https://bitwarden.com/help/encrypted-export/) to make secure long-term backups of your vault data that are encrypted with your account encryption key, organization encryption key, or with a password of your choosing.
 
 ### Q: Can I set Bitwarden to automatically start when my computer starts?
 

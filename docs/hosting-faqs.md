@@ -10,7 +10,7 @@ This article contains Frequently Asked Questions (FAQs) regarding self-hosting.
 
 ### Q: What platforms can I host on?
 
-**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux, macOS, and Windows machines. 
+**A:** Bitwarden is a cross-platform application that is deployed using Docker Linux containers. This means that Bitwarden can be hosted on Linux and Windows machines. 
 
 The platform you host on must be under active mainstream support by its vendor. In other words, Bitwarden does not support hosting on any platform version that has reached EoL. Windows Server, for example requires at least version 2022; versions 2019 and 2016 have both ended active mainstream support.
 
