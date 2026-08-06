@@ -9416,6 +9416,9 @@ This article describes how to format` .csv` and `.json` files for importing into
 > - Upload [file attachments](https://bitwarden.com/help/attachments/) to the new vault individually.
 > - Re-create [Sends](https://bitwarden.com/help/about-send/) in the new vault.
 
+> [!NOTE] import files case sensitive
+> Field names are case-sensitive in both `.csv` and `.json` import files. For example, `Login_Username` will **not** be recognized the same as `login_username`, and will result in an import error. Match the casing shown in the examples on this page exactly.
+
 ## Condition a .csv
 
 ### .csv for individual vault
@@ -23237,41 +23240,77 @@ Bitwarden is ISO 27001 certified and in compliance with ISO 27001 control sets s
 
 Bitwarden regularly conducts comprehensive third-party security audits with notable security firms. These annual audits include source code assessments and penetration testing across Bitwarden IPs, servers, and web applications.
 
+### 2025 Bitwarden Browser Extension & Autofill Overlay Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden browser extension and autofill overlay by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/6GHvHsKwB7SSjDzPZ9x1zz/d1716eabff2be06b369411379794040e/2025_Bitwarden_Browser_Extension___Autofill_Overlay_Security_Report.pdf)
+
+### 2025 Bitwarden Core Application Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden core application by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5yO7sKgjdwGYg7SXVqD2Vc/4a7ef3cce23d8e929ef3cd8238d3d392/2025_Bitwarden_Core_Application_Security_Report.pdf)
+
+### 2025 Bitwarden Desktop Application Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden desktop application by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/6ObEe7l5ONZ9DFCm3bGKLE/ff88f8eb3c0b6542d566a5d08cb7131c/2025_Bitwarden_Desktop_Application_Security_Report.pdf)
+
+### 2025 Bitwarden RustCrypto Crate Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden RustCrypto crate by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/3KvUkoivXeqcjhwhkUkuya/a497abd09e0f707e1d7581db24ffbe2c/2025_Bitwarden_RustCrypto_Crate_Security_Report.pdf)
+
+### 2025 Bitwarden RustCrypto Library Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden client applications and libraries by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5YGFfe5sU4Op1aWvFnSi6b/1f059c111445194bce1c185c8a3fdbaf/2025_Bitwarden_RustCrypto_Library_Security_Report.pdf)
+
+### 2025 Bitwarden Web Vault Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden web vault by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5JAVBZPt2HZ0oPWm40pRx6/6801e051726f2ad1dd85870d71d3a54a/2025_Bitwarden_Web_Vault_Security_Report.pdf)
+
 ### 2025 Bitwarden Cryptography Report
 
 Bitwarden completed an audit of Bitwarden core cryptography operations by the Applied Cryptography Group at ETH Zurich under the assumption of a fully malicious server.
 
-[Read the report. ](https://bitwarden.com/assets/Kki4W785JIPOdFj6EeWB5/dbf51066c1041aa90dc503ca0c911194/2025_Bitwarden_Cryptography_Report.pdf)
+[Read the report](https://bitwarden.com/assets/Kki4W785JIPOdFj6EeWB5/dbf51066c1041aa90dc503ca0c911194/2025_Bitwarden_Cryptography_Report.pdf)
 
 ### 2025 Mobile App Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden mobile and mobile authenticator applications by cybersecurity firm Unit 42 by Palo Alto Networks 
 
-[Read the report.](https://bitwarden.com/assets/718YF2IWeVNARWs6nBgYzS/796a7e97eedc6d569773a1892284d034/2025_Mobile_App_Security_Assessment.pdf)
+[Read the report](https://bitwarden.com/assets/718YF2IWeVNARWs6nBgYzS/796a7e97eedc6d569773a1892284d034/2025_Mobile_App_Security_Assessment.pdf)
 
 ### 2025 Bitwarden Web App and Network Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden web application and its related network components by cybersecurity firm Fracture Labs.
 
-[Read the report.](https://bitwarden.com/assets/5dtxzUUYxM1DGUXS9lcTHb/f2fb3a45cc5dd26666cb57e8011b0f2b/2025_Bitwarden_Web_App_and_Network_Security_Assessment.pdf)
+[Read the report](https://bitwarden.com/assets/5dtxzUUYxM1DGUXS9lcTHb/f2fb3a45cc5dd26666cb57e8011b0f2b/2025_Bitwarden_Web_App_and_Network_Security_Assessment.pdf)
 
 ### 2024 Bitwarden Client Applications Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden client applications and SDKs by security firm IOActive.
 
-[Read the report.](https://bitwarden.com/assets/3EW7bMcth1sZEDpKseMk7l/d676d703b5a181d0590d69ed2b480ce0/Bitwarden_-_Security_Assessment_2024_-_Technical_Report_v1.0-combined.pdf)
+[Read the report](https://bitwarden.com/assets/3EW7bMcth1sZEDpKseMk7l/d676d703b5a181d0590d69ed2b480ce0/Bitwarden_-_Security_Assessment_2024_-_Technical_Report_v1.0-combined.pdf)
 
 ### 2024 Bitwarden Marketing Website Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden marketing website by security firm Paragon Initiative Enterprises (PIE). 
 
-[Read the report.](https://bitwarden.com/assets/3alBclinYuMVZ9erf1tuhM/59d4a7a3e5f3268fa59747bd86f8cba7/2024_Bitwarden_Marketing_Website_Security_Report.pdf)
+[Read the report](https://bitwarden.com/assets/3alBclinYuMVZ9erf1tuhM/59d4a7a3e5f3268fa59747bd86f8cba7/2024_Bitwarden_Marketing_Website_Security_Report.pdf)
 
 ### 2024 Bitwarden Mobile App Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden mobile and mobile authenticator applications by security firm Mandiant. 
 
-[Read the report.](https://bitwarden.com/assets/5xEFYurTu7zhrlKg8dM9Wr/943d125e789b1c4eebc7b29ad6fb9b1a/2024_Bitwarden_Mobile_App_Security_Report.pdf)
+[Read the report](https://bitwarden.com/assets/5xEFYurTu7zhrlKg8dM9Wr/943d125e789b1c4eebc7b29ad6fb9b1a/2024_Bitwarden_Mobile_App_Security_Report.pdf)
 
 ### 2024 Web App and Network Security Assessment
 
@@ -23283,43 +23322,43 @@ Bitwarden completed a dedicated source code audit and penetration test of the we
 
 Bitwarden completed a dedicated source code audit and penetration test of the mobile apps and SDK by security firm Cure53.
 
-[Read the report.](https://bitwarden.com/assets/bEfNZ6r3BJ9ehwNfAqw6C/4020b6eb762e0b6051a40638f45269d9/2024_Bitwarden_Mobile_Apps_and_SDK_Report.pdf)
+[Read the report](https://bitwarden.com/assets/bEfNZ6r3BJ9ehwNfAqw6C/4020b6eb762e0b6051a40638f45269d9/2024_Bitwarden_Mobile_Apps_and_SDK_Report.pdf)
 
 ### 2023 Bitwarden Web App Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the web app by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/5AyZwIfhKkwuQjXGvJ2e3l/488c8a8466deead9c306d4df9db08cdc/2023_Bitwarden_Web_App_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/5AyZwIfhKkwuQjXGvJ2e3l/488c8a8466deead9c306d4df9db08cdc/2023_Bitwarden_Web_App_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Desktop App Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the desktop app by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/6m0rD5aBvmE7LtOGJrpYdP/199f548d2dd29fd120099cf0c64d5bd1/2023_Bitwarden_Electron_Desktop_App_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/6m0rD5aBvmE7LtOGJrpYdP/199f548d2dd29fd120099cf0c64d5bd1/2023_Bitwarden_Electron_Desktop_App_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Core App & Library Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the core application and library by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/3OA3ul8mM744GI2Ap0OhgW/564008ab586c81f76d1e5560be942bd9/2023_Bitwarden_Core_App___Library_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/3OA3ul8mM744GI2Ap0OhgW/564008ab586c81f76d1e5560be942bd9/2023_Bitwarden_Core_App___Library_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Browser Extension Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the browser extension by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/4X0rKCkFkWcPg86PUV3cRn/7277e4651464e0a8efd21d9fcf83d296/2023_Bitwarden_Browser_Extension_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/4X0rKCkFkWcPg86PUV3cRn/7277e4651464e0a8efd21d9fcf83d296/2023_Bitwarden_Browser_Extension_Security_Assessment_Report.pdf)
 
 ### 2023 Network Security Assessment
 
 Bitwarden completed a network security assessment and penetration test by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/6E4JwsHCseBSHlTsXc8ecR/b39a63ebcd7f51683463c4e4d9838d37/bitwarden-2023-network-security-assessment-report.pdf).
+[Read the report](https://bitwarden.com/assets/6E4JwsHCseBSHlTsXc8ecR/b39a63ebcd7f51683463c4e4d9838d37/bitwarden-2023-network-security-assessment-report.pdf)
 
 ### 2022 Security Assessment
 
 Bitwarden completed a dedicated source code audit and penetration test by security firm Cure53. 
 
-[Read the report](https://bitwarden.com/assets/4eMmA16Zz9MACTHOexlxx0/05f3ed75c04f7d6e086479279d82c733/2022_Bitwarden_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/4eMmA16Zz9MACTHOexlxx0/05f3ed75c04f7d6e086479279d82c733/2022_Bitwarden_Security_Assessment_Report.pdf)
 
 ### SOC 2 Type 2 and SOC 3
 
@@ -23329,31 +23368,31 @@ Bitwarden has completed [SOC Type 2 and SOC 3 compliance](https://bitwarden.com/
 
 Bitwarden completed a network security assessment and penetration test by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/2otFuNRCjJzAoZRsueaN89/cca35829e6dcc09edc246c5de99f6abd/2022_Bitwarden_Network_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/2otFuNRCjJzAoZRsueaN89/cca35829e6dcc09edc246c5de99f6abd/2022_Bitwarden_Network_Security_Assessment_Report.pdf)
 
 ### 2021 Network Security Assessment
 
 Bitwarden completed a thorough network security assessment and penetration test by auditing firm [Insight Risk Consulting](https://www.insightriskconsulting.com/).
 
-[Read the report.](https://bitwarden.com/assets/5UaSjdbvTgTTtzkBpXLLV/e39fc66998b82c4e512855aa291d9dd0/bitwarden-2021-network-security-assessment-report.pdf)
+[Read the report](https://bitwarden.com/assets/5UaSjdbvTgTTtzkBpXLLV/e39fc66998b82c4e512855aa291d9dd0/bitwarden-2021-network-security-assessment-report.pdf)
 
 ### 2021 Security Assessment
 
 Bitwarden completed a dedicated source code audit and penetration test by the security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/4G0yonTshy2ezRo1R7s6Yl/7ba5bdac721b2ad8d14117c1c6a36b37/2021-bitwarden-security-assessment-report.pdf).
+[Read the report](https://bitwarden.com/assets/4G0yonTshy2ezRo1R7s6Yl/7ba5bdac721b2ad8d14117c1c6a36b37/2021-bitwarden-security-assessment-report.pdf)
 
 ### 2020 Network Security Assessment
 
 Bitwarden completed a thorough security assessment and penetration test by auditing firm [Insight Risk Consulting](https://www.insightriskconsulting.com/). For more information, please see the blog post [Bitwarden 2020 Security Audit is Complete](https://bitwarden.com/blog/bitwarden-network-security-assessment-2020/).
 
-[Read the report](https://cdn.bitwarden.com/misc/Bitwarden%20Network%20Security%20Assessment%20Report%20-%202020.pdf).
+[Read the report](https://cdn.bitwarden.com/misc/Bitwarden%20Network%20Security%20Assessment%20Report%20-%202020.pdf)
 
 ### 2018 Security Assessment
 
 Bitwarden completed a thorough security audit and cryptographic analysis by security firm [Cure53](https://cure53.de/). For more information, please see the blog post [Bitwarden Completes Third-party Security Audit](https://bitwarden.com/blog/third-party-security-audit/).
 
-[Read the report](https://cdn.bitwarden.net/misc/Bitwarden%20Security%20Assessment%20Report.pdf).
+[Read the report](https://cdn.bitwarden.net/misc/Bitwarden%20Security%20Assessment%20Report.pdf)
 
 ## Open source codebase
 
@@ -29872,9 +29911,9 @@ The **Account recovery administration** policy is required for your organization
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
-### Require single sign-on authentication
+### Require single sign-on (SSO)
 
-Turn on the **Require single sign-on authentication** policy to require non-owner/non-admin users to log in with SSO. This policy is not enforced for owners and admins, however if you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). 
+Turn on the **Require single sign-on (SSO)** policy to require non-owner/non-admin users to log in with SSO. This policy is not enforced for owners and admins, however if you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). 
 
 Members of organizations using this policy will not be able to [log in with passkeys](https://bitwarden.com/help/login-with-passkeys/).
 
@@ -29995,9 +30034,9 @@ Turn on the **Automatic login with SSO** policy to allow login forms to be fille
 > [!NOTE] Automatically login users browser extension
 > Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
 
-### Activate autofill
+### Enable autofill on page load
 
-Turn on the **Activate autofill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
+Turn on the **Enable autofill on page load**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
 
 ### Remove card item type
 
@@ -30007,7 +30046,7 @@ Users who are members of multiple organizations will still be able to use cards 
 
 Existing cards will be automatically hidden, however the data will not be deleted and cards will re-appear should administrators disable the policy. 
 
-### Remove Free Bitwarden Families sponsorship
+### Remove sponsored Families plan
 
 Turn on the **Remove sponsored Families plan** policy to prevent members of your organization from having the option to [redeem a free Families plan](https://bitwarden.com/help/families-for-enterprise/) through your organization.
 
@@ -31306,6 +31345,12 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.7.2
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.7.1, and Mobile 2026.7.1)
+
+This release delivers routine maintenance and backend improvements.
 
 ## 2026.7.0
 
@@ -39488,7 +39533,7 @@ Enable the Bitwarden SSH Agent on macOS store download:
 ```plain text
 export SSH_AUTH_SOCK=/Users/<user>/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
 ```
-2. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+2. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 ### macOS .dmg
 
@@ -39504,7 +39549,7 @@ export SSH_AUTH_SOCK=/Users/<user>/.bitwarden-ssh-agent.sock
 ```plain text
 launchctl setenv "SSH_AUTH_SOCKET" "/Users/<user>/.bitwarden-ssh-agent.sock"
 ```
-3. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+3. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 > [!NOTE] launchctl require terminal restart
 > You may need to restart the terminal after using the `launchctl` command.
@@ -39518,7 +39563,7 @@ Enable the Bitwarden SSH Agent on Linux:
 ```plain text
 export SSH_AUTH_SOCK=/home/<user>/.bitwarden-ssh-agent.sock
 ```
-2. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+2. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 ### Snap and Flatpak
 
@@ -39662,7 +39707,7 @@ nano ~/.gitconfig
 Using SSH to authenticate with Git can add security and ease of use to your workflow. Similarly, SSH keys stored in Bitwarden can be used to sign and verify Git commits using SSH protocol. In this example, the Bitwarden SSH Agent will be used to sign Git commits to GitHub.
 
 1. On your GitHub account, setup an SSH signing key by navigating to **Settings**,**SSH and GPG keys**, then select **New SSH Key**.
-2. On the add new SSH key screen, add a **Name** and select a **Key type**, Choose `Signing Key`. Copy & paste the**Public key** from your Bitwarden vault into the **Key** field on GitHub.
+2. On the add new SSH key screen, add a **Name** and select a **Key type**. Choose `Signing Key`. Copy & paste the**Public key** from your Bitwarden vault into the **Key** field on GitHub.
 3. Configure git to use the `allowedSignersFile` with the following command:
 
 ```plain text
@@ -39671,7 +39716,7 @@ git config --global gpg.ssh.allowedSignersFile "$HOME/.ssh/allowed_signers"
 4. Add your public key to the allowedSignersFile:
 
 ```bash
-# Create allowed_signers file
+# Create allowed_signers file 
 touch ~/.ssh/allowed_signers
 
 # Edit the allowed_signers file and add a line for your public key pair you wish to trust, for example:
@@ -39851,9 +39896,12 @@ If there are specific sites you do not wish to use Bitwarden for passkeys with, 
 
 ### Create a passkey
 
-When creating a new passkey on a website or app, the browser extension will prompt you to store the passkey: 
+When creating a new passkey on a website or app, the browser extension will prompt you to store the passkey:
 
 ![Save passkey](https://bitwarden.com/assets/3kj9zFGb1nJgW236SUaBON/4a6fc1892506164f37586fa4a4fc9aa2/2024-10-29_11-33-21.png)
+*Save passkey*
+
+ 
 
 > [!NOTE] Use your device or hardware key (browser)
 > Select **Use your device or hardware key** if you do not wish to store the passkey in Bitwarden.
@@ -39861,12 +39909,14 @@ When creating a new passkey on a website or app, the browser extension will prom
 Only one passkey can be saved per login item. If a passkey already exists for a service, overwrite the existing passkey or select the + **Add icon** to create a new login item to store an additional passkey:
 
 ![Save passkey with existing login](https://bitwarden.com/assets/2GnYjzxkUFsYftwOSKz1Fi/e065e2784cd4b1eb21470fdfd64a35e9/2024-10-29_11-37-38.png)
+*Save passkey with existing login*
 
 ### Sign in using a passkey stored in Bitwarden
 
 First, confirm that the **Ask to save and use passkeys** extension setting is turned on. Then start the passkey login on the website. From the window that appears, select your saved passkey:
 
 ![Log in with passkey](https://bitwarden.com/assets/5KeuUZox5shd0zDMxPHKXn/1aab35dfceed0ed9cdb17b143be9a890/2024-10-29_11-39-33.png)
+*Log in with passkey*
 
 Alternatively, the [inline autofill menu](https://bitwarden.com/help/auto-fill-browser/#inline-autofill-menu/) can also be used to authenticate with passkeys.
 
@@ -39966,6 +40016,7 @@ Select **Sign in** to use your passkey.
 Saved passkeys can be accessed from any Bitwarden app. Within the login item, the **Passkey** field displays the date and time that the passkey was created: 
 
 ![Passkey in your vault](https://bitwarden.com/assets/2SofQpuQstpo6gnIg9irwM/5ad0255aa61813dd55a6d4081e7c234d/2024-12-02_16-07-56.png)
+*Passkey in your vault*
 
 > [!NOTE] master password reprompt
 > If [master password re-prompt](https://bitwarden.com/help/master-password-re-prompt/) is used on the login item, you're required to re-enter your master password to access the passkey.
@@ -39978,6 +40029,9 @@ To delete a passkey from a vault item:
 2. Select the - **Delete icon** for the **Passkey** field:
 
 ![Delete a passkey](https://bitwarden.com/assets/448nZ5ybyis0nUEwWsq6kt/8442776aca2a73eec13d30ce25b08f9a/2024-12-02_16-08-55.png)
+*Delete a passkey*
+3. Select **Delete** to confirm.
+4. Select **Save**.
 
 ### Export and import passkeys
 

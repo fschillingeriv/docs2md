@@ -44,9 +44,12 @@ If there are specific sites you do not wish to use Bitwarden for passkeys with, 
 
 ### Create a passkey
 
-When creating a new passkey on a website or app, the browser extension will prompt you to store the passkey: 
+When creating a new passkey on a website or app, the browser extension will prompt you to store the passkey:
 
 ![Save passkey](https://bitwarden.com/assets/3kj9zFGb1nJgW236SUaBON/4a6fc1892506164f37586fa4a4fc9aa2/2024-10-29_11-33-21.png)
+*Save passkey*
+
+ 
 
 > [!NOTE] Use your device or hardware key (browser)
 > Select **Use your device or hardware key** if you do not wish to store the passkey in Bitwarden.
@@ -54,12 +57,14 @@ When creating a new passkey on a website or app, the browser extension will prom
 Only one passkey can be saved per login item. If a passkey already exists for a service, overwrite the existing passkey or select the + **Add icon** to create a new login item to store an additional passkey:
 
 ![Save passkey with existing login](https://bitwarden.com/assets/2GnYjzxkUFsYftwOSKz1Fi/e065e2784cd4b1eb21470fdfd64a35e9/2024-10-29_11-37-38.png)
+*Save passkey with existing login*
 
 ### Sign in using a passkey stored in Bitwarden
 
 First, confirm that the **Ask to save and use passkeys** extension setting is turned on. Then start the passkey login on the website. From the window that appears, select your saved passkey:
 
 ![Log in with passkey](https://bitwarden.com/assets/5KeuUZox5shd0zDMxPHKXn/1aab35dfceed0ed9cdb17b143be9a890/2024-10-29_11-39-33.png)
+*Log in with passkey*
 
 Alternatively, the [inline autofill menu](https://bitwarden.com/help/auto-fill-browser/#inline-autofill-menu/) can also be used to authenticate with passkeys.
 
@@ -159,6 +164,7 @@ Select **Sign in** to use your passkey.
 Saved passkeys can be accessed from any Bitwarden app. Within the login item, the **Passkey** field displays the date and time that the passkey was created: 
 
 ![Passkey in your vault](https://bitwarden.com/assets/2SofQpuQstpo6gnIg9irwM/5ad0255aa61813dd55a6d4081e7c234d/2024-12-02_16-07-56.png)
+*Passkey in your vault*
 
 > [!NOTE] master password reprompt
 > If [master password re-prompt](https://bitwarden.com/help/master-password-re-prompt/) is used on the login item, you're required to re-enter your master password to access the passkey.
@@ -171,6 +177,9 @@ To delete a passkey from a vault item:
 2. Select the - **Delete icon** for the **Passkey** field:
 
 ![Delete a passkey](https://bitwarden.com/assets/448nZ5ybyis0nUEwWsq6kt/8442776aca2a73eec13d30ce25b08f9a/2024-12-02_16-08-55.png)
+*Delete a passkey*
+3. Select **Delete** to confirm.
+4. Select **Save**.
 
 ### Export and import passkeys
 

@@ -57,7 +57,7 @@ Enable the Bitwarden SSH Agent on macOS store download:
 ```plain text
 export SSH_AUTH_SOCK=/Users/<user>/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
 ```
-2. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+2. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 ### macOS .dmg
 
@@ -73,7 +73,7 @@ export SSH_AUTH_SOCK=/Users/<user>/.bitwarden-ssh-agent.sock
 ```plain text
 launchctl setenv "SSH_AUTH_SOCKET" "/Users/<user>/.bitwarden-ssh-agent.sock"
 ```
-3. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+3. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 > [!NOTE] launchctl require terminal restart
 > You may need to restart the terminal after using the `launchctl` command.
@@ -87,7 +87,7 @@ Enable the Bitwarden SSH Agent on Linux:
 ```plain text
 export SSH_AUTH_SOCK=/home/<user>/.bitwarden-ssh-agent.sock
 ```
-2. To make this persistent, add the `export` command to your `~/.zhrc` or `~/.bashrc` file.
+2. To make this persistent, add the `export` command to your `~/.zshrc` or `~/.bashrc` file.
 
 ### Snap and Flatpak
 
@@ -231,7 +231,7 @@ nano ~/.gitconfig
 Using SSH to authenticate with Git can add security and ease of use to your workflow. Similarly, SSH keys stored in Bitwarden can be used to sign and verify Git commits using SSH protocol. In this example, the Bitwarden SSH Agent will be used to sign Git commits to GitHub.
 
 1. On your GitHub account, setup an SSH signing key by navigating to **Settings**,**SSH and GPG keys**, then select **New SSH Key**.
-2. On the add new SSH key screen, add a **Name** and select a **Key type**, Choose `Signing Key`. Copy & paste the**Public key** from your Bitwarden vault into the **Key** field on GitHub.
+2. On the add new SSH key screen, add a **Name** and select a **Key type**. Choose `Signing Key`. Copy & paste the**Public key** from your Bitwarden vault into the **Key** field on GitHub.
 3. Configure git to use the `allowedSignersFile` with the following command:
 
 ```plain text
@@ -240,7 +240,7 @@ git config --global gpg.ssh.allowedSignersFile "$HOME/.ssh/allowed_signers"
 4. Add your public key to the allowedSignersFile:
 
 ```bash
-# Create allowed_signers file
+# Create allowed_signers file 
 touch ~/.ssh/allowed_signers
 
 # Edit the allowed_signers file and add a line for your public key pair you wish to trust, for example:

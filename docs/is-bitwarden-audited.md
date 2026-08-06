@@ -36,41 +36,77 @@ Bitwarden is ISO 27001 certified and in compliance with ISO 27001 control sets s
 
 Bitwarden regularly conducts comprehensive third-party security audits with notable security firms. These annual audits include source code assessments and penetration testing across Bitwarden IPs, servers, and web applications.
 
+### 2025 Bitwarden Browser Extension & Autofill Overlay Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden browser extension and autofill overlay by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/6GHvHsKwB7SSjDzPZ9x1zz/d1716eabff2be06b369411379794040e/2025_Bitwarden_Browser_Extension___Autofill_Overlay_Security_Report.pdf)
+
+### 2025 Bitwarden Core Application Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden core application by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5yO7sKgjdwGYg7SXVqD2Vc/4a7ef3cce23d8e929ef3cd8238d3d392/2025_Bitwarden_Core_Application_Security_Report.pdf)
+
+### 2025 Bitwarden Desktop Application Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden desktop application by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/6ObEe7l5ONZ9DFCm3bGKLE/ff88f8eb3c0b6542d566a5d08cb7131c/2025_Bitwarden_Desktop_Application_Security_Report.pdf)
+
+### 2025 Bitwarden RustCrypto Crate Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden RustCrypto crate by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/3KvUkoivXeqcjhwhkUkuya/a497abd09e0f707e1d7581db24ffbe2c/2025_Bitwarden_RustCrypto_Crate_Security_Report.pdf)
+
+### 2025 Bitwarden RustCrypto Library Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden client applications and libraries by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5YGFfe5sU4Op1aWvFnSi6b/1f059c111445194bce1c185c8a3fdbaf/2025_Bitwarden_RustCrypto_Library_Security_Report.pdf)
+
+### 2025 Bitwarden Web Vault Security Assessment
+
+Bitwarden completed penetration testing and a dedicated audit of the Bitwarden web vault by cybersecurity firm Cure53.
+
+[Read the report](https://bitwarden.com/assets/5JAVBZPt2HZ0oPWm40pRx6/6801e051726f2ad1dd85870d71d3a54a/2025_Bitwarden_Web_Vault_Security_Report.pdf)
+
 ### 2025 Bitwarden Cryptography Report
 
 Bitwarden completed an audit of Bitwarden core cryptography operations by the Applied Cryptography Group at ETH Zurich under the assumption of a fully malicious server.
 
-[Read the report. ](https://bitwarden.com/assets/Kki4W785JIPOdFj6EeWB5/dbf51066c1041aa90dc503ca0c911194/2025_Bitwarden_Cryptography_Report.pdf)
+[Read the report](https://bitwarden.com/assets/Kki4W785JIPOdFj6EeWB5/dbf51066c1041aa90dc503ca0c911194/2025_Bitwarden_Cryptography_Report.pdf)
 
 ### 2025 Mobile App Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden mobile and mobile authenticator applications by cybersecurity firm Unit 42 by Palo Alto Networks 
 
-[Read the report.](https://bitwarden.com/assets/718YF2IWeVNARWs6nBgYzS/796a7e97eedc6d569773a1892284d034/2025_Mobile_App_Security_Assessment.pdf)
+[Read the report](https://bitwarden.com/assets/718YF2IWeVNARWs6nBgYzS/796a7e97eedc6d569773a1892284d034/2025_Mobile_App_Security_Assessment.pdf)
 
 ### 2025 Bitwarden Web App and Network Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden web application and its related network components by cybersecurity firm Fracture Labs.
 
-[Read the report.](https://bitwarden.com/assets/5dtxzUUYxM1DGUXS9lcTHb/f2fb3a45cc5dd26666cb57e8011b0f2b/2025_Bitwarden_Web_App_and_Network_Security_Assessment.pdf)
+[Read the report](https://bitwarden.com/assets/5dtxzUUYxM1DGUXS9lcTHb/f2fb3a45cc5dd26666cb57e8011b0f2b/2025_Bitwarden_Web_App_and_Network_Security_Assessment.pdf)
 
 ### 2024 Bitwarden Client Applications Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden client applications and SDKs by security firm IOActive.
 
-[Read the report.](https://bitwarden.com/assets/3EW7bMcth1sZEDpKseMk7l/d676d703b5a181d0590d69ed2b480ce0/Bitwarden_-_Security_Assessment_2024_-_Technical_Report_v1.0-combined.pdf)
+[Read the report](https://bitwarden.com/assets/3EW7bMcth1sZEDpKseMk7l/d676d703b5a181d0590d69ed2b480ce0/Bitwarden_-_Security_Assessment_2024_-_Technical_Report_v1.0-combined.pdf)
 
 ### 2024 Bitwarden Marketing Website Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden marketing website by security firm Paragon Initiative Enterprises (PIE). 
 
-[Read the report.](https://bitwarden.com/assets/3alBclinYuMVZ9erf1tuhM/59d4a7a3e5f3268fa59747bd86f8cba7/2024_Bitwarden_Marketing_Website_Security_Report.pdf)
+[Read the report](https://bitwarden.com/assets/3alBclinYuMVZ9erf1tuhM/59d4a7a3e5f3268fa59747bd86f8cba7/2024_Bitwarden_Marketing_Website_Security_Report.pdf)
 
 ### 2024 Bitwarden Mobile App Security Assessment
 
 Bitwarden completed a dedicated audit of the Bitwarden mobile and mobile authenticator applications by security firm Mandiant. 
 
-[Read the report.](https://bitwarden.com/assets/5xEFYurTu7zhrlKg8dM9Wr/943d125e789b1c4eebc7b29ad6fb9b1a/2024_Bitwarden_Mobile_App_Security_Report.pdf)
+[Read the report](https://bitwarden.com/assets/5xEFYurTu7zhrlKg8dM9Wr/943d125e789b1c4eebc7b29ad6fb9b1a/2024_Bitwarden_Mobile_App_Security_Report.pdf)
 
 ### 2024 Web App and Network Security Assessment
 
@@ -82,43 +118,43 @@ Bitwarden completed a dedicated source code audit and penetration test of the we
 
 Bitwarden completed a dedicated source code audit and penetration test of the mobile apps and SDK by security firm Cure53.
 
-[Read the report.](https://bitwarden.com/assets/bEfNZ6r3BJ9ehwNfAqw6C/4020b6eb762e0b6051a40638f45269d9/2024_Bitwarden_Mobile_Apps_and_SDK_Report.pdf)
+[Read the report](https://bitwarden.com/assets/bEfNZ6r3BJ9ehwNfAqw6C/4020b6eb762e0b6051a40638f45269d9/2024_Bitwarden_Mobile_Apps_and_SDK_Report.pdf)
 
 ### 2023 Bitwarden Web App Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the web app by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/5AyZwIfhKkwuQjXGvJ2e3l/488c8a8466deead9c306d4df9db08cdc/2023_Bitwarden_Web_App_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/5AyZwIfhKkwuQjXGvJ2e3l/488c8a8466deead9c306d4df9db08cdc/2023_Bitwarden_Web_App_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Desktop App Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the desktop app by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/6m0rD5aBvmE7LtOGJrpYdP/199f548d2dd29fd120099cf0c64d5bd1/2023_Bitwarden_Electron_Desktop_App_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/6m0rD5aBvmE7LtOGJrpYdP/199f548d2dd29fd120099cf0c64d5bd1/2023_Bitwarden_Electron_Desktop_App_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Core App & Library Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the core application and library by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/3OA3ul8mM744GI2Ap0OhgW/564008ab586c81f76d1e5560be942bd9/2023_Bitwarden_Core_App___Library_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/3OA3ul8mM744GI2Ap0OhgW/564008ab586c81f76d1e5560be942bd9/2023_Bitwarden_Core_App___Library_Security_Assessment_Report.pdf)
 
 ### 2023 Bitwarden Browser Extension Security Assessment Report
 
 Bitwarden completed a dedicated source code audit and penetration test of the browser extension by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/4X0rKCkFkWcPg86PUV3cRn/7277e4651464e0a8efd21d9fcf83d296/2023_Bitwarden_Browser_Extension_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/4X0rKCkFkWcPg86PUV3cRn/7277e4651464e0a8efd21d9fcf83d296/2023_Bitwarden_Browser_Extension_Security_Assessment_Report.pdf)
 
 ### 2023 Network Security Assessment
 
 Bitwarden completed a network security assessment and penetration test by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/6E4JwsHCseBSHlTsXc8ecR/b39a63ebcd7f51683463c4e4d9838d37/bitwarden-2023-network-security-assessment-report.pdf).
+[Read the report](https://bitwarden.com/assets/6E4JwsHCseBSHlTsXc8ecR/b39a63ebcd7f51683463c4e4d9838d37/bitwarden-2023-network-security-assessment-report.pdf)
 
 ### 2022 Security Assessment
 
 Bitwarden completed a dedicated source code audit and penetration test by security firm Cure53. 
 
-[Read the report](https://bitwarden.com/assets/4eMmA16Zz9MACTHOexlxx0/05f3ed75c04f7d6e086479279d82c733/2022_Bitwarden_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/4eMmA16Zz9MACTHOexlxx0/05f3ed75c04f7d6e086479279d82c733/2022_Bitwarden_Security_Assessment_Report.pdf)
 
 ### SOC 2 Type 2 and SOC 3
 
@@ -128,31 +164,31 @@ Bitwarden has completed [SOC Type 2 and SOC 3 compliance](https://bitwarden.com/
 
 Bitwarden completed a network security assessment and penetration test by security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/2otFuNRCjJzAoZRsueaN89/cca35829e6dcc09edc246c5de99f6abd/2022_Bitwarden_Network_Security_Assessment_Report.pdf).
+[Read the report](https://bitwarden.com/assets/2otFuNRCjJzAoZRsueaN89/cca35829e6dcc09edc246c5de99f6abd/2022_Bitwarden_Network_Security_Assessment_Report.pdf)
 
 ### 2021 Network Security Assessment
 
 Bitwarden completed a thorough network security assessment and penetration test by auditing firm [Insight Risk Consulting](https://www.insightriskconsulting.com/).
 
-[Read the report.](https://bitwarden.com/assets/5UaSjdbvTgTTtzkBpXLLV/e39fc66998b82c4e512855aa291d9dd0/bitwarden-2021-network-security-assessment-report.pdf)
+[Read the report](https://bitwarden.com/assets/5UaSjdbvTgTTtzkBpXLLV/e39fc66998b82c4e512855aa291d9dd0/bitwarden-2021-network-security-assessment-report.pdf)
 
 ### 2021 Security Assessment
 
 Bitwarden completed a dedicated source code audit and penetration test by the security firm Cure53.
 
-[Read the report](https://bitwarden.com/assets/4G0yonTshy2ezRo1R7s6Yl/7ba5bdac721b2ad8d14117c1c6a36b37/2021-bitwarden-security-assessment-report.pdf).
+[Read the report](https://bitwarden.com/assets/4G0yonTshy2ezRo1R7s6Yl/7ba5bdac721b2ad8d14117c1c6a36b37/2021-bitwarden-security-assessment-report.pdf)
 
 ### 2020 Network Security Assessment
 
 Bitwarden completed a thorough security assessment and penetration test by auditing firm [Insight Risk Consulting](https://www.insightriskconsulting.com/). For more information, please see the blog post [Bitwarden 2020 Security Audit is Complete](https://bitwarden.com/blog/bitwarden-network-security-assessment-2020/).
 
-[Read the report](https://cdn.bitwarden.com/misc/Bitwarden%20Network%20Security%20Assessment%20Report%20-%202020.pdf).
+[Read the report](https://cdn.bitwarden.com/misc/Bitwarden%20Network%20Security%20Assessment%20Report%20-%202020.pdf)
 
 ### 2018 Security Assessment
 
 Bitwarden completed a thorough security audit and cryptographic analysis by security firm [Cure53](https://cure53.de/). For more information, please see the blog post [Bitwarden Completes Third-party Security Audit](https://bitwarden.com/blog/third-party-security-audit/).
 
-[Read the report](https://cdn.bitwarden.net/misc/Bitwarden%20Security%20Assessment%20Report.pdf).
+[Read the report](https://cdn.bitwarden.net/misc/Bitwarden%20Security%20Assessment%20Report.pdf)
 
 ## Open source codebase
 

@@ -108,9 +108,9 @@ The **Account recovery administration** policy is required for your organization
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
-### Require single sign-on authentication
+### Require single sign-on (SSO)
 
-Turn on the **Require single sign-on authentication** policy to require non-owner/non-admin users to log in with SSO. This policy is not enforced for owners and admins, however if you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). 
+Turn on the **Require single sign-on (SSO)** policy to require non-owner/non-admin users to log in with SSO. This policy is not enforced for owners and admins, however if you're self-hosting, you can enforce this policy for owners and admins using [an environment variable](https://bitwarden.com/help/environment-variables/). For more information, see [Using Login with SSO](https://bitwarden.com/help/using-sso/). 
 
 Members of organizations using this policy will not be able to [log in with passkeys](https://bitwarden.com/help/login-with-passkeys/).
 
@@ -231,9 +231,9 @@ Turn on the **Automatic login with SSO** policy to allow login forms to be fille
 > [!NOTE] Automatically login users browser extension
 > Automatic login with SSO will autofill data based on the users current active account on the Bitwarden browser extension. Additionally, the data autofilled will be the most recent credential that user used associated with the target application's URL.
 
-### Activate autofill
+### Enable autofill on page load
 
-Turn on the **Activate autofill**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
+Turn on the **Enable autofill on page load**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
 
 ### Remove card item type
 
@@ -243,7 +243,7 @@ Users who are members of multiple organizations will still be able to use cards 
 
 Existing cards will be automatically hidden, however the data will not be deleted and cards will re-appear should administrators disable the policy. 
 
-### Remove Free Bitwarden Families sponsorship
+### Remove sponsored Families plan
 
 Turn on the **Remove sponsored Families plan** policy to prevent members of your organization from having the option to [redeem a free Families plan](https://bitwarden.com/help/families-for-enterprise/) through your organization.
 
