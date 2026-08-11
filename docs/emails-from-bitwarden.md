@@ -29,7 +29,7 @@ Some of these emails, such as organization invites, will contain buttons. Always
 
 ### Payments emails
 
-Automated payments emails for individual premium and paid organizations subscriptions will come from an `invoice+statements@bitwarden.com` address. These emails **will contain**attachments, specifically PDF invoices and receipts. If a payment ever fails, a notification email will come from a `failed-payments@bitwarden.com` address.
+Automated payments emails for individual premium and paid organizations subscriptions will come from an `invoice+statements@bitwarden.com` address. These emails **will contain**attachments, specifically PDF invoices and receipts. If a payment ever fails, a notification email will come from a `failed-payments@bitwarden.com` address. Alerts that your payment method may be expiring will come from a `card-expiring@bitwarden.com` address.
 
 ### Renewals emails
 

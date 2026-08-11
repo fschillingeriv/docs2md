@@ -9417,7 +9417,7 @@ This article describes how to format` .csv` and `.json` files for importing into
 > - Re-create [Sends](https://bitwarden.com/help/about-send/) in the new vault.
 
 > [!NOTE] import files case sensitive
-> Field names are case-sensitive in both `.csv` and `.json` import files. For example, `Login_Username` will **not** be recognized the same as `login_username`, and will result in an import error. Match the casing shown in the examples on this page exactly.
+> Headers and field names are case-sensitive in `.csv` and `.json` import files, respectively. For example, `Login_Username` will **not** be recognized the same as `login_username`, and will result in an import error. Match the casing shown in the examples on this page exactly.
 
 ## Condition a .csv
 
@@ -15521,7 +15521,7 @@ Some of these emails, such as organization invites, will contain buttons. Always
 
 ### Payments emails
 
-Automated payments emails for individual premium and paid organizations subscriptions will come from an `invoice+statements@bitwarden.com` address. These emails **will contain**attachments, specifically PDF invoices and receipts. If a payment ever fails, a notification email will come from a `failed-payments@bitwarden.com` address.
+Automated payments emails for individual premium and paid organizations subscriptions will come from an `invoice+statements@bitwarden.com` address. These emails **will contain**attachments, specifically PDF invoices and receipts. If a payment ever fails, a notification email will come from a `failed-payments@bitwarden.com` address. Alerts that your payment method may be expiring will come from a `card-expiring@bitwarden.com` address.
 
 ### Renewals emails
 
@@ -16334,7 +16334,7 @@ The following variables do not already exist in `global.override.env`, and can b
 
 Bitwarden clients without access to a shared cookie store (such as the Desktop and Mobile clients) cannot communicate with a self-hosted server utilizing a load balancer that requires authentication. To launch an SSO session whose cookie will be copied into the Bitwarden client cookie store, add the following variables to the `global.override.env` file:
 
-| Variable | Descrition |
+| Variable | Description |
 |------|------|
 | `globalSettings__communication__bootstrap=` | To enable this feature, set to `ssoCookieVendor`. |
 | `globalSettings__communication__ssoCookieVendor__cookieName=` | The name of the SSO cookie set by the identity provider (for example, `sso_token`). |
@@ -20593,6 +20593,9 @@ As a personal user of Keeper, you would typically:
 2. Enter your Keeper **Master Password**.
 
 ### SSO
+
+> [!NOTE] Only supported for Keeper SSO Connect.
+> Please note, if you're a member or administrator of a team **using SSO with Keeper,** that only Keeper SSO Connect Cloud is supported for authentication when using the direct import method.
 
 As part of a team using Keeper for work, you would typically:
 

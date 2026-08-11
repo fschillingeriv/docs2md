@@ -45,6 +45,9 @@ As a personal user of Keeper, you would typically:
 
 ### SSO
 
+> [!NOTE] Only supported for Keeper SSO Connect.
+> Please note, if you're a member or administrator of a team **using SSO with Keeper,** that only Keeper SSO Connect Cloud is supported for authentication when using the direct import method.
+
 As part of a team using Keeper for work, you would typically:
 
 1. Automatically launch, on selecting **Import**, a browser window in which to complete SSO authentication.

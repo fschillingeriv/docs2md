@@ -16,7 +16,7 @@ This article describes how to format` .csv` and `.json` files for importing into
 > - Re-create [Sends](https://bitwarden.com/help/about-send/) in the new vault.
 
 > [!NOTE] import files case sensitive
-> Field names are case-sensitive in both `.csv` and `.json` import files. For example, `Login_Username` will **not** be recognized the same as `login_username`, and will result in an import error. Match the casing shown in the examples on this page exactly.
+> Headers and field names are case-sensitive in `.csv` and `.json` import files, respectively. For example, `Login_Username` will **not** be recognized the same as `login_username`, and will result in an import error. Match the casing shown in the examples on this page exactly.
 
 ## Condition a .csv
 

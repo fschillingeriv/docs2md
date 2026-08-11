@@ -59,7 +59,7 @@ The following variables do not already exist in `global.override.env`, and can b
 
 Bitwarden clients without access to a shared cookie store (such as the Desktop and Mobile clients) cannot communicate with a self-hosted server utilizing a load balancer that requires authentication. To launch an SSO session whose cookie will be copied into the Bitwarden client cookie store, add the following variables to the `global.override.env` file:
 
-| Variable | Descrition |
+| Variable | Description |
 |------|------|
 | `globalSettings__communication__bootstrap=` | To enable this feature, set to `ssoCookieVendor`. |
 | `globalSettings__communication__ssoCookieVendor__cookieName=` | The name of the SSO cookie set by the identity provider (for example, `sso_token`). |
