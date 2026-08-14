@@ -40,7 +40,6 @@ nano /opt/bitwarden/bwdata/kerberos/krb5.conf
 ```
 
 [Here](https://bitwarden.com/assets/dfAMaYL2JmdC3j0i4ZTPO/fb2d9ea30a617fb6384f9810edfad1b0/krb5_example.conf) is an example file.
-[Here](https://bitwarden.com/assets/6TdaNaNKfcxcmIc0PfBipR/e069e9fae42f3b2582508d2af3c80a43/krb5_test_example.conf) is example TEST file.
 
 Check that these values match your own and that the `kdc` and `admin_server` are accessible from the Bitwarden server.
 

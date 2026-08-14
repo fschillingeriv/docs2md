@@ -23,6 +23,7 @@ Basic search is the default search mode in every Bitwarden app. Entering search 
 
 - For any item, its **name**
 - For any item, its **ID**
+- For any item, the contents of its **Notes** field
 - For login items, **username**
 - For login items, its **URI**
 

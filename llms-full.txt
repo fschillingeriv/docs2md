@@ -23766,7 +23766,6 @@ nano /opt/bitwarden/bwdata/kerberos/krb5.conf
 ```
 
 [Here](https://bitwarden.com/assets/dfAMaYL2JmdC3j0i4ZTPO/fb2d9ea30a617fb6384f9810edfad1b0/krb5_example.conf) is an example file.
-[Here](https://bitwarden.com/assets/6TdaNaNKfcxcmIc0PfBipR/e069e9fae42f3b2582508d2af3c80a43/krb5_test_example.conf) is example TEST file.
 
 Check that these values match your own and that the `kdc` and `admin_server` are accessible from the Bitwarden server.
 
@@ -24300,9 +24299,9 @@ URL: https://bitwarden.com/help/licensing-on-premise/
 ---
 # License Organizations or Premium
 
-Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. A license file can be obtained from the Bitwarden-hosted web app by either an account with a premium individual subscription or by the owner of an organization.
+Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. To retrieve a license file, you must have an active subscription to Bitwarden cloud. Once subscribed, **download your license file**from the cloud web app and apply it to your self-hosted server using the steps below. 
 
-The steps are different when working with an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) versus an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
+[Embedded content]The steps are different when working with an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) versus an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
 
 > [!NOTE] licensing paid features 
 > The procedures in this article assume that you have already started a paid subscription to Bitwarden. If you haven't, refer to [About Bitwarden Plans](https://bitwarden.com/help/password-manager-plans/) and [What Plan is Right for Me?](https://bitwarden.com/help/what-plan-is-right-for-me/)
@@ -24344,12 +24343,15 @@ Follow these procedures when working with an organization license for a Families
 
 Before starting an organization on your self-hosted server, retrieve your organization license from the cloud web app.
 
-1. In the Bitwarden web app, open the Admin Console using the product switcher:
+1. In the Bitwarden web app, open the Admin Console and navigate to **Billing** → **Subscription**.
+2. Scroll down and select the **Download license** button:
 
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-2. Navigate to **Billing** → **Subscription**.
-3. Scroll down and select the **Download license** button.
-4. When prompted, enter the installation ID that was used to install your self-hosted server and select **Submit**. If you don't know the installation ID off-hand, you can retrieve it from `./bwdata/env/global.override.env`.
+![Download license file](https://bitwarden.com/assets/Z05L50lttybQXsvvJeRUM/ec32e7a9764236ac2bbc905ace3b06e0/2026-08-12_09-50-56.png)
+*Download license file*
+3. When prompted, enter the installation ID that was used to install your self-hosted server and select **Submit**. If you don't know the installation ID off-hand, you can retrieve it from `./bwdata/env/global.override.env`:
+
+![Enter installation id](https://bitwarden.com/assets/4gdn7JP4azfjxu6SfLnuz/eb5339148e682322a30fb7a2e3f6be41/2026-08-12_10-32-09.png)
+*Enter installation id*
 
 > [!NOTE] Installation ID & Region
 > Make sure that the installation ID you retrieved from [bitwarden.com/host](https://bitwarden.com/host/) uses the same [data region](https://bitwarden.com/help/server-geographies/) as where your organization exists.
@@ -24359,7 +24361,10 @@ Before starting an organization on your self-hosted server, retrieve your organi
 Applying your license in a self-hosted server is the means by which you'll create a self-hosted organization. From your self-hosted web vault:
 
 1. Start a new organization by selecting the + **Add organization** button.
-2. Select the **Browse...** or **Choose file** button, add the downloaded license file, and select **Submit**.
+2. Select the **Browse...** or **Choose file** button, add the downloaded license file, and select **Submit**:
+
+![Upload license file](https://bitwarden.com/assets/71secpyKlXjFtxFy9eT7fh/53945aec665a7ab734c62aad5bcd2949/2026-08-12_10-14-31.png)
+*Upload license file*
 
 > [!NOTE] organization license error
 > If you receive a `version not supported` error message, update your server and try uploading your license file again. To update your server, make a backup of the `bwdata` directory and follow [these instructions](https://bitwarden.com/help/updating-on-premise/).
@@ -24369,7 +24374,7 @@ Applying your license in a self-hosted server is the means by which you'll creat
 Organizations will need to update the license file used by their self-hosted server in several different scenarios, for example:
 
 - To **add user seats** to a self-hosted organization. Self-hosted organizations' seat count is dictated by the license, so to add seats they must first be added to the associated cloud organization and then the license used by your self-hosted organization must be updated.
-- To continue operation of the self-hosted organization **w****hen the license renews**. You have 60 days, from the date of renewal, to update the license file to you self-hosted server before your self-hosted [organization is disabled](https://bitwarden.com/help/organization-renewal/).
+- To continue operation of the self-hosted organization **when the license renews**. You have 60 days, from the date of renewal, to update the license file to you self-hosted server before your self-hosted [organization is disabled](https://bitwarden.com/help/organization-renewal/).
 
 There are two methods for updating a self-hosted organization's license, however **Families organizations may only update manually**:
 
@@ -35310,6 +35315,7 @@ Basic search is the default search mode in every Bitwarden app. Entering search 
 
 - For any item, its **name**
 - For any item, its **ID**
+- For any item, the contents of its **Notes** field
 - For login items, **username**
 - For login items, its **URI**
 
