@@ -10380,7 +10380,6 @@ Choose a role or product below to get started. Need more detail? Browse the [ful
 ### Beyond password management
 
 - [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager)
-- [Passwordless.dev](https://bitwarden.com/help/courses/passwordless-dev)
 ---
 URL: https://bitwarden.com/help/courses/bitwarden-for-business-admins/
 ---
@@ -11144,13 +11143,13 @@ Log in to your favorite websites instantly with the inline autofill menu appeari
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
-### Fill button (1 min)
+### Click to autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
 *[Watch on Vimeo](https://vimeo.com/1141142837)*
 
 **Video Chapters:**
-Open the browser extension and click the fill button next to any login to autofill instantly.
+Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
@@ -11909,13 +11908,13 @@ Log in to your favorite websites instantly with the inline autofill menu appeari
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
-### Fill button (1 min)
+### Click to autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
 *[Watch on Vimeo](https://vimeo.com/1141142837)*
 
 **Video Chapters:**
-Open the browser extension and click the fill button next to any login to autofill instantly.
+Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
@@ -12228,13 +12227,13 @@ Log in to your favorite websites instantly with the inline autofill menu appeari
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
-### Fill button (1 min)
+### Click to autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
 *[Watch on Vimeo](https://vimeo.com/1141142837)*
 
 **Video Chapters:**
-Open the browser extension and click the fill button next to any login to autofill instantly.
+Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
@@ -12697,13 +12696,13 @@ Log in to your favorite websites instantly with the inline autofill menu appeari
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
-### Fill button (1 min)
+### Click to autofill (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
 *[Watch on Vimeo](https://vimeo.com/1141142837)*
 
 **Video Chapters:**
-Open the browser extension and click the fill button next to any login to autofill instantly.
+Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.

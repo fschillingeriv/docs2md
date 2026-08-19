@@ -17,4 +17,3 @@ Choose a role or product below to get started. Need more detail? Browse the [ful
 ### Beyond password management
 
 - [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager)
-- [Passwordless.dev](https://bitwarden.com/help/courses/passwordless-dev)
