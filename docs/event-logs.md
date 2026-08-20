@@ -118,6 +118,8 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Automatically confirmed user `user-identifier`. (`1517`)
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
+- Clicked vault banner button (`1522`)
+- Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -147,7 +149,6 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
-- Clicked vault banner button (`2004`)
 
 ### Secrets Manager events
 

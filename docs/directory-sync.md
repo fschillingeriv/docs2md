@@ -66,9 +66,13 @@ Directory Connector supports sync from the following sources:
 ### Changing email addresses 
 
 > [!NOTE] Who can change email addresses in organizations.
-> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
+> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
 > 
-> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
+> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
+> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
+> 
+> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 Members provisioned using Directory Connector are able to change their account email address in Bitwarden and in the source directory, however in order to do so:
 
