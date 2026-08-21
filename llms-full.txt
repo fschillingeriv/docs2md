@@ -152,7 +152,7 @@ Users who log in for the first time to a Key Connector enabled organizations wil
 | Admin password reset | When Key Connector is being used, [admin password reset](https://bitwarden.com/help/admin-reset/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
 | Revoking access | Members who do not have master passwords will be fully locked out of their account if they are [revoked](https://bitwarden.com/help/revoke-users/). |
 | Emergency access | When Key Connector is being used, the emergency access [account takeover option](https://bitwarden.com/help/emergency-access/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. Trusted emergency contacts may still **View**a grantor's individual vault data, subject to the established [emergency access workflow](https://bitwarden.com/help/request-and-grant-emergency-access/). |
-| Change email | When Key Connector is being used, members cannot change their vault email address. If it's a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
+| Change email | When Key Connector is being used, a user's vault email address cannot be changed. |
 
 ## How do I start using Key Connector?
 
@@ -355,23 +355,19 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 
 ### Member email address
 
-Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP. To do so, they must:
+> [!NOTE] Who can change email addresses in organizations.
+> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
+> 
+> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
 
-1. Change the email address in Bitwarden by going to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
+Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP, however in order to do so they must:
+
+1. First change the email address in Bitwarden by navigating to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
 2. Once the email has been changed in Bitwarden, update the user value on the IdP or AD client. This could be the `externalid` or a corresponding value, depending on the organization's choice of IdP.
 3. Re-sync the IdP or AD client to implement the changes.
 
 > [!NOTE] Changing the Bitwarden email in SCIM org
 > If the user email address is updated and synced on the IdP or AD prior to updating the Bitwarden email, the updated email will be interpreted as a new user.
-
-> [!NOTE] Who can change email addresses in organizations.
-> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
-> 
-> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
-> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
-> 
-> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 ### Member display name
 
@@ -755,7 +751,7 @@ Depending on whether a master password hash is available in memory for your clie
 | Verification | There are a number of features in Bitwarden client applications that ordinarily require entry of a master password in order to be used, including [exporting](https://bitwarden.com/help/export-your-data/) vault data, changing [two-step login settings](https://bitwarden.com/help/setup-two-step-login/), retrieving [API keys](https://bitwarden.com/help/personal-api-key/), and more. If the user doesn't use a master password to access the client, **all these features**will replace master password confirmation with email-based TOTP verification. |
 | Vault lock/unlock | Under ordinary circumstances, a [locked vault can be unlocked](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) using a master password. If the user doesn't use a master password to access the client, locked client applications can only be unlocked with a [PIN](https://bitwarden.com/help/unlock-with-pin/) or with [biometrics](https://bitwarden.com/help/biometrics/). If neither PIN nor biometrics are enabled for a client application, the vault will always log out instead of lock. Unlocking and logging in will **always**require an internet connection. |
 | Master password re-prompt | If the user does not unlock their vault with a master password, [master password re-prompt](https://bitwarden.com/help/managing-items/#protect-individual-items/) will be disabled. |
-| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. If they do not have a master password and have a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
+| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. |
 | CLI | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to access Password Manager CLI. |
 ---
 URL: https://bitwarden.com/help/access-intelligence-email-templates/
@@ -7688,48 +7684,6 @@ bw config server --events <url>
 bw config server --key-connector <url>
 ```
 ---
-URL: https://bitwarden.com/help/change-members-account-email-and-name/
----
-# Change Members’ Account Email & Name
-
-On the Enterprise plan, organizations can update an eligible member's account email address and name directly from the Admin Console. This lets administrators keep member records accurate after changes like a legal name update, saving time and preserving the member's existing vault access.
-
-This option is available only for claimed accounts using Key Connector with SSO or trusted devices with SSO instead of a master password. While accounts with a master password are not eligible for this option, those members can [update their own master password](https://bitwarden.com/help/master-password/#change-master-password/).
-
-## Requirements
-
-An [owner, admin](https://bitwarden.com/help/user-types-access-control/#default-roles/), or custom user with [Manage users permission](https://bitwarden.com/help/user-types-access-control/#custom-roles/) can update a member’s account email address and name. 
-
-To be eligible for administrator updates, the member's account must meet two requirements:
-
-- It must be a [claimed account](https://bitwarden.com/help/claimed-accounts/), part of a [claimed domain](https://bitwarden.com/help/claimed-domains/).
-- The account cannot have a master password. This means your organization must use [Key Connector](https://bitwarden.com/help/about-key-connector/) or [trusted devices](https://bitwarden.com/help/about-trusted-devices/), and the specific member did not set up or keep a master password. For example, members who joined before trusted devices were configured may still have a master password. In these cases, their account is not eligible for email changes by an administrator.
-
-> [!NOTE] Update name only if MP present
-> If the member has a master password, you can still update the name. You will not, however, be able to update the account email.
-
-## Change a member’s email and name
-
-To change an [eligible member’s](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name#requirements/) account email address or name:
-
-1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. In the Admin Console, select **Members**.
-3. Select the member that you want to update. A pop-up window will appear.
-4. Depending on what needs updating:
-
- - Enter the new **Name**.
- - Enter the new **Email**. The email must use a domain claimed by your organization.
-5. Select **Save**.
-
-After your changes are saved:
-
-- The member's active sessions remain logged in.
-- An [event log](https://bitwarden.com/help/event-logs/#organization-events/) records who edited the member. If the email was changed, a second event log records who made that update.
-- If you updated the email, Bitwarden sends a message to the member's original email address. The message states that an administrator changed their account email and includes the new address. This message does not mention name changes, and Bitwarden sends no message if you update only the name.
----
 URL: https://bitwarden.com/help/change-theme/
 ---
 # Change App Appearance
@@ -7932,10 +7886,6 @@ Onboarded organization member accounts that use an email address with a matching
 
 > [!NOTE] Clarifying claimed member prereqs
 > A user must have a matching domain **and** be a [confirmed member](https://bitwarden.com/help/managing-users/#confirm/) of your Bitwarden organization to be considered a claimed account. Claiming a domain **does not** automatically invite any users and therefore will not in and of itself add to your subscription seat count.
-
-#### Org-managed account email and name updates
-
-Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector.
 
 #### Org-managed account deletion
 
@@ -15274,13 +15224,9 @@ Directory Connector supports sync from the following sources:
 ### Changing email addresses 
 
 > [!NOTE] Who can change email addresses in organizations.
-> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
+> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
 > 
-> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
-> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
-> 
-> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
+> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
 
 Members provisioned using Directory Connector are able to change their account email address in Bitwarden and in the source directory, however in order to do so:
 
@@ -16528,8 +16474,6 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Automatically confirmed user `user-identifier`. (`1517`)
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
-- Clicked vault banner button (`1522`)
-- Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -16559,6 +16503,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
+- Clicked vault banner button (`2004`)
 
 ### Secrets Manager events
 
@@ -17215,16 +17160,13 @@ URL: https://bitwarden.com/help/fill-assist/
 ---
 # Fill Assist
 
-Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension and mobile app can use to determine how to autofill credentials.
+Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension can use to determine how to autofill credentials.
 
 Often, websites cause autofill issues because they deviate from a widely-adopted set of norms found in the code for login or account creation forms. Fill assist solves this problem by allowing Bitwarden to identify sites that behave differently and create custom instructions for how browser extensions should autofill on those sites.
 
 ## Turn on fill assist
 
-Fill assist can be turned on:
-
-- For Bitwarden browser extensions, from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later.
-- For Bitwarden mobile apps, from the **Settings** → **Autofill**menu and is available for all users on version 2026.8.0 or later.
+Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
 
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
@@ -17236,13 +17178,13 @@ Because fill assist is one method for facilitating easier autofill, [custom fiel
 Powered by the [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
 
 - **Supported sites**: Fill assist only steps in when the site you're browsing is included in the maps; typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
-- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs Bitwarden to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
+- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
 - **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
 
-Those maps are retrieved by your client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
+Those maps are retrieved by your browser extension client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
 
-- **Data privacy**: Once retrieved, your client stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
-- **Independent of client release**: Because the client recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
+- **Data privacy**: Once retrieved, your browser extension stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
+- **Independent of client release**: Because the browser extension recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
 
 ### Report an issue
 
@@ -17880,53 +17822,6 @@ Select this type to generate a random word for your username. Options for random
 
 - **Capitalize**: Capitalize your username.
 - **Include Number**: Include a 4-digit number in your username.
----
-URL: https://bitwarden.com/help/generic-hec-integration/
----
-# Generic HEC Integration
-
-Bitwarden provides comprehensive event logging capabilities for security information and event management (SIEM) solutions, enabling organizations to monitor credential management events alongside other activities. In addition to official integrations for popular SIEM solutions, the generic HEC integration works with any HTTP ingestion compatible SIEM platform. This article provides guidance for integrating Bitwarden with HEC solutions, similar to platforms such as Huntress, and Splunk.
-
-## Requirements
-
-To setup HTTP ingestion, you must:
-
-- Have a Bitwarden Teams or Enterprise organization.
-- Have an account with an HTTP ingestion-compliant platform set up.
-- Have administrative access to Bitwarden and your chosen event log monitoring platform.
-
-## Setup
-
-Integrating Bitwarden with HTTP ingestion will require setup procedures in both platforms. 
-
-### Set up HEC in your SIEM platform
-
-Before connecting from the Bitwarden app, generate the credentials that Bitwarden will use to send events to your SIEM monitoring platform. Review your chosen platform's documentation to locate the **HTTP Event Collector URL** and **HTTP Event Collector Token**.
-
-### Connect from Bitwarden
-
-Once you have your **HTTP Event Collector URL** and **HTTP Event Collector Token**, provide that information in your Bitwarden organization to complete setup:
-
-1. Log in to the Bitwarden web app and open the **Admin Console**.
-2. In the Admin Console, go to **Integrations → Event management**.
-3. Find the **Generic HEC** card and select **Connect**. The following table describes these credential values:
-
-![Generic HEC connection](https://bitwarden.com/assets/4u1j0QHvTP0ffQr4xe8tw3/ab6fdac6e2fcd069bc78b803252174e9/HEC-card.png)
-*Generic HEC connection*
-4. Enter your **HTTP Event Collector URL** and **HTTP Event Collector Token**.
-
-![Set up HEC](https://bitwarden.com/assets/D3QjBI9mp9H5YFQzctIx6/418d0ec7622d4fef644bdd056730c60c/2026-07-28_08-31-53.png)
-*Set up HEC*
-
-| Field | Description |
-|------|------|
-| **HTTP Event Collector URL** | The endpoint URL provided by your SIEM or logging platform for receiving event data over HTTP, including the port if required (for example, `https://<your-hec-endpoint>/services/collector`). |
-| **HTTP Event Collector Token** | The authentication token or API key generated by your SIEM or logging platform for this integration. Bitwarden includes this token with each request to authorize the connection. |
-
-## Additional resources
-
-- Learn more about what [events are surfaced](https://bitwarden.com/help/event-logs/) by Bitwarden.
-- Learn about Non-native [SIEM integrations](https://bitwarden.com/help/non-native-siem/).
 ---
 URL: https://bitwarden.com/help/get-to-know-password-manager/
 ---
@@ -19767,10 +19662,6 @@ Individual vaults can be purged from the **Settings** → **My account** page. O
 - Codebook (csv)
 - [Dashlane (json)](https://bitwarden.com/help/import-from-dashlane/)
 - [Dashlane (csv)](https://bitwarden.com/help/import-from-dashlane/)
-- Delinea (csv and xml)
-
-> [!NOTE] How Delinea import works
-> When importing secrets from Delinea Secret Server, any item with a URL associated with it will automatically take the Login item type. All other imported data will take the Secure Note type with custom fields to accommodate your data.
 - Edge (csv)
 - Encryptr (csv)
 - Enpass (csv)
@@ -25781,15 +25672,16 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Select the items you wish to archive, then slect **Archive** on the action bar:
+1. Open the item you want to archive and select the **Archive** button:
 
-![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
-*Archive with the desktop app*
+![Archive vault item on desktop](https://bitwarden.com/assets/18fRqQqTtf91GtXuuGZN2B/afe417683249b06802fa03d2e5dbadd8/archive_desktop_old.png)
+
+[Embedded content]
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive**.
 
 ### CLI
 
@@ -25807,11 +25699,6 @@ Select the ⋮ options menu for the item and select 🗑️ **Delete**:
 
 ![Item options](https://bitwarden.com/assets/3OYHvfRCDy3OphkbEHIJEA/fa47beb671d6efc34a18d05daf630aff/webappnewtest3.png)
 *Item options*
-
-Delete multiple items using the action bar:
-
-![Delete multiple items](https://bitwarden.com/assets/7zvvNDdxoagjN3OIfutrxo/26c74435273fdcb156ec617830128c04/delete_bulk.png)
-*Delete multiple items*
 
 ### Browser extension
 
@@ -25833,11 +25720,6 @@ Select an item to open it and select the 🗑️ Delete icon:
 
 ![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/2ec594025ea37103c9cf0de93c41e9aa/2026-04-23_10-02-08-2.png)
 *Delete an item*
-
-Delete multiple items using the action bar:
-
-![Delete multiple items on desktop](https://bitwarden.com/assets/5OBKzVV9IS7fuym9g5gchb/cdc55f2efe045a9ab6f7fac939f813a6/bulk_delete_desktop.png)
-*Delete multiple items on desktop*
 
 ### CLI
 
@@ -28114,11 +27996,9 @@ Once Alice is removed from your organization:
 
 #### Claimed member accounts
 
-When you claim a domain, any organization member accounts that have email addresses with a matching domain (e.g. `jdoe@mycompany.com`) will also be claimed by your organization. Claimed member accounts are functionally owned by the organization, meaning organization administrators can outright delete the account, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
+When you claim a domain, any organization member accounts that have email addresses with a matching domain (e.g. `jdoe@mycompany.com`) will also be claimed by your organization. Claimed member accounts are functionality owned by the organization, meaning they can be outright deleted by organization administrators, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
 
 ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
-
-If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
 
 #### Administrative take-over
 
@@ -30367,8 +30247,6 @@ Bitwarden will email a verification code to the specified email address. Check y
 
 When you change your email address, you should immediately logout of all Bitwarden apps you use, and log back in with the new credentials. Sessions using a "stale" email address will eventually be logged out.
 
-If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
-
 ### Q: What features are unlocked when I verify my email?
 
 **A**: When you verify your email address, you'll unlock the ability to [create file Sends](https://bitwarden.com/help/create-send/) (provided you also have access to premium features).
@@ -31474,30 +31352,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
-
-## 2026.8.0
-
-(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.0, Browser Extension 2026.8.0, Desktop 2026.8.0, Mobile 2026.8.0, and CLI 2026.8.0.) 
-
-#### Password Manager
-
-- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
-- ⭐ **Fill assist for mobile apps**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
-- **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
-- **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
-
-> [!NOTE] How Delinea import works
-> When importing secrets from Delinea Secret Server, any item with a URL associated with it will automatically take the Login item type. All other imported data will take the Secure Note type with custom fields to accommodate your data.
-
-#### Admin Console
-
-- ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
-- **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/generic-hec-integration/).
-- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
-
-#### Self-host
-
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version 2.0.0 or earlier may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 
@@ -41966,7 +41820,7 @@ There are two ways to assign a member role in the Admin Console:
 - When [inviting a new member](https://bitwarden.com/help/managing-users/#invite/), select a **Member role**.
 - To change an existing member's role, go to **Members** and select the person's name. Choose a **Member role** from the options that appear:
 
-![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a4717139f8f49936768ec7f4a5efc595/Edit_member_role.png)
+![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a96f23b972fc9e954ac4860d3fb044d6/Edit_member_role.png)
 *Edit member role*
 
 ## Default roles

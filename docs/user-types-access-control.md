@@ -13,7 +13,7 @@ There are two ways to assign a member role in the Admin Console:
 - When [inviting a new member](https://bitwarden.com/help/managing-users/#invite/), select a **Member role**.
 - To change an existing member's role, go to **Members** and select the person's name. Choose a **Member role** from the options that appear:
 
-![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a4717139f8f49936768ec7f4a5efc595/Edit_member_role.png)
+![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a96f23b972fc9e954ac4860d3fb044d6/Edit_member_role.png)
 *Edit member role*
 
 ## Default roles

@@ -92,23 +92,19 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 
 ### Member email address
 
-Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP. To do so, they must:
+> [!NOTE] Who can change email addresses in organizations.
+> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
+> 
+> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
 
-1. Change the email address in Bitwarden by going to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
+Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP, however in order to do so they must:
+
+1. First change the email address in Bitwarden by navigating to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
 2. Once the email has been changed in Bitwarden, update the user value on the IdP or AD client. This could be the `externalid` or a corresponding value, depending on the organization's choice of IdP.
 3. Re-sync the IdP or AD client to implement the changes.
 
 > [!NOTE] Changing the Bitwarden email in SCIM org
 > If the user email address is updated and synced on the IdP or AD prior to updating the Bitwarden email, the updated email will be interpreted as a new user.
-
-> [!NOTE] Who can change email addresses in organizations.
-> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
-> 
-> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
-> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
-> 
-> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 ### Member display name
 

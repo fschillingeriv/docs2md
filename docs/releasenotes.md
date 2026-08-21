@@ -43,30 +43,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
-## 2026.8.0
-
-(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.0, Browser Extension 2026.8.0, Desktop 2026.8.0, Mobile 2026.8.0, and CLI 2026.8.0.) 
-
-#### Password Manager
-
-- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
-- ⭐ **Fill assist for mobile apps**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
-- **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
-- **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
-
-> [!NOTE] How Delinea import works
-> When importing secrets from Delinea Secret Server, any item with a URL associated with it will automatically take the Login item type. All other imported data will take the Secure Note type with custom fields to accommodate your data.
-
-#### Admin Console
-
-- ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
-- **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/generic-hec-integration/).
-- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
-
-#### Self-host
-
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version 2.0.0 or earlier may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
-
 ## 2026.7.2
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.7.1, and Mobile 2026.7.1)
