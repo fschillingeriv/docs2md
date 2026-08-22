@@ -20,7 +20,7 @@ Once in the client's Admin Console you can fully administer the client organizat
 
 | **Task** | **Description** | **Resources** |
 |------|------|------|
-| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
+| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-members/) |
 | Change user permissions | When end-users change roles, change their permissions as appropriate. | [User types and access control](https://bitwarden.com/help/user-types-access-control/) |
 | Add and remove user seats | As the customers' business grows, manage the number of user seats for the client organization. | [Manage user seats](https://bitwarden.com/help/provider-billing/) |
 | Reset users' master passwords | If enabled, use Account Recovery reset to recover end-user accounts if they forget their master password. | [Account Recovery](https://bitwarden.com/help/account-recovery/) |

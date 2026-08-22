@@ -37,9 +37,12 @@ Cryptocurrency, such as Bitcoin, is accepted. You need to purchase [account cred
 
 Account credit lets you pay for your Bitwarden upgrade or subscription in advance. Purchase credits in your local currency through PayPal or cryptocurrency through BitPay. If you want to pay via account credit, make sure you purchase the account credits **before** upgrading or your renewal date. We'll deduct the upgrade or renewal cost from your account credit balance.
 
-To add credit to your account:
+To add account credit:
 
-1. Go to **Settings → Billing**.
+1. Depending on your subscription type:
+
+ - For Premium subscriptions, go to **Settings → Subscription**. Select the **Payment details** tab.
+ - For organization subscriptions, open the Admin console and go to **Billing → Payment details**.
 2. Select **Add credit**.
 3. Enter the total in USD that you'd like to purchase.
 4. Select **Submit**.

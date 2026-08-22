@@ -87,6 +87,10 @@ Onboarded organization member accounts that use an email address with a matching
 > [!NOTE] Clarifying claimed member prereqs
 > A user must have a matching domain **and** be a [confirmed member](https://bitwarden.com/help/managing-users/#confirm/) of your Bitwarden organization to be considered a claimed account. Claiming a domain **does not** automatically invite any users and therefore will not in and of itself add to your subscription seat count.
 
+#### Org-managed account email and name updates
+
+Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector.
+
 #### Org-managed account deletion
 
 Claimed member accounts can be outright deleted by organization administrators, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:

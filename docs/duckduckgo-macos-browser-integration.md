@@ -2,7 +2,7 @@
 URL: https://bitwarden.com/help/duckduckgo-macos-browser-integration/
 ---
 
-# DuckDuckGo macOS Browser Integration
+# Bitwarden for DuckDuckGo macOS Browser
 
 > [!TIP] Use DDG download, not app store
 > In order to use the DuckDuckGo macOS app integration with Bitwarden, you'll need to download the DuckDuckGo macOS browser from [https://duckduckgo.com/mac](https://duckduckgo.com/mac) instead of from the macOS App Store.
@@ -17,15 +17,14 @@ The integration requires the Bitwarden [desktop app](https://bitwarden.com/help/
 
 To set up the integration between the DuckDuckGo macOS browser and Bitwarden:
 
-1. Open DuckDuckGo's **Settings**screen and select **Passwords & Autofill**from the menu.
-2. In the Password Manager section, select **Bitwarden**. A wizard will help you through integration setup, but we'll outline the remaining steps here as well.
-3. Install the Bitwarden desktop app if it isn't already on your machine.
+1. Install the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) if it isn't already on your machine.
+2. Open DuckDuckGo's **Settings** and select **Passwords & Autofill**.
+3. Within the Password Manager section, select **Bitwarden**. A pop-up window will appear.
 4. Open the Bitwarden desktop app and log in or unlock your vault.
-5. Select **Bitwarden > Settings**from the macOS menu bar.
-6. Scroll to find the **App Settings (All Accounts)** section.
-7. Check **Allow DuckDuckGo browser integration**.
-8. In DuckDuckGo select **Connect** when the browser detects Bitwarden is ready.
-9. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.
+5. Go to **Bitwarden > Settings**from the macOS menu bar.
+6. Within the **App Settings (All Accounts)** section, check **Allow DuckDuckGo browser integration**.
+7. Return to DuckDuckGo and select **Connect** when the browser detects Bitwarden is ready.
+8. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.
 
 > [!TIP] DDG Integration Vault Status
 > Once Bitwarden is connected, you can return to the **Settings** > **Autofill** page in DuckDuckGo to see the current status of the integration (for example, whether you need to unlock Bitwarden to autofill, create, or update credentials).

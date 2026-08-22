@@ -90,7 +90,7 @@ FIDO2 security keys are a popular and secure option for adding 2FA to your Bitwa
 A YubiKey device is a security key that works with FIDO authentication protocols, and can have several use cases. Two uses are as 2FA security keys, or [passkeys](https://bitwarden.com/blog/what-are-passkeys-and-passkey-login/).
 
 - **2FA security key:** Using a YubiKey as a 2FA security key will act as an additional device in the authentication process. This will be accompanied by another primary method of authentication (such as master password). The YubiKey security key must be physically plugged in to provide the authentication credentials.
-- **Passkey:**A passkey is a pair or public-private cryptographic keys that are used to authenticate a login. Instead of creating a username, password and adding 2FA to an account, the single passkey is used. During passkey creation, the YubiKey is able to work as the passkey generator to create the public and private keys necessary for passkey login. Learn more about using a YubiKey as a passkey [here](https://www.yubico.com/resources/glossary/what-is-a-passkey/).
+- **Passkey:**A passkey is a pair of public-private cryptographic keys that are used to authenticate a login. Instead of creating a username, password and adding 2FA to an account, the single passkey is used. During passkey creation, the YubiKey is able to work as the passkey generator to create the public and private keys necessary for passkey login. Learn more about using a YubiKey as a passkey [here](https://www.yubico.com/resources/glossary/what-is-a-passkey/).
 
 With Bitwarden, the primary use of a security key such as a YubiKey device is to provide 2FA authentication.
 

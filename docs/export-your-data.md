@@ -23,16 +23,16 @@ Exports can be downloaded in a few formats:
 
 > [!NOTE] .zip exports
 > `.zip` exports are currently only available for individual vault data.
-- (**iOS 26 only**) export directly to another app
-
-> [!NOTE] What is CXP
-> Exporting directly to another app requires that the destination app also supports the [Fido Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
+- Export directly to another app with **iOS 26+ and Android 10+**. The destination app must support the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
 
 Review [example .csv and .json files](https://bitwarden.com/help/condition-bitwarden-import/) to decide which format is best for you. We recommend the encrypted `.json` option for best security and most complete export. Only `.json` exports include:
 
 - Cards
 - Identities
 - [Stored passkeys](https://bitwarden.com/help/storing-passkeys/)
+
+> [!NOTE] Don't use exported passkeys for long-term backup
+> Exported passkeys should not be used as long-term backups. Exported passkeys include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it.
 - [SSH keys](https://bitwarden.com/help/ssh-agent/)
 
 No export formats include trash items or [Sends](https://bitwarden.com/help/about-send/). For a complete list of all items and fields included in an individual vault export, check out this ⬇️ [.json sample](https://bitwarden.com/assets/3klSoZBBd57skEvwFkcMJc/9dfe5d696c102cd32da88dc325706738/Individual_vault_export.json).

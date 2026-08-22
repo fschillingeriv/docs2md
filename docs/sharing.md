@@ -136,11 +136,10 @@ There are a few other ways to share an item:
 
 To share an existing item from the desktop app:
 
-1. In the **Vault**view, select the item you want to share and select **Assign to collections**:
+1. In the **Vault**view, select the item(s) you want to share and then select **Assign to collections** on the action bar:
 
-![Assign to collection desktop app](https://bitwarden.com/assets/3m51JpGDRG2oshNTgJwPYZ/ddd68ad6f703263aa652b39712c8a55e/assign_to_collections_desktop_old.png)
-
-[Embedded content]
+![Assign to collection on desktop](https://bitwarden.com/assets/1xswcoVXzvNiKuWhkRSSkS/b654f435182377846e35c4865bea2b68/Assign_to_collection_desktop.png)
+*Assign to collection on desktop*
 2. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.

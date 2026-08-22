@@ -64,13 +64,16 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Send options
+### Manage Send
 
-Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
+Turn on **Manage Send** to control how members use Send. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
-### Remove Send
+Using Manage Send, organization admins can manage how members use Send, including:
 
-**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text** and **File**.
+- **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [Email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [Password set by member](https://bitwarden.com/help/send-privacy/#send-passwords/).
+- **Enforce deletion date**: Use this policy to enforce a predetermined [Send lifespan](https://bitwarden.com/help/send-lifespan/#expiration-date/) for Sends created by members.
+- **Always show members' email address with recipients**: Enable this option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
 
 ### Remove export
 
@@ -119,7 +122,9 @@ Members of organizations using this policy will not be able to [log in with pass
 
 ### Require two-step login
 
-Turn on the **Require two-step login** policy to require members to use any two-step login method to access their vaults. If you are using an SSO or identity provider's 2FA functionality, you don't need to enable this policy. This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization.
+Turn on the **Require two-step login** policy to require members to use any two-step login method to access their vaults. If you are using an SSO or identity provider's 2FA functionality, you don't need to enable this policy. 
+
+This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization. Members who are onboarded after this policy is turned on will have [email two-step login](https://bitwarden.com/help/setup-two-step-login-email/) activated for them automatically.
 
 > [!NOTE] Require 2FA does not work with organization DUO
 > Organizations that have enabled [SSO](https://bitwarden.com/help/about-sso/) or [Duo](https://bitwarden.com/help/setup-two-step-login-duo/) for all members should not use this policy. Both SSO and organization Duo are enforced by the provider and will not satisfy the two-step login requirement that this policy enables.

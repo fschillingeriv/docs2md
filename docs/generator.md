@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/generator/
 
 Use the Bitwarden generator tool to easily create strong passwords and unique usernames. The password generator is available in all Bitwarden apps and the username generator is available in the web vault, browser extension, desktop app, and mobile app.
 
-If you are not a current Bitwarden user, you can also test our free password generator at [https://bitwarden.com/password-generator/](https://bitwarden.com/password-generator/).
+If you are not a current Bitwarden member, you can still use our [free password generator](https://bitwarden.com/password-generator/).
 
 ## Generate a password
 
@@ -121,54 +121,94 @@ To generate a username:
 
 ### Web app
 
-Select **Tools** → **Generator**from the navigation:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Go to **Tools** → **Generator**from the navigation. Then, select **Username**:
 
 ![Web app username generator](https://bitwarden.com/assets/2862v5xPV5qQM7XfdUvNlI/0f8fe47b6d9efb0a6d77b245a1f63cdf/2025-02-14_11-02-02.png)
-
-You can also generate a username from the Edit screen using the [generate] **Generate**button: 
+- On an item's **Edit login** screen, select the [generate] **Generate** icon within the **Username** field:
 
 ![Web app username generator](https://bitwarden.com/assets/1zpNFR8fu9DBo2krqln5hr/e893f1f3e8d85d58d20c8e316f247666/2024-12-02_14-44-30.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Browser extension
 
-Select the [generate] **Generator** tab and choose **Username**:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select the[generate] **Generator** tab and choose **Username**:
 
 ![Browser extension username generator](https://bitwarden.com/assets/3WEaJYUplgEdjgoSxlQ842/40d3eed8347cb6b0a600d06f42cc1941/2024-10-29_10-39-00.png)
-
-You can also generate a username from the Edit screen using the [generate] **Generate**button: 
+- On an item's **Edit login** screen, select the [generate] **Generate** icon within the **Username** field:
 
 ![Browser extension username generator](https://bitwarden.com/assets/23CDvd3ErFQIZNYwgh000F/c19c373ecb6ca2d6aad2587a1b16dd12/2024-10-29_10-39-56.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Desktop
 
-Select **Generator** from the navigation menu:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select **Generator** from the navigation menu:
 
 ![Desktop app username generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/f2f447821533afc4dad139bc0059a05f/2026-04-23_10-55-35.png)
 *Desktop app username generator*
-
-You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
+- You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
 
 ![Desktop app username generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/6f187f63e0cf89dcd4fa9b4fb2866ad5/2026-04-23_10-48-31-5.png)
 *Desktop app username generator*
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Mobile
 
-Select the [generate]**Generator** tab:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select the [generate]**Generator** tab:
 
 ![Username generator on mobile](https://bitwarden.com/assets/6nfsTiHypQvXrfz7qI7AKI/6e41b1fedea81895497268b0fd825215/2025-01-21_15-56-24.png)
-
-You can also generate a username from the Add/Edit item screen, as well as from the iOS app extension accessible by tapping the Share icon, using the [generate]**Generate**button:
+- You can also generate a username from the Add/Edit item screen, as well as from the iOS app extension accessible by tapping the Share icon, using the [generate]**Generate**button:
 
 ![Username generator on mobile](https://bitwarden.com/assets/2Obfpm7UdBizkwASepMS6j/998c1448556484b867160f7412aa984c/2025-01-21_15-51-01.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 ### Username types
 
@@ -198,7 +238,23 @@ On the Add/Edit Item screen of browser extensions and desktop apps, you can sele
 
 #### Forwarded email alias
 
-Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay. Many external aliasing services offer free plans, however some may require a subscription.
+Select this type to integrate the username generator with your external aliasing service. While this option is available to all Bitwarden users, some external aliasing service may require a subscription.
+
+Most Bitwarden apps support integration with:
+
+- SimpleLogin
+- Addy.io
+- Firefox Relay
+- Fastmail
+- Forward Email
+- DuckDuckGo
+
+The Bitwarden mobile app supports integration with:
+
+- SimpleLogin
+- Addy.io
+- Forward Email
+- Firefox Relay
 
 > [!NOTE] Why use Forwarded Email Alias?
 > **Why use forwarded email alias?**
@@ -214,31 +270,31 @@ To set up your email alias integration:
 3. In the New API Key section, enter a name that indicates the new key will be used by Bitwarden and select **Create**.
 
 ![SimpleLogin API Keys](https://bitwarden.com/assets/6ie1Qpk8LYapG6JRX3X1dD/06c1083c6e146c2822f0e4a47b507785/Screen_Shot_2022-06-30_at_3.17.59_PM.png)
-4. **Copy**the API key and paste it in the **API Key**field in the Bitwarden username generator.
+4. **C****opy** the API Key from SimpleLogin and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from SimplyLogin into **API Key**.
 5. Password Manager browser extensions, mobile apps, and desktop apps can connect to a self-hosted SimpleLogin server. If you're self-hosting SimpleLogin, enter a **Server URL**.
-6. Select **Regenerate Username **to generate a username and automatically create the corresponding alias in SimpleLogin.
+6. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in SimpleLogin.
 
 ### Addy.io
 
 1. Log in to your Addy.io account.
 2. In Addy.io, select **Settings**from the navigation menu.
 
-![AnonAddy Settings](https://bitwarden.com/assets/18PUguJXkABllufHgtNEJi/564febbfe28d3f0cd491c3216d62db9e/addy_settings.png)
-3. On the **General** tab of the settings screen, scroll down to **Update Default Alias Domain**. Select the default domain you wish to use for your alias. 
+![Addy.io settings](https://bitwarden.com/assets/18PUguJXkABllufHgtNEJi/564febbfe28d3f0cd491c3216d62db9e/addy_settings.png)
+3. Within the **General** settings, scroll down to **Update Default Alias Domain**. Select the default domain you wish to use for your alias and select **Update Default Alias Domain**.
 
 > [!NOTE] addy.io domain
-> The default domain selected here must match the Domain name used in the Bitwarden Username generator.
-4. Select the **API Keys** tab and click the **Create New API Key** button.
-5. In the Create New API Key dialog, enter a **Name**that indicates the new token will be used by Bitwarden, an **Expiration,** and Confirm your Addy.io account password**.**Once you have completed the required fields, select**Create API Key**.
+> The **Default Domain** selected in Addy.io must match the **Email domain** entered in the Bitwarden username generator's **Forwarded email alias** [username type](https://bitwarden.com/help/generator/#username-types/) options.
+4. Scroll to the top of the page and select **API Keys** from the dropdown menu. Click **Create New API Key**.
+5. In the Create New API Key dialog, enter a **Name**that indicates the new token will be used by Bitwarden, an **Expiration,** and confirm your Addy.io account password**.**Once you have completed the required fields, select**Create API Key**:
 
-![AnonAddy Generate Token](https://bitwarden.com/assets/6o8021KYChu6jzEGvUbXDH/b56977c26a44b431486796cb4965f23d/create_new_api_key.png)
-6. Copy the Personal Access Key and paste it in the **API Access Token**field in the Bitwarden username generator.
+![Addy.io, Create New API Key](https://bitwarden.com/assets/6o8021KYChu6jzEGvUbXDH/b56977c26a44b431486796cb4965f23d/create_new_api_key.png)
+6. Copy the Personal Access Key from Addy.io and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your Personal Access Key from Addy.io into **API Key**. 
 
 > [!NOTE] Addy.io Save Credential
-> We also recommend adding this Personal Access Token to your Addy.io vault item in Bitwarden, since this is the only time the token will be displayed in Addy.io.
-7. In the **Domain Name** field, enter the Addy.io domain name you selected in **Step 3**. As a free user of Addy.io, your options are `anonaddy.me`, `<username>.anonaddy.me` or `<username>.anonaddy.com`.
+> This is the only time Addy.io will display your Personal Access Token (API key), so we recommend saving it to your Bitwarden vault now.
+7. In the **Email domain**field, enter the Addy.io domain name you selected in **Step 3**. As a free user of Addy.io, your options are `anonaddy.me`, `<username>.anonaddy.me` or `<username>.anonaddy.com`.
 8. Password Manager browser extensions, mobile apps, and desktop apps can connect to a self-hosted Addy.io server. If you're self-hosting Addy.io, enter a **Server URL**.
-9. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Addy.io.
+9. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Addy.io.
 
 ### Firefox Relay
 
@@ -246,8 +302,8 @@ To set up your email alias integration:
 2. Select the profile icon and choose **Settings**from the dropdown:
 
 ![Firefox Relay Settings Menu](https://bitwarden.com/assets/3jK0OhlASgzDZo1Xu2c97O/f24ae0b64e7fe7736e757b33a89510c6/Screen_Shot_2022-06-01_at_3.38.56_PM.png)
-3. Copy **API Key**into the **API Access Token**field of the Bitwarden username generator.
-4. Select **Regenerate Username**to generate a username and automatically create the corresponding mask in Firefox Relay.
+3. Copy the **API Key** from Firefox Relay and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from Firefox Relay into **API Key**.
+4. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding mask in Firefox Relay.
 
 ### Fastmail
 
@@ -260,34 +316,37 @@ To set up your email alias integration:
 
 ![New API token](https://bitwarden.com/assets/1FieLCzKTItKNqDIhWBrbH/2816de1ec7580e2e90cf80e38d311993/2024-12-23_15-18-50.png)
 
-Include to following settings:
+Include the following settings:
 
  - **Read-only access** **disabled**.
  - **Masked Email enabled.**
-5. Copy **API Key**into the **API Access Token**field of the Bitwarden username generator.
-6. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Fastmail.
+5. Copy the **API Key** from Fastmail and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from Fastmail into **API Key**.
+6. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Fastmail.
 
 ### Forward Email
 
 1. Log in to your [Forward Email](https://forwardemail.net/) account.
 2. Forward Email uses the default domain `hideaddress.net`, however if you have a registered domain you can connect it to the service. For more information, refer to the [Forward Email setup guides](https://forwardemail.net/en/guides).
-3. In Forward Email, navigate to the **My Account** → **Security** page and copy the Developer Access API token:
+3. In Forward Email, navigate to the **My Account** → **Security** page and copy the Developer Access **API token**:
 
 ![Copy Forward Email API token](https://bitwarden.com/assets/0bYzljpbdqH7AdFqDh7sr/f43a225e5614a00b1dd391f17fbd916d/Screen_Shot_2023-06-30_at_1.06.04_PM.png)
-4. In the Bitwarden username generator, paste the copied token in the **API access token**and enter `hideaddress.net` or your registered **Domain name**.
-5. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Forward Email.
+4. Open Bitwarden and go to **Generator** → **Username** → **Forwarded email alias**. From the options that appear:
+
+ - Paste your API Key from Forward Email into **API Key**.
+ - Within **Email domain**, enter `hideaddress.net` or your registered domain name.
+5. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Forward Email.
 
 ### DuckDuckGo
 
-1. Follow the [DuckDuckGo instructions](https://duckduckgo.com/email/) to setup your Duck Address.
+1. Follow the [DuckDuckGo instructions](https://duckduckgo.com/email/) to set up your Duck Address.
 2. Once your Duck Address has been setup, select the **Autofill** tab on the DuckDuckGo email protection page, and open your web browser's developer tools.
 3. Click the **Generate Private Duck Address**button and view the **Network** tab on your developer tools window. Select the "Addresses" call for the API POST request, and locate the API authorization item. The item will look like this: `authorization: Bearer <API token value>.`
 
  
 
 ![Generate DuckDuckGo email alias](https://bitwarden.com/assets/5Rj9xrPrgp13Pl9KGuap7Z/855fa2f0defc41a68b512b92027bf540/DDG_generate_private_address.png)
-4. Copy the API authorization token value and paste it into the API key field on the Bitwarden generator feature.
-5. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in DuckDuckGo.
+4. Copy the API authorization token value from DuckDuckGo and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API authorization token value from DuckDuckGo into **API Key**.
+5. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in DuckDuckGo.
 
 #### Random word
 

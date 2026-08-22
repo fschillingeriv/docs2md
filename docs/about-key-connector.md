@@ -61,7 +61,7 @@ Users who log in for the first time to a Key Connector enabled organizations wil
 | Admin password reset | When Key Connector is being used, [admin password reset](https://bitwarden.com/help/admin-reset/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
 | Revoking access | Members who do not have master passwords will be fully locked out of their account if they are [revoked](https://bitwarden.com/help/revoke-users/). |
 | Emergency access | When Key Connector is being used, the emergency access [account takeover option](https://bitwarden.com/help/emergency-access/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. Trusted emergency contacts may still **View**a grantor's individual vault data, subject to the established [emergency access workflow](https://bitwarden.com/help/request-and-grant-emergency-access/). |
-| Change email | When Key Connector is being used, a user's vault email address cannot be changed. |
+| Change email | When Key Connector is being used, members cannot change their vault email address. If it's a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
 
 ## How do I start using Key Connector?
 

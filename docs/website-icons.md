@@ -13,7 +13,7 @@ When Bitwarden offers to autofill a login item with a [saved URI](https://bitwar
 
 The Bitwarden icon server provides the delivery endpoint for website icons. If you are using website icons on a device, Bitwarden will issue requests to `icons.bitwarden.net` for each login in your vault that has a URI that resembles a website (for example, `google.com` or `https://google.com`, but not `google` or `http://localhost`).
 
-The icon server is fronted with a CDN that caches the icons on Fastly nodes all around the world. Subsequent requests to the same icon will likely hit CDN caches instead of the icon server directly. Your requests may never actually hit Bitwarden's icon server because another Bitwarden user with the same website in their vault requested the icon before you.
+The icon server is fronted with a content delivery network (CDN) that caches the icons on Fastly nodes all around the world. Subsequent requests to the same icon will likely hit CDN caches instead of the icon server directly. Your requests may never actually hit Bitwarden's icon server because another Bitwarden user with the same website in their vault requested the icon before you.
 
 > [!NOTE] Icons not cached on self-host
 > If you are self-hosting Bitwarden, icons are* *not cached to a CDN. All requests will always hit your icon container directly.

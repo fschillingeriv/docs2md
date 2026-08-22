@@ -152,7 +152,7 @@ Users who log in for the first time to a Key Connector enabled organizations wil
 | Admin password reset | When Key Connector is being used, [admin password reset](https://bitwarden.com/help/admin-reset/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
 | Revoking access | Members who do not have master passwords will be fully locked out of their account if they are [revoked](https://bitwarden.com/help/revoke-users/). |
 | Emergency access | When Key Connector is being used, the emergency access [account takeover option](https://bitwarden.com/help/emergency-access/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. Trusted emergency contacts may still **View**a grantor's individual vault data, subject to the established [emergency access workflow](https://bitwarden.com/help/request-and-grant-emergency-access/). |
-| Change email | When Key Connector is being used, a user's vault email address cannot be changed. |
+| Change email | When Key Connector is being used, members cannot change their vault email address. If it's a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
 
 ## How do I start using Key Connector?
 
@@ -355,19 +355,23 @@ When a user is temporarily suspended or de-activated in your IdP, as opposed to 
 
 ### Member email address
 
-> [!NOTE] Who can change email addresses in organizations.
-> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
-> 
-> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
+Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP. To do so, they must:
 
-Members provisioned using SCIM are able to change their account email address in Bitwarden and their organization's relevant IdP, however in order to do so they must:
-
-1. First change the email address in Bitwarden by navigating to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
+1. Change the email address in Bitwarden by going to **Settings**→ **My account**([learn more](https://bitwarden.com/help/product-faqs/#q-how-do-i-change-my-email-address/)).
 2. Once the email has been changed in Bitwarden, update the user value on the IdP or AD client. This could be the `externalid` or a corresponding value, depending on the organization's choice of IdP.
 3. Re-sync the IdP or AD client to implement the changes.
 
 > [!NOTE] Changing the Bitwarden email in SCIM org
 > If the user email address is updated and synced on the IdP or AD prior to updating the Bitwarden email, the updated email will be interpreted as a new user.
+
+> [!NOTE] Who can change email addresses in organizations.
+> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
+> 
+> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
+> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
+> 
+> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 ### Member display name
 
@@ -751,7 +755,7 @@ Depending on whether a master password hash is available in memory for your clie
 | Verification | There are a number of features in Bitwarden client applications that ordinarily require entry of a master password in order to be used, including [exporting](https://bitwarden.com/help/export-your-data/) vault data, changing [two-step login settings](https://bitwarden.com/help/setup-two-step-login/), retrieving [API keys](https://bitwarden.com/help/personal-api-key/), and more. If the user doesn't use a master password to access the client, **all these features**will replace master password confirmation with email-based TOTP verification. |
 | Vault lock/unlock | Under ordinary circumstances, a [locked vault can be unlocked](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) using a master password. If the user doesn't use a master password to access the client, locked client applications can only be unlocked with a [PIN](https://bitwarden.com/help/unlock-with-pin/) or with [biometrics](https://bitwarden.com/help/biometrics/). If neither PIN nor biometrics are enabled for a client application, the vault will always log out instead of lock. Unlocking and logging in will **always**require an internet connection. |
 | Master password re-prompt | If the user does not unlock their vault with a master password, [master password re-prompt](https://bitwarden.com/help/managing-items/#protect-individual-items/) will be disabled. |
-| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. |
+| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. If they do not have a master password and have a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
 | CLI | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to access Password Manager CLI. |
 ---
 URL: https://bitwarden.com/help/access-intelligence-email-templates/
@@ -5111,7 +5115,7 @@ FIDO2 security keys are a popular and secure option for adding 2FA to your Bitwa
 A YubiKey device is a security key that works with FIDO authentication protocols, and can have several use cases. Two uses are as 2FA security keys, or [passkeys](https://bitwarden.com/blog/what-are-passkeys-and-passkey-login/).
 
 - **2FA security key:** Using a YubiKey as a 2FA security key will act as an additional device in the authentication process. This will be accompanied by another primary method of authentication (such as master password). The YubiKey security key must be physically plugged in to provide the authentication credentials.
-- **Passkey:**A passkey is a pair or public-private cryptographic keys that are used to authenticate a login. Instead of creating a username, password and adding 2FA to an account, the single passkey is used. During passkey creation, the YubiKey is able to work as the passkey generator to create the public and private keys necessary for passkey login. Learn more about using a YubiKey as a passkey [here](https://www.yubico.com/resources/glossary/what-is-a-passkey/).
+- **Passkey:**A passkey is a pair of public-private cryptographic keys that are used to authenticate a login. Instead of creating a username, password and adding 2FA to an account, the single passkey is used. During passkey creation, the YubiKey is able to work as the passkey generator to create the public and private keys necessary for passkey login. Learn more about using a YubiKey as a passkey [here](https://www.yubico.com/resources/glossary/what-is-a-passkey/).
 
 With Bitwarden, the primary use of a security key such as a YubiKey device is to provide 2FA authentication.
 
@@ -7684,6 +7688,48 @@ bw config server --events <url>
 bw config server --key-connector <url>
 ```
 ---
+URL: https://bitwarden.com/help/change-members-account-email-and-name/
+---
+# Change Members’ Account Email & Name
+
+On the Enterprise plan, organizations can update an eligible member's account email address and name directly from the Admin Console. This lets administrators keep member records accurate after changes like a legal name update, saving time and preserving the member's existing vault access.
+
+This option is available only for claimed accounts using Key Connector with SSO or trusted devices with SSO instead of a master password. While accounts with a master password are not eligible for this option, those members can [update their own master password](https://bitwarden.com/help/master-password/#change-master-password/).
+
+## Requirements
+
+An [owner, admin](https://bitwarden.com/help/user-types-access-control/#default-roles/), or custom user with [Manage users permission](https://bitwarden.com/help/user-types-access-control/#custom-roles/) can update a member’s account email address and name. 
+
+To be eligible for administrator updates, the member's account must meet two requirements:
+
+- It must be a [claimed account](https://bitwarden.com/help/claimed-accounts/), part of a [claimed domain](https://bitwarden.com/help/claimed-domains/).
+- The account cannot have a master password. This means your organization must use [Key Connector](https://bitwarden.com/help/about-key-connector/) or [trusted devices](https://bitwarden.com/help/about-trusted-devices/), and the specific member did not set up or keep a master password. For example, members who joined before trusted devices were configured may still have a master password. In these cases, their account is not eligible for email changes by an administrator.
+
+> [!NOTE] Update name only if MP present
+> If the member has a master password, you can still update the name. You will not, however, be able to update the account email.
+
+## Change a member’s email and name
+
+To change an [eligible member’s](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name#requirements/) account email address or name:
+
+1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
+
+![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
+2. In the Admin Console, select **Members**.
+3. Select the member that you want to update. A pop-up window will appear.
+4. Depending on what needs updating:
+
+ - Enter the new **Name**.
+ - Enter the new **Email**. The email must use a domain claimed by your organization.
+5. Select **Save**.
+
+After your changes are saved:
+
+- The member's active sessions remain logged in.
+- An [event log](https://bitwarden.com/help/event-logs/#organization-events/) records who edited the member. If the email was changed, a second event log records who made that update.
+- If you updated the email, Bitwarden sends a message to the member's original email address. The message states that an administrator changed their account email and includes the new address. This message does not mention name changes, and Bitwarden sends no message if you update only the name.
+---
 URL: https://bitwarden.com/help/change-theme/
 ---
 # Change App Appearance
@@ -7886,6 +7932,10 @@ Onboarded organization member accounts that use an email address with a matching
 
 > [!NOTE] Clarifying claimed member prereqs
 > A user must have a matching domain **and** be a [confirmed member](https://bitwarden.com/help/managing-users/#confirm/) of your Bitwarden organization to be considered a claimed account. Claiming a domain **does not** automatically invite any users and therefore will not in and of itself add to your subscription seat count.
+
+#### Org-managed account email and name updates
+
+Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector.
 
 #### Org-managed account deletion
 
@@ -15224,9 +15274,13 @@ Directory Connector supports sync from the following sources:
 ### Changing email addresses 
 
 > [!NOTE] Who can change email addresses in organizations.
-> Members of organizations using [trusted devices](https://bitwarden.com/help/about-trusted-devices/) cannot change their email address unless issued a master password with [account recovery](https://bitwarden.com/help/account-recovery/).
+> Who can update a member's email can differ if your organization uses trusted devices or Key Connector:
 > 
-> Members of organizations using [Key Connector](https://bitwarden.com/help/about-key-connector/) cannot change their email address. Members accounts will need to [deleted](https://bitwarden.com/help/delete-member-accounts/) and re-provisioned to accommodate an email address change. Remind users to export data prior to account deletion and re-import their data once provisioned with their new email address.
+> - [Trusted devices](https://bitwarden.com/help/about-trusted-devices/): Members cannot change their own email unless issued a master password through [account recovery](https://bitwarden.com/help/account-recovery/). If the member has no master password and is a [claimed account](https://bitwarden.com/help/claimed-accounts/), administrators can change the email instead.
+> - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
+> 
+> - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 Members provisioned using Directory Connector are able to change their account email address in Bitwarden and in the source directory, however in order to do so:
 
@@ -15375,7 +15429,7 @@ In the Password Manager section, macOS users can choose to use Bitwarden. Learn 
 ---
 URL: https://bitwarden.com/help/duckduckgo-macos-browser-integration/
 ---
-# DuckDuckGo macOS Browser Integration
+# Bitwarden for DuckDuckGo macOS Browser
 
 > [!TIP] Use DDG download, not app store
 > In order to use the DuckDuckGo macOS app integration with Bitwarden, you'll need to download the DuckDuckGo macOS browser from [https://duckduckgo.com/mac](https://duckduckgo.com/mac) instead of from the macOS App Store.
@@ -15390,15 +15444,14 @@ The integration requires the Bitwarden [desktop app](https://bitwarden.com/help/
 
 To set up the integration between the DuckDuckGo macOS browser and Bitwarden:
 
-1. Open DuckDuckGo's **Settings**screen and select **Passwords & Autofill**from the menu.
-2. In the Password Manager section, select **Bitwarden**. A wizard will help you through integration setup, but we'll outline the remaining steps here as well.
-3. Install the Bitwarden desktop app if it isn't already on your machine.
+1. Install the [Bitwarden desktop app](https://bitwarden.com/download/#downloads-desktop-applications/) if it isn't already on your machine.
+2. Open DuckDuckGo's **Settings** and select **Passwords & Autofill**.
+3. Within the Password Manager section, select **Bitwarden**. A pop-up window will appear.
 4. Open the Bitwarden desktop app and log in or unlock your vault.
-5. Select **Bitwarden > Settings**from the macOS menu bar.
-6. Scroll to find the **App Settings (All Accounts)** section.
-7. Check **Allow DuckDuckGo browser integration**.
-8. In DuckDuckGo select **Connect** when the browser detects Bitwarden is ready.
-9. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.
+5. Go to **Bitwarden > Settings**from the macOS menu bar.
+6. Within the **App Settings (All Accounts)** section, check **Allow DuckDuckGo browser integration**.
+7. Return to DuckDuckGo and select **Connect** when the browser detects Bitwarden is ready.
+8. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.
 
 > [!TIP] DDG Integration Vault Status
 > Once Bitwarden is connected, you can return to the **Settings** > **Autofill** page in DuckDuckGo to see the current status of the integration (for example, whether you need to unlock Bitwarden to autofill, create, or update credentials).
@@ -16474,6 +16527,8 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Automatically confirmed user `user-identifier`. (`1517`)
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
+- Clicked vault banner button (`1522`)
+- Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -16503,7 +16558,6 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Removed domain `domain-name`. (`2001`)
 - `domain-name` verified. (`2002`)
 - `domain-name `not verified. (`2003`)
-- Clicked vault banner button (`2004`)
 
 ### Secrets Manager events
 
@@ -16712,16 +16766,16 @@ Exports can be downloaded in a few formats:
 
 > [!NOTE] .zip exports
 > `.zip` exports are currently only available for individual vault data.
-- (**iOS 26 only**) export directly to another app
-
-> [!NOTE] What is CXP
-> Exporting directly to another app requires that the destination app also supports the [Fido Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
+- Export directly to another app with **iOS 26+ and Android 10+**. The destination app must support the [FIDO Credential Exchange Protocol (CXP)](https://fidoalliance.org/specifications-credential-exchange-specifications).
 
 Review [example .csv and .json files](https://bitwarden.com/help/condition-bitwarden-import/) to decide which format is best for you. We recommend the encrypted `.json` option for best security and most complete export. Only `.json` exports include:
 
 - Cards
 - Identities
 - [Stored passkeys](https://bitwarden.com/help/storing-passkeys/)
+
+> [!NOTE] Don't use exported passkeys for long-term backup
+> Exported passkeys should not be used as long-term backups. Exported passkeys include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it.
 - [SSH keys](https://bitwarden.com/help/ssh-agent/)
 
 No export formats include trash items or [Sends](https://bitwarden.com/help/about-send/). For a complete list of all items and fields included in an individual vault export, check out this ⬇️ [.json sample](https://bitwarden.com/assets/3klSoZBBd57skEvwFkcMJc/9dfe5d696c102cd32da88dc325706738/Individual_vault_export.json).
@@ -17160,13 +17214,16 @@ URL: https://bitwarden.com/help/fill-assist/
 ---
 # Fill Assist
 
-Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension can use to determine how to autofill credentials.
+Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension and mobile app can use to determine how to autofill credentials.
 
 Often, websites cause autofill issues because they deviate from a widely-adopted set of norms found in the code for login or account creation forms. Fill assist solves this problem by allowing Bitwarden to identify sites that behave differently and create custom instructions for how browser extensions should autofill on those sites.
 
 ## Turn on fill assist
 
-Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
+Fill assist can be turned on:
+
+- For Bitwarden browser extensions, from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later.
+- For Bitwarden mobile apps, from the **Settings** → **Autofill**menu and is available for all users on version 2026.8.0 or later.
 
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
@@ -17178,13 +17235,13 @@ Because fill assist is one method for facilitating easier autofill, [custom fiel
 Powered by the [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
 
 - **Supported sites**: Fill assist only steps in when the site you're browsing is included in the maps; typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
-- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
+- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs Bitwarden to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
 - **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
 
-Those maps are retrieved by your browser extension client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
+Those maps are retrieved by your client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
 
-- **Data privacy**: Once retrieved, your browser extension stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
-- **Independent of client release**: Because the browser extension recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
+- **Data privacy**: Once retrieved, your client stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
+- **Independent of client release**: Because the client recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
 
 ### Report an issue
 
@@ -17533,7 +17590,7 @@ URL: https://bitwarden.com/help/generator/
 
 Use the Bitwarden generator tool to easily create strong passwords and unique usernames. The password generator is available in all Bitwarden apps and the username generator is available in the web vault, browser extension, desktop app, and mobile app.
 
-If you are not a current Bitwarden user, you can also test our free password generator at [https://bitwarden.com/password-generator/](https://bitwarden.com/password-generator/).
+If you are not a current Bitwarden member, you can still use our [free password generator](https://bitwarden.com/password-generator/).
 
 ## Generate a password
 
@@ -17648,54 +17705,94 @@ To generate a username:
 
 ### Web app
 
-Select **Tools** → **Generator**from the navigation:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Go to **Tools** → **Generator**from the navigation. Then, select **Username**:
 
 ![Web app username generator](https://bitwarden.com/assets/2862v5xPV5qQM7XfdUvNlI/0f8fe47b6d9efb0a6d77b245a1f63cdf/2025-02-14_11-02-02.png)
-
-You can also generate a username from the Edit screen using the [generate] **Generate**button: 
+- On an item's **Edit login** screen, select the [generate] **Generate** icon within the **Username** field:
 
 ![Web app username generator](https://bitwarden.com/assets/1zpNFR8fu9DBo2krqln5hr/e893f1f3e8d85d58d20c8e316f247666/2024-12-02_14-44-30.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Browser extension
 
-Select the [generate] **Generator** tab and choose **Username**:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select the[generate] **Generator** tab and choose **Username**:
 
 ![Browser extension username generator](https://bitwarden.com/assets/3WEaJYUplgEdjgoSxlQ842/40d3eed8347cb6b0a600d06f42cc1941/2024-10-29_10-39-00.png)
-
-You can also generate a username from the Edit screen using the [generate] **Generate**button: 
+- On an item's **Edit login** screen, select the [generate] **Generate** icon within the **Username** field:
 
 ![Browser extension username generator](https://bitwarden.com/assets/23CDvd3ErFQIZNYwgh000F/c19c373ecb6ca2d6aad2587a1b16dd12/2024-10-29_10-39-56.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Desktop
 
-Select **Generator** from the navigation menu:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select **Generator** from the navigation menu:
 
 ![Desktop app username generator](https://bitwarden.com/assets/2VGPd4WOwydbovDJdyVT51/f2f447821533afc4dad139bc0059a05f/2026-04-23_10-55-35.png)
 *Desktop app username generator*
-
-You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
+- You can also generate a username from the Add/Edit Item screen using the [generate] **Generate**button:
 
 ![Desktop app username generator](https://bitwarden.com/assets/7xTg7VVE7CgTZhBl5LlYui/6f187f63e0cf89dcd4fa9b4fb2866ad5/2026-04-23_10-48-31-5.png)
 *Desktop app username generator*
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 > [!NOTE] Generator history
 > Select [**Generator history**](https://bitwarden.com/help/password-and-generator-history/#generator-history/) to access passwords and usernames created in either location with that specific client—even if you don't save them to an item. This history is cleared when you log out.
 
 ### Mobile
 
-Select the [generate]**Generator** tab:
+You can create a username from the dedicated generator tool or when editing a new or existing item. Depending on which option you prefer:
+
+- Select the [generate]**Generator** tab:
 
 ![Username generator on mobile](https://bitwarden.com/assets/6nfsTiHypQvXrfz7qI7AKI/6e41b1fedea81895497268b0fd825215/2025-01-21_15-56-24.png)
-
-You can also generate a username from the Add/Edit item screen, as well as from the iOS app extension accessible by tapping the Share icon, using the [generate]**Generate**button:
+- You can also generate a username from the Add/Edit item screen, as well as from the iOS app extension accessible by tapping the Share icon, using the [generate]**Generate**button:
 
 ![Username generator on mobile](https://bitwarden.com/assets/2Obfpm7UdBizkwASepMS6j/998c1448556484b867160f7412aa984c/2025-01-21_15-51-01.png)
+
+With either method, choose your generated username's format from the **Type** dropdown menu:
+
+- Random word (default)
+- Plus addressed email
+- Catch-all email
+- Forwarded email alias
+
+Each [username type](https://bitwarden.com/help/generator/#username-types/) includes additional options to customize, such as the email's domain name or if numbers are included.
 
 ### Username types
 
@@ -17725,7 +17822,23 @@ On the Add/Edit Item screen of browser extensions and desktop apps, you can sele
 
 #### Forwarded email alias
 
-Select this type to integrate the username generator with your external aliasing service. Most Bitwarden apps support integration with SimpleLogin, AnonAddy, Firefox Relay, Fastmail, Forward Email, and DuckDuckGo. The mobile app currently supports integration with SimpleLogin, AnonAddy, Forward Email, and Firefox Relay. Many external aliasing services offer free plans, however some may require a subscription.
+Select this type to integrate the username generator with your external aliasing service. While this option is available to all Bitwarden users, some external aliasing service may require a subscription.
+
+Most Bitwarden apps support integration with:
+
+- SimpleLogin
+- Addy.io
+- Firefox Relay
+- Fastmail
+- Forward Email
+- DuckDuckGo
+
+The Bitwarden mobile app supports integration with:
+
+- SimpleLogin
+- Addy.io
+- Forward Email
+- Firefox Relay
 
 > [!NOTE] Why use Forwarded Email Alias?
 > **Why use forwarded email alias?**
@@ -17741,31 +17854,31 @@ To set up your email alias integration:
 3. In the New API Key section, enter a name that indicates the new key will be used by Bitwarden and select **Create**.
 
 ![SimpleLogin API Keys](https://bitwarden.com/assets/6ie1Qpk8LYapG6JRX3X1dD/06c1083c6e146c2822f0e4a47b507785/Screen_Shot_2022-06-30_at_3.17.59_PM.png)
-4. **Copy**the API key and paste it in the **API Key**field in the Bitwarden username generator.
+4. **C****opy** the API Key from SimpleLogin and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from SimplyLogin into **API Key**.
 5. Password Manager browser extensions, mobile apps, and desktop apps can connect to a self-hosted SimpleLogin server. If you're self-hosting SimpleLogin, enter a **Server URL**.
-6. Select **Regenerate Username **to generate a username and automatically create the corresponding alias in SimpleLogin.
+6. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in SimpleLogin.
 
 ### Addy.io
 
 1. Log in to your Addy.io account.
 2. In Addy.io, select **Settings**from the navigation menu.
 
-![AnonAddy Settings](https://bitwarden.com/assets/18PUguJXkABllufHgtNEJi/564febbfe28d3f0cd491c3216d62db9e/addy_settings.png)
-3. On the **General** tab of the settings screen, scroll down to **Update Default Alias Domain**. Select the default domain you wish to use for your alias. 
+![Addy.io settings](https://bitwarden.com/assets/18PUguJXkABllufHgtNEJi/564febbfe28d3f0cd491c3216d62db9e/addy_settings.png)
+3. Within the **General** settings, scroll down to **Update Default Alias Domain**. Select the default domain you wish to use for your alias and select **Update Default Alias Domain**.
 
 > [!NOTE] addy.io domain
-> The default domain selected here must match the Domain name used in the Bitwarden Username generator.
-4. Select the **API Keys** tab and click the **Create New API Key** button.
-5. In the Create New API Key dialog, enter a **Name**that indicates the new token will be used by Bitwarden, an **Expiration,** and Confirm your Addy.io account password**.**Once you have completed the required fields, select**Create API Key**.
+> The **Default Domain** selected in Addy.io must match the **Email domain** entered in the Bitwarden username generator's **Forwarded email alias** [username type](https://bitwarden.com/help/generator/#username-types/) options.
+4. Scroll to the top of the page and select **API Keys** from the dropdown menu. Click **Create New API Key**.
+5. In the Create New API Key dialog, enter a **Name**that indicates the new token will be used by Bitwarden, an **Expiration,** and confirm your Addy.io account password**.**Once you have completed the required fields, select**Create API Key**:
 
-![AnonAddy Generate Token](https://bitwarden.com/assets/6o8021KYChu6jzEGvUbXDH/b56977c26a44b431486796cb4965f23d/create_new_api_key.png)
-6. Copy the Personal Access Key and paste it in the **API Access Token**field in the Bitwarden username generator.
+![Addy.io, Create New API Key](https://bitwarden.com/assets/6o8021KYChu6jzEGvUbXDH/b56977c26a44b431486796cb4965f23d/create_new_api_key.png)
+6. Copy the Personal Access Key from Addy.io and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your Personal Access Key from Addy.io into **API Key**. 
 
 > [!NOTE] Addy.io Save Credential
-> We also recommend adding this Personal Access Token to your Addy.io vault item in Bitwarden, since this is the only time the token will be displayed in Addy.io.
-7. In the **Domain Name** field, enter the Addy.io domain name you selected in **Step 3**. As a free user of Addy.io, your options are `anonaddy.me`, `<username>.anonaddy.me` or `<username>.anonaddy.com`.
+> This is the only time Addy.io will display your Personal Access Token (API key), so we recommend saving it to your Bitwarden vault now.
+7. In the **Email domain**field, enter the Addy.io domain name you selected in **Step 3**. As a free user of Addy.io, your options are `anonaddy.me`, `<username>.anonaddy.me` or `<username>.anonaddy.com`.
 8. Password Manager browser extensions, mobile apps, and desktop apps can connect to a self-hosted Addy.io server. If you're self-hosting Addy.io, enter a **Server URL**.
-9. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Addy.io.
+9. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Addy.io.
 
 ### Firefox Relay
 
@@ -17773,8 +17886,8 @@ To set up your email alias integration:
 2. Select the profile icon and choose **Settings**from the dropdown:
 
 ![Firefox Relay Settings Menu](https://bitwarden.com/assets/3jK0OhlASgzDZo1Xu2c97O/f24ae0b64e7fe7736e757b33a89510c6/Screen_Shot_2022-06-01_at_3.38.56_PM.png)
-3. Copy **API Key**into the **API Access Token**field of the Bitwarden username generator.
-4. Select **Regenerate Username**to generate a username and automatically create the corresponding mask in Firefox Relay.
+3. Copy the **API Key** from Firefox Relay and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from Firefox Relay into **API Key**.
+4. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding mask in Firefox Relay.
 
 ### Fastmail
 
@@ -17787,34 +17900,37 @@ To set up your email alias integration:
 
 ![New API token](https://bitwarden.com/assets/1FieLCzKTItKNqDIhWBrbH/2816de1ec7580e2e90cf80e38d311993/2024-12-23_15-18-50.png)
 
-Include to following settings:
+Include the following settings:
 
  - **Read-only access** **disabled**.
  - **Masked Email enabled.**
-5. Copy **API Key**into the **API Access Token**field of the Bitwarden username generator.
-6. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Fastmail.
+5. Copy the **API Key** from Fastmail and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API Key from Fastmail into **API Key**.
+6. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Fastmail.
 
 ### Forward Email
 
 1. Log in to your [Forward Email](https://forwardemail.net/) account.
 2. Forward Email uses the default domain `hideaddress.net`, however if you have a registered domain you can connect it to the service. For more information, refer to the [Forward Email setup guides](https://forwardemail.net/en/guides).
-3. In Forward Email, navigate to the **My Account** → **Security** page and copy the Developer Access API token:
+3. In Forward Email, navigate to the **My Account** → **Security** page and copy the Developer Access **API token**:
 
 ![Copy Forward Email API token](https://bitwarden.com/assets/0bYzljpbdqH7AdFqDh7sr/f43a225e5614a00b1dd391f17fbd916d/Screen_Shot_2023-06-30_at_1.06.04_PM.png)
-4. In the Bitwarden username generator, paste the copied token in the **API access token**and enter `hideaddress.net` or your registered **Domain name**.
-5. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in Forward Email.
+4. Open Bitwarden and go to **Generator** → **Username** → **Forwarded email alias**. From the options that appear:
+
+ - Paste your API Key from Forward Email into **API Key**.
+ - Within **Email domain**, enter `hideaddress.net` or your registered domain name.
+5. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in Forward Email.
 
 ### DuckDuckGo
 
-1. Follow the [DuckDuckGo instructions](https://duckduckgo.com/email/) to setup your Duck Address.
+1. Follow the [DuckDuckGo instructions](https://duckduckgo.com/email/) to set up your Duck Address.
 2. Once your Duck Address has been setup, select the **Autofill** tab on the DuckDuckGo email protection page, and open your web browser's developer tools.
 3. Click the **Generate Private Duck Address**button and view the **Network** tab on your developer tools window. Select the "Addresses" call for the API POST request, and locate the API authorization item. The item will look like this: `authorization: Bearer <API token value>.`
 
  
 
 ![Generate DuckDuckGo email alias](https://bitwarden.com/assets/5Rj9xrPrgp13Pl9KGuap7Z/855fa2f0defc41a68b512b92027bf540/DDG_generate_private_address.png)
-4. Copy the API authorization token value and paste it into the API key field on the Bitwarden generator feature.
-5. Select **Regenerate Username**to generate a username and automatically create the corresponding alias in DuckDuckGo.
+4. Copy the API authorization token value from DuckDuckGo and then open Bitwarden. Go to **Generator** → **Username** → **Forwarded email alias**. Within the options that appear, paste your API authorization token value from DuckDuckGo into **API Key**.
+5. Select the [generate] **Generate** icon** **to simultaneously create a username and a corresponding alias in DuckDuckGo.
 
 #### Random word
 
@@ -17822,6 +17938,53 @@ Select this type to generate a random word for your username. Options for random
 
 - **Capitalize**: Capitalize your username.
 - **Include Number**: Include a 4-digit number in your username.
+---
+URL: https://bitwarden.com/help/generic-hec-integration/
+---
+# Generic HEC Integration
+
+Bitwarden provides comprehensive event logging capabilities for security information and event management (SIEM) solutions, enabling organizations to monitor credential management events alongside other activities. In addition to official integrations for popular SIEM solutions, the generic HEC integration works with any HTTP ingestion compatible SIEM platform. This article provides guidance for integrating Bitwarden with HEC solutions, similar to platforms such as Huntress, and Splunk.
+
+## Requirements
+
+To setup HTTP ingestion, you must:
+
+- Have a Bitwarden Teams or Enterprise organization.
+- Have an account with an HTTP ingestion-compliant platform set up.
+- Have administrative access to Bitwarden and your chosen event log monitoring platform.
+
+## Setup
+
+Integrating Bitwarden with HTTP ingestion will require setup procedures in both platforms. 
+
+### Set up HEC in your SIEM platform
+
+Before connecting from the Bitwarden app, generate the credentials that Bitwarden will use to send events to your SIEM monitoring platform. Review your chosen platform's documentation to locate the **HTTP Event Collector URL** and **HTTP Event Collector Token**.
+
+### Connect from Bitwarden
+
+Once you have your **HTTP Event Collector URL** and **HTTP Event Collector Token**, provide that information in your Bitwarden organization to complete setup:
+
+1. Log in to the Bitwarden web app and open the **Admin Console**.
+2. In the Admin Console, go to **Integrations → Event management**.
+3. Find the **Generic HEC** card and select **Connect**. The following table describes these credential values:
+
+![Generic HEC connection](https://bitwarden.com/assets/4u1j0QHvTP0ffQr4xe8tw3/ab6fdac6e2fcd069bc78b803252174e9/HEC-card.png)
+*Generic HEC connection*
+4. Enter your **HTTP Event Collector URL** and **HTTP Event Collector Token**.
+
+![Set up HEC](https://bitwarden.com/assets/D3QjBI9mp9H5YFQzctIx6/418d0ec7622d4fef644bdd056730c60c/2026-07-28_08-31-53.png)
+*Set up HEC*
+
+| Field | Description |
+|------|------|
+| **HTTP Event Collector URL** | The endpoint URL provided by your SIEM or logging platform for receiving event data over HTTP, including the port if required (for example, `https://<your-hec-endpoint>/services/collector`). |
+| **HTTP Event Collector Token** | The authentication token or API key generated by your SIEM or logging platform for this integration. Bitwarden includes this token with each request to authorize the connection. |
+
+## Additional resources
+
+- Learn more about what [events are surfaced](https://bitwarden.com/help/event-logs/) by Bitwarden.
+- Learn about Non-native [SIEM integrations](https://bitwarden.com/help/non-native-siem/).
 ---
 URL: https://bitwarden.com/help/get-to-know-password-manager/
 ---
@@ -19662,6 +19825,10 @@ Individual vaults can be purged from the **Settings** → **My account** page. O
 - Codebook (csv)
 - [Dashlane (json)](https://bitwarden.com/help/import-from-dashlane/)
 - [Dashlane (csv)](https://bitwarden.com/help/import-from-dashlane/)
+- Delinea (csv and xml)
+
+> [!NOTE] How Delinea import works
+> When importing secrets from Delinea Secret Server, any item with a URL associated with it will automatically take the Login item type. All other imported data will take the Secure Note type with custom fields to accommodate your data.
 - Edge (csv)
 - Encryptr (csv)
 - Enpass (csv)
@@ -25232,7 +25399,7 @@ Once in the client's Admin Console you can fully administer the client organizat
 
 | **Task** | **Description** | **Resources** |
 |------|------|------|
-| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-users/) |
+| Add and remove users | Onboard and offboard users from Bitwarden as they join and leave the customers' organization. | [User onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) [User offboarding](https://bitwarden.com/help/managing-users/#remove-members/) |
 | Change user permissions | When end-users change roles, change their permissions as appropriate. | [User types and access control](https://bitwarden.com/help/user-types-access-control/) |
 | Add and remove user seats | As the customers' business grows, manage the number of user seats for the client organization. | [Manage user seats](https://bitwarden.com/help/provider-billing/) |
 | Reset users' master passwords | If enabled, use Account Recovery reset to recover end-user accounts if they forget their master password. | [Account Recovery](https://bitwarden.com/help/account-recovery/) |
@@ -25264,7 +25431,7 @@ To get to the **Devices**list:
 - In the web app, navigate to **Settings** → **Security** → **Devices**.
 - In browser extensions, navigate to **Settings** → **Account security** → **Devices**.
 - In desktop apps, use the menu bar to navigate to **Account** → **Devices**.
-- In the Android mobile app, navigate to **Account Security** → **Devices**.
+- In mobile apps, navigate to **Account Security** → **Devices**.
 
 In the **Devices**list, you'll see one row per device that contains the following:
 
@@ -25672,16 +25839,15 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Open the item you want to archive and select the **Archive** button:
+1. Select the items you wish to archive, then slect **Archive** on the action bar:
 
-![Archive vault item on desktop](https://bitwarden.com/assets/18fRqQqTtf91GtXuuGZN2B/afe417683249b06802fa03d2e5dbadd8/archive_desktop_old.png)
-
-[Embedded content]
+![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
+*Archive with the desktop app*
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive**.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
 
 ### CLI
 
@@ -25699,6 +25865,11 @@ Select the ⋮ options menu for the item and select 🗑️ **Delete**:
 
 ![Item options](https://bitwarden.com/assets/3OYHvfRCDy3OphkbEHIJEA/fa47beb671d6efc34a18d05daf630aff/webappnewtest3.png)
 *Item options*
+
+Delete multiple items using the action bar:
+
+![Delete multiple items](https://bitwarden.com/assets/7zvvNDdxoagjN3OIfutrxo/26c74435273fdcb156ec617830128c04/delete_bulk.png)
+*Delete multiple items*
 
 ### Browser extension
 
@@ -25720,6 +25891,11 @@ Select an item to open it and select the 🗑️ Delete icon:
 
 ![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/2ec594025ea37103c9cf0de93c41e9aa/2026-04-23_10-02-08-2.png)
 *Delete an item*
+
+Delete multiple items using the action bar:
+
+![Delete multiple items on desktop](https://bitwarden.com/assets/5OBKzVV9IS7fuym9g5gchb/cdc55f2efe045a9ab6f7fac939f813a6/bulk_delete_desktop.png)
+*Delete multiple items on desktop*
 
 ### CLI
 
@@ -25935,7 +26111,11 @@ The member list export includes the following information about each account:
 > [!TIP] Check collection access via Member access report
 > Enterprise organizations can review the [Member access report](https://bitwarden.com/help/reports/#member-access/) to learn which collection(s) members have access to, their level of permission within each assigned collection, and more.
 
-### Remove users
+### Update members' account email and name
+
+If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+
+### Remove members
 
 The **Members** page is also where you can withdraw someone from an organization. There are three methods:
 
@@ -27340,7 +27520,7 @@ URL: https://bitwarden.com/help/non-native-siem/
 ---
 # Non-native SIEM
 
-Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. This article provides guidance for integrating Bitwarden with those SIEM solutions, such as popular platforms like Datadog, etc. etc.
+Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. For some such solutions the [generic HEC integration](https://bitwarden.com/help/generic-hec-integration/) may be a suitable option, but for those that it is not this article can be used to plan alternative methods.
 
 ## Requirements
 
@@ -27996,9 +28176,11 @@ Once Alice is removed from your organization:
 
 #### Claimed member accounts
 
-When you claim a domain, any organization member accounts that have email addresses with a matching domain (e.g. `jdoe@mycompany.com`) will also be claimed by your organization. Claimed member accounts are functionality owned by the organization, meaning they can be outright deleted by organization administrators, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
+When you claim a domain, any organization member accounts that have email addresses with a matching domain (e.g. `jdoe@mycompany.com`) will also be claimed by your organization. Claimed member accounts are functionally owned by the organization, meaning organization administrators can outright delete the account, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
 
 ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+
+If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
 
 #### Administrative take-over
 
@@ -29350,9 +29532,12 @@ Cryptocurrency, such as Bitcoin, is accepted. You need to purchase [account cred
 
 Account credit lets you pay for your Bitwarden upgrade or subscription in advance. Purchase credits in your local currency through PayPal or cryptocurrency through BitPay. If you want to pay via account credit, make sure you purchase the account credits **before** upgrading or your renewal date. We'll deduct the upgrade or renewal cost from your account credit balance.
 
-To add credit to your account:
+To add account credit:
 
-1. Go to **Settings → Billing**.
+1. Depending on your subscription type:
+
+ - For Premium subscriptions, go to **Settings → Subscription**. Select the **Payment details** tab.
+ - For organization subscriptions, open the Admin console and go to **Billing → Payment details**.
 2. Select **Add credit**.
 3. Enter the total in USD that you'd like to purchase.
 4. Select **Submit**.
@@ -29874,13 +30059,16 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Send options
+### Manage Send
 
-Select **Turn on** and the **Always show member's email address with recipients when creating or editing a Send** option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
+Turn on **Manage Send** to control how members use Send. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
-### Remove Send
+Using Manage Send, organization admins can manage how members use Send, including:
 
-**Remove Send** prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text** and **File**.
+- **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [Email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [Password set by member](https://bitwarden.com/help/send-privacy/#send-passwords/).
+- **Enforce deletion date**: Use this policy to enforce a predetermined [Send lifespan](https://bitwarden.com/help/send-lifespan/#expiration-date/) for Sends created by members.
+- **Always show members' email address with recipients**: Enable this option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
 
 ### Remove export
 
@@ -29929,7 +30117,9 @@ Members of organizations using this policy will not be able to [log in with pass
 
 ### Require two-step login
 
-Turn on the **Require two-step login** policy to require members to use any two-step login method to access their vaults. If you are using an SSO or identity provider's 2FA functionality, you don't need to enable this policy. This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization.
+Turn on the **Require two-step login** policy to require members to use any two-step login method to access their vaults. If you are using an SSO or identity provider's 2FA functionality, you don't need to enable this policy. 
+
+This policy is enforced even for users who have only [accepted](https://bitwarden.com/help/managing-users/#accept/) invitation to your organization. Members who are onboarded after this policy is turned on will have [email two-step login](https://bitwarden.com/help/setup-two-step-login-email/) activated for them automatically.
 
 > [!NOTE] Require 2FA does not work with organization DUO
 > Organizations that have enabled [SSO](https://bitwarden.com/help/about-sso/) or [Duo](https://bitwarden.com/help/setup-two-step-login-duo/) for all members should not use this policy. Both SSO and organization Duo are enforced by the provider and will not satisfy the two-step login requirement that this policy enables.
@@ -30246,6 +30436,8 @@ This article contains frequently asked questions (FAQs) about general Bitwarden 
 Bitwarden will email a verification code to the specified email address. Check your inbox for the code and enter it into the **Code** text input displayed in your web vault to finalize the change. If you don't receive the verification code, check your spam folder. You can also whitelist `no-reply@bitwarden.com` to help ensure delivery in the future.
 
 When you change your email address, you should immediately logout of all Bitwarden apps you use, and log back in with the new credentials. Sessions using a "stale" email address will eventually be logged out.
+
+If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
 
 ### Q: What features are unlocked when I verify my email?
 
@@ -31352,6 +31544,30 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.8.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.0, Browser Extension 2026.8.0, Desktop 2026.8.0, Mobile 2026.8.0, and CLI 2026.8.0.) 
+
+#### Password Manager
+
+- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Fill assist for mobile apps**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
+- **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
+- **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
+
+> [!NOTE] How Delinea import works
+> When importing secrets from Delinea Secret Server, any item with a URL associated with it will automatically take the Login item type. All other imported data will take the Secure Note type with custom fields to accommodate your data.
+
+#### Admin Console
+
+- ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
+- **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/generic-hec-integration/).
+- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
+
+#### Self-host
+
+- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version 2.0.0 or earlier may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 
@@ -33492,6 +33708,120 @@ Use these templates after initial setup to drive engagement and ensure successfu
 > Don't let password frustration hold you back when the solution is literally one click away. Activate your account today and join the transformation.
 > 
 > Your IT Team
+---
+URL: https://bitwarden.com/help/rotate-identity-certificate-helm/
+---
+# Rotate a Helm Identity Certificate Password
+
+This article covers a **fixed vulnerability** for some [self-hosted Helm chart deployments](https://bitwarden.com/help/self-host-with-helm/) of the Bitwarden server. The issue was limited to specific installations meeting the criteria below:
+
+> [!WARNING] Helm cert rotation, who's required.
+> Rotation is **required** for deployments that meet **all of the following criteria:**
+> 
+> - You deployed with the `bitwarden/self-host` Helm chart.
+> - Your deployment was **first installed**on a chart version **earlier than**`2.0.0`.
+> - You use the default chart-generated certificate (`secrets.identityCertificate.generate: true`).
+
+## Background
+
+The Bitwarden Identity Server signs its access and refresh tokens with a PKCS#12 (`.pfx`) certificate. On the Helm chart, that certificate and its password are generated at install time and stored in two Kubernetes secrets.
+
+Chart versions before `2.0.0` had a defect that set the `.pfx` password to the fixed value `map[]` on every install. Because that value is public and identical everywhere, anyone who obtains your `identity.pfx` (via a backup, snapshot, support bundle, or pod access) can decrypt it and recover your token-signing private key.
+
+The defect is fixed in `2.0.0`+ (passwords are now per-install random values), but upgrading doesn't rotate an existing password — it's created once and preserved across upgrades. So if you first installed on a version earlier than `2.0.0`, your certificate keeps the `map[]` password **until you rotate it**, which when done re-encrypts the existing certificate with a new random password. 
+
+This has been fixed in versions above `2.0.0`, wherein the default chart-generated certificate now generates random passwords per installation. If you first installed the Bitwarden server using an earlier version of the Helm chart with the default certificate, **you must manually rotate**your certificate password as rotation is not a function of the upgrade process.
+
+Chart versions `2.3.0` and above include a detection check that will automatically halt an upgrade if your `.pfx` password is still the defective value.
+
+## Rotate your certificate password
+
+> [!NOTE] Helm Cert rotation, check for namespace
+> In all of the following sections, replace `<release>` and `<namespace>` with your values. If you are unsure of your release name or namespace, run `helm list -A` to list all Helm releases and their namespaces. 
+> 
+> You will also need:
+> 
+> - `kubectl` access to the cluster and namespace, with permission to read, delete, and create secrets and to restart deployments.
+> - `openssl` available locally.
+
+### Check your certificate password
+
+The criteria documented in the warning above can help you determine whether you are impacted, however if you'd like to confirm it yourself you can decode the stored certificate password:
+
+```plain text
+kubectl get secret <release>-identity-cert-password -n <namespace> -o jsonpath='{.data.globalSettings__identityServer__certificatePassword}' | base64 -d; echo
+```
+
+If the command returns `map[]`, you are affected and should begin this procedure as soon as possible. If the command returns a long, random alphanumeric string, your certificate already has a strong password and no action is needed.
+
+### What happens after you rotate
+
+Rotating the certificate password will involve a restart of the `identity` and `sso` pods, so expect a short interruption to sign-in and token refresh and plan to rotate during a specifically-flagged maintenance window or otherwise low-traffic window. Access tokens issued to your users will remain verifiable, meaning no unexpected sign-out should occur.
+
+### Recommended procedure
+
+The following procedure re-encrypts the existing certificate with a new password:
+
+1. Export your certificate, specifically the -identity-cert secret, from the cluster:
+
+```bash
+kubectl get secret <release>-identity-cert -n bitwarden -o jsonpath='{.data.identity\.pfx}' | base64 -d > identity.pfx
+```
+
+Once exported, check that the file is not empty:
+
+```bash
+wc -c < identity.pfx
+```
+
+A returned size of `0` would indicate that the secret or `identity.pfx` was not found, typically due to a typo in the secret name.
+2. Generate a new password and re-encrypt the certificate with your new password. The following three commands should be run **verbatim**, **independently**, and in the **same shell session**:
+
+```bash
+export NEW_PASSWORD=$(openssl rand -base64 24)
+openssl pkcs12 -in identity.pfx -out identity.pem -nodes -passin pass:'map[]'
+openssl pkcs12 -export -out identity-rotated.pfx -in identity.pem -passout env:NEW_PASSWORD
+```
+
+> [!NOTE] Warn: If step of helm cert password rotation fails
+> If this step fails because the certificate cannot be read, generate a replacement certificate using the following commands and load it into the `-identity-cert` and `-identity-cert-password` secrets (**Step 3**):
+> 
+> 
+> ```bash
+> openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout identity.key -out identity.crt -subj "/CN=Bitwarden IdentityServer" -days 10950
+> openssl pkcs12 -export -out ./identity/identity.pfx -inkey identity.key -in identity.crt -passout pass:<your-pfx-password>
+> ```
+> 
+> Be aware that implementing a **new certificate will invalidate every issued token**, meaning all users will be signed out and will need to log in again. Only do this if re-encrypting is not possible.
+3. Update the `-identity-cert` and `-identity-cert-password` secrets in-place:
+
+```bash
+kubectl create secret generic <release>-identity-cert -n bitwarden --from-file=identity.pfx=./identity-rotated.pfx --dry-run=client -o yaml | kubectl apply -f -
+kubectl create secret generic <release>-identity-cert-password -n bitwarden --from-literal=globalSettings__identityServer__certificatePassword="$NEW_PASSWORD" --dry-run=client -o yaml | kubectl apply -f -
+```
+
+Both commands should be expected to return a `resource secrets/... is missing the kubectl.kubernetes.io/last-applied-configuration annotation` warning, which can be ignored.
+4. Confirm that the new password secret now holds a new random value:
+
+```bash
+kubectl get secret <release>-identity-cert-password -n bitwarden -o jsonpath='{.data.globalSettings__identityServer__certificatePassword}' | base64 -d; echo
+```
+5. Restart the components that consume the certificate, meaning the `identity` and `sso` pods:
+
+```bash
+kubectl rollout restart deployment/<release>-identity -n bitwarden
+kubectl rollout restart deployment/<release>-sso -n bitwarden
+
+kubectl rollout status deployment/<release>-identity -n bitwarden
+kubectl rollout status deployment/<release>-sso -n bitwarden
+```
+6. Once both rollouts have completed successfully, delete the local working files. In particular, `identity.pem` must be deleted as it contains the unencrypted private key:
+
+```bash
+rm identity.pfx identity.pem identity-rotated.pfx
+```
+
+Once all steps are complete, you may continue with a `helm upgrade` as normal.
 ---
 URL: https://bitwarden.com/help/saml-adfs/
 ---
@@ -38857,11 +39187,10 @@ There are a few other ways to share an item:
 
 To share an existing item from the desktop app:
 
-1. In the **Vault**view, select the item you want to share and select **Assign to collections**:
+1. In the **Vault**view, select the item(s) you want to share and then select **Assign to collections** on the action bar:
 
-![Assign to collection desktop app](https://bitwarden.com/assets/3m51JpGDRG2oshNTgJwPYZ/ddd68ad6f703263aa652b39712c8a55e/assign_to_collections_desktop_old.png)
-
-[Embedded content]
+![Assign to collection on desktop](https://bitwarden.com/assets/1xswcoVXzvNiKuWhkRSSkS/b654f435182377846e35c4865bea2b68/Assign_to_collection_desktop.png)
+*Assign to collection on desktop*
 2. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.
@@ -41820,7 +42149,7 @@ There are two ways to assign a member role in the Admin Console:
 - When [inviting a new member](https://bitwarden.com/help/managing-users/#invite/), select a **Member role**.
 - To change an existing member's role, go to **Members** and select the person's name. Choose a **Member role** from the options that appear:
 
-![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a96f23b972fc9e954ac4860d3fb044d6/Edit_member_role.png)
+![Edit member role](https://bitwarden.com/assets/73zJ6ZvMNNLU8TyH0Xdhow/a4717139f8f49936768ec7f4a5efc595/Edit_member_role.png)
 *Edit member role*
 
 ## Default roles
@@ -42370,7 +42699,7 @@ When Bitwarden offers to autofill a login item with a [saved URI](https://bitwar
 
 The Bitwarden icon server provides the delivery endpoint for website icons. If you are using website icons on a device, Bitwarden will issue requests to `icons.bitwarden.net` for each login in your vault that has a URI that resembles a website (for example, `google.com` or `https://google.com`, but not `google` or `http://localhost`).
 
-The icon server is fronted with a CDN that caches the icons on Fastly nodes all around the world. Subsequent requests to the same icon will likely hit CDN caches instead of the icon server directly. Your requests may never actually hit Bitwarden's icon server because another Bitwarden user with the same website in their vault requested the icon before you.
+The icon server is fronted with a content delivery network (CDN) that caches the icons on Fastly nodes all around the world. Subsequent requests to the same icon will likely hit CDN caches instead of the icon server directly. Your requests may never actually hit Bitwarden's icon server because another Bitwarden user with the same website in their vault requested the icon before you.
 
 > [!NOTE] Icons not cached on self-host
 > If you are self-hosting Bitwarden, icons are* *not cached to a CDN. All requests will always hit your icon container directly.

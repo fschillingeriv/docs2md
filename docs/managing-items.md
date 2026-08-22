@@ -141,16 +141,15 @@ On mobile apps, select **Archive** from your vault filters in order to view your
 
 ### Desktop
 
-1. Open the item you want to archive and select the **Archive** button:
+1. Select the items you wish to archive, then slect **Archive** on the action bar:
 
-![Archive vault item on desktop](https://bitwarden.com/assets/18fRqQqTtf91GtXuuGZN2B/afe417683249b06802fa03d2e5dbadd8/archive_desktop_old.png)
-
-[Embedded content]
+![Archive with the desktop app](https://bitwarden.com/assets/kOYhUPQwYRL9Rm0SKwxsf/137b96d3023a21f04356a3fd8beb7f8b/desktop_archive.png)
+*Archive with the desktop app*
 2. Confirm your choice by selecting **Archive** in the dialogue.
 
 ##### Unarchive
 
-On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive**.
+On the desktop app, select **Archive** from your vault filters, select the item(s) to restore, and choose **Unarchive** from the action bar.
 
 ### CLI
 
@@ -168,6 +167,11 @@ Select the ⋮ options menu for the item and select 🗑️ **Delete**:
 
 ![Item options](https://bitwarden.com/assets/3OYHvfRCDy3OphkbEHIJEA/fa47beb671d6efc34a18d05daf630aff/webappnewtest3.png)
 *Item options*
+
+Delete multiple items using the action bar:
+
+![Delete multiple items](https://bitwarden.com/assets/7zvvNDdxoagjN3OIfutrxo/26c74435273fdcb156ec617830128c04/delete_bulk.png)
+*Delete multiple items*
 
 ### Browser extension
 
@@ -189,6 +193,11 @@ Select an item to open it and select the 🗑️ Delete icon:
 
 ![Delete an item](https://bitwarden.com/assets/1E8ieEw6639tLYAxe2HYir/2ec594025ea37103c9cf0de93c41e9aa/2026-04-23_10-02-08-2.png)
 *Delete an item*
+
+Delete multiple items using the action bar:
+
+![Delete multiple items on desktop](https://bitwarden.com/assets/5OBKzVV9IS7fuym9g5gchb/cdc55f2efe045a9ab6f7fac939f813a6/bulk_delete_desktop.png)
+*Delete multiple items on desktop*
 
 ### CLI
 

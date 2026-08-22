@@ -132,7 +132,11 @@ The member list export includes the following information about each account:
 > [!TIP] Check collection access via Member access report
 > Enterprise organizations can review the [Member access report](https://bitwarden.com/help/reports/#member-access/) to learn which collection(s) members have access to, their level of permission within each assigned collection, and more.
 
-### Remove users
+### Update members' account email and name
+
+If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+
+### Remove members
 
 The **Members** page is also where you can withdraw someone from an organization. There are three methods:
 
