@@ -274,7 +274,7 @@ To create a banner:
 
 1. Select the name of the policy, **Vault banner**.
 2. Check **Enable banner**.
-3. Enter your message in **Description**, up to 250 characters. (Hyperlinks are not currently supported.)
+3. Enter your message in **Description**, up to 250 characters. Hyperlinks are not currently supported.
 4. (Optional) Customize additional settings as desired:
 
  - Enter a **Header**.
