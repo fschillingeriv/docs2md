@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/non-native-siem/
 
 # Non-native SIEM
 
-Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. For some such solutions the [generic HEC integration](https://bitwarden.com/help/generic-hec-integration/) may be a suitable option, but for those that it is not this article can be used to plan alternative methods.
+Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. For some such solutions the [generic HEC integration](https://bitwarden.com/help/http-event-collector/) may be a suitable option, but for those that it is not this article can be used to plan alternative methods.
 
 ## Requirements
 
