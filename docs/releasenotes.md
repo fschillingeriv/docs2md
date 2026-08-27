@@ -50,7 +50,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Password Manager
 
 - ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
-- ⭐ **Fill assist for mobile apps**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
 - **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
 - **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
 
@@ -65,7 +64,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Self-host
 
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version 2.0.0 or earlier may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
+- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 
