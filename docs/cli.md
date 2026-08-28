@@ -461,43 +461,6 @@ bw list items --search github --folderid 9742101e-68b8-4a07-b5b1-9578b5f88e6f
 
 This command will search for items with the string `github` in the specified folder.
 
-### report
-
-The `report` command generates a report based on the contents of your vault:
-
-```bash
-bw report password-health [options]
-```
-
-The report command takes an object signifying the type of report to run as its argument and returns an array of objects as JSON. Currently, this command supports the `password-health` report. Reports will read decrypted vault data, so you'll need an active session key to use them.
-
-#### password-health
-
- The `password-health` argument evaluates the password of any login item that has one for weakness, reuse, and presence in a known data breach. [Non-login items](https://bitwarden.com/help/managing-items/#item-types/), logins with no associated password, and [items in the trash](https://bitwarden.com/help/managing-items/#items-in-the-trash/) are skipped. Each returned object in the JSON array will look like the following:
-
-```bash
-{
- "object": "password-health", #Always password-health
- "id": "0eb24d58-6qbe-438f-85c4-b38c10f4f256", #ID of the login item
- "name": "Netflix", #Name of the login item
- "passwordStrength": 0, #Strength score for this password, from 0 (weakest) to 4 (strongest)
- "reuseCount": 3, #Number of items in your vault that share this password, null if the password is unique
- "exposed": true, #Whether this password was found in a known data breach, true or false
- "exposedCount": 52372427, #Number of breaches this password was found in, null if the password was not found in a data breach
- "exposedError": null #null unless the breach check failed for this item
- },
-```
-
-> [!NOTE] CLI report, one request per login item
-> The breach check makes one request to Have I Been Pwned per login item and can take some time on large vaults, so the CLI writes a progress indicator to `stderr` while it runs. This will leave `stdout` as clean JSON that you can redirect to a file:
-> 
-> 
-> ```bash
-> bw report password-health > password-health.json
-> ```
-> 
-> You can also use the `--no-check-exposed` option to skip breach checks entirely, in which case the `password-health` process will make no network requests.
-
 ### delete
 
 The `delete` command deletes an object from your vault. `delete` takes **only an exact** `id` for its argument.

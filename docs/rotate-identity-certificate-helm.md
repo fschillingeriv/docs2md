@@ -21,7 +21,7 @@ Chart versions before `2.0.0` had a defect that set the `.pfx` password to the f
 
 The defect is fixed in `2.0.0`+ (passwords are now per-install random values), but upgrading doesn't rotate an existing password — it's created once and preserved across upgrades. So if you first installed on a version earlier than `2.0.0`, your certificate keeps the `map[]` password **until you rotate it**, which when done re-encrypts the existing certificate with a new random password. 
 
-This has been fixed in versions `2.0.0` and above, wherein the default chart-generated certificate now generates random passwords per installation. If you first installed the Bitwarden server using an earlier version of the Helm chart with the default certificate, **you must manually rotate**your certificate password as rotation is not a function of the upgrade process.
+This has been fixed in versions above `2.0.0`, wherein the default chart-generated certificate now generates random passwords per installation. If you first installed the Bitwarden server using an earlier version of the Helm chart with the default certificate, **you must manually rotate**your certificate password as rotation is not a function of the upgrade process.
 
 Chart versions `2.3.0` and above include a detection check that will automatically halt an upgrade if your `.pfx` password is still the defective value.
 
