@@ -8492,6 +8492,43 @@ bw list items --search github --folderid 9742101e-68b8-4a07-b5b1-9578b5f88e6f
 
 This command will search for items with the string `github` in the specified folder.
 
+### report
+
+The `report` command generates a report based on the contents of your vault:
+
+```bash
+bw report password-health [options]
+```
+
+The report command takes an object signifying the type of report to run as its argument and returns an array of objects as JSON. Currently, this command supports the `password-health` report. Reports will read decrypted vault data, so you'll need an active session key to use them.
+
+#### password-health
+
+ The `password-health` argument evaluates the password of any login item that has one for weakness, reuse, and presence in a known data breach. [Non-login items](https://bitwarden.com/help/managing-items/#item-types/), logins with no associated password, and [items in the trash](https://bitwarden.com/help/managing-items/#items-in-the-trash/) are skipped. Each returned object in the JSON array will look like the following:
+
+```bash
+{
+ "object": "password-health", #Always password-health
+ "id": "0eb24d58-6qbe-438f-85c4-b38c10f4f256", #ID of the login item
+ "name": "Netflix", #Name of the login item
+ "passwordStrength": 0, #Strength score for this password, from 0 (weakest) to 4 (strongest)
+ "reuseCount": 3, #Number of items in your vault that share this password, null if the password is unique
+ "exposed": true, #Whether this password was found in a known data breach, true or false
+ "exposedCount": 52372427, #Number of breaches this password was found in, null if the password was not found in a data breach
+ "exposedError": null #null unless the breach check failed for this item
+ },
+```
+
+> [!NOTE] CLI report, one request per login item
+> The breach check makes one request to Have I Been Pwned per login item and can take some time on large vaults, so the CLI writes a progress indicator to `stderr` while it runs. This will leave `stdout` as clean JSON that you can redirect to a file:
+> 
+> 
+> ```bash
+> bw report password-health > password-health.json
+> ```
+> 
+> You can also use the `--no-check-exposed` option to skip breach checks entirely, in which case the `password-health` process will make no network requests.
+
 ### delete
 
 The `delete` command deletes an object from your vault. `delete` takes **only an exact** `id` for its argument.
@@ -17214,16 +17251,13 @@ URL: https://bitwarden.com/help/fill-assist/
 ---
 # Fill Assist
 
-Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension and mobile app can use to determine how to autofill credentials.
+Fill assist **improves autofill accuracy on a Bitwarden-curated selection of websites**, those known to widely cause autofill issues for users, by providing human-written and reviewed instructions that your browser extension can use to determine how to autofill credentials.
 
 Often, websites cause autofill issues because they deviate from a widely-adopted set of norms found in the code for login or account creation forms. Fill assist solves this problem by allowing Bitwarden to identify sites that behave differently and create custom instructions for how browser extensions should autofill on those sites.
 
 ## Turn on fill assist
 
-Fill assist can be turned on:
-
-- For Bitwarden browser extensions, from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later.
-- For Bitwarden mobile apps, from the **Settings** → **Autofill**menu and is available for all users on version 2026.8.0 or later.
+Fill assist can be turned on for Bitwarden browser extensions from the **Settings** → **Autofill** menu and is available for all users on version 2026.6.0 or later. 
 
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
@@ -17235,13 +17269,13 @@ Because fill assist is one method for facilitating easier autofill, [custom fiel
 Powered by the [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
 
 - **Supported sites**: Fill assist only steps in when the site you're browsing is included in the maps; typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
-- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs Bitwarden to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
+- **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
 - **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
 
-Those maps are retrieved by your client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
+Those maps are retrieved by your browser extension client on every sync or every 6 hours in order to keep up-to-date with the latest fill assist instructions. As a result, there are two key things to note:
 
-- **Data privacy**: Once retrieved, your client stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
-- **Independent of client release**: Because the client recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
+- **Data privacy**: Once retrieved, your browser extension stores this file locally so that **no data needs to be or is sent to Bitwarden** when an autofill action uses a fill assist.
+- **Independent of client release**: Because the browser extension recurrently retrieves the latest map, you won't need to wait for a client release in order for a new or updated instruction to take effect.
 
 ### Report an issue
 
@@ -19240,6 +19274,53 @@ services:
  options:
  syslog-address: tcp://192.168.0.42:123
 ```
+---
+URL: https://bitwarden.com/help/http-event-collector/
+---
+# Generic HEC Integration
+
+Bitwarden provides comprehensive event logging capabilities for security information and event management (SIEM) solutions, enabling organizations to monitor credential management events alongside other activities. In addition to official integrations for popular SIEM solutions, the generic HEC integration works with any HTTP ingestion compatible SIEM platform. This article provides guidance for integrating Bitwarden with HEC solutions, similar to platforms such as Huntress, and Splunk.
+
+## Requirements
+
+To setup HTTP ingestion, you must:
+
+- Have a Bitwarden Teams or Enterprise organization.
+- Have an account with an HTTP ingestion-compliant platform set up.
+- Have administrative access to Bitwarden and your chosen event log monitoring platform.
+
+## Setup
+
+Integrating Bitwarden with HTTP ingestion will require setup procedures in both platforms. 
+
+### Set up HEC in your SIEM platform
+
+Before connecting from the Bitwarden app, generate the credentials that Bitwarden will use to send events to your SIEM monitoring platform. Review your chosen platform's documentation to locate the **HTTP Event Collector URL** and **HTTP Event Collector Token**.
+
+### Connect from Bitwarden
+
+Once you have your **HTTP Event Collector URL** and **HTTP Event Collector Token**, provide that information in your Bitwarden organization to complete setup:
+
+1. Log in to the Bitwarden web app and open the **Admin Console**.
+2. In the Admin Console, go to **Integrations → Event management**.
+3. Find the **Generic HEC** card and select **Connect**. The following table describes these credential values:
+
+![Generic HEC connection](https://bitwarden.com/assets/4u1j0QHvTP0ffQr4xe8tw3/ab6fdac6e2fcd069bc78b803252174e9/HEC-card.png)
+*Generic HEC connection*
+4. Enter your **HTTP Event Collector URL** and **HTTP Event Collector Token**.
+
+![Set up HEC](https://bitwarden.com/assets/D3QjBI9mp9H5YFQzctIx6/418d0ec7622d4fef644bdd056730c60c/2026-07-28_08-31-53.png)
+*Set up HEC*
+
+| Field | Description |
+|------|------|
+| **HTTP Event Collector URL** | The endpoint URL provided by your SIEM or logging platform for receiving event data over HTTP, including the port if required (for example, `https://<your-hec-endpoint>/services/collector`). |
+| **HTTP Event Collector Token** | The authentication token or API key generated by your SIEM or logging platform for this integration. Bitwarden includes this token with each request to authorize the connection. |
+
+## Additional resources
+
+- Learn more about what [events are surfaced](https://bitwarden.com/help/event-logs/) by Bitwarden.
+- Learn about Non-native [SIEM integrations](https://bitwarden.com/help/non-native-siem/).
 ---
 URL: https://bitwarden.com/help/huntress-siem/
 ---
@@ -25783,7 +25864,7 @@ Select the ⋮ options menu for the item you want to edit and select **Edit**:
 
 ### Desktop
 
-Select an item to open it and select the [pencil] edit icon:
+Select an item to open it and select the [pencil] **Edit icon**:
 
 ![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/63bbce3c7f3e0f99d6c0783c0b367a16/2026-04-23_10-02-08.png)
 *Edit an item*
@@ -27520,7 +27601,7 @@ URL: https://bitwarden.com/help/non-native-siem/
 ---
 # Non-native SIEM
 
-Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. For some such solutions the [generic HEC integration](https://bitwarden.com/help/generic-hec-integration/) may be a suitable option, but for those that it is not this article can be used to plan alternative methods.
+Bitwarden provides comprehensive event logging capabilities that enable integration with Security Information and Event Management (SIEM) platforms beyond the solutions for which official integrations are offered. For some such solutions the [generic HEC integration](https://bitwarden.com/help/http-event-collector/) may be a suitable option, but for those that it is not this article can be used to plan alternative methods.
 
 ## Requirements
 
@@ -31552,7 +31633,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Password Manager
 
 - ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
-- ⭐ **Fill assist for mobile apps**: Activate [fill assist](https://bitwarden.com/help/fill-assist/) to improve autofill accuracy on a Bitwarden-curated selection of websites known to cause widespread autofill issues.
 - **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
 - **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
 
@@ -31562,12 +31642,12 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 #### Admin Console
 
 - ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
-- ⭐ **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/generic-hec-integration/).
+- ⭐ **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/http-event-collector/).
 - ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
 
 #### Self-host
 
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version 2.0.0 or earlier may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
+- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 
@@ -33730,7 +33810,7 @@ Chart versions before `2.0.0` had a defect that set the `.pfx` password to the f
 
 The defect is fixed in `2.0.0`+ (passwords are now per-install random values), but upgrading doesn't rotate an existing password — it's created once and preserved across upgrades. So if you first installed on a version earlier than `2.0.0`, your certificate keeps the `map[]` password **until you rotate it**, which when done re-encrypts the existing certificate with a new random password. 
 
-This has been fixed in versions above `2.0.0`, wherein the default chart-generated certificate now generates random passwords per installation. If you first installed the Bitwarden server using an earlier version of the Helm chart with the default certificate, **you must manually rotate**your certificate password as rotation is not a function of the upgrade process.
+This has been fixed in versions `2.0.0` and above, wherein the default chart-generated certificate now generates random passwords per installation. If you first installed the Bitwarden server using an earlier version of the Helm chart with the default certificate, **you must manually rotate**your certificate password as rotation is not a function of the upgrade process.
 
 Chart versions `2.3.0` and above include a detection check that will automatically halt an upgrade if your `.pfx` password is still the defective value.
 

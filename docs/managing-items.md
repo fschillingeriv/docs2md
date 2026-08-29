@@ -85,7 +85,7 @@ Select the ⋮ options menu for the item you want to edit and select **Edit**:
 
 ### Desktop
 
-Select an item to open it and select the [pencil] edit icon:
+Select an item to open it and select the [pencil] **Edit icon**:
 
 ![Edit an item](https://bitwarden.com/assets/6Y4kK7J9aLmo9SDY7Ne8VE/63bbce3c7f3e0f99d6c0783c0b367a16/2026-04-23_10-02-08.png)
 *Edit an item*
