@@ -27802,7 +27802,7 @@ Select **Security** → **API** from the navigation. From the **Authorization Se
 
 ![Okta Authorization Server Settings ](https://bitwarden.com/assets/7hUKbE9s9HGJUwbqC2W36u/11cee32a7b469a662ae35b9c3cc1a2ba/okta-authserver.png)
 
-You will need to use both values [during the next step](https://bitwarden.com/help/oidc-okta/#back-to-the-web-vault/).
+You will need to use derivations of these values [during the next step](https://bitwarden.com/help/oidc-okta/#back-to-the-web-vault/).
 
 ## Back to the web app
 
@@ -27810,10 +27810,10 @@ At this point, you have configured everything you need within the context of the
 
 | **Field** | **Description** |
 |------|------|
-| Authority | Enter the [retrieved Issuer URI](https://bitwarden.com/help/oidc-okta/#get-authorization-server-information/) for your Authorization Server. |
+| Authority | Enter the URL of the Okta app (your [retrieved Issuer URI](https://bitwarden.com/help/oidc-okta/#get-authorization-server-information/), without `/oauth2/default`), for example `https://my-app.okta.com`. |
 | Client ID | Enter the [retrieved Client ID](https://bitwarden.com/help/oidc-okta/#get-client-credentials/) for your Okta app. |
 | Client Secret | Enter the [retrieved Client secret](https://bitwarden.com/help/oidc-okta/#get-client-credentials/) for your Okta app. |
-| Metadata Address | Enter the [retrieved Metadata URI](https://bitwarden.com/help/oidc-okta/#get-client-authorization-server-information/) for your Authorization Server. |
+| Metadata Address | Enter the URL of the Okta app (see **Row 1**) with `.well-known/openid-configuration` appended, for example `https://my-app.okta.com/``.well-known/openid-configuration.` |
 | OIDC Redirect Behavior | Select **Redirect GET**. Okta currently does not support Form POST. |
 | Get Claims From User Info Endpoint | Enable this option if you receive URL too long errors (HTTP 414), truncated URLS, and/or failures during SSO. |
 | Additional/Custom Scopes | Define custom scopes to be added to the request (comma-delimited). |
@@ -30345,7 +30345,6 @@ Turn on the **Automatic user confirmation** policy to automatically confirm memb
 Turn on the **Vault banner** policy to share important messages with your organization's members, such as system announcements or security reminders. The banner appears at the top of the vault in the web app, browser extension, and desktop app:
 
 ![Vault banner](https://bitwarden.com/assets/7y6HtjE0nXjfQc11xR1Lf4/659399cb76287cbd359313bdc96cc9b7/b31491d1-7e1d-4b0b-945d-cf5a05ef80a2.png)
-*Vault banner*
 
 To create a banner:
 

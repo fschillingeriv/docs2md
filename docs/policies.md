@@ -268,7 +268,6 @@ Turn on the **Automatic user confirmation** policy to automatically confirm memb
 Turn on the **Vault banner** policy to share important messages with your organization's members, such as system announcements or security reminders. The banner appears at the top of the vault in the web app, browser extension, and desktop app:
 
 ![Vault banner](https://bitwarden.com/assets/7y6HtjE0nXjfQc11xR1Lf4/659399cb76287cbd359313bdc96cc9b7/b31491d1-7e1d-4b0b-945d-cf5a05ef80a2.png)
-*Vault banner*
 
 To create a banner:
 

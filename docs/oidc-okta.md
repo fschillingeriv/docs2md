@@ -55,7 +55,7 @@ Select **Security** → **API** from the navigation. From the **Authorization Se
 
 ![Okta Authorization Server Settings ](https://bitwarden.com/assets/7hUKbE9s9HGJUwbqC2W36u/11cee32a7b469a662ae35b9c3cc1a2ba/okta-authserver.png)
 
-You will need to use both values [during the next step](https://bitwarden.com/help/oidc-okta/#back-to-the-web-vault/).
+You will need to use derivations of these values [during the next step](https://bitwarden.com/help/oidc-okta/#back-to-the-web-vault/).
 
 ## Back to the web app
 
@@ -63,10 +63,10 @@ At this point, you have configured everything you need within the context of the
 
 | **Field** | **Description** |
 |------|------|
-| Authority | Enter the [retrieved Issuer URI](https://bitwarden.com/help/oidc-okta/#get-authorization-server-information/) for your Authorization Server. |
+| Authority | Enter the URL of the Okta app (your [retrieved Issuer URI](https://bitwarden.com/help/oidc-okta/#get-authorization-server-information/), without `/oauth2/default`), for example `https://my-app.okta.com`. |
 | Client ID | Enter the [retrieved Client ID](https://bitwarden.com/help/oidc-okta/#get-client-credentials/) for your Okta app. |
 | Client Secret | Enter the [retrieved Client secret](https://bitwarden.com/help/oidc-okta/#get-client-credentials/) for your Okta app. |
-| Metadata Address | Enter the [retrieved Metadata URI](https://bitwarden.com/help/oidc-okta/#get-client-authorization-server-information/) for your Authorization Server. |
+| Metadata Address | Enter the URL of the Okta app (see **Row 1**) with `.well-known/openid-configuration` appended, for example `https://my-app.okta.com/``.well-known/openid-configuration.` |
 | OIDC Redirect Behavior | Select **Redirect GET**. Okta currently does not support Form POST. |
 | Get Claims From User Info Endpoint | Enable this option if you receive URL too long errors (HTTP 414), truncated URLS, and/or failures during SSO. |
 | Additional/Custom Scopes | Define custom scopes to be added to the request (comma-delimited). |
