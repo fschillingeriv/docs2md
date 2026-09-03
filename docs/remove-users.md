@@ -24,7 +24,7 @@ To remove members from your organization:
 > [!TIP] Remove is Delete, if you're a Claimed Domain
 > If your organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/) and the user's account email address matches your claimed domain, **Remove** is not listed. Instead, you can select **Delete** to [delete the account permanently](https://bitwarden.com/help/delete-member-accounts/), effectively removing the user’s access to the organization:
 > 
-> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 
 Offline devices cache a read-only copy of data, including organization items. Some clients may retain access to this read-only data for a short time after a member is removed. If you anticipate malicious exploitation of this, update credentials the member had access to when you remove them from the organization.
 

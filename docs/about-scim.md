@@ -20,6 +20,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Set up SCIM
