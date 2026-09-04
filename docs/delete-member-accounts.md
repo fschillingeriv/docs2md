@@ -18,7 +18,7 @@ You may be able delete a member's account using one of the following methods:
 
 - If you have a [claimed domain](https://bitwarden.com/help/claimed-domains/), any users with account email addresses that have a matching domain (e.g. `jdoe@mycompany.com`) can be outright deleted by organization administrators:
 
-![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
+![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
 - If you are self-hosting Bitwarden, an authorized administrator can delete the account from the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/).
 - If the account has an `@yourcompany.com` email address that your company controls, you can use [this procedure](https://bitwarden.com/help/delete-your-account/#tab-without-logging-in-4KcOdFa6zVp6H7xo9Ui9vc/) to initiate and confirm deletion within the `@yourcompany.com` inbox.
 

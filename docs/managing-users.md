@@ -12,7 +12,6 @@ Add and manage your organization members to ensure the right people have access 
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
-> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Add new members
@@ -24,89 +23,34 @@ To ensure the security of your organization, Bitwarden applies a three-step proc
 > [!TIP] Enterprise policy before inviting users
 > For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization. Once users have entered the [accept](https://bitwarden.com/help/managing-users/#accept/) state, they will be subject to organization policies.
 
-Choose a method to invite a user to your organization:
-
-### Email invite
+To invite someone to your organization:
 
 1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
 *Product switcher*
-2. Navigate to **Members** and select + **Invite member**:
+2. Navigate to **Members** and select + **Invite User**:
 
 ![Invite member to an organization](https://bitwarden.com/assets/7AJjR4oqEnCH3A89YYoWpH/498d594fa9703bee9c5f49e2af9f83d0/Invite_member_to_an_organization.png)
 *Invite member to an organization*
-3. Select the By email tab:
+3. On the Invite user panel:
 
  - Enter the **Email** address where new users should receive invites. You can add multiple users at a time by comma-separating email addresses.
  - Select the **Member role** to be applied to new users. [Member role](https://bitwarden.com/help/user-types-access-control/) will determine what permissions these users will have at an organizational level.
  - In the **Groups**tab, select which [groups](https://bitwarden.com/help/about-groups/) to add this user to.
- - In the **Collections**tab, select collections to give this user access to and what [permissions](https://bitwarden.com/help/user-types-access-control/#permissions/) they should have to each collection.
+ - In the **Collections**tab, select collects to give this user access to and what [permissions](https://bitwarden.com/help/user-types-access-control/#permissions/) they should have to each collection.
 4. Click **Save** to invite the designated users to your organization.
 
-### Invite by link
-
-Enterprise organizations can generate a shareable invite link that anyone with the URL can use to request to join the organization, provided their email domain is on the link's allowed list. This lets administrators distribute invites through their preferred communication channels such as Slack or Teams messages, instead of relying on individual emails sent from Bitwarden.
-
-![Copy link](https://bitwarden.com/assets/TFK2JVOdL4WqjCk4xtQEi/c57df92f2d832569b9d63dcbb084aaec/edited_copy_link.png)
-*Copy link*
-
-Valid invite links will consist of the following structure:
-
-```plain text
-https://vault.bitwarden.com/#/join/{inviteLinkCode}?key={inviteKey}
-```
-
-To generate an invite link:
-
-1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
-
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-*Product switcher*
-2. Navigate to **Members** and select + **Invite member**:
-
-![Invite member to an organization](https://bitwarden.com/assets/7AJjR4oqEnCH3A89YYoWpH/498d594fa9703bee9c5f49e2af9f83d0/Invite_member_to_an_organization.png)
-*Invite member to an organization*
-3. Choose the **By link** tab.
-4. Enter one or more **Allowed domains**. While using invite links:
-
- - Only email addresses on these domains can use the link to join.
- - At least one domain must always be present, you cannot generate an unrestricted link.
-
- - Allowed domains provide additional security to links. You should only allow trusted domains. Broad domains such as gmail.com are not recommended.
- - Removing allowed domains or generating a new link will invalidate previously generated links.
- - If the organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/), the claimed domain will be pre-populated in the field.
-
-> [!NOTE] Restrict link domain
-> **Allowed** domains provide more control over who is able to attempt to join your organization. Additionally, please note that allowed domains are a different mechanism than **Claimed domains**. If your organization has a claimed domain, it will be automatically populated in the allowed domains for the first link generated.
-5. Select **Copy link** and share through your preferred channel.
-
-> [!NOTE] To accept invite link
-> In order to accept an invite link, a member's email address must be verified. Cloud accounts will be typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
-
-#### Refresh or restrict a link
-
-The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one. Removing every domain from the allowed list also invalidates the link.
-
-> [!NOTE] invite link for enterprise users
-> Invite links are available for Enterprise organizations. If your organization was downgraded from Enterprise, existing links will no longer work and the **By link** tab will be unavailable.
-
 > [!NOTE] Invitations expire
-> **Email invitations expire after five days**, at which point the member will need to be re-invited. Re-invite members in bulk by selecting each member and using the ⋮ **Options icons**to select **Resend invitations**:
+> **Invitations expire after five days**, at which point the member will need to be re-invited. Re-invite members in bulk by selecting each member and using the ⋮ **Options icons**to select **Resend invitations**:
 > 
 > 
 > ![Resend invitations in bulk](https://bitwarden.com/assets/1yj3MLJDTr7zOn5TwP0FGJ/67a16c6ee6ee14a92aa350986244e164/Resend_invitations.png)
 > *Resend invitations in bulk*
 > 
 > If you're self-hosting Bitwarden, you can configure the invitation expiration period [using an environment variable](https://bitwarden.com/help/environment-variables/).
-> 
-> **Link invitations** will not expire unless the allowed domain has been removed, the link has been rotated, or the link is deactivated.
 
 ### Accept
-
-In order for a user to accept an organization invite:
-
-### Email invite
 
 Invited users will receive an email from Bitwarden inviting them to join the organization. Clicking the link in the email will open the Bitwarden web app, where the user can log in or create an account to accept the invitation:
 
@@ -114,28 +58,6 @@ Invited users will receive an email from Bitwarden inviting them to join the org
 *Organization invitation*
 
 You must **fully log in to the Bitwarden web app** to accept the invitation. When you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. Additionally, organization members will have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when they accept an invitation.
-
-### Link invite
-
-Invited users will receive a link through organization administrator's preferred method, such as email, Slack, Teams, etc. Once users have verified that the link is from a reliable source, clicking the link will redirect them to the organization invitation:
-
-![Open organization invite link](https://bitwarden.com/assets/3L7jnjSHjQpjVkhCwbkC5j/b309ddcd2bc75cac1d6a64a4d423da66/join_invite_link.png)
-*Open organization invite link*
-
-To join the organization:
-
-- **New users**: Complete the fields shown in the dialogue to create a new Bitwarden account.
-- **Existing users**: Select **Log in** located under the create account dialogue. Existing users must have an [email verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) account in order to accept an organization invitation.
-
-Once you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. 
-
-> [!NOTE] Link failure checklist
-> The email address used to log in or create a new account while accepting an invite link will be verified against the organization's list of allowed domains. If using the link is unsuccessful, check:
-> 
-> - The address domain is a match to the organization's list of allowed domains.
-> - The administrators have not deleted, rotated, or deactivated the link.
-> - Your existing Bitwarden account is compliant with organization policies such as [Single organization](https://bitwarden.com/help/policies/#single-organization/).
-> - You have not previously accepted an invitation to join this organization.
 
 > [!NOTE] Accepted status require compliance
 > The following policies will require compliance before users can be [confirmed](https://bitwarden.com/help/managing-users/#confirm/). These policies include:
@@ -164,7 +86,7 @@ To confirm accepted invitations into your organization:
 Each fingerprint phrase is unique to its account, and ensures a final layer of oversight in securely adding users. If they match, select **Submit**.
 
 > [!NOTE] Clear cache and cookie to restore fingerprint phrase prompt
-> If **Never prompt to verify fingerprint phrases** has been toggled on, fingerprint phrase verification can be reactivated by clearing the browser cache and cookies.
+> If **Never prompt to verify fingerprint phrases** has been toggled on, fingerprint phrase verification be reactivated by clearing the browser cache and cookies.
 
 ## Manage existing members
 

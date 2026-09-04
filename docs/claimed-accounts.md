@@ -16,7 +16,7 @@ Claimed member accounts can be outright deleted by organization administrators, 
 > [!NOTE] Learn how to delete claimed accounts
 > Claimed accounts can be deleted from the Admin Console's **Members** page using the ⋮ options menu:
 > 
-> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
+> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
 > 
 > Members of your organization that do not have claimed accounts can only be **Removed** from the organization instead.
 

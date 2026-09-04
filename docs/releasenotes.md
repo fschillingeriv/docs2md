@@ -43,19 +43,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
-## 2026.8.1
-
-(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.1, and Mobile 2026.8.1)
-
-#### Password Manager
-
-- ⭐ **Quick copy from web app**: A new setting displays copy shortcut buttons on vault items when you hover over them in the web app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
-- ⭐ **"New" buttons renamed to "Add" or "Create"**: The New button is now + **Add** in most locations, including when [adding a new vault item](https://bitwarden.com/help/managing-items/#add-items/), and to + **Create** when configuring a [Send](https://bitwarden.com/help/create-send/#create-a-send/). This is a cosmetic update only; there are no changes to functionality.
-
-#### Admin Console
-
-- ⭐ **Generate organization invite link**: Enterprise organizations can now generate a shareable link to [invite members](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/). Share the link through your organization's preferred communication channel, and restrict it to specific email domains to control who can use it. Rotate the link at any time to invalidate the previous one, or deactivate it to stop new members from joining.
-
 ## 2026.8.0
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.0, Browser Extension 2026.8.0, Desktop 2026.8.0, Mobile 2026.8.0, and CLI 2026.8.0.) 

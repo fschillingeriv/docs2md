@@ -87,7 +87,7 @@ Once the new device becomes trusted, all you'll need to do to log in to Bitwarde
 
 The initial client used to access Bitwarden for users who were invited with Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/) will become their first trusted device. If the initial client accessed is the Bitwarden desktop or mobile app, this device can be used to approve additional devices.
 
-For the desktop or mobile app to become the first trusted device, the user should not use the link provided in the emailed invitiation. Instead, open the mobile or desktop app and select the **Enterprise single sign-on** option to begin the JIT process.
+For the desktop or mobile app to become the first trusted device, the user should not use the organization invite link. Instead, open the mobile or desktop app and select the **Enterprise single sign-on** option to begin the JIT process.
 
 ## Remove a trusted device
 

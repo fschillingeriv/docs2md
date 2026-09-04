@@ -51,41 +51,6 @@ Select the + **New** button and choose the item type to create:
 
 Use the `create` command to add a new item. Refer to the [CLI documentation](https://bitwarden.com/help/cli/) for more information.
 
-## Copy item credentials
-
-To copy an item's details:
-
-### Web app
-
-Hover over an item and select the [clone] **Copy icon** that appears next to an item. A menu will then appear where you select **Copy username** or **Copy password**:
-
-![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/db8893edf1915ee8bade94075fa5bf2d/Copy_item.png)
-*Copy in web app*
-
-You can also go to **Settings** → **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
-
-![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/76fe8821f920a53e2ef3420a0f8ea591/Quick_copy_in_web_app.png)
-*Quick copy in web app*
-
-### Browser extension
-
-Several [autofill methods](https://bitwarden.com/help/auto-fill-browser/) are available in the Bitwarden browser extension, including a [copy button](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/).
-
-### Mobile
-
-You can autofill your items using the [iOS app](https://bitwarden.com/help/auto-fill-ios/) and the [Android app](https://bitwarden.com/help/auto-fill-android/).
-
-### Desktop
-
-Open an item and select the [clone] **Copy icon** next to a field:
-
-![Copy credential on desktop](https://bitwarden.com/assets/7KlGYgWWe0BdkY5UQFerwN/91cca24b2fc1c6bb6a0ea138bad05f0d/Copy_credential_on_desktop.png)
-*Copy credential on desktop*
-
-### CLI
-
-Use the `get` command to retrieve an object, like a username or password. Refer to the [CLI documentation](https://bitwarden.com/help/cli/#get/) for more information.
-
 ## Manage items
 
 You can manage your vault items from any Bitwarden app:

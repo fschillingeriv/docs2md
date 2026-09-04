@@ -40,7 +40,7 @@ If you're part of an Enterprise organization, your administrator might also be a
 
 ### Q: What features are unlocked when I verify my email?
 
-**A**: When you verify your email address, you'll unlock the ability to [create file Sends](https://bitwarden.com/help/create-send/) (provided you also have access to premium features). Emails addresses must also be verified in order to accept an organization [invite link](https://bitwarden.com/help/managing-users/#invite-by-link/).
+**A**: When you verify your email address, you'll unlock the ability to [create file Sends](https://bitwarden.com/help/create-send/) (provided you also have access to premium features).
 
 ### Q: Why is a vault item missing from my mobile app, desktop app, or browser extension?
 
@@ -124,7 +124,7 @@ To purge an organization vault you must be an [organization owner](https://bitwa
 
 ### Q: Does Bitwarden manage in-browser browser extensions on Android mobile?
 
-**A:** No, these extensions are not officially supported by Bitwarden, and as of 2026.1 they are known to no longer work. Android users should use the Bitwarden [mobile app](https://bitwarden.com/help/getting-started-mobile/) for their officially supported password manager client.
+**A:** There are Bitwarden browser extension available in the Firefox and Edge browsers on Android mobile devices. However, these extensions are not officially supported by Bitwarden, and the team is aware that some functionality in this client is known to not work correctly. Android users may prefer to use the Bitwarden [mobile app](https://bitwarden.com/help/getting-started-mobile/) for an officially supported password manager client.
 
 ### Q: Does Bitwarden have any settings that can be adjusted for graphics or performance?
 

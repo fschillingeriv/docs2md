@@ -160,7 +160,7 @@ Organizations must choose [between US or EU cloud server](https://bitwarden.com/
 
 **New customers **
 
-- Begin with centralized ownership by enabling the **Centralize organization ownership**policy from day one and start managing the entire credential lifecycle across applications. 
+- Begin with centralized ownership by enabling the **Enforce organization data ownership**policy from day one and start managing the entire credential lifecycle across applications. 
 - Every user (excepting admins and owners at this time) receives an organization-owned **My items** space for seamless, day-to-day work
 - All credentials are organization-owned, with reporting benefits built in
 - Simplify employee transitions, so credentials follow the person’s role changes and can be seamlessly reassigned when responsibilities shift. 
@@ -500,7 +500,7 @@ Copy and paste this list directly into your project management tools, internal d
 
 Important note on the invitation and re-invitation process: Invite users after enterprise policies are configured and the core admin team has onboarded. This ensures new members are immediately subject to your organization’s security and usage standards.
 
-Users automatically receive an email invitation when provisioned via SCIM or Directory Connector. For phased rollouts, coordinate with your IT or email team to deliver invite links, or filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard.  After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
+Users automatically receive an email invitation when provisioned via SCIM or Directory Connector. For phased rollouts, coordinate with your IT or email team to filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard.  After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
 
 Invitations expire after 7 days. Users still showing as Invited after several days may need IT follow-up to ensure adoption. Admins can also trigger a Reinvite, which sends a fresh invitation email as a reminder to join the organization.
 

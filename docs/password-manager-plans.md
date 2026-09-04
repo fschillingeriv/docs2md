@@ -118,7 +118,6 @@ In the following table, "premium features" (included for **Teams organizations**
 | [Custom management role](https://bitwarden.com/help/user-types-access-control/) | - | ✓ |
 | [Families sponsorship for members](https://bitwarden.com/help/families-for-enterprise/) | - | ✓ |
 | [SCIM integrations](https://bitwarden.com/help/about-scim/) | ✓ | ✓ |
-| [Organization invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) | - | ✓ |
 | Price | [Billed per user](https://bitwarden.com/pricing/business/) | [Billed per user](https://bitwarden.com/pricing/business/) |
 
 ## Self-hosted organizations
