@@ -61,15 +61,18 @@ Select **Provisioning**from the navigation and complete the following steps:
 5. Select the **Test Connection**button.
 6. If your connection test successfully, select the **Save**button.
 
-### Mappings
+## Mappings
 
-This screen is available while performing initial setup for the Enterprise Application, or by navigating to the Enterprise Application, and selecting **Provisioning** under the **Manage**section of the left-hand menu, and then selecting **Edit Provisioning** at the top.
+During initial setup for the Enterprise Application, navigate to the Enterprise Application, and select **Provisioning** under the **Manage**section of the left-hand menu, and then **Edit Provisioning** at the top.
 
-Bitwarden uses standard SCIM v2 attribute names, though these may differ from Microsoft Entra ID attribute names. The default mappings will work, but you can use this section to make changes if you wish. 
+Bitwarden recommends mappings that differ from Microsoft Entra ID's. Review the mappings below **before** proceeding. The default match on `userName` is mutable, so a later change (such as a rename, marriage, or domain migration) can silently orphan the user's Bitwarden account and trigger a duplicate invite. Incorrect mappings are a common cause of provisioning failure. 
 
-#### User mapping
+> [!NOTE] Use the table for mappings
+> The default mappings will work, but they can break the connection between a user's Entra ID and Bitwarden accounts if that user's email address later changes (for example, due to name change). See [User mapping with object identifiers](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#user-mapping-with-object-identifiers/) below.
 
-If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. The following table describes the default mappings for attributes used by Bitwarden:
+### User mapping
+
+If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. Bitwarden strongly recommends the following mappings:
 
 | **Bitwarden attribute** | **Default AAD attribute** |
 |------|------|
@@ -80,7 +83,7 @@ If you would like User objects in your directory to synchronize with Bitwarden, 
 
 ª - Because SCIM allows users to have multiple email addresses expressed as an array of objects, Bitwarden will use the `value` of the object which contains `"primary": true`.
 
-#### User mapping with object identifiers
+### User mapping with object identifiers
 
 User mappings may be more performant if they prioritize mapping on an Entra `objectId` over other attributes. Mapping in this way will preserve the connection to a Bitwarden account if the corresponding Entra ID account's email address changes, for example in the case of a name change. To implement this, make the following changes to your user mapping scheme:
 

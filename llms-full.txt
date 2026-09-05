@@ -283,6 +283,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Set up SCIM
@@ -1286,7 +1287,7 @@ Once the new device becomes trusted, all you'll need to do to log in to Bitwarde
 
 The initial client used to access Bitwarden for users who were invited with Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/) will become their first trusted device. If the initial client accessed is the Bitwarden desktop or mobile app, this device can be used to approve additional devices.
 
-For the desktop or mobile app to become the first trusted device, the user should not use the organization invite link. Instead, open the mobile or desktop app and select the **Enterprise single sign-on** option to begin the JIT process.
+For the desktop or mobile app to become the first trusted device, the user should not use the link provided in the emailed invitiation. Instead, open the mobile or desktop app and select the **Enterprise single sign-on** option to begin the JIT process.
 
 ## Remove a trusted device
 
@@ -5380,7 +5381,7 @@ Organizations must choose [between US or EU cloud server](https://bitwarden.com/
 
 **New customers **
 
-- Begin with centralized ownership by enabling the **Enforce organization data ownership**policy from day one and start managing the entire credential lifecycle across applications. 
+- Begin with centralized ownership by enabling the **Centralize organization ownership**policy from day one and start managing the entire credential lifecycle across applications. 
 - Every user (excepting admins and owners at this time) receives an organization-owned **My items** space for seamless, day-to-day work
 - All credentials are organization-owned, with reporting benefits built in
 - Simplify employee transitions, so credentials follow the person’s role changes and can be seamlessly reassigned when responsibilities shift. 
@@ -5720,7 +5721,7 @@ Copy and paste this list directly into your project management tools, internal d
 
 Important note on the invitation and re-invitation process: Invite users after enterprise policies are configured and the core admin team has onboarded. This ensures new members are immediately subject to your organization’s security and usage standards.
 
-Users automatically receive an email invitation when provisioned via SCIM or Directory Connector. For phased rollouts, coordinate with your IT or email team to filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard.  After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
+Users automatically receive an email invitation when provisioned via SCIM or Directory Connector. For phased rollouts, coordinate with your IT or email team to deliver invite links, or filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard.  After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
 
 Invitations expire after 7 days. Users still showing as Invited after several days may need IT follow-up to ensure adoption. Admins can also trigger a Reinvite, which sends a fresh invitation email as a reminder to join the organization.
 
@@ -7833,7 +7834,7 @@ Claimed member accounts can be outright deleted by organization administrators, 
 > [!NOTE] Learn how to delete claimed accounts
 > Claimed accounts can be deleted from the Admin Console's **Members** page using the ⋮ options menu:
 > 
-> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 > 
 > Members of your organization that do not have claimed accounts can only be **Removed** from the organization instead.
 
@@ -7850,40 +7851,32 @@ URL: https://bitwarden.com/help/claimed-domains/
 ---
 # Claimed Domains
 
-Enterprise customers can claim domain (eg. `mycompany.com`) ownership for their organizations with a valid and unique-to-Bitwarden DNS TXT record. When you claim a domain, your organization gains additional controls over accounts with matching email addresses:
+Enterprise organizations can claim ownership of a domain (e.g. `mycompany.com`) using a unique DNS TXT record. Claiming a domain lets you block outside sign-ups on matching email addresses, deleting claimed member's accounts instead of removing them, and give those members a faster SSO login experience. Learn more about how your organization can benefit [once your domain is claimed](https://bitwarden.com/help/claimed-domains/#once-your-domain-is-claimed/).
 
-- **Policy to block undesired account creation**: [Turn on a policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts on that Bitwarden server that are outside the organization. When the policy is on, email accounts with matching domains can only be used to create Bitwarden accounts on that Bitwarden server by being invited to join the organization.
-
-> [!TIP] Block account creation on cloud when self-hosting
-> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
-- **Claimed member accounts**: Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`) will automatically be [claimed by your organization](https://bitwarden.com/help/claimed-accounts/), restricting users from taking some account actions and allowing administrators to [delete the accounts](https://bitwarden.com/help/delete-member-accounts/) outright instead of only being able to remove them from the organization.
-
-Onboarded organization member accounts that use an email address with a matching domain (e.g. `jdoe@mycompany.com`), referred to as [claimed accounts](https://bitwarden.com/help/claimed-accounts/), also gain the following benefits:
-
-- **Easier SSO workflow**: During SSO authentication, these members will automatically bypass the step that would require them to enter an [SSO identifier](https://bitwarden.com/help/using-sso/#get-your-organization-identifier/).
-- **Automatically verified emails**: These members will have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when onboarded.
+> [!NOTE] Claimed domains do not automatically invite
+> Claiming a domain doesn't automatically invite anyone or add seats to your subscription. It only takes effect for users who are already confirmed members of your organization. A claimed domain will automatically populate the first time in **Allowed domains** when generating an organization [invite link](https://bitwarden.com/help/managing-users/#invite-by-link/). This will not persist if the domain is removed from the list, deactivated or rotated.
 
 ## Claim a domain
 
-In order to claim a domain, Bitwarden must verify that:
+Before claiming a domain, ensure that:
 
 - No other organization has verified the domain.
 - Your organization has ownership of the domain.
 
-Bitwarden will use a DNS TXT record to validate a domain claim. This DNS TXT record must be kept active and available at all times, as Bitwarden will continually check for it.
-
-To claim a domain, complete the following steps as an [admin or owner](https://bitwarden.com/help/user-types-access-control/#member-roles/): 
+Bitwarden uses a DNS TXT record to validate a domain claim. This DNS TXT record must be kept active and available at all times, as Bitwarden continually checks for it. To claim a domain, complete the following steps as an [admin or owner](https://bitwarden.com/help/user-types-access-control/#member-roles/): 
 
 1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
 2. Navigate to **Settings** → **Claimed domains**:
 
-![Claiming a domain](https://bitwarden.com/assets/6WJAs5AXufz8zSiVjEp5aA/8d9f4576f877ce74d6553430801070a9/2025-01-14_09-56-53.png)
-3. On the **Claimed domains**screen you will see a list of active domains, along with status checks and options. If you have no active domains, select **New domain**.
+![Claiming a domain](https://bitwarden.com/assets/6WJAs5AXufz8zSiVjEp5aA/4c52ea587bf8e370e30f0584326b3d81/2025-01-14_09-56-53.png)
+*Claiming a domain*
+3. On the **Claimed domains**screen you will see a list of active domains, along with status checks and options. If you have no active domains, select **Add domain**.
 
 > [!TIP] Claimed a domain for the first time
-> When you claim a domain, the [single organization policy](https://bitwarden.com/help/policies/#single-organization/) will automatically be activated during the claiming workflow. Domains that were claimed prior to the 2025.3.0 release will not automatically activate this policy, however any subsequent domains claimed by the organization will.
+> When you claim a domain, the [single organization policy](https://bitwarden.com/help/policies/#single-organization/) is automatically activated during the claiming workflow. Domains that were claimed prior to the 2025.3.0 release do not automatically activate this policy, however, any subsequent domains claimed by the organization do.
 4. In the pop-up window, enter a **Domain name**.
 
 > [!NOTE] domain format
@@ -7896,16 +7889,7 @@ To claim a domain, complete the following steps as an [admin or owner](https://b
 You can manage and view the status of your domains from the **Claimed domains** page. All domains will have a status of **Claimed** or **Not Claimed**:
 
 ![Claimed domain](https://bitwarden.com/assets/1sgIhVJzsRce0VyNIvH1ze/9ebaf423a88815e476bf2d81231fbf8e/2025-04-15_09-52-34.png)
-
-> [!TIP] If you need to edit your domain.
-> Before updating your claimed domain in Bitwarden, verify that your TXT record is publicly visible using the `dig` command:
-> 
-> 
-> ```bash
-> dig your.domain.com TXT
-> ```
-> 
-> **If the wrong TXT record is found**, your DNS changes may need more time to propagate. **If the right TXT record is found but claiming still fails**, your Bitwarden server may be configured to use a internal DNS server than the public one in which the update was made.
+*Claimed domain*
 
 Use the ⋮ menu located on the right side of the domain to:
 
@@ -7913,18 +7897,31 @@ Use the ⋮ menu located on the right side of the domain to:
 - **Copy DNS TXT record**to provide it to your DNS provider.
 - Manually **verify domain** if automatic claiming was not successful.
 
-> [!NOTE] Domain verification attempts 
-> Bitwarden will attempt to verify the domain 3 times during the first 72 hours. If the domain has not been verified within 7 days after the 3rd attempt, the domain will be removed from your organization.
+> [!TIP] If you need to edit your domain
+> Before updating your claimed domain in Bitwarden, verify that your TXT record is publicly visible using the `dig` command:
+> 
+> 
+> ```bash
+> dig your.domain.com TXT
+> ```
+> 
+> **If the wrong TXT record is found**, your DNS changes may need more time to propagate. **If the right TXT record is found but claiming still fails**, your Bitwarden server may be configured to use an internal DNS server than the public one in which the update was made.
 
-Domain claiming activities will be logged in the organization event logs. To view events, navigate to **Reporting** → **Event logs** in the Admin Console.
+Domain claiming activities are logged in the organization event logs. To view events, navigate to **Reporting** → **Event logs** in the Admin Console.
+
+> [!NOTE] Domain verification attempts 
+> Bitwarden attempts to verify the domain 3 times during the first 72 hours. If the domain has not been verified within 7 days after the 3rd attempt, the domain is removed from your organization.
 
 ## Once your domain is claimed
 
-Once your domain is claimed and verified, your organization will gain access to the following:
+Once your domain is claimed and verified, your organization gains access to the following:
 
 ### Block account creation for claimed domains
 
-Turn on [this policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts outside the organization. When the policy on, email accounts with matching domains can only be used to create Bitwarden accounts by being invited to join the organization.
+Turn on [this policy](https://bitwarden.com/help/policies/#block-account-creation-for-claimed-domains/) to prevent email accounts with matching domains (e.g. `jdoe@mycompany.com`) from creating Bitwarden accounts outside the organization. When the policy is on, email accounts with matching domains can only be used to create Bitwarden accounts by being invited to join the organization.
+
+> [!TIP] Block account creation on cloud when self-hosting
+> If you're self-hosting Bitwarden but want to **block account creation on both your self-hosted server and a Bitwarden cloud server**, you must claim your domain and activate the **Block account creation** policy option on both servers.
 
 ### Claimed member accounts
 
@@ -7933,29 +7930,18 @@ Onboarded organization member accounts that use an email address with a matching
 > [!NOTE] Clarifying claimed member prereqs
 > A user must have a matching domain **and** be a [confirmed member](https://bitwarden.com/help/managing-users/#confirm/) of your Bitwarden organization to be considered a claimed account. Claiming a domain **does not** automatically invite any users and therefore will not in and of itself add to your subscription seat count.
 
-#### Org-managed account email and name updates
+| Claimed account benefit | Description |
+|------|------|
+| Organization managed account email and name updates | Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector. |
+| Organization managed account deletion | Claimed member accounts can be outright deleted by organization administrators, instead of only being able to be [removed](https://bitwarden.com/help/delete-member-accounts/#remove-an-account/) from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ellipses menu. |
+| Restrict access to account actions | Users with member accounts are restricted from changing the domain of their email address, leaving the organization, purging their vault, and deleting their account. |
+| Easier SSO workflow | During SSO authentication, these members automatically bypass the step that would require them to enter an [SSO identifier](https://bitwarden.com/help/using-sso/#get-your-organization-identifier/). |
+| Automatically verified emails | These members have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when on-boarded. |
 
-Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector.
-
-#### Org-managed account deletion
-
-Claimed member accounts can be outright deleted by organization administrators, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
-
-![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
-
-Members of your organization that do not have claimed accounts can be **Removed** from the organization instead.
+Members of your organization that do not have claimed accounts can be [removed](https://bitwarden.com/help/remove-users/#remove-members-from-an-organization/) from the organization instead.
 
 > [!NOTE] Claimed accounts with Directory Connector and SCIM
-> Directory Connector and SCIM do not have the ability to delete claimed accounts, this action can only be taken by admins and owners from the web app Admin Console.
-
-#### Restricted access to account actions
-
- Users with member accounts will be restricted from:
-
-- Changing their account email address to a different domain (members can still change the username portion of their email address).
-- Leaving the organization.
-- Purging their vault.
-- Deleting their account.
+> Directory Connector and SCIM do not have the ability to delete claimed accounts. Deleting an account can only be done by admins and owners from the web app Admin Console.
 ---
 URL: https://bitwarden.com/help/clear-sync-cache/
 ---
@@ -14093,7 +14079,7 @@ You may be able delete a member's account using one of the following methods:
 
 - If you have a [claimed domain](https://bitwarden.com/help/claimed-domains/), any users with account email addresses that have a matching domain (e.g. `jdoe@mycompany.com`) can be outright deleted by organization administrators:
 
-![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 - If you are self-hosting Bitwarden, an authorized administrator can delete the account from the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/).
 - If the account has an `@yourcompany.com` email address that your company controls, you can use [this procedure](https://bitwarden.com/help/delete-your-account/#tab-without-logging-in-4KcOdFa6zVp6H7xo9Ui9vc/) to initiate and confirm deletion within the `@yourcompany.com` inbox.
 
@@ -15256,6 +15242,7 @@ URL: https://bitwarden.com/help/directory-sync/
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 The Bitwarden Directory Connector app:
@@ -16242,6 +16229,7 @@ This document describes and references the features available to [Bitwarden Ente
 | Role based access control | Assign role-based access for Organization users, including a custom role and granular permissions (e.g. Hide Passwords, Read-Only). [Learn more](https://bitwarden.com/help/user-types-access-control/). |
 | Directory sync | Synchronize your Bitwarden organization with your existing user directory. Provision and deprovision users, groups, and group associations. [Learn more](https://bitwarden.com/help/directory-sync/). |
 | SCIM support | Use the SCIM protocol to manage and provision Bitwarden users, groups, and group associations from your Identity Provider or directory service for easy onboarding and employee succession. [Learn more](https://bitwarden.com/help/about-scim/). |
+| Organization invite link | Generate shareable [organization invite links](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) that can be restricted to trusted domains and rotated for additional security. |
 | Account recovery | Designated administrators can reset and assign a master password of end-user accounts if an employee loses access. [Learn more](https://bitwarden.com/help/admin-reset/). |
 | Collections with curated access and role-based access control (RBAC) | Create an unlimited amount of password collections containing an unlimited amount of passwords. Collections can be assigned to groups or individual users. [Learn more](https://bitwarden.com/help/about-collections/). |
 | Enterprise policies | Enforce security rules for all users, for example mandating use of Two-step Login. [Learn more](https://bitwarden.com/help/policies/). |
@@ -16566,6 +16554,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
 - Clicked vault banner button (`1522`)
+- Member `user-identifier` accepted invitation through invite link. (`1524`)
 - Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
@@ -16591,6 +16580,11 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Turned off Automatic user confirmation setting. (`1621`)
 - Added Automatic user confirmation policy. (`1622`)
 - Removed Automatic user confirmation policy. (`1623`)
+- Created invite link. (`1624`)
+- Edited allowed domains for invite link. (`1625`)
+- Deleted invite link. (`1626`)
+- Copied invite link. (`1627`)
+- Regenerated invite link. (`1628`)
 - Modified policy `policy-identifier`. (`1700`)
 - Added domain `domain-name`. (`2000`)
 - Removed domain `domain-name`. (`2001`)
@@ -23751,6 +23745,7 @@ Enterprise organizations using [SSO](https://bitwarden.com/help/about-sso/) supp
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Recommended JIT strategy
@@ -25535,6 +25530,7 @@ A user seat is the billed license for one user within a Bitwarden organization. 
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## User seat billing
@@ -25831,6 +25827,41 @@ Select the + **New** button and choose the item type to create:
 
 Use the `create` command to add a new item. Refer to the [CLI documentation](https://bitwarden.com/help/cli/) for more information.
 
+## Copy item credentials
+
+To copy an item's details:
+
+### Web app
+
+Hover over an item and select the [clone] **Copy icon** that appears next to an item. A menu will then appear where you select **Copy username** or **Copy password**:
+
+![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/db8893edf1915ee8bade94075fa5bf2d/Copy_item.png)
+*Copy in web app*
+
+You can also go to **Settings** → **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
+
+![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/76fe8821f920a53e2ef3420a0f8ea591/Quick_copy_in_web_app.png)
+*Quick copy in web app*
+
+### Browser extension
+
+Several [autofill methods](https://bitwarden.com/help/auto-fill-browser/) are available in the Bitwarden browser extension, including a [copy button](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/).
+
+### Mobile
+
+You can autofill your items using the [iOS app](https://bitwarden.com/help/auto-fill-ios/) and the [Android app](https://bitwarden.com/help/auto-fill-android/).
+
+### Desktop
+
+Open an item and select the [clone] **Copy icon** next to a field:
+
+![Copy credential on desktop](https://bitwarden.com/assets/7KlGYgWWe0BdkY5UQFerwN/91cca24b2fc1c6bb6a0ea138bad05f0d/Copy_credential_on_desktop.png)
+*Copy credential on desktop*
+
+### CLI
+
+Use the `get` command to retrieve an object, like a username or password. Refer to the [CLI documentation](https://bitwarden.com/help/cli/#get/) for more information.
+
 ## Manage items
 
 You can manage your vault items from any Bitwarden app:
@@ -26073,6 +26104,7 @@ Add and manage your organization members to ensure the right people have access 
 > - All organizations can [manually invite users](https://bitwarden.com/help/managing-users/) and update the [seat count](https://bitwarden.com/help/manage-subscription-seats-in-your-organization/).
 > - Teams and Enterprise organizations can use [SCIM](https://bitwarden.com/help/about-scim/).
 > - Teams and Enterprise organizations can use [Directory Connector](https://bitwarden.com/help/directory-sync/).
+> - Enterprise organizations can invite members using a shareable [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/).
 > - Enterprise organizations can use [just-in-time (JIT)](https://bitwarden.com/help/jit-provisioning/).
 
 ## Add new members
@@ -26084,34 +26116,89 @@ To ensure the security of your organization, Bitwarden applies a three-step proc
 > [!TIP] Enterprise policy before inviting users
 > For Enterprise organizations, Bitwarden recommends configuring [Enterprise policies](https://bitwarden.com/help/policies/) prior to inviting members to ensure compliance on entrance to your organization. Once users have entered the [accept](https://bitwarden.com/help/managing-users/#accept/) state, they will be subject to organization policies.
 
-To invite someone to your organization:
+Choose a method to invite a user to your organization:
+
+### Email invite
 
 1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
 
 ![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
 *Product switcher*
-2. Navigate to **Members** and select + **Invite User**:
+2. Navigate to **Members** and select + **Invite member**:
 
 ![Invite member to an organization](https://bitwarden.com/assets/7AJjR4oqEnCH3A89YYoWpH/498d594fa9703bee9c5f49e2af9f83d0/Invite_member_to_an_organization.png)
 *Invite member to an organization*
-3. On the Invite user panel:
+3. Select the By email tab:
 
  - Enter the **Email** address where new users should receive invites. You can add multiple users at a time by comma-separating email addresses.
  - Select the **Member role** to be applied to new users. [Member role](https://bitwarden.com/help/user-types-access-control/) will determine what permissions these users will have at an organizational level.
  - In the **Groups**tab, select which [groups](https://bitwarden.com/help/about-groups/) to add this user to.
- - In the **Collections**tab, select collects to give this user access to and what [permissions](https://bitwarden.com/help/user-types-access-control/#permissions/) they should have to each collection.
+ - In the **Collections**tab, select collections to give this user access to and what [permissions](https://bitwarden.com/help/user-types-access-control/#permissions/) they should have to each collection.
 4. Click **Save** to invite the designated users to your organization.
 
+### Invite by link
+
+Enterprise organizations can generate a shareable invite link that anyone with the URL can use to request to join the organization, provided their email domain is on the link's allowed list. This lets administrators distribute invites through their preferred communication channels such as Slack or Teams messages, instead of relying on individual emails sent from Bitwarden.
+
+![Copy link](https://bitwarden.com/assets/TFK2JVOdL4WqjCk4xtQEi/c57df92f2d832569b9d63dcbb084aaec/edited_copy_link.png)
+*Copy link*
+
+Valid invite links will consist of the following structure:
+
+```plain text
+https://vault.bitwarden.com/#/join/{inviteLinkCode}?key={inviteKey}
+```
+
+To generate an invite link:
+
+1. Log in to the Bitwarden [web app](https://bitwarden.com/help/getting-started-webvault/) and open the Admin Console using the product switcher:
+
+![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
+*Product switcher*
+2. Navigate to **Members** and select + **Invite member**:
+
+![Invite member to an organization](https://bitwarden.com/assets/7AJjR4oqEnCH3A89YYoWpH/498d594fa9703bee9c5f49e2af9f83d0/Invite_member_to_an_organization.png)
+*Invite member to an organization*
+3. Choose the **By link** tab.
+4. Enter one or more **Allowed domains**. While using invite links:
+
+ - Only email addresses on these domains can use the link to join.
+ - At least one domain must always be present, you cannot generate an unrestricted link.
+
+ - Allowed domains provide additional security to links. You should only allow trusted domains. Broad domains such as gmail.com are not recommended.
+ - Removing allowed domains or generating a new link will invalidate previously generated links.
+ - If the organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/), the claimed domain will be pre-populated in the field.
+
+> [!NOTE] Restrict link domain
+> **Allowed** domains provide more control over who is able to attempt to join your organization. Additionally, please note that allowed domains are a different mechanism than **Claimed domains**. If your organization has a claimed domain, it will be automatically populated in the allowed domains for the first link generated.
+5. Select **Copy link** and share through your preferred channel.
+
+> [!NOTE] To accept invite link
+> In order to accept an invite link, a member's email address must be verified. Cloud accounts will be typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
+
+#### Refresh or restrict a link
+
+The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one. Removing every domain from the allowed list also invalidates the link.
+
+> [!NOTE] invite link for enterprise users
+> Invite links are available for Enterprise organizations. If your organization was downgraded from Enterprise, existing links will no longer work and the **By link** tab will be unavailable.
+
 > [!NOTE] Invitations expire
-> **Invitations expire after five days**, at which point the member will need to be re-invited. Re-invite members in bulk by selecting each member and using the ⋮ **Options icons**to select **Resend invitations**:
+> **Email invitations expire after five days**, at which point the member will need to be re-invited. Re-invite members in bulk by selecting each member and using the ⋮ **Options icons**to select **Resend invitations**:
 > 
 > 
 > ![Resend invitations in bulk](https://bitwarden.com/assets/1yj3MLJDTr7zOn5TwP0FGJ/67a16c6ee6ee14a92aa350986244e164/Resend_invitations.png)
 > *Resend invitations in bulk*
 > 
 > If you're self-hosting Bitwarden, you can configure the invitation expiration period [using an environment variable](https://bitwarden.com/help/environment-variables/).
+> 
+> **Link invitations** will not expire unless the allowed domain has been removed, the link has been rotated, or the link is deactivated.
 
 ### Accept
+
+In order for a user to accept an organization invite:
+
+### Email invite
 
 Invited users will receive an email from Bitwarden inviting them to join the organization. Clicking the link in the email will open the Bitwarden web app, where the user can log in or create an account to accept the invitation:
 
@@ -26119,6 +26206,28 @@ Invited users will receive an email from Bitwarden inviting them to join the org
 *Organization invitation*
 
 You must **fully log in to the Bitwarden web app** to accept the invitation. When you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. Additionally, organization members will have their [email automatically verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) when they accept an invitation.
+
+### Link invite
+
+Invited users will receive a link through organization administrator's preferred method, such as email, Slack, Teams, etc. Once users have verified that the link is from a reliable source, clicking the link will redirect them to the organization invitation:
+
+![Open organization invite link](https://bitwarden.com/assets/3L7jnjSHjQpjVkhCwbkC5j/b309ddcd2bc75cac1d6a64a4d423da66/join_invite_link.png)
+*Open organization invite link*
+
+To join the organization:
+
+- **New users**: Complete the fields shown in the dialogue to create a new Bitwarden account.
+- **Existing users**: Select **Log in** located under the create account dialogue. Existing users must have an [email verified](https://bitwarden.com/help/product-faqs/#q-what-features-are-unlocked-when-i-verify-my-email/) account in order to accept an organization invitation.
+
+Once you accept an invitation, an administrator will need to [confirm](https://bitwarden.com/help/managing-users/#confirm/) access. Once confirmed, you'll be notified that you can access the organization. 
+
+> [!NOTE] Link failure checklist
+> The email address used to log in or create a new account while accepting an invite link will be verified against the organization's list of allowed domains. If using the link is unsuccessful, check:
+> 
+> - The address domain is a match to the organization's list of allowed domains.
+> - The administrators have not deleted, rotated, or deactivated the link.
+> - Your existing Bitwarden account is compliant with organization policies such as [Single organization](https://bitwarden.com/help/policies/#single-organization/).
+> - You have not previously accepted an invitation to join this organization.
 
 > [!NOTE] Accepted status require compliance
 > The following policies will require compliance before users can be [confirmed](https://bitwarden.com/help/managing-users/#confirm/). These policies include:
@@ -26147,7 +26256,7 @@ To confirm accepted invitations into your organization:
 Each fingerprint phrase is unique to its account, and ensures a final layer of oversight in securely adding users. If they match, select **Submit**.
 
 > [!NOTE] Clear cache and cookie to restore fingerprint phrase prompt
-> If **Never prompt to verify fingerprint phrases** has been toggled on, fingerprint phrase verification be reactivated by clearing the browser cache and cookies.
+> If **Never prompt to verify fingerprint phrases** has been toggled on, fingerprint phrase verification can be reactivated by clearing the browser cache and cookies.
 
 ## Manage existing members
 
@@ -26473,15 +26582,18 @@ Select **Provisioning**from the navigation and complete the following steps:
 5. Select the **Test Connection**button.
 6. If your connection test successfully, select the **Save**button.
 
-### Mappings
+## Mappings
 
-This screen is available while performing initial setup for the Enterprise Application, or by navigating to the Enterprise Application, and selecting **Provisioning** under the **Manage**section of the left-hand menu, and then selecting **Edit Provisioning** at the top.
+During initial setup for the Enterprise Application, navigate to the Enterprise Application, and select **Provisioning** under the **Manage**section of the left-hand menu, and then **Edit Provisioning** at the top.
 
-Bitwarden uses standard SCIM v2 attribute names, though these may differ from Microsoft Entra ID attribute names. The default mappings will work, but you can use this section to make changes if you wish. 
+Bitwarden recommends mappings that differ from Microsoft Entra ID's. Review the mappings below **before** proceeding. The default match on `userName` is mutable, so a later change (such as a rename, marriage, or domain migration) can silently orphan the user's Bitwarden account and trigger a duplicate invite. Incorrect mappings are a common cause of provisioning failure. 
 
-#### User mapping
+> [!NOTE] Use the table for mappings
+> The default mappings will work, but they can break the connection between a user's Entra ID and Bitwarden accounts if that user's email address later changes (for example, due to name change). See [User mapping with object identifiers](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#user-mapping-with-object-identifiers/) below.
 
-If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. The following table describes the default mappings for attributes used by Bitwarden:
+### User mapping
+
+If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. Bitwarden strongly recommends the following mappings:
 
 | **Bitwarden attribute** | **Default AAD attribute** |
 |------|------|
@@ -26492,7 +26604,7 @@ If you would like User objects in your directory to synchronize with Bitwarden, 
 
 ª - Because SCIM allows users to have multiple email addresses expressed as an array of objects, Bitwarden will use the `value` of the object which contains `"primary": true`.
 
-#### User mapping with object identifiers
+### User mapping with object identifiers
 
 User mappings may be more performant if they prioritize mapping on an Entra `objectId` over other attributes. Mapping in this way will preserve the connection to a Bitwarden account if the corresponding Entra ID account's email address changes, for example in the case of a name change. To implement this, make the following changes to your user mapping scheme:
 
@@ -28260,7 +28372,7 @@ Once Alice is removed from your organization:
 
 When you claim a domain, any organization member accounts that have email addresses with a matching domain (e.g. `jdoe@mycompany.com`) will also be claimed by your organization. Claimed member accounts are functionally owned by the organization, meaning organization administrators can outright delete the account, instead of only being able to be removed from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ⋮ menu:
 
-![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 
 If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
 
@@ -29571,6 +29683,7 @@ In the following table, "premium features" (included for **Teams organizations**
 | [Custom management role](https://bitwarden.com/help/user-types-access-control/) | - | ✓ |
 | [Families sponsorship for members](https://bitwarden.com/help/families-for-enterprise/) | - | ✓ |
 | [SCIM integrations](https://bitwarden.com/help/about-scim/) | ✓ | ✓ |
+| [Organization invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) | - | ✓ |
 | Price | [Billed per user](https://bitwarden.com/pricing/business/) | [Billed per user](https://bitwarden.com/pricing/business/) |
 
 ## Self-hosted organizations
@@ -30522,7 +30635,7 @@ If you're part of an Enterprise organization, your administrator might also be a
 
 ### Q: What features are unlocked when I verify my email?
 
-**A**: When you verify your email address, you'll unlock the ability to [create file Sends](https://bitwarden.com/help/create-send/) (provided you also have access to premium features).
+**A**: When you verify your email address, you'll unlock the ability to [create file Sends](https://bitwarden.com/help/create-send/) (provided you also have access to premium features). Emails addresses must also be verified in order to accept an organization [invite link](https://bitwarden.com/help/managing-users/#invite-by-link/).
 
 ### Q: Why is a vault item missing from my mobile app, desktop app, or browser extension?
 
@@ -30606,7 +30719,7 @@ To purge an organization vault you must be an [organization owner](https://bitwa
 
 ### Q: Does Bitwarden manage in-browser browser extensions on Android mobile?
 
-**A:** There are Bitwarden browser extension available in the Firefox and Edge browsers on Android mobile devices. However, these extensions are not officially supported by Bitwarden, and the team is aware that some functionality in this client is known to not work correctly. Android users may prefer to use the Bitwarden [mobile app](https://bitwarden.com/help/getting-started-mobile/) for an officially supported password manager client.
+**A:** No, these extensions are not officially supported by Bitwarden, and as of 2026.1 they are known to no longer work. Android users should use the Bitwarden [mobile app](https://bitwarden.com/help/getting-started-mobile/) for their officially supported password manager client.
 
 ### Q: Does Bitwarden have any settings that can be adjusted for graphics or performance?
 
@@ -31625,6 +31738,19 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.8.1
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.1, and Mobile 2026.8.1)
+
+#### Password Manager
+
+- ⭐ **Quick copy from web app**: A new setting displays copy shortcut buttons on vault items when you hover over them in the web app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
+- ⭐ **"New" buttons renamed to "Add" or "Create"**: The New button is now + **Add** in most locations, including when [adding a new vault item](https://bitwarden.com/help/managing-items/#add-items/), and to + **Create** when configuring a [Send](https://bitwarden.com/help/create-send/#create-a-send/). This is a cosmetic update only; there are no changes to functionality.
+
+#### Admin Console
+
+- ⭐ **Generate organization invite link**: Enterprise organizations can now generate a shareable link to [invite members](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/). Share the link through your organization's preferred communication channel, and restrict it to specific email domains to control who can use it. Rotate the link at any time to invalidate the previous one, or deactivate it to stop new members from joining.
 
 ## 2026.8.0
 
@@ -33256,7 +33382,7 @@ To remove members from your organization:
 > [!TIP] Remove is Delete, if you're a Claimed Domain
 > If your organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/) and the user's account email address matches your claimed domain, **Remove** is not listed. Instead, you can select **Delete** to [delete the account permanently](https://bitwarden.com/help/delete-member-accounts/), effectively removing the user’s access to the organization:
 > 
-> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/0d2dbd328ba4a006611576e7d91c70df/2025-01-14_10-45-56.png)
+> ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 
 Offline devices cache a read-only copy of data, including organization items. Some clients may retain access to this read-only data for a short time after a member is removed. If you anticipate malicious exploitation of this, update credentials the member had access to when you remove them from the organization.
 
@@ -42331,6 +42457,8 @@ By default, custom roles include the same permissions as the **user** member rol
 
  - This includes the ability to create, edit, and delete any collection.
 - Create new collections
+
+ - This permission allows the member to create collections, even if the [Restrict collection creation to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting is on.
 - Delete any collection
 
  - This permission allows the member to delete any collection, even if the [Restrict collection deletion to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting is on.
@@ -42343,6 +42471,7 @@ By default, custom roles include the same permissions as the **user** member rol
 - Manage [policies](https://bitwarden.com/help/policies/)
 - Manage users
 
+ - This permission allows the custom user to access the
  - Custom users with the **Manage users**permission can only grant permissions they already have. For example, a custom user with only **Manage users**and **Access reports** cannot grant **Manage SSO** to someone else.
 - Manage account recovery
 

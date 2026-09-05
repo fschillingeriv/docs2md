@@ -115,6 +115,8 @@ By default, custom roles include the same permissions as the **user** member rol
 
  - This includes the ability to create, edit, and delete any collection.
 - Create new collections
+
+ - This permission allows the member to create collections, even if the [Restrict collection creation to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting is on.
 - Delete any collection
 
  - This permission allows the member to delete any collection, even if the [Restrict collection deletion to owners and admins](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting is on.
@@ -127,6 +129,7 @@ By default, custom roles include the same permissions as the **user** member rol
 - Manage [policies](https://bitwarden.com/help/policies/)
 - Manage users
 
+ - This permission allows the custom user to access the
  - Custom users with the **Manage users**permission can only grant permissions they already have. For example, a custom user with only **Manage users**and **Access reports** cannot grant **Manage SSO** to someone else.
 - Manage account recovery
 
