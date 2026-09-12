@@ -43,6 +43,7 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__send__connectionString=` | Set a connection string to store file sends in self-managed Azure Blob Storage, rather than the default location. For example, `=DefaultEndpointsProtocol=https;AccountName=<NAME>;AccountKey=<KEY>;EndpointSuffix=core.windows.net"`. Your `EndpointSuffix` will vary based on which Azure Cloud you're using. |
 | `globalSettings__logDirectory=` | Specifies the directory to save container log file output to. This must be a directory inside the container, by default, `globalSettings__logDirectory=etc/bitwarden/logs`. |
 | `globalSettings__logRollBySizeLimit=` | Specify the size limit in bytes to use for container log files (for example, `globalSettings__logRollBySizeLimit=1073741824`). |
+| `globalSettings__enableEmailVerification=` | Specify `true` to require users to verify their email address during account registration. By default, `false`. |
 | `globalSettings__mail__smtp__trustServer=` | Specify `true `to explicitly trust the certificate presented by the SMTP server (**not recommended for production**). |
 | `globalSettings__mail__smtp__sslOverride=` | Specify `true `to use SSL (not TLS) on port 25. |
 | `globalSettings__mail__smtp__startTls=` | Specify `true `to force STARTTLS (Opportunistic TLS). |

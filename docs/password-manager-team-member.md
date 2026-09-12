@@ -54,7 +54,7 @@ In other cases, logging in to Bitwarden will require that the device you're logg
 *[Watch on Vimeo](https://vimeo.com/1075687841)*
 
 **Video Chapters:**
-Learn more about how users will experience the SSO Login workflow when the Enterprise Organization is configured for [SSO with Trusted Device Encryption](https://learning-center-update.bw-web.dev/help/about-trusted-devices/).
+Learn more about how users will experience the SSO Login workflow when the Enterprise Organization is configured for [SSO with Trusted Device Encryption](https://bitwarden.com/help/about-trusted-devices/).
 
 ### Get to know your vault (2 min)
 
