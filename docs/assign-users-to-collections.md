@@ -24,9 +24,9 @@ When you [create a collection](https://bitwarden.com/help/about-collections/), y
 ## Assign access to un-managed collections
 
 > [!NOTE] Only applies if 'Owner/Admin Manage All' setting is off.
-> The following only applies if the [Owners and admins can manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection management setting is **off.** If this setting is **on** in your organization:
+> The following only applies if the [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection setting is **off.** If this setting is **on** in your organization:
 > 
-> - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collections** view.
+> - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collection** view.
 > - The **Add Access** badge and tab described below will not appear.
 
 Collections should always have at least one assigned member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Under certain circumstances, for example when a managing member leaves your organization, collections can end up without a member with that level of permission.

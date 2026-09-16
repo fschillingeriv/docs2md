@@ -32,7 +32,7 @@ Review [example .csv and .json files](https://bitwarden.com/help/condition-bitwa
 - [Stored passkeys](https://bitwarden.com/help/storing-passkeys/)
 
 > [!NOTE] Don't use exported passkeys for long-term backup
-> Exported passkeys should not be used as long-term backups. Exported passkeys include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it.
+> Passkeys created prior to 2024.3.1 include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it, so exports of **passkeys of that age** should not be used as long-term backups.
 - [SSH keys](https://bitwarden.com/help/ssh-agent/)
 
 No export formats include trash items or [Sends](https://bitwarden.com/help/about-send/). For a complete list of all items and fields included in an individual vault export, check out this ⬇️ [.json sample](https://bitwarden.com/assets/3klSoZBBd57skEvwFkcMJc/9dfe5d696c102cd32da88dc325706738/Individual_vault_export.json).

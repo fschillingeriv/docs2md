@@ -2680,9 +2680,9 @@ When you [create a collection](https://bitwarden.com/help/about-collections/), y
 ## Assign access to un-managed collections
 
 > [!NOTE] Only applies if 'Owner/Admin Manage All' setting is off.
-> The following only applies if the [Owners and admins can manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection management setting is **off.** If this setting is **on** in your organization:
+> The following only applies if the [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection setting is **off.** If this setting is **on** in your organization:
 > 
-> - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collections** view.
+> - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collection** view.
 > - The **Add Access** badge and tab described below will not appear.
 
 Collections should always have at least one assigned member with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/). Under certain circumstances, for example when a managing member leaves your organization, collections can end up without a member with that level of permission.
@@ -16808,7 +16808,7 @@ Review [example .csv and .json files](https://bitwarden.com/help/condition-bitwa
 - [Stored passkeys](https://bitwarden.com/help/storing-passkeys/)
 
 > [!NOTE] Don't use exported passkeys for long-term backup
-> Exported passkeys should not be used as long-term backups. Exported passkeys include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it.
+> Passkeys created prior to 2024.3.1 include a counter that increments with each use. If the stored counter does not match what's expected by the service the passkey is being used to log in to, it may reject it, so exports of **passkeys of that age** should not be used as long-term backups.
 - [SSH keys](https://bitwarden.com/help/ssh-agent/)
 
 No export formats include trash items or [Sends](https://bitwarden.com/help/about-send/). For a complete list of all items and fields included in an individual vault export, check out this ⬇️ [.json sample](https://bitwarden.com/assets/3klSoZBBd57skEvwFkcMJc/9dfe5d696c102cd32da88dc325706738/Individual_vault_export.json).
@@ -35192,6 +35192,15 @@ Select the **Edit** button and configure the following fields:
 
 The default claims constructed by Azure may work with certain configurations, however, it is recommended to change the Unique User Identifier (Name ID) to `user.objectid` to avoid conflicts if non-static data such as an email or UPN change.
 
+> [!NOTE] Change user attributes
+> Bitwarden recommends mappings that differ from Microsoft Entra ID's. The default match on `userName` is mutable, so a later change (such as a rename, marriage, or domain migration) can silently orphan the user's Bitwarden account and trigger a duplicate invite. Incorrect mappings are a common cause of provisioning failure. 
+> 
+> Additionally, the `DisplayName` attribute can be used with a transformation of `user.firstname `and `user.surname` if your organization configures display names.
+> 
+> 
+> ![Entra attributes and Claims](https://bitwarden.com/assets/37m8Of4BEjzqo0JxzmEYEA/81b591a99c11e729c2b06cabe2206c48/Screenshot_2026-09-14_at_16.14.42.png)
+> *Entra attributes and Claims*
+
 Select the **Edit** button and select the **Unique User Identifier (Name ID)** entry to edit the NameID claim:
 
 ![Unique User Identifier](https://bitwarden.com/assets/12hujApHx80QmzCJnfXXdY/92c9f14171f0f1934915bc1d05895eab/entrauuid.png)
@@ -35851,7 +35860,7 @@ Basic search is the default search mode in every Bitwarden app. Entering search 
 
 - For any item, its **name**
 - For any item, its **ID**
-- For any item, the contents of its **Notes** field
+- For any item, the contents of its **Notes** field (not currently supported on mobile)
 - For login items, **username**
 - For login items, its **URI**
 

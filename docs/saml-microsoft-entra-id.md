@@ -70,6 +70,15 @@ Select the **Edit** button and configure the following fields:
 
 The default claims constructed by Azure may work with certain configurations, however, it is recommended to change the Unique User Identifier (Name ID) to `user.objectid` to avoid conflicts if non-static data such as an email or UPN change.
 
+> [!NOTE] Change user attributes
+> Bitwarden recommends mappings that differ from Microsoft Entra ID's. The default match on `userName` is mutable, so a later change (such as a rename, marriage, or domain migration) can silently orphan the user's Bitwarden account and trigger a duplicate invite. Incorrect mappings are a common cause of provisioning failure. 
+> 
+> Additionally, the `DisplayName` attribute can be used with a transformation of `user.firstname `and `user.surname` if your organization configures display names.
+> 
+> 
+> ![Entra attributes and Claims](https://bitwarden.com/assets/37m8Of4BEjzqo0JxzmEYEA/81b591a99c11e729c2b06cabe2206c48/Screenshot_2026-09-14_at_16.14.42.png)
+> *Entra attributes and Claims*
+
 Select the **Edit** button and select the **Unique User Identifier (Name ID)** entry to edit the NameID claim:
 
 ![Unique User Identifier](https://bitwarden.com/assets/12hujApHx80QmzCJnfXXdY/92c9f14171f0f1934915bc1d05895eab/entrauuid.png)
