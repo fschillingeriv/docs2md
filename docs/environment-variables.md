@@ -33,7 +33,63 @@ The following variables are among those that already exist in `global.override.e
 | `globalSettings__hibpApiKey=` | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). This key allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
 | `adminSettings__admins=` | Email addresses which may access the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/). |
 
-[Embedded content]## Optional variables
+```bash
+# --- Server ---
+# Domain of your Bitwarden instance. Defaults to localhost if not configured. No trailing slash.
+globalSettings__baseServiceUri__vault=
+# US or EU. See: /help/server-geographies/
+globalSettings__baseServiceUri__cloudRegion=
+
+# --- Database ---
+# Connect to an external MSSQL database. See: /help/external-db/
+globalSettings__sqlServer__connectionString=
+
+# --- Authentication ---
+# Password for the identity server certificate.
+globalSettings__identityServer__certificatePassword=
+# Randomly generated internal identity key.
+globalSettings__internalIdentityKey=
+# Randomly generated OpenID Connect client key.
+globalSettings__oidcIdentityClientKey=
+# Randomly generated Duo akey. See: duo.com/docs/duoweb-v2
+globalSettings__duo__aKey=
+
+# --- Installation ---
+# Installation ID from bitwarden.com/host.
+globalSettings__installation__id=
+# Installation key from bitwarden.com/host.
+globalSettings__installation__key=
+
+# --- YubiKey ---
+# Client ID for YubiCloud or self-hosted Yubico server. See: upgrade.yubico.com/getapikey/
+globalSettings__yubico__clientId=
+# Secret key for YubiCloud or self-hosted Yubico server.
+globalSettings__yubico__key=
+
+# --- Mail (SMTP) ---
+# Email address used for invitations.
+globalSettings__mail__replyToEmail=
+# SMTP server hostname or IP address.
+globalSettings__mail__smtp__host=
+# SMTP port used by the SMTP server.
+globalSettings__mail__smtp__port=
+# true = SSL, false = TLS.
+globalSettings__mail__smtp__ssl=
+# Valid username for the SMTP host.
+globalSettings__mail__smtp__username=
+# Valid password for the SMTP host. Dollar sign ($) characters are not supported.
+globalSettings__mail__smtp__password=
+
+# --- Registration & Access ---
+# true to disable new users signing up via the registration page.
+globalSettings__disableUserRegistration=
+# HaveIBeenPwned API key for the Data Breach report. See: haveibeenpwned.com/API/Key
+globalSettings__hibpApiKey=
+# Email addresses that may access the System Administrator Portal.
+adminSettings__admins=
+```
+
+## Optional variables
 
 The following variables do not already exist in `global.override.env`, and can be manually added:
 
@@ -51,6 +107,7 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__yubico__validationUrls__0=` | Primary URL for self-hosted Yubico Validation Server. For example: `=https://your.url.com/wsapi/2.0/verify` Add additional validation server URLs by creating incremented environment variables, for example  `globalSettings__yubico__validationUrls__1=`, `globalSettings__yubico__validationUrls__2=` |
 | `globalSettings__enableCloudCommunication=` | Set to `true `to allow communication between your server and our cloud system. Doing so [enables billing and license sync](https://bitwarden.com/help/self-host-an-organization/#step-4-setup-billing-and-license-sync/). |
 | `adminSettings__deleteTrashDaysAgo=` | Specify the number of days after which to permanently delete items from the trash. By default, `adminSettings__deleteTrashDaysAgo=30`. |
+| `globalSettings__baseServiceUri__fillAssistRules=` | Specify the URL at which your [custom fill assist ruleset](https://bitwarden.com/help/custom-fill-assist-rules/) directory is hosted. |
 | `globalSettings__sso__enforceSsoPolicyForAllUsers=` | Specify `true` to enforce the [Require SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/) policy for owner and admin roles. |
 | `globalSettings__baseServiceUri__cloudRegion=` | Specify `US` or `EU` to designate [which cloud server](https://bitwarden.com/help/server-geographies/) your self-hosted server should hyperlink to. If you're using EU, you'll also need to setup a few other variables as documented [here](https://bitwarden.com/help/server-geographies/#connect-your-self-hosted-server/). |
 | `globalSettings__sqlServer__DisableDatabaseMaintenanceJobs=` | Specify `true` to skip application-side maintenance of the statistics and index rebuild tasks in the database. These tasks require elevated MSSQL privileges and should be reconfigured to run as a database user if this value is set to `true`. [Learn more](https://bitwarden.com/help/database-options/). |

@@ -27,7 +27,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 *SCIM provisioning*
 
 > [!TIP] Use SCIM Guides.
@@ -38,6 +38,17 @@ To set up SCIM, your IdP will need a SCIM URL and API key to make authorized req
 > - [Okta](https://bitwarden.com/help/okta-scim-integration/)
 > - [OneLogin](https://bitwarden.com/help/onelogin-scim-integration/)
 > - [Ping Identity](https://bitwarden.com/help/ping-identity-scim-integration/)
+
+### Invite users after provisioning
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ### Required attributes
 

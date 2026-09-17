@@ -6,7 +6,7 @@ URL: https://bitwarden.com/help/organization-renewal/
 
 Organization subscriptions renew automatically on an annual or monthly basis. Organization [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can check the renewal date from the web app Admin Console by navigating to organization's **Billing** → **Subscription** screen:
 
-![Organization subscription view](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
+![Organization subscription ](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
 
 As your renewal date approaches, we recommend confirming your [payment method](https://bitwarden.com/help/payment-methods/) is up-top-date by going to **Billing**→ **Payment method**. Learn how to [update your billing information](https://bitwarden.com/help/update-billing-info/#update-billing-for-organizations/).
 

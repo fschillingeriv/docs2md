@@ -290,7 +290,7 @@ Bitwarden supports SCIM v2 using standard attribute mappings and offers integrat
 
 To set up SCIM, your IdP will need a SCIM URL and API key to make authorized requests to the Bitwarden server. These values are available from the Admin Console by navigating to **Settings**→ **SCIM provisioning**:
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 *SCIM provisioning*
 
 > [!TIP] Use SCIM Guides.
@@ -301,6 +301,17 @@ To set up SCIM, your IdP will need a SCIM URL and API key to make authorized req
 > - [Okta](https://bitwarden.com/help/okta-scim-integration/)
 > - [OneLogin](https://bitwarden.com/help/onelogin-scim-integration/)
 > - [Ping Identity](https://bitwarden.com/help/ping-identity-scim-integration/)
+
+### Invite users after provisioning
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ### Required attributes
 
@@ -555,6 +566,15 @@ The import function for SSH keys is available on the Bitwarden desktop app. Usin
 
 > [!NOTE] import SSH must be in OpenSSH format
 > At this time, imported SSH keys from PuTTy are not compatible.
+
+## Autofill SSH keys
+
+SSH item's public keys can be autofilled using the browser extension, for example when adding a public key to a service such as GitHub or GitLab. Autofill using two methods:
+
+- **Inline menu**: Select the matching SSH key item from the inline menu that appears when a supported form field is detected.
+- **Autofill button**: Open the SSH item in the browser extension and select **Autofill**.
+
+Learn more about [autofill methods for the browser extension](https://bitwarden.com/help/auto-fill-browser/).
 
 ## Supported key types
 
@@ -3305,7 +3325,7 @@ For all of the autofill options described below, there are two instances where y
 
 ### Inline menu
 
-Use the inline autofill menu to quickly input login credentials, [passkeys](https://bitwarden.com/help/storing-passkeys/), and [TOTP](https://bitwarden.com/help/integrated-authenticator/) codes from your Bitwarden vault.
+Use the inline autofill menu to quickly input login credentials, [passkeys](https://bitwarden.com/help/storing-passkeys/), [SSH public keys](https://bitwarden.com/help/about-ssh/), and [TOTP](https://bitwarden.com/help/integrated-authenticator/) codes from your Bitwarden vault.
 
 ![Inline autofill menu](https://bitwarden.com/assets/H7DjdJNvQH00yGNLf5gsC/1ec6f0ce9a94862b0cae1d8b8d679fc8/2024-10-29_14-41-02.png)
 *Inline autofill menu*
@@ -3372,6 +3392,15 @@ To add a new account to Bitwarden using the inline autofill menu, while either l
 
 ![Save and fill](https://bitwarden.com/assets/1ATTneDqBvNTFNds8YOCFh/cae4c9f4b872eec97aa5cae911633f1a/2026-07-14_10-17-33.png)
 *Save and fill*
+
+### Enter SSH key
+
+To autofill an SSH public key, place your cursor into the **Public key** field on the key form. When the inline autofill menu displays, select the SSH key:
+
+![Inline sutofill SSH key](https://bitwarden.com/assets/47O8MWOenK3aYalqWeXcN5/ad232eea97e16b0d07fe0352ea2e6ffb/SSH_inline_menu.png)
+*Inline sutofill SSH key*
+
+If you have multiple SSH keys, the inline menu will display each SSH key. 
 
 ### Context menu
 
@@ -4542,19 +4571,9 @@ For help selecting the right Bitwarden plan for you, refer to [what plan is righ
 
 **A:** Use [Upgrade from Individual to Organization](https://bitwarden.com/help/upgrade-from-individual-to-org/) to guide you through this process.
 
-### Q: How do subscriptions work for self-hosting?
-
-**A:** In order to use a subscription on a self-hosted server first create an account and subscription in the Bitwarden cloud via the [web app](https://bitwarden.com/help/getting-started-webvault/). From there, download the [subscription license](https://bitwarden.com/help/licensing-on-premise/#organization-license/), which will flag access to premium or organization features, to apply to your self-hosted server.
-
-Per the Bitwarden terms of service, one organization deployment is permitted per subscription.
-
 ### Q: If I have a families organization, do I need premium?
 
 **A:** The current families plan (introduced Sep. 2020) automatically provides premium features for all six members of the organization, so no!
-
-### Q: Why do my license expiration dates on cloud and self-hosted not match?
-
-**A**: To ensure that you don't inadvertently lose organization functionality, we provide a 2 month grace period between the expiration of the license on cloud and expiration of the license on your self-hosted server. Learn more [here](https://bitwarden.com/help/organization-renewal/).
 
 ## Payment options
 
@@ -5721,7 +5740,7 @@ Copy and paste this list directly into your project management tools, internal d
 
 Important note on the invitation and re-invitation process: Invite users after enterprise policies are configured and the core admin team has onboarded. This ensures new members are immediately subject to your organization’s security and usage standards.
 
-Users automatically receive an email invitation when provisioned via SCIM or Directory Connector. For phased rollouts, coordinate with your IT or email team to deliver invite links, or filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard.  After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
+When users are provisioned via SCIM or Directory Connector, users can either [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization. For phased rollouts, coordinate with your IT or email team to deliver invite links, or filter (based on subject lines) specific onboarding emails at the mail gateway and send these emails when you’re ready for the next group to onboard. After a user accepts their invitation, an organization admin or owner must confirm their membership before vault access is granted. During rollout, admins should check the Members screen regularly (multiple times per day for larger orgs) to approve pending users. Confirmation can be automated with a script, but note that doing so reduces security visibility.
 
 Invitations expire after 7 days. Users still showing as Invited after several days may need IT follow-up to ensure adoption. Admins can also trigger a Reinvite, which sends a fresh invitation email as a reminder to join the organization.
 
@@ -6906,6 +6925,62 @@ Once you have your **HTTP Event Collector URL** and **HTTP Event Collector Token
 - Learn more about [what events are surfaced by Bitwarden](https://bitwarden.com/help/event-logs/).
 - Learn more about [managing HTTP Ingestion in Blumira](https://blumirabeta.zendesk.com/hc/en-us/articles/51420656192147-Using-Blumira-HTTP-Ingestion).
 ---
+URL: https://bitwarden.com/help/browser-extension-vault-health-reports/
+---
+# Browser Extension Vault Health Reports
+
+Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. Available on Free, Premium, and Families subscriptions, the health reports available in the browser extension check for three types of at-risk passwords:
+
+- [Exposed passwords](https://bitwarden.com/help/reports/#exposed-passwords-report/) have been found in known data breaches.
+- [Weak passwords](https://bitwarden.com/help/reports/#weak-passwords-report/) can be easily guessed by hackers or automated tools.
+- [Reused passwords](https://bitwarden.com/help/reports/#reused-passwords-report/) are saved in your vault for two or more different login items.
+
+> [!TIP] Access Intelligence instead of health scan
+> If you’re a member of a Teams or Enterprise organization, this option will not appear. Instead, learn how [Access Intelligence](https://bitwarden.com/help/access-intelligence/) can help identify at-risk credentials across your organization and notify members to update their passwords.
+
+# Scan vault for password health
+
+Accounts with a Free, Premium, and Families subscription can view how many exposed, weak, and reused passwords are in their vault.
+
+> [!TIP] Password scan, additional vault health reports
+> Use the Bitwarden web app to run additional [vault health reports](https://bitwarden.com/help/reports/).
+
+To learn how many passwords saved in your vault are at-risk:
+
+1. Log in to the Bitwarden browser extension.
+2. Select **Health**. If this your first time accessing the **Health** tab, select **Scan my vault**:
+
+![Health reports in browser extension](https://bitwarden.com/assets/hjNDZ9phqDhgp0cqCrQdP/0908df3fdaaa5f8bcd5508dc5eed75f2/Health_scan_in_browser_extension.png)
+*Health reports in browser extension*
+
+The **Health** tab will display the total number of passwords in your vault that are exposed, weak, or reused:
+
+![Risks identified in health scan](https://bitwarden.com/assets/2N0fLBOMLg1drYnuQlxAbG/f419cccbac162351c10cee9794ad7c3b/Risks_identified_in_health_scan.png)
+*Risks identified in health scan*
+
+# View at-risk passwords
+
+If your account is on a Premium or Families subscription, you can review each health report to see which items, if any, need attention.
+
+> [!NOTE] Password scan, Free limitation
+> Free subscriptions can only view the total number of at-risk passwords in each report, not which logins are flagged.
+
+To review at-risk passwords:
+
+1. From the **Health** tab, select a vault health report: exposed, weak, or reused.
+2. Review the list of at-risk logins:
+
+![At-risk passwords in health reports](https://bitwarden.com/assets/Oye8NAAshoVyyCtrh5KHm/347de476dbbee0ba32916588df670f45/At-risk_passwords_in_health_scan.png)
+*At-risk passwords in health reports*
+3. (Optional) From this list, you can:
+
+ - Select the item to open the **View login** screen, where you can [edit the item](https://bitwarden.com/help/managing-items/#manage-items/).
+ - If the login's website is [saved as a URI](https://bitwarden.com/help/uri-match-detection/#save-uris-in-login-items/), select **Change password** to open the website and update your credentials. Remember to update the login item in your vault with the new password.
+ - Select the ⋯ **Options menu** → **Delete item** to [remove the login](https://bitwarden.com/help/managing-items/#delete/) from your vault. Select **Delete** to confirm.
+
+> [!WARNING] Delete login, but account is still at-risk
+> Deleting an item only removes it from your vault. It does not change the password on the actual account, so the login remains at-risk if it's still in use.
+---
 URL: https://bitwarden.com/help/browserext-deploy/
 ---
 # Deploy Browser Extensions using GPOs, Linux Policies, & .plist Files
@@ -7362,48 +7437,64 @@ URL: https://bitwarden.com/help/cancel-a-subscription/
 ---
 # Cancel a Subscription
 
-Canceling a Bitwarden subscription will result in your account or organization losing access to paid features at the end of the billing cycle. If your subscription is less than 30 days old, [contact us](https://bitwarden.com/contact/) to receive a refund. Canceling a subscription does not automatically delete your account or organization. [Learn more](https://bitwarden.com/help/delete-your-account/).
+Bitwarden subscriptions renew automatically so you don't lose access to paid features. If you cancel automatic renewal, you can continue using your subscription until the end of your current billing cycle. After your subscription ends, you'll lose access to paid features, but your [account or organization won't be deleted](https://bitwarden.com/help/delete-your-account/). If your subscription is less than 30 days old, [contact us](https://bitwarden.com/contact/) for a refund.
 
-If you're self-hosting, cancel your subscription from the Bitwarden-hosted web app you created the account on. [Learn more](https://bitwarden.com/help/licensing-on-premise/).
+> [!NOTE] Self-host cancellation
+> If you [self-host Bitwarden](https://bitwarden.com/help/licensing-on-premise/), cancel your subscription from the Bitwarden web app and server where you created the subscription.
 
 ## Cancel a personal subscription
 
 To cancel a personal subscription:
 
-1. In the web app, navigate to **Settings** → **Subscription**:
+1. In the web app, go to **Settings** → **Subscription**:
 
 ![Subscription page](https://bitwarden.com/assets/3Ru9TSLguhRNYtLe2TLwXk/bec6794eb58efa8780504720d4acb250/2026-03-03_10-24-17.png)
 *Subscription page*
 2. Take note of the **Next charge**date. This is when you will lose access to paid features once your subscription is cancelled.
-3. Select the **Cancel subscription**button.
+3. Select **Cancel subscription**.
 
-When you confirm cancelation, your account will move into a **Pending cancellation**status until the noted **Next charge**date is reached. When the **Next charge**date is reached, you will be moved to a free account. [Learn what happens when you lose premium](https://bitwarden.com/help/premium-renewal/).
+### After personal cancellation
+
+> [!NOTE] Bitwarden refunds 
+> If you cancel a premium subscription **within 30 days of the its creation**, contact us for a refund. Subscriptions older than 30 days are not eligible for a refund.
+
+When you confirm cancellation, your account will move into a **Pending cancellation**status until the noted **Next charge**date is reached.
 
 > [!TIP] Reinstate Sub
-> If you change your mind before the end of the billing cycle, you can **Reinstate Subscription**with a single button!
+> If you change your mind before the end of the billing cycle, select **Reinstate subscription**on the same page to turn the renewal back on.
+
+When the **Next charge**date is reached, your account will revert to a free individual plan and you'll lose access to all [paid features](https://bitwarden.com/pricing/). The free plan also changes access to these specific features:
+
+- **Two-step login**: You will **not** be locked out of your vault, however you will not be able to use advanced [two-step login options](https://bitwarden.com/help/setup-two-step-login/) such as Yubikey or Duo for authentication. Your secret keys will remain stored in vault items in the **Authenticator Key (TOTP)** field, however Bitwarden will not generate TOTP codes.
+
+ - If you have a core two-step login option enabled (authenticator app or email), you will be prompted to use the enabled option.
+ - If you do not have another two-step login option enabled, you will authenticate into your vault without two-step login.
+- **Encrypted file attachments**: [Attachments](https://bitwarden.com/help/attachments/) will **not** be deleted from your vault. You will not, however, be able to download saved attachments or upload new ones.
+- **Emergency access**: [Trusted emergency contacts](https://bitwarden.com/help/emergency-access/) will still be able to request and obtain access to your vault. As the account holder, however, you will not be able to add new or edit existing trusted emergency contacts.
 
 ## Cancel an organization subscription
 
-To cancel an organization subscription:
+To cancel an organization subscription you must be an [organization owner](https://bitwarden.com/help/user-types-access-control/):
 
-1. In the web app, open the Admin Console using the product switcher:
+1. In the web app, open the Admin Console and go to **Billing**→ **Subscription**:
 
-![Product switcher](https://bitwarden.com/assets/2uxBDdQa6lu0IgIEfcwMPP/e3de3361749b6496155e25edcfdcf08b/2024-12-02_11-19-56.png)
-2. Navigate to **Billing**→ **Subscription:**
+![Organization subscription ](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
+*Organization subscription *
+2. Take note of the **Subscription expiration**date. This is when your organization will lose access to [paid features](https://bitwarden.com/pricing/) once your subscription is cancelled.
+3. Scroll down and select **Cancel subscription**.
 
-![Organization subscription view](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
+### After organization cancellation
 
-> [!NOTE] Only org owners may access subscription page
-> Only organization owners are able to access to the organization's subscription page.
-3. Take note of the **Subscription expiration**date. This is when your organization will lose access to paid features once your subscription is cancelled.
-4. Scroll down and select the **Cancel subscription**button.
-
-When you confirm cancelation, your organization will move into a **Pending cancellation**status until the noted **Subscription expiration**date is reached. When the **Subscription expiration**date is reached, your subscription will end. [Learn what happens next](https://bitwarden.com/help/organization-renewal/).
+When you confirm cancellation, your organization will move into a **Pending cancellation**status until the noted **Subscription expiration**date is reached.
 
 > [!TIP] Reinstate Sub
-> If you change your mind before the end of the billing cycle, you can **Reinstate Subscription**with a single button!
+> If you change your mind before the end of the billing cycle, select **Reinstate subscription**on the same page to turn the renewal back on.
 
-##
+When the **Next charge**date is reached, your account will revert to a free individual plan and your organization will move to a **Disabled** state. Your organization will lose access to all [paid features](https://bitwarden.com/pricing/) and a few important things to note are:
+
+- **Organization members**: Existing members and groups **will not** be removed from the organization. If for any reason you'd like to reinstate your subscription, members will not need to take action to regain access.
+- **Premium features**: All members of the organization will lose access to premium features while your your organization is disabled, as described in the **After personal cancellation** section of this page.
+- **Organization-owned items**: Organization-owned items and collections **will not**be deleted. Organization owners will retain access to organization-owned vault items, but all other members will lose access to shared items while your organization is disabled.
 ---
 URL: https://bitwarden.com/help/certificates/
 ---
@@ -9113,7 +9204,7 @@ One common group-collection pattern is to create **Groups by Department** and **
 6. **Start inviting users**. Now that the infrastructure for the secure and scalable sharing of credentials is in place for your client, you can begin [inviting users to the organization](https://bitwarden.com/help/managing-users/#add-new-members/). To ensure the security of the organization, Bitwarden applies a three-step process for onboarding new users, **Invite** → **Accept**→ **Confirm**.
 
 > [!TIP] SCIM & BWDC for Providers.
-> **If your customer uses directory service** or IdP (active directory, an LDAP, Okta, and more), use [SCIM](https://bitwarden.com/help/about-scim/) or [Directory Connector](https://bitwarden.com/help/directory-sync/) to automatically sync organization users from the source directory and automatically issue invitations.
+> **If your customer uses directory service** or IdP (such as Active Directory, an LDAP, or Okta), use [SCIM](https://bitwarden.com/help/about-scim/) or [Directory Connector](https://bitwarden.com/help/directory-sync/) to automatically sync organization users from the source directory. Optional, turn on the **Automatically send email invitations** setting in [SCIM](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) or [Directory Connector](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/) for quick user provisioning.
 ---
 URL: https://bitwarden.com/help/cloud-setup-checklist/
 ---
@@ -13479,6 +13570,149 @@ There are two cases in which you can exercise more control over [matching](https
 - **csv**: Prefixing your custom field's name with `csv=` allows you to specify multiple names to search for and compare against for autofill, for example `csv=pin,mypin,pincode`.
 - **regex**: Prefixing your custom field's name with `regex=` allows you to perform [regular expression comparisons](https://regexone.com) when auto-fill is performed. For example, `regex=^first.*name` will offer autofill for `firstName`, `First_name`, and `First Name`.
 ---
+URL: https://bitwarden.com/help/custom-fill-assist-rules/
+---
+# Custom Fill Assist Rules
+
+Enterprise organizations can [use a policy](https://bitwarden.com/help/policies/#activate-fill-assist/) to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members and, optionally, replace the Bitwarden-curated fill assist rules with a ruleset hosted and maintained by the organization. 
+
+This article covers building a custom ruleset. Refer to the links above for articles covering how fill assist and the associated policy work in practice.
+
+## Custom rulesets
+
+By default, fill assist will use a ruleset curated by Bitwarden. You might want to iterate on, or replace, that ruleset to expand coverage to the websites and applications that members of your organization use most often. Intranet sites, for example, are one good reason for building and maintaining a custom ruleset.
+
+### Ruleset contents
+
+Custom rulesets are a **directory**, not a single file. When you provide the policy a **custom autofill ruleset** URL, you must provide a link to that **directory**. Clients using fill assist expect four files in the ruleset directory:
+
+- `forms.v1.json`: Your rules data.
+- `forms.v1.schema.json`: Schema of your rules data.
+- `manifest.json`: Build metadata and per-map schema version.
+- `manifest.schema.json`: Schema of the manifest.
+
+Your custom ruleset must be served to clients over HTTPS. Clients will re-fetch a ruleset every 6 hours to ensure your members are getting up-to-date rules.
+
+### Rules in the ruleset
+
+> [!TIP] Link to the map-the-web repo
+> We'll cover the basics of rule creation in this article, however the [Map the Web](https://github.com/bitwarden/map-the-web/) repository maintained by Bitwarden includes comprehensive information on structuring rules. We recommend using that repository's README when writing custom rules.
+
+Rules are written in JSON. Each rule lives under a `host` (i.e. a domain) and describes the form(s) on that host's page using CSS selectors. 
+
+```javascript
+{
+ "schemaVersion": "1.0.0",
+ "hosts": {
+ "example.com": {
+ "forms": [
+ {
+ "category": "account-login",
+ "container": ["form#login-form"],
+ "fields": {
+ "username": ["input#email"],
+ "password": ["input#password"]
+ },
+ "actions": {
+ "submit": ["button[type='submit']"]
+ }
+ }
+ ]
+ }
+ }
+}
+```
+
+A rule typically includes four pieces:
+
+| Key | Value | Required? |
+|------|------|------|
+| `category` | What type of form this is, `account-login`, `account-creation`, `payment-card`, `address`, and so on. | Yes |
+| `container` | The element that wraps the form, typically `<form>` tags. | No |
+| `fields` | A fixed set of keys mapped to one or more CSS selectors. Refer to the following section for more information | Yes |
+| `actions` | Buttons or other interactive elements, such as `submit` or `next`. | No |
+
+When a host has multiple forms that are structured differently, add `pathnames` to specific rules that supersede the global rules for that host:
+
+```javascript
+"example.com": {
+ "forms": [ /* the rule for every other page */ ],
+ "pathnames": {
+ "/login": {
+ "forms": [ /* a completely different rule, just for this page */ ]
+ }
+ }
+}
+```
+
+#### Fields
+
+Fields join a fixed set of keys, for example `username`, `password`, `email`, `firstName`, and `cardNumber`, to CSS selectors represented as corresponding values, for example:
+
+```javascript
+"fields": {
+ "username": ["input#email"],
+ "password": ["input#password"]
+}
+```
+
+In this example, `username` is the key chosen from a discrete list of available options and `input#email` is the CSS selector, represented in an array because field keys may be mapped to multiple selectors:
+
+```javascript
+"username": ["input#email", "input[autocomplete='username']"]
+```
+
+> [!TIP] Write fill assist rules to be brittle
+> Write fields to be **intentionally brittle**. Each selector is a record of exactly what a specific field looks like *today*, if the page changes underneath it you want the rule to **break**, not adapt, in order to send a deliberate signal that a human should review it. A selector that keeps matching through a change could just as easily be pointing at the wrong thing now, with nothing to catch it.
+
+## Build a custom ruleset
+
+In order to build a custom ruleset, the recommended procedure is:
+
+1. Fork the `github.com/bitwarden/map-the-web` repository.
+2. In the fork, edit `maps/forms/forms.jsonc` to fit your organization's needs. It's recommended that existing entries are kept intact and that new entries are added according to the formatting instructions in the prior section.
+3. Validate and build with `npm run check && npm run build`. A passing build emits the minified artifacts and manifests expected by the clients.
+4. Publish the build artifacts so that all four expected files sit together in a single HTTPS-reachable directory. A GitHub Release is a good example of a straightforward path to doing so.
+5. Point your policy's **custom autofill ruleset** at the HTTPS-reachable directory, [from the UI](https://bitwarden.com/help/policies/#activate-fill-assist/) if you're cloud-hosted or [using an environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/) if you're self-hosted. If you used GitHub, this would look something like `https://github.com/<your-org>/forked-map-the-web/releases/latest/download/`.
+
+## Maintain a custom ruleset
+
+Using a custom ruleset in the way described in this document will fully replace the ruleset curated by Bitwarden, keeping your fork current is your responsibility. Note that a fork that isn't regularly synced with the upstream curated repository will quietly drift as Bitwarden adds and corrects rules over time. Pull upstream changes regularly.
+
+### Ruleset validation
+
+There is currently no error reporting that would surface a malformed ruleset. If your ruleset URL is unreachable, returns an error, or serves invalid JSON, fill assist will silently do nothing for affected members, with no fallback to the Bitwarden-curated ruleset. To validate your ruleset is working properly:
+
+1. Open each of the four files directly in a browser and confirm they return valid JSON over HTTPS.
+2. Confirm `manifest.json` reports the schema version you expect.
+3. Test on a page you know your ruleset covers. Clients only re-fetch every 6 hours, so allow time for a fix to take effect before re-testing.
+4. If you're unsure whether the custom ruleset is the cause of an issue, temporarily point the policy back at Bitwarden's default rules URL to isolate the issue.
+
+### Version pinning
+
+Policy setup in the Bitwarden Admin Console will take one URL, but which URL you use can determine how much control you have over when ruleset changes reach members' clients. If you're using GitHub Releases, you have at least two options: 
+
+1. **Always latest**. Set the URL to the following so that clients always pull whatever artifacts you've published most recently. Useful if you want an automatic process for fixes and new coverage to reach clients.
+
+```plain text
+https://github.com/<your-org>/forked-map-the-web/releases/latest/download/
+```
+2. **Pin a version**. Set the URL to the following so that clients stay on that exact version of the artifacts until you update the field in the Bitwarden Admin Console. Useful for a higher level of control.
+
+```plain text
+https://github.com/<your-org>/forked-map-the-web/releases/download/v20260904.1/
+```
+
+### Security considerations
+
+When using a custom ruleset, your organization owns the security and correctness of rules. Bitwarden does not vet, review, or validate custom rules or rulesets, that content is fetched and applied to members' clients as authored. All implementations of custom rulesets should:
+
+- Be hosted on infrastructure that your organization controls.
+- Treat write access to that location as a sensitive permission.
+- Include a process for reviewing rule changes before publishing new artifact versions.
+
+Understand that compromised or neglected rulesets affect autofill behavior for every member with fill assist active, on every site that rules are constructed for. In order to fix autofill on broken and poorly constructed forms, fill assist rules can intentionally bypass field-visibility checks, field-type checks, and clickjacking protections. This means a maliciously or poorly written rule could cause credentials to be filled where they shouldn't.
+---
 URL: https://bitwarden.com/help/customer-activation-kit/
 ---
 # Customer Activation Kit
@@ -14682,7 +14916,7 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 
 | Feature | [AppImage](https://bitwarden.com/download/#downloads-desktop-applications/) | [Snap](https://snapcraft.io/bitwarden) | [Flatpak](https://flathub.org/apps/com.bitwarden.desktop) | [.deb](https://bitwarden.com/download/#downloads-desktop-applications/) | [.rpm](https://bitwarden.com/download/#downloads-desktop-applications/) |
 |------|------|------|------|------|------|
-| Automatic Updates | * | ✓ | ✓ | | |
+| Automatic Updates | | ✓ | ✓ | | |
 | Desktop Biometrics | ✓ | ✓ | ** | ✓ | ✓ |
 | Extension Biometrics | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Integration with OS | * | ✓ | ✓ | ✓ | ✓ |
@@ -15007,6 +15241,12 @@ Available options are:
 | Okta | 3 |
 | OneLogin | 4 |
 
+You can also use the config command to set your [sync options](https://bitwarden.com/help/user-group-filters/), for example to change the setting that controls whether sync will [automatically issue email invitations](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/) to synced users:
+
+```bash
+bwdc config sync.inviteUsersAfterProvisioning <true|false>
+```
+
 ### data-file
 
 The `data-file` command returns an absolute path to the `data.json` configuration file used by the Directory Connector CLI:
@@ -15160,7 +15400,7 @@ Directory Connector can be used to run a one-time [manual sync](https://bitwarde
 
 To run a one-time manual sync from your directory to your Bitwarden organization, open the [dashboard] **Dashboard** tab and select the [generate] **Sync Now** button.
 
-Synced users will be invited to your organization, and groups will be immediately created.
+Synced users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization.
 
 ### Automatic sync
 
@@ -15247,7 +15487,7 @@ URL: https://bitwarden.com/help/directory-sync/
 
 The Bitwarden Directory Connector app:
 
-- **Automatically provisions users, groups, and group associations** in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
+- **Automatically provisions users, groups, and group associations** in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
 - **Can be configured to remove users** from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization.
 - **Can be run on-demand or automatically** on a configured interval.
 
@@ -16386,7 +16626,63 @@ The following variables are among those that already exist in `global.override.e
 | `globalSettings__hibpApiKey=` | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). This key allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
 | `adminSettings__admins=` | Email addresses which may access the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/). |
 
-[Embedded content]## Optional variables
+```bash
+# --- Server ---
+# Domain of your Bitwarden instance. Defaults to localhost if not configured. No trailing slash.
+globalSettings__baseServiceUri__vault=
+# US or EU. See: /help/server-geographies/
+globalSettings__baseServiceUri__cloudRegion=
+
+# --- Database ---
+# Connect to an external MSSQL database. See: /help/external-db/
+globalSettings__sqlServer__connectionString=
+
+# --- Authentication ---
+# Password for the identity server certificate.
+globalSettings__identityServer__certificatePassword=
+# Randomly generated internal identity key.
+globalSettings__internalIdentityKey=
+# Randomly generated OpenID Connect client key.
+globalSettings__oidcIdentityClientKey=
+# Randomly generated Duo akey. See: duo.com/docs/duoweb-v2
+globalSettings__duo__aKey=
+
+# --- Installation ---
+# Installation ID from bitwarden.com/host.
+globalSettings__installation__id=
+# Installation key from bitwarden.com/host.
+globalSettings__installation__key=
+
+# --- YubiKey ---
+# Client ID for YubiCloud or self-hosted Yubico server. See: upgrade.yubico.com/getapikey/
+globalSettings__yubico__clientId=
+# Secret key for YubiCloud or self-hosted Yubico server.
+globalSettings__yubico__key=
+
+# --- Mail (SMTP) ---
+# Email address used for invitations.
+globalSettings__mail__replyToEmail=
+# SMTP server hostname or IP address.
+globalSettings__mail__smtp__host=
+# SMTP port used by the SMTP server.
+globalSettings__mail__smtp__port=
+# true = SSL, false = TLS.
+globalSettings__mail__smtp__ssl=
+# Valid username for the SMTP host.
+globalSettings__mail__smtp__username=
+# Valid password for the SMTP host. Dollar sign ($) characters are not supported.
+globalSettings__mail__smtp__password=
+
+# --- Registration & Access ---
+# true to disable new users signing up via the registration page.
+globalSettings__disableUserRegistration=
+# HaveIBeenPwned API key for the Data Breach report. See: haveibeenpwned.com/API/Key
+globalSettings__hibpApiKey=
+# Email addresses that may access the System Administrator Portal.
+adminSettings__admins=
+```
+
+## Optional variables
 
 The following variables do not already exist in `global.override.env`, and can be manually added:
 
@@ -16404,6 +16700,7 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__yubico__validationUrls__0=` | Primary URL for self-hosted Yubico Validation Server. For example: `=https://your.url.com/wsapi/2.0/verify` Add additional validation server URLs by creating incremented environment variables, for example  `globalSettings__yubico__validationUrls__1=`, `globalSettings__yubico__validationUrls__2=` |
 | `globalSettings__enableCloudCommunication=` | Set to `true `to allow communication between your server and our cloud system. Doing so [enables billing and license sync](https://bitwarden.com/help/self-host-an-organization/#step-4-setup-billing-and-license-sync/). |
 | `adminSettings__deleteTrashDaysAgo=` | Specify the number of days after which to permanently delete items from the trash. By default, `adminSettings__deleteTrashDaysAgo=30`. |
+| `globalSettings__baseServiceUri__fillAssistRules=` | Specify the URL at which your [custom fill assist ruleset](https://bitwarden.com/help/custom-fill-assist-rules/) directory is hosted. |
 | `globalSettings__sso__enforceSsoPolicyForAllUsers=` | Specify `true` to enforce the [Require SSO authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/) policy for owner and admin roles. |
 | `globalSettings__baseServiceUri__cloudRegion=` | Specify `US` or `EU` to designate [which cloud server](https://bitwarden.com/help/server-geographies/) your self-hosted server should hyperlink to. If you're using EU, you'll also need to setup a few other variables as documented [here](https://bitwarden.com/help/server-geographies/#connect-your-self-hosted-server/). |
 | `globalSettings__sqlServer__DisableDatabaseMaintenanceJobs=` | Specify `true` to skip application-side maintenance of the statistics and index rebuild tasks in the database. These tasks require elevated MSSQL privileges and should be reconfigured to run as a database user if this value is set to `true`. [Learn more](https://bitwarden.com/help/database-options/). |
@@ -16555,6 +16852,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
 - Clicked vault banner button (`1522`)
+- Staged user `user-identifier` added (`1523`)
 - Member `user-identifier` accepted invitation through invite link. (`1524`)
 - Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
@@ -16689,7 +16987,7 @@ Bitwarden provides a comprehensive set of integrations with Security Information
 - [Sumo Logic SIEM](https://bitwarden.com/help/sumo-logic-siem/)
 - [Splunk SIEM](https://bitwarden.com/help/splunk-siem/)
 
-Bitwarden also provides multiple methods for accessing data that may be relevant to SIEM platforms for which there is not currently a specific integration. For help configuring a SIEM that isn't listed above, refer to [Non-native SIEM](https://bitwarden.com/help/non-native-siem/).
+Bitwarden also provides multiple methods for accessing data that may be relevant to SIEM platforms for which there is not currently a specific integration. For help configuring a SIEM that isn't listed above, refer to [Non-native SIEM](https://bitwarden.com/help/non-native-siem/) or [generic HEC integration](https://bitwarden.com/help/http-event-collector/).
 ---
 URL: https://bitwarden.com/help/exclude-domains/
 ---
@@ -17258,6 +17556,8 @@ Fill assist can be turned on for Bitwarden browser extensions from the **Setting
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
 
+If an organization you're a member of has turned on the [Activate fill assist policy](https://bitwarden.com/help/policies/#activate-fill-assist/), your fill assist setting may already reflect a default choice set by your organization. This is a default for members who haven't chosen a setting themselves. Once you turn fill assist on or off yourself, your choice takes over.
+
 Because fill assist is one method for facilitating easier autofill, [custom fields](https://bitwarden.com/help/custom-fields/) are superseded by sites that are fill assisted.
 
 ## How it works
@@ -17265,6 +17565,7 @@ Because fill assist is one method for facilitating easier autofill, [custom fiel
 Powered by the [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
 
 - **Supported sites**: Fill assist only steps in when the site you're browsing is included in the maps; typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
+- **Organization-supplied rules**: Optionally, organizations can replace the Bitwarden-curated maps with their own [custom maps](https://bitwarden.com/help/custom-fill-assist-rules/) to expand coverage to the websites and applications that members of your organization use most often.
 - **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
 - **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
 
@@ -17275,7 +17576,10 @@ Those maps are retrieved by your browser extension client on every sync or every
 
 ### Report an issue
 
-Please also note that, because fill assist instructions are targeted on specific CSS selectors on a form, they are liable to stop working when the maintainers of that website make changes. We encourage all users to continue to [report autofill issues](https://docs.google.com/forms/d/e/1FAIpQLSfkxh1w6vK8fLYwAbAAEVhvhMAJwfFNDtYtPUVk1y5WTHvJmQ/viewform), as some reports may be good candidates for updating or adding fill assist instructions.
+Please also note that, because fill assist instructions are targeted on specific CSS selectors on a form, they are liable to stop working when the maintainers of that website make changes. If you're experiencing issues with fill assist:
+
+- If you're a member of an organization, check with an admin before filing a report with Bitwarden. Your organization may be using a custom ruleset that they manage.
+- Otherwise, we encourage all users to continue to [report autofill issues](https://docs.google.com/forms/d/e/1FAIpQLSfkxh1w6vK8fLYwAbAAEVhvhMAJwfFNDtYtPUVk1y5WTHvJmQ/viewform), as some reports may be good candidates for updating or adding fill assist instructions.
 ---
 URL: https://bitwarden.com/help/filter-your-vault/
 ---
@@ -17651,7 +17955,7 @@ You can also generate a strong password from the Edit screen using the [generate
 
 If you're creating an account that isn't stored in Bitwarden, you can also use the inline autofill menu to generate and autofill a password using the **Fill generated password** prompt:
 
-![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/ce116e8ff337f90fbbd57b52aa15fdcd/2024-11-05_10-07-08.png)
+![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/52dcfb7c47aba3220af566bbf74b2c09/2025-04-25_10-22-53.png)
 
 When using inline, use the [generate] generate button to generate a new password until you're satisfied with it. Inline password generation uses the settings from the browser extension's **Generator** tab. Make sure you select **New login** when prompted to save the login to Bitwarden. [Learn more](https://bitwarden.com/help/auto-fill-browser/#use-the-inline-autofill-menu/).
 
@@ -18838,10 +19142,10 @@ With the infrastructure for secure and scalable sharing of credentials in place,
 1. **For smaller customers**, you can send email invitations to users from the Admin Console 🎚️ **Members** view:
 
 ![Invite members as a provider](https://bitwarden.com/assets/4wUO7i6w8y4sqAvwuMVZyd/070a5b36b242b1e4871cc0f58e0b8f83/2024-12-05_09-31-35.png)
-2. **For larger customers**who leverage an IdP such as Azure AD, Okta, OneLogin, or JumpCloud, use [SCIM](https://bitwarden.com/help/about-scim/) to automatically provision users.
-3. **For larger customers** who leverage a directory service (Active Directory, LDAP, Okta, and more), use [Directory Connector](https://bitwarden.com/help/directory-sync/) to sync organization users from the source directory and automatically issue invitations.
+2. **For larger customers**who leverage an IdP such as Azure AD, Okta, OneLogin, or JumpCloud, use [SCIM](https://bitwarden.com/help/about-scim/) to [automatically send invitations](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/).
+3. **For larger customers** who leverage a directory service (Active Directory, LDAP, Okta, and more), use [Directory Connector](https://bitwarden.com/help/directory-sync/) to sync organization users from the source directory and [automatically issue invitations](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/).
 
-Regardless of whether you have invited users from the organization vault, using SCIM, or using Directory Connector, the same three-step process (Invite → Accept → Confirm) that you followed when [onboarding provider users](https://bitwarden.com/help/getting-started-providers/#onboard-users/) will apply here as well.
+Regardless of whether you invited users from the organization vault, using SCIM, using Directory Connector, or using an [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/), the same three-step process (Invite → Accept → Confirm) that you followed when [onboarding provider users](https://bitwarden.com/help/getting-started-providers/#onboard-users/) will apply here as well.
 
 ## Managing self-hosted organizations
 
@@ -19575,7 +19879,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -19741,7 +20045,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -20076,7 +20380,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -20255,7 +20559,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -20458,7 +20762,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -20646,7 +20950,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -20960,7 +21264,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -21302,7 +21606,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -21495,7 +21799,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.
@@ -23803,7 +24107,7 @@ In cases where the member needs to join the organization with a pre-existing Bit
 ---
 URL: https://bitwarden.com/help/jumpcloud-scim-integration/
 ---
-# JumpCloud SCIM Integration
+# JumpCloud SCIM
 
 System for cross-domain identity management (SCIM) can be used to automatically provision and de-provision members and groups in your Bitwarden organization. 
 
@@ -23819,9 +24123,18 @@ This article will help you configure a SCIM integration with JumpCloud. Configu
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Create a JumpCloud app
 
@@ -23863,7 +24176,7 @@ In the **User Groups**tab, select the Groups you would like to provision in Bitw
 
 ## Finish User Onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
@@ -24543,12 +24856,13 @@ URL: https://bitwarden.com/help/licensing-on-premise/
 ---
 # License Organizations or Premium
 
-Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. To retrieve a license file, you must have an active subscription to Bitwarden cloud. Once subscribed, **download your license file**from the cloud web app and apply it to your self-hosted server using the steps below. 
+Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. To use your upgraded subscription's features on a self-hosted server:
 
-[Embedded content]The steps are different when working with an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) versus an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
+1. Download the license file from the Bitwarden account that was created and upgraded via the [web app](https://bitwarden.com/help/getting-started-webvault/).
+2. Apply the license file to your self-hosted server, following the steps below for either an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) or an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
 
 > [!NOTE] licensing paid features 
-> The procedures in this article assume that you have already started a paid subscription to Bitwarden. If you haven't, refer to [About Bitwarden Plans](https://bitwarden.com/help/password-manager-plans/) and [What Plan is Right for Me?](https://bitwarden.com/help/what-plan-is-right-for-me/)
+> The procedures in this article assume you already started a paid subscription to Bitwarden. If you haven't, refer to [About Bitwarden Plans](https://bitwarden.com/help/password-manager-plans/) and [What Plan is Right for Me?](https://bitwarden.com/help/what-plan-is-right-for-me/)
 
 ## Individual license
 
@@ -24581,14 +24895,14 @@ If for any reason you need to update your individual license file, for example w
 
 ## Organization license
 
-Follow these procedures when working with an organization license for a Families or Enterprise organization. You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to retrieve, apply, and update a license.
+Follow these procedures when working with an organization license for a Families or Enterprise organization. You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to retrieve, apply, and update a license. Per the Bitwarden terms of service, one organization deployment is permitted per subscription.
 
 ### Retrieve organization license
 
-Before starting an organization on your self-hosted server, retrieve your organization license from the cloud web app.
+Before starting an organization on your self-hosted server, retrieve your organization license from the cloud web app:
 
-1. In the Bitwarden web app, open the Admin Console and navigate to **Billing** → **Subscription**.
-2. Scroll down and select the **Download license** button:
+1. In the Bitwarden web app, open the Admin Console and go to **Billing** → **Subscription**.
+2. Scroll down and select **Download license**:
 
 ![Download license file](https://bitwarden.com/assets/Z05L50lttybQXsvvJeRUM/ec32e7a9764236ac2bbc905ace3b06e0/2026-08-12_09-50-56.png)
 *Download license file*
@@ -24615,12 +24929,15 @@ Applying your license in a self-hosted server is the means by which you'll creat
 
 ### Update organization license
 
-Organizations will need to update the license file used by their self-hosted server in several different scenarios, for example:
+There are a few scenarios when organizations need to update the license file used by their self-hosted server:
 
-- To **add user seats** to a self-hosted organization. Self-hosted organizations' seat count is dictated by the license, so to add seats they must first be added to the associated cloud organization and then the license used by your self-hosted organization must be updated.
-- To continue operation of the self-hosted organization **when the license renews**. You have 60 days, from the date of renewal, to update the license file to you self-hosted server before your self-hosted [organization is disabled](https://bitwarden.com/help/organization-renewal/).
+- **A****dd user seats**: Self-hosted organization seat counts are set by the license. To add user seats, first add them to your associated cloud organization, and then update the license used by your self-hosted organization.
+- **When your organization's billing renews**: A self-hosted organization's license must be updated within 60 days of renewal. If the license is not updated after 60 days, the [organization will be disabled](https://bitwarden.com/help/organization-renewal/).
 
-There are two methods for updating a self-hosted organization's license, however **Families organizations may only update manually**:
+> [!NOTE] Why do my license expiration dates on cloud and self-hosted not match?
+> Cloud and self-hosted license expiration dates don't match due to the 60-day grace period, which is provided to prevent the inadvertent loss of organization functionality.
+
+There are two methods for updating a self-hosted organization's license. **Families organizations can only update their license manually**.
 
 ### Automatic sync
 
@@ -25836,17 +26153,25 @@ To copy an item's details:
 
 Hover over an item and select the [clone] **Copy icon** that appears next to an item. A menu will then appear where you select **Copy username** or **Copy password**:
 
-![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/db8893edf1915ee8bade94075fa5bf2d/Copy_item.png)
+![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/e263a1e72007dda9e9f7c2d4cf22b8f8/2026-09-02_15-27-47.png)
 *Copy in web app*
 
 You can also go to **Settings** → **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
 
-![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/76fe8821f920a53e2ef3420a0f8ea591/Quick_copy_in_web_app.png)
+![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/29528ad67257ac81887a18ac1ab293fb/2026-09-02_15-19-25.png)
 *Quick copy in web app*
 
 ### Browser extension
 
 Several [autofill methods](https://bitwarden.com/help/auto-fill-browser/) are available in the Bitwarden browser extension, including a [copy button](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/).
+
+![Copy button browser](https://bitwarden.com/assets/3W5ZfYspgV90rAm6KxRyzU/d6e1eeccf249cbdcf86b53cc0840b454/copy_button_browser.png)
+*Copy button browser*
+
+You can also go to ⚙️ **Settings**→ **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
+
+![Quick copy browser](https://bitwarden.com/assets/RsUJT6m2wr6tToeb2CF7n/58c8b42b7248d209371dab1891a68b8a/browser_quick_copy.png)
+*Quick copy browser*
 
 ### Mobile
 
@@ -25858,6 +26183,13 @@ Open an item and select the [clone] **Copy icon** next to a field:
 
 ![Copy credential on desktop](https://bitwarden.com/assets/7KlGYgWWe0BdkY5UQFerwN/91cca24b2fc1c6bb6a0ea138bad05f0d/Copy_credential_on_desktop.png)
 *Copy credential on desktop*
+
+You can also go to **Settings** → **App** settings and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
+
+![Quick copy desktop app](https://bitwarden.com/assets/RburuyxTBjseLlCQSU5PE/e6986412a1cf87828a82993f88ffcc1e/2026-09-11_10-33-06.png)
+*Quick copy desktop app*
+
+<u></u>
 
 ### CLI
 
@@ -26167,7 +26499,6 @@ To generate an invite link:
  - At least one domain must always be present, you cannot generate an unrestricted link.
 
  - Allowed domains provide additional security to links. You should only allow trusted domains. Broad domains such as gmail.com are not recommended.
- - Removing allowed domains or generating a new link will invalidate previously generated links.
  - If the organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/), the claimed domain will be pre-populated in the field.
 
 > [!NOTE] Restrict link domain
@@ -26175,11 +26506,11 @@ To generate an invite link:
 5. Select **Copy link** and share through your preferred channel.
 
 > [!NOTE] To accept invite link
-> In order to accept an invite link, a member's email address must be verified. Cloud accounts will be typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
+> In order to accept an invite link, a member's email address must be verified. Cloud accounts will typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
 
 #### Refresh or restrict a link
 
-The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one. Removing every domain from the allowed list also invalidates the link.
+The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one.
 
 > [!NOTE] invite link for enterprise users
 > Invite links are available for Enterprise organizations. If your organization was downgraded from Enterprise, existing links will no longer work and the **By link** tab will be unavailable.
@@ -26193,7 +26524,7 @@ The invite link does not expire on its own. To invalidate it, select **Refresh**
 > 
 > If you're self-hosting Bitwarden, you can configure the invitation expiration period [using an environment variable](https://bitwarden.com/help/environment-variables/).
 > 
-> **Link invitations** will not expire unless the allowed domain has been removed, the link has been rotated, or the link is deactivated.
+> **Link invitations** will not expire unless the link is rotated or manually deactivated.
 
 ### Accept
 
@@ -26266,6 +26597,22 @@ From the **Members** page, you can also review and update individual members' ac
 ![Update member](https://bitwarden.com/assets/5tspjHKPHunTlRhylIJo5O/c707a3e1780364f8820832c216b5ca64/Update_member.png)
 *Update member*
 
+### Member statuses
+
+Members can have one of the following statuses relative to your organization:
+
+| Status | Description |
+|------|------|
+| Staged | User was provisioned with the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) option **Off** (default) using SCIM or using Directory Connector. These users will not be issued an invitation [until you actively do so](https://bitwarden.com/help/managing-users/#invite-staged-members/), will not occupy a license seat, and will not be subject to organization policies. Users in this status can only be revoked or removed until they're invited. Staged users must be [invited using a link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/). |
+| Invited | Users was invited to join the organization, either by email or invite link, and has the opportunity to accept the invitation to join. |
+| Accepted | User has accepted the invitation to join the organization and is awaiting confirmation by an administrator. |
+| Confirmed | User has been confirmed by an administrator and has access to the data their account has been provisioning with access to (i.e. through assignment to collections). |
+| Revoked | User has has their access to organization data [suspended by an administrator](https://bitwarden.com/help/revoke-users/). These users will not occupy a license seat, and will not be subject to organization policies. |
+
+### Invite staged members
+
+To move a staged member into the invite flow so they receive an invitation email, use the [invite them by link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) from the Admin Console. Once they interact with the invitation link and complete the flow, they'll move into the `Accepted` status.
+
 ### Review 2FA and account recovery status
 
 The **Members** page also notes which users have set up certain features in the **Policies** column. The 🔑 **Key icon** means the member is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). The 🔒 **Lock icon** is present when [two-step login](https://bitwarden.com/help/setup-two-step-login/) is used: 
@@ -26293,7 +26640,7 @@ The member list export includes the following information about each account:
 |------|------|
 | Email | The email address of the account |
 | Name | The name of the user, from **Settings** → **My account** |
-| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
+| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Staged**, **Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
 | Role | The user's [member role](https://bitwarden.com/help/user-types-access-control/) in the organization |
 | Two-step login | Shows if the user logs in with any [two-step login method](https://bitwarden.com/help/setup-two-step-login/) |
 | Account recovery | Shows if the user is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) |
@@ -26545,9 +26892,21 @@ This article will help you configure a SCIM integration with Azure. Configurati
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
+
+> [!TIP] For Entra, don't have SCIM send emails
+> For Entra, it is **highly recommended** that you keep this setting **Off** and issue invitations using the Admin Console.
 
 ## Create an enterprise application
 
@@ -26594,7 +26953,7 @@ Bitwarden recommends mappings that differ from Microsoft Entra ID's. Review the 
 
 ### User mapping
 
-If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. Bitwarden strongly recommends the following mappings:
+If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. The following table features Entra's default mappings; however, Bitwarden strongly recommends using [Bitwarden's recommended mappings](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#user-mapping-with-object-identifiers/).
 
 | **Bitwarden attribute** | **Default AAD attribute** |
 |------|------|
@@ -26680,7 +27039,7 @@ Once the application is fully configured, start provisioning by selecting the [p
 
 ## Finish user onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
@@ -28162,8 +28521,17 @@ To start your SCIM integration:
 3. Select **Save**.
 4. Your **SCIM URL**and **SCIM API key** will appear, which you will later [enter in Okta](https://bitwarden.com/help/okta-scim-integration/#connect-your-bitwarden-organization/):
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 *SCIM provisioning*
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Add the Bitwarden app to Okta
 
@@ -28220,7 +28588,7 @@ Open the **Assignments**tab and use the **Assign** dropdown menu to assign peopl
 
 ## Finish user onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
@@ -28298,7 +28666,7 @@ Bitwarden organizations manage members and data in a scalable and secure fashion
 
 ### Onboarding members
 
-Once your organization is established and collections are setup to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
+Once your organization is established and collections are set up to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
 
 Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#add-new-members/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
 
@@ -28352,7 +28720,7 @@ Once Alice is removed from your organization:
 | **Email & master password** | Can continue to log in using `alice@company.com `and `p@ssw0rD`, however since she won't have access to her `@company.com `inbox, she should be advised to change the email associated with her Bitwarden account. |
 | **Individual items** | Will still be able to use her individual vault and access the items stored therein. |
 | **Permissions in the organization** | Will**lose all permissions over and access to**anything related to the organization. |
-| **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can setup one of our free two-step login options or upgrade to premium for more. |
+| **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can set up one of our free two-step login options or upgrade to premium for more. |
 | **Created collections** | Organization owners, admins and custom role members with the **Edit any collection**permission will temporarily gain access to Alice's "Marketing Team" collection so they can can assign a new member the **Manage collection** permission. |
 | **Shared items** | Ownership of collections and shared items **belongs to the organization**, so Alice will lose access to all these items despite having created them. |
 
@@ -28407,7 +28775,7 @@ At Bitwarden, we often say that password management is people management, and we
 
 ### SCIM
 
-For Enterprise organizations with large user-bases that operate using a supported identity (currently, Azure AD, Okta, OneLogin, and JumpCloud), SCIM integrations can be used to automatically provision members and groups in your Bitwarden organization. [Learn more](https://bitwarden.com/help/about-scim/).
+For Enterprise organizations with large user-bases that operate using a supported identity (currently, Azure AD, Okta, OneLogin, and JumpCloud), SCIM integrations can be used to provision members and groups in your Bitwarden organization. [Learn more](https://bitwarden.com/help/about-scim/).
 
 ### Directory Connector
 
@@ -28421,7 +28789,7 @@ Directory Connector will:
 
 - Sync LDAP-based directory groups with Bitwarden groups
 - Sync users within each group
-- Invite new users to join the organization
+- Invite new users to join the organization when [automatic invitations are set up](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/), allow them to subsequently complete the acceptance and confirmation steps of the standard [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/)
 - Remove deleted users from the organization
 
 ### Login with SSO
@@ -28482,7 +28850,7 @@ SCIM, Directory Connector, Login with SSO, Enterprise policies, and your vault w
 | **Step** | **Description** |
 |------|------|
 | **Synchronize** | Use SCIM or Directory Connector to sync groups and users to Bitwarden from your existing directory service. |
-| **Invite** | SCIM or Directory Connector will automatically issue invitations to synced users. |
+| **Invite** | SCIM or Directory Connector can automatically issue invitations to synced users. *Provisioned users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/). |
 | **Authenticate** | Pair your login with SSO implementation with the SSO policy to require users to sign up with SSO when they accept their invitations. |
 | **Administer** | Use the web vault to promote some users to different roles and to ensure group-collection relationships are configured to grant the right access to the right users. |
 | **Re-synchronize** | Maintain your SCIM integration, or periodically re-run Directory Connector, to remove users from Bitwarden that are no longer active in your directory service and to start onboarding for new hires. |
@@ -28975,9 +29343,18 @@ This article will help you configure a SCIM integration with OneLogin. Configur
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Create a OneLogin app
 
@@ -29064,7 +29441,7 @@ Select **Parameters**from the left-hand navigation. Select **Groups**from the ta
 
 ### Finish user onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
@@ -29263,7 +29640,7 @@ URL: https://bitwarden.com/help/organization-renewal/
 
 Organization subscriptions renew automatically on an annual or monthly basis. Organization [owners](https://bitwarden.com/help/user-types-access-control/#default-roles/) can check the renewal date from the web app Admin Console by navigating to organization's **Billing** → **Subscription** screen:
 
-![Organization subscription view](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
+![Organization subscription ](https://bitwarden.com/assets/7MT9lfZZDTOQOBmnrLGceN/1ac8c615153e35250d15ce3921148cfe/2024-12-04_10-33-12.png)
 
 As your renewal date approaches, we recommend confirming your [payment method](https://bitwarden.com/help/payment-methods/) is up-top-date by going to **Billing**→ **Payment method**. Learn how to [update your billing information](https://bitwarden.com/help/update-billing-info/#update-billing-for-organizations/).
 
@@ -30084,9 +30461,18 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Create a SCIM app
 
@@ -30136,6 +30522,13 @@ Before syncing user groups and directories, a Rule is required to sync the user 
 
 ![Edit group provisioning](https://bitwarden.com/assets/10ztwQpTzsxZoi0vh83no6/f976a4f57d1fbe60b1f616f6114ce635/2024-10-09_15-11-57.png)
 2. Choose the group or groups to provision and select **Save**. Once saved, the directory will trigger a sync.
+
+## Finish User Onboarding
+
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+
+> [!NOTE] Invite/Accept/Confirm
+> The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
 
 ## Appendix
 
@@ -30234,6 +30627,7 @@ The **Single organization** policy must be turned on before activating the follo
 - [Account recovery administration](https://bitwarden.com/help/policies/#account-recovery-administration/)
 - [Require single sign-on authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/)
 - [Default URI match detection](https://bitwarden.com/help/policies/#default-uri-match-detection/)
+- [Activate fill assist](https://bitwarden.com/help/policies/#activate-fill-assist/)
 - [Session timeout](https://bitwarden.com/help/policies/#session-timeout/)
 
 If you are unable to turn off the **Single organization** policy, verify that all of the above policies are deactivated, that you don't have a [claimed domain](https://bitwarden.com/help/claimed-domains/), and then try again.
@@ -30412,6 +30806,23 @@ Once the policy is activated, members cannot view or change their account's **De
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
+
+### Activate fill assist
+
+Turn on the **Activate fill assist**policy to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members who haven't yet set their own preference and, optionally, to point members' clients at custom fill assist rules rather than Bitwarden's curated maps.
+
+This policy sets a **default**, not an enforcement. Members who activate or deactivate fill assist on their own, whether before the policy is activated or after, will keep that setting choice. Activating this policy will not override their personal preference. Unlike some policies, this policy applies to all roles including owners and admins.
+
+> [!NOTE] Single org policy required
+> The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
+
+The **Activate fill assist**policy has two controls:
+
+- **Enable policy**: When toggled on, members who haven't touched their own fill assist setting are defaulted to fill assist on.
+- **Custom autofill rule set**: By default, fill assist uses a rule set curated by Bitwarden. Enter a URL here to override it with your own. Using a custom ruleset fully replaces the default with a ruleset that you build and maintain, there is no merge or fallback between the two. Learn the basics of [how to set up a custom ruleset](https://bitwarden.com/help/custom-fill-assist-rules/).
+
+> [!NOTE] Self-hosting fill assist custom rules
+> Self-hosted organizations **will not see the UI** for providing a custom autofill ruleset. Instead, self-hosted organizations must set this URL at the server level using an [environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/).
 
 ### Automatic login with SSO
 
@@ -31740,6 +32151,28 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.9.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.9.0, Browser Extension 2026.9.0, Desktop 2026.9.0, Mobile 2026.9.0, and CLI 2026.9.0) 
+
+#### Password Manager
+
+- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
+- **Autofill SSH keys**: SSH key items stored in your vault can now be autofilled using existing browser extension autofill methods, the same way logins, cards, and identities are autofilled. Learn more about [autofill ](https://bitwarden.com/help/auto-fill-browser/)and [SSH keys](https://bitwarden.com/help/about-ssh/).
+- ⭐ **Quick copy from desktop app**: Copy shortcut buttons are now available for vault items when you hover over them in the desktop app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
+
+#### Admin Console
+
+- ⭐ **Stage users with SCIM and Directory Connector**: Users provisioned with SCIM or Directory Connector can now be provisioned into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) rather than immediately issued invitations. This is controlled by a new setting [in the SCIM provisioning view](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) or [within Directory Connector's sync options](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/).
+
+> [!TIP] Staged status differential defaults
+> For **new organizations** and organizations **not yet using SCIM or Directory Connector**, both tools by default will be set to provision users into the Staged status rather than automatically issue invitations.
+> 
+> For organizations **already using SCIM or Directory Connector**, both tools will continue to automatically issue invitations in order to not disrupt existing workflows. You can change that setting whenever you're ready to do so.
+- ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#activate-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
+- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/) are now enforced on iOS applications.
+- **Vault banner policy for mobile users**: The [vault banner](https://bitwarden.com/help/policies/#vault-banner/) policy's custom banners will now apply to iOS and Android user vaults.
+
 ## 2026.8.1
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.1, and Mobile 2026.8.1)
@@ -31759,7 +32192,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager
 
-- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [assigning item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
 - **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
 - **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
 
@@ -31774,7 +32207,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Self-host
 
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
+- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with a version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate your certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 
@@ -40588,7 +41021,9 @@ To delete a passkey from a vault item:
 
 ### Export and import passkeys
 
-Passkeys are included in [JSON exports](https://bitwarden.com/help/export-your-data/) generated by Bitwarden and, once exported, can be [imported to a Bitwarden account](https://bitwarden.com/help/import-data/).
+Passkeys are included in [JSON exports](https://bitwarden.com/help/export-your-data/) generated by Bitwarden and, once exported, can be [imported to a Bitwarden account](https://bitwarden.com/help/import-data/). 
+
+On mobile, passkeys can also be [imported](https://bitwarden.com/help/import-data/#tab-mobile-5ALQx9afSqWXX9jfXsY5sb/) and [exported](https://bitwarden.com/help/export-your-data/#tab-mobile-1QlXqfleMlF6jWT87Dbn2u/) directly using the FIDO Credential Exchange Protocol (CXP), on iOS 26+ and Android 14+. Both applications must support CXP.
 ---
 URL: https://bitwarden.com/help/subprocessors/
 ---
@@ -42063,9 +42498,7 @@ Complete the following steps to start your organization:
 Paid organizations (Families, Teams, or Enterprise) automatically provide all users with access to premium features. If you had a premium individual subscription at the time of creating the organization, you can cancel your premium individual subscription without losing access to premium features.
 
 > [!NOTE] Bitwarden refunds 
-> Bitwarden offers refunds for cancelled premium subscription **within 30 days of subscription creation**. If you create a paid organization within 30 days of creating a premium individual account, [contact us](https://bitwarden.com/contact/) to initiate your refund.
-> 
-> At this time, Bitwarden does not offer refunds to paid subscriptions older than 30 days.
+> If you cancel a premium subscription **within 30 days of the its creation**, contact us for a refund. Subscriptions older than 30 days are not eligible for a refund.
 
 To cancel your premium individual subscription:
 
@@ -42331,6 +42764,28 @@ You may also activate this option directly in the Directory Connector [configura
 
 > [!NOTE]
 > If you don't enable this option, Directory Connector will limit a sync to 2000 users or groups.
+
+## Automatically send email invitations
+
+By default, a user provisioned through Directory Connector is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
+
+You may also activate this option directly in the Directory Connector [configuration file](https://bitwarden.com/help/directory-sync-shared/#config-file/) (`data.json`) by setting `"inviteUsersAfterProvisioning":` :
+
+```javascript
+"syncConfig": {
+ ...,
+ ...,
+ ...,
+ "inviteUsersAfterProvisioning": true
+},
+```
 
 ## Overwriting syncs
 

@@ -114,10 +114,10 @@ With the infrastructure for secure and scalable sharing of credentials in place,
 1. **For smaller customers**, you can send email invitations to users from the Admin Console 🎚️ **Members** view:
 
 ![Invite members as a provider](https://bitwarden.com/assets/4wUO7i6w8y4sqAvwuMVZyd/070a5b36b242b1e4871cc0f58e0b8f83/2024-12-05_09-31-35.png)
-2. **For larger customers**who leverage an IdP such as Azure AD, Okta, OneLogin, or JumpCloud, use [SCIM](https://bitwarden.com/help/about-scim/) to automatically provision users.
-3. **For larger customers** who leverage a directory service (Active Directory, LDAP, Okta, and more), use [Directory Connector](https://bitwarden.com/help/directory-sync/) to sync organization users from the source directory and automatically issue invitations.
+2. **For larger customers**who leverage an IdP such as Azure AD, Okta, OneLogin, or JumpCloud, use [SCIM](https://bitwarden.com/help/about-scim/) to [automatically send invitations](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/).
+3. **For larger customers** who leverage a directory service (Active Directory, LDAP, Okta, and more), use [Directory Connector](https://bitwarden.com/help/directory-sync/) to sync organization users from the source directory and [automatically issue invitations](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/).
 
-Regardless of whether you have invited users from the organization vault, using SCIM, or using Directory Connector, the same three-step process (Invite → Accept → Confirm) that you followed when [onboarding provider users](https://bitwarden.com/help/getting-started-providers/#onboard-users/) will apply here as well.
+Regardless of whether you invited users from the organization vault, using SCIM, using Directory Connector, or using an [invite link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/), the same three-step process (Invite → Accept → Confirm) that you followed when [onboarding provider users](https://bitwarden.com/help/getting-started-providers/#onboard-users/) will apply here as well.
 
 ## Managing self-hosted organizations
 

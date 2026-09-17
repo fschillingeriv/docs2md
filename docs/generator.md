@@ -37,7 +37,7 @@ You can also generate a strong password from the Edit screen using the [generate
 
 If you're creating an account that isn't stored in Bitwarden, you can also use the inline autofill menu to generate and autofill a password using the **Fill generated password** prompt:
 
-![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/ce116e8ff337f90fbbd57b52aa15fdcd/2024-11-05_10-07-08.png)
+![Fill generated password](https://bitwarden.com/assets/2JcceqWgFbk4ViLCMe6qm5/52dcfb7c47aba3220af566bbf74b2c09/2025-04-25_10-22-53.png)
 
 When using inline, use the [generate] generate button to generate a new password until you're satisfied with it. Inline password generation uses the settings from the browser extension's **Generator** tab. Make sure you select **New login** when prompted to save the login to Bitwarden. [Learn more](https://bitwarden.com/help/auto-fill-browser/#use-the-inline-autofill-menu/).
 

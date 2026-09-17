@@ -15,6 +15,8 @@ Fill assist can be turned on for Bitwarden browser extensions from the **Setting
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
 
+If an organization you're a member of has turned on the [Activate fill assist policy](https://bitwarden.com/help/policies/#activate-fill-assist/), your fill assist setting may already reflect a default choice set by your organization. This is a default for members who haven't chosen a setting themselves. Once you turn fill assist on or off yourself, your choice takes over.
+
 Because fill assist is one method for facilitating easier autofill, [custom fields](https://bitwarden.com/help/custom-fields/) are superseded by sites that are fill assisted.
 
 ## How it works
@@ -22,6 +24,7 @@ Because fill assist is one method for facilitating easier autofill, [custom fiel
 Powered by the [Map the Web](https://github.com/bitwarden/map-the-web/) project, fill assist is one of several tools built to resolve autofill issues. It does this by substituting the default autofill logic with human-written and reviewed instructions for how autofill should behave on any site that it supports. Let's break that down:
 
 - **Supported sites**: Fill assist only steps in when the site you're browsing is included in the maps; typically, these are websites that are broadly reported to cause autofill issues for Bitwarden users.
+- **Organization-supplied rules**: Optionally, organizations can replace the Bitwarden-curated maps with their own [custom maps](https://bitwarden.com/help/custom-fill-assist-rules/) to expand coverage to the websites and applications that members of your organization use most often.
 - **Substituting for default logic**: When autofilling on one of those supported sites, fill assist instructs browser extensions to ignore the typical heuristics, including user-created [custom fields](https://bitwarden.com/help/custom-fields/), that they look in favor of a more targeted alternative.
 - **Human-written instructions**: Fill assist uses a map of CSS selectors, that has been written and reviewed by humans, to describe where Bitwarden should autofill which credentials on a fill assisted site.
 
@@ -32,4 +35,7 @@ Those maps are retrieved by your browser extension client on every sync or every
 
 ### Report an issue
 
-Please also note that, because fill assist instructions are targeted on specific CSS selectors on a form, they are liable to stop working when the maintainers of that website make changes. We encourage all users to continue to [report autofill issues](https://docs.google.com/forms/d/e/1FAIpQLSfkxh1w6vK8fLYwAbAAEVhvhMAJwfFNDtYtPUVk1y5WTHvJmQ/viewform), as some reports may be good candidates for updating or adding fill assist instructions.
+Please also note that, because fill assist instructions are targeted on specific CSS selectors on a form, they are liable to stop working when the maintainers of that website make changes. If you're experiencing issues with fill assist:
+
+- If you're a member of an organization, check with an admin before filing a report with Bitwarden. Your organization may be using a custom ruleset that they manage.
+- Otherwise, we encourage all users to continue to [report autofill issues](https://docs.google.com/forms/d/e/1FAIpQLSfkxh1w6vK8fLYwAbAAEVhvhMAJwfFNDtYtPUVk1y5WTHvJmQ/viewform), as some reports may be good candidates for updating or adding fill assist instructions.

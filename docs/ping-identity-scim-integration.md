@@ -18,9 +18,18 @@ This article will help you configure a SCIM integration with Ping Identity. Con
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Create a SCIM app
 
@@ -70,6 +79,13 @@ Before syncing user groups and directories, a Rule is required to sync the user 
 
 ![Edit group provisioning](https://bitwarden.com/assets/10ztwQpTzsxZoi0vh83no6/f976a4f57d1fbe60b1f616f6114ce635/2024-10-09_15-11-57.png)
 2. Choose the group or groups to provision and select **Save**. Once saved, the directory will trigger a sync.
+
+## Finish User Onboarding
+
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+
+> [!NOTE] Invite/Accept/Confirm
+> The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.
 
 ## Appendix
 

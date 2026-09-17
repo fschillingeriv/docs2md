@@ -168,7 +168,7 @@ To import data using a mobile device with **iOS 26+**:
 
 #### CXP with Android devices
 
-To import data using a mobile device with **Android 10+**:
+To import data using a mobile device with **Android 14+**:
 
 1. Open the Bitwarden app.
 2. Tap **Settings**.

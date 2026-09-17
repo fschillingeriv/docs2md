@@ -15,7 +15,7 @@ URL: https://bitwarden.com/help/directory-sync/
 
 The Bitwarden Directory Connector app:
 
-- **Automatically provisions users, groups, and group associations** in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users will be issued invitations to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
+- **Automatically provisions users, groups, and group associations** in your Bitwarden organization by pulling from a selection of source directory services. Provisioned users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/).
 - **Can be configured to remove users** from your Bitwarden organization when they are disabled from the source directory. This won't delete their Bitwarden accounts, but they will lose all access to your organization.
 - **Can be run on-demand or automatically** on a configured interval.
 

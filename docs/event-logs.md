@@ -119,6 +119,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - User `user-identifier` self-revoked from organization. (`1518`)
 - [Account recovery](https://bitwarden.com/help/account-recovery/) with two-step login initiated for user-identifier. (`1519`)
 - Clicked vault banner button (`1522`)
+- Staged user `user-identifier` added (`1523`)
 - Member `user-identifier` accepted invitation through invite link. (`1524`)
 - Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
@@ -253,4 +254,4 @@ Bitwarden provides a comprehensive set of integrations with Security Information
 - [Sumo Logic SIEM](https://bitwarden.com/help/sumo-logic-siem/)
 - [Splunk SIEM](https://bitwarden.com/help/splunk-siem/)
 
-Bitwarden also provides multiple methods for accessing data that may be relevant to SIEM platforms for which there is not currently a specific integration. For help configuring a SIEM that isn't listed above, refer to [Non-native SIEM](https://bitwarden.com/help/non-native-siem/).
+Bitwarden also provides multiple methods for accessing data that may be relevant to SIEM platforms for which there is not currently a specific integration. For help configuring a SIEM that isn't listed above, refer to [Non-native SIEM](https://bitwarden.com/help/non-native-siem/) or [generic HEC integration](https://bitwarden.com/help/http-event-collector/).

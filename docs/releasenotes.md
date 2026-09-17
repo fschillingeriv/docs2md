@@ -43,6 +43,28 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.9.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.9.0, Browser Extension 2026.9.0, Desktop 2026.9.0, Mobile 2026.9.0, and CLI 2026.9.0) 
+
+#### Password Manager
+
+- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
+- **Autofill SSH keys**: SSH key items stored in your vault can now be autofilled using existing browser extension autofill methods, the same way logins, cards, and identities are autofilled. Learn more about [autofill ](https://bitwarden.com/help/auto-fill-browser/)and [SSH keys](https://bitwarden.com/help/about-ssh/).
+- ⭐ **Quick copy from desktop app**: Copy shortcut buttons are now available for vault items when you hover over them in the desktop app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
+
+#### Admin Console
+
+- ⭐ **Stage users with SCIM and Directory Connector**: Users provisioned with SCIM or Directory Connector can now be provisioned into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) rather than immediately issued invitations. This is controlled by a new setting [in the SCIM provisioning view](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) or [within Directory Connector's sync options](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/).
+
+> [!TIP] Staged status differential defaults
+> For **new organizations** and organizations **not yet using SCIM or Directory Connector**, both tools by default will be set to provision users into the Staged status rather than automatically issue invitations.
+> 
+> For organizations **already using SCIM or Directory Connector**, both tools will continue to automatically issue invitations in order to not disrupt existing workflows. You can change that setting whenever you're ready to do so.
+- ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#activate-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
+- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/) are now enforced on iOS applications.
+- **Vault banner policy for mobile users**: The [vault banner](https://bitwarden.com/help/policies/#vault-banner/) policy's custom banners will now apply to iOS and Android user vaults.
+
 ## 2026.8.1
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.8.1, and Mobile 2026.8.1)
@@ -62,7 +84,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager
 
-- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [sharing item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
+- ⭐ **Action bar on desktop**: The action bar is now available on the Bitwarden desktop app. Use the action bar to perform bulk vault activities such as [assigning item(s)](https://bitwarden.com/help/sharing/) to a [collection](https://bitwarden.com/help/about-collections/) or [folder](https://bitwarden.com/help/folders/), and [archiving](https://bitwarden.com/help/managing-items/#archive/) vault items.
 - **Devices list now available on iOS**: The [Devices list](https://bitwarden.com/help/manage-devices/), used to surface devices that your account has been used on, is now available on iOS.
 - **Import from Delinea**: You can now import `.csv` and `.xml` files from Delinea to quickly transfer your data to Bitwarden.
 
@@ -77,7 +99,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Self-host
 
-- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate you certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
+- **Helm Chart identity certificate password rotation**: Customers self-hosting with the Helm chart who first deployed with a version prior to 2.0.0 may be required to rotate their server's identity certificate password. Learn [whether you will be required to](https://bitwarden.com/help/rotate-identity-certificate-helm/) and, if so, [how to rotate your certificate password](https://bitwarden.com/help/rotate-identity-certificate-helm/#rotate-your-certificate-password/).
 
 ## 2026.7.2
 

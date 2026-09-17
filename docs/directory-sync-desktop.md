@@ -63,7 +63,7 @@ Directory Connector can be used to run a one-time [manual sync](https://bitwarde
 
 To run a one-time manual sync from your directory to your Bitwarden organization, open the [dashboard] **Dashboard** tab and select the [generate] **Sync Now** button.
 
-Synced users will be invited to your organization, and groups will be immediately created.
+Synced users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization.
 
 ### Automatic sync
 

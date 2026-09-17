@@ -103,7 +103,7 @@ For all of the autofill options described below, there are two instances where y
 
 ### Inline menu
 
-Use the inline autofill menu to quickly input login credentials, [passkeys](https://bitwarden.com/help/storing-passkeys/), and [TOTP](https://bitwarden.com/help/integrated-authenticator/) codes from your Bitwarden vault.
+Use the inline autofill menu to quickly input login credentials, [passkeys](https://bitwarden.com/help/storing-passkeys/), [SSH public keys](https://bitwarden.com/help/about-ssh/), and [TOTP](https://bitwarden.com/help/integrated-authenticator/) codes from your Bitwarden vault.
 
 ![Inline autofill menu](https://bitwarden.com/assets/H7DjdJNvQH00yGNLf5gsC/1ec6f0ce9a94862b0cae1d8b8d679fc8/2024-10-29_14-41-02.png)
 *Inline autofill menu*
@@ -170,6 +170,15 @@ To add a new account to Bitwarden using the inline autofill menu, while either l
 
 ![Save and fill](https://bitwarden.com/assets/1ATTneDqBvNTFNds8YOCFh/cae4c9f4b872eec97aa5cae911633f1a/2026-07-14_10-17-33.png)
 *Save and fill*
+
+### Enter SSH key
+
+To autofill an SSH public key, place your cursor into the **Public key** field on the key form. When the inline autofill menu displays, select the SSH key:
+
+![Inline sutofill SSH key](https://bitwarden.com/assets/47O8MWOenK3aYalqWeXcN5/ad232eea97e16b0d07fe0352ea2e6ffb/SSH_inline_menu.png)
+*Inline sutofill SSH key*
+
+If you have multiple SSH keys, the inline menu will display each SSH key. 
 
 ### Context menu
 

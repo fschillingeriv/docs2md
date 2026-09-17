@@ -172,6 +172,12 @@ Available options are:
 | Okta | 3 |
 | OneLogin | 4 |
 
+You can also use the config command to set your [sync options](https://bitwarden.com/help/user-group-filters/), for example to change the setting that controls whether sync will [automatically issue email invitations](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/) to synced users:
+
+```bash
+bwdc config sync.inviteUsersAfterProvisioning <true|false>
+```
+
 ### data-file
 
 The `data-file` command returns an absolute path to the `data.json` configuration file used by the Directory Connector CLI:

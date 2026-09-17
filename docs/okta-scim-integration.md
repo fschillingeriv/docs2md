@@ -38,8 +38,17 @@ To start your SCIM integration:
 3. Select **Save**.
 4. Your **SCIM URL**and **SCIM API key** will appear, which you will later [enter in Okta](https://bitwarden.com/help/okta-scim-integration/#connect-your-bitwarden-organization/):
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 *SCIM provisioning*
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
 
 ## Add the Bitwarden app to Okta
 
@@ -96,7 +105,7 @@ Open the **Assignments**tab and use the **Assign** dropdown menu to assign peopl
 
 ## Finish user onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.

@@ -23,9 +23,21 @@ This article will help you configure a SCIM integration with Azure. Configurati
 
 To start your SCIM integration, open the Admin Console and navigate to **Settings**→ **SCIM provisioning**: 
 
-![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/e665df6992fb880114fcef82e4e4c07c/SCIM_provisioning_URL_and_API_key.png)
+![SCIM provisioning](https://bitwarden.com/assets/6sw1kuK7GuZ3dfQkkbs6rV/3bdd579c1be5b1ada990036bd9a3a9d8/2026-09-11_09-13-53.png)
 
 Select the **Enable SCIM**checkbox and take note of your **SCIM URL**and **SCIM API Key**. You will need to use both values in a later step.
+
+By default, a user provisioned through SCIM is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting, found on the same **Settings** → **SCIM provisioning** screen referenced above:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
+
+> [!TIP] For Entra, don't have SCIM send emails
+> For Entra, it is **highly recommended** that you keep this setting **Off** and issue invitations using the Admin Console.
 
 ## Create an enterprise application
 
@@ -72,7 +84,7 @@ Bitwarden recommends mappings that differ from Microsoft Entra ID's. Review the 
 
 ### User mapping
 
-If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. Bitwarden strongly recommends the following mappings:
+If you would like User objects in your directory to synchronize with Bitwarden, you may enable or disable **Provision Microsoft Entra ID Users**. This is enabled by default. Select the **Provision Microsoft Entra ID Users** link to customize the attributes sent to Bitwarden with user objects. The following table features Entra's default mappings; however, Bitwarden strongly recommends using [Bitwarden's recommended mappings](https://bitwarden.com/help/microsoft-entra-id-scim-integration/#user-mapping-with-object-identifiers/).
 
 | **Bitwarden attribute** | **Default AAD attribute** |
 |------|------|
@@ -158,7 +170,7 @@ Once the application is fully configured, start provisioning by selecting the [p
 
 ## Finish user onboarding
 
-Now that your users have been provisioned, they will receive invitations to join the organization. Instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
+By default, when your users are provisioned by SCIM they'll be placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which you can [issue them invitations](https://bitwarden.com/help/managing-users/#invite-staged-members/). This behavior is controllable by the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) setting on the SCIM setup page. However and when you do issue invitations, instruct your users to [accept the invitation](https://bitwarden.com/help/managing-users/#accept/) and, once they have, [confirm them to the organization](https://bitwarden.com/help/managing-users/#confirm/).
 
 > [!NOTE] Invite/Accept/Confirm
 > The Invite → Accept → Confirm workflow facilitates the decryption key handshake that allows users to securely access organization vault data.

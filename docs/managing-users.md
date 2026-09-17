@@ -74,7 +74,6 @@ To generate an invite link:
  - At least one domain must always be present, you cannot generate an unrestricted link.
 
  - Allowed domains provide additional security to links. You should only allow trusted domains. Broad domains such as gmail.com are not recommended.
- - Removing allowed domains or generating a new link will invalidate previously generated links.
  - If the organization has a [claimed domain](https://bitwarden.com/help/claimed-domains/), the claimed domain will be pre-populated in the field.
 
 > [!NOTE] Restrict link domain
@@ -82,11 +81,11 @@ To generate an invite link:
 5. Select **Copy link** and share through your preferred channel.
 
 > [!NOTE] To accept invite link
-> In order to accept an invite link, a member's email address must be verified. Cloud accounts will be typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
+> In order to accept an invite link, a member's email address must be verified. Cloud accounts will typically be verified during [sign-up](https://bitwarden.com/help/create-bitwarden-account/). If an email is not verified, unverified users may log in to the web app and select **Verify Email**.
 
 #### Refresh or restrict a link
 
-The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one. Removing every domain from the allowed list also invalidates the link.
+The invite link does not expire on its own. To invalidate it, select **Refresh** to generate a new link, immediately deactivating the old one.
 
 > [!NOTE] invite link for enterprise users
 > Invite links are available for Enterprise organizations. If your organization was downgraded from Enterprise, existing links will no longer work and the **By link** tab will be unavailable.
@@ -100,7 +99,7 @@ The invite link does not expire on its own. To invalidate it, select **Refresh**
 > 
 > If you're self-hosting Bitwarden, you can configure the invitation expiration period [using an environment variable](https://bitwarden.com/help/environment-variables/).
 > 
-> **Link invitations** will not expire unless the allowed domain has been removed, the link has been rotated, or the link is deactivated.
+> **Link invitations** will not expire unless the link is rotated or manually deactivated.
 
 ### Accept
 
@@ -173,6 +172,22 @@ From the **Members** page, you can also review and update individual members' ac
 ![Update member](https://bitwarden.com/assets/5tspjHKPHunTlRhylIJo5O/c707a3e1780364f8820832c216b5ca64/Update_member.png)
 *Update member*
 
+### Member statuses
+
+Members can have one of the following statuses relative to your organization:
+
+| Status | Description |
+|------|------|
+| Staged | User was provisioned with the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) option **Off** (default) using SCIM or using Directory Connector. These users will not be issued an invitation [until you actively do so](https://bitwarden.com/help/managing-users/#invite-staged-members/), will not occupy a license seat, and will not be subject to organization policies. Users in this status can only be revoked or removed until they're invited. Staged users must be [invited using a link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/). |
+| Invited | Users was invited to join the organization, either by email or invite link, and has the opportunity to accept the invitation to join. |
+| Accepted | User has accepted the invitation to join the organization and is awaiting confirmation by an administrator. |
+| Confirmed | User has been confirmed by an administrator and has access to the data their account has been provisioning with access to (i.e. through assignment to collections). |
+| Revoked | User has has their access to organization data [suspended by an administrator](https://bitwarden.com/help/revoke-users/). These users will not occupy a license seat, and will not be subject to organization policies. |
+
+### Invite staged members
+
+To move a staged member into the invite flow so they receive an invitation email, use the [invite them by link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) from the Admin Console. Once they interact with the invitation link and complete the flow, they'll move into the `Accepted` status.
+
 ### Review 2FA and account recovery status
 
 The **Members** page also notes which users have set up certain features in the **Policies** column. The 🔑 **Key icon** means the member is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/). The 🔒 **Lock icon** is present when [two-step login](https://bitwarden.com/help/setup-two-step-login/) is used: 
@@ -200,7 +215,7 @@ The member list export includes the following information about each account:
 |------|------|
 | Email | The email address of the account |
 | Name | The name of the user, from **Settings** → **My account** |
-| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
+| Status | Shows where the account is in [onboarding](https://bitwarden.com/help/managing-users/#add-new-members/) (**Staged**, **Invited**, **Accepted**, or **Confirmed**) or if the account is [**Revoked**](https://bitwarden.com/help/revoke-users/) from the organization |
 | Role | The user's [member role](https://bitwarden.com/help/user-types-access-control/) in the organization |
 | Two-step login | Shows if the user logs in with any [two-step login method](https://bitwarden.com/help/setup-two-step-login/) |
 | Account recovery | Shows if the user is enrolled in [account recovery](https://bitwarden.com/help/account-recovery/) |

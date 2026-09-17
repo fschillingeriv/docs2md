@@ -82,6 +82,15 @@ The import function for SSH keys is available on the Bitwarden desktop app. Usin
 > [!NOTE] import SSH must be in OpenSSH format
 > At this time, imported SSH keys from PuTTy are not compatible.
 
+## Autofill SSH keys
+
+SSH item's public keys can be autofilled using the browser extension, for example when adding a public key to a service such as GitHub or GitLab. Autofill using two methods:
+
+- **Inline menu**: Select the matching SSH key item from the inline menu that appears when a supported form field is detected.
+- **Autofill button**: Open the SSH item in the browser extension and select **Autofill**.
+
+Learn more about [autofill methods for the browser extension](https://bitwarden.com/help/auto-fill-browser/).
+
 ## Supported key types
 
 The SSH Agent supports the following key types:

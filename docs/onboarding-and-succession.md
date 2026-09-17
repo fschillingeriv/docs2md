@@ -73,7 +73,7 @@ Bitwarden organizations manage members and data in a scalable and secure fashion
 
 ### Onboarding members
 
-Once your organization is established and collections are setup to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
+Once your organization is established and collections are set up to store your data, owners and administrators should invite new members. To ensure the security of your organization, Bitwarden applies a 3-step process for onboarding new members, [Invite](https://bitwarden.com/help/managing-users/#invite/) → [Accept](https://bitwarden.com/help/managing-users/#accept/) → [Confirm](https://bitwarden.com/help/managing-users/#confirm/).
 
 Members can be onboarded using [SCIM](https://bitwarden.com/help/about-scim/), by syncing with a directory using [Directory Connector](https://bitwarden.com/help/directory-sync/), [directly from the web vault](https://bitwarden.com/help/managing-users/#add-new-members/), or through Just in Time (JIT) provisioning using [login with SSO](https://bitwarden.com/help/about-sso/).
 
@@ -127,7 +127,7 @@ Once Alice is removed from your organization:
 | **Email & master password** | Can continue to log in using `alice@company.com `and `p@ssw0rD`, however since she won't have access to her `@company.com `inbox, she should be advised to change the email associated with her Bitwarden account. |
 | **Individual items** | Will still be able to use her individual vault and access the items stored therein. |
 | **Permissions in the organization** | Will**lose all permissions over and access to**anything related to the organization. |
-| **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can setup one of our free two-step login options or upgrade to premium for more. |
+| **Two-step login** | Won't be able to use organization Duo 2FA to access her vault, but can set up one of our free two-step login options or upgrade to premium for more. |
 | **Created collections** | Organization owners, admins and custom role members with the **Edit any collection**permission will temporarily gain access to Alice's "Marketing Team" collection so they can can assign a new member the **Manage collection** permission. |
 | **Shared items** | Ownership of collections and shared items **belongs to the organization**, so Alice will lose access to all these items despite having created them. |
 
@@ -182,7 +182,7 @@ At Bitwarden, we often say that password management is people management, and we
 
 ### SCIM
 
-For Enterprise organizations with large user-bases that operate using a supported identity (currently, Azure AD, Okta, OneLogin, and JumpCloud), SCIM integrations can be used to automatically provision members and groups in your Bitwarden organization. [Learn more](https://bitwarden.com/help/about-scim/).
+For Enterprise organizations with large user-bases that operate using a supported identity (currently, Azure AD, Okta, OneLogin, and JumpCloud), SCIM integrations can be used to provision members and groups in your Bitwarden organization. [Learn more](https://bitwarden.com/help/about-scim/).
 
 ### Directory Connector
 
@@ -196,7 +196,7 @@ Directory Connector will:
 
 - Sync LDAP-based directory groups with Bitwarden groups
 - Sync users within each group
-- Invite new users to join the organization
+- Invite new users to join the organization when [automatic invitations are set up](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/), allow them to subsequently complete the acceptance and confirmation steps of the standard [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/)
 - Remove deleted users from the organization
 
 ### Login with SSO
@@ -257,7 +257,7 @@ SCIM, Directory Connector, Login with SSO, Enterprise policies, and your vault w
 | **Step** | **Description** |
 |------|------|
 | **Synchronize** | Use SCIM or Directory Connector to sync groups and users to Bitwarden from your existing directory service. |
-| **Invite** | SCIM or Directory Connector will automatically issue invitations to synced users. |
+| **Invite** | SCIM or Directory Connector can automatically issue invitations to synced users. *Provisioned users can either be [staged](https://bitwarden.com/help/managing-users/#member-statuses/) or [automatically issued invitations ](https://bitwarden.com/help/user-group-filters/#automatically-send-email-invitations/)to join the organization, and can subsequently complete the acceptance and confirmation steps of the normal [onboarding procedure](https://bitwarden.com/help/managing-users/#add-new-members/). |
 | **Authenticate** | Pair your login with SSO implementation with the SSO policy to require users to sign up with SSO when they accept their invitations. |
 | **Administer** | Use the web vault to promote some users to different roles and to ensure group-collection relationships are configured to grant the right access to the right users. |
 | **Re-synchronize** | Maintain your SCIM integration, or periodically re-run Directory Connector, to remove users from Bitwarden that are no longer active in your directory service and to start onboarding for new hires. |

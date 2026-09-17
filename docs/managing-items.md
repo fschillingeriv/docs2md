@@ -59,17 +59,25 @@ To copy an item's details:
 
 Hover over an item and select the [clone] **Copy icon** that appears next to an item. A menu will then appear where you select **Copy username** or **Copy password**:
 
-![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/db8893edf1915ee8bade94075fa5bf2d/Copy_item.png)
+![Copy in web app](https://bitwarden.com/assets/45nnuRuxCcsbYiqG0q1kJM/e263a1e72007dda9e9f7c2d4cf22b8f8/2026-09-02_15-27-47.png)
 *Copy in web app*
 
 You can also go to **Settings** → **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
 
-![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/76fe8821f920a53e2ef3420a0f8ea591/Quick_copy_in_web_app.png)
+![Quick copy in web app](https://bitwarden.com/assets/71DuuvJA5TlEBrS28GwaR3/29528ad67257ac81887a18ac1ab293fb/2026-09-02_15-19-25.png)
 *Quick copy in web app*
 
 ### Browser extension
 
 Several [autofill methods](https://bitwarden.com/help/auto-fill-browser/) are available in the Bitwarden browser extension, including a [copy button](https://bitwarden.com/help/auto-fill-browser/#copy-credentials/).
+
+![Copy button browser](https://bitwarden.com/assets/3W5ZfYspgV90rAm6KxRyzU/d6e1eeccf249cbdcf86b53cc0840b454/copy_button_browser.png)
+*Copy button browser*
+
+You can also go to ⚙️ **Settings**→ **Appearance** and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
+
+![Quick copy browser](https://bitwarden.com/assets/RsUJT6m2wr6tToeb2CF7n/58c8b42b7248d209371dab1891a68b8a/browser_quick_copy.png)
+*Quick copy browser*
 
 ### Mobile
 
@@ -81,6 +89,13 @@ Open an item and select the [clone] **Copy icon** next to a field:
 
 ![Copy credential on desktop](https://bitwarden.com/assets/7KlGYgWWe0BdkY5UQFerwN/91cca24b2fc1c6bb6a0ea138bad05f0d/Copy_credential_on_desktop.png)
 *Copy credential on desktop*
+
+You can also go to **Settings** → **App** settings and check **Show quick copy actions in vault**. When you then hover over an item, icons will appear to specifically copy your username, password, or verification code to the clipboard:
+
+![Quick copy desktop app](https://bitwarden.com/assets/RburuyxTBjseLlCQSU5PE/e6986412a1cf87828a82993f88ffcc1e/2026-09-11_10-33-06.png)
+*Quick copy desktop app*
+
+<u></u>
 
 ### CLI
 

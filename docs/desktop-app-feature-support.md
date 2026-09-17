@@ -41,7 +41,7 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 
 | Feature | [AppImage](https://bitwarden.com/download/#downloads-desktop-applications/) | [Snap](https://snapcraft.io/bitwarden) | [Flatpak](https://flathub.org/apps/com.bitwarden.desktop) | [.deb](https://bitwarden.com/download/#downloads-desktop-applications/) | [.rpm](https://bitwarden.com/download/#downloads-desktop-applications/) |
 |------|------|------|------|------|------|
-| Automatic Updates | * | ✓ | ✓ | | |
+| Automatic Updates | | ✓ | ✓ | | |
 | Desktop Biometrics | ✓ | ✓ | ** | ✓ | ✓ |
 | Extension Biometrics | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Integration with OS | * | ✓ | ✓ | ✓ | ✓ |

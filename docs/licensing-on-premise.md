@@ -4,12 +4,13 @@ URL: https://bitwarden.com/help/licensing-on-premise/
 
 # License Organizations or Premium
 
-Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. To retrieve a license file, you must have an active subscription to Bitwarden cloud. Once subscribed, **download your license file**from the cloud web app and apply it to your self-hosted server using the steps below. 
+Self-hosting Bitwarden is free, however some features must be unlocked in your self-hosted instance with a registered license file. To use your upgraded subscription's features on a self-hosted server:
 
-[Embedded content]The steps are different when working with an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) versus an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
+1. Download the license file from the Bitwarden account that was created and upgraded via the [web app](https://bitwarden.com/help/getting-started-webvault/).
+2. Apply the license file to your self-hosted server, following the steps below for either an [individual license](https://bitwarden.com/help/licensing-on-premise/#individual-license/) or an [organization license](https://bitwarden.com/help/licensing-on-premise/#organization-license/).
 
 > [!NOTE] licensing paid features 
-> The procedures in this article assume that you have already started a paid subscription to Bitwarden. If you haven't, refer to [About Bitwarden Plans](https://bitwarden.com/help/password-manager-plans/) and [What Plan is Right for Me?](https://bitwarden.com/help/what-plan-is-right-for-me/)
+> The procedures in this article assume you already started a paid subscription to Bitwarden. If you haven't, refer to [About Bitwarden Plans](https://bitwarden.com/help/password-manager-plans/) and [What Plan is Right for Me?](https://bitwarden.com/help/what-plan-is-right-for-me/)
 
 ## Individual license
 
@@ -42,14 +43,14 @@ If for any reason you need to update your individual license file, for example w
 
 ## Organization license
 
-Follow these procedures when working with an organization license for a Families or Enterprise organization. You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to retrieve, apply, and update a license.
+Follow these procedures when working with an organization license for a Families or Enterprise organization. You must be an [organization owner](https://bitwarden.com/help/user-types-access-control/) to retrieve, apply, and update a license. Per the Bitwarden terms of service, one organization deployment is permitted per subscription.
 
 ### Retrieve organization license
 
-Before starting an organization on your self-hosted server, retrieve your organization license from the cloud web app.
+Before starting an organization on your self-hosted server, retrieve your organization license from the cloud web app:
 
-1. In the Bitwarden web app, open the Admin Console and navigate to **Billing** → **Subscription**.
-2. Scroll down and select the **Download license** button:
+1. In the Bitwarden web app, open the Admin Console and go to **Billing** → **Subscription**.
+2. Scroll down and select **Download license**:
 
 ![Download license file](https://bitwarden.com/assets/Z05L50lttybQXsvvJeRUM/ec32e7a9764236ac2bbc905ace3b06e0/2026-08-12_09-50-56.png)
 *Download license file*
@@ -76,12 +77,15 @@ Applying your license in a self-hosted server is the means by which you'll creat
 
 ### Update organization license
 
-Organizations will need to update the license file used by their self-hosted server in several different scenarios, for example:
+There are a few scenarios when organizations need to update the license file used by their self-hosted server:
 
-- To **add user seats** to a self-hosted organization. Self-hosted organizations' seat count is dictated by the license, so to add seats they must first be added to the associated cloud organization and then the license used by your self-hosted organization must be updated.
-- To continue operation of the self-hosted organization **when the license renews**. You have 60 days, from the date of renewal, to update the license file to you self-hosted server before your self-hosted [organization is disabled](https://bitwarden.com/help/organization-renewal/).
+- **A****dd user seats**: Self-hosted organization seat counts are set by the license. To add user seats, first add them to your associated cloud organization, and then update the license used by your self-hosted organization.
+- **When your organization's billing renews**: A self-hosted organization's license must be updated within 60 days of renewal. If the license is not updated after 60 days, the [organization will be disabled](https://bitwarden.com/help/organization-renewal/).
 
-There are two methods for updating a self-hosted organization's license, however **Families organizations may only update manually**:
+> [!NOTE] Why do my license expiration dates on cloud and self-hosted not match?
+> Cloud and self-hosted license expiration dates don't match due to the 60-day grace period, which is provided to prevent the inadvertent loss of organization functionality.
+
+There are two methods for updating a self-hosted organization's license. **Families organizations can only update their license manually**.
 
 ### Automatic sync
 

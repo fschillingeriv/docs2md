@@ -14,19 +14,9 @@ For help selecting the right Bitwarden plan for you, refer to [what plan is righ
 
 **A:** Use [Upgrade from Individual to Organization](https://bitwarden.com/help/upgrade-from-individual-to-org/) to guide you through this process.
 
-### Q: How do subscriptions work for self-hosting?
-
-**A:** In order to use a subscription on a self-hosted server first create an account and subscription in the Bitwarden cloud via the [web app](https://bitwarden.com/help/getting-started-webvault/). From there, download the [subscription license](https://bitwarden.com/help/licensing-on-premise/#organization-license/), which will flag access to premium or organization features, to apply to your self-hosted server.
-
-Per the Bitwarden terms of service, one organization deployment is permitted per subscription.
-
 ### Q: If I have a families organization, do I need premium?
 
 **A:** The current families plan (introduced Sep. 2020) automatically provides premium features for all six members of the organization, so no!
-
-### Q: Why do my license expiration dates on cloud and self-hosted not match?
-
-**A**: To ensure that you don't inadvertently lose organization functionality, we provide a 2 month grace period between the expiration of the license on cloud and expiration of the license on your self-hosted server. Learn more [here](https://bitwarden.com/help/organization-renewal/).
 
 ## Payment options
 

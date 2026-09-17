@@ -37,6 +37,28 @@ You may also activate this option directly in the Directory Connector [configura
 > [!NOTE]
 > If you don't enable this option, Directory Connector will limit a sync to 2000 users or groups.
 
+## Automatically send email invitations
+
+By default, a user provisioned through Directory Connector is placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) from which they can be [issued an invitation to join the organization](https://bitwarden.com/help/managing-users/#invite-staged-members/). You can change this behavior with the **Automatically send email invitations** setting:
+
+- When **On**, users are issued email invitations automatically as soon as they're provisioned.
+- When **Off**, users are placed into a [Staged status](https://bitwarden.com/help/managing-users/#member-statuses/) instead of being invited immediately. Staged users: 
+
+ - Do not receive an invitation email.
+ - Do not occupy a license seat.
+ - Are not subject to your organization's policies.
+
+You may also activate this option directly in the Directory Connector [configuration file](https://bitwarden.com/help/directory-sync-shared/#config-file/) (`data.json`) by setting `"inviteUsersAfterProvisioning":` :
+
+```javascript
+"syncConfig": {
+ ...,
+ ...,
+ ...,
+ "inviteUsersAfterProvisioning": true
+},
+```
+
 ## Overwriting syncs
 
 > [!WARNING] BWDC Overwrite
