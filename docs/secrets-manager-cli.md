@@ -19,7 +19,10 @@ bws --help, -h
 
 The CLI can be used cross-platform on Windows, macOS, and Linux distributions. To download and install the Secrets Manager CLI:
 
-Download the Secrets Manager CLI from [https://github.com/bitwarden/sdk/releases](https://github.com/bitwarden/sdk-sm/releases).
+- On Linux or macOS, use the command `curl https://bws.bitwarden.com/install | sh`
+- On Windows, use the command `iwr https://bws.bitwarden.com/install | iex`
+
+You can also download the Secrets Manager CLI from [https://github.com/bitwarden/sdk/releases](https://github.com/bitwarden/sdk-sm/releases).
 
 > [!NOTE] Native .exe in path
 > When using the downloaded native executable, you'll need to add the executable to your PATH or else run commands from the directory the file is downloaded to.
@@ -523,7 +526,11 @@ bws secret get 2863ced6-eba1-48b4-b5c0-afa30104877a --config-file ~/.bws/alt_con
 
 ### config --state
 
-State files are fully encrypted files that store authentication tokens and additional relevant data. State files can reduce rate limiting while authenticating, using stored tokens for authentication. The state directory default location is ~/.config/bws/state. The state file must be designated with an absolute path:
+State files are fully encrypted files that store authentication tokens and additional relevant data. State files can reduce rate limiting while authenticating, using stored tokens for authentication. 
+
+Because the stored session is reused across runs, `bws` may continue to work with a revoked access token until that stored session expires. To force re-authentication, delete the state file for that access token, or opt out of state files.
+
+The state directory default location is ~/.config/bws/state. The state file must be designated with an absolute path:
 
 ```plain text
 bws config state-dir /Users/user/Desktop/bws/state

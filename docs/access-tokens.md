@@ -47,7 +47,7 @@ docker run -d database ... -env DB_PW=$DB_PW ... mysql:latest
 
 ## Revoke an access token
 
-At any time, you can revoke an access token. **Revoking a token will break the ability of any machines currently using it to retrieve and decrypt secrets**. To revoke a token:
+At any time, you can revoke an access token. Revoking a token immediately prevents it from being used to authenticate. However, a machine that has already authenticated may continue to retrieve and decrypt secrets for up to one hour, until the session issued to it expires. To revoke a token:
 
 1. Select **Machine accounts**from the navigation, and open the **Access tokens**tab.
 2. For the access token you want to revoke, use the (⋮ ) options menu to select **Revoke access token**:

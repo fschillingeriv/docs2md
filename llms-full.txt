@@ -984,7 +984,7 @@ docker run -d database ... -env DB_PW=$DB_PW ... mysql:latest
 
 ## Revoke an access token
 
-At any time, you can revoke an access token. **Revoking a token will break the ability of any machines currently using it to retrieve and decrypt secrets**. To revoke a token:
+At any time, you can revoke an access token. Revoking a token immediately prevents it from being used to authenticate. However, a machine that has already authenticated may continue to retrieve and decrypt secrets for up to one hour, until the session issued to it expires. To revoke a token:
 
 1. Select **Machine accounts**from the navigation, and open the **Access tokens**tab.
 2. For the access token you want to revoke, use the (⋮ ) options menu to select **Revoke access token**:
@@ -13050,22 +13050,6 @@ Connect with experienced Bitwarden users who share tips and solve problems toget
 Running into a technical issue or have account questions? Contact the Bitwarden support team for direct assistance.
 
 [Embedded content componentCtaLink]
----
-URL: https://bitwarden.com/help/courses/passwordless-dev/
----
-# Passwordless.dev
-
-Learn how Bitwarden Passwordless.dev can help you establish smooth passwordless authentication for your workforce or application users.
-
-### Passkeys with Passwordless.dev (4 min)
-
-[![Vimeo Video](https://vumbnail.com/840978573.jpg)](https://vimeo.com/840978573)
-*[Watch on Vimeo](https://vimeo.com/840978573)*
-
-Learn more about Passwordless.dev [here](https://bitwarden.com/products/passwordless/).
-
-0:05: Using passkeys on a mobile device.
-1:59: Using passkeys in a web browser.
 ---
 URL: https://bitwarden.com/help/courses/secrets-manager/
 ---
@@ -36389,7 +36373,10 @@ bws --help, -h
 
 The CLI can be used cross-platform on Windows, macOS, and Linux distributions. To download and install the Secrets Manager CLI:
 
-Download the Secrets Manager CLI from [https://github.com/bitwarden/sdk/releases](https://github.com/bitwarden/sdk-sm/releases).
+- On Linux or macOS, use the command `curl https://bws.bitwarden.com/install | sh`
+- On Windows, use the command `iwr https://bws.bitwarden.com/install | iex`
+
+You can also download the Secrets Manager CLI from [https://github.com/bitwarden/sdk/releases](https://github.com/bitwarden/sdk-sm/releases).
 
 > [!NOTE] Native .exe in path
 > When using the downloaded native executable, you'll need to add the executable to your PATH or else run commands from the directory the file is downloaded to.
@@ -36893,7 +36880,11 @@ bws secret get 2863ced6-eba1-48b4-b5c0-afa30104877a --config-file ~/.bws/alt_con
 
 ### config --state
 
-State files are fully encrypted files that store authentication tokens and additional relevant data. State files can reduce rate limiting while authenticating, using stored tokens for authentication. The state directory default location is ~/.config/bws/state. The state file must be designated with an absolute path:
+State files are fully encrypted files that store authentication tokens and additional relevant data. State files can reduce rate limiting while authenticating, using stored tokens for authentication. 
+
+Because the stored session is reused across runs, `bws` may continue to work with a revoked access token until that stored session expires. To force re-authentication, delete the state file for that access token, or opt out of state files.
+
+The state directory default location is ~/.config/bws/state. The state file must be designated with an absolute path:
 
 ```plain text
 bws config state-dir /Users/user/Desktop/bws/state
