@@ -562,7 +562,7 @@ According to the AICPA, the use of the Systems and Organization Controls (SOC), 
 
 Read More: [Bitwarden achieves SOC2 certification](https://bitwarden.com/blog/bitwarden-achieves-soc-2-certification/)
 
-The SOC 3 report provides a summary of the SOC 2 report and is distributed publicly. According to the AICPA, SOC 3 is the SOC for service organizations to report on trust services criteria for general use. Bitwarden makes a copy of the SOC 3 report [available here](https://assets.ctfassets.net/7rncvj1f8mw7/2Sljjp4w5WkruimAllgaks/ec0064fd6e1839185f7dfd2803227e13/Bitwarden_-_2025_SOC_3_Report.pdf) and the summary demonstrates our commitment to security and privacy standards.
+The SOC 3 report provides a summary of the SOC 2 report and is distributed publicly. According to the AICPA, SOC 3 is the SOC for service organizations to report on trust services criteria for general use. Bitwarden makes a copy of the SOC 3 report [available here](https://bitwarden.com/assets/4nGworevQqsF1ZStDgiyQg/35f7c3e8acf2badb9bd85cb9ddab1d8f/Bitwarden_-_2026_SOC_3_Report.pdf) and the summary demonstrates our commitment to security and privacy standards.
 
 These SOC certifications represent one facet of Bitwarden's commitment to safeguarding the security and privacy of customers, and compliance with rigorous standards. Bitwarden also performs a regular cadence of audits on our network security and code integrity.
 
