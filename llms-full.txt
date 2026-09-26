@@ -42289,13 +42289,10 @@ If you have a **2020 Enterprise Org**. subscription, our feature set and price r
 
 If you have a **2020 Teams Org**. subscription, our feature set and price remain the same and you will continue to be billed at the price you originally procured your subscription for. New seats added will also be billed at the same price.
 
-## Subscriptions purchased prior to June 11, 2024
+### FAQs
 
-### Teams Starter
-
-The Teams Starter plan has been removed as an option for new organization creation as of June 11, 2024. If you are already a Teams Starter customer, your feature set and price remain the same and you will continue to be billed at the price you originally procured your subscription for.
-
-## FAQs
+> [!WARNING] FAQs only apply to a 2023 change
+> The following FAQs apply **exclusively** to subscription updates made on **November 6, 2023**.
 
 #### Q: When will the price increase take place?
 
@@ -42328,6 +42325,12 @@ The Teams Starter plan has been removed as an option for new organization creati
 #### Q: What about when I add seats?
 
 **A**: New seats will be billed at the same price of your existing users.
+
+## Subscriptions purchased prior to June 11, 2024
+
+### Teams Starter
+
+The Teams Starter plan has been removed as an option for new organization creation as of June 11, 2024. If you are already a Teams Starter customer, your feature set and price remain the same and you will continue to be billed at the price you originally procured your subscription for.
 ---
 URL: https://bitwarden.com/help/updating-on-premise/
 ---
