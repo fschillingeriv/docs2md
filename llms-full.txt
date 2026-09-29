@@ -24169,7 +24169,7 @@ By default, Bitwarden is set to iterate 600,000 times, as [recommended by OWASP]
 
 ## Argon2id
 
-Argon2 is the winner of the 2015 [Password Hashing Competition](https://www.password-hashing.net/), is available as an alternative to [PBKDF2.](https://bitwarden.com/help/kdf-algorithms/#pbkdf2/) There are three versions of the algorithm, and Bitwarden has implemented Argon2id [as recommended by OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html). Argon2id is a hybrid of other versions, using a combination of data-depending and data-independent memory accesses, which gives it some of Argon2i's resistance to side-channel cache timing attacks and much of Argon2d's resistance to GPU cracking attacks ([source](https://github.com/p-h-c/phc-winner-argon2)).
+Argon2, winner of the 2015 [Password Hashing Competition](https://www.password-hashing.net/), is available as an alternative to [PBKDF2.](https://bitwarden.com/help/kdf-algorithms/#pbkdf2/) There are three versions of the algorithm, and Bitwarden has implemented Argon2id [as recommended by OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html). Argon2id is a hybrid of other versions, using a combination of data-depending and data-independent memory accesses, which gives it some of Argon2i's resistance to side-channel cache timing attacks and much of Argon2d's resistance to GPU cracking attacks ([source](https://github.com/p-h-c/phc-winner-argon2)).
 
 Argon2, as implemented by Bitwarden, works by salting your master password with your username and running the resultant value through a one-way hash algorithm (BLAKE2b) to create a fixed-length hash.
 
