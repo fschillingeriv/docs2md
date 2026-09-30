@@ -21,9 +21,9 @@ Introduce Bitwarden to your teams with comprehensive explainer documents:
 Understand Bitwarden quickly, or explore comprehensive training with these videos:
 
 - [Bitwarden in 30 Seconds](https://vimeo.com/799946080): high-level introduction
-- [Overview of individual vs. organization vault](https://vimeo.com/823390347): ensuring proper separation of individual and organizational credentials
-- [Bitwarden 101 admin walkthrough](https://youtube.com/playlist?list=PL-IZTwAxWO4XtrO78m2GrHRGS_YKzNmYW&si=R5ihNY1HMIonViMY): comprehensive training videos covering organization setup, organizational reporting capabilities, and user management best practices
-- Additional [b-roll](https://vimeo.com/showcase/11841052) and [educational clips](https://drive.google.com/drive/folders/1nZiUlOA5b5ljjnG29R_mqhKVn8uTIEts?usp=drive_link): suitable for internal presentations or onboarding decks
+- [Overview of individual and organization vault](https://vimeo.com/823390347): ensuring proper separation of individual and organizational credentials
+- [Bitwarden Admin Walkthrough](https://bitwarden.com/help/courses/password-manager-admin/): comprehensive training videos covering organization setup, organizational reporting capabilities, and user management best practices
+- Additional [b-roll](https://vimeo.com/showcase/11841052): suitable for internal presentations or onboarding decks
 
 ![ ](https://bitwarden.com/assets/3u8EFXlixwuVXCsvh5eJJZ/85066b90a3f04de13a67204c80c95dbc/videos.jpg)
 

@@ -81,18 +81,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extens
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638494.jpg)](https://vimeo.com/1145638494)

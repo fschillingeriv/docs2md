@@ -10854,18 +10854,6 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 [Embedded content componentCtaLink]
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Command Line Interface (1 min)
 
 [Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your organization via the CLI.
@@ -11131,18 +11119,6 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 [Embedded content componentCtaLink]
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Browser Extension (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
@@ -11267,18 +11243,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extens
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
-
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -11542,18 +11506,6 @@ As an owner, you'll be responsible for inviting the other member to your organiz
 
 **Video Chapters:**
 Learn how to import passwords into your organization using the Admin Console in the Bitwarden Web App.
-
-[Embedded content componentCtaLink]
-
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
 
 [Embedded content componentCtaLink]
 
@@ -12033,18 +11985,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extens
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638494.jpg)](https://vimeo.com/1145638494)
@@ -12351,18 +12291,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extens
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638494.jpg)](https://vimeo.com/1145638494)
@@ -12544,7 +12472,7 @@ Learn how to attach a file to any vault item using the browser extension, so you
 
 ### Take Bitwarden on-the-go (1 min)
 
-Security anywhere is security everywhere! Get the Bitwarden mobile app so you can safely use your passwords while you're on-the-go. [Download](https://bitwarden.com/download/) the mobile app and learn how to autofill passwords on [iOS](https://bitwarden.com/help/auto-fill-ios/) or [Android](https://bitwarden.com/help/auto-fill-android/).
+Security anywhere is security everywhere! Get the Bitwarden mobile app so you can safely use your passwords while you're on the go. [Download](https://bitwarden.com/download/) the mobile app and learn how to autofill passwords on [iOS](https://bitwarden.com/help/auto-fill-ios/) or [Android](https://bitwarden.com/help/auto-fill-android/).
 
 ### Get Bitwarden for all your devices (1 min)
 
@@ -12709,18 +12637,6 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 [Embedded content componentCtaLink]
 
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
-
 ### Command Line Interface (1 min)
 
 [Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your organization via the CLI.
@@ -12820,18 +12736,6 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extens
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
-
-### Desktop app — includes direct import for Chromium browsers (2 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638482.jpg)](https://vimeo.com/1145638482)
-*[Watch on Vimeo](https://vimeo.com/1145638482)*
-
-**Video Chapters:**
-Learn how to [import your passwords](https://bitwarden.com/Import: https://bitwarden.com/help/import-data/) and other data into Bitwarden using the desktop app. Browser passwords can be [imported directly](https://bitwarden.com/help/import-from-chrome/#import-directly-from-browser/) from Chrome, Edge, Opera, Brave, and Vivaldi.
-
-Download the desktop app directly from the Bitwarden website to use the 'import directly from browser' option.
-
-[Embedded content componentCtaLink]
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -13721,9 +13625,9 @@ Introduce Bitwarden to your teams with comprehensive explainer documents:
 Understand Bitwarden quickly, or explore comprehensive training with these videos:
 
 - [Bitwarden in 30 Seconds](https://vimeo.com/799946080): high-level introduction
-- [Overview of individual vs. organization vault](https://vimeo.com/823390347): ensuring proper separation of individual and organizational credentials
-- [Bitwarden 101 admin walkthrough](https://youtube.com/playlist?list=PL-IZTwAxWO4XtrO78m2GrHRGS_YKzNmYW&si=R5ihNY1HMIonViMY): comprehensive training videos covering organization setup, organizational reporting capabilities, and user management best practices
-- Additional [b-roll](https://vimeo.com/showcase/11841052) and [educational clips](https://drive.google.com/drive/folders/1nZiUlOA5b5ljjnG29R_mqhKVn8uTIEts?usp=drive_link): suitable for internal presentations or onboarding decks
+- [Overview of individual and organization vault](https://vimeo.com/823390347): ensuring proper separation of individual and organizational credentials
+- [Bitwarden Admin Walkthrough](https://bitwarden.com/help/courses/password-manager-admin/): comprehensive training videos covering organization setup, organizational reporting capabilities, and user management best practices
+- Additional [b-roll](https://vimeo.com/showcase/11841052): suitable for internal presentations or onboarding decks
 
 ![ ](https://bitwarden.com/assets/3u8EFXlixwuVXCsvh5eJJZ/85066b90a3f04de13a67204c80c95dbc/videos.jpg)
 
