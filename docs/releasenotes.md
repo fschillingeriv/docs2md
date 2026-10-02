@@ -43,6 +43,17 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.9.2
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.9.1, Browser Extension 2026.9.3, Desktop 2026.9.1, Mobile 2026.9.1, and CLI 2026.9.1) 
+
+#### Password Manager
+
+> [!NOTE] Extension Chrome version requirement update
+> The Bitwarden Chrome browser extension now requires Chrome version 134+.
+
+- ⭐ **Password Manager redesign beta**: Bitwarden is updating the look and feel of Password Manager apps, now available as a [beta for cloud users of Chrome browser extensions and desktop apps](https://bitwarden.com/help/redesign-beta/). This beta is opt-in, can be used with your current cloud Bitwarden account, and you can switch back at any time.
+
 ## 2026.9.0
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.9.0, Browser Extension 2026.9.0, Desktop 2026.9.0, Mobile 2026.9.0, and CLI 2026.9.0) 
@@ -95,7 +106,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 - ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
 - ⭐ **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/http-event-collector/).
-- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
+- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
 
 #### Self-host
 
@@ -456,7 +467,7 @@ The newest version of Directory Connector includes modernizations and infrastruc
 
 #### Admin Console
 
-- **Member invitation subject line update**: The [email subject line](https://bitwarden.com/http://bitwarden.com/help/list-of-emails/#critical-member-emails/) for invitations to join an organization was updated.
+- **Member invitation subject line update**: The [email subject line](https://bitwarden.com/help/list-of-emails/#critical-member-emails/) for invitations to join an organization was updated.
 - **Tax ID reminder**: If you're a business owner or provider admin in a country that collects [value added tax (VAT)](https://bitwarden.com/help/tax-calculation/#value-added-tax-vat/) and haven't added your tax ID yet, you'll see a banner on the Admin Console, Payment Details, and Provider Portal pages. Click **Add a Tax ID** to update the billing details with your organization's tax ID.
 
 #### Secrets Manager

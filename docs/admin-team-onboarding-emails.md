@@ -154,9 +154,9 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > 1. Appoint and implementation champion.
 > 2. Communicate the implementation plan to employees.
-> 3. Share this guide with employees your invite to Bitwarden: [Get started with Bitwarden](https://bitwarden.com/help/courses/password-manager-team-member/). You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
+> 3. Share this guide with employees your invite to Bitwarden: Get started with Bitwarden. You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
 > 4. Communicate the benefits of using a password manager (repeatedly).
-> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/http://bitwarden.com/training/).
+> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/training/).
 > 
 > Read more about the steps above in this blog post: [How to Gain Employee Buy-in for Your New Password Manager](https://bitwarden.com/blog/user-adoption-for-company-password-manager/).
 > 
@@ -313,9 +313,9 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > 1. Appoint and implementation champion.
 > 2. Communicate the implementation plan to employees.
-> 3. Share this guide with employees your invite to Bitwarden: [Get started with Bitwarden](https://bitwarden.com/help/courses/password-manager-team-member/). You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
+> 3. Share this guide with employees your invite to Bitwarden: Get started with Bitwarden. You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
 > 4. Communicate the benefits of using a password manager (repeatedly).
-> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/http://bitwarden.com/training/).
+> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/training/).
 > 
 > Read more about the steps above in this blog post: [How to Gain Employee Buy-in for Your New Password Manager](https://bitwarden.com/blog/user-adoption-for-company-password-manager/).
 > 

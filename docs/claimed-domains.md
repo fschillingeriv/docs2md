@@ -85,7 +85,7 @@ Onboarded organization member accounts that use an email address with a matching
 
 | Claimed account benefit | Description |
 |------|------|
-| Organization managed account email and name updates | Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector. |
+| Organization managed account email and name updates | Organization administrators can [change the email address and name](https://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector. |
 | Organization managed account deletion | Claimed member accounts can be outright deleted by organization administrators, instead of only being able to be [removed](https://bitwarden.com/help/delete-member-accounts/#remove-an-account/) from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ellipses menu. |
 | Restrict access to account actions | Users with member accounts are restricted from changing the domain of their email address, leaving the organization, purging their vault, and deleting their account. |
 | Easier SSO workflow | During SSO authentication, these members automatically bypass the step that would require them to enter an [SSO identifier](https://bitwarden.com/help/using-sso/#get-your-organization-identifier/). |

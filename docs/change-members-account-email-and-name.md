@@ -22,7 +22,7 @@ To be eligible for administrator updates, the member's account must meet two req
 
 ## Change a member’s email and name
 
-To change an [eligible member’s](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name#requirements/) account email address or name:
+To change an [eligible member’s](https://bitwarden.com/help/change-members-account-email-and-name/#requirements/) account email address or name:
 
 1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 

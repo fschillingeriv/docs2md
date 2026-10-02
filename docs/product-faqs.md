@@ -36,7 +36,7 @@ Bitwarden will email a verification code to the specified email address. Check y
 
 When you change your email address, you should immediately logout of all Bitwarden apps you use, and log back in with the new credentials. Sessions using a "stale" email address will eventually be logged out.
 
-If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/help/change-members-account-email-and-name/).
 
 ### Q: What features are unlocked when I verify my email?
 

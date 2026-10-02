@@ -277,7 +277,7 @@ Users who have redeemed a sponsored Families organization prior to the policy be
 Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
 1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
-2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+2. Contact us to add the**Automatic user confirmation** policy to your Enterprise policies settings.
 3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
 4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
 

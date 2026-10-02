@@ -24,7 +24,7 @@ Learn more about available Bitwarden plans [here](https://bitwarden.com/help/pas
 
 ### Join a public training session (30 min)
 
-Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase enterprise features live. See what's possible and get your questions answered!
+Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase Enterprise features live. See what's possible and get your questions answered!
 
 [Embedded content componentCtaLink]
 
@@ -38,7 +38,7 @@ This resource hub provides IT and security leaders with a proven path to passwor
 
 ### Onboarding Playbook
 
-This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your team's needs and timeline.
+This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your company's needs and timeline.
 
 [Embedded content componentCtaLink]
 
@@ -115,6 +115,12 @@ Teams Bitwarden organizations provide powerful tools for improving your online s
 
 ## Import your data
 
+### Overview (1 min)
+
+Import your company's passwords and data into Bitwarden for secure scalable sharing and autofill across your team. Choose an import method below based on your preferred Bitwarden client. 
+
+Prefer reading? Read the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -127,7 +133,7 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### Command Line Interface (1 min)
 
-[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your organization via the CLI.
+[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your vault with the Bitwarden CLI.
 
 ### From a custom file (1 min)
 

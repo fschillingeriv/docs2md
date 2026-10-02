@@ -12,8 +12,8 @@ Choose a role or product below to get started. Need more detail? Browse the [ful
 
 - [Personal](https://bitwarden.com/help/courses/password-manager-personal-overview/)
 - [Business](https://bitwarden.com/help/courses/password-manager-business-overview/)
-- [Partner](https://bitwarden.com/help/courses/password-manager-partner)
+- [Partner](https://bitwarden.com/help/courses/password-manager-partner/)
 
 ### Beyond password management
 
-- [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager)
+- [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager/)

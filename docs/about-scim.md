@@ -120,7 +120,7 @@ Members provisioned using SCIM are able to change their account email address in
 > - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
 > 
 > - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 ### Member display name
 

@@ -227,7 +227,7 @@ The member list export includes the following information about each account:
 
 ### Update members' account email and name
 
-If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/help/change-members-account-email-and-name/).
 
 ### Remove members
 

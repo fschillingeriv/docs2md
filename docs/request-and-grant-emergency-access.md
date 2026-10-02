@@ -41,7 +41,7 @@ After your request is approved, you can access the account:
 
 As the account holder, you can control a trusted emergency contact's access to your account at three points:
 
-- [Remove](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts#remove-a-trusted-emergency-contact/) them from your list of trusted emergency contacts.
+- [Remove](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts/#remove-a-trusted-emergency-contact/) them from your list of trusted emergency contacts.
 - [Approve or deny their pending request](https://bitwarden.com/help/request-and-grant-emergency-access/#approve-or-deny-an-emergency-access-request/) for emergency access.
 - Revoke their granted emergency access. The steps depend on whether they were granted [view](https://bitwarden.com/help/request-and-grant-emergency-access/#revoke-view-access/) or [takeover](https://bitwarden.com/help/request-and-grant-emergency-access/#revoke-takeover-access/) access.
 

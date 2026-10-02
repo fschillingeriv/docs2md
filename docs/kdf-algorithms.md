@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/kdf-algorithms/
 
 # Encryption Key Derivation
 
-Bitwarden first uses Key Derivation Functions (KDFs) on account creation to derive a master key for the account from the input master password, which acts as input for a master password hash for the account ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#overview-of-the-master-password-hashing,-key-derivation,-and-encryption-process/)). Whenever a user is authenticated, for example when unlocking a vault or satisfying master password re-prompt, the process is repeated so that the newly-derived hash can be compared to the originally-derived hash. If they match, the user is authenticated.
+Bitwarden first uses Key Derivation Functions (KDFs) on account creation to derive a master key for the account from the input master password, which acts as input for a master password hash for the account ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#hashing-key-derivation-and-encryption/)). Whenever a user is authenticated, for example when unlocking a vault or satisfying master password re-prompt, the process is repeated so that the newly-derived hash can be compared to the originally-derived hash. If they match, the user is authenticated.
 
 KDFs are used in this capacity to frustrate brute-force or dictionary attacks against a master password. KDFs force an attacker's machines to compute a non-trivial number of hashes for each password guess, at increasing cost to the attacker.
 

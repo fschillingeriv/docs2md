@@ -6,8 +6,8 @@ URL: https://bitwarden.com/help/cancel-a-subscription/
 
 Bitwarden subscriptions renew automatically so you don't lose access to paid features. If you cancel automatic renewal, you can continue using your subscription until the end of your current billing cycle. After your subscription ends, you'll lose access to paid features, but your [account or organization won't be deleted](https://bitwarden.com/help/delete-your-account/). If your subscription is less than 30 days old, [contact us](https://bitwarden.com/contact/) for a refund.
 
-> [!NOTE] Self-host cancellation
-> If you [self-host Bitwarden](https://bitwarden.com/help/licensing-on-premise/), cancel your subscription from the Bitwarden web app and server where you created the subscription.
+> [!NOTE] Deleted accounts will not renew
+> Deleting your account also stops your subscription from renewing at the end of your billing cycle, the same as canceling it. To keep your account but cancel your subscription, follow the steps below.
 
 ## Cancel a personal subscription
 
@@ -19,6 +19,9 @@ To cancel a personal subscription:
 *Subscription page*
 2. Take note of the **Next charge**date. This is when you will lose access to paid features once your subscription is cancelled.
 3. Select **Cancel subscription**.
+
+> [!NOTE] Self-host cancellation
+> If you [self-host Bitwarden](https://bitwarden.com/help/licensing-on-premise/), cancel your subscription from the Bitwarden web app and server where you created the subscription.
 
 ### After personal cancellation
 

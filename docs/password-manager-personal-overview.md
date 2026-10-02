@@ -8,10 +8,10 @@ Ready to take control of your passwords? Whether you're flying solo, sharing wit
 
 ### Individuals
 
-- [Individual](https://bitwarden.com/help/courses/password-manager-personal)
-- [Free Sharing for Two](https://bitwarden.com/help/courses/password-manager-free-sharing-for-two)
+- [Individual](https://bitwarden.com/help/courses/password-manager-personal/)
+- [Free Sharing for Two](https://bitwarden.com/help/courses/password-manager-free-sharing-for-two/)
 
 ### Families Plan
 
-- [Family Member](https://bitwarden.com/help/courses/password-manager-family-member)
-- [Family Admin](https://bitwarden.com/help/courses/password-manager-family-admin)
+- [Family Member](https://bitwarden.com/help/courses/password-manager-family-member/)
+- [Family Admin](https://bitwarden.com/help/courses/password-manager-family-admin/)

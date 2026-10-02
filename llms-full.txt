@@ -152,7 +152,7 @@ Users who log in for the first time to a Key Connector enabled organizations wil
 | Admin password reset | When Key Connector is being used, [admin password reset](https://bitwarden.com/help/admin-reset/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. |
 | Revoking access | Members who do not have master passwords will be fully locked out of their account if they are [revoked](https://bitwarden.com/help/revoke-users/). |
 | Emergency access | When Key Connector is being used, the emergency access [account takeover option](https://bitwarden.com/help/emergency-access/) will be disabled for any user that has removed their master password as a result of your Key Connector implementation. Trusted emergency contacts may still **View**a grantor's individual vault data, subject to the established [emergency access workflow](https://bitwarden.com/help/request-and-grant-emergency-access/). |
-| Change email | When Key Connector is being used, members cannot change their vault email address. If it's a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
+| Change email | When Key Connector is being used, members cannot change their vault email address. If it's a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/help/change-members-account-email-and-name/). |
 
 ## How do I start using Key Connector?
 
@@ -383,7 +383,7 @@ Members provisioned using SCIM are able to change their account email address in
 > - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
 > 
 > - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 ### Member display name
 
@@ -776,7 +776,7 @@ Depending on whether a master password hash is available in memory for your clie
 | Verification | There are a number of features in Bitwarden client applications that ordinarily require entry of a master password in order to be used, including [exporting](https://bitwarden.com/help/export-your-data/) vault data, changing [two-step login settings](https://bitwarden.com/help/setup-two-step-login/), retrieving [API keys](https://bitwarden.com/help/personal-api-key/), and more. If the user doesn't use a master password to access the client, **all these features**will replace master password confirmation with email-based TOTP verification. |
 | Vault lock/unlock | Under ordinary circumstances, a [locked vault can be unlocked](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) using a master password. If the user doesn't use a master password to access the client, locked client applications can only be unlocked with a [PIN](https://bitwarden.com/help/unlock-with-pin/) or with [biometrics](https://bitwarden.com/help/biometrics/). If neither PIN nor biometrics are enabled for a client application, the vault will always log out instead of lock. Unlocking and logging in will **always**require an internet connection. |
 | Master password re-prompt | If the user does not unlock their vault with a master password, [master password re-prompt](https://bitwarden.com/help/managing-items/#protect-individual-items/) will be disabled. |
-| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. If they do not have a master password and have a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). |
+| Changing email address | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to change their email address. If they do not have a master password and have a [claimed account](https://bitwarden.com/help/claimed-accounts/), however, an organization administrator can [change their email address](https://bitwarden.com/help/change-members-account-email-and-name/). |
 | CLI | Users who [do not have master passwords](https://bitwarden.com/help/about-trusted-devices/#impact-on-master-passwords/) **will not** be able to access Password Manager CLI. |
 ---
 URL: https://bitwarden.com/help/access-intelligence-email-templates/
@@ -1861,9 +1861,9 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > 1. Appoint and implementation champion.
 > 2. Communicate the implementation plan to employees.
-> 3. Share this guide with employees your invite to Bitwarden: [Get started with Bitwarden](https://bitwarden.com/help/courses/password-manager-team-member/). You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
+> 3. Share this guide with employees your invite to Bitwarden: Get started with Bitwarden. You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
 > 4. Communicate the benefits of using a password manager (repeatedly).
-> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/http://bitwarden.com/training/).
+> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/training/).
 > 
 > Read more about the steps above in this blog post: [How to Gain Employee Buy-in for Your New Password Manager](https://bitwarden.com/blog/user-adoption-for-company-password-manager/).
 > 
@@ -2020,9 +2020,9 @@ This article includes the onboarding emails sent to new Bitwarden Enterprise and
 > 
 > 1. Appoint and implementation champion.
 > 2. Communicate the implementation plan to employees.
-> 3. Share this guide with employees your invite to Bitwarden: [Get started with Bitwarden](https://bitwarden.com/help/courses/password-manager-team-member/). You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
+> 3. Share this guide with employees your invite to Bitwarden: Get started with Bitwarden. You can also share [this video training series](https://bitwarden.com/learning/pm-101-getting-started-as-a-user/).
 > 4. Communicate the benefits of using a password manager (repeatedly).
-> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/http://bitwarden.com/training/).
+> 5. Sign up for complimentary, 1:1 Bitwarden training [here](https://bitwarden.com/training/).
 > 
 > Read more about the steps above in this blog post: [How to Gain Employee Buy-in for Your New Password Manager](https://bitwarden.com/blog/user-adoption-for-company-password-manager/).
 > 
@@ -2700,7 +2700,7 @@ When you [create a collection](https://bitwarden.com/help/about-collections/), y
 ## Assign access to un-managed collections
 
 > [!NOTE] Only applies if 'Owner/Admin Manage All' setting is off.
-> The following only applies if the [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#owners-and-admins-can-manage-all-collections-and-items/) collection setting is **off.** If this setting is **on** in your organization:
+> The following only applies if the [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) collection setting is **off.** If this setting is **on** in your organization:
 > 
 > - [Owners, admins, and custom role members](https://bitwarden.com/help/user-types-access-control/) with the **Edit any collection**permission can always, rather than temporarily, modify access to a collection from the **Collection** view.
 > - The **Add Access** badge and tab described below will not appear.
@@ -7442,8 +7442,8 @@ URL: https://bitwarden.com/help/cancel-a-subscription/
 
 Bitwarden subscriptions renew automatically so you don't lose access to paid features. If you cancel automatic renewal, you can continue using your subscription until the end of your current billing cycle. After your subscription ends, you'll lose access to paid features, but your [account or organization won't be deleted](https://bitwarden.com/help/delete-your-account/). If your subscription is less than 30 days old, [contact us](https://bitwarden.com/contact/) for a refund.
 
-> [!NOTE] Self-host cancellation
-> If you [self-host Bitwarden](https://bitwarden.com/help/licensing-on-premise/), cancel your subscription from the Bitwarden web app and server where you created the subscription.
+> [!NOTE] Deleted accounts will not renew
+> Deleting your account also stops your subscription from renewing at the end of your billing cycle, the same as canceling it. To keep your account but cancel your subscription, follow the steps below.
 
 ## Cancel a personal subscription
 
@@ -7455,6 +7455,9 @@ To cancel a personal subscription:
 *Subscription page*
 2. Take note of the **Next charge**date. This is when you will lose access to paid features once your subscription is cancelled.
 3. Select **Cancel subscription**.
+
+> [!NOTE] Self-host cancellation
+> If you [self-host Bitwarden](https://bitwarden.com/help/licensing-on-premise/), cancel your subscription from the Bitwarden web app and server where you created the subscription.
 
 ### After personal cancellation
 
@@ -7805,7 +7808,7 @@ To be eligible for administrator updates, the member's account must meet two req
 
 ## Change a member’s email and name
 
-To change an [eligible member’s](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name#requirements/) account email address or name:
+To change an [eligible member’s](https://bitwarden.com/help/change-members-account-email-and-name/#requirements/) account email address or name:
 
 1. Log in to the Bitwarden web app and open the Admin Console using the product switcher:
 
@@ -8026,7 +8029,7 @@ Onboarded organization member accounts that use an email address with a matching
 
 | Claimed account benefit | Description |
 |------|------|
-| Organization managed account email and name updates | Organization administrators can [change the email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector. |
+| Organization managed account email and name updates | Organization administrators can [change the email address and name](https://bitwarden.com/help/change-members-account-email-and-name/) on claimed member accounts that do not have a master password, such as those set up with trusted devices or Key Connector. |
 | Organization managed account deletion | Claimed member accounts can be outright deleted by organization administrators, instead of only being able to be [removed](https://bitwarden.com/help/delete-member-accounts/#remove-an-account/) from the organization. Owners and admins can delete a claimed account from the Admin Console's **Members** page using the ellipses menu. |
 | Restrict access to account actions | Users with member accounts are restricted from changing the domain of their email address, leaving the organization, purging their vault, and deleting their account. |
 | Easier SSO workflow | During SSO authentication, these members automatically bypass the step that would require them to enter an [SSO identifier](https://bitwarden.com/help/using-sso/#get-your-organization-identifier/). |
@@ -10543,11 +10546,11 @@ Choose a role or product below to get started. Need more detail? Browse the [ful
 
 - [Personal](https://bitwarden.com/help/courses/password-manager-personal-overview/)
 - [Business](https://bitwarden.com/help/courses/password-manager-business-overview/)
-- [Partner](https://bitwarden.com/help/courses/password-manager-partner)
+- [Partner](https://bitwarden.com/help/courses/password-manager-partner/)
 
 ### Beyond password management
 
-- [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager)
+- [Secrets Manager](https://bitwarden.com/help/courses/secrets-manager/)
 ---
 URL: https://bitwarden.com/help/courses/bitwarden-for-business-admins/
 ---
@@ -10749,7 +10752,7 @@ Learn more about available Bitwarden plans [here](https://bitwarden.com/help/pas
 
 ### Join a public training session (30 min)
 
-Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase enterprise features live. See what's possible and get your questions answered!
+Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase Enterprise features live. See what's possible and get your questions answered!
 
 [Embedded content componentCtaLink]
 
@@ -10769,7 +10772,7 @@ This resource hub provides IT and security leaders with a proven path to passwor
 
 ### Onboarding Playbook
 
-This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your team's needs and timeline.
+This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your company's needs and timeline.
 
 [Embedded content componentCtaLink]
 
@@ -10781,7 +10784,7 @@ This comprehensive toolkit provides everything admins and IT teams need to build
 
 ### Member Signup Workflows
 
-This document should be used to provide instructions to your users for signing up for the organization. There are a number of different factors that will impact the exact steps your users will need to take. Use this decision tree to help pick the correct option for your organization's users.
+This document should be used to provide instructions to your users for signing up for Bitwarden. There are a number of different factors that will impact the exact steps your users need to take. Use this decision tree to help pick the correct option.
 
 [Embedded content componentCtaLink]
 
@@ -10844,6 +10847,12 @@ Enterprise Bitwarden organizations provide powerful tools for improving your onl
 
 ## Import your data
 
+### Overview (1 min)
+
+Import your company's passwords and data into Bitwarden for secure scalable sharing and autofill across your team. Choose an import method below based on your preferred Bitwarden client. 
+
+Prefer reading? Read the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -10856,7 +10865,7 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### Command Line Interface (1 min)
 
-[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your organization via the CLI.
+[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your vault with the Bitwarden CLI.
 
 ### From a custom file (1 min)
 
@@ -10965,12 +10974,12 @@ Whether you're administering your organization or using Bitwarden as part of you
 ### Teams Plan
 
 - [Teams Member](https://bitwarden.com/help/courses/password-manager-teams-member/)
-- [Teams Admin](https://bitwarden.com/help/courses/password-manager-teams-admin)
+- [Teams Admin](https://bitwarden.com/help/courses/password-manager-teams-admin/)
 
 ### Enterprise Plan
 
 - [Enterprise Member](https://bitwarden.com/help/courses/password-manager-team-member/)
-- [Enterprise Help Desk](https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk)
+- [Enterprise Help Desk](https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/)
 - [Enterprise Admin](https://bitwarden.com/help/courses/password-manager-admin/)
 ---
 URL: https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/
@@ -11888,13 +11897,13 @@ Ready to take control of your passwords? Whether you're flying solo, sharing wit
 
 ### Individuals
 
-- [Individual](https://bitwarden.com/help/courses/password-manager-personal)
-- [Free Sharing for Two](https://bitwarden.com/help/courses/password-manager-free-sharing-for-two)
+- [Individual](https://bitwarden.com/help/courses/password-manager-personal/)
+- [Free Sharing for Two](https://bitwarden.com/help/courses/password-manager-free-sharing-for-two/)
 
 ### Families Plan
 
-- [Family Member](https://bitwarden.com/help/courses/password-manager-family-member)
-- [Family Admin](https://bitwarden.com/help/courses/password-manager-family-admin)
+- [Family Member](https://bitwarden.com/help/courses/password-manager-family-member/)
+- [Family Admin](https://bitwarden.com/help/courses/password-manager-family-admin/)
 ---
 URL: https://bitwarden.com/help/courses/password-manager-personal/
 ---
@@ -12536,7 +12545,7 @@ Learn more about available Bitwarden plans [here](https://bitwarden.com/help/pas
 
 ### Join a public training session (30 min)
 
-Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase enterprise features live. See what's possible and get your questions answered!
+Watch Bitwarden experts demonstrate security configurations, manage user permissions, and showcase Enterprise features live. See what's possible and get your questions answered!
 
 [Embedded content componentCtaLink]
 
@@ -12550,7 +12559,7 @@ This resource hub provides IT and security leaders with a proven path to passwor
 
 ### Onboarding Playbook
 
-This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your team's needs and timeline.
+This playbook provides IT administrators with a flexible roadmap for onboarding users to Bitwarden Password Manager across five key phases. While the phases are presented in sequence, they're not strictly linear. Many steps can happen in parallel based on your company's needs and timeline.
 
 [Embedded content componentCtaLink]
 
@@ -12627,6 +12636,12 @@ Teams Bitwarden organizations provide powerful tools for improving your online s
 
 ## Import your data
 
+### Overview (1 min)
+
+Import your company's passwords and data into Bitwarden for secure scalable sharing and autofill across your team. Choose an import method below based on your preferred Bitwarden client. 
+
+Prefer reading? Read the full [documentation](https://bitwarden.com/help/import-data/).
+
 ### Web App (1 min)
 
 [![Vimeo Video](https://vumbnail.com/1145638406.jpg)](https://vimeo.com/1145638406)
@@ -12639,7 +12654,7 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### Command Line Interface (1 min)
 
-[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your organization via the CLI.
+[Learn](https://bitwarden.com/help/import-data/#tab-cli-5ALQx9afSqWXX9jfXsY5sb/) how to import data into your vault with the Bitwarden CLI.
 
 ### From a custom file (1 min)
 
@@ -15436,7 +15451,7 @@ Directory Connector supports sync from the following sources:
 > - [Key Connector](https://bitwarden.com/help/about-key-connector/): Members cannot change their own email.
 > 
 > - If your organization **does not** **use** [claimed domains](https://bitwarden.com/help/claimed-domains/), delete and re-provision the member's account with the new email. Remind users to export data prior to account deletion and re-import their data once the new account is set up.
-> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly.
+> - If your organization **does use** claimed domains, administrators can [change the member's email](https://bitwarden.com/help/change-members-account-email-and-name/) directly.
 
 Members provisioned using Directory Connector are able to change their account email address in Bitwarden and in the source directory, however in order to do so:
 
@@ -16745,7 +16760,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Clicked vault banner button (`1522`)
 - Staged user `user-identifier` added (`1523`)
 - Member `user-identifier` accepted invitation through invite link. (`1524`)
-- Updated `user-identifier` [email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
+- Updated `user-identifier` [email address](https://bitwarden.com/help/change-members-account-email-and-name/). (`1525`)
 - Edited organization settings. (`1600`)
 - Purged organization vault. (`1601`)
 - Exported organization vault. (`1602`)
@@ -16789,6 +16804,7 @@ Secrets Manager events are available both from the **Reporting** tab of your org
 - Created a new secret with identifier: `secret-identifier` (`2101`)
 - Edited a secret with with identifier: `secret-identifier`* *(`2102`)
 - Deleted a secret with identifier: `secret-identifier`* *(`2103`)
+- Permanently deleted a secret with identifier: `secret-identifier`* *(`2104`)
 - Accessed a project with identifier: `project-identifier`.* *(`2200`)
 - Created a new project with identifier: `project-identifier`* *(`2201`)
 - Edited a project with identifier: `project-identifier` (`2202`)
@@ -16884,7 +16900,7 @@ URL: https://bitwarden.com/help/exclude-domains/
 ---
 # Block Autosave on Specific Sites
 
-Bitwarden browser extensions can be configured to exclude specific sites from triggering [autosave notifications](https://bitwarden.com/help/autosave-from-browser-extensions/). When a domain is in the **Excluded domains** list, Bitwarden won't issue the notification any of the available notifications, including to save a new login, update an existing login, or to save or use a passkey:
+Bitwarden browser extensions can be configured to exclude specific sites from triggering [autosave notifications](https://bitwarden.com/help/autosave-from-browser-extensions/). When a domain is in the **Excluded domains** list, Bitwarden won't issue any of the available notifications, including to save a new login, update an existing login, or to save or use a passkey:
 
 ![Ask to add login](https://bitwarden.com/assets/4vsurEuH5deik26BWn4n1p/82757186b081890fbe92b4d73baeae53/screenshot_7.png)
 
@@ -16892,7 +16908,7 @@ To configure excluded domains, navigate to **Settings** → **Notification** →
 
 ![Excluded Domains Configuration ](https://bitwarden.com/assets/qUGIVQR379ac3R2dXdoy8/06b4dec0b9e02911903052789c44723c/2024-12-03_11-00-24.png)
 
-Domain exclusion does not register "full" URLs, only the domain component. For example, `https://github.com/bitwarden/browser` would resolve to `github.com` when saved, meaning that the browser extension would explicitly not offer to save credentials for Github.
+Domain exclusion does not register "full" URLs, only the domain component. For example, `https://github.com/bitwarden/browser` resolves to `github.com` when saved, meaning that the browser extension would explicitly not offer to save credentials for GitHub.
 ---
 URL: https://bitwarden.com/help/export-organization-items/
 ---
@@ -24054,7 +24070,7 @@ URL: https://bitwarden.com/help/kdf-algorithms/
 ---
 # Encryption Key Derivation
 
-Bitwarden first uses Key Derivation Functions (KDFs) on account creation to derive a master key for the account from the input master password, which acts as input for a master password hash for the account ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#overview-of-the-master-password-hashing,-key-derivation,-and-encryption-process/)). Whenever a user is authenticated, for example when unlocking a vault or satisfying master password re-prompt, the process is repeated so that the newly-derived hash can be compared to the originally-derived hash. If they match, the user is authenticated.
+Bitwarden first uses Key Derivation Functions (KDFs) on account creation to derive a master key for the account from the input master password, which acts as input for a master password hash for the account ([learn more](https://bitwarden.com/help/bitwarden-security-white-paper/#hashing-key-derivation-and-encryption/)). Whenever a user is authenticated, for example when unlocking a vault or satisfying master password re-prompt, the process is repeated so that the newly-derived hash can be compared to the originally-derived hash. If they match, the user is authenticated.
 
 KDFs are used in this capacity to frustrate brute-force or dictionary attacks against a master password. KDFs force an attacker's machines to compute a non-trivial number of hashes for each password guess, at increasing cost to the attacker.
 
@@ -26496,7 +26512,7 @@ The member list export includes the following information about each account:
 
 ### Update members' account email and name
 
-If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+If your organization uses claimed domains and a member does not have a master password, administrators can [change the member's email address and name](https://bitwarden.com/help/change-members-account-email-and-name/).
 
 ### Remove members
 
@@ -28587,7 +28603,7 @@ When you claim a domain, any organization member accounts that have email addres
 
 ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 
-If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
+If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
 
 #### Administrative take-over
 
@@ -30705,7 +30721,7 @@ Users who have redeemed a sponsored Families organization prior to the policy be
 Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
 1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
-2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+2. Contact us to add the**Automatic user confirmation** policy to your Enterprise policies settings.
 3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
 4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
 
@@ -30887,7 +30903,7 @@ Bitwarden will email a verification code to the specified email address. Check y
 
 When you change your email address, you should immediately logout of all Bitwarden apps you use, and log back in with the new credentials. Sessions using a "stale" email address will eventually be logged out.
 
-If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/).
+If you're part of an Enterprise organization, your administrator might also be able to [update your account email](https://bitwarden.com/help/change-members-account-email-and-name/).
 
 ### Q: What features are unlocked when I verify my email?
 
@@ -31952,6 +31968,103 @@ To help your organization member regain access via account recovery:
 > If the [Require two-step login policy](https://bitwarden.com/help/policies/#require-two-step-login/) is on, resetting a member's two-step login method will automatically [revoke](https://bitwarden.com/help/revoke-users/) them because they'll no longer be compliant. Ask them to notify you after they set up a new two-step login method to [restore access](https://bitwarden.com/help/revoke-users/#restore-access/).
 6. Select **Save**. This will send an email to the member's account email with [next steps](https://bitwarden.com/help/my-account-was-recovered/) and log the user out of their current sessions. Active sessions on some client applications, like mobile apps, may remain active for up to one hour.
 ---
+URL: https://bitwarden.com/help/redesign-beta/
+---
+# Bitwarden Redesign Beta
+
+Bitwarden is updating the look and feel of apps, now available as a **beta for cloud users of Chrome browser extensions and desktop apps**. This beta is [opt-in](https://bitwarden.com/help/redesign-beta/#join-the-beta/), can be used with your current cloud Bitwarden account, and you can switch back to the mainstream version at any time.
+
+## What's changing
+
+The beta introduces a new look and navigation for your Vault. Here's what to expect:
+
+### New Vault terminology
+
+**Organizations** are now called **Vaults**, and each is labeled in the navigation menu with its own name. Where the classic view read "Vaults," you'll now see your organization's name, such as "Acme Corp." **Collections** are now called **Shared folders**.
+
+![(Beta) Shared folders](https://bitwarden.com/assets/6K8cAenzwAWRFHUfEH7qQK/aa2de13ac228c746b9ff69dbb347c27b/2026-09-22_09-24-03.png)
+*(Beta) Shared folders*
+
+> [!TIP] (Beta) Organizations renames are name changes only.
+> These are naming changes only. Who can access which items, and how sharing and permissions work, remains the same.
+
+### Redesigned navigation
+
+The side navigation is reorganized, and a new Vault switcher makes it easier to swap views between your personal Vault, any other Vaults you belong to, or both at the same time.
+
+![(Beta) Redesigned navigation](https://bitwarden.com/assets/6L9tVPVN5BPWSTuEqUvNGV/be4d1237bc9875f80a7c8fcd8a9556e2/2026-09-22_09-07-22.png)
+*(Beta) Redesigned navigation*
+
+> [!TIP] (Beta) Importing is now first-class
+> Importing your credentials is one of the most important first steps for new users! That's why we moved the **Import** button directly to the core Items views of the desktop app (and, once it's generally available, of the web app):
+> 
+> 
+> ![(Beta) Import to your vaults](https://bitwarden.com/assets/rkAIYmIQbxj8m1YofyeH1/256ca500e993a1b00a84b6bf09fced38/2026-09-22_09-19-10.png)
+> *(Beta) Import to your vaults*
+> 
+> On browser extensions and mobile apps, importing is available from the same location in your app's **Settings** menu.
+
+### Combined search and filter
+
+Within your vault, search and filtering are now part of one bar built directly into your item list, instead of two separate controls. Searching and filtering work in tandem, so a search for `Email` while the `Acme Corp` Vault filter is active will result in a `Shared Newsletter Email` login you have access to but not your own `Work Email`, as long as it's not in a shared folder. 
+
+![(Beta) Searching and filtering](https://bitwarden.com/assets/3vOMPXLwJ95gfT9g5x6RWP/d9e60285f792b1641b5d5f63f4162a27/2026-09-28_09-28-57.png)
+*(Beta) Searching and filtering*
+
+In the above screenshot, the desktop app has an active Vaults filter but the browser extension does not. Active filters show up as dismissible chips, so it's always clear what's currently applied, and your filter selections stay in place when you navigate away from and back to a list. 
+
+> [!TIP] (Beta) New keyboard shortcuts
+> New keyboard shortcuts are also available in the beta. Use `Cmd/Ctrl+F` to search and `Esc` to clear a filter.
+
+## Join the beta
+
+This beta is available for browser extensions and desktop apps. All you need to do is download the beta apps from one of these places:
+
+- Chrome browser extension: [Download it here](https://chromewebstore.google.com/detail/bitwarden-password-manage/hccnnhgbibccigepcmlgppchkpfdophk?pli=1) (**requires**Chrome version 134+).
+- Desktop app: [Download it here](https://github.com/bitwarden/clients/releases/tag/desktop-v2026.9.1-beta.1).
+
+ - On Windows, download an `.exe`.
+ - On macOS, download a `.dmg`.
+
+Once installed, log into your same cloud Bitwarden server (US or EU) as you usually would, no separate account or server setup is required. 
+
+> [!NOTE] (Beta) Not available for self-host
+> The beta experience **will not be available for self-hosted Bitwarden servers**.
+
+**We highly recommend** turning off your mainstream Bitwarden browser extension to prevent the apps from competing on things like autofill and 2FA, and uninstalling your mainstream desktop app to prevent them from competing on biometrics. You should only have **one version of each app** active at a time.
+
+For the desktop app, on macOS you may be prompted prompted to save your OS password to the keychain so that the beta app can access secure storage. We recommend selecting **Always Allow**.
+
+### Send feedback
+
+We're excited to hear what you think about the beta:
+
+- To share your experience with the beta, [fill out the survey](https://docs.google.com/forms/d/e/1FAIpQLSdSVNSLkHTt399Okh_WbdZOZ01iEAcpH5-rFbz4sJDIgqe1Og/viewform) and talk about your experience in the [community forum thread](https://community.bitwarden.com/t/try-out-the-redesigned-bitwarden-apps-now-in-beta/102516).
+- To report a bug, [open a GitHub Issue](https://github.com/bitwarden/clients/issues) by selecting **New Issue** and using the **Browser Extension Beta Bug Report** or **Desktop Beta Bug Report** templates.
+
+### Known issues
+
+This section contains a list of known issues in the beta apps as of launch:
+
+| Feature | Client(s) | Description |
+|------|------|------|
+| Biometric unlock | Desktop | If you have more than one Bitwarden desktop app installed, biometric unlock may not work as expected. To fix this, remove all Bitwarden desktop apps and reinstall only the version you prefer to use. |
+| Clearing organization filters | Browser extension | When 2+ organizations are selected, removing one organization’s filter chip also removes the filter chips for that organization’s shared folders. Afterward, the “My folders” filter may be missing from the filter menu. |
+| Shared folder names | Desktop | Long shared folder names are truncated. |
+| Folder selection dropdowns | Desktop | The folder dropdown experience is not as functional as desired when you have many nested shared folders. |
+| Shared folder nesting | Desktop | Nested shared folders are not indented in the vault list, making it unclear which shared folders are inside others. |
+| Expanding nested folders | Browser extension | The target click area for expanding a nested shared folder is overly small and can be hard to tap or click. |
+| Designating favorites | Desktop | Adding or removing the favorite status from an item may cause other items in the list to briefly flicker or experience other visual artifacts. |
+| Loading placeholders | Browser extension | The loading placeholders shown while your vault loads are not smooth. |
+| Account switcher | Desktop | An extra divider line appears above “Add account” when only one account is signed in, and the lock icon sits too close to its label. |
+| Buttons | Browser extension | Some margins around buttons are not correctly displaying. Additional refinements planned. |
+
+### Leave the beta
+
+You can swap between the beta and mainstream apps until the beta ends on October 31, 2026. If you want to leave the beta before that date, stop using the beta app and uninstall it.
+
+**When the beta ends, it's critical to switch to the mainstream app** to continue receiving updates.
+---
 URL: https://bitwarden.com/help/releasenotes/
 ---
 # Release Notes
@@ -31994,6 +32107,17 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.9.2
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.9.1, Browser Extension 2026.9.3, Desktop 2026.9.1, Mobile 2026.9.1, and CLI 2026.9.1) 
+
+#### Password Manager
+
+> [!NOTE] Extension Chrome version requirement update
+> The Bitwarden Chrome browser extension now requires Chrome version 134+.
+
+- ⭐ **Password Manager redesign beta**: Bitwarden is updating the look and feel of Password Manager apps, now available as a [beta for cloud users of Chrome browser extensions and desktop apps](https://bitwarden.com/help/redesign-beta/). This beta is opt-in, can be used with your current cloud Bitwarden account, and you can switch back at any time.
 
 ## 2026.9.0
 
@@ -32047,7 +32171,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 - ⭐ **Manage Send policy**: Organizations can now control all Send-related functions with the **Manage Send** policy in the Admin Console. The new [policy](https://bitwarden.com/help/policies/) replaces the previous set of separate Send policies.
 - ⭐ **Generic HEC integration**: Bitwarden Teams and Enterprise organizations can now integrate with any HTTP event collector compatible platform for security information and event management (SIEM). Set up an [HEC integration](https://bitwarden.com/help/http-event-collector/).
-- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
+- ⭐ **Change members' email and name**: Administrators can now [update a member's account email address and name](https://bitwarden.com/help/change-members-account-email-and-name/) directly from the Admin Console. This only applies to claimed accounts without a master password, such as those using Key Connector or trusted devices. Users with a master password can still self-serve update their email address.
 
 #### Self-host
 
@@ -32408,7 +32532,7 @@ The newest version of Directory Connector includes modernizations and infrastruc
 
 #### Admin Console
 
-- **Member invitation subject line update**: The [email subject line](https://bitwarden.com/http://bitwarden.com/help/list-of-emails/#critical-member-emails/) for invitations to join an organization was updated.
+- **Member invitation subject line update**: The [email subject line](https://bitwarden.com/help/list-of-emails/#critical-member-emails/) for invitations to join an organization was updated.
 - **Tax ID reminder**: If you're a business owner or provider admin in a country that collects [value added tax (VAT)](https://bitwarden.com/help/tax-calculation/#value-added-tax-vat/) and haven't added your tax ID yet, you'll see a banner on the Admin Console, Payment Details, and Provider Portal pages. Click **Add a Tax ID** to update the billing details with your organization's tax ID.
 
 #### Secrets Manager
@@ -33841,7 +33965,7 @@ After your request is approved, you can access the account:
 
 As the account holder, you can control a trusted emergency contact's access to your account at three points:
 
-- [Remove](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts#remove-a-trusted-emergency-contact/) them from your list of trusted emergency contacts.
+- [Remove](https://bitwarden.com/help/add-and-manage-trusted-emergency-contacts/#remove-a-trusted-emergency-contact/) them from your list of trusted emergency contacts.
 - [Approve or deny their pending request](https://bitwarden.com/help/request-and-grant-emergency-access/#approve-or-deny-an-emergency-access-request/) for emergency access.
 - Revoke their granted emergency access. The steps depend on whether they were granted [view](https://bitwarden.com/help/request-and-grant-emergency-access/#revoke-view-access/) or [takeover](https://bitwarden.com/help/request-and-grant-emergency-access/#revoke-takeover-access/) access.
 

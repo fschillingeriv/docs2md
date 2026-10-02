@@ -150,7 +150,7 @@ When you claim a domain, any organization member accounts that have email addres
 
 ![Delete claimed accounts](https://bitwarden.com/assets/6HUnGTfMstF4IasZcKBfdi/86d475f646dbdbcc0a20e1f3cbb15ba6/2025-01-14_10-45-56.png)
 
-If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/http://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
+If a [claimed account](https://bitwarden.com/help/claimed-accounts/) also does not have a master password, organization administrators can [change its email address](https://bitwarden.com/help/change-members-account-email-and-name/). This lets an administrator reassign the account to a different person.
 
 #### Administrative take-over
 
