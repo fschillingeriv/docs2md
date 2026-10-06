@@ -6932,7 +6932,7 @@ URL: https://bitwarden.com/help/browser-extension-vault-health-reports/
 ---
 # Browser Extension Vault Health Reports
 
-Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. Available on Free, Premium, and Families subscriptions, the health reports available in the browser extension check for three types of at-risk passwords:
+Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. The health reports available in the browser extension check for three types of at-risk passwords:
 
 - [Exposed passwords](https://bitwarden.com/help/reports/#exposed-passwords-report/) have been found in known data breaches.
 - [Weak passwords](https://bitwarden.com/help/reports/#weak-passwords-report/) can be easily guessed by hackers or automated tools.
@@ -6966,7 +6966,7 @@ The **Health** tab will display the total number of passwords in your vault that
 If your account is on a Premium or Families subscription, you can review each health report to see which items, if any, need attention.
 
 > [!NOTE] Password scan, Free limitation
-> Free subscriptions can only view the total number of at-risk passwords in each report, not which logins are flagged.
+> Free subscriptions can only view the total number of at-risk passwords in each report. To review which logins are flagged, upgrade to a [Premium or Families subscription](https://bitwarden.com/pricing/).
 
 To review at-risk passwords:
 
@@ -32125,7 +32125,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager
 
-- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
 - **Autofill SSH keys**: SSH key items stored in your vault can now be autofilled using existing browser extension autofill methods, the same way logins, cards, and identities are autofilled. Learn more about [autofill ](https://bitwarden.com/help/auto-fill-browser/)and [SSH keys](https://bitwarden.com/help/about-ssh/).
 - ⭐ **Quick copy from desktop app**: Copy shortcut buttons are now available for vault items when you hover over them in the desktop app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
 
