@@ -60,6 +60,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager
 
+- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
 - **Autofill SSH keys**: SSH key items stored in your vault can now be autofilled using existing browser extension autofill methods, the same way logins, cards, and identities are autofilled. Learn more about [autofill ](https://bitwarden.com/help/auto-fill-browser/)and [SSH keys](https://bitwarden.com/help/about-ssh/).
 - ⭐ **Quick copy from desktop app**: Copy shortcut buttons are now available for vault items when you hover over them in the desktop app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
 
