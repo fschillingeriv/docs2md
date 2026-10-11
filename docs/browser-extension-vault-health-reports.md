@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/browser-extension-vault-health-reports/
 
 # Browser Extension Vault Health Reports
 
-Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. Available on Free, Premium, and Families subscriptions, the health reports available in the browser extension check for three types of at-risk passwords:
+Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. The health reports available in the browser extension check for three types of at-risk passwords:
 
 - [Exposed passwords](https://bitwarden.com/help/reports/#exposed-passwords-report/) have been found in known data breaches.
 - [Weak passwords](https://bitwarden.com/help/reports/#weak-passwords-report/) can be easily guessed by hackers or automated tools.
@@ -38,7 +38,7 @@ The **Health** tab will display the total number of passwords in your vault that
 If your account is on a Premium or Families subscription, you can review each health report to see which items, if any, need attention.
 
 > [!NOTE] Password scan, Free limitation
-> Free subscriptions can only view the total number of at-risk passwords in each report, not which logins are flagged.
+> Free subscriptions can only view the total number of at-risk passwords in each report. To review which logins are flagged, upgrade to a [Premium or Families subscription](https://bitwarden.com/pricing/).
 
 To review at-risk passwords:
 

@@ -28,7 +28,7 @@ To add a new shared item from the web app, browser extension, mobile, or desktop
 4. Fill in the rest of the relevant information for the item and select **Save** to complete sharing.
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 
@@ -49,7 +49,7 @@ When importing items to Password Manager, you can import them directly to a shar
 5. Select **Import data** to complete sharing.
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 
@@ -173,7 +173,7 @@ For more information, please refer to the Bitwarden [CLI documentation](https:/
 ## After items are shared
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 

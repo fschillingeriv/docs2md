@@ -6932,7 +6932,7 @@ URL: https://bitwarden.com/help/browser-extension-vault-health-reports/
 ---
 # Browser Extension Vault Health Reports
 
-Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. Available on Free, Premium, and Families subscriptions, the health reports available in the browser extension check for three types of at-risk passwords:
+Run vault health reports in the Bitwarden browser extension to find and fix any weak, reused, or exposed logins stored in your Bitwarden vault. The health reports available in the browser extension check for three types of at-risk passwords:
 
 - [Exposed passwords](https://bitwarden.com/help/reports/#exposed-passwords-report/) have been found in known data breaches.
 - [Weak passwords](https://bitwarden.com/help/reports/#weak-passwords-report/) can be easily guessed by hackers or automated tools.
@@ -6966,7 +6966,7 @@ The **Health** tab will display the total number of passwords in your vault that
 If your account is on a Premium or Families subscription, you can review each health report to see which items, if any, need attention.
 
 > [!NOTE] Password scan, Free limitation
-> Free subscriptions can only view the total number of at-risk passwords in each report, not which logins are flagged.
+> Free subscriptions can only view the total number of at-risk passwords in each report. To review which logins are flagged, upgrade to a [Premium or Families subscription](https://bitwarden.com/pricing/).
 
 To review at-risk passwords:
 
@@ -15619,7 +15619,7 @@ To set up the integration between the DuckDuckGo macOS browser and Bitwarden:
 2. Open DuckDuckGo's **Settings** and select **Passwords & Autofill**.
 3. Within the Password Manager section, select **Bitwarden**. A pop-up window will appear.
 4. Open the Bitwarden desktop app and log in or unlock your vault.
-5. Go to **Bitwarden > Settings**from the macOS menu bar.
+5. Go to **Bitwarden**→**Preferences**from the macOS menu bar.
 6. Within the **App Settings (All Accounts)** section, check **Allow DuckDuckGo browser integration**.
 7. Return to DuckDuckGo and select **Connect** when the browser detects Bitwarden is ready.
 8. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.
@@ -20868,8 +20868,9 @@ URL: https://bitwarden.com/help/import-from-keepass/
 
 When migrating from KeePass, you can choose which file type to import in to Bitwarden:
 
-- Import an encrypted KeePass `.kdbx` file, secured with a password and an optional key file.
-- Import a `.csv` or `.xml` file from KeePass2 or KeePassX.
+- `.kdbx`, an encrypted file secured with a password and an optional key file
+- `.xml`
+- `.csv` (compatible when exported from KeePassX or KeePassXC only)
 
 > [!NOTE] Items not imported
 > While some item types cannot be imported, you can still add them to a vault:
@@ -32125,7 +32126,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 #### Password Manager
 
-- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
 - **Autofill SSH keys**: SSH key items stored in your vault can now be autofilled using existing browser extension autofill methods, the same way logins, cards, and identities are autofilled. Learn more about [autofill ](https://bitwarden.com/help/auto-fill-browser/)and [SSH keys](https://bitwarden.com/help/about-ssh/).
 - ⭐ **Quick copy from desktop app**: Copy shortcut buttons are now available for vault items when you hover over them in the desktop app, making it faster to [copy an item's credentials](https://bitwarden.com/help/managing-items/#copy-item-credentials/).
 
@@ -39703,7 +39703,7 @@ To add a new shared item from the web app, browser extension, mobile, or desktop
 4. Fill in the rest of the relevant information for the item and select **Save** to complete sharing.
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 
@@ -39724,7 +39724,7 @@ When importing items to Password Manager, you can import them directly to a shar
 5. Select **Import data** to complete sharing.
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 
@@ -39848,7 +39848,7 @@ For more information, please refer to the Bitwarden [CLI documentation](https:/
 ## After items are shared
 
 > [!NOTE] Reminder, sharing means org ownership
-> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is shared by the badge next to its name:
+> **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
 > 
 > 
 > 

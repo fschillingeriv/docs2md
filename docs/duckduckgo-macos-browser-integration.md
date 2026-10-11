@@ -21,7 +21,7 @@ To set up the integration between the DuckDuckGo macOS browser and Bitwarden:
 2. Open DuckDuckGo's **Settings** and select **Passwords & Autofill**.
 3. Within the Password Manager section, select **Bitwarden**. A pop-up window will appear.
 4. Open the Bitwarden desktop app and log in or unlock your vault.
-5. Go to **Bitwarden > Settings**from the macOS menu bar.
+5. Go to **Bitwarden**→**Preferences**from the macOS menu bar.
 6. Within the **App Settings (All Accounts)** section, check **Allow DuckDuckGo browser integration**.
 7. Return to DuckDuckGo and select **Connect** when the browser detects Bitwarden is ready.
 8. In Bitwarden, select **Yes**to approve DuckDuckGo's request to connect.

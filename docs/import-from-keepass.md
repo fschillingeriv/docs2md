@@ -6,8 +6,9 @@ URL: https://bitwarden.com/help/import-from-keepass/
 
 When migrating from KeePass, you can choose which file type to import in to Bitwarden:
 
-- Import an encrypted KeePass `.kdbx` file, secured with a password and an optional key file.
-- Import a `.csv` or `.xml` file from KeePass2 or KeePassX.
+- `.kdbx`, an encrypted file secured with a password and an optional key file
+- `.xml`
+- `.csv` (compatible when exported from KeePassX or KeePassXC only)
 
 > [!NOTE] Items not imported
 > While some item types cannot be imported, you can still add them to a vault:
