@@ -14,13 +14,13 @@ Sends can be received and opened by anyone with the link, including those who do
 
 Depending on the [options configured](https://bitwarden.com/help/create-send/) by the sender, the recipient of a Send may be required to:
 
-- Enter a password to access the contents of the send
-- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/)
-- Manually toggle visibility on a hidden-text send
+- Enter a password to access the contents of the send.
+- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/).
+- Manually toggle visibility on a hidden-text send.
 
 ## Email-verified Sends
 
-Premium Bitwarden users may create a Send with required email-verification to view. If you receive a Send link that requires email-verification, you will be prompted to enter a verification code after opening the Send link. To open an email-verified Send:
+Premium Bitwarden users may create a Send with required email-verification to view. If you receive a Send link that requires email-verification, you'll be prompted to enter a verification code after opening the Send link. To open an email-verified Send:
 
 1. Open the Send link you received from the sender and enter your email address:
 
@@ -30,14 +30,14 @@ Premium Bitwarden users may create a Send with required email-verification to vi
 
 ![Send verification code](https://bitwarden.com/assets/3f6f5IfMdXDqrR3cMwgoWN/65f8d6ffe2b3239049e7f76dfca33253/2026-02-24_16-06-56.png)
 *Send verification code*
-3. Enter the authorization code to view the Send.
+3. Enter the authorization code to view the Send:
 
 ![Enter Send verification code](https://bitwarden.com/assets/7qM22jPeoKCnGE6GS03wz7/4f959a8b1b7b9f13674bdda975af9a5d/2026-02-24_17-04-46.png)
 *Enter Send verification code*
 
 ## Hidden-email Sends
 
-By default, Sends will display the email address of the sender to recipients, as in the above screenshot. Senders can optionally hide their email address, which will substitute in a warning message:
+By default, Sends display the email address of the sender to recipients, as in the above screenshot. If senders hide their email address, a warning message will be displayed:
 
 ![Hidden-email text Send](https://bitwarden.com/assets/47RPmr6xOowzjJbG6JxVG3/42ba660b4316b57c4857ed7f7fcd58e3/Hidden_email_send.png)
 *Hidden-email text Send*
@@ -49,7 +49,7 @@ If you receive a Send with this warning, here's what you should do:
  If this Send was expected, get in touch with the sender. Validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created.
 - **Was this Send unexpected?**
 
- If this Send was unexpected, identify the sender before interacting with it. Ask your colleagues, managers, or friends whether they might have sent you something. If you do identify the sender, validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created. **If you can't identify the sender**, don't interact with the Send.
+If this Send was unexpected, identify the sender before interacting with it. Ask your colleagues, managers, or friends whether they might have sent you something. If you do identify the sender, validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created. **If you can't identify the sender**, don't interact with the Send.
 
 > [!WARNING] Trusting unexpected File Sends.
 > Taking the above measures to ensure the trustworthiness of a Send are particularly important in the case of file downloads. **Don't download mysterious files.**

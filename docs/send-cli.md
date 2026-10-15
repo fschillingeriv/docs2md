@@ -217,7 +217,7 @@ bw send receive [options] <url>
 - Use `--obj` to output the full Send object as JSON rather than only the Send link (pair this option with the `--pretty` option for formatted JSON).
 - Use `--ouput <output>` to specify the output directory for the contents of a file Send.
 
-To receive a send that requires email-verification, you will be prompted to enter your email address, and then the verification code send to that email address. For example:
+To receive a Send that requires email-verification, you will be prompted to enter your email address, and then the verification code send to that email address. For example:
 
 ```bash
 $ bw send receive <Send URL>

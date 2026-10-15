@@ -54,7 +54,7 @@ Recipients can still validate the trustworthiness of Sends by cross-referencing 
 *Hidden-email text Send*
 
 > [!TIP] Send controls policy
-> Enterprise organizations can remove the **Hide my email address from recipients**option with the [Manage Send ](https://bitwarden.com/help/policies/#manage-send/)policy.
+> Enterprise organizations can remove the **Hide my email address from recipients**option with the [Manage Send ](https://bitwarden.com/help/policies/#manage-send-and-share/)policy.
 
 ## Hide text
 
