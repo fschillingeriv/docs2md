@@ -421,13 +421,13 @@ URL: https://bitwarden.com/help/about-send/
 Bitwarden Send is a tool to transmit sensitive text or files directly to anyone through secure, temporary links. Send can be used to transmit text up to 1,000 encrypted characters or files up to 500 MB (or 100 MB on mobile) and can be [shared with anyone](https://bitwarden.com/help/receive-send/) via text, email, or any preferred communication channel. 
 
 > [!NOTE] Remove Send policy
-> If you're a member of an organization that has turned off Send under the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/), your access to Sends is limited:
+> If you're a member of an organization that has turned off Send under the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/), your access to Sends is limited:
 > 
 > - You cannot create new Sends or edit existing ones.
 > - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
 > - You cannot access the Sends page with the Bitwarden web app.
 > 
-> Using the Manage Send and share policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
+> Using the Manage Send policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
 
 ## Accessing Send
 
@@ -13122,26 +13122,25 @@ URL: https://bitwarden.com/help/create-send/
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you share encrypted text or files with anyone via a secure, generated link. Create a Send from any Bitwarden app and configure access and privacy options to fit your sharing needs.
 
 > [!NOTE] Remove Send policy
-> If you're a member of an organization that has turned off Send under the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/), your access to Sends is limited:
+> If you're a member of an organization that has turned off Send under the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/), your access to Sends is limited:
 > 
 > - You cannot create new Sends or edit existing ones.
 > - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
 > - You cannot access the Sends page with the Bitwarden web app.
 > 
-> Using the Manage Send and share policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
+> Using the Manage Send policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
 
 ## Create a Send
 
-There are three types of Sends:
+There are two types of Sends:
 
 - A **text Send** shares encrypted text content, such as a message or note. All Bitwarden users can create and edit a text Send.
 - A **file Send** contains an encrypted file, such as a document or image. Only [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise) can make a file Send. To create a file Send, your account's email address must also be verified.
-- A **Vault item** can be shared using [Send via link](https://bitwarden.com/help/sharing/#share-via-link/), which will create a temporary link that contains a vault item. Only [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise) can make a vault item Send. To share a vault item, select ⋮ **Share via link** next to the specific item.
 
 > [!NOTE] Older accounts may need to verify an email
 > If your account is older, you may need to proactively verify your email. Log in to the [web app](https://vault.bitwarden.com/) and select **Verify Email**. If your account email is not verified, then you cannot create [Sends](https://bitwarden.com/help/about-send/).
 
-To create a text or file Send:
+Choose the Bitwarden app you want to Send from to get started:
 
 ### Web app
 
@@ -16533,6 +16532,62 @@ The following variables are among those that already exist in `global.override.e
 | `globalSettings__hibpApiKey=` | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). This key allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
 | `adminSettings__admins=` | Email addresses which may access the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/). |
 
+```bash
+# --- Server ---
+# Domain of your Bitwarden instance. Defaults to localhost if not configured. No trailing slash.
+globalSettings__baseServiceUri__vault=
+# US or EU. See: /help/server-geographies/
+globalSettings__baseServiceUri__cloudRegion=
+
+# --- Database ---
+# Connect to an external MSSQL database. See: /help/external-db/
+globalSettings__sqlServer__connectionString=
+
+# --- Authentication ---
+# Password for the identity server certificate.
+globalSettings__identityServer__certificatePassword=
+# Randomly generated internal identity key.
+globalSettings__internalIdentityKey=
+# Randomly generated OpenID Connect client key.
+globalSettings__oidcIdentityClientKey=
+# Randomly generated Duo akey. See: duo.com/docs/duoweb-v2
+globalSettings__duo__aKey=
+
+# --- Installation ---
+# Installation ID from bitwarden.com/host.
+globalSettings__installation__id=
+# Installation key from bitwarden.com/host.
+globalSettings__installation__key=
+
+# --- YubiKey ---
+# Client ID for YubiCloud or self-hosted Yubico server. See: upgrade.yubico.com/getapikey/
+globalSettings__yubico__clientId=
+# Secret key for YubiCloud or self-hosted Yubico server.
+globalSettings__yubico__key=
+
+# --- Mail (SMTP) ---
+# Email address used for invitations.
+globalSettings__mail__replyToEmail=
+# SMTP server hostname or IP address.
+globalSettings__mail__smtp__host=
+# SMTP port used by the SMTP server.
+globalSettings__mail__smtp__port=
+# true = SSL, false = TLS.
+globalSettings__mail__smtp__ssl=
+# Valid username for the SMTP host.
+globalSettings__mail__smtp__username=
+# Valid password for the SMTP host. Dollar sign ($) characters are not supported.
+globalSettings__mail__smtp__password=
+
+# --- Registration & Access ---
+# true to disable new users signing up via the registration page.
+globalSettings__disableUserRegistration=
+# HaveIBeenPwned API key for the Data Breach report. See: haveibeenpwned.com/API/Key
+globalSettings__hibpApiKey=
+# Email addresses that may access the System Administrator Portal.
+adminSettings__admins=
+```
+
 ## Optional variables
 
 The following variables do not already exist in `global.override.env`, and can be manually added:
@@ -16556,9 +16611,8 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__baseServiceUri__cloudRegion=` | Specify `US` or `EU` to designate [which cloud server](https://bitwarden.com/help/server-geographies/) your self-hosted server should hyperlink to. If you're using EU, you'll also need to setup a few other variables as documented [here](https://bitwarden.com/help/server-geographies/#connect-your-self-hosted-server/). |
 | `globalSettings__sqlServer__DisableDatabaseMaintenanceJobs=` | Specify `true` to skip application-side maintenance of the statistics and index rebuild tasks in the database. These tasks require elevated MSSQL privileges and should be reconfigured to run as a database user if this value is set to `true`. [Learn more](https://bitwarden.com/help/database-options/). |
 | `globalSettings__sqlServer__SkipDatabasePreparation=` | Specify `true` to skip application-side database preparation. If not specified, database preparation checks on installation whether a database with the name specified in `globalSettings__sqlServer__connectionString=` exists and, if not, creates one. This task requires elevated MSSQL privileges and, if this value is set to `true`, the named database must exist before initiating installation. [Learn more](https://bitwarden.com/help/database-options/). |
-| `globalSettings__identityServer__AccessTokenLifetimeSeconds=` | Specify the number of seconds access tokens, which are issued on login to grant API access to resources, will remain valid for. Defaults to 1 hour. |
 
-### Load balancers requiring authentication
+[Embedded content]### Load balancers requiring authentication
 
 Bitwarden clients without access to a shared cookie store (such as the Desktop and Mobile clients) cannot communicate with a self-hosted server utilizing a load balancer that requires authentication. To launch an SSO session whose cookie will be copied into the Bitwarden client cookie store, add the following variables to the `global.override.env` file:
 
@@ -16573,7 +16627,7 @@ Bitwarden clients without access to a shared cookie store (such as the Desktop a
 > 
 > Endpoints used for server-to-server communication, such as those for SCIM and SSO OIDC, must also be excluded.
 
-### Refresh token variables
+[Embedded content]### Refresh token variables
 
 Refresh token variables allow you to change the timeout of tokens. Administrators can use these values, for example, to require users to log in every day. Use the following variables to configure the handling of refresh tokens by your server:
 
@@ -16582,6 +16636,8 @@ Refresh token variables allow you to change the timeout of tokens. Administrator
 | `globalSettings__IdentityServer__ApplyAbsoluteExpirationOnRefreshToken=` | Specify `true` to use **only** a specified absolute lifetime for refresh tokens and ignore expiration sliding based on usage. When true, only `__AbsoluteRefreshTokenLifetimeSeconds=` will be considered to determine behavior. Specify `false` to allow refresh token expiration to slide (i.e. extend validity for a specified period of time) when they're used. When `false`, both of the following options will be considered to determine behavior. |
 | `globalSettings__IdentityServer__AbsoluteRefreshTokenLifetimeSeconds=` | Specify a integer. Refresh tokens will expire after the absolute lifetime of that integer in seconds, regardless of whether sliding is allowed or not. This variable may only be `0` if `__ApplyAbsoluteExpirationOnRefreshToken=true`, in which case refresh tokens are always rejected. |
 | `globalSettings__IdentityServer__SlidingRefreshTokenLifetimeSeconds=` | Specify a integer greater than `0`. Refresh tokens will extend their validity upon use by that integer, in seconds. Refresh tokens will always expire after their configured absolute lifetime, regardless of what's set here. |
+
+[Embedded content]
 ---
 URL: https://bitwarden.com/help/event-logs/
 ---
@@ -29771,7 +29827,7 @@ Upgrade your individual account to unlock premium password security and manageme
 **To upgrade to a premium account**, use the web app, go to **Settings**, and select **Go Premium**. Alternatively, [**sign up for a new Premium individual account here**](https://bitwarden.com/go/start-premium/).
 
 > [!NOTE] Premium features 
-> Premium does not include organization data sharing. In order to access organization sharing features, you will need a subscription to an organization ([Free](https://bitwarden.com/help/password-manager-plans/#free-organizations/), [Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)). Paid organizations ([Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)) include premium features for all users enrolled in that organization.
+> Premium does not include secure data sharing. In order to access sharing features, you will need a subscription to an organization ([Free](https://bitwarden.com/help/password-manager-plans/#free-organizations/), [Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)). Paid organizations ([Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)) include premium features for all users enrolled in that organization.
 
 Premium individual subscriptions are billed annually.
 
@@ -29799,7 +29855,7 @@ In the following table, "premium features" (included for **Premium individual** 
 | Secure password generator | ✓ | ✓ | ✓ | ✓ |
 | Self-hosting option | ✓ | ✓ | - | ✓ |
 | [Encrypted export](https://bitwarden.com/help/encrypted-export/) | ✓ | ✓ | ✓ | ✓ |
-| [Bitwarden Send](https://bitwarden.com/help/about-send/) | Text only | Text, files, and vault items | Text only | Text, files, and vault items |
+| [Bitwarden Send](https://bitwarden.com/help/about-send/) | Text only | Text and files | Text only | Text and files |
 | *[Two-step login](https://bitwarden.com/help/setup-two-step-login/) | Hardware security key, authenticator apps, or email | Hardware security key, authenticator apps, email, Yubico OTP, and Duo | Hardware security key, authenticator apps, or email | Hardware security key, authenticator apps, email, Yubico OTP, and Duo (does not include [Duo for organizations](https://bitwarden.com/help/setup-two-step-login-duo/)) |
 | *[Encrypted file attachments](https://bitwarden.com/help/attachments/) | - | 5 GB | - | 5 GB per user + 5 GB shared |
 | *[Integrated authenticator](https://bitwarden.com/help/integrated-authenticator/) (TOTP) | - | ✓ | (If also Premium individual) | ✓ |
@@ -30444,7 +30500,7 @@ Turn on the **Centralize organization ownership** policy to prevent private owne
 > [!NOTE] Centralize data ownership doesn't apply to admins and owners
 > This policy only affects members who are not organization owners or admins. Organization owners and admins can continue using **My vault**.
 
-Once turned on, all new saved items are placed in that member’s **My Items** by default. When on the Add Item screen, a banner informs users that a policy affects item ownership options. This action is not reversible for items already transferred.
+Once turned on, all new saved items are placed in that member’s **My Items** by default. When on the Add Item screen, a banner informs users that a policy affects item ownership options.
 
 After a [member is removed](https://bitwarden.com/help/remove-users/), the data in that member’s **My Items** stays with the organization. Owners, admins, and some custom role users can assign other members access to the removed members’ **My Items**.
 
@@ -30454,13 +30510,13 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Manage Send and share
+### Manage Send
 
-Turn on **Manage Send** **and share** to control how members use Send and share features. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+Turn on **Manage Send** to control how members use Send. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
-Using Manage Send and Share, organization admins can manage how members use Send, including:
+Using Manage Send, organization admins can manage how members use Send, including:
 
-- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text**, **File** and **Vault items**. Sharing vault items allows users to share a vault item, using a temporary, configurable link with [Share via link](https://bitwarden.com/help/sharing/#share-via-link/).
+- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text** and **File**.
 - **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [Email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [Password set by member](https://bitwarden.com/help/send-privacy/#send-passwords/).
 - **Enforce deletion date**: Use this policy to enforce a predetermined [Send lifespan](https://bitwarden.com/help/send-lifespan/#expiration-date/) for Sends created by members.
 - **Always show members' email address with recipients**: Enable this option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
@@ -30534,16 +30590,16 @@ Turn on the **Block account creation for claimed domains** policy to prevent peo
 
 ### Session timeout
 
-Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options can not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. The **Maximum allowed timeout** value is a ceiling, not a fixed setting. Members can still choose any timeout at or below it in their own account settings. This policy does not affect organization owners.
+Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options can not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. This policy does not affect organization owners.
 
 You can customize two options:
 
 - From the **Maximum allowed timeout** dropdown menu, set a limit to how long sessions can remain active:
 
- - **Immediately**: When the user stops interacting with Bitwarden.
- - **Custom**: After the amount of time entered in **Hours** and **Minutes**.
- - **On system lock**: When the device is locked or the screensaver activates (browser extension and desktop app only). Web app and mobile don't support this option; if selected, they will fall back to their default behavior of timed logout or lock.
- - **On app restart**: When the Bitwarden app is closed and reopened. The mobile app does not support this setting, mobile users will be locked on app restart by default.
+ - **Immediately**: When the user stops interacting with Bitwarden
+ - **Custom**: After the amount of time entered in **Hours** and **Minutes**
+ - **On system lock**: When the device is locked or the screensaver activates (browser extension and desktop app only)
+ - **On app restart**: When the Bitwarden app is closed and reopened
  - **Never**: No maximum session duration is set.
 
 > [!WARNING] Never timeout
@@ -30551,7 +30607,7 @@ You can customize two options:
 - From the **Session timeout action** dropdown menu, choose what happens after a session ends. You can specify [**Lock or Log out**](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) or select **User preference** to let members choose in their account settings.
 
 > [!TIP] Log out for trusted devices
-> If your organization uses [trusted devices](https://bitwarden.com/help/about-trusted-devices/), consider selecting **Log Out**. Even if an admin sets the action to **Lock**, only members who have PIN, biometrics, or a master password configured can use **Lock**. Other users will be logged out.
+> If your organization uses [trusted devices](https://bitwarden.com/help/about-trusted-devices/), consider selecting **Log Out**. After a session times out, this allows members to access their vault without a master password via SSO on a trusted device.
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
@@ -30645,7 +30701,7 @@ Turn on the **Automatic login with SSO** policy to allow login forms to be fille
 
 ### Enable autofill on page load
 
-Turn on the **Enable autofill on page load**policy to activate the browser extension's [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) for all existing and new members. After the policy is on, members will need to specify which items autofill on page load, either by default for all items from **Settings** → **Autofill** or for individual logins from the **Edit login** screen.
+Turn on the **Enable autofill on page load**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
 
 ### Remove card item type
 
@@ -30666,7 +30722,7 @@ Users who have redeemed a sponsored Families organization prior to the policy be
 Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
 1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
-2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+2. Contact us to add the**Automatic user confirmation** policy to your Enterprise policies settings.
 3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
 4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
 
@@ -31835,13 +31891,13 @@ Sends can be received and opened by anyone with the link, including those who do
 
 Depending on the [options configured](https://bitwarden.com/help/create-send/) by the sender, the recipient of a Send may be required to:
 
-- Enter a password to access the contents of the send.
-- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/).
-- Manually toggle visibility on a hidden-text send.
+- Enter a password to access the contents of the send
+- Enter an [emailed verification code](https://bitwarden.com/help/receive-send/#email-verified-sends/)
+- Manually toggle visibility on a hidden-text send
 
 ## Email-verified Sends
 
-Premium Bitwarden users may create a Send with required email-verification to view. If you receive a Send link that requires email-verification, you'll be prompted to enter a verification code after opening the Send link. To open an email-verified Send:
+Premium Bitwarden users may create a Send with required email-verification to view. If you receive a Send link that requires email-verification, you will be prompted to enter a verification code after opening the Send link. To open an email-verified Send:
 
 1. Open the Send link you received from the sender and enter your email address:
 
@@ -31851,14 +31907,14 @@ Premium Bitwarden users may create a Send with required email-verification to vi
 
 ![Send verification code](https://bitwarden.com/assets/3f6f5IfMdXDqrR3cMwgoWN/65f8d6ffe2b3239049e7f76dfca33253/2026-02-24_16-06-56.png)
 *Send verification code*
-3. Enter the authorization code to view the Send:
+3. Enter the authorization code to view the Send.
 
 ![Enter Send verification code](https://bitwarden.com/assets/7qM22jPeoKCnGE6GS03wz7/4f959a8b1b7b9f13674bdda975af9a5d/2026-02-24_17-04-46.png)
 *Enter Send verification code*
 
 ## Hidden-email Sends
 
-By default, Sends display the email address of the sender to recipients, as in the above screenshot. If senders hide their email address, a warning message will be displayed:
+By default, Sends will display the email address of the sender to recipients, as in the above screenshot. Senders can optionally hide their email address, which will substitute in a warning message:
 
 ![Hidden-email text Send](https://bitwarden.com/assets/47RPmr6xOowzjJbG6JxVG3/42ba660b4316b57c4857ed7f7fcd58e3/Hidden_email_send.png)
 *Hidden-email text Send*
@@ -31870,7 +31926,7 @@ If you receive a Send with this warning, here's what you should do:
  If this Send was expected, get in touch with the sender. Validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created.
 - **Was this Send unexpected?**
 
-If this Send was unexpected, identify the sender before interacting with it. Ask your colleagues, managers, or friends whether they might have sent you something. If you do identify the sender, validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created. **If you can't identify the sender**, don't interact with the Send.
+ If this Send was unexpected, identify the sender before interacting with it. Ask your colleagues, managers, or friends whether they might have sent you something. If you do identify the sender, validate with this person that the link you received (`https://vault.bitwarden.com/#/send/xxx/yyy`) matches the one they created. **If you can't identify the sender**, don't interact with the Send.
 
 > [!WARNING] Trusting unexpected File Sends.
 > Taking the above measures to ensure the trustworthiness of a Send are particularly important in the case of file downloads. **Don't download mysterious files.**
@@ -32025,7 +32081,7 @@ URL: https://bitwarden.com/help/releasenotes/
 
 ## Overview
 
-The releases labeled in this document represent releases of the Bitwarden server. Client applications (browser extensions, mobile apps, desktop apps, and the CLI) that are released within the same window will be listed with their specific version number, which may vary from the associated server version number. Learn more about [software release support at Bitwarden](https://bitwarden.com/help/bitwarden-software-release-support/)*.*
+The releases labelled in this document represent releases of the Bitwarden server. Client applications (browser extensions, mobile apps, desktop apps, and the CLI) that are released within the same window will be listed with their specific version number, which may vary from the associated server version number. Learn more about [software release support at Bitwarden](https://bitwarden.com/help/bitwarden-software-release-support/)*.*
 
 ### Client apps and self-hosted servers
 
@@ -32052,19 +32108,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
-
-## 2026.10.0
-
-(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.10.0, Browser Extension 2026.10.0, Desktop 2026.10.0, Mobile 2026.10.0, and CLI 2026.10.0) 
-
-#### Password Manager
-
-- ⭐ **Share via link**: Premium users and members of paid organizations can now share a temporary copy of a vault items with specific people using a link, with rules that control who can open it and for how long. Learn more about [sharing vault items](https://bitwarden.com/help/sharing/).
-- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
-
-#### Self-host
-
-- **New environment variable**: You can now set the lifetime duration of access tokens using an [environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/).
 
 ## 2026.9.2
 
@@ -32095,7 +32138,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 > 
 > For organizations **already using SCIM or Directory Connector**, both tools will continue to automatically issue invitations in order to not disrupt existing workflows. You can change that setting whenever you're ready to do so.
 - ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#activate-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
-- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send-and-share/) are now enforced on iOS applications.
+- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/) are now enforced on iOS applications.
 - **Vault banner policy for mobile users**: The [vault banner](https://bitwarden.com/help/policies/#vault-banner/) policy's custom banners will now apply to iOS and Android user vaults.
 
 ## 2026.8.1
@@ -33773,9 +33816,6 @@ Vault health reports can help you evaluate the security of your Bitwarden indivi
 ## View a report
 
 Individual vault reports scan items saved to your personal vault, as well as organization items that you have access to. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
-
-> [!TIP] Health reports in browser
-> You can also view the exposed, weak, and reused passwords [health reports in the browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/).
 
 #### Run an individual vault report
 
@@ -38668,7 +38708,7 @@ bw send receive [options] <url>
 - Use `--obj` to output the full Send object as JSON rather than only the Send link (pair this option with the `--pretty` option for formatted JSON).
 - Use `--ouput <output>` to specify the output directory for the contents of a file Send.
 
-To receive a Send that requires email-verification, you will be prompted to enter your email address, and then the verification code send to that email address. For example:
+To receive a send that requires email-verification, you will be prompted to enter your email address, and then the verification code send to that email address. For example:
 
 ```bash
 $ bw send receive <Send URL>
@@ -38736,7 +38776,7 @@ URL: https://bitwarden.com/help/send-hosting/
 ---
 # Self-hosting Send
 
-Once you [update your instance](https://bitwarden.com/help/updating-on-premise/), most implementations will be already set up to [use Send](https://bitwarden.com/help/create-send/). An exception to this is if you are using a non-default **mapped volume for attachment storage**.
+Once you [update your instance](https://bitwarden.com/help/updating-on-premise/), most implementations will be already setup to begin [using Send](https://bitwarden.com/help/create-send/). An exception to this is if you are using a non-default **mapped volume for attachment storage**.
 
 The files attached to file Sends are stored in a `send` subdirectory of the existing attachments volume (for example, `./bwdata/core/attachments/send`). This is dictated by the `globalSettings__send__baseDirectory=` environment variable, which has the following default configuration in `global.override.env`:
 
@@ -38805,7 +38845,6 @@ When a Send reaches its specified maximum access (or **View**) count:
 > 
 > - For text Sends, the number of times the link has been accessed.
 > - For file Sends, the number of times the contents are downloaded.
-> - For [shared item Sends](https://bitwarden.com/help/sharing/#share-via-link/), the number of times the link has been accessed.
 
 ## Manually deactivate or delete
 
@@ -38921,7 +38960,7 @@ Recipients can still validate the trustworthiness of Sends by cross-referencing 
 *Hidden-email text Send*
 
 > [!TIP] Send controls policy
-> Enterprise organizations can remove the **Hide my email address from recipients**option with the [Manage Send ](https://bitwarden.com/help/policies/#manage-send-and-share/)policy.
+> Enterprise organizations can remove the **Hide my email address from recipients**option with the [Manage Send ](https://bitwarden.com/help/policies/#manage-send/)policy.
 
 ## Hide text
 
@@ -39640,25 +39679,14 @@ URL: https://bitwarden.com/help/sharing/
 ---
 # Share Items
 
-Bitwarden provides two methods for sharing a vault item: add it to an organization collection to give members ongoing access, or create a link that gives anyone temporary access to a copy of the item's contents. This article covers both methods so you can choose which option will best meet the recipient's needs.
-
-- Share with [organization collections](https://bitwarden.com/help/sharing/#organization-sharing/)
-
- - Sharing with a collection gives members of an organization ongoing access to an item through shared permissions.
-- Share [via link](https://bitwarden.com/help/sharing/#share-via-link/)
-
- - Share via link creates a Send containing a copy of a vault item. Recipients can view the copy until the link expires, but they can't access or change the original item. Share via link is available on the browser extension, desktop app, and web app.
-
-## Organization sharing
-
-Sharing using collections requires membership in an [organization](https://bitwarden.com/help/about-organizations/). Using Bitwarden, sharing an item means two things:
+Sharing requires membership in an [organization](https://bitwarden.com/help/about-organizations/). Using Bitwarden, sharing an item means two things:
 
 - Adding the item to an [organization](https://bitwarden.com/help/about-organizations/). This transfers ownership of the item to the organization you're sharing it with.
 - Adding the item to one or more [collections](https://bitwarden.com/help/about-collections/). The **Access** settings set on those collections determine who will have access to it.
 
-Sharing with collections requires organization membership.
+There are lots of different methods for sharing items using Bitwarden. In this article, we'll walk through those methods. Whichever method works best for your workflow, remember that you'll need to be a member of an organization in order to share.
 
-### Share new items
+## Share new items
 
 Whether you're **Adding items** to your organization or **Importing items** to your organization, you can specify who they should be shared with right from the start. You can add or import items to any collection that you have the right [permissions](https://bitwarden.com/help/collection-permissions/) for:
 
@@ -39666,7 +39694,7 @@ Whether you're **Adding items** to your organization or **Importing items** to y
 
 To add a new shared item from the web app, browser extension, mobile, or desktop:
 
-1. On the **Vault** view of any Bitwarden app, select the + **Add** button and select the desired item type.
+1. On the **Vault** view of any Bitwarden app, select the + **New** button and select the desired item type.
 
 > [!TIP] Can also be done from Admin Console
 > Organization [owners, admins, and some custom users](https://bitwarden.com/help/user-types-access-control/) can also take this step directly from the **Admin Console** to skip some of the steps in this process.
@@ -39703,7 +39731,7 @@ When importing items to Password Manager, you can import them directly to a shar
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
 > *Shared item badge*
 
-### Share existing items
+## Share existing items
 
 You might find that an item currently owned by you needs to be shared with other members of your organization. Items can be shared with any collection that you have the right [permissions](https://bitwarden.com/help/collection-permissions/) for, from any Bitwarden app:
 
@@ -39817,7 +39845,7 @@ Where:
 
 For more information, please refer to the Bitwarden [CLI documentation](https://bitwarden.com/help/cli/#move/). 
 
-### After items are shared
+## After items are shared
 
 > [!NOTE] Reminder, sharing means org ownership
 > **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
@@ -39827,74 +39855,16 @@ For more information, please refer to the Bitwarden [CLI documentation](https:/
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
 > *Shared item badge*
 
-### Reclaim shared item ownership
+### Reclaimed shared item ownership
 
 Users with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/) for the collection(s) an item is stored in can choose to stop sharing an item with an organization:
 
 1. Clone the item by using the ⋮ options menu for the item and selecting **Clone**.
-2. On the **Add item** panel, use the **Owner**dropdown to select your account email. This will ensure the item is cloned into a non-shared context.
+2. On the **New item** panel, use the **Owner**dropdown to select your account email. This will ensure the item is cloned into a non-shared context.
 3. **Save** the cloned item.
 4. Delete the original item by using the ⋮ options menu for the item and selecting **Delete**.
 
 Note that in some cases moving the item to a collection with higher access control restrictions, or to a collection that only you have access to, can be more effective than outright removing it from the organization.
-
-## Share via link
-
-Use **Share via link** to give someone temporary access to a copy of a vault item, while the original item remains in your vault. Share via link creates a [Send](https://bitwarden.com/help/about-send/) containing the item's contents, which you can share through any channel. Share via link is available for [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise). Additionally, organization admins can configure access to this feature using the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/). 
-
-> [!NOTE] Items you can't share via link
-> **Share via link** is not available for SSH key items or for items in your archive or trash. To share an archived or deleted item, unarchive it or restore it from the trash first. To share an item in one or more collections, you need edit permission for at least one of them.
-
-To share a vault item with one or more people who do not need ongoing access to an organization collection:
-
-1. Select the ⋮ menu for the item you wish to share, and then choose **Share via link**:
-
-![Share with link](https://bitwarden.com/assets/7LURUsVmunZxNFPjWwXAJn/fc31a656e4ec94b6fa6f7aa37648b1fa/web_share_link.png)
-*Share with link*
-2. Enter the recipient's email address. Use commas to separate emails if sending to more than one recipient:
-
-![Share with link menu](https://bitwarden.com/assets/3vTrnas77a2ZHgWOBu65Xc/ecf1b5c7761351eb9adf207805c00f43/share_link_menu_web_app.png)
-*Share with link menu*
-3. Configure the share rules:
-
- - **Link expires after**: Choose how long the link stays valid.
-
-> [!NOTE] Recipient keeps anything they copy
-> The expiration date only affects the share link itself. If the recipient saved the shared vault item while the link was valid, they will still have it after the link expires.
- - **One time share**: Allow the link to be opened only once.
-4. Once you are ready to share the link, select **Copy** **link** and paste it into your preferred channel of communication. Previously generated links will appear in the **Active links** list.
-
-### Edit a vault item share
-
-After you create a link, you can edit it to change its settings or add options:
-
-1. Navigate to the **Send** page and select the shared vault item:
-
-[Embedded content]
-2. Select **Edit**.
-
-When editing a vault item share, you may configure additional settings for the share link:
-
-- **Maximum access count**: Configure the number of times the link can be accessed.
-- **Hide my email address from recipients**: Selecting this option will hide the sender's email address when the recipient opens the share link.
-- **Private note**: Add any additional private notes to the Send.
-
-> [!NOTE] Shared copies don't update
-> **Share via link** sends a copy of the item as it existed when the link was created. Later edits to the original won't update the recipient's copy.
-
-### Receive an item from a shared link
-
-When you receive a shared item link:
-
-1. Open the link, enter your email, and select **Send code**. Your email must match one the sender entered in order to receive a code.
-
-![Enter email to verify](https://bitwarden.com/assets/4TYGXZJtn13F7PZzULJ5IY/d3fc9be6b3c299f7ffa002c2472b8685/enter_email_receive_send.png)
-*Enter email to verify*
-2. After you receive the code, enter it into the **Verification code** field.
-3. After your code is verified, you can copy the item's contents to use, or paste them into a new item in your vault for long-term storage.
-
-![Share with link content](https://bitwarden.com/assets/7g7mG243hYSCQDrmUMP6dv/7d7f8594e7cdd233b30920af1d8a9eba/Share_with_link_content.png)
-*Share with link content*
 ---
 URL: https://bitwarden.com/help/sign-up-for-secrets-manager/
 ---
@@ -40509,7 +40479,10 @@ To enable the Bitwarden SSH Agent on Windows, you must disable the OpenSSH servi
 
 ![Windows Services panel](https://bitwarden.com/assets/77fTJpxIBH5ikJYQW1KFL7/0c6fa3b9f68f7a85569ad6ede489979e/openSSH_agent.png)
 *Windows Services panel*
-2. In the OpenSSH Authentication Agent Properties window, set the **Startup type** setting to **Disabled**.
+2. Once you have opened the OpenSSH Authentication Agent Properties window, set the **Startup type** setting to **Disabled**.
+
+![Windows Services panel](https://bitwarden.com/assets/77fTJpxIBH5ikJYQW1KFL7/0c6fa3b9f68f7a85569ad6ede489979e/openSSH_agent.png)
+*Windows Services panel*
 3. Once the settings have been adjusted, select **Apply** and then **OK**.
 
 ### macOS App store

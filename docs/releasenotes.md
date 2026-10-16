@@ -15,7 +15,7 @@ URL: https://bitwarden.com/help/releasenotes/
 
 ## Overview
 
-The releases labeled in this document represent releases of the Bitwarden server. Client applications (browser extensions, mobile apps, desktop apps, and the CLI) that are released within the same window will be listed with their specific version number, which may vary from the associated server version number. Learn more about [software release support at Bitwarden](https://bitwarden.com/help/bitwarden-software-release-support/)*.*
+The releases labelled in this document represent releases of the Bitwarden server. Client applications (browser extensions, mobile apps, desktop apps, and the CLI) that are released within the same window will be listed with their specific version number, which may vary from the associated server version number. Learn more about [software release support at Bitwarden](https://bitwarden.com/help/bitwarden-software-release-support/)*.*
 
 ### Client apps and self-hosted servers
 
@@ -42,19 +42,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
-
-## 2026.10.0
-
-(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.10.0, Browser Extension 2026.10.0, Desktop 2026.10.0, Mobile 2026.10.0, and CLI 2026.10.0) 
-
-#### Password Manager
-
-- ⭐ **Share via link**: Premium users and members of paid organizations can now share a temporary copy of a vault items with specific people using a link, with rules that control who can open it and for how long. Learn more about [sharing vault items](https://bitwarden.com/help/sharing/).
-- ⭐ **Vault health reports**: You can now run [vault health reports in your browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/) to identify exposed, weak, and reused passwords. Premium and Families subscriptions can see which specific logins are at-risk, and those with a Free subscription can see how many passwords are flagged.
-
-#### Self-host
-
-- **New environment variable**: You can now set the lifetime duration of access tokens using an [environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/).
 
 ## 2026.9.2
 
@@ -85,7 +72,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 > 
 > For organizations **already using SCIM or Directory Connector**, both tools will continue to automatically issue invitations in order to not disrupt existing workflows. You can change that setting whenever you're ready to do so.
 - ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#activate-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
-- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send-and-share/) are now enforced on iOS applications.
+- **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/) are now enforced on iOS applications.
 - **Vault banner policy for mobile users**: The [vault banner](https://bitwarden.com/help/policies/#vault-banner/) policy's custom banners will now apply to iOS and Android user vaults.
 
 ## 2026.8.1

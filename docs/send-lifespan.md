@@ -59,7 +59,6 @@ When a Send reaches its specified maximum access (or **View**) count:
 > 
 > - For text Sends, the number of times the link has been accessed.
 > - For file Sends, the number of times the contents are downloaded.
-> - For [shared item Sends](https://bitwarden.com/help/sharing/#share-via-link/), the number of times the link has been accessed.
 
 ## Manually deactivate or delete
 

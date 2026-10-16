@@ -55,7 +55,7 @@ Turn on the **Centralize organization ownership** policy to prevent private owne
 > [!NOTE] Centralize data ownership doesn't apply to admins and owners
 > This policy only affects members who are not organization owners or admins. Organization owners and admins can continue using **My vault**.
 
-Once turned on, all new saved items are placed in that member’s **My Items** by default. When on the Add Item screen, a banner informs users that a policy affects item ownership options. This action is not reversible for items already transferred.
+Once turned on, all new saved items are placed in that member’s **My Items** by default. When on the Add Item screen, a banner informs users that a policy affects item ownership options.
 
 After a [member is removed](https://bitwarden.com/help/remove-users/), the data in that member’s **My Items** stays with the organization. Owners, admins, and some custom role users can assign other members access to the removed members’ **My Items**.
 
@@ -65,13 +65,13 @@ Turn on this option within the **Centralize organization ownership** policy to p
 
 Members can **accept** or **decline** the prompt. Accepting transfers all individually-owned items to organization ownership, and declining will immediately revoke that member's access to the organization to allow them time to filter which items should be transferred and which should not. [Events are logged ](https://bitwarden.com/help/event-logs/#organization-events/)for either scenario.
 
-### Manage Send and share
+### Manage Send
 
-Turn on **Manage Send** **and share** to control how members use Send and share features. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
+Turn on **Manage Send** to control how members use Send. The**Enable Send** toggle is on by default. Toggling **Enable Send** off prevents members from creating or editing a Send. If they previously created Sends, they can view and delete them from the **Sends** page in all Bitwarden clients except the web app. Members subject to this policy can still open [received Sends](https://bitwarden.com/help/receive-send/). This policy is not enforced for owners and admins.
 
-Using Manage Send and Share, organization admins can manage how members use Send, including:
+Using Manage Send, organization admins can manage how members use Send, including:
 
-- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text**, **File** and **Vault items**. Sharing vault items allows users to share a vault item, using a temporary, configurable link with [Share via link](https://bitwarden.com/help/sharing/#share-via-link/).
+- **Send types:** Determines which [type of send](https://bitwarden.com/help/create-send/#create-a-send/) users may create, such as **Text** and **File**.
 - **Access options**: Determines how Send recipients access a Send once it has been sent by an organization member. Options include **Any**, [Email verification](https://bitwarden.com/help/send-privacy/#email-verified-recipients/), and [Password set by member](https://bitwarden.com/help/send-privacy/#send-passwords/).
 - **Enforce deletion date**: Use this policy to enforce a predetermined [Send lifespan](https://bitwarden.com/help/send-lifespan/#expiration-date/) for Sends created by members.
 - **Always show members' email address with recipients**: Enable this option to remove the [hide email option](https://bitwarden.com/help/send-privacy/#hide-email/) from users, providing transparency to those who receive a Send. This policy is not enforced for owners and admins.
@@ -145,16 +145,16 @@ Turn on the **Block account creation for claimed domains** policy to prevent peo
 
 ### Session timeout
 
-Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options can not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. The **Maximum allowed timeout** value is a ceiling, not a fixed setting. Members can still choose any timeout at or below it in their own account settings. This policy does not affect organization owners.
+Turn on the **Session timeout** policy to set limits and control members' [session timeout](https://bitwarden.com/help/vault-timeout/#session-timeout/) behavior. When this policy is turned on and users edit their account's **Session timeout** settings, the **Timeout** options can not exceed the maximum you picked for the organization and some, like **On browser restart** and **Never**, will not be available. This policy does not affect organization owners.
 
 You can customize two options:
 
 - From the **Maximum allowed timeout** dropdown menu, set a limit to how long sessions can remain active:
 
- - **Immediately**: When the user stops interacting with Bitwarden.
- - **Custom**: After the amount of time entered in **Hours** and **Minutes**.
- - **On system lock**: When the device is locked or the screensaver activates (browser extension and desktop app only). Web app and mobile don't support this option; if selected, they will fall back to their default behavior of timed logout or lock.
- - **On app restart**: When the Bitwarden app is closed and reopened. The mobile app does not support this setting, mobile users will be locked on app restart by default.
+ - **Immediately**: When the user stops interacting with Bitwarden
+ - **Custom**: After the amount of time entered in **Hours** and **Minutes**
+ - **On system lock**: When the device is locked or the screensaver activates (browser extension and desktop app only)
+ - **On app restart**: When the Bitwarden app is closed and reopened
  - **Never**: No maximum session duration is set.
 
 > [!WARNING] Never timeout
@@ -162,7 +162,7 @@ You can customize two options:
 - From the **Session timeout action** dropdown menu, choose what happens after a session ends. You can specify [**Lock or Log out**](https://bitwarden.com/help/vault-timeout/#session-timeout-action/) or select **User preference** to let members choose in their account settings.
 
 > [!TIP] Log out for trusted devices
-> If your organization uses [trusted devices](https://bitwarden.com/help/about-trusted-devices/), consider selecting **Log Out**. Even if an admin sets the action to **Lock**, only members who have PIN, biometrics, or a master password configured can use **Lock**. Other users will be logged out.
+> If your organization uses [trusted devices](https://bitwarden.com/help/about-trusted-devices/), consider selecting **Log Out**. After a session times out, this allows members to access their vault without a master password via SSO on a trusted device.
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
@@ -256,7 +256,7 @@ Turn on the **Automatic login with SSO** policy to allow login forms to be fille
 
 ### Enable autofill on page load
 
-Turn on the **Enable autofill on page load**policy to activate the browser extension's [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) for all existing and new members. After the policy is on, members will need to specify which items autofill on page load, either by default for all items from **Settings** → **Autofill** or for individual logins from the **Edit login** screen.
+Turn on the **Enable autofill on page load**policy to automatically turn on the [autofill on page load feature](https://bitwarden.com/help/auto-fill-browser/#on-page-load/) on the browser extension for all existing and new members of the organization. If activated, members will not have the ability to disable autofill on page load.
 
 ### Remove card item type
 
@@ -277,7 +277,7 @@ Users who have redeemed a sponsored Families organization prior to the policy be
 Turn on the **Automatic user confirmation** policy to automatically confirm members that accept invitations to join your organization, rather than the standard manual process. To use this policy:
 
 1. Verify your organization's [eligibility](https://bitwarden.com/help/automatic-confirmation/). In particular, the [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on and all members—including the owner and admins—must be compliant before activating this policy.
-2. [Contact us](https://bitwarden.com/contact/) to add the**Automatic user confirmation** policy to your Enterprise policies settings.
+2. Contact us to add the**Automatic user confirmation** policy to your Enterprise policies settings.
 3. Go to **Settings** → **Policies** and turn on the now available**Automatic user confirmation** policy.
 4. At least one owner, admin, or relevant custom role member must [activate the automatic confirmation setting](https://bitwarden.com/help/automatic-confirmation/#for-each-administrator/).
 

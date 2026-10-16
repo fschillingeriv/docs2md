@@ -42,7 +42,10 @@ To enable the Bitwarden SSH Agent on Windows, you must disable the OpenSSH servi
 
 ![Windows Services panel](https://bitwarden.com/assets/77fTJpxIBH5ikJYQW1KFL7/0c6fa3b9f68f7a85569ad6ede489979e/openSSH_agent.png)
 *Windows Services panel*
-2. In the OpenSSH Authentication Agent Properties window, set the **Startup type** setting to **Disabled**.
+2. Once you have opened the OpenSSH Authentication Agent Properties window, set the **Startup type** setting to **Disabled**.
+
+![Windows Services panel](https://bitwarden.com/assets/77fTJpxIBH5ikJYQW1KFL7/0c6fa3b9f68f7a85569ad6ede489979e/openSSH_agent.png)
+*Windows Services panel*
 3. Once the settings have been adjusted, select **Apply** and then **OK**.
 
 ### macOS App store

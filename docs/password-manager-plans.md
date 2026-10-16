@@ -23,7 +23,7 @@ Upgrade your individual account to unlock premium password security and manageme
 **To upgrade to a premium account**, use the web app, go to **Settings**, and select **Go Premium**. Alternatively, [**sign up for a new Premium individual account here**](https://bitwarden.com/go/start-premium/).
 
 > [!NOTE] Premium features 
-> Premium does not include organization data sharing. In order to access organization sharing features, you will need a subscription to an organization ([Free](https://bitwarden.com/help/password-manager-plans/#free-organizations/), [Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)). Paid organizations ([Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)) include premium features for all users enrolled in that organization.
+> Premium does not include secure data sharing. In order to access sharing features, you will need a subscription to an organization ([Free](https://bitwarden.com/help/password-manager-plans/#free-organizations/), [Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)). Paid organizations ([Families](https://bitwarden.com/help/password-manager-plans/#families-organizations/), [Teams](https://bitwarden.com/help/password-manager-plans/#teams-organizations/), or [Enterprise](https://bitwarden.com/help/password-manager-plans/#enterprise-organizations/)) include premium features for all users enrolled in that organization.
 
 Premium individual subscriptions are billed annually.
 
@@ -51,7 +51,7 @@ In the following table, "premium features" (included for **Premium individual** 
 | Secure password generator | ✓ | ✓ | ✓ | ✓ |
 | Self-hosting option | ✓ | ✓ | - | ✓ |
 | [Encrypted export](https://bitwarden.com/help/encrypted-export/) | ✓ | ✓ | ✓ | ✓ |
-| [Bitwarden Send](https://bitwarden.com/help/about-send/) | Text only | Text, files, and vault items | Text only | Text, files, and vault items |
+| [Bitwarden Send](https://bitwarden.com/help/about-send/) | Text only | Text and files | Text only | Text and files |
 | *[Two-step login](https://bitwarden.com/help/setup-two-step-login/) | Hardware security key, authenticator apps, or email | Hardware security key, authenticator apps, email, Yubico OTP, and Duo | Hardware security key, authenticator apps, or email | Hardware security key, authenticator apps, email, Yubico OTP, and Duo (does not include [Duo for organizations](https://bitwarden.com/help/setup-two-step-login-duo/)) |
 | *[Encrypted file attachments](https://bitwarden.com/help/attachments/) | - | 5 GB | - | 5 GB per user + 5 GB shared |
 | *[Integrated authenticator](https://bitwarden.com/help/integrated-authenticator/) (TOTP) | - | ✓ | (If also Premium individual) | ✓ |

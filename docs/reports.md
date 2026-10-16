@@ -13,9 +13,6 @@ Vault health reports can help you evaluate the security of your Bitwarden indivi
 
 Individual vault reports scan items saved to your personal vault, as well as organization items that you have access to. Organization reports will scan items across your organization's collections and are accessible to owners and admins from the Admin Console. 
 
-> [!TIP] Health reports in browser
-> You can also view the exposed, weak, and reused passwords [health reports in the browser extension](https://bitwarden.com/help/browser-extension-vault-health-reports/).
-
 #### Run an individual vault report
 
 Log in to the web app and select **Reports**from the left navigation. Then, select a report to run:

@@ -33,6 +33,62 @@ The following variables are among those that already exist in `global.override.e
 | `globalSettings__hibpApiKey=` | Your HaveIBeenPwned (HIBP) API Key, available [here](https://haveibeenpwned.com/API/Key). This key allows users to run the [Data Breach report](https://bitwarden.com/help/reports/#data-breach-individual-vaults-only/) and to check their master password for presence in breaches when they create an account. |
 | `adminSettings__admins=` | Email addresses which may access the [System Administrator Portal](https://bitwarden.com/help/system-administrator-portal/). |
 
+```bash
+# --- Server ---
+# Domain of your Bitwarden instance. Defaults to localhost if not configured. No trailing slash.
+globalSettings__baseServiceUri__vault=
+# US or EU. See: /help/server-geographies/
+globalSettings__baseServiceUri__cloudRegion=
+
+# --- Database ---
+# Connect to an external MSSQL database. See: /help/external-db/
+globalSettings__sqlServer__connectionString=
+
+# --- Authentication ---
+# Password for the identity server certificate.
+globalSettings__identityServer__certificatePassword=
+# Randomly generated internal identity key.
+globalSettings__internalIdentityKey=
+# Randomly generated OpenID Connect client key.
+globalSettings__oidcIdentityClientKey=
+# Randomly generated Duo akey. See: duo.com/docs/duoweb-v2
+globalSettings__duo__aKey=
+
+# --- Installation ---
+# Installation ID from bitwarden.com/host.
+globalSettings__installation__id=
+# Installation key from bitwarden.com/host.
+globalSettings__installation__key=
+
+# --- YubiKey ---
+# Client ID for YubiCloud or self-hosted Yubico server. See: upgrade.yubico.com/getapikey/
+globalSettings__yubico__clientId=
+# Secret key for YubiCloud or self-hosted Yubico server.
+globalSettings__yubico__key=
+
+# --- Mail (SMTP) ---
+# Email address used for invitations.
+globalSettings__mail__replyToEmail=
+# SMTP server hostname or IP address.
+globalSettings__mail__smtp__host=
+# SMTP port used by the SMTP server.
+globalSettings__mail__smtp__port=
+# true = SSL, false = TLS.
+globalSettings__mail__smtp__ssl=
+# Valid username for the SMTP host.
+globalSettings__mail__smtp__username=
+# Valid password for the SMTP host. Dollar sign ($) characters are not supported.
+globalSettings__mail__smtp__password=
+
+# --- Registration & Access ---
+# true to disable new users signing up via the registration page.
+globalSettings__disableUserRegistration=
+# HaveIBeenPwned API key for the Data Breach report. See: haveibeenpwned.com/API/Key
+globalSettings__hibpApiKey=
+# Email addresses that may access the System Administrator Portal.
+adminSettings__admins=
+```
+
 ## Optional variables
 
 The following variables do not already exist in `global.override.env`, and can be manually added:
@@ -56,9 +112,8 @@ The following variables do not already exist in `global.override.env`, and can b
 | `globalSettings__baseServiceUri__cloudRegion=` | Specify `US` or `EU` to designate [which cloud server](https://bitwarden.com/help/server-geographies/) your self-hosted server should hyperlink to. If you're using EU, you'll also need to setup a few other variables as documented [here](https://bitwarden.com/help/server-geographies/#connect-your-self-hosted-server/). |
 | `globalSettings__sqlServer__DisableDatabaseMaintenanceJobs=` | Specify `true` to skip application-side maintenance of the statistics and index rebuild tasks in the database. These tasks require elevated MSSQL privileges and should be reconfigured to run as a database user if this value is set to `true`. [Learn more](https://bitwarden.com/help/database-options/). |
 | `globalSettings__sqlServer__SkipDatabasePreparation=` | Specify `true` to skip application-side database preparation. If not specified, database preparation checks on installation whether a database with the name specified in `globalSettings__sqlServer__connectionString=` exists and, if not, creates one. This task requires elevated MSSQL privileges and, if this value is set to `true`, the named database must exist before initiating installation. [Learn more](https://bitwarden.com/help/database-options/). |
-| `globalSettings__identityServer__AccessTokenLifetimeSeconds=` | Specify the number of seconds access tokens, which are issued on login to grant API access to resources, will remain valid for. Defaults to 1 hour. |
 
-### Load balancers requiring authentication
+[Embedded content]### Load balancers requiring authentication
 
 Bitwarden clients without access to a shared cookie store (such as the Desktop and Mobile clients) cannot communicate with a self-hosted server utilizing a load balancer that requires authentication. To launch an SSO session whose cookie will be copied into the Bitwarden client cookie store, add the following variables to the `global.override.env` file:
 
@@ -73,7 +128,7 @@ Bitwarden clients without access to a shared cookie store (such as the Desktop a
 > 
 > Endpoints used for server-to-server communication, such as those for SCIM and SSO OIDC, must also be excluded.
 
-### Refresh token variables
+[Embedded content]### Refresh token variables
 
 Refresh token variables allow you to change the timeout of tokens. Administrators can use these values, for example, to require users to log in every day. Use the following variables to configure the handling of refresh tokens by your server:
 
@@ -82,3 +137,5 @@ Refresh token variables allow you to change the timeout of tokens. Administrator
 | `globalSettings__IdentityServer__ApplyAbsoluteExpirationOnRefreshToken=` | Specify `true` to use **only** a specified absolute lifetime for refresh tokens and ignore expiration sliding based on usage. When true, only `__AbsoluteRefreshTokenLifetimeSeconds=` will be considered to determine behavior. Specify `false` to allow refresh token expiration to slide (i.e. extend validity for a specified period of time) when they're used. When `false`, both of the following options will be considered to determine behavior. |
 | `globalSettings__IdentityServer__AbsoluteRefreshTokenLifetimeSeconds=` | Specify a integer. Refresh tokens will expire after the absolute lifetime of that integer in seconds, regardless of whether sliding is allowed or not. This variable may only be `0` if `__ApplyAbsoluteExpirationOnRefreshToken=true`, in which case refresh tokens are always rejected. |
 | `globalSettings__IdentityServer__SlidingRefreshTokenLifetimeSeconds=` | Specify a integer greater than `0`. Refresh tokens will extend their validity upon use by that integer, in seconds. Refresh tokens will always expire after their configured absolute lifetime, regardless of what's set here. |
+
+[Embedded content]
