@@ -7,25 +7,26 @@ URL: https://bitwarden.com/help/create-send/
 [Bitwarden Send](https://bitwarden.com/help/about-send/) lets you share encrypted text or files with anyone via a secure, generated link. Create a Send from any Bitwarden app and configure access and privacy options to fit your sharing needs.
 
 > [!NOTE] Remove Send policy
-> If you're a member of an organization that has turned off Send under the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send/), your access to Sends is limited:
+> If you're a member of an organization that has turned off Send under the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/), your access to Sends is limited:
 > 
 > - You cannot create new Sends or edit existing ones.
 > - You can view and delete Sends from the **Sends** page in all Bitwarden clients, except the web app.
 > - You cannot access the Sends page with the Bitwarden web app.
 > 
-> Using the Manage Send policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
+> Using the Manage Send and share policy, organization owners and admins can also control which fields are unavailable when creating a new Send.
 
 ## Create a Send
 
-There are two types of Sends:
+There are three types of Sends:
 
 - A **text Send** shares encrypted text content, such as a message or note. All Bitwarden users can create and edit a text Send.
 - A **file Send** contains an encrypted file, such as a document or image. Only [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise) can make a file Send. To create a file Send, your account's email address must also be verified.
+- A **Vault item** can be shared using [Send via link](https://bitwarden.com/help/sharing/#share-via-link/), which will create a temporary link that contains a vault item. Only [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise) can make a vault item Send. To share a vault item, select ⋮ **Share via link** next to the specific item.
 
 > [!NOTE] Older accounts may need to verify an email
 > If your account is older, you may need to proactively verify your email. Log in to the [web app](https://vault.bitwarden.com/) and select **Verify Email**. If your account email is not verified, then you cannot create [Sends](https://bitwarden.com/help/about-send/).
 
-Choose the Bitwarden app you want to Send from to get started:
+To create a text or file Send:
 
 ### Web app
 

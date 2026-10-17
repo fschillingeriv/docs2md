@@ -4,14 +4,25 @@ URL: https://bitwarden.com/help/sharing/
 
 # Share Items
 
-Sharing requires membership in an [organization](https://bitwarden.com/help/about-organizations/). Using Bitwarden, sharing an item means two things:
+Bitwarden provides two methods for sharing a vault item: add it to an organization collection to give members ongoing access, or create a link that gives anyone temporary access to a copy of the item's contents. This article covers both methods so you can choose which option will best meet the recipient's needs.
+
+- Share with [organization collections](https://bitwarden.com/help/sharing/#organization-sharing/)
+
+ - Sharing with a collection gives members of an organization ongoing access to an item through shared permissions.
+- Share [via link](https://bitwarden.com/help/sharing/#share-via-link/)
+
+ - Share via link creates a Send containing a copy of a vault item. Recipients can view the copy until the link expires, but they can't access or change the original item. Share via link is available on the browser extension, desktop app, and web app.
+
+## Organization sharing
+
+Sharing using collections requires membership in an [organization](https://bitwarden.com/help/about-organizations/). Using Bitwarden, sharing an item means two things:
 
 - Adding the item to an [organization](https://bitwarden.com/help/about-organizations/). This transfers ownership of the item to the organization you're sharing it with.
 - Adding the item to one or more [collections](https://bitwarden.com/help/about-collections/). The **Access** settings set on those collections determine who will have access to it.
 
-There are lots of different methods for sharing items using Bitwarden. In this article, we'll walk through those methods. Whichever method works best for your workflow, remember that you'll need to be a member of an organization in order to share.
+Sharing with collections requires organization membership.
 
-## Share new items
+### Share new items
 
 Whether you're **Adding items** to your organization or **Importing items** to your organization, you can specify who they should be shared with right from the start. You can add or import items to any collection that you have the right [permissions](https://bitwarden.com/help/collection-permissions/) for:
 
@@ -19,7 +30,7 @@ Whether you're **Adding items** to your organization or **Importing items** to y
 
 To add a new shared item from the web app, browser extension, mobile, or desktop:
 
-1. On the **Vault** view of any Bitwarden app, select the + **New** button and select the desired item type.
+1. On the **Vault** view of any Bitwarden app, select the + **Add** button and select the desired item type.
 
 > [!TIP] Can also be done from Admin Console
 > Organization [owners, admins, and some custom users](https://bitwarden.com/help/user-types-access-control/) can also take this step directly from the **Admin Console** to skip some of the steps in this process.
@@ -56,7 +67,7 @@ When importing items to Password Manager, you can import them directly to a shar
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
 > *Shared item badge*
 
-## Share existing items
+### Share existing items
 
 You might find that an item currently owned by you needs to be shared with other members of your organization. Items can be shared with any collection that you have the right [permissions](https://bitwarden.com/help/collection-permissions/) for, from any Bitwarden app:
 
@@ -170,7 +181,7 @@ Where:
 
 For more information, please refer to the Bitwarden [CLI documentation](https://bitwarden.com/help/cli/#move/). 
 
-## After items are shared
+### After items are shared
 
 > [!NOTE] Reminder, sharing means org ownership
 > **Reminder**: Sharing an item involves giving ownership of it to the organization. [Permissions for a collection](https://bitwarden.com/help/collection-permissions/) should be well managed by the administrative team because members with the right level of permission have the ability to alter or delete a shared item. You can tell that an item is owned by the organization by the badge next to its name:
@@ -180,13 +191,71 @@ For more information, please refer to the Bitwarden [CLI documentation](https:/
 > ![Shared item badge](https://bitwarden.com/assets/6tnBV4hUxUNtWvGNAp8eua/215f54e0a26f5a1b2d41e18119fdcd71/2024-12-02_15-31-38.png)
 > *Shared item badge*
 
-### Reclaimed shared item ownership
+### Reclaim shared item ownership
 
 Users with the [Manage collection permission](https://bitwarden.com/help/collection-permissions/) for the collection(s) an item is stored in can choose to stop sharing an item with an organization:
 
 1. Clone the item by using the ⋮ options menu for the item and selecting **Clone**.
-2. On the **New item** panel, use the **Owner**dropdown to select your account email. This will ensure the item is cloned into a non-shared context.
+2. On the **Add item** panel, use the **Owner**dropdown to select your account email. This will ensure the item is cloned into a non-shared context.
 3. **Save** the cloned item.
 4. Delete the original item by using the ⋮ options menu for the item and selecting **Delete**.
 
 Note that in some cases moving the item to a collection with higher access control restrictions, or to a collection that only you have access to, can be more effective than outright removing it from the organization.
+
+## Share via link
+
+Use **Share via link** to give someone temporary access to a copy of a vault item, while the original item remains in your vault. Share via link creates a [Send](https://bitwarden.com/help/about-send/) containing the item's contents, which you can share through any channel. Share via link is available for [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise). Additionally, organization admins can configure access to this feature using the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/). 
+
+> [!NOTE] Items you can't share via link
+> **Share via link** is not available for SSH key items or for items in your archive or trash. To share an archived or deleted item, unarchive it or restore it from the trash first. To share an item in one or more collections, you need edit permission for at least one of them.
+
+To share a vault item with one or more people who do not need ongoing access to an organization collection:
+
+1. Select the ⋮ menu for the item you wish to share, and then choose **Share via link**:
+
+![Share with link](https://bitwarden.com/assets/7LURUsVmunZxNFPjWwXAJn/fc31a656e4ec94b6fa6f7aa37648b1fa/web_share_link.png)
+*Share with link*
+2. Enter the recipient's email address. Use commas to separate emails if sending to more than one recipient:
+
+![Share with link menu](https://bitwarden.com/assets/3vTrnas77a2ZHgWOBu65Xc/ecf1b5c7761351eb9adf207805c00f43/share_link_menu_web_app.png)
+*Share with link menu*
+3. Configure the share rules:
+
+ - **Link expires after**: Choose how long the link stays valid.
+
+> [!NOTE] Recipient keeps anything they copy
+> The expiration date only affects the share link itself. If the recipient saved the shared vault item while the link was valid, they will still have it after the link expires.
+ - **One time share**: Allow the link to be opened only once.
+4. Once you are ready to share the link, select **Copy** **link** and paste it into your preferred channel of communication. Previously generated links will appear in the **Active links** list.
+
+### Edit a vault item share
+
+After you create a link, you can edit it to change its settings or add options:
+
+1. Navigate to the **Send** page and select the shared vault item:
+
+[Embedded content]
+2. Select **Edit**.
+
+When editing a vault item share, you may configure additional settings for the share link:
+
+- **Maximum access count**: Configure the number of times the link can be accessed.
+- **Hide my email address from recipients**: Selecting this option will hide the sender's email address when the recipient opens the share link.
+- **Private note**: Add any additional private notes to the Send.
+
+> [!NOTE] Shared copies don't update
+> **Share via link** sends a copy of the item as it existed when the link was created. Later edits to the original won't update the recipient's copy.
+
+### Receive an item from a shared link
+
+When you receive a shared item link:
+
+1. Open the link, enter your email, and select **Send code**. Your email must match one the sender entered in order to receive a code.
+
+![Enter email to verify](https://bitwarden.com/assets/4TYGXZJtn13F7PZzULJ5IY/d3fc9be6b3c299f7ffa002c2472b8685/enter_email_receive_send.png)
+*Enter email to verify*
+2. After you receive the code, enter it into the **Verification code** field.
+3. After your code is verified, you can copy the item's contents to use, or paste them into a new item in your vault for long-term storage.
+
+![Share with link content](https://bitwarden.com/assets/7g7mG243hYSCQDrmUMP6dv/7d7f8594e7cdd233b30920af1d8a9eba/Share_with_link_content.png)
+*Share with link content*
