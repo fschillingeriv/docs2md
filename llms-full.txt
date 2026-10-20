@@ -30384,10 +30384,20 @@ WHITE PAPER
 
 # Choose The Right SSO Login Strategy
 
-Why zero knowledge encryption is fundamental to how [Bitwarden](https://bitwarden.com/help/about-organizations/) designs SSO integrations. 
+Why zero knowledge encryption is fundamental to how [Bitwarden](https://bitwarden.com/help/about-organizations/) designs [archive] SSO integrations. 
 
 ![Diagram of Bitwarden standard self-host deployment architecture](https://bitwarden.com/assets/1LviFsmuYPB5j8PwzV9n8l/429cf34fc073f00fe0934df328fa6459/Unified_and_standard_self-host_diagram_markup__2_.png)
 *Diagram of Bitwarden standard self-host deployment architecture*
+
+MARKER-162034-leave-this-until-verified-ok
+
+seq1-1791987892
+
+seq2-1791987910
+
+seq3-1791987999
+
+seq4-1791988058
 ---
 URL: https://bitwarden.com/help/policies/
 ---
