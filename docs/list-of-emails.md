@@ -33,7 +33,8 @@ The following emails alert members of Bitwarden organizations, in all roles, to 
 | {Organization} invited you to their Bitwarden organization. | {Organization} = Your organization's display name. | A user receives this email when they are invited to join an organization, **if** they have an existing Bitwarden account. |
 | {Organization} set up a Bitwarden account for you. | {Organization} = Your organization's display name. | A user receives this email when they are invited to join an organization, **if** they do not have an existing Bitwarden account. |
 | You have been revoked from {Organization} | {Organization} = Your organization's display name. | A user receives this email when their access is revoked due to violation of the [Require two-step login](https://bitwarden.com/help/policies/#require-two-step-login/) or [Single organization](https://bitwarden.com/help/policies/#single-organization/) policies. |
-| Your admin has initiated account recovery | n/a | A user receives this email when an administrator has [initiated account recovery on their account](https://bitwarden.com/help/account-recovery/#recover-an-account/). |
+| Your admin has initiated account recovery | n/a | A user receives this email when an administrator has [initiated account recovery on their account](https://bitwarden.com/help/recover-a-member-account/). |
+| Master Password Has Been Changed | n/a | A user receives this email when a [temporary master password is set by an administrator](https://bitwarden.com/help/recover-a-member-account/). |
 | Login request approved | n/a | A user receives this email when a trusted device [login request is approved by an administrator](https://bitwarden.com/help/add-a-trusted-device/). |
 | Important update to your Bitwarden account | n/a | A user receives this email when their account is [claimed by an organization they are a member of](https://bitwarden.com/help/claimed-accounts/). |
 | {Organization} has identified 1 at-risk password {Organization} has identified {#) at-risk passwords | {Organization} = Your organization's display name. {#} = The number of at-risk passwords. | A user receives this email when an administrator initiates a [change password request](https://bitwarden.com/help/access-intelligence/#requesting-password-changes/). |
@@ -104,7 +105,6 @@ The following emails alert Bitwarden users, including members of organizations i
 | Verify Your Email | n/a | A user receives this email during independent account creation. |
 | Your Email Change | n/a | A user receives this email when a request to change their account email address is initiated. |
 | Your Master Password Hint | n/a | A user receives this email when they've requested a [master password hint](https://bitwarden.com/help/master-password/) during login. |
-| Master Password Has Been Changed | n/a | A user receives this email when their master password is changed. |
 | Your Bitwarden Verification Code | n/a | A user receives this email when logging in if they need to input [email-based two-step login](https://bitwarden.com/help/setup-two-step-login-email/#use-email-verification/) or [verify a new device](https://bitwarden.com/help/new-device-verification/). |
 | New Device Logged In From {Device} | {Device} = Device type, for example "Chrome Extension", "Windows", or "iOS". | A user receives this email when their account is logged into from a new device. |
 | Failed login attempts detected | n/a | A user receives this email when several attempts to log in to their Bitwarden account fail. |

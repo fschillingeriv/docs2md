@@ -41,7 +41,7 @@ Ingress controller and Gateway API configurations have been defined in `my-value
 To connect a Network Load Balancer to your cluster:
 
 1. Follow [these instructions](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html) to create an IAM policy and role, and to install the AWS Load Balancer Controller in your cluster.
-2. Ingress NGINX has reach EOL and will no longer receive support (see the [Kubernetes official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/)). Bitwarden and AWS recommend migration to an alternative such as [Gateway API or third-party ingress controllers](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html). `my-values.yaml` will contain configuration variables for Ingress or Gateway API setups. It is not recommended to configure both simultaneously. The following table contains
+2. Ingress NGINX has reach EOL and will no longer receive support (see the [Kubernetes official statement](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/)). Bitwarden and AWS recommend migration to an alternative such as [Gateway API or third-party ingress controllers](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html). `my-values.yaml` will contain configuration variables for Ingress or Gateway API setups. It is not recommended to configure both simultaneously.
 
 ## Create a storage class
 
