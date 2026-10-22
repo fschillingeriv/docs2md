@@ -207,7 +207,7 @@ Note that in some cases moving the item to a collection with higher access contr
 Use **Share via link** to give someone temporary access to a copy of a vault item, while the original item remains in your vault. Share via link creates a [Send](https://bitwarden.com/help/about-send/) containing the item's contents, which you can share through any channel. Share via link is available for [premium users](https://bitwarden.com/help/password-manager-plans/) or members of a paid organization (Families, Teams, or Enterprise). Additionally, organization admins can configure access to this feature using the [Manage Send and share policy](https://bitwarden.com/help/policies/#manage-send-and-share/). 
 
 > [!NOTE] Items you can't share via link
-> **Share via link** is not available for SSH key items or for items in your archive or trash. To share an archived or deleted item, unarchive it or restore it from the trash first. To share an item in one or more collections, you need edit permission for at least one of them.
+> **Share via link** is not available for SSH keys or for items in your archive or trash. To share an archived or deleted item, unarchive it or restore it from the trash first. Additionally, attachments and passkeys are not included in the shared item. To share an item in one or more collections, you need edit permission for at least one of them.
 
 To share a vault item with one or more people who do not need ongoing access to an organization collection:
 
