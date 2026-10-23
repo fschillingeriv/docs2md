@@ -60,7 +60,7 @@ systemctl restart docker
 
 Now that you have configured Docker to send traffic through the forward proxy, additional client configurations will be required for the forward proxy setup:
 
-1. Create a .config directory in the `/opt/bitwarden.docker` & `/home/bitwarden`.`docker` locations: 
+1. Create a .config directory in the `/opt/bitwarden.docker` & `/home/bitwarden.docker` locations: 
 
 ```bash
 mkdir /opt/bitwarden/.docker && mkdir /home/bitwarden/.docker
