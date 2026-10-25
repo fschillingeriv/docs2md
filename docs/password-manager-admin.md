@@ -224,9 +224,9 @@ Read more: [https://bitwarden.com/help/access-intelligence/](https://bitwarden.c
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 

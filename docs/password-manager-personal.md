@@ -287,9 +287,9 @@ Learn more about self-hosting with Bitwarden Lite [here](https://bitwarden.com/h
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
