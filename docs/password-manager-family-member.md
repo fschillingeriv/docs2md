@@ -259,9 +259,9 @@ Learn how to attach a file to any vault item using the browser extension, so you
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 

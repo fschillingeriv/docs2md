@@ -58,7 +58,7 @@ You can enable multiple two-step login methods. When you log in to a vault that 
 6. Email
 
 > [!WARNING] Email 2FA & SSO
-> Two-step login via email is not recommended if you are using [**login with SSO**](https://bitwarden.com/help/using-sso/)**,**as using multiple methods will cause errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
+> Two-step login via email is **not recommended** if you use [login with SSO](https://bitwarden.com/help/using-sso/)**,**because using multiple methods causes errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
 
 Any option will work, though. Authenticate with a lower-preference method by selecting the **Use another two-step login method** button:
 

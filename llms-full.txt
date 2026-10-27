@@ -11035,9 +11035,9 @@ Bitwarden makes it easy to prompt users to change at-risk passwords.
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -11156,9 +11156,9 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -11431,9 +11431,9 @@ Learn how to attach a file to any vault item using the browser extension, so you
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -11546,9 +11546,9 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -12505,9 +12505,9 @@ Learn more about using custom fields [here](https://bitwarden.com/help/custom-fi
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -12668,9 +12668,9 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -12957,9 +12957,9 @@ Learn more about using custom fields [here](https://bitwarden.com/help/custom-fi
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
@@ -39340,7 +39340,7 @@ URL: https://bitwarden.com/help/setup-two-step-login-email/
 Two-step login using email is available for free to all Bitwarden users.
 
 > [!WARNING] Email 2FA & SSO
-> Two-step login via email is not recommended if you are using [**login with SSO**](https://bitwarden.com/help/using-sso/)**,**as using multiple methods will cause errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
+> Two-step login via email is **not recommended** if you use [login with SSO](https://bitwarden.com/help/using-sso/)**,**because using multiple methods causes errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
 
 ## Setup Email Verification
 
@@ -39625,7 +39625,7 @@ You can enable multiple two-step login methods. When you log in to a vault that 
 6. Email
 
 > [!WARNING] Email 2FA & SSO
-> Two-step login via email is not recommended if you are using [**login with SSO**](https://bitwarden.com/help/using-sso/)**,**as using multiple methods will cause errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
+> Two-step login via email is **not recommended** if you use [login with SSO](https://bitwarden.com/help/using-sso/)**,**because using multiple methods causes errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
 
 Any option will work, though. Authenticate with a lower-preference method by selecting the **Use another two-step login method** button:
 

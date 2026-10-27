@@ -273,9 +273,9 @@ Learn more about using custom fields [here](https://bitwarden.com/help/custom-fi
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 

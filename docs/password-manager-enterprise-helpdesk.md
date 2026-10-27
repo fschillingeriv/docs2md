@@ -53,9 +53,9 @@ Bitwarden makes it easy to prompt users to change at-risk passwords.
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 

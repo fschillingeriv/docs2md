@@ -7,7 +7,7 @@ URL: https://bitwarden.com/help/setup-two-step-login-email/
 Two-step login using email is available for free to all Bitwarden users.
 
 > [!WARNING] Email 2FA & SSO
-> Two-step login via email is not recommended if you are using [**login with SSO**](https://bitwarden.com/help/using-sso/)**,**as using multiple methods will cause errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
+> Two-step login via email is **not recommended** if you use [login with SSO](https://bitwarden.com/help/using-sso/)**,**because using multiple methods causes errors. Consider setting up [two-step login via a free authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/) instead.
 
 ## Setup Email Verification
 

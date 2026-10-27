@@ -99,9 +99,9 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ## Support
 
-### Ask Smart Search
+### Ask Ai
 
-Find answers instantly with **Bitwarden Smart Search**. 
+Find answers instantly with **Bitwarden Ask AI**. 
 
 [Embedded content componentCtaLink]
 
