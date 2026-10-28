@@ -484,7 +484,7 @@ bws config server-base https://vault.bitwarden.eu
 ```
 
 > [!NOTE] bws api/identity
-> If `server_api` and `server_identity` are not configured, the values will default to the `server_base` value. For example: 
+> If `server-api` and `server-identity` are not configured, the values will default to the `server-base` value. For example: 
 > `https://serverbase.com/api`
 > `https://serverbase.com/identity`
 

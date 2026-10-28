@@ -12,7 +12,7 @@ Here are some guidelines to help you determine whether an email that looks like 
 
 ### Product interaction emails
 
-Emails such as new device alerts, invitations to [join an organization](https://bitwarden.com/help/managing-users/), [request access to Secrets Manager](https://bitwarden.com/help/secrets-manager-quick-start/#getting-to-secrets-manager/), and [two-step login codes](https://bitwarden.com/help/setup-two-step-login-email/), or [Send-verification codes](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) will come from `no-reply@bitwarden.com` or `.eu` or, if you are self-hosting, a [configured domain](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/) like `no-reply@my.domain.com`.
+Emails such as new device alerts, invitations to [join an organization](https://bitwarden.com/help/managing-users/), [request access to Secrets Manager](https://bitwarden.com/help/secrets-manager-quick-start/#getting-to-secrets-manager/), and [two-step login codes](https://bitwarden.com/help/setup-two-step-login-email/), or [Send-verification codes](https://bitwarden.com/help/send-privacy/#email-verified-recipients/) will come from `no-reply@bitwarden.com` or `.eu` or, if you are self-hosting, a [configured domain](https://bitwarden.com/help/install-on-premise-linux/#install-bitwarden/) like `no-reply@my.domain.com`. Refer to this [list of emails from Bitwarden servers](https://bitwarden.com/help/list-of-emails/).
 
 > [!NOTE] Email Verification Email
 > Email verification requests, which as of 2024.9.2 are sent to cloud users during the account creation, are also issued from `no-reply@bitwarden.com`:
