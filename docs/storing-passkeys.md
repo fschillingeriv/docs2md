@@ -15,21 +15,32 @@ URL: https://bitwarden.com/help/storing-passkeys/
 
 Passkeys are a secure alternative to traditional passwords that let you log in to apps and websites without entering a password. Developed with the standards set by the [<u>FIDO Alliance</u>](https://fidoalliance.org/overview/), passkeys bypass vulnerabilities that come with standard passwords, like phishing. 
 
-Save passkeys in your Bitwarden vault and use the browser extension or mobile apps to autofill them across the apps and websites you use every day. Stored passkeys are protected with Bitwarden's trusted end-to-end encryption.
+Save passkeys in your Bitwarden vault and use the browser extension, mobile apps, or desktop apps to autofill them across the apps and websites you use every day. Stored passkeys are protected with Bitwarden's trusted end-to-end encryption.
 
 ## What are passkeys?
 
-[Passkeys](https://bitwarden.com/resources/passkeys-faq/) are a replacement for passwords that provide fast, easy, and secure sign-ins to websites and apps. Passkeys are a discoverable FIDO credential that can be synced to allow secure passwordless sign-ins across devices or dedicated to a single piece of hardware as a device-bound passkey. 
+A [passkey](https://bitwarden.com/resources/passkeys-faq/) is a pair of extremely large numbers, called keys, that work together to securely verify your identity. The website stores one key, and the other stays private in your password manager or on your device. Because each passkey works only on the website it was created for, fake lookalike sites can’t trick you into using it.
 
-Apps and services can request that passkeys created with them are verified with a PIN, password, pattern, or biometric factor when you save or access them.
+When logging in to a website or app, you choose to sign in with a passkey and then confirm it’s you. Some passkeys replace your username and password entirely, while others add a step after you enter a password. Depending on the site and type of passkey, confirming it's you might mean unlocking Bitwarden or using your device’s PIN, pattern, or biometrics, such as your fingerprint or face.
 
-### Types of passkey
+### Types of passkeys
 
-Passkeys are stored and invoked via the Bitwarden browser extension and mobile apps. Discoverable passkeys and non-discoverable FIDO2 credentials can be stored in Bitwarden and used to log in to websites with passkey capabilities.
+Passkeys vary based on where they’re stored and how they’re used:
+
+- **Synced or device-bound**: Synced passkeys, like those stored in Bitwarden, are available across devices where you use Bitwarden. Device-bound passkeys live on a single piece of hardware, such as a YubiKey, and can’t be copied.
+- **Discoverable or non-discoverable**: Discoverable passkeys let you sign in without entering a username or password. Non-discoverable FIDO2 credentials are typically used for 2FA after entering your password.
+
+Discoverable passkeys and non-discoverable FIDO2 credentials can be stored in Bitwarden and used to log in to websites with passkey capabilities. Passkeys saved in Bitwarden are synced between devices where you use Bitwarden.
+
+> [!NOTE] Only some passkeys support PRF
+> Some passkeys support the [PRF extension](https://bitwarden.com/blog/prf-webauthn-and-its-role-in-passkeys/), which lets them generate an encryption key. To [unlock your Bitwarden vault with a passkey](https://bitwarden.com/help/login-with-passkeys/) instead of your master password, you’ll need a passkey that supports PRF.
 
 ## Save and autofill passkeys with Bitwarden
 
-Storing and using passkeys is available with the Bitwarden browser extension and mobile apps.
+Storing and using passkeys is available with the Bitwarden browser extension, mobile apps, and desktop apps.
+
+> [!NOTE] Can't save passkey for Bitwarden in Bitwarden
+> Bitwarden will not prompt or allow you to save a passkey in your vault that's used to log in to any Bitwarden account. This prevents the circular problem of needing access to your vault to log in to the very same vault.
 
 ### Browser extensions
 
@@ -158,6 +169,64 @@ Select **Sign in** to use your passkey.
 
 > [!NOTE] Sign in with non-Bitwarden saved passkey (Android)
 > If you prefer to sign in with a passkey not stored in Bitwarden, select **More saved sign-ins**.
+
+### Windows
+
+You can save and use passkeys from the Bitwarden desktop app.
+
+## Allow passkeys with the desktop app
+
+To allow Bitwarden to store and use passkeys in Windows:
+
+1. Open the Bitwarden desktop app.
+2. Go to **File** → **Settings**.
+3. Below **Passkey provider**, select **Manage in system settings**.
+4. A pop-up window will appear that lists your available passkey managers. Select the slider next to **Bitwarden** to turn it **On**.
+
+## Create a passkey
+
+When creating a new passkey on a website or app, you'll be prompted to store the passkey in Bitwarden. Select **Continue** and follow the prompts, which vary depending on the type of passkey:
+
+![Create passkey in Windows desktop](https://bitwarden.com/assets/3baKU5E96m37UaicXW3fyB/ebdf212d2460fa14d0f1d9a21e5a49a0/Create_passkey_in_Windows_desktop.png)
+*Create passkey in Windows desktop*
+
+Only one passkey can be saved per login item. If a passkey already exists for a service, overwrite the existing passkey or create a new login item to store an additional passkey.
+
+## Sign in using a passkey stored in Bitwarden
+
+Start the passkey login on the website. From the window that appears, select your saved passkey:
+
+![Sign in with passkey in Windows](https://bitwarden.com/assets/MnwSF40M8vWs1s6diioB7/8abc3b9238525a354a04e72f6049fa1a/Sign_in_with_passkey_in_Windows.png)
+*Sign in with passkey in Windows*
+
+### macOS
+
+You can save and use passkeys from the Bitwarden desktop app in macOS.
+
+## Allow passkeys with the desktop app
+
+To allow Bitwarden to store and use passkeys:
+
+1. Open the Bitwarden desktop app.
+2. From the menu bar, go to **Bitwarden** → **Preferences**.
+3. Below **Passkey provider**, select **Manage in system settings**.
+4. A pop-up window will appear, asking if you want to use autofill from Bitwarden. Select **Turn On**.
+
+## Create a passkey
+
+When creating a new passkey on a website or app, you'll be prompted to store the passkey in Bitwarden. Select **Continue** and follow the prompts, which vary depending on the type of passkey:
+
+![Create passkey in macOS desktop](https://bitwarden.com/assets/c1xX5mR7BPK06IHgd9BQd/224aaff724cf6b844d1e9355f110d186/Create_passkey_in_macOS_desktop.png)
+*Create passkey in macOS desktop*
+
+Only one passkey can be saved per login item. If a passkey already exists for a service, overwrite the existing passkey or create a new login item to store an additional passkey.
+
+## Sign in using a passkey stored in Bitwarden
+
+Start the passkey login on the website. From the window that appears, select your saved passkey:
+
+![Sign in with passkey in macOS](https://bitwarden.com/assets/w39vqckTJBynB4d4r0SrP/2350605c13065b93456a526eb197e4f7/Sign_in_with_passkey_in_macOS.png)
+*Sign in with passkey in macOS*
 
 ## View passkeys in Bitwarden
 

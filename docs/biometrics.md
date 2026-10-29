@@ -59,9 +59,6 @@ To turn on biometric unlock:
 2. Open the Bitwarden desktop and go to **File** → **Settings**.
 3. Under **Security**, check **Unlock with system authentication** and confirm the update when prompted.
 
-> [!NOTE] Log in before biometrics-Linux
-> After biometrics are configured for the Linux desktop app, you still need to log in with a master password or PIN. Once logged in, use biometrics to unlock your vault.
-
 ## Flatpak
 
 To turn on biometric unlock:
@@ -84,9 +81,6 @@ sudo chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.
 4. Turn on system authentication on your machine.
 5. Open the Bitwarden desktop and go to **File** → **Settings**.
 6. Under **Security**, check **Unlock with system authentication** and confirm the update when prompted.
-
-> [!NOTE] Log in before biometrics-Linux
-> After biometrics are configured for the Linux desktop app, you still need to log in with a master password or PIN. Once logged in, use biometrics to unlock your vault.
 
 ## Set up biometrics for browser extension
 

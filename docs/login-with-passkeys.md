@@ -13,7 +13,7 @@ URL: https://bitwarden.com/help/login-with-passkeys/
 > 
 > * Some authenticators, notably Windows Hello, will not allow you to use a passkey for both login and 2FA.
 
-Passkeys offer secure authentication for your Bitwarden account. Use them to log in and, with a [PRF-capable setup](https://bitwarden.com/help/login-with-passkeys/#unlock-vault-requirements/), automatically [unlock your vault](https://bitwarden.com/help/understand-log-in-vs-unlock/) without entering your master password. Passkeys bypass two-step login, offering a streamlined alternative to traditional password-based authentication.
+[Passkeys](https://bitwarden.com/help/storing-passkeys/#what-are-passkeys/) offer secure authentication for your Bitwarden account. Use them to log in and, with a [PRF-capable setup](https://bitwarden.com/help/login-with-passkeys/#unlock-vault-requirements/), automatically [unlock your vault](https://bitwarden.com/help/understand-log-in-vs-unlock/) without entering your master password. Passkeys bypass two-step login, offering a streamlined alternative to traditional password-based authentication.
 
 ## Requirements
 
@@ -37,7 +37,8 @@ To decrypt and unlock your vault with a passkey, you need to [set up encryption]
 
 You cannot use passkeys with Bitwarden if you’re in an organization that uses the [Require SSO policy](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/), SSO with [trusted devices](https://bitwarden.com/help/about-trusted-devices/), or [Key Connector](https://bitwarden.com/help/about-key-connector/).
 
-Bitwarden will not prompt or allow you to save a passkey for logging in to any Bitwarden account. This prevents the circular problem of needing access to your vault to log in to the very same vault.
+> [!NOTE] Can't save passkey for Bitwarden in Bitwarden
+> Bitwarden will not prompt or allow you to save a passkey in your vault that's used to log in to any Bitwarden account. This prevents the circular problem of needing access to your vault to log in to the very same vault.
 
 ## Manage passkeys
 

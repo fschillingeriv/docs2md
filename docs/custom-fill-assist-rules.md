@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/custom-fill-assist-rules/
 
 # Custom Fill Assist Rules
 
-Enterprise organizations can [use a policy](https://bitwarden.com/help/policies/#activate-fill-assist/) to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members and, optionally, replace the Bitwarden-curated fill assist rules with a ruleset hosted and maintained by the organization. 
+Enterprise organizations can [use a policy](https://bitwarden.com/help/policies/#enable-fill-assist/) to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members and, optionally, replace the Bitwarden-curated fill assist rules with a ruleset hosted and maintained by the organization. 
 
 This article covers building a custom ruleset. Refer to the links above for articles covering how fill assist and the associated policy work in practice.
 
@@ -103,7 +103,7 @@ In order to build a custom ruleset, the recommended procedure is:
 2. In the fork, edit `maps/forms/forms.jsonc` to fit your organization's needs. It's recommended that existing entries are kept intact and that new entries are added according to the formatting instructions in the prior section.
 3. Validate and build with `npm run check && npm run build`. A passing build emits the minified artifacts and manifests expected by the clients.
 4. Publish the build artifacts so that all four expected files sit together in a single HTTPS-reachable directory. A GitHub Release is a good example of a straightforward path to doing so.
-5. Point your policy's **custom autofill ruleset** at the HTTPS-reachable directory, [from the UI](https://bitwarden.com/help/policies/#activate-fill-assist/) if you're cloud-hosted or [using an environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/) if you're self-hosted. If you used GitHub, this would look something like `https://github.com/<your-org>/forked-map-the-web/releases/latest/download/`.
+5. Point your policy's **custom autofill ruleset** at the HTTPS-reachable directory, [from the UI](https://bitwarden.com/help/policies/#enable-fill-assist/) if you're cloud-hosted or [using an environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/) if you're self-hosted. If you used GitHub, this would look something like `https://github.com/<your-org>/forked-map-the-web/releases/latest/download/`.
 
 ## Maintain a custom ruleset
 

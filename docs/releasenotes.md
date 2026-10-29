@@ -43,6 +43,20 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.10.1
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.10.1, Browser Extension 2026.10.1, Desktop 2026.10.2, Mobile 2026.10.1, and CLI 2026.10.1) 
+
+#### Password Manager
+
+- ⭐ **Passkeys with desktop**: You can now [save and use passkeys](https://bitwarden.com/help/storing-passkeys/#save-and-autofill-passkeys-with-bitwarden/) with the Bitwarden desktop app on Windows and macOS.
+- **1Password direct importer**: Transfer your data from 1Password without needing to download an export file with the new [direct import option](https://bitwarden.com/help/import-from-1password/#import-directly-from-1password/).
+- **Basic auth prompt update**: Support for basic auth prompts is back and can be reactivated using an [opt-in setting in browser extensions](https://bitwarden.com/help/basic-auth-autofill/).
+
+#### Admin Console
+
+- ⭐ **Email invite for staged users**: Organization administrators can now [email an invite link](https://bitwarden.com/help/managing-users/#invite-staged-members/) to staged users directly from the **Members** page, a quicker route than before.
+
 ## 2026.10.0
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.10.0, Browser Extension 2026.10.0, Desktop 2026.10.0, Mobile 2026.10.0, and CLI 2026.10.0) 
@@ -84,7 +98,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 > For **new organizations** and organizations **not yet using SCIM or Directory Connector**, both tools by default will be set to provision users into the Staged status rather than automatically issue invitations.
 > 
 > For organizations **already using SCIM or Directory Connector**, both tools will continue to automatically issue invitations in order to not disrupt existing workflows. You can change that setting whenever you're ready to do so.
-- ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#activate-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
+- ⭐ **Fill assist policy and custom rulesets**: Fill assist can now be set on by default on members' clients [with a policy](https://bitwarden.com/help/policies/#enable-fill-assist/). That same policy can be used to substitute the Bitwarden-curated ruleset with a [custom ruleset built and maintained by your organization](https://bitwarden.com/help/custom-fill-assist-rules/).
 - **Access controls enforced on iOS**: The existing access control policies configured in the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send-and-share/) are now enforced on iOS applications.
 - **Vault banner policy for mobile users**: The [vault banner](https://bitwarden.com/help/policies/#vault-banner/) policy's custom banners will now apply to iOS and Android user vaults.
 

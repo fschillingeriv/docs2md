@@ -14,7 +14,7 @@ Enterprise policies allow Enterprise organizations to enforce security rules and
 > [!WARNING] Enable policies before invite.
 > We recommend setting enterprise policies before inviting users to your organization. Some policies will [revoke](https://bitwarden.com/help/revoke-users/) non-compliant users when turned on, and some are not retroactively enforceable.
 
-Organization owners and admins can configure Enterprise policies. Enterprise policies are applied to current organization members and members who have [accepted](https://bitwarden.com/help/managing-users/#accept/) an invitation to your organization. To update a policy: 
+Owners and admins can configure Enterprise policies. Enterprise policies are applied to current organization members and members who have [accepted](https://bitwarden.com/help/managing-users/#accept/) an invitation to your organization. To update a policy: 
 
 1. Within the Bitwarden web app, open the Admin Console.
 2. Select **Settings**.
@@ -43,7 +43,7 @@ The **Single organization** policy must be turned on before activating the follo
 - [Account recovery administration](https://bitwarden.com/help/policies/#account-recovery-administration/)
 - [Require single sign-on authentication](https://bitwarden.com/help/policies/#require-single-sign-on-authentication/)
 - [Default URI match detection](https://bitwarden.com/help/policies/#default-uri-match-detection/)
-- [Activate fill assist](https://bitwarden.com/help/policies/#activate-fill-assist/)
+- [Activate fill assist](https://bitwarden.com/help/policies/#enable-fill-assist/)
 - [Session timeout](https://bitwarden.com/help/policies/#session-timeout/)
 
 If you are unable to turn off the **Single organization** policy, verify that all of the above policies are deactivated, that you don't have a [claimed domain](https://bitwarden.com/help/claimed-domains/), and then try again.
@@ -78,7 +78,11 @@ Using Manage Send and Share, organization admins can manage how members use Send
 
 ### Remove export
 
-Turn on the **Remove export**policy to prohibit members of your organization from [exporting their individual vault](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins.
+Turn on the **Remove export**policy to prohibit members of your organization from [exporting from their vaults](https://bitwarden.com/help/export-your-data/#export-an-individual-vault/). This policy is not enforced for owners and admins. Members subject to this policy:
+
+- Cannot export personally-owned items.
+- Cannot export items from [My Items](https://bitwarden.com/help/my-items/).
+- Cannot export items from their shared folders.
 
 In the web app and CLI, a message is displayed to users indicating that a policy is affecting their options. In other clients, the option will simply be disabled:
 
@@ -223,19 +227,19 @@ Once the policy is activated, members cannot view or change their account's **De
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
-### Activate fill assist
+### Enable fill assist
 
-Turn on the **Activate fill assist**policy to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members who haven't yet set their own preference and, optionally, to point members' clients at custom fill assist rules rather than Bitwarden's curated maps.
+Turn on the **Enable fill assist**policy to set a default [fill assist](https://bitwarden.com/help/fill-assist/) state for members who haven't yet set their own preference and, optionally, to point members' clients at custom fill assist rules rather than Bitwarden's curated maps.
 
 This policy sets a **default**, not an enforcement. Members who activate or deactivate fill assist on their own, whether before the policy is activated or after, will keep that setting choice. Activating this policy will not override their personal preference. Unlike some policies, this policy applies to all roles including owners and admins.
 
 > [!NOTE] Single org policy required
 > The [**Single organization**](https://bitwarden.com/help/policies/#single-organization/) policy must be turned on before activating this policy.
 
-The **Activate fill assist**policy has two controls:
+The **Enable fill assist**policy has two controls:
 
 - **Enable policy**: When toggled on, members who haven't touched their own fill assist setting are defaulted to fill assist on.
-- **Custom autofill rule set**: By default, fill assist uses a rule set curated by Bitwarden. Enter a URL here to override it with your own. Using a custom ruleset fully replaces the default with a ruleset that you build and maintain, there is no merge or fallback between the two. Learn the basics of [how to set up a custom ruleset](https://bitwarden.com/help/custom-fill-assist-rules/).
+- **Autofill rule set**: Use the Bitwarden-reviewed **Default** autofill rule set, or select **Custom**and enter a URL to override it with your own. Using a custom ruleset fully replaces the default with a ruleset that you build and maintain, there is no merge or fallback between the two. Learn the basics of [how to set up a custom ruleset](https://bitwarden.com/help/custom-fill-assist-rules/).
 
 > [!NOTE] Self-hosting fill assist custom rules
 > Self-hosted organizations **will not see the UI** for providing a custom autofill ruleset. Instead, self-hosted organizations must set this URL at the server level using an [environment variable](https://bitwarden.com/help/environment-variables/#optional-variables/).

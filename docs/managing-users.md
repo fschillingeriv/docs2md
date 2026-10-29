@@ -178,15 +178,22 @@ Members can have one of the following statuses relative to your organization:
 
 | Status | Description |
 |------|------|
-| Staged | User was provisioned with the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) option **Off** (default) using SCIM or using Directory Connector. These users will not be issued an invitation [until you actively do so](https://bitwarden.com/help/managing-users/#invite-staged-members/), will not occupy a license seat, and will not be subject to organization policies. Users in this status can only be revoked or removed until they're invited. Staged users must be [invited using a link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/). |
-| Invited | Users was invited to join the organization, either by email or invite link, and has the opportunity to accept the invitation to join. |
+| Staged | User was provisioned with the [**Automatically send email invitations**](https://bitwarden.com/help/about-scim/#invite-users-after-provisioning/) option **Off** (default) using SCIM or Directory Connector. These users **are not automatically issued an invitation**, do not occupy a license seat, and are not subject to organization policies. Until you [invite a staged user](https://bitwarden.com/help/managing-users/#invite-staged-members/), they can only be revoked or removed. |
+| Invited | User was invited to join the organization, either by email or invite link, and has the opportunity to accept the invitation to join. |
 | Accepted | User has accepted the invitation to join the organization and is awaiting confirmation by an administrator. |
 | Confirmed | User has been confirmed by an administrator and has access to the data their account has been provisioning with access to (i.e. through assignment to collections). |
-| Revoked | User has has their access to organization data [suspended by an administrator](https://bitwarden.com/help/revoke-users/). These users will not occupy a license seat, and will not be subject to organization policies. |
+| Revoked | User has has their access to organization data [suspended by an administrator](https://bitwarden.com/help/revoke-users/). These users do not occupy a license seat, and are not be subject to organization policies. |
 
 ### Invite staged members
 
-To move a staged member into the invite flow so they receive an invitation email, use the [invite them by link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) from the Admin Console. Once they interact with the invitation link and complete the flow, they'll move into the `Accepted` status.
+There are three ways to invite a `staged` user to join your organization:
+
+- Go to **Members** and select⋮ **Menu icon**→ [envelope] **Send invite** next the staged user. This will send them an [email invite](https://bitwarden.com/help/managing-users/#tab-email-invite-1FpWqHUBGbhM3aGLCHtK6P/), which updates their status to `Invited`. After they [accept the invite](https://bitwarden.com/help/managing-users/#accept/), their account status will be `Accepted`.
+- Use the [invite by link](https://bitwarden.com/help/managing-users/#tab-invite-by-link-1FpWqHUBGbhM3aGLCHtK6P/) option from the Admin Console. Once they complete the invitation flow, their account moves into the `Accepted` status.
+- If your organization uses SSO, what happens when a staged user first logs in with SSO depends on whether they already have a Bitwarden account:
+
+ - **They don't have a Bitwarden account**: The user is prompted to create one. Once created, their status updates to `Accepted`.
+ - **They already have a Bitwarden account**: The user sees a message stating that an [invite was sent to their email](https://bitwarden.com/help/managing-users/#tab-email-invite-1FpWqHUBGbhM3aGLCHtK6P/), which updates their status to `Invited`. After they use the emailed link to join your organization, their status becomes `Accepted`.
 
 ### Review 2FA and account recovery status
 

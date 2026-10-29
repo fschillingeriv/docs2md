@@ -15,7 +15,7 @@ Fill assist can be turned on for Bitwarden browser extensions from the **Setting
 > [!NOTE] Fill assist, keep reading for more details.
 > No further action is required! Once turned on, you should observe better autofill performance on sites included in the curated list. The rest of the article covers more detail about how fill assist works.
 
-If an organization you're a member of has turned on the [Activate fill assist policy](https://bitwarden.com/help/policies/#activate-fill-assist/), your fill assist setting may already reflect a default choice set by your organization. This is a default for members who haven't chosen a setting themselves. Once you turn fill assist on or off yourself, your choice takes over.
+If an organization you're a member of has turned on the [Activate fill assist policy](https://bitwarden.com/help/policies/#enable-fill-assist/), your fill assist setting may already reflect a default choice set by your organization. This is a default for members who haven't chosen a setting themselves. Once you turn fill assist on or off yourself, your choice takes over.
 
 Because fill assist is one method for facilitating easier autofill, [custom fields](https://bitwarden.com/help/custom-fields/) are superseded by sites that are fill assisted.
 

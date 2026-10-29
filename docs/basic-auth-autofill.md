@@ -5,7 +5,7 @@ URL: https://bitwarden.com/help/basic-auth-autofill/
 # Autofill Basic Auth Prompts
 
 > [!WARNING] Temporary disabling of this feature
-> This feature is currently disabled in Bitwarden browser extensions as part of remediation for a vulnerability.
+> To use this feature, turn on the **Autofill browser login prompts** option from the browser extension's **Settings** > **Autofill** menu. This option is off by default because malicious websites can trigger these prompts without your knowledge, which may expose your credentials.
 
 Login prompts like the one pictured below, called "basic" or "native" authentication prompts, will be automatically autofilled by Bitwarden browser extensions **if there is only one login item with a** [**matching URI**](https://bitwarden.com/help/uri-match-detection/). You can also use the browser extension's ✗ **Launch** button to automatically open and log in to a basic auth-protected resource.
 

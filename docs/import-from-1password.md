@@ -4,12 +4,40 @@ URL: https://bitwarden.com/help/import-from-1password/
 
 # Import from 1Password
 
-Use this article for help exporting data from 1Password and importing into Bitwarden. 1Password data exports are available as `.1pux` (requires 1Password v8.5+), `.1pif,` and `.csv` files depending on which client version and operating system you are using. Learn [what data 1Password exports include](https://support.1password.com/export/?mac#get-help).
+Quickly transfer data from 1Password to Bitwarden using one of two methods:
+
+- Using a Bitwarden browser extension or desktop app, [import data directly](https://bitwarden.com/help/import-from-1password/#import-directly-from-1password/) without needing to download a file.
+- Using any Bitwarden app, [download an export](https://bitwarden.com/help/import-from-1password/#use-an-exported-file-for-import-to-bitwarden/) from your 1Password account and import it into Bitwarden.
+
+## Import directly from 1Password
+
+To import 1Password data directly to Bitwarden, without needing to download an export file and transfer data manually:
+
+1. In the Bitwarden desktop app or browser extension, open the **Import** page:
+
+ - On desktop apps, select **Import** from the navigation menu.
+ - On browser extensions, navigate to **Settings** → **Vault options** → **Import.**
+2. Choose the **Vault** you want to import to and, optionally, a **Folder** or **Collection** to add imported data to.
+3. From the **File format** dropdown, select **1Password**.
+4. From the **Method** dropdown, select **Direct importer**:
+
+![Import directly from 1Password](https://bitwarden.com/assets/zvriHqMitr9zcIwTKmUYV/68cb7eefc9692e8d1b436ae6b75a31df/2026-10-20_10-16-35.png)
+*Import directly from 1Password*
+5. Enter your:
+
+ - **1Password email**: Enter the email you use to sign in to 1Password.
+ - **Sign-in address**: Enter the subdomain you use to sign in to 1Password. For many personal users, for example, this will be the `my` in `my.1password.com`.
+ - **Domain**: Select domain you use to sign in to 1Password, for example `1password.com` or `1password.eu`.
+6. Select **Import** and, when prompted, complete your required authentication steps for 1Password. Currently, only authentication with your 1Password account password is supported.
+
+## Use an exported file for import to Bitwarden
+
+1Password data exports are available as `.1pux` (requires 1Password v8.5+), `.1pif,` and `.csv` files depending on which client version and operating system you are using. Learn [what data 1Password exports include](https://support.1password.com/export/?mac#get-help).
 
 > [!TIP] 1Password, skip to CXP
 > If your mobile device is on iOS 26+ or Android 10+ and both the Bitwarden and 1Password apps are installed, skip creating an export. Instead, directly [import your data on mobile](https://bitwarden.com/help/import-from-1password/#import-to-bitwarden/) using the FIDO Credential Exchange Protocol (CXP) for the quickest path.
 
-## Export from 1Password
+### Export from 1Password
 
 Complete the following steps to export data from the 1Password desktop app:
 
@@ -27,7 +55,7 @@ Complete the following steps to export data from the 1Password desktop app:
 > When exporting a `**.csv**` from macOS, you must also select **All Fields** and check **Include Column Labels**.
 4. In the export window, specify a location and file format.
 
-## Import to Bitwarden
+### Import to Bitwarden
 
 Data can be imported to Bitwarden from the web app, browser extension, desktop app, and CLI. Data is [encrypted](https://bitwarden.com/help/what-encryption-is-used/) locally before being sent to the server for storage.
 
