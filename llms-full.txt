@@ -4617,7 +4617,7 @@ To set up biometrics in the desktop app:
 
 ### Windows
 
-Set up unlock with biometrics for Windows via [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello) using PIN, facial recognition, or other hardware that meets [Windows Hello biometric requirements](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-biometric-requirements). This option is supported in the Windows desktop app when it’s installed from [Bitwarden Downloads](https://bitwarden.com/download/#downloads-desktop-applications/). If the desktop app was installed from the Microsoft Store, biometrics will not work.
+Set up unlock with biometrics for Windows via [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello) using PIN, facial recognition, or other hardware that meets [Windows Hello biometric requirements](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-biometric-requirements).
 
 To turn on biometric unlock:
 
@@ -41025,7 +41025,9 @@ Select **Sign in** to use your passkey.
 
 ### Windows
 
-You can save and use passkeys from the Bitwarden desktop app.
+You can save and use passkeys from the Bitwarden desktop app. On Windows, this must be an `appx` or Microsoft Store distribution.
+
+If you're using the desktop app to save and use passkeys, we recommend you turn passkey functions off in the Bitwarden browser extension to prevent collision.
 
 ## Allow passkeys with the desktop app
 
@@ -41055,6 +41057,8 @@ Start the passkey login on the website. From the window that appears, select you
 ### macOS
 
 You can save and use passkeys from the Bitwarden desktop app in macOS.
+
+If you're using the desktop app to save and use passkeys, we recommend you turn passkey functions off in the Bitwarden browser extension to prevent collision.
 
 ## Allow passkeys with the desktop app
 

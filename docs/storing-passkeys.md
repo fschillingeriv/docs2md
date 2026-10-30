@@ -172,7 +172,9 @@ Select **Sign in** to use your passkey.
 
 ### Windows
 
-You can save and use passkeys from the Bitwarden desktop app.
+You can save and use passkeys from the Bitwarden desktop app. On Windows, this must be an `appx` or Microsoft Store distribution.
+
+If you're using the desktop app to save and use passkeys, we recommend you turn passkey functions off in the Bitwarden browser extension to prevent collision.
 
 ## Allow passkeys with the desktop app
 
@@ -202,6 +204,8 @@ Start the passkey login on the website. From the window that appears, select you
 ### macOS
 
 You can save and use passkeys from the Bitwarden desktop app in macOS.
+
+If you're using the desktop app to save and use passkeys, we recommend you turn passkey functions off in the Bitwarden browser extension to prevent collision.
 
 ## Allow passkeys with the desktop app
 

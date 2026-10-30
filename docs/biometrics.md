@@ -17,7 +17,7 @@ To set up biometrics in the desktop app:
 
 ### Windows
 
-Set up unlock with biometrics for Windows via [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello) using PIN, facial recognition, or other hardware that meets [Windows Hello biometric requirements](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-biometric-requirements). This option is supported in the Windows desktop app when it’s installed from [Bitwarden Downloads](https://bitwarden.com/download/#downloads-desktop-applications/). If the desktop app was installed from the Microsoft Store, biometrics will not work.
+Set up unlock with biometrics for Windows via [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello) using PIN, facial recognition, or other hardware that meets [Windows Hello biometric requirements](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-biometric-requirements).
 
 To turn on biometric unlock:
 
