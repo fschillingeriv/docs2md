@@ -6933,11 +6933,11 @@ Run vault health reports in the Bitwarden browser extension to find and fix any 
 - [Reused passwords](https://bitwarden.com/help/reports/#reused-passwords-report/) are saved in your vault for two or more different login items.
 
 > [!TIP] Access Intelligence instead of health scan
-> If you’re a member of a Teams or Enterprise organization, this option will not appear. Instead, learn how [Access Intelligence](https://bitwarden.com/help/access-intelligence/) can help identify at-risk credentials across your organization and notify members to update their passwords.
+> If you’re a member of a Teams or Enterprise organization, this option will not appear. Instead, if you're on an Enterprise plan, learn how [Access Intelligence](https://bitwarden.com/help/access-intelligence/) can help identify at-risk credentials across your organization and notify members to update their passwords.
 
 # Scan vault for password health
 
-Accounts with a Free, Premium, and Families subscription can view how many exposed, weak, and reused passwords are in their vault.
+Accounts with a Free, Premium, and Families subscription can view how many exposed, weak, and reused passwords are in their vault. Only items owned by the account doing this scan are reported on. In other words, items shared through collections will not be included in this scan.
 
 > [!TIP] Password scan, additional vault health reports
 > Use the Bitwarden web app to run additional [vault health reports](https://bitwarden.com/help/reports/).
