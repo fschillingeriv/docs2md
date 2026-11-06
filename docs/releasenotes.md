@@ -51,7 +51,6 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 - ⭐ **Passkeys with desktop**: You can now [save and use passkeys](https://bitwarden.com/help/storing-passkeys/#save-and-autofill-passkeys-with-bitwarden/) with the Bitwarden desktop app on Windows and macOS.
 - **1Password direct importer**: Transfer your data from 1Password without needing to download an export file with the new [direct import option](https://bitwarden.com/help/import-from-1password/#import-directly-from-1password/).
-- **Basic auth prompt update**: Support for basic auth prompts is back and can be reactivated using an [opt-in setting in browser extensions](https://bitwarden.com/help/basic-auth-autofill/).
 
 #### Admin Console
 
