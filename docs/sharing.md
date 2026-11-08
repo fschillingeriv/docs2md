@@ -108,8 +108,8 @@ To share an existing item from the browser extension:
 
 1. In the **Vault**view, use the ⋮ options menu for the item you want to share and select **Assign to collections**:
 
-![Browser extension assign to collections](https://bitwarden.com/assets/7t3FoxPnpWGQAEzH1ERVDi/6c5622df8525848c0b4eb9bba330b70f/2024-12-02_15-32-47.png)
-*Browser extension assign to collections*
+![Browser extension assign to Shared folder](https://bitwarden.com/assets/7t3FoxPnpWGQAEzH1ERVDi/2da511078fe639476ea39a3a25bac490/Browser_extension_assign_to_collections.png)
+*Browser extension assign to Shared folder*
 2. On the **Assign to collections** pop-up:
 
  - Use the **Move to organization** dropdown to choose the organization you want this item to be owned by.
