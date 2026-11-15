@@ -11935,7 +11935,7 @@ Bitwarden offers free accounts with no limits to the number of devices or number
 
 ### Your master password
 
-During sign-up, you'll create a master password for logging in to Bitwarden. It's important that your master password is:
+During sign up, you'll create a master password for logging in to Bitwarden. It's important that your master password is:
 
 - **Memorable**: Bitwarden employees and systems have **no** knowledge of, way to retrieve, or way to reset your master password. **Do not forget your master password!**
 - **Strong**: A longer, more complex, and less common password is the best way to protect your account. Bitwarden provides a free [password strength testing tool](https://bitwarden.com/password-strength/) to test the strength of some memorable passwords you are considering.
@@ -11946,7 +11946,7 @@ During sign-up, you'll create a master password for logging in to Bitwarden. It'
 
 Using two-step login, also called 2-factor authentication or 2FA, is the most important thing you can do to protect your data other than using a strong master password.
 
-It's so important that we offer a few options for free, including [Bitwarden Authenticator](https://bitwarden.com/help/bitwarden-authenticator/), a standalone mobile authenticator.
+Bitwarden offers a few options for free, including [Bitwarden Authenticator](https://bitwarden.com/help/bitwarden-authenticator/), a standalone mobile authenticator.
 
 ### Recovery Code
 
@@ -11962,7 +11962,7 @@ The Bitwarden Password Manager web app will list all your vault items, including
 
 ![Password Manager web app](https://bitwarden.com/assets/2xTpSA11EOCzx8VIuVffcF/d3bc18e7fc3c3cb0bf1779fad9262cd3/2024-12-02_13-42-14.png)
 
-From the web app, you can fill your vault with information to keep secure, organize your credentials for easy access, and more. Items that you add in any Bitwarden app will sync to other Bitwarden apps you log in to so you can log into accounts from anywhere.
+From the web app, you can fill your vault with information you want to keep secure, organize your credentials for easy access, and more. Your vault syncs across every Bitwarden app you log in to, so items you add on one device are available on all of them. 
 
 ### Take Bitwarden on-the-go (1 min)
 
