@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/auto-fill-android/
 
 # Autofill from Android App
 
-Bitwarden makes your passwords available for autofill so that you can seamlessly log in to websites and apps while also maintaining strong and secure passwords. Autofill cuts the copying and pasting out of your login routine by detecting vault items that match the service you are logging in to.
+Bitwarden autofills your logins in Android apps and websites, so you can sign in quickly while keeping strong, unique passwords. When you tap a field, Bitwarden suggests vault items that match the app or site you’re using. You can also [autofill cards and identities](https://bitwarden.com/help/auto-fill-card-id/) to speed up checkouts and forms.
 
 Custom fields and split login workflows (when username and password fields are displayed on separate screens) are not currently supported in mobile autofill.
 

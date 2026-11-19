@@ -24,7 +24,7 @@ To set up a PIN for your browser extension:
 
 1. Open the **Settings** tab, choose the **Account security** menu, and toggle on the **Unlock with PIN** option:
 
-![Toggle unlock with PIN](https://bitwarden.com/assets/6EAFlGeRk9LfFh1GWgowor/0ea284d711e099cf04402ca06869d12a/2025-08-13_10-48-58.png)
+![Toggle unlock with PIN](https://bitwarden.com/assets/6EAFlGeRk9LfFh1GWgowor/d7b52d4fbc28f99171e612ffc8cad7a3/2026-11-12_15-41-42.png)
 2. When prompted, enter the PIN you want to use in the **Set PIN** popup. Your PIN can be any combination of characters (a-z, 0-9, $, #, etc.).
 
 > [!TIP] Choosing a safe PIN
@@ -93,3 +93,7 @@ You can change your PIN at any time toggling the **Unlock with PIN** option off 
 ### PINs after a logout
 
 When you log out of your account on any of the above Password Manager apps, your configured PIN and associated settings will be automatically wiped. You can re-activate PIN unlock after logging back in.
+
+### PINs with synchronized unlock
+
+If you use [synchronized unlock](https://bitwarden.com/help/synchronized-unlock/), each app will retain its own PIN, set up separately in each app. Unlocking any connected app with its PIN will unlock all of them.

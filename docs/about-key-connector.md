@@ -13,7 +13,7 @@ Key Connector runs as a docker container on the same network as existing service
 
 Key Connector requires connection to a **database where encrypted user keys are stored** and an **RSA Key Pair to encrypt and decrypt stored user keys**. Key Connector can be [configured](https://bitwarden.com/help/deploy-key-connector/) with a variety of database providers (for example, MSSQL, PostgreSQL, MySQL) and key pair storage providers (for example, Hashicorp Vault, Cloud KMS Providers, On-prem HSM devices) in order to fit your business's infrastructure requirements.
 
-![Key Connector Architecture](https://bitwarden.com/assets/59mLNik59Pb25ZhJ7vNRa9/6ce753e0215ef199ec0cdef6fc880fe8/keyconnector-diagram-2.png)
+![Key Connector Architecture](https://bitwarden.com/assets/59mLNik59Pb25ZhJ7vNRa9/c67df45b6efa98714ca7a7fd559de578/keyconnector-diagram-2.png)
 
 ## Why use Key Connector?
 

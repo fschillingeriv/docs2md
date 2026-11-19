@@ -108,7 +108,6 @@ Key Connector must access a database which stores encrypted user keys for your o
 | Microsoft SQL Server | `keyConnectorSettings__database__provider=sqlserver` `keyConnectorSettings__database__sqlServerConnectionString={Connection_String}` [Learn how to format MSSQL connection strings](https://docs.microsoft.com/en-us/sql/connect/ado-net/connection-string-syntax?view=sql-server-ver15) |
 | PostgreSQL | `keyConnectorSettings__database__provider=postgresql` `keyConnectorSettings__database__postgreSqlConnectionString={Connection_String}` [Learn how to format PostgreSQL connection strings](https://www.npgsql.org/doc/connection-string-parameters.html) |
 | MySQL/MariaDB | `keyConnectorSettings__database__provider=mysql` `keyConnectorSettings__database__mySqlConnectionString={Connection_String}` [Learn how to format MySQL connection strings](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) |
-| MongoDB | `keyConnectorSettings__database__provider=mongo` `keyConnectorSettings__database__mongoConnectionString={Connection_String}` `keyConnectorSettings__database__mongoDatabaseName={DatabaseName}` [Learn how to format MongoDB connection strings](https://docs.mongodb.com/manual/reference/connection-string/) |
 
 #### RSA key pair
 

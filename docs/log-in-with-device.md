@@ -52,15 +52,15 @@ To approve a request with the browser extension:
 
 1. In the browser extension, wait for a device approval request to be received or navigate to **Settings**→ **Account** **security**→ **Devices**:
 
-![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1460f0ec04c63ab55da1f5eaf37ca469/2025-09-09_09-49-23.png)
+![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1cfa2ecd7f8c34c67f22c6ad10cc0734/2026-10-23_12-13-00.png)
 *Devices view on browser extensions*
 2. In the **Devices**view, locate and select the pending device request:
 
-![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/9de965d59fedca2bad4e325f4181f69a/2025-09-09_09-49-42.png)
+![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/b7c7d4815878cdd4a187e8304aba3027/2026-10-23_12-13-51.png)
 *Devices list on browser extensions*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/0a891ec5fa8f6052e5804841e7ec7724/2025-09-09_09-48-55.png)
+![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/b8980ce5ef3fb7d654e70f0e514ae507/2026-10-26_10-38-36.png)
 *Approve a device on browser extensions*
 
 ### Web app
@@ -72,15 +72,15 @@ To approve a request with the web app:
 
 1. In the web app, select the **Review login request**link in the banner notification or navigate to **Settings** → **Security**→ **Devices**:
 
-![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/cc88b5f47f0f243f5a655e77086871c9/2025-12-31_11-10-23.png)
+![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/1bb77123e5e6fa47d6a8e49ca805cec6/2026-10-26_10-49-31.png)
 *Approval request on web*
 2. On the **Devices** tab, locate and select the pending device request:
 
-![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/ed5dbce83b2c428b9c2369270be1d959/2025-12-31_11-08-26.png)
+![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/d54f387057734a2a2d4cc4500293ead6/2026-10-26_10-54-46.png)
 *Device list on web app*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/f6a13a34fdc59f815f7e4d51e981af47/2025-12-31_11-08-37.png)
+![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/899f2349b7e75983db4a1826b33a8f00/2026-10-26_10-54-55.png)
 *Confirm access with web app*
 
 ### Desktop app

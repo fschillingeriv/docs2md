@@ -110,16 +110,18 @@ To turn on biometrics for the desktop app:
 > 1. Using the web browser address bar, navigate to the extensions manager (e.g. `chrome://extensions or brave://extensions`).
 > 2. Open the Bitwarden entry on this page and toggle on **Allow access to file URLs**.
 
-Next, remain logged in to the Bitwarden desktop app and open the Bitwarden browser extension. To turn on unlock with biometrics for the browser extension:
+Unlock with biometrics on the browser extension is done through [synchronized unlock](https://bitwarden.com/help/synchronized-unlock/). Once synchronized unlock is enabled, you can use biometrics to unlock the browser extension whenever biometrics is turned on in the desktop app. To enable Sync unlock:
 
-1. Select the ⚙️ **Settings** icon.
-2. Select **Account security**.
-3. Check **Unlock with biometrics**.
-4. You may see a prompt asking permission for Bitwarden to “communicate with cooperating native applications.” Select **Allow**.
+1. Make sure the Bitwarden desktop app is open and you are logged in.
+2. In the browser extension, select the ⚙️ **Settings** icon.
+3. Select **Account security** and turn on **Synchronize unlock with desktop**.
+4. You may see a prompt asking permission for Bitwarden to communicate with cooperating native applications. Select **Allow**.
 
-> [!NOTE] Communicate with cooperating native applications
-> This permission is required for the browser extension to unlock with biometrics. If you decline, you can continue using the browser extension, but unlock with biometrics will not work.
-5. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
+> [!TIP] Biometric permission on Chrome & Chromium
+> Some browsers, notably Chrome & Chromium-based browsers like Brave or Edge, may require you to activate an additional permission for the integration to work properly:
+> 
+> 1. Using the web browser address bar, navigate to the extensions manager (e.g. `chrome://extensions` or `brave://extensions`).
+> 2. Open the Bitwarden entry on this page and toggle the **Allow access to file URLs** option.
 
 ### Safari
 
@@ -131,13 +133,6 @@ To turn on biometric unlock:
 4. Check **Unlock with biometrics**.
 5. When prompted, enter your Touch ID.
 6. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
-
-> [!TIP] Require verification for browser integration
-> To ask for fingerprint verification every time the integration between the desktop app and browser extension is activated:
-> 
-> 1. Open the desktop app and go to **Bitwarden** → **Settings**.
-> 2. Check **Require verification for browser integration**.
-> 3. When turning on biometrics unlock in the browser extension, you’ll be asked to enter your fingerprint during setup.
 
 ## Set up biometrics for mobile
 

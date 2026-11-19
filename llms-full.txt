@@ -104,7 +104,7 @@ Key Connector runs as a docker container on the same network as existing service
 
 Key Connector requires connection to a **database where encrypted user keys are stored** and an **RSA Key Pair to encrypt and decrypt stored user keys**. Key Connector can be [configured](https://bitwarden.com/help/deploy-key-connector/) with a variety of database providers (for example, MSSQL, PostgreSQL, MySQL) and key pair storage providers (for example, Hashicorp Vault, Cloud KMS Providers, On-prem HSM devices) in order to fit your business's infrastructure requirements.
 
-![Key Connector Architecture](https://bitwarden.com/assets/59mLNik59Pb25ZhJ7vNRa9/6ce753e0215ef199ec0cdef6fc880fe8/keyconnector-diagram-2.png)
+![Key Connector Architecture](https://bitwarden.com/assets/59mLNik59Pb25ZhJ7vNRa9/c67df45b6efa98714ca7a7fd559de578/keyconnector-diagram-2.png)
 
 ## Why use Key Connector?
 
@@ -1253,15 +1253,15 @@ To approve a request with the browser extension:
 
 1. In the browser extension, wait for a device approval request to be received or navigate to **Settings**→ **Account** **security**→ **Devices**:
 
-![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1460f0ec04c63ab55da1f5eaf37ca469/2025-09-09_09-49-23.png)
+![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1cfa2ecd7f8c34c67f22c6ad10cc0734/2026-10-23_12-13-00.png)
 *Devices view on browser extensions*
 2. In the **Devices**view, locate and select the pending device request:
 
-![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/9de965d59fedca2bad4e325f4181f69a/2025-09-09_09-49-42.png)
+![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/b7c7d4815878cdd4a187e8304aba3027/2026-10-23_12-13-51.png)
 *Devices list on browser extensions*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/0a891ec5fa8f6052e5804841e7ec7724/2025-09-09_09-48-55.png)
+![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/b8980ce5ef3fb7d654e70f0e514ae507/2026-10-26_10-38-36.png)
 *Approve a device on browser extensions*
 
 ### Web app
@@ -1273,15 +1273,15 @@ To approve a request with the web app:
 
 1. In the web app, select the **Review login request**link in the banner notification or navigate to **Settings** → **Security**→ **Devices**:
 
-![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/cc88b5f47f0f243f5a655e77086871c9/2025-12-31_11-10-23.png)
+![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/1bb77123e5e6fa47d6a8e49ca805cec6/2026-10-26_10-49-31.png)
 *Approval request on web*
 2. On the **Devices** tab, locate and select the pending device request:
 
-![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/ed5dbce83b2c428b9c2369270be1d959/2025-12-31_11-08-26.png)
+![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/d54f387057734a2a2d4cc4500293ead6/2026-10-26_10-54-46.png)
 *Device list on web app*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/f6a13a34fdc59f815f7e4d51e981af47/2025-12-31_11-08-37.png)
+![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/899f2349b7e75983db4a1826b33a8f00/2026-10-26_10-54-55.png)
 *Confirm access with web app*
 
 ### Desktop app
@@ -3132,7 +3132,7 @@ URL: https://bitwarden.com/help/auto-fill-android/
 ---
 # Autofill from Android App
 
-Bitwarden makes your passwords available for autofill so that you can seamlessly log in to websites and apps while also maintaining strong and secure passwords. Autofill cuts the copying and pasting out of your login routine by detecting vault items that match the service you are logging in to.
+Bitwarden autofills your logins in Android apps and websites, so you can sign in quickly while keeping strong, unique passwords. When you tap a field, Bitwarden suggests vault items that match the app or site you’re using. You can also [autofill cards and identities](https://bitwarden.com/help/auto-fill-card-id/) to speed up checkouts and forms.
 
 Custom fields and split login workflows (when username and password fields are displayed on separate screens) are not currently supported in mobile autofill.
 
@@ -3491,32 +3491,32 @@ URL: https://bitwarden.com/help/auto-fill-card-id/
 ---
 # Autofill Cards & Identities
 
-Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). Some Bitwarden apps can autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more. For organization members, a policy may [prevent the use of card items](https://bitwarden.com/help/policies/#remove-card-item-type/) and, in turn, not offer the ability to autofill them.
-
-> [!NOTE] Support for auto-fill cards and identities.
-> Autofill of cards is currently available for browser extensions and Android. Autofill of identities is currently only available for browser extensions.
+Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). The Bitwarden browser extension and Android apps can also autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more.
 
 ## Set up card & identity autofill
 
-> [!TIP] Android autofill card setup
-> On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
+For Android, confirm that the [standard autofill setup](https://bitwarden.com/help/auto-fill-android/) is complete. Autofilling cards and identities does not require any additional steps.
 
-You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
+For the browser extension, there are a few customizable options for autofilling cards and identities. To add cards and identities to your listed autofill suggestions, go to **Settings** → **Autofill** and select:
 
-- **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
-- **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
+- **Always show cards as Autofill suggestions on Vault view** to include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
+- **Always show identities as Autofill suggestions on Vault view** to include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
 
 > [!NOTE] Jumping from favorites to autofill suggestions
 > Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
 
-You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
+To include cards and identities in the browser extension's [autofill inline menu](https://bitwarden.com/help/auto-fill-browser/#inline-menu/):
 
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+1. Go to **Settings** → **Autofill**.
+2. Check **Show autofill suggestions on form fields**.
+3. Check which setting(s) to activate:
+
+ - **Display identities as suggestions**
+ - **Display cards as suggestions**
 
 ## Use card & identity autofill
 
-There are a few different methods you can use to autofill cards or identities:
+[Embedded content]There are a few different methods you can use to autofill cards or identities:
 
 ### Browser extensions
 
@@ -3538,10 +3538,7 @@ To autofill a card or identity from the extension's vault, turn on the **Show ca
 
 Once on, your cards and identities will be available in the **Autofill suggestions**section of the **Vault**view. Click anywhere on the card or identity to autofill:
 
-![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
-*Click item to autofill*
-
-The browser extension will find any fields on the web page that map to card or identity information and autofill them.
+[Embedded content]The browser extension will find any fields on the web page that map to card or identity information and autofill them.
 
 ### Using the context menu
 
@@ -3563,7 +3560,7 @@ Cards and Identities can be autofilled using keyboard shortcuts. To use this fea
 
 ### Android apps
 
-On Android, cards will automatically appear as suggestions inline (in your keyboard) or as a popup over the field depending on [which autofill method is active](https://bitwarden.com/help/auto-fill-android/#list-of-autofill-methods/). This is currently available for Chrome and Chromium browsers. For example, as a popup:
+On Android, cards and identities will automatically appear as suggestions inline (in your keyboard) or as a popup over the field depending on [which autofill method is active](https://bitwarden.com/help/auto-fill-android/#list-of-autofill-methods/). This is currently available for Chrome and Chromium browsers. For example, as a popup:
 
 ![Android card popup](https://bitwarden.com/assets/2ekny75ulY7xoyqz80Kz1z/f3954ac976db5283aa064efc6a78cc5e/2025-08-12_10-32-44.png)
 ---
@@ -4710,16 +4707,18 @@ To turn on biometrics for the desktop app:
 > 1. Using the web browser address bar, navigate to the extensions manager (e.g. `chrome://extensions or brave://extensions`).
 > 2. Open the Bitwarden entry on this page and toggle on **Allow access to file URLs**.
 
-Next, remain logged in to the Bitwarden desktop app and open the Bitwarden browser extension. To turn on unlock with biometrics for the browser extension:
+Unlock with biometrics on the browser extension is done through [synchronized unlock](https://bitwarden.com/help/synchronized-unlock/). Once synchronized unlock is enabled, you can use biometrics to unlock the browser extension whenever biometrics is turned on in the desktop app. To enable Sync unlock:
 
-1. Select the ⚙️ **Settings** icon.
-2. Select **Account security**.
-3. Check **Unlock with biometrics**.
-4. You may see a prompt asking permission for Bitwarden to “communicate with cooperating native applications.” Select **Allow**.
+1. Make sure the Bitwarden desktop app is open and you are logged in.
+2. In the browser extension, select the ⚙️ **Settings** icon.
+3. Select **Account security** and turn on **Synchronize unlock with desktop**.
+4. You may see a prompt asking permission for Bitwarden to communicate with cooperating native applications. Select **Allow**.
 
-> [!NOTE] Communicate with cooperating native applications
-> This permission is required for the browser extension to unlock with biometrics. If you decline, you can continue using the browser extension, but unlock with biometrics will not work.
-5. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
+> [!TIP] Biometric permission on Chrome & Chromium
+> Some browsers, notably Chrome & Chromium-based browsers like Brave or Edge, may require you to activate an additional permission for the integration to work properly:
+> 
+> 1. Using the web browser address bar, navigate to the extensions manager (e.g. `chrome://extensions` or `brave://extensions`).
+> 2. Open the Bitwarden entry on this page and toggle the **Allow access to file URLs** option.
 
 ### Safari
 
@@ -4731,13 +4730,6 @@ To turn on biometric unlock:
 4. Check **Unlock with biometrics**.
 5. When prompted, enter your Touch ID.
 6. (Optional) Check **Ask for biometrics on launch** to use biometrics when the browser extension first opens, skipping the initial unlock screen.
-
-> [!TIP] Require verification for browser integration
-> To ask for fingerprint verification every time the integration between the desktop app and browser extension is activated:
-> 
-> 1. Open the desktop app and go to **Bitwarden** → **Settings**.
-> 2. Check **Require verification for browser integration**.
-> 3. When turning on biometrics unlock in the browser extension, you’ll be asked to enter your fingerprint during setup.
 
 ## Set up biometrics for mobile
 
@@ -14550,7 +14542,6 @@ Key Connector must access a database which stores encrypted user keys for your o
 | Microsoft SQL Server | `keyConnectorSettings__database__provider=sqlserver` `keyConnectorSettings__database__sqlServerConnectionString={Connection_String}` [Learn how to format MSSQL connection strings](https://docs.microsoft.com/en-us/sql/connect/ado-net/connection-string-syntax?view=sql-server-ver15) |
 | PostgreSQL | `keyConnectorSettings__database__provider=postgresql` `keyConnectorSettings__database__postgreSqlConnectionString={Connection_String}` [Learn how to format PostgreSQL connection strings](https://www.npgsql.org/doc/connection-string-parameters.html) |
 | MySQL/MariaDB | `keyConnectorSettings__database__provider=mysql` `keyConnectorSettings__database__mySqlConnectionString={Connection_String}` [Learn how to format MySQL connection strings](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) |
-| MongoDB | `keyConnectorSettings__database__provider=mongo` `keyConnectorSettings__database__mongoConnectionString={Connection_String}` `keyConnectorSettings__database__mongoDatabaseName={DatabaseName}` [Learn how to format MongoDB connection strings](https://docs.mongodb.com/manual/reference/connection-string/) |
 
 #### RSA key pair
 
@@ -16667,7 +16658,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Created attachment for item `item-identifier`. (`1103`)
 - Deleted attachment for item `item-identifier`. (`1104`)
 - Moved item `item-identifier` to an organization. (`1105`)
-- Edited collections for item `item-identifier`. (`1106`)
+- Edited shared folder for item `item-identifier`. (`1106`)
 - Viewed item `item-identifier`. (`1107`)
 - Viewed password for item `item-identifier`. (`1108`)
 - Viewed hidden field for item `item-identifier`. (`1109`)
@@ -16681,11 +16672,11 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Viewed Card Number for item `item-identifier`. (`1117`)
 - Viewed security code for item `item-identifier`. (`1118`)
 
-### Collection events
+### Shared folder events
 
-- Created collection `collection-identifier`. (`1300`)
-- Edited collection `collection-identifier`. (`1301`)
-- Deleted collection `collection-identifier`. (`1302`)
+- Created shared folder `folder-identifier`. (`1300`)
+- Edited shared folder `folder-identifier`. (`1301`)
+- Deleted shared folder `folder-identifier`. (`1302`)
 
 ### Group events
 
@@ -16728,17 +16719,17 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Organization enabled Key Connector. (`1606`)
 - Organization disabled Key Connector. (`1607`)
 - Families Sponsorships synced. (`1608`)
-- Modified collection management setting. (`1609`)
-- Turned on [Restrict collection creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1610`)
-- Turned off [Restrict collection creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1611`)
-- Turned on [Restrict collection deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1612`)
-- Turned off [Restrict collection deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1613`)
+- Modified shared folder management setting. (`1609`)
+- Turned on [Restrict shared folder creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1610`)
+- Turned off [Restrict shared folder creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1611`)
+- Turned on [Restrict shared folder deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1612`)
+- Turned off [Restrict shared folder deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1613`)
 - Turned on [Restrict item deletion](https://bitwarden.com/help/collection-management/#restrict-item-deletion-to-members-with-the-manage-collection-permissions/) setting. (`1614`)
 - Turned off [Restrict item deletion](https://bitwarden.com/help/collection-management/#restrict-item-deletion-to-members-with-the-manage-collection-permissions/) setting. (`1615`)
-- Turned on [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1616`)
-- Turned off [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1617`)
+- Turned on [Allow owners and admins to manage all shared folders and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1616`)
+- Turned off [Allow owners and admins to manage all shared folders and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1617`)
 - Accepted transfer to organization ownership. (`1618`)
-- Revoked for declining transfer to organization ownership. (`1619`)
+- Revoked for declining transfer to organization ownership. (`1619`) This event has been depreicated. Users will now see (`1518`)
 - Turned on Automatic user confirmation setting. (`1620`)
 - Turned off Automatic user confirmation setting. (`1621`)
 - Added Automatic user confirmation policy. (`1622`)
@@ -16788,6 +16779,15 @@ Secrets Manager events are available both from the **Reporting** tab of your org
 - Deleted file Send `send-id` (`2509`)
 - Accessed text Send `send-id` created by `user-id` (`2510`)
 - Accessed file Send `send-id` created by `user-id` (`2511`)
+- Send `send-id` disabled by policy (`2512`)
+- Send `send-id` enabled by policy (`2513`)
+
+> [!NOTE] Manage Send policy event log
+> Organization members can create a [Bitwarden Send](https://bitwarden.com/help/about-send/) unless the [Manage Send and share](https://bitwarden.com/help/policies/#manage-send-and-share/) policy restricts it. When the policy is turned on, any existing Sends that don’t meet its settings is deactivated, and event `2512` is logged for each one. If the policy is later turned off, those Sends are reactivated, and event `2513` is logged for each one.
+- Created item Send `send-id (2514)`
+- Edited item Send `send-id (2515)`
+- Deleted item Send `send-id (2516)`
+- Accessed item Send `send-id` created by `user-id (2517)`
 
 ### Provider events
 
@@ -25254,15 +25254,15 @@ To approve a request with the browser extension:
 
 1. In the browser extension, wait for a device approval request to be received or navigate to **Settings**→ **Account** **security**→ **Devices**:
 
-![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1460f0ec04c63ab55da1f5eaf37ca469/2025-09-09_09-49-23.png)
+![Devices view on browser extensions](https://bitwarden.com/assets/6OZfQt2jDDqa9F0MaUdBUq/1cfa2ecd7f8c34c67f22c6ad10cc0734/2026-10-23_12-13-00.png)
 *Devices view on browser extensions*
 2. In the **Devices**view, locate and select the pending device request:
 
-![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/9de965d59fedca2bad4e325f4181f69a/2025-09-09_09-49-42.png)
+![Devices list on browser extensions](https://bitwarden.com/assets/64f1jZ30In2BbWDEUZVtxO/b7c7d4815878cdd4a187e8304aba3027/2026-10-23_12-13-51.png)
 *Devices list on browser extensions*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/0a891ec5fa8f6052e5804841e7ec7724/2025-09-09_09-48-55.png)
+![Approve a device on browser extensions](https://bitwarden.com/assets/2LFY10MMpI9G0ZcojcXveg/b8980ce5ef3fb7d654e70f0e514ae507/2026-10-26_10-38-36.png)
 *Approve a device on browser extensions*
 
 ### Web app
@@ -25274,15 +25274,15 @@ To approve a request with the web app:
 
 1. In the web app, select the **Review login request**link in the banner notification or navigate to **Settings** → **Security**→ **Devices**:
 
-![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/cc88b5f47f0f243f5a655e77086871c9/2025-12-31_11-10-23.png)
+![Approval request on web](https://bitwarden.com/assets/1K9FeC1OVOwyu0T8DMiwOp/1bb77123e5e6fa47d6a8e49ca805cec6/2026-10-26_10-49-31.png)
 *Approval request on web*
 2. On the **Devices** tab, locate and select the pending device request:
 
-![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/ed5dbce83b2c428b9c2369270be1d959/2025-12-31_11-08-26.png)
+![Device list on web app](https://bitwarden.com/assets/7GLmOwtReFuUD3uxPQ0LB8/d54f387057734a2a2d4cc4500293ead6/2026-10-26_10-54-46.png)
 *Device list on web app*
 3. Verify that fingerprint phrase matches and select **Confirm access**:
 
-![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/f6a13a34fdc59f815f7e4d51e981af47/2025-12-31_11-08-37.png)
+![Confirm access with web app](https://bitwarden.com/assets/6s6Hdn9L1EyeRfBsmOcfgX/899f2349b7e75983db4a1826b33a8f00/2026-10-26_10-54-55.png)
 *Confirm access with web app*
 
 ### Desktop app
@@ -32071,6 +32071,27 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 - [Directory Connector Releases](https://github.com/bitwarden/directory-connector/releases)
 
 ## Release Announcements
+
+## 2026.11.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.11.0, Browser Extension 2026.11.10 Desktop 2026.11.0, Mobile 2026.11.0, and CLI 2026.11.0) 
+
+#### Password Manager
+
+- ⭐ **Synchronize unlock between apps**: Bitwarden web apps, browser extensions, and desktop apps can now [synchronize their lock & unlock state](https://bitwarden.com/help/synchronized-unlock/) when running on the same device.
+- ⭐ **Autofill identifies for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
+
+#### Admin Console
+
+- **New Send events**: Events are now logged when an item send, [item shared via link](https://bitwarden.com/help/sharing/#share-via-link/), is created, edited, deleted, or accessed, and when the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send-and-share/) deactivates or reactivates a member’s Send.
+
+#### Key Connector
+
+- **MongoDB support deprecation**: Starting with version 2026.11.0 of [Key Connector](https://bitwarden.com/help/about-key-connector/), MongoDB will no longer be a supported database option.
+
+#### Security
+
+- ⭐ **Encryption updates for new users**: Starting with version 2026.11.0, new Bitwarden accounts will use updated encryption algorithms for vault data, public-key encryption, and digital signatures. Existing users will be migrated in a future release version. **A new version of the**[**whitepaper**](https://bitwarden.com/help/bitwarden-security-white-paper/)**will be published when this begins rolling out to new users**.
 
 ## 2026.10.1
 
@@ -41263,6 +41284,85 @@ _sourceCategory=source-category-1
 
 To learn more about advanced queries on Sumo Logic, please see the [Sumo Logic Query Language documentation](https://www.sumologic.com/help/docs/search/search-query-language/).
 ---
+URL: https://bitwarden.com/help/synchronized-unlock/
+---
+# Synchronized Unlock
+
+Synchronized unlock connects the lock state of the Bitwarden web app, browser extension, and desktop app on the same device. When you lock or unlock one connected app, the others will lock or unlock too.
+
+> [!NOTE] Sync unlock version requirement
+> Synchronized unlock requires version 2026.11.0 or later of the browser extension, desktop app, and web app.
+
+## Activate synchronized unlock
+
+Synchronized unlock between the browser extension and the web app is **always on**. To also sync with the desktop app:
+
+1. Make sure the Bitwarden desktop app is installed, running, and logged in to the same account as the browser extension.
+2. In the browser extension, select **Settings** → **Account security**.
+3. Turn on **Synchronize unlock with desktop**:
+
+![Activate synchronized unlock](https://bitwarden.com/assets/5uoOeDjt0aLoFxbYUEOin2/09a633499b6e43959e63ee6d15170e1c/2026-11-12_15-41-42.png)
+*Activate synchronized unlock*
+4. If your browser asks for permission for Bitwarden to communicate with cooperating native applications, select **Allow**.
+
+The desktop app must be running for synchronized unlock to work. Open the desktop app's settings and activate the **Start automatically on login** to make this more seamless.
+
+## How it works
+
+### Connecting between apps
+
+Synchronized unlock shares **unlock state**, not login, so you need to log in to each app first. Apps connect in pairs:
+
+- The browser extension and the web app, when open in the same browser.
+- The browser extension and the desktop app.
+
+> [!NOTE] Sync unlock applies to the same computer
+> Synchronized unlock only applies to apps on the same computer. Mobile apps do not share trust or unlock state with apps on your computer.
+
+The web app and desktop app don't connect directly, but stay in sync through the browser extension. Because connections chain together, every connected app on your computer shares one lock state. 
+
+![Sync unlock flow diagram](https://bitwarden.com/assets/2BKjHAbQMYbRSjudxQSJGu/cf30bf16ad4c23837b36441e514d7cec/shared-unlock-diagram.svg)
+*Sync unlock flow diagram*
+
+Sync unlock works between apps logged in to the same account. If you're logged in to multiple accounts, each account syncs separately.
+
+### Supported apps
+
+Synchronized unlock is supported on Windows, macOS, and Linux:
+
+| Browser | Sync with desktop app | Sync with web app |
+|------|------|------|
+| Chrome | Yes | Yes |
+| Edge | Yes | Yes |
+| Safari | No | No |
+
+The following platforms are not currently supported:
+
+- Browsers installed as a Snap on Linux
+- The desktop app, when installed from the Microsoft Store
+- Safari
+- The Bitwarden CLI
+- Mobile apps
+
+### Impact on other settings
+
+#### Biometrics
+
+Synchronized unlock replaces the browser extension's biometric unlock setting. If **Synchronize unlock with desktop** is on and **Unlock with biometrics** is turned on in the desktop app, you can use biometrics to unlock the browser extension too. For more information, see [Unlock with Biometrics](https://bitwarden.com/help/biometrics/).
+
+#### PIN
+
+PINs are not shared between apps, so each app retains its own PIN. Unlocking any app with its PIN unlocks all connected apps.
+
+#### Session timeout
+
+If synchronized unlock is on, one app's session timeout applies to all connected apps, and the timeout setting in the other apps isn't available:
+
+- When the browser extension and web app are connected, the browser extension's timeout applies.
+- When the browser extension and desktop app are connected, the desktop app's timeout applies. This also lets the **On system lock** option apply to the browser extension and web app.
+
+For more information, see [Automatic Logout or Lock](https://bitwarden.com/help/vault-timeout/).
+---
 URL: https://bitwarden.com/help/system-administrator-portal/
 ---
 # System Administrator Portal
@@ -42240,7 +42340,7 @@ To set up a PIN for your browser extension:
 
 1. Open the **Settings** tab, choose the **Account security** menu, and toggle on the **Unlock with PIN** option:
 
-![Toggle unlock with PIN](https://bitwarden.com/assets/6EAFlGeRk9LfFh1GWgowor/0ea284d711e099cf04402ca06869d12a/2025-08-13_10-48-58.png)
+![Toggle unlock with PIN](https://bitwarden.com/assets/6EAFlGeRk9LfFh1GWgowor/d7b52d4fbc28f99171e612ffc8cad7a3/2026-11-12_15-41-42.png)
 2. When prompted, enter the PIN you want to use in the **Set PIN** popup. Your PIN can be any combination of characters (a-z, 0-9, $, #, etc.).
 
 > [!TIP] Choosing a safe PIN
@@ -42309,6 +42409,10 @@ You can change your PIN at any time toggling the **Unlock with PIN** option off 
 ### PINs after a logout
 
 When you log out of your account on any of the above Password Manager apps, your configured PIN and associated settings will be automatically wiped. You can re-activate PIN unlock after logging back in.
+
+### PINs with synchronized unlock
+
+If you use [synchronized unlock](https://bitwarden.com/help/synchronized-unlock/), each app will retain its own PIN, set up separately in each app. Unlocking any connected app with its PIN will unlock all of them.
 ---
 URL: https://bitwarden.com/help/update-billing-info/
 ---
@@ -43304,7 +43408,7 @@ Navigate to **Settings**→ **Account security** to choose your session timeout 
 
 Session timeout, also called vault timeout, determines how long Bitwarden can be inactive before timing out. Inactivity is measured by time since interacting with Bitwarden—not system idle time.
 
-Timeout options vary by app. If there are fewer timeout options than expected and you're part of an Enterprise organization, they may have turned on the [session timeout policy](https://bitwarden.com/help/policies/#session-timeout/).
+Timeout options vary by app. If there are fewer timeout options than expected and you're part of an Enterprise plan, they may have turned on the [session timeout policy](https://bitwarden.com/help/policies/#session-timeout/).
 
 ### Web app
 
@@ -43323,6 +43427,8 @@ Select when your Bitwarden session times out:
 > 
 > - By default, your browser extension will require you to login or unlock with your master password based on your selected vault timeout action.
 > - To instead unlock with a PIN after closing your browser window, uncheck **Lock with master password on browser restart**option when [setting up the PIN](https://bitwarden.com/help/unlock-with-pin/).
+
+If [Synchronized unlock](https://bitwarden.com/help/synchronized-unlock/) is enabled, this setting is managed by the browser extension. 
 
 ### Browser extension
 
@@ -43387,6 +43493,13 @@ Select when your Bitwarden session times out:
 > [!WARNING] Never timeout
 > The **Never** timeout option stores your encryption key unencrypted on your device, which may hinder security. To keep your data secure, we strongly recommend choosing a different option.
 - **Custom**: After the amount of time entered in **Hours** and **Minutes**
+
+### Session timeout with synchronized unlock
+
+If [Synchronized unlock](https://bitwarden.com/help/synchronized-unlock/) is on, one app's session timeout applies to all connected apps, and the timeout setting in the other apps isn't available:
+
+- When the browser extension and web app are connected, the browser extension's timeout applies.
+- When the browser extension and desktop app are connected, the desktop app's timeout applies. This also lets the **On system lock** option apply to the browser extension and web app.
 
 ## Session timeout action
 

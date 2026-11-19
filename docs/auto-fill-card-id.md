@@ -4,32 +4,32 @@ URL: https://bitwarden.com/help/auto-fill-card-id/
 
 # Autofill Cards & Identities
 
-Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). Some Bitwarden apps can autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more. For organization members, a policy may [prevent the use of card items](https://bitwarden.com/help/policies/#remove-card-item-type/) and, in turn, not offer the ability to autofill them.
-
-> [!NOTE] Support for auto-fill cards and identities.
-> Autofill of cards is currently available for browser extensions and Android. Autofill of identities is currently only available for browser extensions.
+Bitwarden can do more than just [autofill your usernames and passwords](https://bitwarden.com/help/auto-fill-browser/). The Bitwarden browser extension and Android apps can also autofill [cards](https://bitwarden.com/help/managing-items/#cards/) and [identities](https://bitwarden.com/help/managing-items/#identities/) to simplify online purchases, account creation, and more.
 
 ## Set up card & identity autofill
 
-> [!TIP] Android autofill card setup
-> On Android, autofill of cards does not require any setup beyond the [baseline autofill setup](https://bitwarden.com/help/auto-fill-android/). The following instructions are for browser extensions only.
+For Android, confirm that the [standard autofill setup](https://bitwarden.com/help/auto-fill-android/) is complete. Autofilling cards and identities does not require any additional steps.
 
-You can add cards and identities to your listed autofill suggestions using the following options in **Settings** → **Autofill**:
+For the browser extension, there are a few customizable options for autofilling cards and identities. To add cards and identities to your listed autofill suggestions, go to **Settings** → **Autofill** and select:
 
-- **Always show cards as Autofill suggestions on Vault view**: Include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
-- **Always show identities as Autofill suggestions on Vault view**: Include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
+- **Always show cards as Autofill suggestions on Vault view** to include cards in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the card item to autofill.
+- **Always show identities as Autofill suggestions on Vault view** to include identities in the suggestions located in the Vault view. When located in **Autofill suggestions**, click the identify item to autofill.
 
 > [!NOTE] Jumping from favorites to autofill suggestions
 > Autofill suggestions always supersede [favorites](https://bitwarden.com/help/favorites/). If you have a favorited card or identity, it will jump from **Favorites** to **Autofill suggestions** when you turn these options on.
 
-You can make cards and identities available from the inline autofill menu, provided that the **Show autofill suggestions on form fields** option is on, using the following options in **Settings** → **Autofill**:
+To include cards and identities in the browser extension's [autofill inline menu](https://bitwarden.com/help/auto-fill-browser/#inline-menu/):
 
-- **Display identities as suggestions**: Include identities in the inline autofill menu. This requires the .
-- **Display cards as suggestions**: Include cards in the inline autofill menu. This requires the **Show autofill suggestions on form fields** option to be on.
+1. Go to **Settings** → **Autofill**.
+2. Check **Show autofill suggestions on form fields**.
+3. Check which setting(s) to activate:
+
+ - **Display identities as suggestions**
+ - **Display cards as suggestions**
 
 ## Use card & identity autofill
 
-There are a few different methods you can use to autofill cards or identities:
+[Embedded content]There are a few different methods you can use to autofill cards or identities:
 
 ### Browser extensions
 
@@ -51,10 +51,7 @@ To autofill a card or identity from the extension's vault, turn on the **Show ca
 
 Once on, your cards and identities will be available in the **Autofill suggestions**section of the **Vault**view. Click anywhere on the card or identity to autofill:
 
-![Click item to autofill](https://bitwarden.com/assets/3tnagVMjtTufvRCrih3ctQ/9277f05114868cf0c37c069c565f2f95/Click_item_to_autofill.png)
-*Click item to autofill*
-
-The browser extension will find any fields on the web page that map to card or identity information and autofill them.
+[Embedded content]The browser extension will find any fields on the web page that map to card or identity information and autofill them.
 
 ### Using the context menu
 
@@ -76,6 +73,6 @@ Cards and Identities can be autofilled using keyboard shortcuts. To use this fea
 
 ### Android apps
 
-On Android, cards will automatically appear as suggestions inline (in your keyboard) or as a popup over the field depending on [which autofill method is active](https://bitwarden.com/help/auto-fill-android/#list-of-autofill-methods/). This is currently available for Chrome and Chromium browsers. For example, as a popup:
+On Android, cards and identities will automatically appear as suggestions inline (in your keyboard) or as a popup over the field depending on [which autofill method is active](https://bitwarden.com/help/auto-fill-android/#list-of-autofill-methods/). This is currently available for Chrome and Chromium browsers. For example, as a popup:
 
 ![Android card popup](https://bitwarden.com/assets/2ekny75ulY7xoyqz80Kz1z/f3954ac976db5283aa064efc6a78cc5e/2025-08-12_10-32-44.png)

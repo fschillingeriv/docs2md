@@ -70,7 +70,7 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Created attachment for item `item-identifier`. (`1103`)
 - Deleted attachment for item `item-identifier`. (`1104`)
 - Moved item `item-identifier` to an organization. (`1105`)
-- Edited collections for item `item-identifier`. (`1106`)
+- Edited shared folder for item `item-identifier`. (`1106`)
 - Viewed item `item-identifier`. (`1107`)
 - Viewed password for item `item-identifier`. (`1108`)
 - Viewed hidden field for item `item-identifier`. (`1109`)
@@ -84,11 +84,11 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Viewed Card Number for item `item-identifier`. (`1117`)
 - Viewed security code for item `item-identifier`. (`1118`)
 
-### Collection events
+### Shared folder events
 
-- Created collection `collection-identifier`. (`1300`)
-- Edited collection `collection-identifier`. (`1301`)
-- Deleted collection `collection-identifier`. (`1302`)
+- Created shared folder `folder-identifier`. (`1300`)
+- Edited shared folder `folder-identifier`. (`1301`)
+- Deleted shared folder `folder-identifier`. (`1302`)
 
 ### Group events
 
@@ -131,17 +131,17 @@ Events are associated with a type code (`1000`, `1001`, etc...) that identifies 
 - Organization enabled Key Connector. (`1606`)
 - Organization disabled Key Connector. (`1607`)
 - Families Sponsorships synced. (`1608`)
-- Modified collection management setting. (`1609`)
-- Turned on [Restrict collection creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1610`)
-- Turned off [Restrict collection creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1611`)
-- Turned on [Restrict collection deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1612`)
-- Turned off [Restrict collection deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1613`)
+- Modified shared folder management setting. (`1609`)
+- Turned on [Restrict shared folder creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1610`)
+- Turned off [Restrict shared folder creation](https://bitwarden.com/help/collection-management/#restrict-collection-creation-to-owners-and-admins/) setting. (`1611`)
+- Turned on [Restrict shared folder deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1612`)
+- Turned off [Restrict shared folder deletion](https://bitwarden.com/help/collection-management/#restrict-collection-deletion-to-owners-and-admins/) setting. (`1613`)
 - Turned on [Restrict item deletion](https://bitwarden.com/help/collection-management/#restrict-item-deletion-to-members-with-the-manage-collection-permissions/) setting. (`1614`)
 - Turned off [Restrict item deletion](https://bitwarden.com/help/collection-management/#restrict-item-deletion-to-members-with-the-manage-collection-permissions/) setting. (`1615`)
-- Turned on [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1616`)
-- Turned off [Allow owners and admins to manage all collections and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1617`)
+- Turned on [Allow owners and admins to manage all shared folders and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1616`)
+- Turned off [Allow owners and admins to manage all shared folders and items](https://bitwarden.com/help/collection-management/#allow-owners-and-admins-to-manage-all-collections-and-items-from-the-admin-console/) setting. (`1617`)
 - Accepted transfer to organization ownership. (`1618`)
-- Revoked for declining transfer to organization ownership. (`1619`)
+- Revoked for declining transfer to organization ownership. (`1619`) This event has been depreicated. Users will now see (`1518`)
 - Turned on Automatic user confirmation setting. (`1620`)
 - Turned off Automatic user confirmation setting. (`1621`)
 - Added Automatic user confirmation policy. (`1622`)
@@ -191,6 +191,15 @@ Secrets Manager events are available both from the **Reporting** tab of your org
 - Deleted file Send `send-id` (`2509`)
 - Accessed text Send `send-id` created by `user-id` (`2510`)
 - Accessed file Send `send-id` created by `user-id` (`2511`)
+- Send `send-id` disabled by policy (`2512`)
+- Send `send-id` enabled by policy (`2513`)
+
+> [!NOTE] Manage Send policy event log
+> Organization members can create a [Bitwarden Send](https://bitwarden.com/help/about-send/) unless the [Manage Send and share](https://bitwarden.com/help/policies/#manage-send-and-share/) policy restricts it. When the policy is turned on, any existing Sends that don’t meet its settings is deactivated, and event `2512` is logged for each one. If the policy is later turned off, those Sends are reactivated, and event `2513` is logged for each one.
+- Created item Send `send-id (2514)`
+- Edited item Send `send-id (2515)`
+- Deleted item Send `send-id (2516)`
+- Accessed item Send `send-id` created by `user-id (2517)`
 
 ### Provider events
 

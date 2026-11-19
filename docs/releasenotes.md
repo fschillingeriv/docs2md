@@ -43,6 +43,27 @@ Bitwarden believes source code transparency is an absolute requirement for secur
 
 ## Release Announcements
 
+## 2026.11.0
+
+(The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.11.0, Browser Extension 2026.11.10 Desktop 2026.11.0, Mobile 2026.11.0, and CLI 2026.11.0) 
+
+#### Password Manager
+
+- ⭐ **Synchronize unlock between apps**: Bitwarden web apps, browser extensions, and desktop apps can now [synchronize their lock & unlock state](https://bitwarden.com/help/synchronized-unlock/) when running on the same device.
+- ⭐ **Autofill identifies for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
+
+#### Admin Console
+
+- **New Send events**: Events are now logged when an item send, [item shared via link](https://bitwarden.com/help/sharing/#share-via-link/), is created, edited, deleted, or accessed, and when the [Manage Send policy](https://bitwarden.com/help/policies/#manage-send-and-share/) deactivates or reactivates a member’s Send.
+
+#### Key Connector
+
+- **MongoDB support deprecation**: Starting with version 2026.11.0 of [Key Connector](https://bitwarden.com/help/about-key-connector/), MongoDB will no longer be a supported database option.
+
+#### Security
+
+- ⭐ **Encryption updates for new users**: Starting with version 2026.11.0, new Bitwarden accounts will use updated encryption algorithms for vault data, public-key encryption, and digital signatures. Existing users will be migrated in a future release version. **A new version of the**[**whitepaper**](https://bitwarden.com/help/bitwarden-security-white-paper/)**will be published when this begins rolling out to new users**.
+
 ## 2026.10.1
 
 (The listed release number is for the Bitwarden Server. Other version numbers released in this cycle include Web 2026.10.1, Browser Extension 2026.10.1, Desktop 2026.10.2, Mobile 2026.10.1, and CLI 2026.10.1) 

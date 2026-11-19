@@ -35,7 +35,7 @@ Navigate to **Settings**→ **Account security** to choose your session timeout 
 
 Session timeout, also called vault timeout, determines how long Bitwarden can be inactive before timing out. Inactivity is measured by time since interacting with Bitwarden—not system idle time.
 
-Timeout options vary by app. If there are fewer timeout options than expected and you're part of an Enterprise organization, they may have turned on the [session timeout policy](https://bitwarden.com/help/policies/#session-timeout/).
+Timeout options vary by app. If there are fewer timeout options than expected and you're part of an Enterprise plan, they may have turned on the [session timeout policy](https://bitwarden.com/help/policies/#session-timeout/).
 
 ### Web app
 
@@ -54,6 +54,8 @@ Select when your Bitwarden session times out:
 > 
 > - By default, your browser extension will require you to login or unlock with your master password based on your selected vault timeout action.
 > - To instead unlock with a PIN after closing your browser window, uncheck **Lock with master password on browser restart**option when [setting up the PIN](https://bitwarden.com/help/unlock-with-pin/).
+
+If [Synchronized unlock](https://bitwarden.com/help/synchronized-unlock/) is enabled, this setting is managed by the browser extension. 
 
 ### Browser extension
 
@@ -118,6 +120,13 @@ Select when your Bitwarden session times out:
 > [!WARNING] Never timeout
 > The **Never** timeout option stores your encryption key unencrypted on your device, which may hinder security. To keep your data secure, we strongly recommend choosing a different option.
 - **Custom**: After the amount of time entered in **Hours** and **Minutes**
+
+### Session timeout with synchronized unlock
+
+If [Synchronized unlock](https://bitwarden.com/help/synchronized-unlock/) is on, one app's session timeout applies to all connected apps, and the timeout setting in the other apps isn't available:
+
+- When the browser extension and web app are connected, the browser extension's timeout applies.
+- When the browser extension and desktop app are connected, the desktop app's timeout applies. This also lets the **On system lock** option apply to the browser extension and web app.
 
 ## Session timeout action
 
