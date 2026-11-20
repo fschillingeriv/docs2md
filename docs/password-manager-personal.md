@@ -75,19 +75,11 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
-
-### Web app (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638443.jpg)](https://vimeo.com/1145638443)
-*[Watch on Vimeo](https://vimeo.com/1145638443)*
-
-**Video Chapters:**
-Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -97,10 +89,23 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden mobile app. 
 
+### Web app (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397595.jpg)](https://vimeo.com/1246397595)
+*[Watch on Vimeo](https://vimeo.com/1246397595)*
+
+**Video Chapters:**
+Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
+
+### Desktop (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397600.jpg)](https://vimeo.com/1246397600)
+*[Watch on Vimeo](https://vimeo.com/1246397600)*
+
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -111,25 +116,30 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ### Inline menu (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1140176329.jpg)](https://vimeo.com/1140176329)
-*[Watch on Vimeo](https://vimeo.com/1140176329)*
-
-**Video Chapters:**
-Log in to your favorite websites instantly with the inline autofill menu appearing right where you need it.
+[![Vimeo Video](https://vumbnail.com/1246397601.jpg)](https://vimeo.com/1246397601)
+*[Watch on Vimeo](https://vimeo.com/1246397601)*
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
 ### Click to autofill (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
-*[Watch on Vimeo](https://vimeo.com/1141142837)*
+[![Vimeo Video](https://vumbnail.com/1246397531.jpg)](https://vimeo.com/1246397531)
+*[Watch on Vimeo](https://vimeo.com/1246397531)*
 
 **Video Chapters:**
 Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
+
+### Autofill & save website address (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397529.jpg)](https://vimeo.com/1246397529)
+*[Watch on Vimeo](https://vimeo.com/1246397529)*
+
+**Video Chapters:**
+Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ### Context menu (1 min)
 
@@ -154,14 +164,6 @@ Learn how to customize your shortcuts [here](https://bitwarden.com/help/auto-fil
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
-
-### Autofill & save website address (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1159228265.jpg)](https://vimeo.com/1159228265)
-*[Watch on Vimeo](https://vimeo.com/1159228265)*
-
-**Video Chapters:**
-Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ## Autofill from Android App
 
@@ -240,11 +242,8 @@ Long-press in any text field to autofill on iOS (requires keyboard autofill to b
 
 ### Using the browser extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
-*[Watch on Vimeo](https://vimeo.com/1175169132)*
-
-**Video Chapters:**
-Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+[![Vimeo Video](https://vumbnail.com/1246397532.jpg)](https://vimeo.com/1246397532)
+*[Watch on Vimeo](https://vimeo.com/1246397532)*
 
 ## Learn More
 
@@ -262,11 +261,8 @@ Download Bitwarden apps for all your devices [here](https://bitwarden.com/downlo
 
 ### Send text and files securely (2 min)
 
-[![Vimeo Video](https://vumbnail.com/797850224.jpg)](https://vimeo.com/797850224)
-*[Watch on Vimeo](https://vimeo.com/797850224)*
-
-**Video Chapters:**
-[Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
+[![Vimeo Video](https://vumbnail.com/1246397609.jpg)](https://vimeo.com/1246397609)
+*[Watch on Vimeo](https://vimeo.com/1246397609)*
 
 ### Using Custom Fields (2 min)
 

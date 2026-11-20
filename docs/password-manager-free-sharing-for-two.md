@@ -73,8 +73,8 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
@@ -89,8 +89,8 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5AL
 
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.

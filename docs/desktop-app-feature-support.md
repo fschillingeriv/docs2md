@@ -16,8 +16,9 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 | Feature | [Installer (.exe)](https://bitwarden.com/download/#downloads-desktop-applications/) | [Microsoft Store](https://apps.microsoft.com/detail/9pjsdv0vpk04?hl=en-US&gl=US) | [Portable App (.exe)](https://bitwarden.com/download/#downloads-desktop-applications/) |
 |------|------|------|------|
 | Automatic Updates | ✓ | ✓ | |
-| Desktop Biometrics | ✓ | | ✓ |
-| Extension Biometrics | ✓ | | ✓ |
+| Desktop Biometrics | ✓ | ✓ | ✓ |
+| Extension Biometrics | ✓ | ✓ | ✓ |
+| Native passkeys | | ✓ | |
 | Integration with OS | ✓ | ✓ | ✓ |
 | Startup on Launch | ✓ | | ✓ |
 | Direct Importer | ✓ | | |
@@ -31,6 +32,7 @@ The Bitwarden desktop app is available for Windows, macOS, and Linux through a v
 | Automatic Updates | ✓ | ✓ |
 | Desktop Biometrics | ✓ | ✓ |
 | Extension Biometrics | ✓ | ✓ |
+| Native passkeys | ✓ | ✓ |
 | Integration with OS | ✓ | ✓ |
 | Startup on Launch | ✓ | ✓ |
 | Direct Importer | ✓ | |
