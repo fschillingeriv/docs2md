@@ -10715,7 +10715,7 @@ URL: https://bitwarden.com/help/courses/password-manager-admin/
 ---
 # Enterprise Admin
 
-Your biggest impact as an admin comes from making Bitwarden easy for others to adopt. This course covers setup, smart policies, and onboarding strategies that turn password security into a daily habit.
+Your biggest impact as an admin comes from making Bitwarden easy for others to adopt. This course covers setup, policy configuration, and onboarding strategies that turn password security into a daily habit for your company.
 
 > [!TIP] Enterprise Admin
 > The first few steps in the document assume you're going to create an organization. If you're joining an existing organization, skip down to **Or join an existing organization**.
@@ -10855,8 +10855,8 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -10972,9 +10972,9 @@ URL: https://bitwarden.com/help/courses/password-manager-enterprise-helpdesk/
 ---
 # Enterprise Help Desk
 
-As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your organization's users. 
+As an IT support professional, you're the go-to resource when employees run into Bitwarden issues. This training covers the most common help desk scenarios for Bitwarden Enterprise, from resetting a master password to troubleshooting Vault access for your company's users. 
 
-Step-by-step video videos help you resolve employee issues quickly and keep your organization's access secure and uninterrupted.
+Step-by-step videos help you resolve employee issues quickly and keep your company's vault access secure and uninterrupted.
 
 ## Access
 
@@ -11000,7 +11000,6 @@ Learn how to review and approve device access requests in the Admin Console so e
 [![Vimeo Video](https://vumbnail.com/1191294901.jpg)](https://vimeo.com/1191294901)
 *[Watch on Vimeo](https://vimeo.com/1191294901)*
 
-[Embedded content][Embedded content]
 ## Recovery
 
 ### Recover a member account (2 min)
@@ -11016,8 +11015,8 @@ Easily recover a member account for someone who has forgotten their master passw
 
 Bitwarden makes it easy to prompt users to change at-risk passwords.
 
-[![Vimeo Video](https://vumbnail.com/1192034974.jpg)](https://vimeo.com/1192034974)
-*[Watch on Vimeo](https://vimeo.com/1192034974)*
+[![Vimeo Video](https://vumbnail.com/1246397608.jpg)](https://vimeo.com/1246397608)
+*[Watch on Vimeo](https://vimeo.com/1246397608)*
 
 ## Support
 
@@ -11116,8 +11115,8 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
@@ -11132,8 +11131,8 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5AL
 
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -11225,19 +11224,11 @@ Security anywhere is security everywhere! Get the Bitwarden mobile app so you ca
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
-
-### Web app (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638443.jpg)](https://vimeo.com/1145638443)
-*[Watch on Vimeo](https://vimeo.com/1145638443)*
-
-**Video Chapters:**
-Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -11247,10 +11238,23 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden mobile app. 
 
+### Web app (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397595.jpg)](https://vimeo.com/1246397595)
+*[Watch on Vimeo](https://vimeo.com/1246397595)*
+
+**Video Chapters:**
+Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
+
+### Desktop (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397600.jpg)](https://vimeo.com/1246397600)
+*[Watch on Vimeo](https://vimeo.com/1246397600)*
+
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -11261,25 +11265,30 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ### Inline menu (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1140176329.jpg)](https://vimeo.com/1140176329)
-*[Watch on Vimeo](https://vimeo.com/1140176329)*
-
-**Video Chapters:**
-Log in to your favorite websites instantly with the inline autofill menu appearing right where you need it.
+[![Vimeo Video](https://vumbnail.com/1246397601.jpg)](https://vimeo.com/1246397601)
+*[Watch on Vimeo](https://vimeo.com/1246397601)*
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
 ### Click to autofill (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
-*[Watch on Vimeo](https://vimeo.com/1141142837)*
+[![Vimeo Video](https://vumbnail.com/1246397531.jpg)](https://vimeo.com/1246397531)
+*[Watch on Vimeo](https://vimeo.com/1246397531)*
 
 **Video Chapters:**
 Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
+
+### Autofill & save website address (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397529.jpg)](https://vimeo.com/1246397529)
+*[Watch on Vimeo](https://vimeo.com/1246397529)*
+
+**Video Chapters:**
+Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ### Context menu (1 min)
 
@@ -11304,14 +11313,6 @@ Learn how to customize your shortcuts [here](https://bitwarden.com/help/auto-fil
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
-
-### Autofill & save website address (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1159228265.jpg)](https://vimeo.com/1159228265)
-*[Watch on Vimeo](https://vimeo.com/1159228265)*
-
-**Video Chapters:**
-Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ## Autofill from Android App
 
@@ -11399,21 +11400,15 @@ As a member of your organization, you can securely share information like login 
 
 ### Send text and files securely (2 min)
 
-[![Vimeo Video](https://vumbnail.com/797850224.jpg)](https://vimeo.com/797850224)
-*[Watch on Vimeo](https://vimeo.com/797850224)*
-
-**Video Chapters:**
-[Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
+[![Vimeo Video](https://vumbnail.com/1246397609.jpg)](https://vimeo.com/1246397609)
+*[Watch on Vimeo](https://vimeo.com/1246397609)*
 
 ## Adding attachments
 
 ### Using the browser extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
-*[Watch on Vimeo](https://vimeo.com/1175169132)*
-
-**Video Chapters:**
-Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+[![Vimeo Video](https://vumbnail.com/1246397532.jpg)](https://vimeo.com/1246397532)
+*[Watch on Vimeo](https://vimeo.com/1246397532)*
 
 ## Support
 
@@ -12194,7 +12189,7 @@ URL: https://bitwarden.com/help/courses/password-manager-team-member/
 ---
 # Enterprise Member
 
-This Bitwarden training for enterprise members walks you through everything you need to get up and running as part of your organization. Through short video tutorials, you'll learn how to join your organization, set up your vault, use autofill across your devices, and securely share credentials so that Bitwarden for teams works for you from day one.
+This course walks you through getting started with Bitwarden as an Enterprise user. In these short video tutorials, you'll learn how to accept an invitation, use autofill, securely share credentials, and personalize your view of Bitwarden Password Manager.
 
 ## Demo
 
@@ -12268,19 +12263,11 @@ Courses are also available for [individuals](https://bitwarden.com/help/courses/
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
-
-### Web app (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638443.jpg)](https://vimeo.com/1145638443)
-*[Watch on Vimeo](https://vimeo.com/1145638443)*
-
-**Video Chapters:**
-Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -12290,40 +12277,57 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden mobile app. 
 
+### Web app (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397595.jpg)](https://vimeo.com/1246397595)
+*[Watch on Vimeo](https://vimeo.com/1246397595)*
+
+**Video Chapters:**
+Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
+
+### Desktop (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397600.jpg)](https://vimeo.com/1246397600)
+*[Watch on Vimeo](https://vimeo.com/1246397600)*
+
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
 
 [Embedded content componentCtaLink]
 
-[Embedded content]
 ## Autofill from Browser extension
 
 ### Inline menu (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1140176329.jpg)](https://vimeo.com/1140176329)
-*[Watch on Vimeo](https://vimeo.com/1140176329)*
-
-**Video Chapters:**
-Log in to your favorite websites instantly with the inline autofill menu appearing right where you need it.
+[![Vimeo Video](https://vumbnail.com/1246397601.jpg)](https://vimeo.com/1246397601)
+*[Watch on Vimeo](https://vimeo.com/1246397601)*
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
 ### Click to autofill (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
-*[Watch on Vimeo](https://vimeo.com/1141142837)*
+[![Vimeo Video](https://vumbnail.com/1246397531.jpg)](https://vimeo.com/1246397531)
+*[Watch on Vimeo](https://vimeo.com/1246397531)*
 
 **Video Chapters:**
 Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
+
+### Autofill & save website address (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397529.jpg)](https://vimeo.com/1246397529)
+*[Watch on Vimeo](https://vimeo.com/1246397529)*
+
+**Video Chapters:**
+Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ### Context menu (1 min)
 
@@ -12348,14 +12352,6 @@ Learn how to customize your shortcuts [here](https://bitwarden.com/help/auto-fil
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
-
-### Autofill & save website address (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1159228265.jpg)](https://vimeo.com/1159228265)
-*[Watch on Vimeo](https://vimeo.com/1159228265)*
-
-**Video Chapters:**
-Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ## Autofill from Android App
 
@@ -12430,34 +12426,27 @@ Learn how to autofill using the browser app extension on iOS.
 **Video Chapters:**
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
-[Embedded content]
-## Sharing with Collections
+## Using Shared Folders
 
 ### Access shared passwords (2 min)
 
-As a member of your organization, you can securely share information like login credentials and credit cards. Shared items are grouped-together into [collections](https://bitwarden.com/help/sharing/).
+As a user with access to your company's Vault, you can securely share information like login credentials and credit cards. Shared items are grouped together into [Shared Folders](https://bitwarden.com/help/sharing/). 
 
-![Courses - collections - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/3eeb08d790153cb8d1c1b70f4efd45c6/Screenshot_2025-12-13_at_1.21.45â__AM.png)
+![Courses - Shared Folders - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/b46febbe782a4bb83fb594a78fd89e14/Shared_Folders.png)
 
 ## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
-[![Vimeo Video](https://vumbnail.com/797850224.jpg)](https://vimeo.com/797850224)
-*[Watch on Vimeo](https://vimeo.com/797850224)*
-
-**Video Chapters:**
-[Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
+[![Vimeo Video](https://vumbnail.com/1246397609.jpg)](https://vimeo.com/1246397609)
+*[Watch on Vimeo](https://vimeo.com/1246397609)*
 
 ## Adding attachments
 
 ### Using the browser extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
-*[Watch on Vimeo](https://vimeo.com/1175169132)*
-
-**Video Chapters:**
-Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+[![Vimeo Video](https://vumbnail.com/1246397532.jpg)](https://vimeo.com/1246397532)
+*[Watch on Vimeo](https://vimeo.com/1246397532)*
 
 ## Learn more
 
@@ -12507,7 +12496,7 @@ URL: https://bitwarden.com/help/courses/password-manager-teams-admin/
 ---
 # Teams Admin
 
-Learn how to set up and manage your Bitwarden Teams organization, invite team members, control access with collections, and keep your team's credentials secure and organized
+Learn how to set up and manage your Bitwarden Teams organization, invite team members, control access to Shared folders, and keep your team's credentials secure and organized
 
 > [!TIP] Teams Admin
 > The first few steps in the document assume you're going to create an organization. If you're joining an existing organization, skip down to **Or join an existing organization**.
@@ -12640,8 +12629,8 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -12720,19 +12709,11 @@ From the web app, you can fill your vault with information to keep secure, organ
 
 ### Browser Extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638461.jpg)](https://vimeo.com/1145638461)
-*[Watch on Vimeo](https://vimeo.com/1145638461)*
+[![Vimeo Video](https://vumbnail.com/1246397594.jpg)](https://vimeo.com/1246397594)
+*[Watch on Vimeo](https://vimeo.com/1246397594)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-browser-extension-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data with the Bitwarden Browser Extension. 
-
-### Web app (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1145638443.jpg)](https://vimeo.com/1145638443)
-*[Watch on Vimeo](https://vimeo.com/1145638443)*
-
-**Video Chapters:**
-Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
 
 ### Mobile app - Includes direct import/export on iOS for compatible apps (1 min)
 
@@ -12742,10 +12723,23 @@ Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/import-data/#tab-mobile-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden mobile app. 
 
+### Web app (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397595.jpg)](https://vimeo.com/1246397595)
+*[Watch on Vimeo](https://vimeo.com/1246397595)*
+
+**Video Chapters:**
+Learn [how to import](https://bitwarden.com/help/import-data/#tab-web-app-5ALQx9afSqWXX9jfXsY5sb/) your passwords and other data in the Bitwarden web app. 
+
+### Desktop (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397600.jpg)](https://vimeo.com/1246397600)
+*[Watch on Vimeo](https://vimeo.com/1246397600)*
+
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
@@ -12756,25 +12750,30 @@ Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) yo
 
 ### Inline menu (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1140176329.jpg)](https://vimeo.com/1140176329)
-*[Watch on Vimeo](https://vimeo.com/1140176329)*
-
-**Video Chapters:**
-Log in to your favorite websites instantly with the inline autofill menu appearing right where you need it.
+[![Vimeo Video](https://vumbnail.com/1246397601.jpg)](https://vimeo.com/1246397601)
+*[Watch on Vimeo](https://vimeo.com/1246397601)*
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
 
 ### Click to autofill (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1141142837.jpg)](https://vimeo.com/1141142837)
-*[Watch on Vimeo](https://vimeo.com/1141142837)*
+[![Vimeo Video](https://vumbnail.com/1246397531.jpg)](https://vimeo.com/1246397531)
+*[Watch on Vimeo](https://vimeo.com/1246397531)*
 
 **Video Chapters:**
 Open the browser extension and click a suggested vault item to autofill instantly.
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
+
+### Autofill & save website address (1 min)
+
+[![Vimeo Video](https://vumbnail.com/1246397529.jpg)](https://vimeo.com/1246397529)
+*[Watch on Vimeo](https://vimeo.com/1246397529)*
+
+**Video Chapters:**
+Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ### Context menu (1 min)
 
@@ -12799,14 +12798,6 @@ Learn how to customize your shortcuts [here](https://bitwarden.com/help/auto-fil
 
 > [!TIP] Authenticator keyboard shortcut
 > If the login uses the [Bitwarden authenticator](https://bitwarden.com/help/integrated-authenticator/) for TOTPs and you use the autofill shortcut, the TOTP is automatically copied to the clipboard after autofill. Press `Cmd/Ctrl` + `V` to paste the TOTP.
-
-### Autofill & save website address (1 min)
-
-[![Vimeo Video](https://vumbnail.com/1159228265.jpg)](https://vimeo.com/1159228265)
-*[Watch on Vimeo](https://vimeo.com/1159228265)*
-
-**Video Chapters:**
-Learn how to autofill with the Bitwarden browser extension and automatically save a unique resource identifier (URI), such as a website address.
 
 ## Autofill from Android App
 
@@ -12881,33 +12872,27 @@ Learn how to autofill using the browser app extension on iOS.
 **Video Chapters:**
 Long-press in any text field to autofill on iOS (requires keyboard autofill to be enabled).
 
-## Sharing with Collections
+## Using Shared Folders
 
 ### Access shared passwords (2 min)
 
-As a member of your organization, you can securely share information like login credentials and credit cards. Shared items are grouped-together into [collections](https://bitwarden.com/help/sharing/).
+As a user with access to your company's Vault, you can securely share information like login credentials and credit cards. Shared items are grouped together into [Shared Folders](https://bitwarden.com/help/sharing/). 
 
-![Courses - collections - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/3eeb08d790153cb8d1c1b70f4efd45c6/Screenshot_2025-12-13_at_1.21.45â__AM.png)
+![Courses - Shared Folders - business](https://bitwarden.com/assets/665UWKruSMsgv2tRE8Z9Zq/b46febbe782a4bb83fb594a78fd89e14/Shared_Folders.png)
 
 ## Sharing with Bitwarden Send
 
 ### Send text and files securely (2 min)
 
-[![Vimeo Video](https://vumbnail.com/797850224.jpg)](https://vimeo.com/797850224)
-*[Watch on Vimeo](https://vimeo.com/797850224)*
-
-**Video Chapters:**
-[Bitwarden Send](https://bitwarden.com/help/about-send/) lets you securely share text and files through encrypted, self-destructing links—even with people outside your organization.
+[![Vimeo Video](https://vumbnail.com/1246397609.jpg)](https://vimeo.com/1246397609)
+*[Watch on Vimeo](https://vimeo.com/1246397609)*
 
 ## Adding attachments
 
 ### Using the browser extension (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1175169132.jpg)](https://vimeo.com/1175169132)
-*[Watch on Vimeo](https://vimeo.com/1175169132)*
-
-**Video Chapters:**
-Learn how to attach a file to any vault item using the browser extension, so your sensitive documents stay secure right alongside your login credentials.
+[![Vimeo Video](https://vumbnail.com/1246397532.jpg)](https://vimeo.com/1246397532)
+*[Watch on Vimeo](https://vimeo.com/1246397532)*
 
 ## Learn More
 
@@ -32081,7 +32066,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
  - For cloud customers, the new design will be arriving gradually over a period of a couple of weeks.
  - Self-hosted customers will see the updates in a future self-hosted server release.
 - ⭐ **Synchronize unlock between apps**: Bitwarden web apps, browser extensions, and desktop apps can now [synchronize their lock & unlock state](https://bitwarden.com/help/synchronized-unlock/) when running on the same device.
-- ⭐ **Autofill identifies for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
+- ⭐ **Autofill identities for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
 
 #### Admin Console
 

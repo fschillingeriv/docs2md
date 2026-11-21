@@ -54,7 +54,7 @@ Bitwarden believes source code transparency is an absolute requirement for secur
  - For cloud customers, the new design will be arriving gradually over a period of a couple of weeks.
  - Self-hosted customers will see the updates in a future self-hosted server release.
 - ⭐ **Synchronize unlock between apps**: Bitwarden web apps, browser extensions, and desktop apps can now [synchronize their lock & unlock state](https://bitwarden.com/help/synchronized-unlock/) when running on the same device.
-- ⭐ **Autofill identifies for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
+- ⭐ **Autofill identities for Android**: The Bitwarden Android app can now [autofill identities](https://bitwarden.com/help/auto-fill-card-id/), such as names, emails, and addresses.
 
 #### Admin Console
 

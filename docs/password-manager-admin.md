@@ -4,7 +4,7 @@ URL: https://bitwarden.com/help/courses/password-manager-admin/
 
 # Enterprise Admin
 
-Your biggest impact as an admin comes from making Bitwarden easy for others to adopt. This course covers setup, smart policies, and onboarding strategies that turn password security into a daily habit.
+Your biggest impact as an admin comes from making Bitwarden easy for others to adopt. This course covers setup, policy configuration, and onboarding strategies that turn password security into a daily habit for your company.
 
 > [!TIP] Enterprise Admin
 > The first few steps in the document assume you're going to create an organization. If you're joining an existing organization, skip down to **Or join an existing organization**.
@@ -144,8 +144,8 @@ Learn how to import passwords into your organization using the Admin Console in 
 
 ### From a custom file (1 min)
 
-[![Vimeo Video](https://vumbnail.com/1145638421.jpg)](https://vimeo.com/1145638421)
-*[Watch on Vimeo](https://vimeo.com/1145638421)*
+[![Vimeo Video](https://vumbnail.com/1246397583.jpg)](https://vimeo.com/1246397583)
+*[Watch on Vimeo](https://vimeo.com/1246397583)*
 
 **Video Chapters:**
 Learn [how to import](https://bitwarden.com/help/condition-bitwarden-import/) your passwords and other data from a custom file.
